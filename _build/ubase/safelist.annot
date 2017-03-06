@@ -1,0 +1,3865 @@
+"ubase/safelist.ml" 4 107 111 "ubase/safelist.ml" 4 107 121
+type(
+  ('a -> bool) -> 'a list -> 'a list * 'a list
+)
+ident(
+  def filterBoth "ubase/safelist.ml" 12 300 300 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 4 107 122 "ubase/safelist.ml" 4 107 123
+type(
+  'a -> bool
+)
+ident(
+  def f "ubase/safelist.ml" 4 107 124 "ubase/safelist.ml" 10 281 298
+)
+"ubase/safelist.ml" 4 107 124 "ubase/safelist.ml" 4 107 125
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 5 128 130 "ubase/safelist.ml" 10 281 298
+)
+"ubase/safelist.ml" 5 128 138 "ubase/safelist.ml" 5 128 142
+type(
+  'a list -> 'a list -> 'a list -> 'a list * 'a list
+)
+ident(
+  def loop "ubase/safelist.ml" 5 128 130 "ubase/safelist.ml" 10 281 298
+)
+"ubase/safelist.ml" 5 128 143 "ubase/safelist.ml" 5 128 145
+type(
+  'a list
+)
+ident(
+  def r1 "ubase/safelist.ml" 5 128 146 "ubase/safelist.ml" 9 250 280
+)
+"ubase/safelist.ml" 5 128 146 "ubase/safelist.ml" 5 128 148
+type(
+  'a list
+)
+ident(
+  def r2 "ubase/safelist.ml" 5 128 151 "ubase/safelist.ml" 9 250 280
+)
+"ubase/safelist.ml" 6 160 164 "ubase/safelist.ml" 6 160 166
+type(
+  'a list
+)
+"ubase/safelist.ml" 6 160 171 "ubase/safelist.ml" 6 160 179
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 6 160 180 "ubase/safelist.ml" 6 160 182
+type(
+  'a list
+)
+ident(
+  int_ref r1 "ubase/safelist.ml" 5 128 143 "ubase/safelist.ml" 5 128 145
+)
+"ubase/safelist.ml" 6 160 171 "ubase/safelist.ml" 6 160 182
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 6 160 184 "ubase/safelist.ml" 6 160 192
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 6 160 193 "ubase/safelist.ml" 6 160 195
+type(
+  'a list
+)
+ident(
+  int_ref r2 "ubase/safelist.ml" 5 128 146 "ubase/safelist.ml" 5 128 148
+)
+"ubase/safelist.ml" 6 160 184 "ubase/safelist.ml" 6 160 195
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 6 160 170 "ubase/safelist.ml" 6 160 196
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 7 197 201 "ubase/safelist.ml" 7 197 203
+type(
+  'a
+)
+ident(
+  def hd "ubase/safelist.ml" 8 211 217 "ubase/safelist.ml" 9 250 280
+)
+"ubase/safelist.ml" 7 197 205 "ubase/safelist.ml" 7 197 207
+type(
+  'a list
+)
+ident(
+  def tl "ubase/safelist.ml" 8 211 217 "ubase/safelist.ml" 9 250 280
+)
+"ubase/safelist.ml" 7 197 201 "ubase/safelist.ml" 7 197 207
+type(
+  'a list
+)
+"ubase/safelist.ml" 8 211 220 "ubase/safelist.ml" 8 211 221
+type(
+  'a -> bool
+)
+ident(
+  int_ref f "ubase/safelist.ml" 4 107 122 "ubase/safelist.ml" 4 107 123
+)
+"ubase/safelist.ml" 8 211 222 "ubase/safelist.ml" 8 211 224
+type(
+  'a
+)
+ident(
+  int_ref hd "ubase/safelist.ml" 7 197 201 "ubase/safelist.ml" 7 197 203
+)
+"ubase/safelist.ml" 8 211 220 "ubase/safelist.ml" 8 211 224
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/safelist.ml" 8 211 230 "ubase/safelist.ml" 8 211 234
+type(
+  'a list -> 'a list -> 'a list -> 'a list * 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 5 128 138 "ubase/safelist.ml" 5 128 142
+)
+"ubase/safelist.ml" 8 211 236 "ubase/safelist.ml" 8 211 238
+type(
+  'a
+)
+ident(
+  int_ref hd "ubase/safelist.ml" 7 197 201 "ubase/safelist.ml" 7 197 203
+)
+"ubase/safelist.ml" 8 211 240 "ubase/safelist.ml" 8 211 242
+type(
+  'a list
+)
+ident(
+  int_ref r1 "ubase/safelist.ml" 5 128 143 "ubase/safelist.ml" 5 128 145
+)
+"ubase/safelist.ml" 8 211 235 "ubase/safelist.ml" 8 211 243
+type(
+  'a list
+)
+"ubase/safelist.ml" 8 211 244 "ubase/safelist.ml" 8 211 246
+type(
+  'a list
+)
+ident(
+  int_ref r2 "ubase/safelist.ml" 5 128 146 "ubase/safelist.ml" 5 128 148
+)
+"ubase/safelist.ml" 8 211 247 "ubase/safelist.ml" 8 211 249
+type(
+  'a list
+)
+ident(
+  int_ref tl "ubase/safelist.ml" 7 197 205 "ubase/safelist.ml" 7 197 207
+)
+"ubase/safelist.ml" 8 211 230 "ubase/safelist.ml" 8 211 249
+call(
+  tail
+)
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 9 250 261 "ubase/safelist.ml" 9 250 265
+type(
+  'a list -> 'a list -> 'a list -> 'a list * 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 5 128 138 "ubase/safelist.ml" 5 128 142
+)
+"ubase/safelist.ml" 9 250 266 "ubase/safelist.ml" 9 250 268
+type(
+  'a list
+)
+ident(
+  int_ref r1 "ubase/safelist.ml" 5 128 143 "ubase/safelist.ml" 5 128 145
+)
+"ubase/safelist.ml" 9 250 270 "ubase/safelist.ml" 9 250 272
+type(
+  'a
+)
+ident(
+  int_ref hd "ubase/safelist.ml" 7 197 201 "ubase/safelist.ml" 7 197 203
+)
+"ubase/safelist.ml" 9 250 274 "ubase/safelist.ml" 9 250 276
+type(
+  'a list
+)
+ident(
+  int_ref r2 "ubase/safelist.ml" 5 128 146 "ubase/safelist.ml" 5 128 148
+)
+"ubase/safelist.ml" 9 250 269 "ubase/safelist.ml" 9 250 277
+type(
+  'a list
+)
+"ubase/safelist.ml" 9 250 278 "ubase/safelist.ml" 9 250 280
+type(
+  'a list
+)
+ident(
+  int_ref tl "ubase/safelist.ml" 7 197 205 "ubase/safelist.ml" 7 197 207
+)
+"ubase/safelist.ml" 9 250 261 "ubase/safelist.ml" 9 250 280
+call(
+  tail
+)
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 8 211 217 "ubase/safelist.ml" 9 250 280
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 5 128 151 "ubase/safelist.ml" 9 250 280
+type(
+  'a list -> 'a list * 'a list
+)
+"ubase/safelist.ml" 10 281 286 "ubase/safelist.ml" 10 281 290
+type(
+  'a list -> 'a list -> 'a list -> 'a list * 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 5 128 138 "ubase/safelist.ml" 5 128 142
+)
+"ubase/safelist.ml" 10 281 291 "ubase/safelist.ml" 10 281 293
+type(
+  'a list
+)
+"ubase/safelist.ml" 10 281 294 "ubase/safelist.ml" 10 281 296
+type(
+  'a list
+)
+"ubase/safelist.ml" 10 281 297 "ubase/safelist.ml" 10 281 298
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 4 107 124 "ubase/safelist.ml" 4 107 125
+)
+"ubase/safelist.ml" 10 281 286 "ubase/safelist.ml" 10 281 298
+call(
+  tail
+)
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 5 128 130 "ubase/safelist.ml" 10 281 298
+type(
+  'a list * 'a list
+)
+"ubase/safelist.ml" 12 300 304 "ubase/safelist.ml" 12 300 313
+type(
+  ('a -> 'b option) -> 'a list -> 'b list
+)
+ident(
+  def filterMap "ubase/safelist.ml" 22 494 494 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 12 300 314 "ubase/safelist.ml" 12 300 315
+type(
+  'a -> 'b option
+)
+ident(
+  def f "ubase/safelist.ml" 12 300 316 "ubase/safelist.ml" 20 478 492
+)
+"ubase/safelist.ml" 12 300 316 "ubase/safelist.ml" 12 300 317
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 13 320 322 "ubase/safelist.ml" 20 478 492
+)
+"ubase/safelist.ml" 13 320 330 "ubase/safelist.ml" 13 320 334
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  def loop "ubase/safelist.ml" 13 320 322 "ubase/safelist.ml" 20 478 492
+)
+"ubase/safelist.ml" 13 320 335 "ubase/safelist.ml" 13 320 336
+type(
+  'b list
+)
+ident(
+  def r "ubase/safelist.ml" 13 320 339 "ubase/safelist.ml" 19 470 477
+)
+"ubase/safelist.ml" 14 348 352 "ubase/safelist.ml" 14 348 354
+type(
+  'a list
+)
+"ubase/safelist.ml" 14 348 358 "ubase/safelist.ml" 14 348 366
+type(
+  'b list -> 'b list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 14 348 367 "ubase/safelist.ml" 14 348 368
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 13 320 335 "ubase/safelist.ml" 13 320 336
+)
+"ubase/safelist.ml" 14 348 358 "ubase/safelist.ml" 14 348 368
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 15 369 373 "ubase/safelist.ml" 15 369 375
+type(
+  'a
+)
+ident(
+  def hd "ubase/safelist.ml" 15 369 383 "ubase/safelist.ml" 19 470 477
+)
+"ubase/safelist.ml" 15 369 377 "ubase/safelist.ml" 15 369 379
+type(
+  'a list
+)
+ident(
+  def tl "ubase/safelist.ml" 15 369 383 "ubase/safelist.ml" 19 470 477
+)
+"ubase/safelist.ml" 15 369 373 "ubase/safelist.ml" 15 369 379
+type(
+  'a list
+)
+"ubase/safelist.ml" 16 389 401 "ubase/safelist.ml" 16 389 402
+type(
+  'a -> 'b option
+)
+ident(
+  int_ref f "ubase/safelist.ml" 12 300 314 "ubase/safelist.ml" 12 300 315
+)
+"ubase/safelist.ml" 16 389 403 "ubase/safelist.ml" 16 389 405
+type(
+  'a
+)
+ident(
+  int_ref hd "ubase/safelist.ml" 15 369 373 "ubase/safelist.ml" 15 369 375
+)
+"ubase/safelist.ml" 16 389 401 "ubase/safelist.ml" 16 389 405
+call(
+  stack
+)
+type(
+  'b option
+)
+"ubase/safelist.ml" 17 411 419 "ubase/safelist.ml" 17 411 423
+type(
+  'b option
+)
+"ubase/safelist.ml" 17 411 427 "ubase/safelist.ml" 17 411 431
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 13 320 330 "ubase/safelist.ml" 13 320 334
+)
+"ubase/safelist.ml" 17 411 432 "ubase/safelist.ml" 17 411 433
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 13 320 335 "ubase/safelist.ml" 13 320 336
+)
+"ubase/safelist.ml" 17 411 434 "ubase/safelist.ml" 17 411 436
+type(
+  'a list
+)
+ident(
+  int_ref tl "ubase/safelist.ml" 15 369 377 "ubase/safelist.ml" 15 369 379
+)
+"ubase/safelist.ml" 17 411 427 "ubase/safelist.ml" 17 411 436
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 18 437 450 "ubase/safelist.ml" 18 437 451
+type(
+  'b
+)
+ident(
+  def x "ubase/safelist.ml" 18 437 455 "ubase/safelist.ml" 18 437 469
+)
+"ubase/safelist.ml" 18 437 445 "ubase/safelist.ml" 18 437 451
+type(
+  'b option
+)
+"ubase/safelist.ml" 18 437 455 "ubase/safelist.ml" 18 437 459
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 13 320 330 "ubase/safelist.ml" 13 320 334
+)
+"ubase/safelist.ml" 18 437 461 "ubase/safelist.ml" 18 437 462
+type(
+  'b
+)
+ident(
+  int_ref x "ubase/safelist.ml" 18 437 450 "ubase/safelist.ml" 18 437 451
+)
+"ubase/safelist.ml" 18 437 464 "ubase/safelist.ml" 18 437 465
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 13 320 335 "ubase/safelist.ml" 13 320 336
+)
+"ubase/safelist.ml" 18 437 460 "ubase/safelist.ml" 18 437 466
+type(
+  'b list
+)
+"ubase/safelist.ml" 18 437 467 "ubase/safelist.ml" 18 437 469
+type(
+  'a list
+)
+ident(
+  int_ref tl "ubase/safelist.ml" 15 369 377 "ubase/safelist.ml" 15 369 379
+)
+"ubase/safelist.ml" 18 437 455 "ubase/safelist.ml" 18 437 469
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 15 369 383 "ubase/safelist.ml" 19 470 477
+type(
+  'b list
+)
+"ubase/safelist.ml" 13 320 339 "ubase/safelist.ml" 19 470 477
+type(
+  'a list -> 'b list
+)
+"ubase/safelist.ml" 20 478 483 "ubase/safelist.ml" 20 478 487
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 13 320 330 "ubase/safelist.ml" 13 320 334
+)
+"ubase/safelist.ml" 20 478 488 "ubase/safelist.ml" 20 478 490
+type(
+  'b list
+)
+"ubase/safelist.ml" 20 478 491 "ubase/safelist.ml" 20 478 492
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 12 300 316 "ubase/safelist.ml" 12 300 317
+)
+"ubase/safelist.ml" 20 478 483 "ubase/safelist.ml" 20 478 492
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 13 320 322 "ubase/safelist.ml" 20 478 492
+type(
+  'b list
+)
+"ubase/safelist.ml" 22 494 498 "ubase/safelist.ml" 22 494 508
+type(
+  ('a -> 'b option * 'c option) -> 'a list -> 'b list * 'c list
+)
+ident(
+  def filterMap2 "ubase/safelist.ml" 35 873 873 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 22 494 509 "ubase/safelist.ml" 22 494 510
+type(
+  'a -> 'b option * 'c option
+)
+ident(
+  def f "ubase/safelist.ml" 22 494 511 "ubase/safelist.ml" 31 769 786
+)
+"ubase/safelist.ml" 22 494 511 "ubase/safelist.ml" 22 494 512
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 23 515 517 "ubase/safelist.ml" 31 769 786
+)
+"ubase/safelist.ml" 23 515 525 "ubase/safelist.ml" 23 515 529
+type(
+  'b list -> 'c list -> 'a list -> 'b list * 'c list
+)
+ident(
+  def loop "ubase/safelist.ml" 23 515 517 "ubase/safelist.ml" 31 769 786
+)
+"ubase/safelist.ml" 23 515 530 "ubase/safelist.ml" 23 515 531
+type(
+  'b list
+)
+ident(
+  def r "ubase/safelist.ml" 23 515 532 "ubase/safelist.ml" 30 761 768
+)
+"ubase/safelist.ml" 23 515 532 "ubase/safelist.ml" 23 515 533
+type(
+  'c list
+)
+ident(
+  def s "ubase/safelist.ml" 23 515 536 "ubase/safelist.ml" 30 761 768
+)
+"ubase/safelist.ml" 24 545 549 "ubase/safelist.ml" 24 545 551
+type(
+  'a list
+)
+"ubase/safelist.ml" 24 545 555 "ubase/safelist.ml" 24 545 563
+type(
+  'b list -> 'b list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 24 545 564 "ubase/safelist.ml" 24 545 565
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 23 515 530 "ubase/safelist.ml" 23 515 531
+)
+"ubase/safelist.ml" 24 545 555 "ubase/safelist.ml" 24 545 565
+call(
+  stack
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 24 545 567 "ubase/safelist.ml" 24 545 575
+type(
+  'c list -> 'c list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 24 545 576 "ubase/safelist.ml" 24 545 577
+type(
+  'c list
+)
+ident(
+  int_ref s "ubase/safelist.ml" 23 515 532 "ubase/safelist.ml" 23 515 533
+)
+"ubase/safelist.ml" 24 545 567 "ubase/safelist.ml" 24 545 577
+call(
+  stack
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 24 545 555 "ubase/safelist.ml" 24 545 577
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 25 578 582 "ubase/safelist.ml" 25 578 584
+type(
+  'a
+)
+ident(
+  def hd "ubase/safelist.ml" 25 578 592 "ubase/safelist.ml" 30 761 768
+)
+"ubase/safelist.ml" 25 578 586 "ubase/safelist.ml" 25 578 588
+type(
+  'a list
+)
+ident(
+  def tl "ubase/safelist.ml" 25 578 592 "ubase/safelist.ml" 30 761 768
+)
+"ubase/safelist.ml" 25 578 582 "ubase/safelist.ml" 25 578 588
+type(
+  'a list
+)
+"ubase/safelist.ml" 26 598 609 "ubase/safelist.ml" 26 598 610
+type(
+  'b option
+)
+ident(
+  def a "ubase/safelist.ml" 27 625 631 "ubase/safelist.ml" 29 741 760
+)
+"ubase/safelist.ml" 26 598 612 "ubase/safelist.ml" 26 598 613
+type(
+  'c option
+)
+ident(
+  def b "ubase/safelist.ml" 27 625 631 "ubase/safelist.ml" 29 741 760
+)
+"ubase/safelist.ml" 26 598 608 "ubase/safelist.ml" 26 598 614
+type(
+  'b option * 'c option
+)
+"ubase/safelist.ml" 26 598 617 "ubase/safelist.ml" 26 598 618
+type(
+  'a -> 'b option * 'c option
+)
+ident(
+  int_ref f "ubase/safelist.ml" 22 494 509 "ubase/safelist.ml" 22 494 510
+)
+"ubase/safelist.ml" 26 598 619 "ubase/safelist.ml" 26 598 621
+type(
+  'a
+)
+ident(
+  int_ref hd "ubase/safelist.ml" 25 578 582 "ubase/safelist.ml" 25 578 584
+)
+"ubase/safelist.ml" 26 598 617 "ubase/safelist.ml" 26 598 621
+call(
+  stack
+)
+type(
+  'b option * 'c option
+)
+"ubase/safelist.ml" 27 625 635 "ubase/safelist.ml" 27 625 637
+type(
+  'b list
+)
+ident(
+  def r' "ubase/safelist.ml" 28 683 689 "ubase/safelist.ml" 29 741 760
+)
+"ubase/safelist.ml" 27 625 646 "ubase/safelist.ml" 27 625 647
+type(
+  'b option
+)
+ident(
+  int_ref a "ubase/safelist.ml" 26 598 609 "ubase/safelist.ml" 26 598 610
+)
+"ubase/safelist.ml" 27 625 653 "ubase/safelist.ml" 27 625 657
+type(
+  'b option
+)
+"ubase/safelist.ml" 27 625 661 "ubase/safelist.ml" 27 625 662
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 23 515 530 "ubase/safelist.ml" 23 515 531
+)
+"ubase/safelist.ml" 27 625 670 "ubase/safelist.ml" 27 625 671
+type(
+  'b
+)
+ident(
+  def x "ubase/safelist.ml" 27 625 675 "ubase/safelist.ml" 27 625 679
+)
+"ubase/safelist.ml" 27 625 665 "ubase/safelist.ml" 27 625 671
+type(
+  'b option
+)
+"ubase/safelist.ml" 27 625 675 "ubase/safelist.ml" 27 625 676
+type(
+  'b
+)
+ident(
+  int_ref x "ubase/safelist.ml" 27 625 670 "ubase/safelist.ml" 27 625 671
+)
+"ubase/safelist.ml" 27 625 678 "ubase/safelist.ml" 27 625 679
+type(
+  'b list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 23 515 530 "ubase/safelist.ml" 23 515 531
+)
+"ubase/safelist.ml" 27 625 675 "ubase/safelist.ml" 27 625 679
+type(
+  'b list
+)
+"ubase/safelist.ml" 27 625 640 "ubase/safelist.ml" 27 625 679
+type(
+  'b list
+)
+"ubase/safelist.ml" 28 683 693 "ubase/safelist.ml" 28 683 695
+type(
+  'c list
+)
+ident(
+  def s' "ubase/safelist.ml" 29 741 747 "ubase/safelist.ml" 29 741 760
+)
+"ubase/safelist.ml" 28 683 704 "ubase/safelist.ml" 28 683 705
+type(
+  'c option
+)
+ident(
+  int_ref b "ubase/safelist.ml" 26 598 612 "ubase/safelist.ml" 26 598 613
+)
+"ubase/safelist.ml" 28 683 711 "ubase/safelist.ml" 28 683 715
+type(
+  'c option
+)
+"ubase/safelist.ml" 28 683 719 "ubase/safelist.ml" 28 683 720
+type(
+  'c list
+)
+ident(
+  int_ref s "ubase/safelist.ml" 23 515 532 "ubase/safelist.ml" 23 515 533
+)
+"ubase/safelist.ml" 28 683 728 "ubase/safelist.ml" 28 683 729
+type(
+  'c
+)
+ident(
+  def x "ubase/safelist.ml" 28 683 733 "ubase/safelist.ml" 28 683 737
+)
+"ubase/safelist.ml" 28 683 723 "ubase/safelist.ml" 28 683 729
+type(
+  'c option
+)
+"ubase/safelist.ml" 28 683 733 "ubase/safelist.ml" 28 683 734
+type(
+  'c
+)
+ident(
+  int_ref x "ubase/safelist.ml" 28 683 728 "ubase/safelist.ml" 28 683 729
+)
+"ubase/safelist.ml" 28 683 736 "ubase/safelist.ml" 28 683 737
+type(
+  'c list
+)
+ident(
+  int_ref s "ubase/safelist.ml" 23 515 532 "ubase/safelist.ml" 23 515 533
+)
+"ubase/safelist.ml" 28 683 733 "ubase/safelist.ml" 28 683 737
+type(
+  'c list
+)
+"ubase/safelist.ml" 28 683 698 "ubase/safelist.ml" 28 683 737
+type(
+  'c list
+)
+"ubase/safelist.ml" 29 741 747 "ubase/safelist.ml" 29 741 751
+type(
+  'b list -> 'c list -> 'a list -> 'b list * 'c list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 23 515 525 "ubase/safelist.ml" 23 515 529
+)
+"ubase/safelist.ml" 29 741 752 "ubase/safelist.ml" 29 741 754
+type(
+  'b list
+)
+ident(
+  int_ref r' "ubase/safelist.ml" 27 625 635 "ubase/safelist.ml" 27 625 637
+)
+"ubase/safelist.ml" 29 741 755 "ubase/safelist.ml" 29 741 757
+type(
+  'c list
+)
+ident(
+  int_ref s' "ubase/safelist.ml" 28 683 693 "ubase/safelist.ml" 28 683 695
+)
+"ubase/safelist.ml" 29 741 758 "ubase/safelist.ml" 29 741 760
+type(
+  'a list
+)
+ident(
+  int_ref tl "ubase/safelist.ml" 25 578 586 "ubase/safelist.ml" 25 578 588
+)
+"ubase/safelist.ml" 29 741 747 "ubase/safelist.ml" 29 741 760
+call(
+  tail
+)
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 28 683 689 "ubase/safelist.ml" 29 741 760
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 27 625 631 "ubase/safelist.ml" 29 741 760
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 25 578 592 "ubase/safelist.ml" 30 761 768
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 23 515 536 "ubase/safelist.ml" 30 761 768
+type(
+  'a list -> 'b list * 'c list
+)
+"ubase/safelist.ml" 31 769 774 "ubase/safelist.ml" 31 769 778
+type(
+  'b list -> 'c list -> 'a list -> 'b list * 'c list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 23 515 525 "ubase/safelist.ml" 23 515 529
+)
+"ubase/safelist.ml" 31 769 779 "ubase/safelist.ml" 31 769 781
+type(
+  'b list
+)
+"ubase/safelist.ml" 31 769 782 "ubase/safelist.ml" 31 769 784
+type(
+  'c list
+)
+"ubase/safelist.ml" 31 769 785 "ubase/safelist.ml" 31 769 786
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 22 494 511 "ubase/safelist.ml" 22 494 512
+)
+"ubase/safelist.ml" 31 769 774 "ubase/safelist.ml" 31 769 786
+call(
+  tail
+)
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 23 515 517 "ubase/safelist.ml" 31 769 786
+type(
+  'b list * 'c list
+)
+"ubase/safelist.ml" 35 873 881 "ubase/safelist.ml" 35 873 891
+type(
+  'a list -> 'a list list -> 'a list
+)
+ident(
+  def concat_rec "ubase/safelist.ml" 35 873 873 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 35 873 892 "ubase/safelist.ml" 35 873 896
+type(
+  'a list
+)
+ident(
+  def accu "ubase/safelist.ml" 36 899 901 "ubase/safelist.ml" 38 934 983
+)
+"ubase/safelist.ml" 37 910 914 "ubase/safelist.ml" 37 910 916
+type(
+  'a list list
+)
+"ubase/safelist.ml" 37 910 920 "ubase/safelist.ml" 37 910 928
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 37 910 929 "ubase/safelist.ml" 37 910 933
+type(
+  'a list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 35 873 892 "ubase/safelist.ml" 35 873 896
+)
+"ubase/safelist.ml" 37 910 920 "ubase/safelist.ml" 37 910 933
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 38 934 938 "ubase/safelist.ml" 38 934 939
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 38 934 946 "ubase/safelist.ml" 38 934 983
+)
+"ubase/safelist.ml" 38 934 941 "ubase/safelist.ml" 38 934 942
+type(
+  'a list list
+)
+ident(
+  def r "ubase/safelist.ml" 38 934 946 "ubase/safelist.ml" 38 934 983
+)
+"ubase/safelist.ml" 38 934 938 "ubase/safelist.ml" 38 934 942
+type(
+  'a list list
+)
+"ubase/safelist.ml" 38 934 946 "ubase/safelist.ml" 38 934 956
+type(
+  'a list -> 'a list list -> 'a list
+)
+ident(
+  int_ref concat_rec "ubase/safelist.ml" 35 873 881 "ubase/safelist.ml" 35 873 891
+)
+"ubase/safelist.ml" 38 934 958 "ubase/safelist.ml" 38 934 973
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.rev_append
+)
+"ubase/safelist.ml" 38 934 974 "ubase/safelist.ml" 38 934 975
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 38 934 938 "ubase/safelist.ml" 38 934 939
+)
+"ubase/safelist.ml" 38 934 976 "ubase/safelist.ml" 38 934 980
+type(
+  'a list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 35 873 892 "ubase/safelist.ml" 35 873 896
+)
+"ubase/safelist.ml" 38 934 957 "ubase/safelist.ml" 38 934 981
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 38 934 982 "ubase/safelist.ml" 38 934 983
+type(
+  'a list list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 38 934 941 "ubase/safelist.ml" 38 934 942
+)
+"ubase/safelist.ml" 38 934 946 "ubase/safelist.ml" 38 934 983
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 36 899 901 "ubase/safelist.ml" 38 934 983
+type(
+  'a list list -> 'a list
+)
+"ubase/safelist.ml" 39 984 988 "ubase/safelist.ml" 39 984 994
+type(
+  'a list list -> 'a list
+)
+ident(
+  def concat "ubase/safelist.ml" 40 1015 1015 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 39 984 995 "ubase/safelist.ml" 39 984 996
+type(
+  'a list list
+)
+ident(
+  def l "ubase/safelist.ml" 39 984 999 "ubase/safelist.ml" 39 984 1014
+)
+"ubase/safelist.ml" 39 984 999 "ubase/safelist.ml" 39 984 1009
+type(
+  'a list -> 'a list list -> 'a list
+)
+ident(
+  int_ref concat_rec "ubase/safelist.ml" 35 873 881 "ubase/safelist.ml" 35 873 891
+)
+"ubase/safelist.ml" 39 984 1010 "ubase/safelist.ml" 39 984 1012
+type(
+  'a list
+)
+"ubase/safelist.ml" 39 984 1013 "ubase/safelist.ml" 39 984 1014
+type(
+  'a list list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 39 984 995 "ubase/safelist.ml" 39 984 996
+)
+"ubase/safelist.ml" 39 984 999 "ubase/safelist.ml" 39 984 1014
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 40 1015 1019 "ubase/safelist.ml" 40 1015 1026
+type(
+  'a list list -> 'a list
+)
+ident(
+  def flatten "ubase/safelist.ml" 42 1037 1037 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 40 1015 1029 "ubase/safelist.ml" 40 1015 1035
+type(
+  'a list list -> 'a list
+)
+ident(
+  int_ref concat "ubase/safelist.ml" 39 984 988 "ubase/safelist.ml" 39 984 994
+)
+"ubase/safelist.ml" 42 1037 1041 "ubase/safelist.ml" 42 1037 1047
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def append "ubase/safelist.ml" 45 1119 1119 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 42 1037 1048 "ubase/safelist.ml" 42 1037 1049
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 42 1037 1050 "ubase/safelist.ml" 43 1055 1117
+)
+"ubase/safelist.ml" 42 1037 1050 "ubase/safelist.ml" 42 1037 1052
+type(
+  'a list
+)
+ident(
+  def l' "ubase/safelist.ml" 43 1055 1057 "ubase/safelist.ml" 43 1055 1117
+)
+"ubase/safelist.ml" 43 1055 1063 "ubase/safelist.ml" 43 1055 1065
+type(
+  'a list
+)
+ident(
+  int_ref l' "ubase/safelist.ml" 42 1037 1050 "ubase/safelist.ml" 42 1037 1052
+)
+"ubase/safelist.ml" 43 1055 1071 "ubase/safelist.ml" 43 1055 1073
+type(
+  'a list
+)
+"ubase/safelist.ml" 43 1055 1077 "ubase/safelist.ml" 43 1055 1078
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 42 1037 1048 "ubase/safelist.ml" 42 1037 1049
+)
+"ubase/safelist.ml" 43 1055 1081 "ubase/safelist.ml" 43 1055 1082
+type(
+  'a list
+)
+"ubase/safelist.ml" 43 1055 1086 "ubase/safelist.ml" 43 1055 1101
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.rev_append
+)
+"ubase/safelist.ml" 43 1055 1103 "ubase/safelist.ml" 43 1055 1111
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 43 1055 1112 "ubase/safelist.ml" 43 1055 1113
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 42 1037 1048 "ubase/safelist.ml" 42 1037 1049
+)
+"ubase/safelist.ml" 43 1055 1102 "ubase/safelist.ml" 43 1055 1114
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 43 1055 1115 "ubase/safelist.ml" 43 1055 1117
+type(
+  'a list
+)
+ident(
+  int_ref l' "ubase/safelist.ml" 42 1037 1050 "ubase/safelist.ml" 42 1037 1052
+)
+"ubase/safelist.ml" 43 1055 1086 "ubase/safelist.ml" 43 1055 1117
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 43 1055 1057 "ubase/safelist.ml" 43 1055 1117
+type(
+  'a list
+)
+"ubase/safelist.ml" 45 1119 1123 "ubase/safelist.ml" 45 1119 1130
+type(
+  ('a -> 'b) -> 'a list -> 'b list
+)
+ident(
+  def rev_map "ubase/safelist.ml" 52 1244 1244 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 45 1119 1131 "ubase/safelist.ml" 45 1119 1132
+type(
+  'a -> 'b
+)
+ident(
+  def f "ubase/safelist.ml" 45 1119 1133 "ubase/safelist.ml" 50 1229 1242
+)
+"ubase/safelist.ml" 45 1119 1133 "ubase/safelist.ml" 45 1119 1134
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 46 1137 1139 "ubase/safelist.ml" 50 1229 1242
+)
+"ubase/safelist.ml" 46 1137 1147 "ubase/safelist.ml" 46 1137 1153
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  def rmap_f "ubase/safelist.ml" 46 1137 1139 "ubase/safelist.ml" 50 1229 1242
+)
+"ubase/safelist.ml" 46 1137 1154 "ubase/safelist.ml" 46 1137 1158
+type(
+  'b list
+)
+ident(
+  def accu "ubase/safelist.ml" 46 1137 1161 "ubase/safelist.ml" 48 1187 1223
+)
+"ubase/safelist.ml" 47 1170 1176 "ubase/safelist.ml" 47 1170 1178
+type(
+  'a list
+)
+"ubase/safelist.ml" 47 1170 1182 "ubase/safelist.ml" 47 1170 1186
+type(
+  'b list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 46 1137 1154 "ubase/safelist.ml" 46 1137 1158
+)
+"ubase/safelist.ml" 48 1187 1193 "ubase/safelist.ml" 48 1187 1194
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 48 1187 1201 "ubase/safelist.ml" 48 1187 1223
+)
+"ubase/safelist.ml" 48 1187 1196 "ubase/safelist.ml" 48 1187 1197
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 48 1187 1201 "ubase/safelist.ml" 48 1187 1223
+)
+"ubase/safelist.ml" 48 1187 1193 "ubase/safelist.ml" 48 1187 1197
+type(
+  'a list
+)
+"ubase/safelist.ml" 48 1187 1201 "ubase/safelist.ml" 48 1187 1207
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  int_ref rmap_f "ubase/safelist.ml" 46 1137 1147 "ubase/safelist.ml" 46 1137 1153
+)
+"ubase/safelist.ml" 48 1187 1209 "ubase/safelist.ml" 48 1187 1210
+type(
+  'a -> 'b
+)
+ident(
+  int_ref f "ubase/safelist.ml" 45 1119 1131 "ubase/safelist.ml" 45 1119 1132
+)
+"ubase/safelist.ml" 48 1187 1211 "ubase/safelist.ml" 48 1187 1212
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 48 1187 1193 "ubase/safelist.ml" 48 1187 1194
+)
+"ubase/safelist.ml" 48 1187 1209 "ubase/safelist.ml" 48 1187 1212
+call(
+  stack
+)
+type(
+  'b
+)
+"ubase/safelist.ml" 48 1187 1216 "ubase/safelist.ml" 48 1187 1220
+type(
+  'b list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 46 1137 1154 "ubase/safelist.ml" 46 1137 1158
+)
+"ubase/safelist.ml" 48 1187 1208 "ubase/safelist.ml" 48 1187 1221
+type(
+  'b list
+)
+"ubase/safelist.ml" 48 1187 1222 "ubase/safelist.ml" 48 1187 1223
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 48 1187 1196 "ubase/safelist.ml" 48 1187 1197
+)
+"ubase/safelist.ml" 48 1187 1201 "ubase/safelist.ml" 48 1187 1223
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 46 1137 1161 "ubase/safelist.ml" 48 1187 1223
+type(
+  'a list -> 'b list
+)
+"ubase/safelist.ml" 50 1229 1231 "ubase/safelist.ml" 50 1229 1237
+type(
+  'b list -> 'a list -> 'b list
+)
+ident(
+  int_ref rmap_f "ubase/safelist.ml" 46 1137 1147 "ubase/safelist.ml" 46 1137 1153
+)
+"ubase/safelist.ml" 50 1229 1238 "ubase/safelist.ml" 50 1229 1240
+type(
+  'b list
+)
+"ubase/safelist.ml" 50 1229 1241 "ubase/safelist.ml" 50 1229 1242
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 45 1119 1133 "ubase/safelist.ml" 45 1119 1134
+)
+"ubase/safelist.ml" 50 1229 1231 "ubase/safelist.ml" 50 1229 1242
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 46 1137 1139 "ubase/safelist.ml" 50 1229 1242
+type(
+  'b list
+)
+"ubase/safelist.ml" 52 1244 1248 "ubase/safelist.ml" 52 1244 1251
+type(
+  ('a -> 'b) -> 'a list -> 'b list
+)
+ident(
+  def map "ubase/safelist.ml" 54 1282 1282 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 52 1244 1252 "ubase/safelist.ml" 52 1244 1253
+type(
+  'a -> 'b
+)
+ident(
+  def f "ubase/safelist.ml" 52 1244 1254 "ubase/safelist.ml" 52 1244 1280
+)
+"ubase/safelist.ml" 52 1244 1254 "ubase/safelist.ml" 52 1244 1255
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 52 1244 1258 "ubase/safelist.ml" 52 1244 1280
+)
+"ubase/safelist.ml" 52 1244 1258 "ubase/safelist.ml" 52 1244 1266
+type(
+  'b list -> 'b list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 52 1244 1268 "ubase/safelist.ml" 52 1244 1275
+type(
+  ('a -> 'b) -> 'a list -> 'b list
+)
+ident(
+  int_ref rev_map "ubase/safelist.ml" 45 1119 1123 "ubase/safelist.ml" 45 1119 1130
+)
+"ubase/safelist.ml" 52 1244 1276 "ubase/safelist.ml" 52 1244 1277
+type(
+  'a -> 'b
+)
+ident(
+  int_ref f "ubase/safelist.ml" 52 1244 1252 "ubase/safelist.ml" 52 1244 1253
+)
+"ubase/safelist.ml" 52 1244 1278 "ubase/safelist.ml" 52 1244 1279
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 52 1244 1254 "ubase/safelist.ml" 52 1244 1255
+)
+"ubase/safelist.ml" 52 1244 1267 "ubase/safelist.ml" 52 1244 1280
+call(
+  stack
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 52 1244 1258 "ubase/safelist.ml" 52 1244 1280
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 54 1282 1286 "ubase/safelist.ml" 54 1282 1294
+type(
+  ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  def rev_map2 "ubase/safelist.ml" 64 1513 1513 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 54 1282 1295 "ubase/safelist.ml" 54 1282 1296
+type(
+  'a -> 'b -> 'c
+)
+ident(
+  def f "ubase/safelist.ml" 54 1282 1297 "ubase/safelist.ml" 61 1490 1508
+)
+"ubase/safelist.ml" 54 1282 1297 "ubase/safelist.ml" 54 1282 1299
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 54 1282 1300 "ubase/safelist.ml" 61 1490 1508
+)
+"ubase/safelist.ml" 54 1282 1300 "ubase/safelist.ml" 54 1282 1302
+type(
+  'b list
+)
+ident(
+  def l2 "ubase/safelist.ml" 55 1305 1307 "ubase/safelist.ml" 61 1490 1508
+)
+"ubase/safelist.ml" 55 1305 1315 "ubase/safelist.ml" 55 1305 1322
+type(
+  'c list -> 'a list -> 'b list -> 'c list
+)
+ident(
+  def rmap2_f "ubase/safelist.ml" 55 1305 1307 "ubase/safelist.ml" 61 1490 1508
+)
+"ubase/safelist.ml" 55 1305 1323 "ubase/safelist.ml" 55 1305 1327
+type(
+  'c list
+)
+ident(
+  def accu "ubase/safelist.ml" 55 1305 1328 "ubase/safelist.ml" 59 1441 1484
+)
+"ubase/safelist.ml" 55 1305 1328 "ubase/safelist.ml" 55 1305 1330
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 55 1305 1331 "ubase/safelist.ml" 59 1441 1484
+)
+"ubase/safelist.ml" 55 1305 1331 "ubase/safelist.ml" 55 1305 1333
+type(
+  'b list
+)
+ident(
+  def l2 "ubase/safelist.ml" 56 1336 1340 "ubase/safelist.ml" 59 1441 1484
+)
+"ubase/safelist.ml" 56 1336 1347 "ubase/safelist.ml" 56 1336 1349
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 55 1305 1328 "ubase/safelist.ml" 55 1305 1330
+)
+"ubase/safelist.ml" 56 1336 1351 "ubase/safelist.ml" 56 1336 1353
+type(
+  'b list
+)
+ident(
+  int_ref l2 "ubase/safelist.ml" 55 1305 1331 "ubase/safelist.ml" 55 1305 1333
+)
+"ubase/safelist.ml" 56 1336 1346 "ubase/safelist.ml" 56 1336 1354
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 57 1360 1367 "ubase/safelist.ml" 57 1360 1369
+type(
+  'a list
+)
+"ubase/safelist.ml" 57 1360 1371 "ubase/safelist.ml" 57 1360 1373
+type(
+  'b list
+)
+"ubase/safelist.ml" 57 1360 1366 "ubase/safelist.ml" 57 1360 1374
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 57 1360 1378 "ubase/safelist.ml" 57 1360 1382
+type(
+  'c list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 55 1305 1323 "ubase/safelist.ml" 55 1305 1327
+)
+"ubase/safelist.ml" 58 1383 1390 "ubase/safelist.ml" 58 1383 1392
+type(
+  'a
+)
+ident(
+  def a1 "ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1440
+)
+"ubase/safelist.ml" 58 1383 1394 "ubase/safelist.ml" 58 1383 1396
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1440
+)
+"ubase/safelist.ml" 58 1383 1390 "ubase/safelist.ml" 58 1383 1396
+type(
+  'a list
+)
+"ubase/safelist.ml" 58 1383 1398 "ubase/safelist.ml" 58 1383 1400
+type(
+  'b
+)
+ident(
+  def a2 "ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1440
+)
+"ubase/safelist.ml" 58 1383 1402 "ubase/safelist.ml" 58 1383 1404
+type(
+  'b list
+)
+ident(
+  def l2 "ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1440
+)
+"ubase/safelist.ml" 58 1383 1398 "ubase/safelist.ml" 58 1383 1404
+type(
+  'b list
+)
+"ubase/safelist.ml" 58 1383 1389 "ubase/safelist.ml" 58 1383 1405
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1416
+type(
+  'c list -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref rmap2_f "ubase/safelist.ml" 55 1305 1315 "ubase/safelist.ml" 55 1305 1322
+)
+"ubase/safelist.ml" 58 1383 1418 "ubase/safelist.ml" 58 1383 1419
+type(
+  'a -> 'b -> 'c
+)
+ident(
+  int_ref f "ubase/safelist.ml" 54 1282 1295 "ubase/safelist.ml" 54 1282 1296
+)
+"ubase/safelist.ml" 58 1383 1420 "ubase/safelist.ml" 58 1383 1422
+type(
+  'a
+)
+ident(
+  int_ref a1 "ubase/safelist.ml" 58 1383 1390 "ubase/safelist.ml" 58 1383 1392
+)
+"ubase/safelist.ml" 58 1383 1423 "ubase/safelist.ml" 58 1383 1425
+type(
+  'b
+)
+ident(
+  int_ref a2 "ubase/safelist.ml" 58 1383 1398 "ubase/safelist.ml" 58 1383 1400
+)
+"ubase/safelist.ml" 58 1383 1418 "ubase/safelist.ml" 58 1383 1425
+call(
+  stack
+)
+type(
+  'c
+)
+"ubase/safelist.ml" 58 1383 1429 "ubase/safelist.ml" 58 1383 1433
+type(
+  'c list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 55 1305 1323 "ubase/safelist.ml" 55 1305 1327
+)
+"ubase/safelist.ml" 58 1383 1417 "ubase/safelist.ml" 58 1383 1434
+type(
+  'c list
+)
+"ubase/safelist.ml" 58 1383 1435 "ubase/safelist.ml" 58 1383 1437
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 58 1383 1394 "ubase/safelist.ml" 58 1383 1396
+)
+"ubase/safelist.ml" 58 1383 1438 "ubase/safelist.ml" 58 1383 1440
+type(
+  'b list
+)
+ident(
+  int_ref l2 "ubase/safelist.ml" 58 1383 1402 "ubase/safelist.ml" 58 1383 1404
+)
+"ubase/safelist.ml" 58 1383 1409 "ubase/safelist.ml" 58 1383 1440
+call(
+  tail
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 59 1441 1448 "ubase/safelist.ml" 59 1441 1449
+type(
+  'a list
+)
+"ubase/safelist.ml" 59 1441 1451 "ubase/safelist.ml" 59 1441 1452
+type(
+  'b list
+)
+"ubase/safelist.ml" 59 1441 1447 "ubase/safelist.ml" 59 1441 1453
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 59 1441 1457 "ubase/safelist.ml" 59 1441 1468
+type(
+  string -> 'c list
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/safelist.ml" 59 1441 1469 "ubase/safelist.ml" 59 1441 1484
+type(
+  string
+)
+"ubase/safelist.ml" 59 1441 1457 "ubase/safelist.ml" 59 1441 1484
+call(
+  tail
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 56 1336 1340 "ubase/safelist.ml" 59 1441 1484
+type(
+  'c list
+)
+"ubase/safelist.ml" 61 1490 1492 "ubase/safelist.ml" 61 1490 1499
+type(
+  'c list -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref rmap2_f "ubase/safelist.ml" 55 1305 1315 "ubase/safelist.ml" 55 1305 1322
+)
+"ubase/safelist.ml" 61 1490 1500 "ubase/safelist.ml" 61 1490 1502
+type(
+  'c list
+)
+"ubase/safelist.ml" 61 1490 1503 "ubase/safelist.ml" 61 1490 1505
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 54 1282 1297 "ubase/safelist.ml" 54 1282 1299
+)
+"ubase/safelist.ml" 61 1490 1506 "ubase/safelist.ml" 61 1490 1508
+type(
+  'b list
+)
+ident(
+  int_ref l2 "ubase/safelist.ml" 54 1282 1300 "ubase/safelist.ml" 54 1282 1302
+)
+"ubase/safelist.ml" 61 1490 1492 "ubase/safelist.ml" 61 1490 1508
+call(
+  tail
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 55 1305 1307 "ubase/safelist.ml" 61 1490 1508
+type(
+  'c list
+)
+"ubase/safelist.ml" 64 1513 1517 "ubase/safelist.ml" 64 1513 1521
+type(
+  ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  def map2 "ubase/safelist.ml" 66 1561 1561 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 64 1513 1522 "ubase/safelist.ml" 64 1513 1523
+type(
+  'a -> 'b -> 'c
+)
+ident(
+  def f "ubase/safelist.ml" 64 1513 1524 "ubase/safelist.ml" 64 1513 1559
+)
+"ubase/safelist.ml" 64 1513 1524 "ubase/safelist.ml" 64 1513 1526
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 64 1513 1527 "ubase/safelist.ml" 64 1513 1559
+)
+"ubase/safelist.ml" 64 1513 1527 "ubase/safelist.ml" 64 1513 1529
+type(
+  'b list
+)
+ident(
+  def l2 "ubase/safelist.ml" 64 1513 1532 "ubase/safelist.ml" 64 1513 1559
+)
+"ubase/safelist.ml" 64 1513 1532 "ubase/safelist.ml" 64 1513 1540
+type(
+  'c list -> 'c list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 64 1513 1542 "ubase/safelist.ml" 64 1513 1550
+type(
+  ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref rev_map2 "ubase/safelist.ml" 54 1282 1286 "ubase/safelist.ml" 54 1282 1294
+)
+"ubase/safelist.ml" 64 1513 1551 "ubase/safelist.ml" 64 1513 1552
+type(
+  'a -> 'b -> 'c
+)
+ident(
+  int_ref f "ubase/safelist.ml" 64 1513 1522 "ubase/safelist.ml" 64 1513 1523
+)
+"ubase/safelist.ml" 64 1513 1553 "ubase/safelist.ml" 64 1513 1555
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 64 1513 1524 "ubase/safelist.ml" 64 1513 1526
+)
+"ubase/safelist.ml" 64 1513 1556 "ubase/safelist.ml" 64 1513 1558
+type(
+  'b list
+)
+ident(
+  int_ref l2 "ubase/safelist.ml" 64 1513 1527 "ubase/safelist.ml" 64 1513 1529
+)
+"ubase/safelist.ml" 64 1513 1541 "ubase/safelist.ml" 64 1513 1559
+call(
+  stack
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 64 1513 1532 "ubase/safelist.ml" 64 1513 1559
+call(
+  tail
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 66 1561 1569 "ubase/safelist.ml" 66 1561 1585
+type(
+  'a list -> bool
+)
+ident(
+  def allElementsEqual "ubase/safelist.ml" 66 1561 1561 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 67 1597 1601 "ubase/safelist.ml" 67 1597 1603
+type(
+  'a list
+)
+"ubase/safelist.ml" 67 1597 1607 "ubase/safelist.ml" 67 1597 1611
+type(
+  bool
+)
+"ubase/safelist.ml" 68 1612 1617 "ubase/safelist.ml" 68 1612 1618
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 68 1612 1623 "ubase/safelist.ml" 68 1612 1627
+)
+"ubase/safelist.ml" 68 1612 1616 "ubase/safelist.ml" 68 1612 1619
+type(
+  'a list
+)
+"ubase/safelist.ml" 68 1612 1623 "ubase/safelist.ml" 68 1612 1627
+type(
+  bool
+)
+"ubase/safelist.ml" 69 1628 1632 "ubase/safelist.ml" 69 1628 1633
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1681
+)
+"ubase/safelist.ml" 69 1628 1635 "ubase/safelist.ml" 69 1628 1636
+type(
+  'a
+)
+ident(
+  def b "ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1681
+)
+"ubase/safelist.ml" 69 1628 1638 "ubase/safelist.ml" 69 1628 1642
+type(
+  'a list
+)
+ident(
+  def rest "ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1681
+)
+"ubase/safelist.ml" 69 1628 1635 "ubase/safelist.ml" 69 1628 1642
+type(
+  'a list
+)
+"ubase/safelist.ml" 69 1628 1632 "ubase/safelist.ml" 69 1628 1642
+type(
+  'a list
+)
+"ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1647
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 69 1628 1632 "ubase/safelist.ml" 69 1628 1633
+)
+"ubase/safelist.ml" 69 1628 1647 "ubase/safelist.ml" 69 1628 1648
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/safelist.ml" 69 1628 1648 "ubase/safelist.ml" 69 1628 1649
+type(
+  'a
+)
+ident(
+  int_ref b "ubase/safelist.ml" 69 1628 1635 "ubase/safelist.ml" 69 1628 1636
+)
+"ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1649
+type(
+  bool
+)
+"ubase/safelist.ml" 69 1628 1650 "ubase/safelist.ml" 69 1628 1652
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/safelist.ml" 69 1628 1654 "ubase/safelist.ml" 69 1628 1670
+type(
+  'a list -> bool
+)
+ident(
+  int_ref allElementsEqual "ubase/safelist.ml" 66 1561 1569 "ubase/safelist.ml" 66 1561 1585
+)
+"ubase/safelist.ml" 69 1628 1672 "ubase/safelist.ml" 69 1628 1673
+type(
+  'a
+)
+ident(
+  int_ref b "ubase/safelist.ml" 69 1628 1635 "ubase/safelist.ml" 69 1628 1636
+)
+"ubase/safelist.ml" 69 1628 1675 "ubase/safelist.ml" 69 1628 1679
+type(
+  'a list
+)
+ident(
+  int_ref rest "ubase/safelist.ml" 69 1628 1638 "ubase/safelist.ml" 69 1628 1642
+)
+"ubase/safelist.ml" 69 1628 1671 "ubase/safelist.ml" 69 1628 1680
+type(
+  'a list
+)
+"ubase/safelist.ml" 69 1628 1653 "ubase/safelist.ml" 69 1628 1681
+call(
+  tail
+)
+type(
+  bool
+)
+"ubase/safelist.ml" 69 1628 1646 "ubase/safelist.ml" 69 1628 1681
+type(
+  bool
+)
+"ubase/safelist.ml" 66 1561 1588 "ubase/safelist.ml" 69 1628 1681
+type(
+  'a list -> bool
+)
+"ubase/safelist.ml" 71 1683 1691 "ubase/safelist.ml" 71 1683 1700
+type(
+  ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+)
+ident(
+  def fold_left "ubase/safelist.ml" 71 1683 1683 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 71 1683 1701 "ubase/safelist.ml" 71 1683 1702
+type(
+  'a -> 'b -> 'a
+)
+ident(
+  def f "ubase/safelist.ml" 71 1683 1703 "ubase/safelist.ml" 77 1838 1869
+)
+"ubase/safelist.ml" 71 1683 1703 "ubase/safelist.ml" 71 1683 1707
+type(
+  'a
+)
+ident(
+  def accu "ubase/safelist.ml" 71 1683 1708 "ubase/safelist.ml" 77 1838 1869
+)
+"ubase/safelist.ml" 71 1683 1708 "ubase/safelist.ml" 71 1683 1709
+type(
+  'b list
+)
+ident(
+  def l "ubase/safelist.ml" 72 1712 1714 "ubase/safelist.ml" 77 1838 1869
+)
+"ubase/safelist.ml" 72 1712 1720 "ubase/safelist.ml" 72 1712 1721
+type(
+  'b list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 71 1683 1708 "ubase/safelist.ml" 71 1683 1709
+)
+"ubase/safelist.ml" 73 1727 1731 "ubase/safelist.ml" 73 1727 1733
+type(
+  'b list
+)
+"ubase/safelist.ml" 73 1727 1737 "ubase/safelist.ml" 73 1727 1741
+type(
+  'a
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 71 1683 1703 "ubase/safelist.ml" 71 1683 1707
+)
+"ubase/safelist.ml" 74 1742 1746 "ubase/safelist.ml" 74 1742 1747
+type(
+  'b
+)
+ident(
+  def a "ubase/safelist.ml" 76 1810 1816 "ubase/safelist.ml" 77 1838 1869
+)
+"ubase/safelist.ml" 74 1742 1749 "ubase/safelist.ml" 74 1742 1750
+type(
+  'b list
+)
+"ubase/safelist.ml" 74 1742 1746 "ubase/safelist.ml" 74 1742 1750
+type(
+  'b list
+)
+"ubase/safelist.ml" 76 1810 1820 "ubase/safelist.ml" 76 1810 1822
+type(
+  'b list
+)
+ident(
+  def l' "ubase/safelist.ml" 77 1838 1844 "ubase/safelist.ml" 77 1838 1869
+)
+"ubase/safelist.ml" 76 1810 1825 "ubase/safelist.ml" 76 1810 1832
+type(
+  'b list -> 'b list
+)
+ident(
+  ext_ref List.tl
+)
+"ubase/safelist.ml" 76 1810 1833 "ubase/safelist.ml" 76 1810 1834
+type(
+  'b list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 71 1683 1708 "ubase/safelist.ml" 71 1683 1709
+)
+"ubase/safelist.ml" 76 1810 1825 "ubase/safelist.ml" 76 1810 1834
+call(
+  stack
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 77 1838 1844 "ubase/safelist.ml" 77 1838 1853
+type(
+  ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+)
+ident(
+  int_ref fold_left "ubase/safelist.ml" 71 1683 1691 "ubase/safelist.ml" 71 1683 1700
+)
+"ubase/safelist.ml" 77 1838 1854 "ubase/safelist.ml" 77 1838 1855
+type(
+  'a -> 'b -> 'a
+)
+ident(
+  int_ref f "ubase/safelist.ml" 71 1683 1701 "ubase/safelist.ml" 71 1683 1702
+)
+"ubase/safelist.ml" 77 1838 1857 "ubase/safelist.ml" 77 1838 1858
+type(
+  'a -> 'b -> 'a
+)
+ident(
+  int_ref f "ubase/safelist.ml" 71 1683 1701 "ubase/safelist.ml" 71 1683 1702
+)
+"ubase/safelist.ml" 77 1838 1859 "ubase/safelist.ml" 77 1838 1863
+type(
+  'a
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 71 1683 1703 "ubase/safelist.ml" 71 1683 1707
+)
+"ubase/safelist.ml" 77 1838 1864 "ubase/safelist.ml" 77 1838 1865
+type(
+  'b
+)
+ident(
+  int_ref a "ubase/safelist.ml" 74 1742 1746 "ubase/safelist.ml" 74 1742 1747
+)
+"ubase/safelist.ml" 77 1838 1856 "ubase/safelist.ml" 77 1838 1866
+call(
+  stack
+)
+type(
+  'a
+)
+"ubase/safelist.ml" 77 1838 1867 "ubase/safelist.ml" 77 1838 1869
+type(
+  'b list
+)
+ident(
+  int_ref l' "ubase/safelist.ml" 76 1810 1820 "ubase/safelist.ml" 76 1810 1822
+)
+"ubase/safelist.ml" 77 1838 1844 "ubase/safelist.ml" 77 1838 1869
+call(
+  tail
+)
+type(
+  'a
+)
+"ubase/safelist.ml" 76 1810 1816 "ubase/safelist.ml" 77 1838 1869
+type(
+  'a
+)
+"ubase/safelist.ml" 72 1712 1714 "ubase/safelist.ml" 77 1838 1869
+type(
+  'a
+)
+"ubase/safelist.ml" 79 1871 1875 "ubase/safelist.ml" 79 1871 1880
+type(
+  ('a * 'b) list -> 'a list * 'b list
+)
+ident(
+  def split "ubase/safelist.ml" 86 2028 2028 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 79 1871 1881 "ubase/safelist.ml" 79 1871 1882
+type(
+  ('a * 'b) list
+)
+ident(
+  def l "ubase/safelist.ml" 80 1885 1887 "ubase/safelist.ml" 84 2010 2026
+)
+"ubase/safelist.ml" 80 1885 1895 "ubase/safelist.ml" 80 1885 1899
+type(
+  'c list -> 'd list -> ('c * 'd) list -> 'c list * 'd list
+)
+ident(
+  def loop "ubase/safelist.ml" 80 1885 1887 "ubase/safelist.ml" 84 2010 2026
+)
+"ubase/safelist.ml" 80 1885 1900 "ubase/safelist.ml" 80 1885 1904
+type(
+  'c list
+)
+ident(
+  def acc1 "ubase/safelist.ml" 80 1885 1905 "ubase/safelist.ml" 82 1962 2004
+)
+"ubase/safelist.ml" 80 1885 1905 "ubase/safelist.ml" 80 1885 1909
+type(
+  'd list
+)
+ident(
+  def acc2 "ubase/safelist.ml" 80 1885 1912 "ubase/safelist.ml" 82 1962 2004
+)
+"ubase/safelist.ml" 81 1921 1925 "ubase/safelist.ml" 81 1921 1927
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 81 1921 1932 "ubase/safelist.ml" 81 1921 1940
+type(
+  'c list -> 'c list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 81 1921 1941 "ubase/safelist.ml" 81 1921 1945
+type(
+  'c list
+)
+ident(
+  int_ref acc1 "ubase/safelist.ml" 80 1885 1900 "ubase/safelist.ml" 80 1885 1904
+)
+"ubase/safelist.ml" 81 1921 1932 "ubase/safelist.ml" 81 1921 1945
+call(
+  stack
+)
+type(
+  'c list
+)
+"ubase/safelist.ml" 81 1921 1947 "ubase/safelist.ml" 81 1921 1955
+type(
+  'd list -> 'd list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 81 1921 1956 "ubase/safelist.ml" 81 1921 1960
+type(
+  'd list
+)
+ident(
+  int_ref acc2 "ubase/safelist.ml" 80 1885 1905 "ubase/safelist.ml" 80 1885 1909
+)
+"ubase/safelist.ml" 81 1921 1947 "ubase/safelist.ml" 81 1921 1960
+call(
+  stack
+)
+type(
+  'd list
+)
+"ubase/safelist.ml" 81 1921 1931 "ubase/safelist.ml" 81 1921 1961
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 82 1962 1967 "ubase/safelist.ml" 82 1962 1968
+type(
+  'c
+)
+ident(
+  def x "ubase/safelist.ml" 82 1962 1978 "ubase/safelist.ml" 82 1962 2004
+)
+"ubase/safelist.ml" 82 1962 1969 "ubase/safelist.ml" 82 1962 1970
+type(
+  'd
+)
+ident(
+  def y "ubase/safelist.ml" 82 1962 1978 "ubase/safelist.ml" 82 1962 2004
+)
+"ubase/safelist.ml" 82 1962 1966 "ubase/safelist.ml" 82 1962 1971
+type(
+  'c * 'd
+)
+"ubase/safelist.ml" 82 1962 1973 "ubase/safelist.ml" 82 1962 1974
+type(
+  ('c * 'd) list
+)
+ident(
+  def l "ubase/safelist.ml" 82 1962 1978 "ubase/safelist.ml" 82 1962 2004
+)
+"ubase/safelist.ml" 82 1962 1966 "ubase/safelist.ml" 82 1962 1974
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 82 1962 1978 "ubase/safelist.ml" 82 1962 1982
+type(
+  'c list -> 'd list -> ('c * 'd) list -> 'c list * 'd list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 80 1885 1895 "ubase/safelist.ml" 80 1885 1899
+)
+"ubase/safelist.ml" 82 1962 1984 "ubase/safelist.ml" 82 1962 1985
+type(
+  'c
+)
+ident(
+  int_ref x "ubase/safelist.ml" 82 1962 1967 "ubase/safelist.ml" 82 1962 1968
+)
+"ubase/safelist.ml" 82 1962 1987 "ubase/safelist.ml" 82 1962 1991
+type(
+  'c list
+)
+ident(
+  int_ref acc1 "ubase/safelist.ml" 80 1885 1900 "ubase/safelist.ml" 80 1885 1904
+)
+"ubase/safelist.ml" 82 1962 1983 "ubase/safelist.ml" 82 1962 1992
+type(
+  'c list
+)
+"ubase/safelist.ml" 82 1962 1994 "ubase/safelist.ml" 82 1962 1995
+type(
+  'd
+)
+ident(
+  int_ref y "ubase/safelist.ml" 82 1962 1969 "ubase/safelist.ml" 82 1962 1970
+)
+"ubase/safelist.ml" 82 1962 1997 "ubase/safelist.ml" 82 1962 2001
+type(
+  'd list
+)
+ident(
+  int_ref acc2 "ubase/safelist.ml" 80 1885 1905 "ubase/safelist.ml" 80 1885 1909
+)
+"ubase/safelist.ml" 82 1962 1993 "ubase/safelist.ml" 82 1962 2002
+type(
+  'd list
+)
+"ubase/safelist.ml" 82 1962 2003 "ubase/safelist.ml" 82 1962 2004
+type(
+  ('c * 'd) list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 82 1962 1973 "ubase/safelist.ml" 82 1962 1974
+)
+"ubase/safelist.ml" 82 1962 1978 "ubase/safelist.ml" 82 1962 2004
+call(
+  tail
+)
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 80 1885 1912 "ubase/safelist.ml" 82 1962 2004
+type(
+  ('c * 'd) list -> 'c list * 'd list
+)
+"ubase/safelist.ml" 84 2010 2014 "ubase/safelist.ml" 84 2010 2018
+type(
+  'a list -> 'b list -> ('a * 'b) list -> 'a list * 'b list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 80 1885 1895 "ubase/safelist.ml" 80 1885 1899
+)
+"ubase/safelist.ml" 84 2010 2019 "ubase/safelist.ml" 84 2010 2021
+type(
+  'a list
+)
+"ubase/safelist.ml" 84 2010 2022 "ubase/safelist.ml" 84 2010 2024
+type(
+  'b list
+)
+"ubase/safelist.ml" 84 2010 2025 "ubase/safelist.ml" 84 2010 2026
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 79 1871 1881 "ubase/safelist.ml" 79 1871 1882
+)
+"ubase/safelist.ml" 84 2010 2014 "ubase/safelist.ml" 84 2010 2026
+call(
+  tail
+)
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 80 1885 1887 "ubase/safelist.ml" 84 2010 2026
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 86 2028 2036 "ubase/safelist.ml" 86 2028 2049
+type(
+  'a list list -> 'a list list -> 'a list list
+)
+ident(
+  def transpose_rec "ubase/safelist.ml" 86 2028 2028 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 86 2028 2050 "ubase/safelist.ml" 86 2028 2054
+type(
+  'a list list
+)
+ident(
+  def accu "ubase/safelist.ml" 86 2028 2055 "ubase/safelist.ml" 101 2431 2485
+)
+"ubase/safelist.ml" 86 2028 2055 "ubase/safelist.ml" 86 2028 2056
+type(
+  'a list list
+)
+ident(
+  def l "ubase/safelist.ml" 87 2059 2061 "ubase/safelist.ml" 101 2431 2485
+)
+"ubase/safelist.ml" 87 2059 2067 "ubase/safelist.ml" 87 2059 2068
+type(
+  'a list list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 86 2028 2055 "ubase/safelist.ml" 86 2028 2056
+)
+"ubase/safelist.ml" 88 2074 2078 "ubase/safelist.ml" 88 2074 2080
+type(
+  'a list list
+)
+"ubase/safelist.ml" 88 2074 2083 "ubase/safelist.ml" 88 2074 2085
+type(
+  'a list
+)
+"ubase/safelist.ml" 88 2074 2087 "ubase/safelist.ml" 88 2074 2088
+type(
+  'a list list
+)
+"ubase/safelist.ml" 88 2074 2083 "ubase/safelist.ml" 88 2074 2088
+type(
+  'a list list
+)
+"ubase/safelist.ml" 88 2074 2078 "ubase/safelist.ml" 88 2074 2088
+type(
+  'a list list
+)
+"ubase/safelist.ml" 89 2092 2098 "ubase/safelist.ml" 89 2092 2102
+type(
+  'a list list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 86 2028 2050 "ubase/safelist.ml" 86 2028 2054
+)
+"ubase/safelist.ml" 90 2103 2108 "ubase/safelist.ml" 90 2103 2109
+type(
+  'a
+)
+ident(
+  def x "ubase/safelist.ml" 91 2117 2123 "ubase/safelist.ml" 91 2117 2196
+)
+"ubase/safelist.ml" 90 2103 2107 "ubase/safelist.ml" 90 2103 2110
+type(
+  'a list
+)
+"ubase/safelist.ml" 90 2103 2112 "ubase/safelist.ml" 90 2103 2113
+type(
+  'a list list
+)
+"ubase/safelist.ml" 90 2103 2107 "ubase/safelist.ml" 90 2103 2113
+type(
+  'a list list
+)
+"ubase/safelist.ml" 91 2117 2124 "ubase/safelist.ml" 91 2117 2127
+type(
+  ('a list -> 'a) -> 'a list list -> 'a list
+)
+ident(
+  int_ref map "ubase/safelist.ml" 52 1244 1248 "ubase/safelist.ml" 52 1244 1251
+)
+"ubase/safelist.ml" 91 2117 2139 "ubase/safelist.ml" 91 2117 2140
+type(
+  'a
+)
+ident(
+  def x "ubase/safelist.ml" 91 2117 2145 "ubase/safelist.ml" 91 2117 2146
+)
+"ubase/safelist.ml" 91 2117 2138 "ubase/safelist.ml" 91 2117 2141
+type(
+  'a list
+)
+"ubase/safelist.ml" 91 2117 2145 "ubase/safelist.ml" 91 2117 2146
+type(
+  'a
+)
+ident(
+  int_ref x "ubase/safelist.ml" 91 2117 2139 "ubase/safelist.ml" 91 2117 2140
+)
+"ubase/safelist.ml" 91 2117 2149 "ubase/safelist.ml" 91 2117 2150
+type(
+  'a list
+)
+"ubase/safelist.ml" 91 2117 2154 "ubase/safelist.ml" 91 2117 2165
+type(
+  string -> 'a
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/safelist.ml" 91 2117 2166 "ubase/safelist.ml" 91 2117 2186
+type(
+  string
+)
+"ubase/safelist.ml" 91 2117 2154 "ubase/safelist.ml" 91 2117 2186
+call(
+  tail
+)
+type(
+  'a
+)
+"ubase/safelist.ml" 91 2117 2128 "ubase/safelist.ml" 91 2117 2187
+type(
+  'a list -> 'a
+)
+"ubase/safelist.ml" 91 2117 2188 "ubase/safelist.ml" 91 2117 2189
+type(
+  'a list list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 86 2028 2055 "ubase/safelist.ml" 86 2028 2056
+)
+"ubase/safelist.ml" 91 2117 2123 "ubase/safelist.ml" 91 2117 2190
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 91 2117 2192 "ubase/safelist.ml" 91 2117 2196
+type(
+  'a list list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 86 2028 2050 "ubase/safelist.ml" 86 2028 2054
+)
+"ubase/safelist.ml" 91 2117 2123 "ubase/safelist.ml" 91 2117 2196
+type(
+  'a list list
+)
+"ubase/safelist.ml" 92 2197 2201 "ubase/safelist.ml" 92 2197 2202
+type(
+  'a list list
+)
+"ubase/safelist.ml" 93 2206 2217 "ubase/safelist.ml" 93 2206 2219
+type(
+  'a list
+)
+ident(
+  def l0 "ubase/safelist.ml" 101 2431 2437 "ubase/safelist.ml" 101 2431 2485
+)
+"ubase/safelist.ml" 93 2206 2221 "ubase/safelist.ml" 93 2206 2222
+type(
+  'a list list
+)
+ident(
+  def r "ubase/safelist.ml" 101 2431 2437 "ubase/safelist.ml" 101 2431 2485
+)
+"ubase/safelist.ml" 93 2206 2216 "ubase/safelist.ml" 93 2206 2223
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 94 2226 2234 "ubase/safelist.ml" 94 2226 2243
+type(
+  ('a list * 'a list list -> 'a list -> 'a list * 'a list list) ->
+  'a list * 'a list list -> 'a list list -> 'a list * 'a list list
+)
+ident(
+  int_ref fold_left "ubase/safelist.ml" 71 1683 1691 "ubase/safelist.ml" 71 1683 1700
+)
+"ubase/safelist.ml" 95 2244 2260 "ubase/safelist.ml" 95 2244 2262
+type(
+  'a list
+)
+ident(
+  def l0 "ubase/safelist.ml" 95 2244 2267 "ubase/safelist.ml" 98 2361 2399
+)
+"ubase/safelist.ml" 95 2244 2264 "ubase/safelist.ml" 95 2244 2265
+type(
+  'a list list
+)
+ident(
+  def r "ubase/safelist.ml" 95 2244 2267 "ubase/safelist.ml" 98 2361 2399
+)
+"ubase/safelist.ml" 95 2244 2259 "ubase/safelist.ml" 95 2244 2266
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 95 2244 2267 "ubase/safelist.ml" 95 2244 2269
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 96 2273 2286 "ubase/safelist.ml" 98 2361 2399
+)
+"ubase/safelist.ml" 96 2273 2292 "ubase/safelist.ml" 96 2273 2294
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 95 2244 2267 "ubase/safelist.ml" 95 2244 2269
+)
+"ubase/safelist.ml" 97 2300 2315 "ubase/safelist.ml" 97 2300 2317
+type(
+  'a list
+)
+"ubase/safelist.ml" 97 2300 2324 "ubase/safelist.ml" 97 2300 2335
+type(
+  string -> 'a list * 'a list list
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/safelist.ml" 97 2300 2336 "ubase/safelist.ml" 97 2300 2360
+type(
+  string
+)
+"ubase/safelist.ml" 97 2300 2324 "ubase/safelist.ml" 97 2300 2360
+call(
+  tail
+)
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 98 2361 2376 "ubase/safelist.ml" 98 2361 2377
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 98 2361 2385 "ubase/safelist.ml" 98 2361 2399
+)
+"ubase/safelist.ml" 98 2361 2379 "ubase/safelist.ml" 98 2361 2381
+type(
+  'a list
+)
+ident(
+  def r1 "ubase/safelist.ml" 98 2361 2385 "ubase/safelist.ml" 98 2361 2399
+)
+"ubase/safelist.ml" 98 2361 2376 "ubase/safelist.ml" 98 2361 2381
+type(
+  'a list
+)
+"ubase/safelist.ml" 98 2361 2386 "ubase/safelist.ml" 98 2361 2387
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 98 2361 2376 "ubase/safelist.ml" 98 2361 2377
+)
+"ubase/safelist.ml" 98 2361 2389 "ubase/safelist.ml" 98 2361 2391
+type(
+  'a list
+)
+ident(
+  int_ref l0 "ubase/safelist.ml" 95 2244 2260 "ubase/safelist.ml" 95 2244 2262
+)
+"ubase/safelist.ml" 98 2361 2386 "ubase/safelist.ml" 98 2361 2391
+type(
+  'a list
+)
+"ubase/safelist.ml" 98 2361 2393 "ubase/safelist.ml" 98 2361 2395
+type(
+  'a list
+)
+ident(
+  int_ref r1 "ubase/safelist.ml" 98 2361 2379 "ubase/safelist.ml" 98 2361 2381
+)
+"ubase/safelist.ml" 98 2361 2397 "ubase/safelist.ml" 98 2361 2398
+type(
+  'a list list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 95 2244 2264 "ubase/safelist.ml" 95 2244 2265
+)
+"ubase/safelist.ml" 98 2361 2393 "ubase/safelist.ml" 98 2361 2398
+type(
+  'a list list
+)
+"ubase/safelist.ml" 98 2361 2385 "ubase/safelist.ml" 98 2361 2399
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 96 2273 2286 "ubase/safelist.ml" 98 2361 2399
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 95 2244 2254 "ubase/safelist.ml" 98 2361 2400
+type(
+  'a list * 'a list list -> 'a list -> 'a list * 'a list list
+)
+"ubase/safelist.ml" 99 2401 2412 "ubase/safelist.ml" 99 2401 2414
+type(
+  'a list
+)
+"ubase/safelist.ml" 99 2401 2416 "ubase/safelist.ml" 99 2401 2418
+type(
+  'a list list
+)
+"ubase/safelist.ml" 99 2401 2411 "ubase/safelist.ml" 99 2401 2419
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 99 2401 2420 "ubase/safelist.ml" 99 2401 2421
+type(
+  'a list list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 86 2028 2055 "ubase/safelist.ml" 86 2028 2056
+)
+"ubase/safelist.ml" 94 2226 2234 "ubase/safelist.ml" 99 2401 2421
+call(
+  stack
+)
+type(
+  'a list * 'a list list
+)
+"ubase/safelist.ml" 101 2431 2437 "ubase/safelist.ml" 101 2431 2450
+type(
+  'a list list -> 'a list list -> 'a list list
+)
+ident(
+  int_ref transpose_rec "ubase/safelist.ml" 86 2028 2036 "ubase/safelist.ml" 86 2028 2049
+)
+"ubase/safelist.ml" 101 2431 2453 "ubase/safelist.ml" 101 2431 2461
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 101 2431 2462 "ubase/safelist.ml" 101 2431 2464
+type(
+  'a list
+)
+ident(
+  int_ref l0 "ubase/safelist.ml" 93 2206 2217 "ubase/safelist.ml" 93 2206 2219
+)
+"ubase/safelist.ml" 101 2431 2452 "ubase/safelist.ml" 101 2431 2465
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 101 2431 2467 "ubase/safelist.ml" 101 2431 2471
+type(
+  'a list list
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 86 2028 2050 "ubase/safelist.ml" 86 2028 2054
+)
+"ubase/safelist.ml" 101 2431 2451 "ubase/safelist.ml" 101 2431 2472
+type(
+  'a list list
+)
+"ubase/safelist.ml" 101 2431 2474 "ubase/safelist.ml" 101 2431 2482
+type(
+  'a list list -> 'a list list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 101 2431 2483 "ubase/safelist.ml" 101 2431 2484
+type(
+  'a list list
+)
+ident(
+  int_ref r "ubase/safelist.ml" 93 2206 2221 "ubase/safelist.ml" 93 2206 2222
+)
+"ubase/safelist.ml" 101 2431 2473 "ubase/safelist.ml" 101 2431 2485
+call(
+  stack
+)
+type(
+  'a list list
+)
+"ubase/safelist.ml" 101 2431 2437 "ubase/safelist.ml" 101 2431 2485
+call(
+  tail
+)
+type(
+  'a list list
+)
+"ubase/safelist.ml" 93 2206 2212 "ubase/safelist.ml" 101 2431 2485
+type(
+  'a list list
+)
+"ubase/safelist.ml" 87 2059 2061 "ubase/safelist.ml" 101 2431 2485
+type(
+  'a list list
+)
+"ubase/safelist.ml" 103 2487 2491 "ubase/safelist.ml" 103 2487 2500
+type(
+  'a list list -> 'a list list
+)
+ident(
+  def transpose "ubase/safelist.ml" 105 2536 2536 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 103 2487 2501 "ubase/safelist.ml" 103 2487 2502
+type(
+  'a list list
+)
+ident(
+  def l "ubase/safelist.ml" 103 2487 2505 "ubase/safelist.ml" 103 2487 2534
+)
+"ubase/safelist.ml" 103 2487 2505 "ubase/safelist.ml" 103 2487 2513
+type(
+  'a list list -> 'a list list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 103 2487 2515 "ubase/safelist.ml" 103 2487 2528
+type(
+  'a list list -> 'a list list -> 'a list list
+)
+ident(
+  int_ref transpose_rec "ubase/safelist.ml" 86 2028 2036 "ubase/safelist.ml" 86 2028 2049
+)
+"ubase/safelist.ml" 103 2487 2529 "ubase/safelist.ml" 103 2487 2531
+type(
+  'a list list
+)
+"ubase/safelist.ml" 103 2487 2532 "ubase/safelist.ml" 103 2487 2533
+type(
+  'a list list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 103 2487 2501 "ubase/safelist.ml" 103 2487 2502
+)
+"ubase/safelist.ml" 103 2487 2514 "ubase/safelist.ml" 103 2487 2534
+call(
+  stack
+)
+type(
+  'a list list
+)
+"ubase/safelist.ml" 103 2487 2505 "ubase/safelist.ml" 103 2487 2534
+call(
+  tail
+)
+type(
+  'a list list
+)
+"ubase/safelist.ml" 105 2536 2540 "ubase/safelist.ml" 105 2536 2547
+type(
+  'a list -> 'b list -> ('a * 'b) list
+)
+ident(
+  def combine "ubase/safelist.ml" 113 2739 2739 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 105 2536 2548 "ubase/safelist.ml" 105 2536 2550
+type(
+  'a list
+)
+ident(
+  def l1 "ubase/safelist.ml" 105 2536 2551 "ubase/safelist.ml" 111 2718 2737
+)
+"ubase/safelist.ml" 105 2536 2551 "ubase/safelist.ml" 105 2536 2553
+type(
+  'b list
+)
+ident(
+  def l2 "ubase/safelist.ml" 106 2556 2558 "ubase/safelist.ml" 111 2718 2737
+)
+"ubase/safelist.ml" 106 2556 2566 "ubase/safelist.ml" 106 2556 2570
+type(
+  ('c * 'd) list -> 'c list * 'd list -> ('c * 'd) list
+)
+ident(
+  def loop "ubase/safelist.ml" 106 2556 2558 "ubase/safelist.ml" 111 2718 2737
+)
+"ubase/safelist.ml" 106 2556 2571 "ubase/safelist.ml" 106 2556 2574
+type(
+  ('c * 'd) list
+)
+ident(
+  def acc "ubase/safelist.ml" 106 2556 2577 "ubase/safelist.ml" 109 2672 2712
+)
+"ubase/safelist.ml" 107 2586 2591 "ubase/safelist.ml" 107 2586 2593
+type(
+  'c list
+)
+"ubase/safelist.ml" 107 2586 2595 "ubase/safelist.ml" 107 2586 2597
+type(
+  'd list
+)
+"ubase/safelist.ml" 107 2586 2590 "ubase/safelist.ml" 107 2586 2598
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 107 2586 2602 "ubase/safelist.ml" 107 2586 2610
+type(
+  ('c * 'd) list -> ('c * 'd) list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 107 2586 2611 "ubase/safelist.ml" 107 2586 2614
+type(
+  ('c * 'd) list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 106 2556 2571 "ubase/safelist.ml" 106 2556 2574
+)
+"ubase/safelist.ml" 107 2586 2602 "ubase/safelist.ml" 107 2586 2614
+call(
+  tail
+)
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 108 2615 2620 "ubase/safelist.ml" 108 2615 2622
+type(
+  'c
+)
+ident(
+  def a1 "ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2671
+)
+"ubase/safelist.ml" 108 2615 2624 "ubase/safelist.ml" 108 2615 2627
+type(
+  'c list
+)
+ident(
+  def l1r "ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2671
+)
+"ubase/safelist.ml" 108 2615 2620 "ubase/safelist.ml" 108 2615 2627
+type(
+  'c list
+)
+"ubase/safelist.ml" 108 2615 2629 "ubase/safelist.ml" 108 2615 2631
+type(
+  'd
+)
+ident(
+  def a2 "ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2671
+)
+"ubase/safelist.ml" 108 2615 2633 "ubase/safelist.ml" 108 2615 2636
+type(
+  'd list
+)
+ident(
+  def l2r "ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2671
+)
+"ubase/safelist.ml" 108 2615 2629 "ubase/safelist.ml" 108 2615 2636
+type(
+  'd list
+)
+"ubase/safelist.ml" 108 2615 2619 "ubase/safelist.ml" 108 2615 2637
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2645
+type(
+  ('c * 'd) list -> 'c list * 'd list -> ('c * 'd) list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 106 2556 2566 "ubase/safelist.ml" 106 2556 2570
+)
+"ubase/safelist.ml" 108 2615 2648 "ubase/safelist.ml" 108 2615 2650
+type(
+  'c
+)
+ident(
+  int_ref a1 "ubase/safelist.ml" 108 2615 2620 "ubase/safelist.ml" 108 2615 2622
+)
+"ubase/safelist.ml" 108 2615 2652 "ubase/safelist.ml" 108 2615 2654
+type(
+  'd
+)
+ident(
+  int_ref a2 "ubase/safelist.ml" 108 2615 2629 "ubase/safelist.ml" 108 2615 2631
+)
+"ubase/safelist.ml" 108 2615 2647 "ubase/safelist.ml" 108 2615 2655
+type(
+  'c * 'd
+)
+"ubase/safelist.ml" 108 2615 2657 "ubase/safelist.ml" 108 2615 2660
+type(
+  ('c * 'd) list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 106 2556 2571 "ubase/safelist.ml" 106 2556 2574
+)
+"ubase/safelist.ml" 108 2615 2646 "ubase/safelist.ml" 108 2615 2661
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 108 2615 2663 "ubase/safelist.ml" 108 2615 2666
+type(
+  'c list
+)
+ident(
+  int_ref l1r "ubase/safelist.ml" 108 2615 2624 "ubase/safelist.ml" 108 2615 2627
+)
+"ubase/safelist.ml" 108 2615 2667 "ubase/safelist.ml" 108 2615 2670
+type(
+  'd list
+)
+ident(
+  int_ref l2r "ubase/safelist.ml" 108 2615 2633 "ubase/safelist.ml" 108 2615 2636
+)
+"ubase/safelist.ml" 108 2615 2662 "ubase/safelist.ml" 108 2615 2671
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 108 2615 2641 "ubase/safelist.ml" 108 2615 2671
+call(
+  tail
+)
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 109 2672 2677 "ubase/safelist.ml" 109 2672 2678
+type(
+  'c list
+)
+"ubase/safelist.ml" 109 2672 2680 "ubase/safelist.ml" 109 2672 2681
+type(
+  'd list
+)
+"ubase/safelist.ml" 109 2672 2676 "ubase/safelist.ml" 109 2672 2682
+type(
+  'c list * 'd list
+)
+"ubase/safelist.ml" 109 2672 2686 "ubase/safelist.ml" 109 2672 2697
+type(
+  string -> ('c * 'd) list
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/safelist.ml" 109 2672 2698 "ubase/safelist.ml" 109 2672 2712
+type(
+  string
+)
+"ubase/safelist.ml" 109 2672 2686 "ubase/safelist.ml" 109 2672 2712
+call(
+  tail
+)
+type(
+  ('c * 'd) list
+)
+"ubase/safelist.ml" 106 2556 2577 "ubase/safelist.ml" 109 2672 2712
+type(
+  'c list * 'd list -> ('c * 'd) list
+)
+"ubase/safelist.ml" 111 2718 2722 "ubase/safelist.ml" 111 2718 2726
+type(
+  ('a * 'b) list -> 'a list * 'b list -> ('a * 'b) list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 106 2556 2566 "ubase/safelist.ml" 106 2556 2570
+)
+"ubase/safelist.ml" 111 2718 2727 "ubase/safelist.ml" 111 2718 2729
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 111 2718 2731 "ubase/safelist.ml" 111 2718 2733
+type(
+  'a list
+)
+ident(
+  int_ref l1 "ubase/safelist.ml" 105 2536 2548 "ubase/safelist.ml" 105 2536 2550
+)
+"ubase/safelist.ml" 111 2718 2734 "ubase/safelist.ml" 111 2718 2736
+type(
+  'b list
+)
+ident(
+  int_ref l2 "ubase/safelist.ml" 105 2536 2551 "ubase/safelist.ml" 105 2536 2553
+)
+"ubase/safelist.ml" 111 2718 2730 "ubase/safelist.ml" 111 2718 2737
+type(
+  'a list * 'b list
+)
+"ubase/safelist.ml" 111 2718 2722 "ubase/safelist.ml" 111 2718 2737
+call(
+  tail
+)
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 106 2556 2558 "ubase/safelist.ml" 111 2718 2737
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 113 2739 2743 "ubase/safelist.ml" 113 2739 2755
+type(
+  'a -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  def remove_assoc "ubase/safelist.ml" 121 2926 2926 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 113 2739 2756 "ubase/safelist.ml" 113 2739 2757
+type(
+  'a
+)
+ident(
+  def x "ubase/safelist.ml" 113 2739 2758 "ubase/safelist.ml" 119 2911 2924
+)
+"ubase/safelist.ml" 113 2739 2758 "ubase/safelist.ml" 113 2739 2759
+type(
+  ('a * 'b) list
+)
+ident(
+  def l "ubase/safelist.ml" 114 2762 2764 "ubase/safelist.ml" 119 2911 2924
+)
+"ubase/safelist.ml" 114 2762 2772 "ubase/safelist.ml" 114 2762 2776
+type(
+  ('a * 'c) list -> ('a * 'c) list -> ('a * 'c) list
+)
+ident(
+  def loop "ubase/safelist.ml" 114 2762 2764 "ubase/safelist.ml" 119 2911 2924
+)
+"ubase/safelist.ml" 114 2762 2777 "ubase/safelist.ml" 114 2762 2780
+type(
+  ('a * 'c) list
+)
+ident(
+  def acc "ubase/safelist.ml" 114 2762 2783 "ubase/safelist.ml" 117 2845 2905
+)
+"ubase/safelist.ml" 115 2792 2796 "ubase/safelist.ml" 115 2792 2798
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 115 2792 2802 "ubase/safelist.ml" 115 2792 2810
+type(
+  ('a * 'c) list -> ('a * 'c) list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 115 2792 2811 "ubase/safelist.ml" 115 2792 2814
+type(
+  ('a * 'c) list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 114 2762 2777 "ubase/safelist.ml" 114 2762 2780
+)
+"ubase/safelist.ml" 115 2792 2802 "ubase/safelist.ml" 115 2792 2814
+call(
+  tail
+)
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 116 2815 2820 "ubase/safelist.ml" 116 2815 2821
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 117 2845 2851 "ubase/safelist.ml" 117 2845 2905
+)
+"ubase/safelist.ml" 116 2815 2823 "ubase/safelist.ml" 116 2815 2824
+type(
+  'c
+)
+ident(
+  def b "ubase/safelist.ml" 117 2845 2851 "ubase/safelist.ml" 117 2845 2905
+)
+"ubase/safelist.ml" 116 2815 2820 "ubase/safelist.ml" 116 2815 2824
+type(
+  'a * 'c
+)
+"ubase/safelist.ml" 116 2815 2828 "ubase/safelist.ml" 116 2815 2832
+ident(
+  def pair "ubase/safelist.ml" 117 2845 2851 "ubase/safelist.ml" 117 2845 2905
+)
+"ubase/safelist.ml" 116 2815 2819 "ubase/safelist.ml" 116 2815 2833
+type(
+  'a * 'c
+)
+"ubase/safelist.ml" 116 2815 2837 "ubase/safelist.ml" 116 2815 2841
+type(
+  ('a * 'c) list
+)
+ident(
+  def rest "ubase/safelist.ml" 117 2845 2851 "ubase/safelist.ml" 117 2845 2905
+)
+"ubase/safelist.ml" 116 2815 2819 "ubase/safelist.ml" 116 2815 2841
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 117 2845 2854 "ubase/safelist.ml" 117 2845 2855
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 116 2815 2820 "ubase/safelist.ml" 116 2815 2821
+)
+"ubase/safelist.ml" 117 2845 2856 "ubase/safelist.ml" 117 2845 2857
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/safelist.ml" 117 2845 2858 "ubase/safelist.ml" 117 2845 2859
+type(
+  'a
+)
+ident(
+  int_ref x "ubase/safelist.ml" 113 2739 2756 "ubase/safelist.ml" 113 2739 2757
+)
+"ubase/safelist.ml" 117 2845 2854 "ubase/safelist.ml" 117 2845 2859
+type(
+  bool
+)
+"ubase/safelist.ml" 117 2845 2865 "ubase/safelist.ml" 117 2845 2869
+type(
+  ('a * 'c) list -> ('a * 'c) list -> ('a * 'c) list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 114 2762 2772 "ubase/safelist.ml" 114 2762 2776
+)
+"ubase/safelist.ml" 117 2845 2870 "ubase/safelist.ml" 117 2845 2873
+type(
+  ('a * 'c) list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 114 2762 2777 "ubase/safelist.ml" 114 2762 2780
+)
+"ubase/safelist.ml" 117 2845 2874 "ubase/safelist.ml" 117 2845 2878
+type(
+  ('a * 'c) list
+)
+ident(
+  int_ref rest "ubase/safelist.ml" 116 2815 2837 "ubase/safelist.ml" 116 2815 2841
+)
+"ubase/safelist.ml" 117 2845 2865 "ubase/safelist.ml" 117 2845 2878
+call(
+  tail
+)
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 117 2845 2884 "ubase/safelist.ml" 117 2845 2888
+type(
+  ('a * 'c) list -> ('a * 'c) list -> ('a * 'c) list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 114 2762 2772 "ubase/safelist.ml" 114 2762 2776
+)
+"ubase/safelist.ml" 117 2845 2890 "ubase/safelist.ml" 117 2845 2894
+type(
+  'a * 'c
+)
+ident(
+  int_ref pair "ubase/safelist.ml" 116 2815 2819 "ubase/safelist.ml" 116 2815 2833
+)
+"ubase/safelist.ml" 117 2845 2896 "ubase/safelist.ml" 117 2845 2899
+type(
+  ('a * 'c) list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 114 2762 2777 "ubase/safelist.ml" 114 2762 2780
+)
+"ubase/safelist.ml" 117 2845 2889 "ubase/safelist.ml" 117 2845 2900
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 117 2845 2901 "ubase/safelist.ml" 117 2845 2905
+type(
+  ('a * 'c) list
+)
+ident(
+  int_ref rest "ubase/safelist.ml" 116 2815 2837 "ubase/safelist.ml" 116 2815 2841
+)
+"ubase/safelist.ml" 117 2845 2884 "ubase/safelist.ml" 117 2845 2905
+call(
+  tail
+)
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 117 2845 2851 "ubase/safelist.ml" 117 2845 2905
+type(
+  ('a * 'c) list
+)
+"ubase/safelist.ml" 114 2762 2783 "ubase/safelist.ml" 117 2845 2905
+type(
+  ('a * 'c) list -> ('a * 'c) list
+)
+"ubase/safelist.ml" 119 2911 2915 "ubase/safelist.ml" 119 2911 2919
+type(
+  ('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 114 2762 2772 "ubase/safelist.ml" 114 2762 2776
+)
+"ubase/safelist.ml" 119 2911 2920 "ubase/safelist.ml" 119 2911 2922
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 119 2911 2923 "ubase/safelist.ml" 119 2911 2924
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 113 2739 2758 "ubase/safelist.ml" 113 2739 2759
+)
+"ubase/safelist.ml" 119 2911 2915 "ubase/safelist.ml" 119 2911 2924
+call(
+  tail
+)
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 114 2762 2764 "ubase/safelist.ml" 119 2911 2924
+type(
+  ('a * 'b) list
+)
+"ubase/safelist.ml" 121 2926 2930 "ubase/safelist.ml" 121 2926 2940
+type(
+  ('a -> 'b -> 'b) -> 'a list -> 'b -> 'b
+)
+ident(
+  def fold_right "ubase/safelist.ml" 124 3002 3002 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 121 2926 2941 "ubase/safelist.ml" 121 2926 2942
+type(
+  'a -> 'b -> 'b
+)
+ident(
+  def f "ubase/safelist.ml" 121 2926 2943 "ubase/safelist.ml" 122 2952 3000
+)
+"ubase/safelist.ml" 121 2926 2943 "ubase/safelist.ml" 121 2926 2944
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 121 2926 2945 "ubase/safelist.ml" 122 2952 3000
+)
+"ubase/safelist.ml" 121 2926 2945 "ubase/safelist.ml" 121 2926 2949
+type(
+  'b
+)
+ident(
+  def accu "ubase/safelist.ml" 122 2952 2954 "ubase/safelist.ml" 122 2952 3000
+)
+"ubase/safelist.ml" 122 2952 2954 "ubase/safelist.ml" 122 2952 2963
+type(
+  ('b -> 'a -> 'b) -> 'b -> 'a list -> 'b
+)
+ident(
+  int_ref fold_left "ubase/safelist.ml" 71 1683 1691 "ubase/safelist.ml" 71 1683 1700
+)
+"ubase/safelist.ml" 122 2952 2969 "ubase/safelist.ml" 122 2952 2970
+type(
+  'b
+)
+ident(
+  def x "ubase/safelist.ml" 122 2952 2971 "ubase/safelist.ml" 122 2952 2981
+)
+"ubase/safelist.ml" 122 2952 2971 "ubase/safelist.ml" 122 2952 2972
+type(
+  'a
+)
+ident(
+  def y "ubase/safelist.ml" 122 2952 2976 "ubase/safelist.ml" 122 2952 2981
+)
+"ubase/safelist.ml" 122 2952 2976 "ubase/safelist.ml" 122 2952 2977
+type(
+  'a -> 'b -> 'b
+)
+ident(
+  int_ref f "ubase/safelist.ml" 121 2926 2941 "ubase/safelist.ml" 121 2926 2942
+)
+"ubase/safelist.ml" 122 2952 2978 "ubase/safelist.ml" 122 2952 2979
+type(
+  'a
+)
+ident(
+  int_ref y "ubase/safelist.ml" 122 2952 2971 "ubase/safelist.ml" 122 2952 2972
+)
+"ubase/safelist.ml" 122 2952 2980 "ubase/safelist.ml" 122 2952 2981
+type(
+  'b
+)
+ident(
+  int_ref x "ubase/safelist.ml" 122 2952 2969 "ubase/safelist.ml" 122 2952 2970
+)
+"ubase/safelist.ml" 122 2952 2976 "ubase/safelist.ml" 122 2952 2981
+call(
+  tail
+)
+type(
+  'b
+)
+"ubase/safelist.ml" 122 2952 2964 "ubase/safelist.ml" 122 2952 2982
+type(
+  'b -> 'a -> 'b
+)
+"ubase/safelist.ml" 122 2952 2983 "ubase/safelist.ml" 122 2952 2987
+type(
+  'b
+)
+ident(
+  int_ref accu "ubase/safelist.ml" 121 2926 2945 "ubase/safelist.ml" 121 2926 2949
+)
+"ubase/safelist.ml" 122 2952 2989 "ubase/safelist.ml" 122 2952 2997
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 122 2952 2998 "ubase/safelist.ml" 122 2952 2999
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 121 2926 2943 "ubase/safelist.ml" 121 2926 2944
+)
+"ubase/safelist.ml" 122 2952 2988 "ubase/safelist.ml" 122 2952 3000
+call(
+  stack
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 122 2952 2954 "ubase/safelist.ml" 122 2952 3000
+call(
+  tail
+)
+type(
+  'b
+)
+"ubase/safelist.ml" 124 3002 3006 "ubase/safelist.ml" 124 3002 3017
+type(
+  ('a -> 'b list) -> 'a list -> 'b list
+)
+ident(
+  def flatten_map "ubase/safelist.ml" 126 3043 3043 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 124 3002 3018 "ubase/safelist.ml" 124 3002 3019
+type(
+  'a -> 'b list
+)
+ident(
+  def f "ubase/safelist.ml" 124 3002 3020 "ubase/safelist.ml" 124 3002 3041
+)
+"ubase/safelist.ml" 124 3002 3020 "ubase/safelist.ml" 124 3002 3021
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 124 3002 3024 "ubase/safelist.ml" 124 3002 3041
+)
+"ubase/safelist.ml" 124 3002 3024 "ubase/safelist.ml" 124 3002 3031
+type(
+  'b list list -> 'b list
+)
+ident(
+  int_ref flatten "ubase/safelist.ml" 40 1015 1019 "ubase/safelist.ml" 40 1015 1026
+)
+"ubase/safelist.ml" 124 3002 3033 "ubase/safelist.ml" 124 3002 3036
+type(
+  ('a -> 'b list) -> 'a list -> 'b list list
+)
+ident(
+  int_ref map "ubase/safelist.ml" 52 1244 1248 "ubase/safelist.ml" 52 1244 1251
+)
+"ubase/safelist.ml" 124 3002 3037 "ubase/safelist.ml" 124 3002 3038
+type(
+  'a -> 'b list
+)
+ident(
+  int_ref f "ubase/safelist.ml" 124 3002 3018 "ubase/safelist.ml" 124 3002 3019
+)
+"ubase/safelist.ml" 124 3002 3039 "ubase/safelist.ml" 124 3002 3040
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 124 3002 3020 "ubase/safelist.ml" 124 3002 3021
+)
+"ubase/safelist.ml" 124 3002 3032 "ubase/safelist.ml" 124 3002 3041
+call(
+  stack
+)
+type(
+  'b list list
+)
+"ubase/safelist.ml" 124 3002 3024 "ubase/safelist.ml" 124 3002 3041
+call(
+  tail
+)
+type(
+  'b list
+)
+"ubase/safelist.ml" 126 3043 3047 "ubase/safelist.ml" 126 3043 3053
+type(
+  'a -> 'a list -> 'a list
+)
+ident(
+  def remove "ubase/safelist.ml" 134 3209 3209 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 126 3043 3054 "ubase/safelist.ml" 126 3043 3055
+type(
+  'a
+)
+ident(
+  def x "ubase/safelist.ml" 126 3043 3056 "ubase/safelist.ml" 132 3194 3207
+)
+"ubase/safelist.ml" 126 3043 3056 "ubase/safelist.ml" 126 3043 3057
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 127 3061 3063 "ubase/safelist.ml" 132 3194 3207
+)
+"ubase/safelist.ml" 127 3061 3071 "ubase/safelist.ml" 127 3061 3075
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def loop "ubase/safelist.ml" 127 3061 3063 "ubase/safelist.ml" 132 3194 3207
+)
+"ubase/safelist.ml" 127 3061 3076 "ubase/safelist.ml" 127 3061 3079
+type(
+  'a list
+)
+ident(
+  def acc "ubase/safelist.ml" 127 3061 3082 "ubase/safelist.ml" 130 3131 3188
+)
+"ubase/safelist.ml" 128 3091 3095 "ubase/safelist.ml" 128 3091 3097
+type(
+  'a list
+)
+"ubase/safelist.ml" 128 3091 3101 "ubase/safelist.ml" 128 3091 3109
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 128 3091 3110 "ubase/safelist.ml" 128 3091 3113
+type(
+  'a list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 127 3061 3076 "ubase/safelist.ml" 127 3061 3079
+)
+"ubase/safelist.ml" 128 3091 3101 "ubase/safelist.ml" 128 3091 3113
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 129 3114 3118 "ubase/safelist.ml" 129 3114 3119
+type(
+  'a
+)
+ident(
+  def a "ubase/safelist.ml" 130 3131 3137 "ubase/safelist.ml" 130 3131 3188
+)
+"ubase/safelist.ml" 129 3114 3123 "ubase/safelist.ml" 129 3114 3127
+type(
+  'a list
+)
+ident(
+  def rest "ubase/safelist.ml" 130 3131 3137 "ubase/safelist.ml" 130 3131 3188
+)
+"ubase/safelist.ml" 129 3114 3118 "ubase/safelist.ml" 129 3114 3127
+type(
+  'a list
+)
+"ubase/safelist.ml" 130 3131 3140 "ubase/safelist.ml" 130 3131 3141
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 129 3114 3118 "ubase/safelist.ml" 129 3114 3119
+)
+"ubase/safelist.ml" 130 3131 3142 "ubase/safelist.ml" 130 3131 3143
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/safelist.ml" 130 3131 3144 "ubase/safelist.ml" 130 3131 3145
+type(
+  'a
+)
+ident(
+  int_ref x "ubase/safelist.ml" 126 3043 3054 "ubase/safelist.ml" 126 3043 3055
+)
+"ubase/safelist.ml" 130 3131 3140 "ubase/safelist.ml" 130 3131 3145
+type(
+  bool
+)
+"ubase/safelist.ml" 130 3131 3151 "ubase/safelist.ml" 130 3131 3155
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 127 3061 3071 "ubase/safelist.ml" 127 3061 3075
+)
+"ubase/safelist.ml" 130 3131 3156 "ubase/safelist.ml" 130 3131 3159
+type(
+  'a list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 127 3061 3076 "ubase/safelist.ml" 127 3061 3079
+)
+"ubase/safelist.ml" 130 3131 3160 "ubase/safelist.ml" 130 3131 3164
+type(
+  'a list
+)
+ident(
+  int_ref rest "ubase/safelist.ml" 129 3114 3123 "ubase/safelist.ml" 129 3114 3127
+)
+"ubase/safelist.ml" 130 3131 3151 "ubase/safelist.ml" 130 3131 3164
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 130 3131 3170 "ubase/safelist.ml" 130 3131 3174
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 127 3061 3071 "ubase/safelist.ml" 127 3061 3075
+)
+"ubase/safelist.ml" 130 3131 3176 "ubase/safelist.ml" 130 3131 3177
+type(
+  'a
+)
+ident(
+  int_ref a "ubase/safelist.ml" 129 3114 3118 "ubase/safelist.ml" 129 3114 3119
+)
+"ubase/safelist.ml" 130 3131 3179 "ubase/safelist.ml" 130 3131 3182
+type(
+  'a list
+)
+ident(
+  int_ref acc "ubase/safelist.ml" 127 3061 3076 "ubase/safelist.ml" 127 3061 3079
+)
+"ubase/safelist.ml" 130 3131 3175 "ubase/safelist.ml" 130 3131 3183
+type(
+  'a list
+)
+"ubase/safelist.ml" 130 3131 3184 "ubase/safelist.ml" 130 3131 3188
+type(
+  'a list
+)
+ident(
+  int_ref rest "ubase/safelist.ml" 129 3114 3123 "ubase/safelist.ml" 129 3114 3127
+)
+"ubase/safelist.ml" 130 3131 3170 "ubase/safelist.ml" 130 3131 3188
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 130 3131 3137 "ubase/safelist.ml" 130 3131 3188
+type(
+  'a list
+)
+"ubase/safelist.ml" 127 3061 3082 "ubase/safelist.ml" 130 3131 3188
+type(
+  'a list -> 'a list
+)
+"ubase/safelist.ml" 132 3194 3198 "ubase/safelist.ml" 132 3194 3202
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 127 3061 3071 "ubase/safelist.ml" 127 3061 3075
+)
+"ubase/safelist.ml" 132 3194 3203 "ubase/safelist.ml" 132 3194 3205
+type(
+  'a list
+)
+"ubase/safelist.ml" 132 3194 3206 "ubase/safelist.ml" 132 3194 3207
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 126 3043 3056 "ubase/safelist.ml" 126 3043 3057
+)
+"ubase/safelist.ml" 132 3194 3198 "ubase/safelist.ml" 132 3194 3207
+call(
+  tail
+)
+type(
+  'a list
+)
+"ubase/safelist.ml" 127 3061 3063 "ubase/safelist.ml" 132 3194 3207
+type(
+  'a list
+)
+"ubase/safelist.ml" 134 3209 3213 "ubase/safelist.ml" 134 3209 3218
+type(
+  (int -> 'a -> 'b) -> 'a list -> unit
+)
+ident(
+  def iteri "ubase/safelist.ml" 141 3379 3379 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 134 3209 3219 "ubase/safelist.ml" 134 3209 3220
+type(
+  int -> 'a -> 'b
+)
+ident(
+  def f "ubase/safelist.ml" 134 3209 3221 "ubase/safelist.ml" 138 3306 3319
+)
+"ubase/safelist.ml" 134 3209 3221 "ubase/safelist.ml" 134 3209 3222
+type(
+  'a list
+)
+ident(
+  def l "ubase/safelist.ml" 135 3225 3227 "ubase/safelist.ml" 138 3306 3319
+)
+"ubase/safelist.ml" 135 3225 3235 "ubase/safelist.ml" 135 3225 3239
+type(
+  int -> 'a list -> unit
+)
+ident(
+  def loop "ubase/safelist.ml" 135 3225 3227 "ubase/safelist.ml" 138 3306 3319
+)
+"ubase/safelist.ml" 135 3225 3240 "ubase/safelist.ml" 135 3225 3241
+type(
+  int
+)
+ident(
+  def n "ubase/safelist.ml" 135 3225 3244 "ubase/safelist.ml" 137 3268 3305
+)
+"ubase/safelist.ml" 136 3253 3259 "ubase/safelist.ml" 136 3253 3261
+type(
+  'a list
+)
+"ubase/safelist.ml" 136 3253 3265 "ubase/safelist.ml" 136 3253 3267
+type(
+  unit
+)
+"ubase/safelist.ml" 137 3268 3274 "ubase/safelist.ml" 137 3268 3275
+type(
+  'a
+)
+ident(
+  def h "ubase/safelist.ml" 137 3268 3282 "ubase/safelist.ml" 137 3268 3305
+)
+"ubase/safelist.ml" 137 3268 3277 "ubase/safelist.ml" 137 3268 3278
+type(
+  'a list
+)
+ident(
+  def t "ubase/safelist.ml" 137 3268 3282 "ubase/safelist.ml" 137 3268 3305
+)
+"ubase/safelist.ml" 137 3268 3274 "ubase/safelist.ml" 137 3268 3278
+type(
+  'a list
+)
+"ubase/safelist.ml" 137 3268 3284 "ubase/safelist.ml" 137 3268 3285
+type(
+  int -> 'a -> 'b
+)
+ident(
+  int_ref f "ubase/safelist.ml" 134 3209 3219 "ubase/safelist.ml" 134 3209 3220
+)
+"ubase/safelist.ml" 137 3268 3286 "ubase/safelist.ml" 137 3268 3287
+type(
+  int
+)
+ident(
+  int_ref n "ubase/safelist.ml" 135 3225 3240 "ubase/safelist.ml" 135 3225 3241
+)
+"ubase/safelist.ml" 137 3268 3288 "ubase/safelist.ml" 137 3268 3289
+type(
+  'a
+)
+ident(
+  int_ref h "ubase/safelist.ml" 137 3268 3274 "ubase/safelist.ml" 137 3268 3275
+)
+"ubase/safelist.ml" 137 3268 3283 "ubase/safelist.ml" 137 3268 3290
+call(
+  stack
+)
+type(
+  'b
+)
+"ubase/safelist.ml" 137 3268 3292 "ubase/safelist.ml" 137 3268 3296
+type(
+  int -> 'a list -> unit
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 135 3225 3235 "ubase/safelist.ml" 135 3225 3239
+)
+"ubase/safelist.ml" 137 3268 3298 "ubase/safelist.ml" 137 3268 3299
+type(
+  int
+)
+ident(
+  int_ref n "ubase/safelist.ml" 135 3225 3240 "ubase/safelist.ml" 135 3225 3241
+)
+"ubase/safelist.ml" 137 3268 3299 "ubase/safelist.ml" 137 3268 3300
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/safelist.ml" 137 3268 3300 "ubase/safelist.ml" 137 3268 3301
+type(
+  int
+)
+"ubase/safelist.ml" 137 3268 3297 "ubase/safelist.ml" 137 3268 3302
+type(
+  int
+)
+"ubase/safelist.ml" 137 3268 3303 "ubase/safelist.ml" 137 3268 3304
+type(
+  'a list
+)
+ident(
+  int_ref t "ubase/safelist.ml" 137 3268 3277 "ubase/safelist.ml" 137 3268 3278
+)
+"ubase/safelist.ml" 137 3268 3292 "ubase/safelist.ml" 137 3268 3304
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/safelist.ml" 137 3268 3282 "ubase/safelist.ml" 137 3268 3305
+type(
+  unit
+)
+"ubase/safelist.ml" 135 3225 3244 "ubase/safelist.ml" 137 3268 3305
+type(
+  'a list -> unit
+)
+"ubase/safelist.ml" 138 3306 3311 "ubase/safelist.ml" 138 3306 3315
+type(
+  int -> 'a list -> unit
+)
+ident(
+  int_ref loop "ubase/safelist.ml" 135 3225 3235 "ubase/safelist.ml" 135 3225 3239
+)
+"ubase/safelist.ml" 138 3306 3316 "ubase/safelist.ml" 138 3306 3317
+type(
+  int
+)
+"ubase/safelist.ml" 138 3306 3318 "ubase/safelist.ml" 138 3306 3319
+type(
+  'a list
+)
+ident(
+  int_ref l "ubase/safelist.ml" 134 3209 3221 "ubase/safelist.ml" 134 3209 3222
+)
+"ubase/safelist.ml" 138 3306 3311 "ubase/safelist.ml" 138 3306 3319
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/safelist.ml" 135 3225 3227 "ubase/safelist.ml" 138 3306 3319
+type(
+  unit
+)
+"ubase/safelist.ml" 141 3379 3383 "ubase/safelist.ml" 141 3379 3387
+type(
+  ('a -> unit) -> 'a list -> unit
+)
+ident(
+  def iter "ubase/safelist.ml" 142 3400 3400 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 141 3379 3390 "ubase/safelist.ml" 141 3379 3399
+type(
+  ('a -> unit) -> 'a list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"ubase/safelist.ml" 142 3400 3404 "ubase/safelist.ml" 142 3400 3409
+type(
+  ('a -> 'b -> unit) -> 'a list -> 'b list -> unit
+)
+ident(
+  def iter2 "ubase/safelist.ml" 143 3423 3423 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 142 3400 3412 "ubase/safelist.ml" 142 3400 3422
+type(
+  ('a -> 'b -> unit) -> 'a list -> 'b list -> unit
+)
+ident(
+  ext_ref List.iter2
+)
+"ubase/safelist.ml" 143 3423 3427 "ubase/safelist.ml" 143 3423 3430
+type(
+  'a list -> 'a list
+)
+ident(
+  def rev "ubase/safelist.ml" 144 3442 3442 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 143 3423 3433 "ubase/safelist.ml" 143 3423 3441
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.rev
+)
+"ubase/safelist.ml" 144 3442 3446 "ubase/safelist.ml" 144 3442 3456
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def rev_append "ubase/safelist.ml" 145 3475 3475 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 144 3442 3459 "ubase/safelist.ml" 144 3442 3474
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.rev_append
+)
+"ubase/safelist.ml" 145 3475 3479 "ubase/safelist.ml" 145 3475 3481
+type(
+  'a list -> 'a
+)
+ident(
+  def hd "ubase/safelist.ml" 146 3492 3492 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 145 3475 3484 "ubase/safelist.ml" 145 3475 3491
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"ubase/safelist.ml" 146 3492 3496 "ubase/safelist.ml" 146 3492 3498
+type(
+  'a list -> 'a list
+)
+ident(
+  def tl "ubase/safelist.ml" 147 3509 3509 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 146 3492 3501 "ubase/safelist.ml" 146 3492 3508
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"ubase/safelist.ml" 147 3509 3513 "ubase/safelist.ml" 147 3509 3516
+type(
+  'a list -> int -> 'a
+)
+ident(
+  def nth "ubase/safelist.ml" 148 3528 3528 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 147 3509 3519 "ubase/safelist.ml" 147 3509 3527
+type(
+  'a list -> int -> 'a
+)
+ident(
+  ext_ref List.nth
+)
+"ubase/safelist.ml" 148 3528 3532 "ubase/safelist.ml" 148 3528 3538
+type(
+  'a list -> int
+)
+ident(
+  def length "ubase/safelist.ml" 149 3553 3553 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 148 3528 3541 "ubase/safelist.ml" 148 3528 3552
+type(
+  'a list -> int
+)
+ident(
+  ext_ref List.length
+)
+"ubase/safelist.ml" 149 3553 3557 "ubase/safelist.ml" 149 3553 3560
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  def mem "ubase/safelist.ml" 150 3572 3572 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 149 3553 3563 "ubase/safelist.ml" 149 3553 3571
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"ubase/safelist.ml" 150 3572 3576 "ubase/safelist.ml" 150 3572 3581
+type(
+  'a -> ('a * 'b) list -> 'b
+)
+ident(
+  def assoc "ubase/safelist.ml" 151 3595 3595 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 150 3572 3584 "ubase/safelist.ml" 150 3572 3594
+type(
+  'a -> ('a * 'b) list -> 'b
+)
+ident(
+  ext_ref List.assoc
+)
+"ubase/safelist.ml" 151 3595 3599 "ubase/safelist.ml" 151 3595 3606
+type(
+  ('a -> bool) -> 'a list -> bool
+)
+ident(
+  def for_all "ubase/safelist.ml" 152 3622 3622 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 151 3595 3609 "ubase/safelist.ml" 151 3595 3621
+type(
+  ('a -> bool) -> 'a list -> bool
+)
+ident(
+  ext_ref List.for_all
+)
+"ubase/safelist.ml" 152 3622 3626 "ubase/safelist.ml" 152 3622 3634
+type(
+  ('a -> 'b -> bool) -> 'a list -> 'b list -> bool
+)
+ident(
+  def for_all2 "ubase/safelist.ml" 153 3651 3651 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 152 3622 3637 "ubase/safelist.ml" 152 3622 3650
+type(
+  ('a -> 'b -> bool) -> 'a list -> 'b list -> bool
+)
+ident(
+  ext_ref List.for_all2
+)
+"ubase/safelist.ml" 153 3651 3655 "ubase/safelist.ml" 153 3651 3661
+type(
+  ('a -> bool) -> 'a list -> bool
+)
+ident(
+  def exists "ubase/safelist.ml" 154 3676 3676 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 153 3651 3664 "ubase/safelist.ml" 153 3651 3675
+type(
+  ('a -> bool) -> 'a list -> bool
+)
+ident(
+  ext_ref List.exists
+)
+"ubase/safelist.ml" 154 3676 3680 "ubase/safelist.ml" 154 3676 3684
+type(
+  ('a -> bool) -> 'a list -> 'a
+)
+ident(
+  def find "ubase/safelist.ml" 155 3697 3697 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 154 3676 3687 "ubase/safelist.ml" 154 3676 3696
+type(
+  ('a -> bool) -> 'a list -> 'a
+)
+ident(
+  ext_ref List.find
+)
+"ubase/safelist.ml" 155 3697 3701 "ubase/safelist.ml" 155 3697 3707
+type(
+  ('a -> bool) -> 'a list -> 'a list
+)
+ident(
+  def filter "ubase/safelist.ml" 156 3722 3722 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 155 3697 3710 "ubase/safelist.ml" 155 3697 3721
+type(
+  ('a -> bool) -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.filter
+)
+"ubase/safelist.ml" 156 3722 3726 "ubase/safelist.ml" 156 3722 3737
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  def stable_sort "ubase/safelist.ml" 157 3757 3757 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 156 3722 3740 "ubase/safelist.ml" 156 3722 3756
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.stable_sort
+)
+"ubase/safelist.ml" 157 3757 3761 "ubase/safelist.ml" 157 3757 3765
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  def sort "ubase/safelist.ml" 158 3778 3778 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 157 3757 3768 "ubase/safelist.ml" 157 3757 3777
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.sort
+)
+"ubase/safelist.ml" 158 3778 3782 "ubase/safelist.ml" 158 3778 3791
+type(
+  ('a -> bool) -> 'a list -> 'a list * 'a list
+)
+ident(
+  def partition "ubase/safelist.ml" 158 3778 3808 "ubase/safelist.ml" 1 0 -1
+)
+"ubase/safelist.ml" 158 3778 3794 "ubase/safelist.ml" 158 3778 3808
+type(
+  ('a -> bool) -> 'a list -> 'a list * 'a list
+)
+ident(
+  ext_ref List.partition
+)

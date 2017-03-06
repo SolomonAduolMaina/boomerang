@@ -1,0 +1,2276 @@
+"ubase/uarg.ml" 28 1049 1057 "ubase/uarg.ml" 28 1049 1063
+type(
+  'a -> ('a * 'b * 'c) list -> 'b
+)
+ident(
+  def assoc3 "ubase/uarg.ml" 28 1049 1049 "ubase/uarg.ml" 1 0 -1
+)
+"ubase/uarg.ml" 28 1049 1064 "ubase/uarg.ml" 28 1049 1065
+type(
+  'a
+)
+ident(
+  def x "ubase/uarg.ml" 28 1049 1066 "ubase/uarg.ml" 32 1149 1171
+)
+"ubase/uarg.ml" 28 1049 1066 "ubase/uarg.ml" 28 1049 1067
+type(
+  ('a * 'b * 'c) list
+)
+ident(
+  def l "ubase/uarg.ml" 29 1070 1072 "ubase/uarg.ml" 32 1149 1171
+)
+"ubase/uarg.ml" 29 1070 1078 "ubase/uarg.ml" 29 1070 1079
+type(
+  ('a * 'b * 'c) list
+)
+ident(
+  int_ref l "ubase/uarg.ml" 28 1049 1066 "ubase/uarg.ml" 28 1049 1067
+)
+"ubase/uarg.ml" 30 1085 1089 "ubase/uarg.ml" 30 1085 1091
+type(
+  ('a * 'b * 'c) list
+)
+"ubase/uarg.ml" 30 1085 1095 "ubase/uarg.ml" 30 1085 1100
+type(
+  exn -> 'b
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"ubase/uarg.ml" 30 1085 1101 "ubase/uarg.ml" 30 1085 1110
+type(
+  exn
+)
+"ubase/uarg.ml" 30 1085 1095 "ubase/uarg.ml" 30 1085 1110
+type(
+  'b
+)
+"ubase/uarg.ml" 31 1111 1116 "ubase/uarg.ml" 31 1111 1118
+type(
+  'a
+)
+ident(
+  def y1 "ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1148
+)
+"ubase/uarg.ml" 31 1111 1120 "ubase/uarg.ml" 31 1111 1122
+type(
+  'b
+)
+ident(
+  def y2 "ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1148
+)
+"ubase/uarg.ml" 31 1111 1124 "ubase/uarg.ml" 31 1111 1126
+type(
+  'c
+)
+ident(
+  def y3 "ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1148
+)
+"ubase/uarg.ml" 31 1111 1115 "ubase/uarg.ml" 31 1111 1127
+type(
+  'a * 'b * 'c
+)
+"ubase/uarg.ml" 31 1111 1129 "ubase/uarg.ml" 31 1111 1130
+type(
+  ('a * 'b * 'c) list
+)
+ident(
+  def t "ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1148
+)
+"ubase/uarg.ml" 31 1111 1115 "ubase/uarg.ml" 31 1111 1130
+type(
+  ('a * 'b * 'c) list
+)
+"ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1138
+type(
+  'a
+)
+ident(
+  int_ref y1 "ubase/uarg.ml" 31 1111 1116 "ubase/uarg.ml" 31 1111 1118
+)
+"ubase/uarg.ml" 31 1111 1139 "ubase/uarg.ml" 31 1111 1140
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/uarg.ml" 31 1111 1141 "ubase/uarg.ml" 31 1111 1142
+type(
+  'a
+)
+ident(
+  int_ref x "ubase/uarg.ml" 28 1049 1064 "ubase/uarg.ml" 28 1049 1065
+)
+"ubase/uarg.ml" 31 1111 1136 "ubase/uarg.ml" 31 1111 1142
+type(
+  bool
+)
+"ubase/uarg.ml" 31 1111 1146 "ubase/uarg.ml" 31 1111 1148
+type(
+  'b
+)
+ident(
+  int_ref y2 "ubase/uarg.ml" 31 1111 1120 "ubase/uarg.ml" 31 1111 1122
+)
+"ubase/uarg.ml" 32 1149 1153 "ubase/uarg.ml" 32 1149 1154
+type(
+  'a * 'b * 'c
+)
+"ubase/uarg.ml" 32 1149 1156 "ubase/uarg.ml" 32 1149 1157
+type(
+  ('a * 'b * 'c) list
+)
+ident(
+  def t "ubase/uarg.ml" 32 1149 1161 "ubase/uarg.ml" 32 1149 1171
+)
+"ubase/uarg.ml" 32 1149 1153 "ubase/uarg.ml" 32 1149 1157
+type(
+  ('a * 'b * 'c) list
+)
+"ubase/uarg.ml" 32 1149 1161 "ubase/uarg.ml" 32 1149 1167
+type(
+  'a -> ('a * 'b * 'c) list -> 'b
+)
+ident(
+  int_ref assoc3 "ubase/uarg.ml" 28 1049 1057 "ubase/uarg.ml" 28 1049 1063
+)
+"ubase/uarg.ml" 32 1149 1168 "ubase/uarg.ml" 32 1149 1169
+type(
+  'a
+)
+ident(
+  int_ref x "ubase/uarg.ml" 28 1049 1064 "ubase/uarg.ml" 28 1049 1065
+)
+"ubase/uarg.ml" 32 1149 1170 "ubase/uarg.ml" 32 1149 1171
+type(
+  ('a * 'b * 'c) list
+)
+ident(
+  int_ref t "ubase/uarg.ml" 32 1149 1156 "ubase/uarg.ml" 32 1149 1157
+)
+"ubase/uarg.ml" 32 1149 1161 "ubase/uarg.ml" 32 1149 1171
+call(
+  tail
+)
+type(
+  'b
+)
+"ubase/uarg.ml" 29 1070 1072 "ubase/uarg.ml" 32 1149 1171
+type(
+  'b
+)
+"ubase/uarg.ml" 35 1176 1180 "ubase/uarg.ml" 35 1176 1185
+type(
+  (string * 'a * string) list -> string -> unit
+)
+ident(
+  def usage "ubase/uarg.ml" 43 1423 1423 "ubase/uarg.ml" 1 0 -1
+)
+"ubase/uarg.ml" 35 1176 1186 "ubase/uarg.ml" 35 1176 1194
+type(
+  (string * 'a * string) list
+)
+ident(
+  def speclist "ubase/uarg.ml" 35 1176 1195 "ubase/uarg.ml" 40 1379 1418
+)
+"ubase/uarg.ml" 35 1176 1195 "ubase/uarg.ml" 35 1176 1201
+type(
+  string
+)
+ident(
+  def errmsg "ubase/uarg.ml" 36 1204 1206 "ubase/uarg.ml" 40 1379 1418
+)
+"ubase/uarg.ml" 36 1204 1206 "ubase/uarg.ml" 36 1204 1212
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"ubase/uarg.ml" 36 1204 1213 "ubase/uarg.ml" 36 1204 1219
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 36 1204 1220 "ubase/uarg.ml" 36 1204 1226
+type(
+  string
+)
+ident(
+  int_ref errmsg "ubase/uarg.ml" 35 1176 1195 "ubase/uarg.ml" 35 1176 1201
+)
+"ubase/uarg.ml" 36 1204 1206 "ubase/uarg.ml" 36 1204 1226
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 37 1228 1230 "ubase/uarg.ml" 37 1228 1243
+type(
+  (string * 'a * string -> unit) -> (string * 'a * string) list -> unit
+)
+ident(
+  ext_ref Safelist.iter
+)
+"ubase/uarg.ml" 37 1228 1255 "ubase/uarg.ml" 37 1228 1258
+type(
+  string
+)
+ident(
+  def key "ubase/uarg.ml" 38 1271 1286 "ubase/uarg.ml" 39 1329 1377
+)
+"ubase/uarg.ml" 37 1228 1260 "ubase/uarg.ml" 37 1228 1261
+type(
+  'a
+)
+"ubase/uarg.ml" 37 1228 1263 "ubase/uarg.ml" 37 1228 1266
+type(
+  string
+)
+ident(
+  def doc "ubase/uarg.ml" 38 1271 1286 "ubase/uarg.ml" 39 1329 1377
+)
+"ubase/uarg.ml" 37 1228 1254 "ubase/uarg.ml" 37 1228 1267
+type(
+  string * 'a * string
+)
+"ubase/uarg.ml" 38 1271 1289 "ubase/uarg.ml" 38 1271 1302
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uarg.ml" 38 1271 1303 "ubase/uarg.ml" 38 1271 1306
+type(
+  string
+)
+ident(
+  int_ref doc "ubase/uarg.ml" 37 1228 1263 "ubase/uarg.ml" 37 1228 1266
+)
+"ubase/uarg.ml" 38 1271 1289 "ubase/uarg.ml" 38 1271 1306
+type(
+  int
+)
+"ubase/uarg.ml" 38 1271 1307 "ubase/uarg.ml" 38 1271 1308
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"ubase/uarg.ml" 38 1271 1309 "ubase/uarg.ml" 38 1271 1310
+type(
+  int
+)
+"ubase/uarg.ml" 38 1271 1289 "ubase/uarg.ml" 38 1271 1310
+type(
+  bool
+)
+"ubase/uarg.ml" 38 1271 1311 "ubase/uarg.ml" 38 1271 1313
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/uarg.ml" 38 1271 1314 "ubase/uarg.ml" 38 1271 1317
+type(
+  string
+)
+ident(
+  int_ref doc "ubase/uarg.ml" 37 1228 1263 "ubase/uarg.ml" 37 1228 1266
+)
+"ubase/uarg.ml" 38 1271 1319 "ubase/uarg.ml" 38 1271 1320
+type(
+  int
+)
+"ubase/uarg.ml" 38 1271 1314 "ubase/uarg.ml" 38 1271 1321
+type(
+  char
+)
+"ubase/uarg.ml" 38 1271 1322 "ubase/uarg.ml" 38 1271 1324
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/uarg.ml" 38 1271 1325 "ubase/uarg.ml" 38 1271 1328
+type(
+  char
+)
+"ubase/uarg.ml" 38 1271 1314 "ubase/uarg.ml" 38 1271 1328
+type(
+  bool
+)
+"ubase/uarg.ml" 38 1271 1289 "ubase/uarg.ml" 38 1271 1328
+type(
+  bool
+)
+"ubase/uarg.ml" 39 1329 1351 "ubase/uarg.ml" 39 1329 1357
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"ubase/uarg.ml" 39 1329 1358 "ubase/uarg.ml" 39 1329 1369
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 39 1329 1370 "ubase/uarg.ml" 39 1329 1373
+type(
+  string
+)
+ident(
+  int_ref key "ubase/uarg.ml" 37 1228 1255 "ubase/uarg.ml" 37 1228 1258
+)
+"ubase/uarg.ml" 39 1329 1374 "ubase/uarg.ml" 39 1329 1377
+type(
+  string
+)
+ident(
+  int_ref doc "ubase/uarg.ml" 37 1228 1263 "ubase/uarg.ml" 37 1228 1266
+)
+"ubase/uarg.ml" 39 1329 1351 "ubase/uarg.ml" 39 1329 1377
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 38 1271 1286 "ubase/uarg.ml" 39 1329 1377
+type(
+  unit
+)
+"ubase/uarg.ml" 37 1228 1244 "ubase/uarg.ml" 39 1329 1378
+type(
+  string * 'a * string -> unit
+)
+"ubase/uarg.ml" 40 1379 1396 "ubase/uarg.ml" 40 1379 1408
+type(
+  (string * 'a * string) list -> (string * 'a * string) list
+)
+ident(
+  ext_ref Safelist.rev
+)
+"ubase/uarg.ml" 40 1379 1409 "ubase/uarg.ml" 40 1379 1417
+type(
+  (string * 'a * string) list
+)
+ident(
+  int_ref speclist "ubase/uarg.ml" 35 1176 1186 "ubase/uarg.ml" 35 1176 1194
+)
+"ubase/uarg.ml" 40 1379 1395 "ubase/uarg.ml" 40 1379 1418
+call(
+  stack
+)
+type(
+  (string * 'a * string) list
+)
+"ubase/uarg.ml" 37 1228 1230 "ubase/uarg.ml" 40 1379 1418
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 36 1204 1206 "ubase/uarg.ml" 40 1379 1418
+type(
+  unit
+)
+"ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+type(
+  int ref
+)
+ident(
+  def current "ubase/uarg.ml" 45 1446 1446 "ubase/uarg.ml" 1 0 -1
+)
+"ubase/uarg.ml" 43 1423 1437 "ubase/uarg.ml" 43 1423 1440
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/uarg.ml" 43 1423 1441 "ubase/uarg.ml" 43 1423 1442
+type(
+  int
+)
+"ubase/uarg.ml" 43 1423 1437 "ubase/uarg.ml" 43 1423 1442
+type(
+  int ref
+)
+"ubase/uarg.ml" 45 1446 1450 "ubase/uarg.ml" 45 1446 1455
+type(
+  (string * spec * string) list -> (string -> 'a) -> string -> unit
+)
+ident(
+  def parse "ubase/uarg.ml" 110 3660 3667 "ubase/uarg.ml" 1 0 -1
+)
+"ubase/uarg.ml" 45 1446 1456 "ubase/uarg.ml" 45 1446 1464
+type(
+  (string * spec * string) list
+)
+ident(
+  def speclist "ubase/uarg.ml" 45 1446 1465 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 45 1446 1465 "ubase/uarg.ml" 45 1446 1472
+type(
+  string -> 'a
+)
+ident(
+  def anonfun "ubase/uarg.ml" 45 1446 1473 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 45 1446 1473 "ubase/uarg.ml" 45 1446 1479
+type(
+  string
+)
+ident(
+  def errmsg "ubase/uarg.ml" 46 1482 1484 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 46 1482 1488 "ubase/uarg.ml" 46 1482 1495
+type(
+  int
+)
+ident(
+  def initpos "ubase/uarg.ml" 47 1510 1512 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 46 1482 1498 "ubase/uarg.ml" 46 1482 1499
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 46 1482 1499 "ubase/uarg.ml" 46 1482 1506
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 46 1482 1498 "ubase/uarg.ml" 46 1482 1506
+type(
+  int
+)
+"ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+type(
+  error -> 'b
+)
+ident(
+  def stop "ubase/uarg.ml" 65 2131 2133 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 47 1510 1521 "ubase/uarg.ml" 47 1510 1526
+type(
+  error
+)
+ident(
+  def error "ubase/uarg.ml" 48 1529 1533 "ubase/uarg.ml" 63 2114 2125
+)
+"ubase/uarg.ml" 48 1529 1537 "ubase/uarg.ml" 48 1529 1545
+type(
+  string
+)
+ident(
+  def progname "ubase/uarg.ml" 50 1627 1631 "ubase/uarg.ml" 63 2114 2125
+)
+"ubase/uarg.ml" 49 1548 1557 "ubase/uarg.ml" 49 1548 1564
+type(
+  int
+)
+ident(
+  int_ref initpos "ubase/uarg.ml" 46 1482 1488 "ubase/uarg.ml" 46 1482 1495
+)
+"ubase/uarg.ml" 49 1548 1565 "ubase/uarg.ml" 49 1548 1566
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uarg.ml" 49 1548 1567 "ubase/uarg.ml" 49 1548 1579
+type(
+  string array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"ubase/uarg.ml" 49 1548 1580 "ubase/uarg.ml" 49 1548 1588
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 49 1548 1567 "ubase/uarg.ml" 49 1548 1588
+type(
+  int
+)
+"ubase/uarg.ml" 49 1548 1557 "ubase/uarg.ml" 49 1548 1588
+type(
+  bool
+)
+"ubase/uarg.ml" 49 1548 1594 "ubase/uarg.ml" 49 1548 1602
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 49 1548 1604 "ubase/uarg.ml" 49 1548 1611
+type(
+  int
+)
+ident(
+  int_ref initpos "ubase/uarg.ml" 46 1482 1488 "ubase/uarg.ml" 46 1482 1495
+)
+"ubase/uarg.ml" 49 1548 1594 "ubase/uarg.ml" 49 1548 1612
+type(
+  string
+)
+"ubase/uarg.ml" 49 1548 1618 "ubase/uarg.ml" 49 1548 1623
+type(
+  string
+)
+"ubase/uarg.ml" 49 1548 1554 "ubase/uarg.ml" 49 1548 1623
+type(
+  string
+)
+"ubase/uarg.ml" 50 1627 1643 "ubase/uarg.ml" 50 1627 1648
+type(
+  error
+)
+ident(
+  int_ref error "ubase/uarg.ml" 47 1510 1521 "ubase/uarg.ml" 47 1510 1526
+)
+"ubase/uarg.ml" 51 1654 1670 "ubase/uarg.ml" 51 1654 1671
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 51 1654 1677 "ubase/uarg.ml" 51 1654 1694
+)
+"ubase/uarg.ml" 51 1654 1662 "ubase/uarg.ml" 51 1654 1671
+type(
+  error
+)
+"ubase/uarg.ml" 51 1654 1677 "ubase/uarg.ml" 51 1654 1678
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 51 1654 1670 "ubase/uarg.ml" 51 1654 1671
+)
+"ubase/uarg.ml" 51 1654 1679 "ubase/uarg.ml" 51 1654 1680
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/uarg.ml" 51 1654 1681 "ubase/uarg.ml" 51 1654 1688
+type(
+  string
+)
+"ubase/uarg.ml" 51 1654 1677 "ubase/uarg.ml" 51 1654 1688
+type(
+  bool
+)
+"ubase/uarg.ml" 51 1654 1692 "ubase/uarg.ml" 51 1654 1694
+type(
+  unit
+)
+"ubase/uarg.ml" 52 1695 1711 "ubase/uarg.ml" 52 1695 1712
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 53 1716 1726 "ubase/uarg.ml" 53 1716 1773
+)
+"ubase/uarg.ml" 52 1695 1703 "ubase/uarg.ml" 52 1695 1712
+type(
+  error
+)
+"ubase/uarg.ml" 53 1716 1726 "ubase/uarg.ml" 53 1716 1733
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"ubase/uarg.ml" 53 1716 1734 "ubase/uarg.ml" 53 1716 1762
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 53 1716 1763 "ubase/uarg.ml" 53 1716 1771
+type(
+  string
+)
+ident(
+  int_ref progname "ubase/uarg.ml" 48 1529 1537 "ubase/uarg.ml" 48 1529 1545
+)
+"ubase/uarg.ml" 53 1716 1772 "ubase/uarg.ml" 53 1716 1773
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 52 1695 1711 "ubase/uarg.ml" 52 1695 1712
+)
+"ubase/uarg.ml" 53 1716 1726 "ubase/uarg.ml" 53 1716 1773
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 54 1774 1790 "ubase/uarg.ml" 54 1774 1791
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 55 1795 1805 "ubase/uarg.ml" 55 1795 1862
+)
+"ubase/uarg.ml" 54 1774 1782 "ubase/uarg.ml" 54 1774 1791
+type(
+  error
+)
+"ubase/uarg.ml" 55 1795 1805 "ubase/uarg.ml" 55 1795 1812
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"ubase/uarg.ml" 55 1795 1813 "ubase/uarg.ml" 55 1795 1851
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 55 1795 1852 "ubase/uarg.ml" 55 1795 1860
+type(
+  string
+)
+ident(
+  int_ref progname "ubase/uarg.ml" 48 1529 1537 "ubase/uarg.ml" 48 1529 1545
+)
+"ubase/uarg.ml" 55 1795 1861 "ubase/uarg.ml" 55 1795 1862
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 54 1774 1790 "ubase/uarg.ml" 54 1774 1791
+)
+"ubase/uarg.ml" 55 1795 1805 "ubase/uarg.ml" 55 1795 1862
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 56 1863 1878 "ubase/uarg.ml" 56 1863 1881
+type(
+  string
+)
+ident(
+  def opt "ubase/uarg.ml" 57 1901 1911 "ubase/uarg.ml" 58 1972 2015
+)
+"ubase/uarg.ml" 56 1863 1883 "ubase/uarg.ml" 56 1863 1886
+type(
+  string
+)
+ident(
+  def arg "ubase/uarg.ml" 57 1901 1911 "ubase/uarg.ml" 58 1972 2015
+)
+"ubase/uarg.ml" 56 1863 1888 "ubase/uarg.ml" 56 1863 1896
+type(
+  string
+)
+ident(
+  def expected "ubase/uarg.ml" 57 1901 1911 "ubase/uarg.ml" 58 1972 2015
+)
+"ubase/uarg.ml" 56 1863 1871 "ubase/uarg.ml" 56 1863 1897
+type(
+  error
+)
+"ubase/uarg.ml" 57 1901 1911 "ubase/uarg.ml" 57 1901 1918
+type(
+  (string -> string -> string -> string -> unit, out_channel, unit) format ->
+  string -> string -> string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"ubase/uarg.ml" 57 1901 1919 "ubase/uarg.ml" 57 1901 1971
+type(
+  (string -> string -> string -> string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 58 1972 1990 "ubase/uarg.ml" 58 1972 1998
+type(
+  string
+)
+ident(
+  int_ref progname "ubase/uarg.ml" 48 1529 1537 "ubase/uarg.ml" 48 1529 1545
+)
+"ubase/uarg.ml" 58 1972 1999 "ubase/uarg.ml" 58 1972 2002
+type(
+  string
+)
+ident(
+  int_ref arg "ubase/uarg.ml" 56 1863 1883 "ubase/uarg.ml" 56 1863 1886
+)
+"ubase/uarg.ml" 58 1972 2003 "ubase/uarg.ml" 58 1972 2006
+type(
+  string
+)
+ident(
+  int_ref opt "ubase/uarg.ml" 56 1863 1878 "ubase/uarg.ml" 56 1863 1881
+)
+"ubase/uarg.ml" 58 1972 2007 "ubase/uarg.ml" 58 1972 2015
+type(
+  string
+)
+ident(
+  int_ref expected "ubase/uarg.ml" 56 1863 1888 "ubase/uarg.ml" 56 1863 1896
+)
+"ubase/uarg.ml" 57 1901 1911 "ubase/uarg.ml" 58 1972 2015
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 59 2016 2032 "ubase/uarg.ml" 59 2016 2033
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 60 2037 2047 "ubase/uarg.ml" 60 2037 2077
+)
+"ubase/uarg.ml" 59 2016 2024 "ubase/uarg.ml" 59 2016 2033
+type(
+  error
+)
+"ubase/uarg.ml" 60 2037 2047 "ubase/uarg.ml" 60 2037 2054
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"ubase/uarg.ml" 60 2037 2055 "ubase/uarg.ml" 60 2037 2066
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"ubase/uarg.ml" 60 2037 2067 "ubase/uarg.ml" 60 2037 2075
+type(
+  string
+)
+ident(
+  int_ref progname "ubase/uarg.ml" 48 1529 1537 "ubase/uarg.ml" 48 1529 1545
+)
+"ubase/uarg.ml" 60 2037 2076 "ubase/uarg.ml" 60 2037 2077
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 59 2016 2032 "ubase/uarg.ml" 59 2016 2033
+)
+"ubase/uarg.ml" 60 2037 2047 "ubase/uarg.ml" 60 2037 2077
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 50 1627 1631 "ubase/uarg.ml" 61 2078 2085
+type(
+  unit
+)
+"ubase/uarg.ml" 62 2087 2091 "ubase/uarg.ml" 62 2087 2096
+type(
+  (string * spec * string) list -> string -> unit
+)
+ident(
+  int_ref usage "ubase/uarg.ml" 35 1176 1180 "ubase/uarg.ml" 35 1176 1185
+)
+"ubase/uarg.ml" 62 2087 2097 "ubase/uarg.ml" 62 2087 2105
+type(
+  (string * spec * string) list
+)
+ident(
+  int_ref speclist "ubase/uarg.ml" 45 1446 1456 "ubase/uarg.ml" 45 1446 1464
+)
+"ubase/uarg.ml" 62 2087 2106 "ubase/uarg.ml" 62 2087 2112
+type(
+  string
+)
+ident(
+  int_ref errmsg "ubase/uarg.ml" 45 1446 1473 "ubase/uarg.ml" 45 1446 1479
+)
+"ubase/uarg.ml" 62 2087 2091 "ubase/uarg.ml" 62 2087 2112
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 63 2114 2118 "ubase/uarg.ml" 63 2114 2122
+type(
+  int -> 'b
+)
+ident(
+  ext_ref Pervasives.exit
+)
+"ubase/uarg.ml" 63 2114 2123 "ubase/uarg.ml" 63 2114 2124
+type(
+  int
+)
+"ubase/uarg.ml" 63 2114 2118 "ubase/uarg.ml" 63 2114 2125
+call(
+  tail
+)
+type(
+  'b
+)
+"ubase/uarg.ml" 62 2087 2091 "ubase/uarg.ml" 63 2114 2125
+type(
+  'b
+)
+"ubase/uarg.ml" 50 1627 1631 "ubase/uarg.ml" 63 2114 2125
+type(
+  'b
+)
+"ubase/uarg.ml" 48 1529 1533 "ubase/uarg.ml" 63 2114 2125
+type(
+  'b
+)
+"ubase/uarg.ml" 65 2131 2137 "ubase/uarg.ml" 65 2131 2138
+type(
+  int
+)
+ident(
+  def l "ubase/uarg.ml" 66 2166 2168 "ubase/uarg.ml" 110 3660 3667
+)
+"ubase/uarg.ml" 65 2131 2141 "ubase/uarg.ml" 65 2131 2153
+type(
+  string array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"ubase/uarg.ml" 65 2131 2154 "ubase/uarg.ml" 65 2131 2162
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 65 2131 2141 "ubase/uarg.ml" 65 2131 2162
+type(
+  int
+)
+"ubase/uarg.ml" 66 2166 2168 "ubase/uarg.ml" 66 2166 2172
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"ubase/uarg.ml" 66 2166 2173 "ubase/uarg.ml" 66 2166 2180
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 66 2166 2168 "ubase/uarg.ml" 66 2166 2180
+type(
+  unit
+)
+"ubase/uarg.ml" 67 2182 2190 "ubase/uarg.ml" 67 2182 2191
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 67 2182 2191 "ubase/uarg.ml" 67 2182 2198
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 67 2182 2190 "ubase/uarg.ml" 67 2182 2198
+type(
+  int
+)
+"ubase/uarg.ml" 67 2182 2199 "ubase/uarg.ml" 67 2182 2200
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uarg.ml" 67 2182 2201 "ubase/uarg.ml" 67 2182 2202
+type(
+  int
+)
+ident(
+  int_ref l "ubase/uarg.ml" 65 2131 2137 "ubase/uarg.ml" 65 2131 2138
+)
+"ubase/uarg.ml" 67 2182 2190 "ubase/uarg.ml" 67 2182 2202
+type(
+  bool
+)
+"ubase/uarg.ml" 68 2206 2214 "ubase/uarg.ml" 68 2206 2216
+type(
+  string
+)
+ident(
+  def ss "ubase/uarg.ml" 69 2242 2246 "ubase/uarg.ml" 109 3651 3659
+)
+"ubase/uarg.ml" 68 2206 2219 "ubase/uarg.ml" 68 2206 2227
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 68 2206 2229 "ubase/uarg.ml" 68 2206 2230
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 68 2206 2230 "ubase/uarg.ml" 68 2206 2237
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 68 2206 2229 "ubase/uarg.ml" 68 2206 2237
+type(
+  int
+)
+"ubase/uarg.ml" 68 2206 2219 "ubase/uarg.ml" 68 2206 2238
+type(
+  string
+)
+"ubase/uarg.ml" 69 2242 2249 "ubase/uarg.ml" 69 2242 2262
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uarg.ml" 69 2242 2263 "ubase/uarg.ml" 69 2242 2265
+type(
+  string
+)
+ident(
+  int_ref ss "ubase/uarg.ml" 68 2206 2214 "ubase/uarg.ml" 68 2206 2216
+)
+"ubase/uarg.ml" 69 2242 2249 "ubase/uarg.ml" 69 2242 2265
+type(
+  int
+)
+"ubase/uarg.ml" 69 2242 2266 "ubase/uarg.ml" 69 2242 2268
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"ubase/uarg.ml" 69 2242 2269 "ubase/uarg.ml" 69 2242 2270
+type(
+  int
+)
+"ubase/uarg.ml" 69 2242 2249 "ubase/uarg.ml" 69 2242 2270
+type(
+  bool
+)
+"ubase/uarg.ml" 69 2242 2271 "ubase/uarg.ml" 69 2242 2272
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( & )
+)
+"ubase/uarg.ml" 69 2242 2273 "ubase/uarg.ml" 69 2242 2283
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.get
+)
+"ubase/uarg.ml" 69 2242 2284 "ubase/uarg.ml" 69 2242 2286
+type(
+  string
+)
+ident(
+  int_ref ss "ubase/uarg.ml" 68 2206 2214 "ubase/uarg.ml" 68 2206 2216
+)
+"ubase/uarg.ml" 69 2242 2287 "ubase/uarg.ml" 69 2242 2288
+type(
+  int
+)
+"ubase/uarg.ml" 69 2242 2273 "ubase/uarg.ml" 69 2242 2288
+type(
+  char
+)
+"ubase/uarg.ml" 69 2242 2289 "ubase/uarg.ml" 69 2242 2290
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/uarg.ml" 69 2242 2291 "ubase/uarg.ml" 69 2242 2294
+type(
+  char
+)
+"ubase/uarg.ml" 69 2242 2273 "ubase/uarg.ml" 69 2242 2294
+type(
+  bool
+)
+"ubase/uarg.ml" 69 2242 2249 "ubase/uarg.ml" 69 2242 2294
+type(
+  bool
+)
+"ubase/uarg.ml" 70 2306 2316 "ubase/uarg.ml" 70 2306 2320
+type(
+  string list
+)
+ident(
+  def args "ubase/uarg.ml" 71 2353 2359 "ubase/uarg.ml" 105 3537 3556
+)
+"ubase/uarg.ml" 70 2306 2323 "ubase/uarg.ml" 70 2306 2342
+type(
+  string -> char -> string list
+)
+ident(
+  ext_ref Util.splitIntoWords
+)
+"ubase/uarg.ml" 70 2306 2343 "ubase/uarg.ml" 70 2306 2345
+type(
+  string
+)
+ident(
+  int_ref ss "ubase/uarg.ml" 68 2206 2214 "ubase/uarg.ml" 68 2206 2216
+)
+"ubase/uarg.ml" 70 2306 2346 "ubase/uarg.ml" 70 2306 2349
+type(
+  char
+)
+"ubase/uarg.ml" 70 2306 2323 "ubase/uarg.ml" 70 2306 2349
+call(
+  stack
+)
+type(
+  string list
+)
+"ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 72 2390 2396 "ubase/uarg.ml" 105 3537 3556
+)
+"ubase/uarg.ml" 71 2353 2367 "ubase/uarg.ml" 71 2353 2379
+type(
+  string list -> int -> string
+)
+ident(
+  ext_ref Safelist.nth
+)
+"ubase/uarg.ml" 71 2353 2380 "ubase/uarg.ml" 71 2353 2384
+type(
+  string list
+)
+ident(
+  int_ref args "ubase/uarg.ml" 70 2306 2316 "ubase/uarg.ml" 70 2306 2320
+)
+"ubase/uarg.ml" 71 2353 2385 "ubase/uarg.ml" 71 2353 2386
+type(
+  int
+)
+"ubase/uarg.ml" 71 2353 2367 "ubase/uarg.ml" 71 2353 2386
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uarg.ml" 72 2390 2400 "ubase/uarg.ml" 72 2390 2403
+type(
+  (string -> 'c) -> string -> 'c
+)
+ident(
+  def arg "ubase/uarg.ml" 81 2803 2809 "ubase/uarg.ml" 105 3537 3556
+)
+"ubase/uarg.ml" 72 2390 2404 "ubase/uarg.ml" 72 2390 2408
+type(
+  string -> 'c
+)
+ident(
+  def conv "ubase/uarg.ml" 72 2390 2409 "ubase/uarg.ml" 80 2736 2799
+)
+"ubase/uarg.ml" 72 2390 2409 "ubase/uarg.ml" 72 2390 2413
+type(
+  string
+)
+ident(
+  def mesg "ubase/uarg.ml" 73 2416 2424 "ubase/uarg.ml" 80 2736 2799
+)
+"ubase/uarg.ml" 73 2416 2430 "ubase/uarg.ml" 73 2416 2434
+type(
+  string list
+)
+ident(
+  int_ref args "ubase/uarg.ml" 70 2306 2316 "ubase/uarg.ml" 70 2306 2320
+)
+"ubase/uarg.ml" 74 2440 2451 "ubase/uarg.ml" 74 2440 2452
+type(
+  string
+)
+"ubase/uarg.ml" 74 2440 2450 "ubase/uarg.ml" 74 2440 2453
+type(
+  string list
+)
+"ubase/uarg.ml" 75 2457 2472 "ubase/uarg.ml" 75 2457 2473
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 75 2457 2473 "ubase/uarg.ml" 75 2457 2480
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 75 2457 2472 "ubase/uarg.ml" 75 2457 2480
+type(
+  int
+)
+"ubase/uarg.ml" 75 2457 2481 "ubase/uarg.ml" 75 2457 2482
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uarg.ml" 75 2457 2483 "ubase/uarg.ml" 75 2457 2484
+type(
+  int
+)
+"ubase/uarg.ml" 75 2457 2472 "ubase/uarg.ml" 75 2457 2484
+type(
+  int
+)
+"ubase/uarg.ml" 75 2457 2485 "ubase/uarg.ml" 75 2457 2487
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"ubase/uarg.ml" 75 2457 2488 "ubase/uarg.ml" 75 2457 2489
+type(
+  int
+)
+ident(
+  int_ref l "ubase/uarg.ml" 65 2131 2137 "ubase/uarg.ml" 65 2131 2138
+)
+"ubase/uarg.ml" 75 2457 2472 "ubase/uarg.ml" 75 2457 2489
+type(
+  bool
+)
+"ubase/uarg.ml" 75 2457 2495 "ubase/uarg.ml" 75 2457 2499
+type(
+  error -> 'c
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 75 2457 2509 "ubase/uarg.ml" 75 2457 2510
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 75 2457 2500 "ubase/uarg.ml" 75 2457 2511
+type(
+  error
+)
+"ubase/uarg.ml" 75 2457 2495 "ubase/uarg.ml" 75 2457 2511
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 76 2517 2534 "ubase/uarg.ml" 76 2517 2535
+type(
+  string
+)
+ident(
+  def a "ubase/uarg.ml" 77 2563 2576 "ubase/uarg.ml" 78 2590 2659
+)
+"ubase/uarg.ml" 76 2517 2538 "ubase/uarg.ml" 76 2517 2546
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 76 2517 2548 "ubase/uarg.ml" 76 2517 2549
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 76 2517 2549 "ubase/uarg.ml" 76 2517 2556
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 76 2517 2548 "ubase/uarg.ml" 76 2517 2556
+type(
+  int
+)
+"ubase/uarg.ml" 76 2517 2556 "ubase/uarg.ml" 76 2517 2557
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uarg.ml" 76 2517 2557 "ubase/uarg.ml" 76 2517 2558
+type(
+  int
+)
+"ubase/uarg.ml" 76 2517 2548 "ubase/uarg.ml" 76 2517 2558
+type(
+  int
+)
+"ubase/uarg.ml" 76 2517 2538 "ubase/uarg.ml" 76 2517 2559
+type(
+  string
+)
+"ubase/uarg.ml" 77 2563 2576 "ubase/uarg.ml" 77 2563 2580
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"ubase/uarg.ml" 77 2563 2581 "ubase/uarg.ml" 77 2563 2588
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 77 2563 2576 "ubase/uarg.ml" 77 2563 2588
+type(
+  unit
+)
+"ubase/uarg.ml" 78 2590 2608 "ubase/uarg.ml" 78 2590 2612
+type(
+  string -> 'c
+)
+ident(
+  int_ref conv "ubase/uarg.ml" 72 2390 2404 "ubase/uarg.ml" 72 2390 2408
+)
+"ubase/uarg.ml" 78 2590 2613 "ubase/uarg.ml" 78 2590 2614
+type(
+  string
+)
+ident(
+  int_ref a "ubase/uarg.ml" 76 2517 2534 "ubase/uarg.ml" 76 2517 2535
+)
+"ubase/uarg.ml" 78 2590 2608 "ubase/uarg.ml" 78 2590 2614
+call(
+  stack
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 78 2590 2628 "ubase/uarg.ml" 78 2590 2629
+type(
+  string
+)
+"ubase/uarg.ml" 78 2590 2620 "ubase/uarg.ml" 78 2590 2629
+type(
+  exn
+)
+"ubase/uarg.ml" 78 2590 2633 "ubase/uarg.ml" 78 2590 2637
+type(
+  error -> 'c
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 78 2590 2646 "ubase/uarg.ml" 78 2590 2647
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 78 2590 2649 "ubase/uarg.ml" 78 2590 2650
+type(
+  string
+)
+ident(
+  int_ref a "ubase/uarg.ml" 76 2517 2534 "ubase/uarg.ml" 76 2517 2535
+)
+"ubase/uarg.ml" 78 2590 2652 "ubase/uarg.ml" 78 2590 2656
+type(
+  string
+)
+ident(
+  int_ref mesg "ubase/uarg.ml" 72 2390 2409 "ubase/uarg.ml" 72 2390 2413
+)
+"ubase/uarg.ml" 78 2590 2638 "ubase/uarg.ml" 78 2590 2658
+type(
+  error
+)
+"ubase/uarg.ml" 78 2590 2633 "ubase/uarg.ml" 78 2590 2658
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 78 2590 2603 "ubase/uarg.ml" 78 2590 2659
+type(
+  'c
+)
+"ubase/uarg.ml" 77 2563 2576 "ubase/uarg.ml" 78 2590 2659
+type(
+  'c
+)
+"ubase/uarg.ml" 76 2517 2530 "ubase/uarg.ml" 78 2590 2659
+type(
+  'c
+)
+"ubase/uarg.ml" 75 2457 2469 "ubase/uarg.ml" 78 2590 2659
+type(
+  'c
+)
+"ubase/uarg.ml" 79 2660 2671 "ubase/uarg.ml" 79 2660 2672
+type(
+  string
+)
+"ubase/uarg.ml" 79 2660 2673 "ubase/uarg.ml" 79 2660 2674
+type(
+  string
+)
+ident(
+  def a "ubase/uarg.ml" 79 2660 2679 "ubase/uarg.ml" 79 2660 2735
+)
+"ubase/uarg.ml" 79 2660 2670 "ubase/uarg.ml" 79 2660 2675
+type(
+  string list
+)
+"ubase/uarg.ml" 79 2660 2684 "ubase/uarg.ml" 79 2660 2688
+type(
+  string -> 'c
+)
+ident(
+  int_ref conv "ubase/uarg.ml" 72 2390 2404 "ubase/uarg.ml" 72 2390 2408
+)
+"ubase/uarg.ml" 79 2660 2689 "ubase/uarg.ml" 79 2660 2690
+type(
+  string
+)
+ident(
+  int_ref a "ubase/uarg.ml" 79 2660 2673 "ubase/uarg.ml" 79 2660 2674
+)
+"ubase/uarg.ml" 79 2660 2684 "ubase/uarg.ml" 79 2660 2690
+call(
+  stack
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 79 2660 2704 "ubase/uarg.ml" 79 2660 2705
+type(
+  string
+)
+"ubase/uarg.ml" 79 2660 2696 "ubase/uarg.ml" 79 2660 2705
+type(
+  exn
+)
+"ubase/uarg.ml" 79 2660 2709 "ubase/uarg.ml" 79 2660 2713
+type(
+  error -> 'c
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 79 2660 2722 "ubase/uarg.ml" 79 2660 2723
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 79 2660 2725 "ubase/uarg.ml" 79 2660 2726
+type(
+  string
+)
+ident(
+  int_ref a "ubase/uarg.ml" 79 2660 2673 "ubase/uarg.ml" 79 2660 2674
+)
+"ubase/uarg.ml" 79 2660 2728 "ubase/uarg.ml" 79 2660 2732
+type(
+  string
+)
+ident(
+  int_ref mesg "ubase/uarg.ml" 72 2390 2409 "ubase/uarg.ml" 72 2390 2413
+)
+"ubase/uarg.ml" 79 2660 2714 "ubase/uarg.ml" 79 2660 2734
+type(
+  error
+)
+"ubase/uarg.ml" 79 2660 2709 "ubase/uarg.ml" 79 2660 2734
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 79 2660 2679 "ubase/uarg.ml" 79 2660 2735
+type(
+  'c
+)
+"ubase/uarg.ml" 80 2736 2746 "ubase/uarg.ml" 80 2736 2747
+type(
+  string list
+)
+"ubase/uarg.ml" 80 2736 2751 "ubase/uarg.ml" 80 2736 2755
+type(
+  error -> 'c
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 80 2736 2766 "ubase/uarg.ml" 80 2736 2773
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"ubase/uarg.ml" 80 2736 2774 "ubase/uarg.ml" 80 2736 2795
+type(
+  (string -> string, unit, string) format
+)
+"ubase/uarg.ml" 80 2736 2796 "ubase/uarg.ml" 80 2736 2797
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 80 2736 2765 "ubase/uarg.ml" 80 2736 2798
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uarg.ml" 80 2736 2756 "ubase/uarg.ml" 80 2736 2799
+type(
+  error
+)
+"ubase/uarg.ml" 80 2736 2751 "ubase/uarg.ml" 80 2736 2799
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uarg.ml" 73 2416 2424 "ubase/uarg.ml" 80 2736 2799
+type(
+  'c
+)
+"ubase/uarg.ml" 81 2803 2813 "ubase/uarg.ml" 81 2803 2819
+type(
+  spec
+)
+ident(
+  def action "ubase/uarg.ml" 85 2904 2910 "ubase/uarg.ml" 105 3537 3556
+)
+"ubase/uarg.ml" 82 2822 2834 "ubase/uarg.ml" 82 2822 2840
+type(
+  string -> (string * spec * string) list -> spec
+)
+ident(
+  int_ref assoc3 "ubase/uarg.ml" 28 1049 1057 "ubase/uarg.ml" 28 1049 1063
+)
+"ubase/uarg.ml" 82 2822 2841 "ubase/uarg.ml" 82 2822 2842
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 82 2822 2843 "ubase/uarg.ml" 82 2822 2851
+type(
+  (string * spec * string) list
+)
+ident(
+  int_ref speclist "ubase/uarg.ml" 45 1446 1456 "ubase/uarg.ml" 45 1446 1464
+)
+"ubase/uarg.ml" 82 2822 2834 "ubase/uarg.ml" 82 2822 2851
+call(
+  stack
+)
+type(
+  spec
+)
+"ubase/uarg.ml" 83 2852 2865 "ubase/uarg.ml" 83 2852 2874
+type(
+  exn
+)
+"ubase/uarg.ml" 83 2852 2878 "ubase/uarg.ml" 83 2852 2882
+type(
+  error -> spec
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 83 2852 2892 "ubase/uarg.ml" 83 2852 2893
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 71 2353 2363 "ubase/uarg.ml" 71 2353 2364
+)
+"ubase/uarg.ml" 83 2852 2883 "ubase/uarg.ml" 83 2852 2894
+type(
+  error
+)
+"ubase/uarg.ml" 83 2852 2878 "ubase/uarg.ml" 83 2852 2894
+call(
+  stack
+)
+type(
+  spec
+)
+"ubase/uarg.ml" 82 2822 2830 "ubase/uarg.ml" 83 2852 2894
+type(
+  spec
+)
+"ubase/uarg.ml" 86 2920 2934 "ubase/uarg.ml" 86 2920 2940
+type(
+  spec
+)
+ident(
+  int_ref action "ubase/uarg.ml" 81 2803 2813 "ubase/uarg.ml" 81 2803 2819
+)
+"ubase/uarg.ml" 87 2946 2961 "ubase/uarg.ml" 87 2946 2962
+type(
+  unit -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 87 2946 2966 "ubase/uarg.ml" 87 2946 2971
+)
+"ubase/uarg.ml" 87 2946 2956 "ubase/uarg.ml" 87 2946 2962
+type(
+  spec
+)
+"ubase/uarg.ml" 87 2946 2966 "ubase/uarg.ml" 87 2946 2967
+type(
+  unit -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 87 2946 2961 "ubase/uarg.ml" 87 2946 2962
+)
+"ubase/uarg.ml" 87 2946 2968 "ubase/uarg.ml" 87 2946 2970
+type(
+  unit
+)
+"ubase/uarg.ml" 87 2946 2966 "ubase/uarg.ml" 87 2946 2971
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 88 2972 2986 "ubase/uarg.ml" 88 2972 2987
+type(
+  bool ref
+)
+ident(
+  def r "ubase/uarg.ml" 88 2972 2991 "ubase/uarg.ml" 88 2972 3001
+)
+"ubase/uarg.ml" 88 2972 2982 "ubase/uarg.ml" 88 2972 2987
+type(
+  spec
+)
+"ubase/uarg.ml" 88 2972 2991 "ubase/uarg.ml" 88 2972 2992
+type(
+  bool ref
+)
+ident(
+  int_ref r "ubase/uarg.ml" 88 2972 2986 "ubase/uarg.ml" 88 2972 2987
+)
+"ubase/uarg.ml" 88 2972 2993 "ubase/uarg.ml" 88 2972 2995
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/uarg.ml" 88 2972 2996 "ubase/uarg.ml" 88 2972 3000
+type(
+  bool
+)
+"ubase/uarg.ml" 88 2972 2991 "ubase/uarg.ml" 88 2972 3001
+type(
+  unit
+)
+"ubase/uarg.ml" 89 3002 3018 "ubase/uarg.ml" 89 3002 3019
+type(
+  bool ref
+)
+ident(
+  def r "ubase/uarg.ml" 89 3002 3023 "ubase/uarg.ml" 89 3002 3034
+)
+"ubase/uarg.ml" 89 3002 3012 "ubase/uarg.ml" 89 3002 3019
+type(
+  spec
+)
+"ubase/uarg.ml" 89 3002 3023 "ubase/uarg.ml" 89 3002 3024
+type(
+  bool ref
+)
+ident(
+  int_ref r "ubase/uarg.ml" 89 3002 3018 "ubase/uarg.ml" 89 3002 3019
+)
+"ubase/uarg.ml" 89 3002 3025 "ubase/uarg.ml" 89 3002 3027
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/uarg.ml" 89 3002 3028 "ubase/uarg.ml" 89 3002 3033
+type(
+  bool
+)
+"ubase/uarg.ml" 89 3002 3023 "ubase/uarg.ml" 89 3002 3034
+type(
+  unit
+)
+"ubase/uarg.ml" 90 3035 3050 "ubase/uarg.ml" 90 3035 3051
+type(
+  bool -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 91 3055 3067 "ubase/uarg.ml" 94 3173 3188
+)
+"ubase/uarg.ml" 90 3035 3045 "ubase/uarg.ml" 90 3035 3051
+type(
+  spec
+)
+"ubase/uarg.ml" 91 3055 3079 "ubase/uarg.ml" 91 3055 3083
+type(
+  string list
+)
+ident(
+  int_ref args "ubase/uarg.ml" 70 2306 2316 "ubase/uarg.ml" 70 2306 2320
+)
+"ubase/uarg.ml" 92 3089 3104 "ubase/uarg.ml" 92 3089 3105
+type(
+  string
+)
+"ubase/uarg.ml" 92 3089 3103 "ubase/uarg.ml" 92 3089 3106
+type(
+  string list
+)
+"ubase/uarg.ml" 92 3089 3110 "ubase/uarg.ml" 92 3089 3111
+type(
+  bool -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 90 3035 3050 "ubase/uarg.ml" 90 3035 3051
+)
+"ubase/uarg.ml" 92 3089 3112 "ubase/uarg.ml" 92 3089 3116
+type(
+  bool
+)
+"ubase/uarg.ml" 92 3089 3110 "ubase/uarg.ml" 92 3089 3116
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 93 3117 3131 "ubase/uarg.ml" 93 3117 3132
+type(
+  string list
+)
+"ubase/uarg.ml" 93 3117 3138 "ubase/uarg.ml" 93 3117 3139
+type(
+  bool -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 90 3035 3050 "ubase/uarg.ml" 90 3035 3051
+)
+"ubase/uarg.ml" 93 3117 3141 "ubase/uarg.ml" 93 3117 3144
+type(
+  (string -> bool) -> string -> bool
+)
+ident(
+  int_ref arg "ubase/uarg.ml" 72 2390 2400 "ubase/uarg.ml" 72 2390 2403
+)
+"ubase/uarg.ml" 93 3117 3145 "ubase/uarg.ml" 93 3117 3159
+type(
+  string -> bool
+)
+ident(
+  ext_ref Pervasives.bool_of_string
+)
+"ubase/uarg.ml" 93 3117 3160 "ubase/uarg.ml" 93 3117 3171
+type(
+  string
+)
+"ubase/uarg.ml" 93 3117 3140 "ubase/uarg.ml" 93 3117 3172
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/uarg.ml" 93 3117 3138 "ubase/uarg.ml" 93 3117 3172
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 91 3055 3067 "ubase/uarg.ml" 94 3173 3188
+type(
+  unit
+)
+"ubase/uarg.ml" 95 3189 3206 "ubase/uarg.ml" 95 3189 3207
+type(
+  string -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 95 3189 3211 "ubase/uarg.ml" 95 3189 3233
+)
+"ubase/uarg.ml" 95 3189 3199 "ubase/uarg.ml" 95 3189 3207
+type(
+  spec
+)
+"ubase/uarg.ml" 95 3189 3211 "ubase/uarg.ml" 95 3189 3212
+type(
+  string -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 95 3189 3206 "ubase/uarg.ml" 95 3189 3207
+)
+"ubase/uarg.ml" 95 3189 3214 "ubase/uarg.ml" 95 3189 3217
+type(
+  (string -> string) -> string -> string
+)
+ident(
+  int_ref arg "ubase/uarg.ml" 72 2390 2400 "ubase/uarg.ml" 72 2390 2403
+)
+"ubase/uarg.ml" 95 3189 3223 "ubase/uarg.ml" 95 3189 3224
+type(
+  string
+)
+ident(
+  def s "ubase/uarg.ml" 95 3189 3227 "ubase/uarg.ml" 95 3189 3228
+)
+"ubase/uarg.ml" 95 3189 3227 "ubase/uarg.ml" 95 3189 3228
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uarg.ml" 95 3189 3223 "ubase/uarg.ml" 95 3189 3224
+)
+"ubase/uarg.ml" 95 3189 3218 "ubase/uarg.ml" 95 3189 3229
+type(
+  string -> string
+)
+"ubase/uarg.ml" 95 3189 3230 "ubase/uarg.ml" 95 3189 3232
+type(
+  string
+)
+"ubase/uarg.ml" 95 3189 3213 "ubase/uarg.ml" 95 3189 3233
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uarg.ml" 95 3189 3211 "ubase/uarg.ml" 95 3189 3233
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 96 3234 3248 "ubase/uarg.ml" 96 3234 3249
+type(
+  int -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 96 3234 3256 "ubase/uarg.ml" 96 3234 3290
+)
+"ubase/uarg.ml" 96 3234 3244 "ubase/uarg.ml" 96 3234 3249
+type(
+  spec
+)
+"ubase/uarg.ml" 96 3234 3256 "ubase/uarg.ml" 96 3234 3257
+type(
+  int -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 96 3234 3248 "ubase/uarg.ml" 96 3234 3249
+)
+"ubase/uarg.ml" 96 3234 3259 "ubase/uarg.ml" 96 3234 3262
+type(
+  (string -> int) -> string -> int
+)
+ident(
+  int_ref arg "ubase/uarg.ml" 72 2390 2400 "ubase/uarg.ml" 72 2390 2403
+)
+"ubase/uarg.ml" 96 3234 3263 "ubase/uarg.ml" 96 3234 3276
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"ubase/uarg.ml" 96 3234 3277 "ubase/uarg.ml" 96 3234 3289
+type(
+  string
+)
+"ubase/uarg.ml" 96 3234 3258 "ubase/uarg.ml" 96 3234 3290
+call(
+  stack
+)
+type(
+  int
+)
+"ubase/uarg.ml" 96 3234 3256 "ubase/uarg.ml" 96 3234 3290
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 97 3291 3307 "ubase/uarg.ml" 97 3291 3308
+type(
+  float -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 97 3291 3313 "ubase/uarg.ml" 97 3291 3346
+)
+"ubase/uarg.ml" 97 3291 3301 "ubase/uarg.ml" 97 3291 3308
+type(
+  spec
+)
+"ubase/uarg.ml" 97 3291 3313 "ubase/uarg.ml" 97 3291 3314
+type(
+  float -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 97 3291 3307 "ubase/uarg.ml" 97 3291 3308
+)
+"ubase/uarg.ml" 97 3291 3316 "ubase/uarg.ml" 97 3291 3319
+type(
+  (string -> float) -> string -> float
+)
+ident(
+  int_ref arg "ubase/uarg.ml" 72 2390 2400 "ubase/uarg.ml" 72 2390 2403
+)
+"ubase/uarg.ml" 97 3291 3320 "ubase/uarg.ml" 97 3291 3335
+type(
+  string -> float
+)
+ident(
+  ext_ref Pervasives.float_of_string
+)
+"ubase/uarg.ml" 97 3291 3336 "ubase/uarg.ml" 97 3291 3345
+type(
+  string
+)
+"ubase/uarg.ml" 97 3291 3315 "ubase/uarg.ml" 97 3291 3346
+call(
+  stack
+)
+type(
+  float
+)
+"ubase/uarg.ml" 97 3291 3313 "ubase/uarg.ml" 97 3291 3346
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 98 3347 3362 "ubase/uarg.ml" 98 3347 3363
+type(
+  string -> unit
+)
+ident(
+  def f "ubase/uarg.ml" 99 3367 3379 "ubase/uarg.ml" 102 3470 3487
+)
+"ubase/uarg.ml" 98 3347 3357 "ubase/uarg.ml" 98 3347 3363
+type(
+  spec
+)
+"ubase/uarg.ml" 99 3367 3385 "ubase/uarg.ml" 99 3367 3386
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 99 3367 3386 "ubase/uarg.ml" 99 3367 3393
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 99 3367 3385 "ubase/uarg.ml" 99 3367 3393
+type(
+  int
+)
+"ubase/uarg.ml" 99 3367 3394 "ubase/uarg.ml" 99 3367 3395
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uarg.ml" 99 3367 3396 "ubase/uarg.ml" 99 3367 3397
+type(
+  int
+)
+ident(
+  int_ref l "ubase/uarg.ml" 65 2131 2137 "ubase/uarg.ml" 65 2131 2138
+)
+"ubase/uarg.ml" 99 3367 3397 "ubase/uarg.ml" 99 3367 3398
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uarg.ml" 99 3367 3398 "ubase/uarg.ml" 99 3367 3399
+type(
+  int
+)
+"ubase/uarg.ml" 99 3367 3396 "ubase/uarg.ml" 99 3367 3399
+type(
+  int
+)
+"ubase/uarg.ml" 99 3367 3385 "ubase/uarg.ml" 99 3367 3399
+type(
+  bool
+)
+"ubase/uarg.ml" 100 3403 3417 "ubase/uarg.ml" 100 3403 3418
+type(
+  string -> unit
+)
+ident(
+  int_ref f "ubase/uarg.ml" 98 3347 3362 "ubase/uarg.ml" 98 3347 3363
+)
+"ubase/uarg.ml" 100 3403 3419 "ubase/uarg.ml" 100 3403 3427
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"ubase/uarg.ml" 100 3403 3429 "ubase/uarg.ml" 100 3403 3430
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/uarg.ml" 100 3403 3430 "ubase/uarg.ml" 100 3403 3437
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 100 3403 3429 "ubase/uarg.ml" 100 3403 3437
+type(
+  int
+)
+"ubase/uarg.ml" 100 3403 3437 "ubase/uarg.ml" 100 3403 3438
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uarg.ml" 100 3403 3438 "ubase/uarg.ml" 100 3403 3439
+type(
+  int
+)
+"ubase/uarg.ml" 100 3403 3429 "ubase/uarg.ml" 100 3403 3439
+type(
+  int
+)
+"ubase/uarg.ml" 100 3403 3419 "ubase/uarg.ml" 100 3403 3440
+type(
+  string
+)
+"ubase/uarg.ml" 100 3403 3417 "ubase/uarg.ml" 100 3403 3440
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 101 3442 3456 "ubase/uarg.ml" 101 3442 3460
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"ubase/uarg.ml" 101 3442 3461 "ubase/uarg.ml" 101 3442 3468
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 101 3442 3456 "ubase/uarg.ml" 101 3442 3469
+type(
+  unit
+)
+"ubase/uarg.ml" 100 3403 3417 "ubase/uarg.ml" 101 3442 3469
+type(
+  unit
+)
+"ubase/uarg.ml" 99 3367 3379 "ubase/uarg.ml" 102 3470 3487
+type(
+  unit
+)
+"ubase/uarg.ml" 86 2920 2928 "ubase/uarg.ml" 102 3470 3487
+type(
+  unit
+)
+"ubase/uarg.ml" 103 3488 3503 "ubase/uarg.ml" 103 3488 3504
+type(
+  string
+)
+ident(
+  def m "ubase/uarg.ml" 103 3488 3508 "ubase/uarg.ml" 103 3488 3525
+)
+"ubase/uarg.ml" 103 3488 3499 "ubase/uarg.ml" 103 3488 3504
+type(
+  exn
+)
+"ubase/uarg.ml" 103 3488 3508 "ubase/uarg.ml" 103 3488 3512
+type(
+  error -> unit
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 103 3488 3522 "ubase/uarg.ml" 103 3488 3523
+type(
+  string
+)
+ident(
+  int_ref m "ubase/uarg.ml" 103 3488 3503 "ubase/uarg.ml" 103 3488 3504
+)
+"ubase/uarg.ml" 103 3488 3513 "ubase/uarg.ml" 103 3488 3524
+type(
+  error
+)
+"ubase/uarg.ml" 103 3488 3508 "ubase/uarg.ml" 103 3488 3525
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uarg.ml" 85 2904 2910 "ubase/uarg.ml" 104 3526 3535
+type(
+  unit
+)
+"ubase/uarg.ml" 105 3537 3543 "ubase/uarg.ml" 105 3537 3547
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"ubase/uarg.ml" 105 3537 3548 "ubase/uarg.ml" 105 3537 3555
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 105 3537 3543 "ubase/uarg.ml" 105 3537 3556
+type(
+  unit
+)
+"ubase/uarg.ml" 85 2904 2910 "ubase/uarg.ml" 105 3537 3556
+type(
+  unit
+)
+"ubase/uarg.ml" 81 2803 2809 "ubase/uarg.ml" 105 3537 3556
+type(
+  unit
+)
+"ubase/uarg.ml" 72 2390 2396 "ubase/uarg.ml" 105 3537 3556
+type(
+  unit
+)
+"ubase/uarg.ml" 71 2353 2359 "ubase/uarg.ml" 105 3537 3556
+type(
+  unit
+)
+"ubase/uarg.ml" 69 2242 2300 "ubase/uarg.ml" 106 3557 3564
+type(
+  unit
+)
+"ubase/uarg.ml" 107 3576 3587 "ubase/uarg.ml" 107 3576 3594
+type(
+  string -> 'a
+)
+ident(
+  int_ref anonfun "ubase/uarg.ml" 45 1446 1465 "ubase/uarg.ml" 45 1446 1472
+)
+"ubase/uarg.ml" 107 3576 3595 "ubase/uarg.ml" 107 3576 3597
+type(
+  string
+)
+ident(
+  int_ref ss "ubase/uarg.ml" 68 2206 2214 "ubase/uarg.ml" 68 2206 2216
+)
+"ubase/uarg.ml" 107 3576 3587 "ubase/uarg.ml" 107 3576 3597
+call(
+  stack
+)
+type(
+  'a
+)
+"ubase/uarg.ml" 107 3576 3607 "ubase/uarg.ml" 107 3576 3608
+type(
+  string
+)
+ident(
+  def m "ubase/uarg.ml" 107 3576 3612 "ubase/uarg.ml" 107 3576 3628
+)
+"ubase/uarg.ml" 107 3576 3603 "ubase/uarg.ml" 107 3576 3608
+type(
+  exn
+)
+"ubase/uarg.ml" 107 3576 3612 "ubase/uarg.ml" 107 3576 3616
+type(
+  error -> 'a
+)
+ident(
+  int_ref stop "ubase/uarg.ml" 47 1510 1516 "ubase/uarg.ml" 47 1510 1520
+)
+"ubase/uarg.ml" 107 3576 3626 "ubase/uarg.ml" 107 3576 3627
+type(
+  string
+)
+ident(
+  int_ref m "ubase/uarg.ml" 107 3576 3607 "ubase/uarg.ml" 107 3576 3608
+)
+"ubase/uarg.ml" 107 3576 3617 "ubase/uarg.ml" 107 3576 3628
+type(
+  error
+)
+"ubase/uarg.ml" 107 3576 3612 "ubase/uarg.ml" 107 3576 3628
+call(
+  stack
+)
+type(
+  'a
+)
+"ubase/uarg.ml" 107 3576 3582 "ubase/uarg.ml" 107 3576 3629
+type(
+  'a
+)
+"ubase/uarg.ml" 108 3631 3637 "ubase/uarg.ml" 108 3631 3641
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"ubase/uarg.ml" 108 3631 3642 "ubase/uarg.ml" 108 3631 3649
+type(
+  int ref
+)
+ident(
+  int_ref current "ubase/uarg.ml" 43 1423 1427 "ubase/uarg.ml" 43 1423 1434
+)
+"ubase/uarg.ml" 108 3631 3637 "ubase/uarg.ml" 108 3631 3650
+type(
+  unit
+)
+"ubase/uarg.ml" 106 3557 3570 "ubase/uarg.ml" 109 3651 3658
+type(
+  unit
+)
+"ubase/uarg.ml" 69 2242 2246 "ubase/uarg.ml" 109 3651 3659
+type(
+  unit
+)
+"ubase/uarg.ml" 68 2206 2210 "ubase/uarg.ml" 109 3651 3659
+type(
+  unit
+)
+"ubase/uarg.ml" 67 2182 2184 "ubase/uarg.ml" 110 3660 3667
+type(
+  unit
+)
+"ubase/uarg.ml" 66 2166 2168 "ubase/uarg.ml" 110 3660 3667
+type(
+  unit
+)
+"ubase/uarg.ml" 65 2131 2133 "ubase/uarg.ml" 110 3660 3667
+type(
+  unit
+)
+"ubase/uarg.ml" 47 1510 1512 "ubase/uarg.ml" 110 3660 3667
+type(
+  unit
+)
+"ubase/uarg.ml" 46 1482 1484 "ubase/uarg.ml" 110 3660 3667
+type(
+  unit
+)

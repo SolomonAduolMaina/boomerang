@@ -1,0 +1,1101 @@
+"lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  def items "lib/bakery.ml" 2 58 58 "lib/bakery.ml" 1 0 -1
+)
+"lib/bakery.ml" 1 0 40 "lib/bakery.ml" 1 0 54
+type(
+  ?random:bool -> int -> (string, string) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"lib/bakery.ml" 1 0 55 "lib/bakery.ml" 1 0 57
+type(
+  int
+)
+"lib/bakery.ml" 1 0 40 "lib/bakery.ml" 1 0 57
+call(
+  stack
+)
+type(
+  (string, string) Hashtbl.t
+)
+type(
+  (string, string) Hashtbl.t
+)
+"lib/bakery.ml" 2 58 66 "lib/bakery.ml" 2 58 77
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 2 58 78 "lib/bakery.ml" 2 58 83
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 2 58 84 "lib/bakery.ml" 2 58 91
+type(
+  string
+)
+"lib/bakery.ml" 2 58 92 "lib/bakery.ml" 2 58 23128
+type(
+  string
+)
+"lib/bakery.ml" 2 58 66 "lib/bakery.ml" 2 58 23128
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 3 23129 23137 "lib/bakery.ml" 3 23129 23148
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 3 23129 23149 "lib/bakery.ml" 3 23129 23154
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 3 23129 23155 "lib/bakery.ml" 3 23129 23160
+type(
+  string
+)
+"lib/bakery.ml" 3 23129 23161 "lib/bakery.ml" 3 23129 26861
+type(
+  string
+)
+"lib/bakery.ml" 3 23129 23137 "lib/bakery.ml" 3 23129 26861
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 4 26862 26870 "lib/bakery.ml" 4 26862 26881
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 4 26862 26882 "lib/bakery.ml" 4 26862 26887
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 4 26862 26888 "lib/bakery.ml" 4 26862 26903
+type(
+  string
+)
+"lib/bakery.ml" 4 26862 26904 "lib/bakery.ml" 4 26862 28339
+type(
+  string
+)
+"lib/bakery.ml" 4 26862 26870 "lib/bakery.ml" 4 26862 28339
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 5 28340 28348 "lib/bakery.ml" 5 28340 28359
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 5 28340 28360 "lib/bakery.ml" 5 28340 28365
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 5 28340 28366 "lib/bakery.ml" 5 28340 28375
+type(
+  string
+)
+"lib/bakery.ml" 5 28340 28376 "lib/bakery.ml" 5 28340 49750
+type(
+  string
+)
+"lib/bakery.ml" 5 28340 28348 "lib/bakery.ml" 5 28340 49750
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 6 49751 49759 "lib/bakery.ml" 6 49751 49770
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 6 49751 49771 "lib/bakery.ml" 6 49751 49776
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 6 49751 49777 "lib/bakery.ml" 6 49751 49786
+type(
+  string
+)
+"lib/bakery.ml" 6 49751 49787 "lib/bakery.ml" 6 49751 85063
+type(
+  string
+)
+"lib/bakery.ml" 6 49751 49759 "lib/bakery.ml" 6 49751 85063
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 7 85064 85072 "lib/bakery.ml" 7 85064 85083
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 7 85064 85084 "lib/bakery.ml" 7 85064 85089
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 7 85064 85090 "lib/bakery.ml" 7 85064 85102
+type(
+  string
+)
+"lib/bakery.ml" 7 85064 85103 "lib/bakery.ml" 7 85064 85407
+type(
+  string
+)
+"lib/bakery.ml" 7 85064 85072 "lib/bakery.ml" 7 85064 85407
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 8 85408 85416 "lib/bakery.ml" 8 85408 85427
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 8 85408 85428 "lib/bakery.ml" 8 85408 85433
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 8 85408 85434 "lib/bakery.ml" 8 85408 85440
+type(
+  string
+)
+"lib/bakery.ml" 8 85408 85441 "lib/bakery.ml" 8 85408 91624
+type(
+  string
+)
+"lib/bakery.ml" 8 85408 85416 "lib/bakery.ml" 8 85408 91624
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 9 91625 91633 "lib/bakery.ml" 9 91625 91644
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 9 91625 91645 "lib/bakery.ml" 9 91625 91650
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 9 91625 91651 "lib/bakery.ml" 9 91625 91657
+type(
+  string
+)
+"lib/bakery.ml" 9 91625 91658 "lib/bakery.ml" 9 91625 92027
+type(
+  string
+)
+"lib/bakery.ml" 9 91625 91633 "lib/bakery.ml" 9 91625 92027
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 10 92028 92036 "lib/bakery.ml" 10 92028 92047
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 10 92028 92048 "lib/bakery.ml" 10 92028 92053
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 10 92028 92054 "lib/bakery.ml" 10 92028 92061
+type(
+  string
+)
+"lib/bakery.ml" 10 92028 92062 "lib/bakery.ml" 10 92028 93586
+type(
+  string
+)
+"lib/bakery.ml" 10 92028 92036 "lib/bakery.ml" 10 92028 93586
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 11 93587 93595 "lib/bakery.ml" 11 93587 93606
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 11 93587 93607 "lib/bakery.ml" 11 93587 93612
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 11 93587 93613 "lib/bakery.ml" 11 93587 93620
+type(
+  string
+)
+"lib/bakery.ml" 11 93587 93621 "lib/bakery.ml" 11 93587 94842
+type(
+  string
+)
+"lib/bakery.ml" 11 93587 93595 "lib/bakery.ml" 11 93587 94842
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 12 94843 94851 "lib/bakery.ml" 12 94843 94862
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 12 94843 94863 "lib/bakery.ml" 12 94843 94868
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 12 94843 94869 "lib/bakery.ml" 12 94843 94878
+type(
+  string
+)
+"lib/bakery.ml" 12 94843 94879 "lib/bakery.ml" 12 94843 119812
+type(
+  string
+)
+"lib/bakery.ml" 12 94843 94851 "lib/bakery.ml" 12 94843 119812
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 13 119813 119821 "lib/bakery.ml" 13 119813 119832
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 13 119813 119833 "lib/bakery.ml" 13 119813 119838
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 13 119813 119839 "lib/bakery.ml" 13 119813 119850
+type(
+  string
+)
+"lib/bakery.ml" 13 119813 119851 "lib/bakery.ml" 13 119813 123489
+type(
+  string
+)
+"lib/bakery.ml" 13 119813 119821 "lib/bakery.ml" 13 119813 123489
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 14 123490 123498 "lib/bakery.ml" 14 123490 123509
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 14 123490 123510 "lib/bakery.ml" 14 123490 123515
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 14 123490 123516 "lib/bakery.ml" 14 123490 123522
+type(
+  string
+)
+"lib/bakery.ml" 14 123490 123523 "lib/bakery.ml" 14 123490 131549
+type(
+  string
+)
+"lib/bakery.ml" 14 123490 123498 "lib/bakery.ml" 14 123490 131549
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 15 131550 131558 "lib/bakery.ml" 15 131550 131569
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 15 131550 131570 "lib/bakery.ml" 15 131550 131575
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 15 131550 131576 "lib/bakery.ml" 15 131550 131586
+type(
+  string
+)
+"lib/bakery.ml" 15 131550 131587 "lib/bakery.ml" 15 131550 136535
+type(
+  string
+)
+"lib/bakery.ml" 15 131550 131558 "lib/bakery.ml" 15 131550 136535
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 16 136536 136544 "lib/bakery.ml" 16 136536 136555
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 16 136536 136556 "lib/bakery.ml" 16 136536 136561
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 16 136536 136562 "lib/bakery.ml" 16 136536 136582
+type(
+  string
+)
+"lib/bakery.ml" 16 136536 136583 "lib/bakery.ml" 16 136536 137033
+type(
+  string
+)
+"lib/bakery.ml" 16 136536 136544 "lib/bakery.ml" 16 136536 137033
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 17 137034 137042 "lib/bakery.ml" 17 137034 137053
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 17 137034 137054 "lib/bakery.ml" 17 137034 137059
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 17 137034 137060 "lib/bakery.ml" 17 137034 137071
+type(
+  string
+)
+"lib/bakery.ml" 17 137034 137072 "lib/bakery.ml" 17 137034 302692
+type(
+  string
+)
+"lib/bakery.ml" 17 137034 137042 "lib/bakery.ml" 17 137034 302692
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 18 302693 302701 "lib/bakery.ml" 18 302693 302712
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 18 302693 302713 "lib/bakery.ml" 18 302693 302718
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 18 302693 302719 "lib/bakery.ml" 18 302693 302725
+type(
+  string
+)
+"lib/bakery.ml" 18 302693 302726 "lib/bakery.ml" 18 302693 349817
+type(
+  string
+)
+"lib/bakery.ml" 18 302693 302701 "lib/bakery.ml" 18 302693 349817
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 19 349818 349826 "lib/bakery.ml" 19 349818 349837
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 19 349818 349838 "lib/bakery.ml" 19 349818 349843
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 19 349818 349844 "lib/bakery.ml" 19 349818 349850
+type(
+  string
+)
+"lib/bakery.ml" 19 349818 349851 "lib/bakery.ml" 19 349818 356989
+type(
+  string
+)
+"lib/bakery.ml" 19 349818 349826 "lib/bakery.ml" 19 349818 356989
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 20 356990 356998 "lib/bakery.ml" 20 356990 357009
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 20 356990 357010 "lib/bakery.ml" 20 356990 357015
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 20 356990 357016 "lib/bakery.ml" 20 356990 357023
+type(
+  string
+)
+"lib/bakery.ml" 20 356990 357024 "lib/bakery.ml" 20 356990 387470
+type(
+  string
+)
+"lib/bakery.ml" 20 356990 356998 "lib/bakery.ml" 20 356990 387470
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 21 387471 387479 "lib/bakery.ml" 21 387471 387490
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 21 387471 387491 "lib/bakery.ml" 21 387471 387496
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 21 387471 387497 "lib/bakery.ml" 21 387471 387502
+type(
+  string
+)
+"lib/bakery.ml" 21 387471 387503 "lib/bakery.ml" 21 387471 415902
+type(
+  string
+)
+"lib/bakery.ml" 21 387471 387479 "lib/bakery.ml" 21 387471 415902
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 22 415903 415911 "lib/bakery.ml" 22 415903 415922
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 22 415903 415923 "lib/bakery.ml" 22 415903 415928
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 22 415903 415929 "lib/bakery.ml" 22 415903 415936
+type(
+  string
+)
+"lib/bakery.ml" 22 415903 415937 "lib/bakery.ml" 22 415903 417147
+type(
+  string
+)
+"lib/bakery.ml" 22 415903 415911 "lib/bakery.ml" 22 415903 417147
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 23 417148 417156 "lib/bakery.ml" 23 417148 417167
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 23 417148 417168 "lib/bakery.ml" 23 417148 417173
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 23 417148 417174 "lib/bakery.ml" 23 417148 417183
+type(
+  string
+)
+"lib/bakery.ml" 23 417148 417184 "lib/bakery.ml" 23 417148 430928
+type(
+  string
+)
+"lib/bakery.ml" 23 417148 417156 "lib/bakery.ml" 23 417148 430928
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 24 430929 430937 "lib/bakery.ml" 24 430929 430948
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 24 430929 430949 "lib/bakery.ml" 24 430929 430954
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 24 430929 430955 "lib/bakery.ml" 24 430929 430963
+type(
+  string
+)
+"lib/bakery.ml" 24 430929 430964 "lib/bakery.ml" 24 430929 441441
+type(
+  string
+)
+"lib/bakery.ml" 24 430929 430937 "lib/bakery.ml" 24 430929 441441
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 25 441442 441450 "lib/bakery.ml" 25 441442 441461
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 25 441442 441462 "lib/bakery.ml" 25 441442 441467
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 25 441442 441468 "lib/bakery.ml" 25 441442 441478
+type(
+  string
+)
+"lib/bakery.ml" 25 441442 441479 "lib/bakery.ml" 25 441442 454496
+type(
+  string
+)
+"lib/bakery.ml" 25 441442 441450 "lib/bakery.ml" 25 441442 454496
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 26 454497 454505 "lib/bakery.ml" 26 454497 454516
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 26 454497 454517 "lib/bakery.ml" 26 454497 454522
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 26 454497 454523 "lib/bakery.ml" 26 454497 454531
+type(
+  string
+)
+"lib/bakery.ml" 26 454497 454532 "lib/bakery.ml" 26 454497 460332
+type(
+  string
+)
+"lib/bakery.ml" 26 454497 454505 "lib/bakery.ml" 26 454497 460332
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 27 460333 460341 "lib/bakery.ml" 27 460333 460352
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 27 460333 460353 "lib/bakery.ml" 27 460333 460358
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 27 460333 460359 "lib/bakery.ml" 27 460333 460375
+type(
+  string
+)
+"lib/bakery.ml" 27 460333 460376 "lib/bakery.ml" 27 460333 460992
+type(
+  string
+)
+"lib/bakery.ml" 27 460333 460341 "lib/bakery.ml" 27 460333 460992
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 28 460993 461001 "lib/bakery.ml" 28 460993 461012
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 28 460993 461013 "lib/bakery.ml" 28 460993 461018
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 28 460993 461019 "lib/bakery.ml" 28 460993 461027
+type(
+  string
+)
+"lib/bakery.ml" 28 460993 461028 "lib/bakery.ml" 28 460993 485884
+type(
+  string
+)
+"lib/bakery.ml" 28 460993 461001 "lib/bakery.ml" 28 460993 485884
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 29 485885 485893 "lib/bakery.ml" 29 485885 485904
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 29 485885 485905 "lib/bakery.ml" 29 485885 485910
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 29 485885 485911 "lib/bakery.ml" 29 485885 485921
+type(
+  string
+)
+"lib/bakery.ml" 29 485885 485922 "lib/bakery.ml" 29 485885 487050
+type(
+  string
+)
+"lib/bakery.ml" 29 485885 485893 "lib/bakery.ml" 29 485885 487050
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 30 487051 487059 "lib/bakery.ml" 30 487051 487070
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 30 487051 487071 "lib/bakery.ml" 30 487051 487076
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 30 487051 487077 "lib/bakery.ml" 30 487051 487085
+type(
+  string
+)
+"lib/bakery.ml" 30 487051 487086 "lib/bakery.ml" 30 487051 492352
+type(
+  string
+)
+"lib/bakery.ml" 30 487051 487059 "lib/bakery.ml" 30 487051 492352
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 31 492353 492361 "lib/bakery.ml" 31 492353 492372
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 31 492353 492373 "lib/bakery.ml" 31 492353 492378
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 31 492353 492379 "lib/bakery.ml" 31 492353 492388
+type(
+  string
+)
+"lib/bakery.ml" 31 492353 492389 "lib/bakery.ml" 31 492353 514797
+type(
+  string
+)
+"lib/bakery.ml" 31 492353 492361 "lib/bakery.ml" 31 492353 514797
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 32 514798 514806 "lib/bakery.ml" 32 514798 514817
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 32 514798 514818 "lib/bakery.ml" 32 514798 514823
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 32 514798 514824 "lib/bakery.ml" 32 514798 514831
+type(
+  string
+)
+"lib/bakery.ml" 32 514798 514832 "lib/bakery.ml" 32 514798 519030
+type(
+  string
+)
+"lib/bakery.ml" 32 514798 514806 "lib/bakery.ml" 32 514798 519030
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 33 519031 519039 "lib/bakery.ml" 33 519031 519050
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 33 519031 519051 "lib/bakery.ml" 33 519031 519056
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 33 519031 519057 "lib/bakery.ml" 33 519031 519069
+type(
+  string
+)
+"lib/bakery.ml" 33 519031 519070 "lib/bakery.ml" 33 519031 519578
+type(
+  string
+)
+"lib/bakery.ml" 33 519031 519039 "lib/bakery.ml" 33 519031 519578
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 34 519579 519587 "lib/bakery.ml" 34 519579 519598
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 34 519579 519599 "lib/bakery.ml" 34 519579 519604
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 34 519579 519605 "lib/bakery.ml" 34 519579 519615
+type(
+  string
+)
+"lib/bakery.ml" 34 519579 519616 "lib/bakery.ml" 34 519579 519799
+type(
+  string
+)
+"lib/bakery.ml" 34 519579 519587 "lib/bakery.ml" 34 519579 519799
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 35 519800 519808 "lib/bakery.ml" 35 519800 519819
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 35 519800 519820 "lib/bakery.ml" 35 519800 519825
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 35 519800 519826 "lib/bakery.ml" 35 519800 519835
+type(
+  string
+)
+"lib/bakery.ml" 35 519800 519836 "lib/bakery.ml" 35 519800 526990
+type(
+  string
+)
+"lib/bakery.ml" 35 519800 519808 "lib/bakery.ml" 35 519800 526990
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 36 526991 526999 "lib/bakery.ml" 36 526991 527010
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 36 526991 527011 "lib/bakery.ml" 36 526991 527016
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 36 526991 527017 "lib/bakery.ml" 36 526991 527023
+type(
+  string
+)
+"lib/bakery.ml" 36 526991 527024 "lib/bakery.ml" 36 526991 535812
+type(
+  string
+)
+"lib/bakery.ml" 36 526991 526999 "lib/bakery.ml" 36 526991 535812
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 37 535813 535821 "lib/bakery.ml" 37 535813 535832
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 37 535813 535833 "lib/bakery.ml" 37 535813 535838
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 37 535813 535839 "lib/bakery.ml" 37 535813 535846
+type(
+  string
+)
+"lib/bakery.ml" 37 535813 535847 "lib/bakery.ml" 37 535813 540919
+type(
+  string
+)
+"lib/bakery.ml" 37 535813 535821 "lib/bakery.ml" 37 535813 540919
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bakery.ml" 38 540920 540928 "lib/bakery.ml" 38 540920 540939
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"lib/bakery.ml" 38 540920 540940 "lib/bakery.ml" 38 540920 540945
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref items "lib/bakery.ml" 1 0 4 "lib/bakery.ml" 1 0 9
+)
+"lib/bakery.ml" 38 540920 540946 "lib/bakery.ml" 38 540920 540952
+type(
+  string
+)
+"lib/bakery.ml" 38 540920 540953 "lib/bakery.ml" 38 540920 541459
+type(
+  string
+)
+"lib/bakery.ml" 38 540920 540928 "lib/bakery.ml" 38 540920 541459
+call(
+  stack
+)
+type(
+  unit
+)

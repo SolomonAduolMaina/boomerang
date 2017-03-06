@@ -1,0 +1,2149 @@
+"ubase/uprintf.ml" 16 962 966 "ubase/uprintf.ml" 16 962 973
+type(
+  out_channel -> (unit -> 'a) -> 'b -> 'c
+)
+ident(
+  def fprintf "ubase/uprintf.ml" 92 3524 3524 "ubase/uprintf.ml" 1 0 -1
+)
+"ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+type(
+  out_channel
+)
+ident(
+  def outchan "ubase/uprintf.ml" 16 962 982 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 16 962 982 "ubase/uprintf.ml" 16 962 989
+type(
+  unit -> 'a
+)
+ident(
+  def doafter "ubase/uprintf.ml" 16 962 990 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 16 962 990 "ubase/uprintf.ml" 16 962 996
+type(
+  'b
+)
+ident(
+  def format "ubase/uprintf.ml" 17 999 1001 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+type(
+  string
+)
+ident(
+  def format "ubase/uprintf.ml" 18 1045 1047 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 17 999 1015 "ubase/uprintf.ml" 17 999 1024
+type(
+  'b -> string
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 17 999 1025 "ubase/uprintf.ml" 17 999 1031
+type(
+  'b
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 16 962 990 "ubase/uprintf.ml" 16 962 996
+)
+"ubase/uprintf.ml" 17 999 1015 "ubase/uprintf.ml" 17 999 1031
+type(
+  string
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+type(
+  int -> 'd
+)
+ident(
+  def doprn "ubase/uprintf.ml" 18 1045 1047 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+type(
+  int
+)
+ident(
+  def i "ubase/uprintf.ml" 19 1065 1069 "ubase/uprintf.ml" 83 3368 3375
+)
+"ubase/uprintf.ml" 19 1065 1072 "ubase/uprintf.ml" 19 1065 1073
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 19 1065 1074 "ubase/uprintf.ml" 19 1065 1076
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"ubase/uprintf.ml" 19 1065 1077 "ubase/uprintf.ml" 19 1065 1090
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uprintf.ml" 19 1065 1091 "ubase/uprintf.ml" 19 1065 1097
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 19 1065 1077 "ubase/uprintf.ml" 19 1065 1097
+type(
+  int
+)
+"ubase/uprintf.ml" 19 1065 1072 "ubase/uprintf.ml" 19 1065 1097
+type(
+  bool
+)
+"ubase/uprintf.ml" 20 1103 1110 "ubase/uprintf.ml" 20 1103 1117
+type(
+  unit -> 'a
+)
+ident(
+  int_ref doafter "ubase/uprintf.ml" 16 962 982 "ubase/uprintf.ml" 16 962 989
+)
+"ubase/uprintf.ml" 20 1103 1117 "ubase/uprintf.ml" 20 1103 1119
+type(
+  unit
+)
+"ubase/uprintf.ml" 20 1103 1110 "ubase/uprintf.ml" 20 1103 1119
+call(
+  stack
+)
+type(
+  'a
+)
+"ubase/uprintf.ml" 20 1103 1121 "ubase/uprintf.ml" 20 1103 1130
+type(
+  unit -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 20 1103 1131 "ubase/uprintf.ml" 20 1103 1133
+type(
+  unit
+)
+"ubase/uprintf.ml" 20 1103 1121 "ubase/uprintf.ml" 20 1103 1133
+type(
+  'd
+)
+"ubase/uprintf.ml" 20 1103 1109 "ubase/uprintf.ml" 20 1103 1134
+type(
+  'd
+)
+"ubase/uprintf.ml" 22 1150 1160 "ubase/uprintf.ml" 22 1150 1161
+type(
+  char
+)
+ident(
+  def c "ubase/uprintf.ml" 23 1194 1200 "ubase/uprintf.ml" 82 3358 3367
+)
+"ubase/uprintf.ml" 22 1150 1164 "ubase/uprintf.ml" 22 1150 1181
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.unsafe_get
+)
+"ubase/uprintf.ml" 22 1150 1182 "ubase/uprintf.ml" 22 1150 1188
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 22 1150 1189 "ubase/uprintf.ml" 22 1150 1190
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 22 1150 1164 "ubase/uprintf.ml" 22 1150 1190
+type(
+  char
+)
+"ubase/uprintf.ml" 23 1194 1203 "ubase/uprintf.ml" 23 1194 1204
+type(
+  char
+)
+ident(
+  int_ref c "ubase/uprintf.ml" 22 1150 1160 "ubase/uprintf.ml" 22 1150 1161
+)
+"ubase/uprintf.ml" 23 1194 1205 "ubase/uprintf.ml" 23 1194 1207
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/uprintf.ml" 23 1194 1208 "ubase/uprintf.ml" 23 1194 1211
+type(
+  char
+)
+"ubase/uprintf.ml" 23 1194 1203 "ubase/uprintf.ml" 23 1194 1211
+type(
+  bool
+)
+"ubase/uprintf.ml" 24 1223 1231 "ubase/uprintf.ml" 24 1223 1242
+type(
+  out_channel -> char -> unit
+)
+ident(
+  ext_ref Pervasives.output_char
+)
+"ubase/uprintf.ml" 24 1223 1243 "ubase/uprintf.ml" 24 1223 1250
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 24 1223 1251 "ubase/uprintf.ml" 24 1223 1252
+type(
+  char
+)
+ident(
+  int_ref c "ubase/uprintf.ml" 22 1150 1160 "ubase/uprintf.ml" 22 1150 1161
+)
+"ubase/uprintf.ml" 24 1223 1231 "ubase/uprintf.ml" 24 1223 1252
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 25 1254 1262 "ubase/uprintf.ml" 25 1254 1267
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 25 1254 1269 "ubase/uprintf.ml" 25 1254 1273
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 25 1254 1274 "ubase/uprintf.ml" 25 1254 1275
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 25 1254 1268 "ubase/uprintf.ml" 25 1254 1276
+type(
+  int
+)
+"ubase/uprintf.ml" 25 1254 1262 "ubase/uprintf.ml" 25 1254 1276
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 23 1194 1217 "ubase/uprintf.ml" 26 1277 1286
+type(
+  'd
+)
+"ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+type(
+  int
+)
+ident(
+  def j "ubase/uprintf.ml" 28 1336 1344 "ubase/uprintf.ml" 81 3306 3357
+)
+"ubase/uprintf.ml" 27 1298 1314 "ubase/uprintf.ml" 27 1298 1323
+type(
+  int -> int
+)
+ident(
+  int_ref skip_args "ubase/uprintf.ml" 85 3377 3383 "ubase/uprintf.ml" 85 3377 3392
+)
+"ubase/uprintf.ml" 27 1298 1325 "ubase/uprintf.ml" 27 1298 1329
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 27 1298 1330 "ubase/uprintf.ml" 27 1298 1331
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 27 1298 1324 "ubase/uprintf.ml" 27 1298 1332
+type(
+  int
+)
+"ubase/uprintf.ml" 27 1298 1314 "ubase/uprintf.ml" 27 1298 1332
+call(
+  stack
+)
+type(
+  int
+)
+"ubase/uprintf.ml" 28 1336 1350 "ubase/uprintf.ml" 28 1336 1367
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.unsafe_get
+)
+"ubase/uprintf.ml" 28 1336 1368 "ubase/uprintf.ml" 28 1336 1374
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 28 1336 1375 "ubase/uprintf.ml" 28 1336 1376
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 28 1336 1350 "ubase/uprintf.ml" 28 1336 1376
+type(
+  char
+)
+"ubase/uprintf.ml" 29 1382 1392 "ubase/uprintf.ml" 29 1382 1395
+type(
+  char
+)
+"ubase/uprintf.ml" 30 1399 1411 "ubase/uprintf.ml" 30 1399 1422
+type(
+  out_channel -> char -> unit
+)
+ident(
+  ext_ref Pervasives.output_char
+)
+"ubase/uprintf.ml" 30 1399 1423 "ubase/uprintf.ml" 30 1399 1430
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 30 1399 1431 "ubase/uprintf.ml" 30 1399 1434
+type(
+  char
+)
+"ubase/uprintf.ml" 30 1399 1411 "ubase/uprintf.ml" 30 1399 1434
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 31 1436 1448 "ubase/uprintf.ml" 31 1436 1453
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 31 1436 1455 "ubase/uprintf.ml" 31 1436 1459
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 31 1436 1460 "ubase/uprintf.ml" 31 1436 1461
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 31 1436 1454 "ubase/uprintf.ml" 31 1436 1462
+type(
+  int
+)
+"ubase/uprintf.ml" 31 1436 1448 "ubase/uprintf.ml" 31 1436 1462
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 30 1399 1411 "ubase/uprintf.ml" 31 1436 1462
+type(
+  'd
+)
+"ubase/uprintf.ml" 32 1463 1473 "ubase/uprintf.ml" 32 1463 1476
+type(
+  char
+)
+"ubase/uprintf.ml" 33 1480 1492 "ubase/uprintf.ml" 33 1480 1501
+type(
+  (string -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+type(
+  string
+)
+ident(
+  def s "ubase/uprintf.ml" 34 1511 1525 "ubase/uprintf.ml" 53 2334 2362
+)
+"ubase/uprintf.ml" 34 1511 1528 "ubase/uprintf.ml" 34 1511 1529
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 34 1511 1530 "ubase/uprintf.ml" 34 1511 1532
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"ubase/uprintf.ml" 34 1511 1533 "ubase/uprintf.ml" 34 1511 1534
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 34 1511 1534 "ubase/uprintf.ml" 34 1511 1535
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uprintf.ml" 34 1511 1535 "ubase/uprintf.ml" 34 1511 1536
+type(
+  int
+)
+"ubase/uprintf.ml" 34 1511 1533 "ubase/uprintf.ml" 34 1511 1536
+type(
+  int
+)
+"ubase/uprintf.ml" 34 1511 1528 "ubase/uprintf.ml" 34 1511 1536
+type(
+  bool
+)
+"ubase/uprintf.ml" 35 1542 1558 "ubase/uprintf.ml" 35 1542 1571
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 35 1542 1572 "ubase/uprintf.ml" 35 1542 1579
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 35 1542 1580 "ubase/uprintf.ml" 35 1542 1581
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 35 1542 1558 "ubase/uprintf.ml" 35 1542 1581
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+type(
+  int
+)
+ident(
+  def p "ubase/uprintf.ml" 42 1809 1825 "ubase/uprintf.ml" 51 2273 2314
+)
+"ubase/uprintf.ml" 39 1653 1673 "ubase/uprintf.ml" 39 1653 1686
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"ubase/uprintf.ml" 39 1653 1688 "ubase/uprintf.ml" 39 1653 1698
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"ubase/uprintf.ml" 39 1653 1699 "ubase/uprintf.ml" 39 1653 1705
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 39 1653 1707 "ubase/uprintf.ml" 39 1653 1708
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 39 1653 1708 "ubase/uprintf.ml" 39 1653 1709
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uprintf.ml" 39 1653 1709 "ubase/uprintf.ml" 39 1653 1710
+type(
+  int
+)
+"ubase/uprintf.ml" 39 1653 1706 "ubase/uprintf.ml" 39 1653 1711
+type(
+  int
+)
+"ubase/uprintf.ml" 39 1653 1713 "ubase/uprintf.ml" 39 1653 1714
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 39 1653 1714 "ubase/uprintf.ml" 39 1653 1715
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 39 1653 1715 "ubase/uprintf.ml" 39 1653 1716
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 39 1653 1713 "ubase/uprintf.ml" 39 1653 1716
+type(
+  int
+)
+"ubase/uprintf.ml" 39 1653 1716 "ubase/uprintf.ml" 39 1653 1717
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 39 1653 1717 "ubase/uprintf.ml" 39 1653 1718
+type(
+  int
+)
+"ubase/uprintf.ml" 39 1653 1712 "ubase/uprintf.ml" 39 1653 1719
+type(
+  int
+)
+"ubase/uprintf.ml" 39 1653 1687 "ubase/uprintf.ml" 39 1653 1720
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 39 1653 1673 "ubase/uprintf.ml" 39 1653 1720
+type(
+  int
+)
+"ubase/uprintf.ml" 40 1721 1744 "ubase/uprintf.ml" 40 1721 1745
+type(
+  exn
+)
+"ubase/uprintf.ml" 41 1749 1769 "ubase/uprintf.ml" 41 1749 1780
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/uprintf.ml" 41 1749 1781 "ubase/uprintf.ml" 41 1749 1805
+type(
+  string
+)
+"ubase/uprintf.ml" 41 1749 1769 "ubase/uprintf.ml" 41 1749 1805
+call(
+  stack
+)
+type(
+  int
+)
+"ubase/uprintf.ml" 38 1631 1649 "ubase/uprintf.ml" 41 1749 1805
+type(
+  int
+)
+"ubase/uprintf.ml" 42 1809 1828 "ubase/uprintf.ml" 42 1809 1829
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 42 1809 1830 "ubase/uprintf.ml" 42 1809 1831
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"ubase/uprintf.ml" 42 1809 1832 "ubase/uprintf.ml" 42 1809 1833
+type(
+  int
+)
+"ubase/uprintf.ml" 42 1809 1828 "ubase/uprintf.ml" 42 1809 1833
+type(
+  bool
+)
+"ubase/uprintf.ml" 42 1809 1834 "ubase/uprintf.ml" 42 1809 1836
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/uprintf.ml" 42 1809 1837 "ubase/uprintf.ml" 42 1809 1850
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uprintf.ml" 42 1809 1851 "ubase/uprintf.ml" 42 1809 1852
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 42 1809 1837 "ubase/uprintf.ml" 42 1809 1852
+type(
+  int
+)
+"ubase/uprintf.ml" 42 1809 1853 "ubase/uprintf.ml" 42 1809 1854
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uprintf.ml" 42 1809 1855 "ubase/uprintf.ml" 42 1809 1856
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 42 1809 1837 "ubase/uprintf.ml" 42 1809 1856
+type(
+  bool
+)
+"ubase/uprintf.ml" 42 1809 1828 "ubase/uprintf.ml" 42 1809 1856
+type(
+  bool
+)
+"ubase/uprintf.ml" 43 1868 1886 "ubase/uprintf.ml" 43 1868 1899
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 43 1868 1900 "ubase/uprintf.ml" 43 1868 1907
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 44 1908 1941 "ubase/uprintf.ml" 44 1908 1952
+type(
+  int -> char -> string
+)
+ident(
+  ext_ref String.make
+)
+"ubase/uprintf.ml" 44 1908 1954 "ubase/uprintf.ml" 44 1908 1955
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 44 1908 1956 "ubase/uprintf.ml" 44 1908 1957
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 44 1908 1958 "ubase/uprintf.ml" 44 1908 1971
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uprintf.ml" 44 1908 1972 "ubase/uprintf.ml" 44 1908 1973
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 44 1908 1958 "ubase/uprintf.ml" 44 1908 1973
+type(
+  int
+)
+"ubase/uprintf.ml" 44 1908 1953 "ubase/uprintf.ml" 44 1908 1974
+type(
+  int
+)
+"ubase/uprintf.ml" 44 1908 1975 "ubase/uprintf.ml" 44 1908 1978
+type(
+  char
+)
+"ubase/uprintf.ml" 44 1908 1940 "ubase/uprintf.ml" 44 1908 1979
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 43 1868 1886 "ubase/uprintf.ml" 44 1908 1979
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 45 1981 1999 "ubase/uprintf.ml" 45 1981 2012
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 45 1981 2013 "ubase/uprintf.ml" 45 1981 2020
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 45 1981 2021 "ubase/uprintf.ml" 45 1981 2022
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 45 1981 1999 "ubase/uprintf.ml" 45 1981 2022
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 42 1809 1862 "ubase/uprintf.ml" 46 2023 2042
+type(
+  unit
+)
+"ubase/uprintf.ml" 46 2023 2051 "ubase/uprintf.ml" 46 2023 2052
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 46 2023 2053 "ubase/uprintf.ml" 46 2023 2054
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uprintf.ml" 46 2023 2055 "ubase/uprintf.ml" 46 2023 2056
+type(
+  int
+)
+"ubase/uprintf.ml" 46 2023 2051 "ubase/uprintf.ml" 46 2023 2056
+type(
+  bool
+)
+"ubase/uprintf.ml" 46 2023 2057 "ubase/uprintf.ml" 46 2023 2059
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/uprintf.ml" 46 2023 2060 "ubase/uprintf.ml" 46 2023 2073
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uprintf.ml" 46 2023 2074 "ubase/uprintf.ml" 46 2023 2075
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 46 2023 2060 "ubase/uprintf.ml" 46 2023 2075
+type(
+  int
+)
+"ubase/uprintf.ml" 46 2023 2076 "ubase/uprintf.ml" 46 2023 2077
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"ubase/uprintf.ml" 46 2023 2078 "ubase/uprintf.ml" 46 2023 2079
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"ubase/uprintf.ml" 46 2023 2079 "ubase/uprintf.ml" 46 2023 2080
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 46 2023 2078 "ubase/uprintf.ml" 46 2023 2080
+type(
+  int
+)
+"ubase/uprintf.ml" 46 2023 2060 "ubase/uprintf.ml" 46 2023 2080
+type(
+  bool
+)
+"ubase/uprintf.ml" 46 2023 2051 "ubase/uprintf.ml" 46 2023 2080
+type(
+  bool
+)
+"ubase/uprintf.ml" 47 2092 2110 "ubase/uprintf.ml" 47 2092 2123
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 47 2092 2124 "ubase/uprintf.ml" 47 2092 2131
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 47 2092 2132 "ubase/uprintf.ml" 47 2092 2133
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 47 2092 2110 "ubase/uprintf.ml" 47 2092 2133
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 48 2135 2153 "ubase/uprintf.ml" 48 2135 2166
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 48 2135 2167 "ubase/uprintf.ml" 48 2135 2174
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 49 2175 2208 "ubase/uprintf.ml" 49 2175 2219
+type(
+  int -> char -> string
+)
+ident(
+  ext_ref String.make
+)
+"ubase/uprintf.ml" 49 2175 2221 "ubase/uprintf.ml" 49 2175 2222
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"ubase/uprintf.ml" 49 2175 2222 "ubase/uprintf.ml" 49 2175 2223
+type(
+  int
+)
+ident(
+  int_ref p "ubase/uprintf.ml" 37 1607 1627 "ubase/uprintf.ml" 37 1607 1628
+)
+"ubase/uprintf.ml" 49 2175 2221 "ubase/uprintf.ml" 49 2175 2223
+type(
+  int
+)
+"ubase/uprintf.ml" 49 2175 2224 "ubase/uprintf.ml" 49 2175 2225
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 49 2175 2226 "ubase/uprintf.ml" 49 2175 2239
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"ubase/uprintf.ml" 49 2175 2240 "ubase/uprintf.ml" 49 2175 2241
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 49 2175 2226 "ubase/uprintf.ml" 49 2175 2241
+type(
+  int
+)
+"ubase/uprintf.ml" 49 2175 2220 "ubase/uprintf.ml" 49 2175 2242
+type(
+  int
+)
+"ubase/uprintf.ml" 49 2175 2243 "ubase/uprintf.ml" 49 2175 2246
+type(
+  char
+)
+"ubase/uprintf.ml" 49 2175 2207 "ubase/uprintf.ml" 49 2175 2247
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 48 2135 2153 "ubase/uprintf.ml" 49 2175 2247
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 46 2023 2086 "ubase/uprintf.ml" 50 2248 2267
+type(
+  unit
+)
+"ubase/uprintf.ml" 51 2273 2291 "ubase/uprintf.ml" 51 2273 2304
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 51 2273 2305 "ubase/uprintf.ml" 51 2273 2312
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 51 2273 2313 "ubase/uprintf.ml" 51 2273 2314
+type(
+  string
+)
+ident(
+  int_ref s "ubase/uprintf.ml" 33 1480 1506 "ubase/uprintf.ml" 33 1480 1507
+)
+"ubase/uprintf.ml" 51 2273 2291 "ubase/uprintf.ml" 51 2273 2314
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 46 2023 2048 "ubase/uprintf.ml" 51 2273 2314
+type(
+  unit
+)
+"ubase/uprintf.ml" 42 1809 1825 "ubase/uprintf.ml" 51 2273 2314
+type(
+  unit
+)
+"ubase/uprintf.ml" 36 1582 1601 "ubase/uprintf.ml" 52 2315 2332
+type(
+  unit
+)
+"ubase/uprintf.ml" 34 1511 1525 "ubase/uprintf.ml" 52 2315 2332
+type(
+  unit
+)
+"ubase/uprintf.ml" 53 2334 2348 "ubase/uprintf.ml" 53 2334 2353
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 53 2334 2355 "ubase/uprintf.ml" 53 2334 2359
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 53 2334 2360 "ubase/uprintf.ml" 53 2334 2361
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 53 2334 2354 "ubase/uprintf.ml" 53 2334 2362
+type(
+  int
+)
+"ubase/uprintf.ml" 53 2334 2348 "ubase/uprintf.ml" 53 2334 2362
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 34 1511 1525 "ubase/uprintf.ml" 53 2334 2362
+type(
+  'd
+)
+"ubase/uprintf.ml" 33 1480 1501 "ubase/uprintf.ml" 53 2334 2363
+type(
+  string -> 'd
+)
+"ubase/uprintf.ml" 33 1480 1492 "ubase/uprintf.ml" 53 2334 2363
+type(
+  'd
+)
+"ubase/uprintf.ml" 54 2364 2374 "ubase/uprintf.ml" 54 2364 2377
+type(
+  char
+)
+"ubase/uprintf.ml" 55 2381 2393 "ubase/uprintf.ml" 55 2381 2402
+type(
+  (char -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 55 2381 2407 "ubase/uprintf.ml" 55 2381 2408
+type(
+  char
+)
+ident(
+  def c "ubase/uprintf.ml" 56 2412 2426 "ubase/uprintf.ml" 57 2449 2477
+)
+"ubase/uprintf.ml" 56 2412 2426 "ubase/uprintf.ml" 56 2412 2437
+type(
+  out_channel -> char -> unit
+)
+ident(
+  ext_ref Pervasives.output_char
+)
+"ubase/uprintf.ml" 56 2412 2438 "ubase/uprintf.ml" 56 2412 2445
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 56 2412 2446 "ubase/uprintf.ml" 56 2412 2447
+type(
+  char
+)
+ident(
+  int_ref c "ubase/uprintf.ml" 55 2381 2407 "ubase/uprintf.ml" 55 2381 2408
+)
+"ubase/uprintf.ml" 56 2412 2426 "ubase/uprintf.ml" 56 2412 2447
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 57 2449 2463 "ubase/uprintf.ml" 57 2449 2468
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 57 2449 2470 "ubase/uprintf.ml" 57 2449 2474
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 57 2449 2475 "ubase/uprintf.ml" 57 2449 2476
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 57 2449 2469 "ubase/uprintf.ml" 57 2449 2477
+type(
+  int
+)
+"ubase/uprintf.ml" 57 2449 2463 "ubase/uprintf.ml" 57 2449 2477
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 56 2412 2426 "ubase/uprintf.ml" 57 2449 2477
+type(
+  'd
+)
+"ubase/uprintf.ml" 55 2381 2402 "ubase/uprintf.ml" 57 2449 2478
+type(
+  char -> 'd
+)
+"ubase/uprintf.ml" 55 2381 2393 "ubase/uprintf.ml" 57 2449 2478
+type(
+  'd
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2492
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2495 "ubase/uprintf.ml" 58 2479 2498
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2498
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2501 "ubase/uprintf.ml" 58 2479 2504
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2504
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2507 "ubase/uprintf.ml" 58 2479 2510
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2510
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2513 "ubase/uprintf.ml" 58 2479 2516
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2516
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2519 "ubase/uprintf.ml" 58 2479 2522
+type(
+  char
+)
+"ubase/uprintf.ml" 58 2479 2489 "ubase/uprintf.ml" 58 2479 2522
+type(
+  char
+)
+"ubase/uprintf.ml" 59 2526 2538 "ubase/uprintf.ml" 59 2526 2547
+type(
+  (int -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 59 2526 2552 "ubase/uprintf.ml" 59 2526 2553
+type(
+  int
+)
+ident(
+  def n "ubase/uprintf.ml" 60 2557 2571 "ubase/uprintf.ml" 62 2672 2700
+)
+"ubase/uprintf.ml" 60 2557 2571 "ubase/uprintf.ml" 60 2557 2584
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 60 2557 2585 "ubase/uprintf.ml" 60 2557 2592
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 61 2593 2622 "ubase/uprintf.ml" 61 2593 2637
+type(
+  string -> int -> string
+)
+ident(
+  int_ref caml_format_int "ubase/uprintf.ml" 13 815 815 "ubase/uprintf.ml" 13 815 884
+)
+"ubase/uprintf.ml" 61 2593 2639 "ubase/uprintf.ml" 61 2593 2649
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"ubase/uprintf.ml" 61 2593 2650 "ubase/uprintf.ml" 61 2593 2656
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 61 2593 2657 "ubase/uprintf.ml" 61 2593 2658
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 61 2593 2660 "ubase/uprintf.ml" 61 2593 2661
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 61 2593 2661 "ubase/uprintf.ml" 61 2593 2662
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 61 2593 2662 "ubase/uprintf.ml" 61 2593 2663
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 61 2593 2660 "ubase/uprintf.ml" 61 2593 2663
+type(
+  int
+)
+"ubase/uprintf.ml" 61 2593 2663 "ubase/uprintf.ml" 61 2593 2664
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uprintf.ml" 61 2593 2664 "ubase/uprintf.ml" 61 2593 2665
+type(
+  int
+)
+"ubase/uprintf.ml" 61 2593 2659 "ubase/uprintf.ml" 61 2593 2666
+type(
+  int
+)
+"ubase/uprintf.ml" 61 2593 2638 "ubase/uprintf.ml" 61 2593 2667
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 61 2593 2668 "ubase/uprintf.ml" 61 2593 2669
+type(
+  int
+)
+ident(
+  int_ref n "ubase/uprintf.ml" 59 2526 2552 "ubase/uprintf.ml" 59 2526 2553
+)
+"ubase/uprintf.ml" 61 2593 2621 "ubase/uprintf.ml" 61 2593 2670
+type(
+  string
+)
+"ubase/uprintf.ml" 60 2557 2571 "ubase/uprintf.ml" 61 2593 2670
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 62 2672 2686 "ubase/uprintf.ml" 62 2672 2691
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 62 2672 2693 "ubase/uprintf.ml" 62 2672 2697
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 62 2672 2698 "ubase/uprintf.ml" 62 2672 2699
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 62 2672 2692 "ubase/uprintf.ml" 62 2672 2700
+type(
+  int
+)
+"ubase/uprintf.ml" 62 2672 2686 "ubase/uprintf.ml" 62 2672 2700
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 60 2557 2571 "ubase/uprintf.ml" 62 2672 2700
+type(
+  'd
+)
+"ubase/uprintf.ml" 59 2526 2547 "ubase/uprintf.ml" 62 2672 2701
+type(
+  int -> 'd
+)
+"ubase/uprintf.ml" 59 2526 2538 "ubase/uprintf.ml" 62 2672 2701
+type(
+  'd
+)
+"ubase/uprintf.ml" 63 2702 2712 "ubase/uprintf.ml" 63 2702 2715
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2718 "ubase/uprintf.ml" 63 2702 2721
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2712 "ubase/uprintf.ml" 63 2702 2721
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2724 "ubase/uprintf.ml" 63 2702 2727
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2712 "ubase/uprintf.ml" 63 2702 2727
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2730 "ubase/uprintf.ml" 63 2702 2733
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2712 "ubase/uprintf.ml" 63 2702 2733
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2736 "ubase/uprintf.ml" 63 2702 2739
+type(
+  char
+)
+"ubase/uprintf.ml" 63 2702 2712 "ubase/uprintf.ml" 63 2702 2739
+type(
+  char
+)
+"ubase/uprintf.ml" 64 2743 2755 "ubase/uprintf.ml" 64 2743 2764
+type(
+  (float -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 64 2743 2769 "ubase/uprintf.ml" 64 2743 2770
+type(
+  float
+)
+ident(
+  def f "ubase/uprintf.ml" 65 2774 2788 "ubase/uprintf.ml" 67 2891 2919
+)
+"ubase/uprintf.ml" 65 2774 2788 "ubase/uprintf.ml" 65 2774 2801
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 65 2774 2802 "ubase/uprintf.ml" 65 2774 2809
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 66 2810 2839 "ubase/uprintf.ml" 66 2810 2856
+type(
+  string -> float -> string
+)
+ident(
+  int_ref caml_format_float "ubase/uprintf.ml" 14 885 885 "ubase/uprintf.ml" 14 885 960
+)
+"ubase/uprintf.ml" 66 2810 2858 "ubase/uprintf.ml" 66 2810 2868
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"ubase/uprintf.ml" 66 2810 2869 "ubase/uprintf.ml" 66 2810 2875
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 66 2810 2876 "ubase/uprintf.ml" 66 2810 2877
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 66 2810 2879 "ubase/uprintf.ml" 66 2810 2880
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 66 2810 2880 "ubase/uprintf.ml" 66 2810 2881
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"ubase/uprintf.ml" 66 2810 2881 "ubase/uprintf.ml" 66 2810 2882
+type(
+  int
+)
+ident(
+  int_ref i "ubase/uprintf.ml" 18 1045 1061 "ubase/uprintf.ml" 18 1045 1062
+)
+"ubase/uprintf.ml" 66 2810 2879 "ubase/uprintf.ml" 66 2810 2882
+type(
+  int
+)
+"ubase/uprintf.ml" 66 2810 2882 "ubase/uprintf.ml" 66 2810 2883
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"ubase/uprintf.ml" 66 2810 2883 "ubase/uprintf.ml" 66 2810 2884
+type(
+  int
+)
+"ubase/uprintf.ml" 66 2810 2878 "ubase/uprintf.ml" 66 2810 2885
+type(
+  int
+)
+"ubase/uprintf.ml" 66 2810 2857 "ubase/uprintf.ml" 66 2810 2886
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 66 2810 2887 "ubase/uprintf.ml" 66 2810 2888
+type(
+  float
+)
+ident(
+  int_ref f "ubase/uprintf.ml" 64 2743 2769 "ubase/uprintf.ml" 64 2743 2770
+)
+"ubase/uprintf.ml" 66 2810 2838 "ubase/uprintf.ml" 66 2810 2889
+type(
+  string
+)
+"ubase/uprintf.ml" 65 2774 2788 "ubase/uprintf.ml" 66 2810 2889
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 67 2891 2905 "ubase/uprintf.ml" 67 2891 2910
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 67 2891 2912 "ubase/uprintf.ml" 67 2891 2916
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 67 2891 2917 "ubase/uprintf.ml" 67 2891 2918
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 67 2891 2911 "ubase/uprintf.ml" 67 2891 2919
+type(
+  int
+)
+"ubase/uprintf.ml" 67 2891 2905 "ubase/uprintf.ml" 67 2891 2919
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 65 2774 2788 "ubase/uprintf.ml" 67 2891 2919
+type(
+  'd
+)
+"ubase/uprintf.ml" 64 2743 2764 "ubase/uprintf.ml" 67 2891 2920
+type(
+  float -> 'd
+)
+"ubase/uprintf.ml" 64 2743 2755 "ubase/uprintf.ml" 67 2891 2920
+type(
+  'd
+)
+"ubase/uprintf.ml" 68 2921 2931 "ubase/uprintf.ml" 68 2921 2934
+type(
+  char
+)
+"ubase/uprintf.ml" 69 2938 2950 "ubase/uprintf.ml" 69 2938 2959
+type(
+  (bool -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 69 2938 2964 "ubase/uprintf.ml" 69 2938 2965
+type(
+  bool
+)
+ident(
+  def b "ubase/uprintf.ml" 70 2969 2983 "ubase/uprintf.ml" 71 3025 3053
+)
+"ubase/uprintf.ml" 70 2969 2983 "ubase/uprintf.ml" 70 2969 2996
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/uprintf.ml" 70 2969 2997 "ubase/uprintf.ml" 70 2969 3004
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 70 2969 3006 "ubase/uprintf.ml" 70 2969 3020
+type(
+  bool -> string
+)
+ident(
+  ext_ref Pervasives.string_of_bool
+)
+"ubase/uprintf.ml" 70 2969 3021 "ubase/uprintf.ml" 70 2969 3022
+type(
+  bool
+)
+ident(
+  int_ref b "ubase/uprintf.ml" 69 2938 2964 "ubase/uprintf.ml" 69 2938 2965
+)
+"ubase/uprintf.ml" 70 2969 3005 "ubase/uprintf.ml" 70 2969 3023
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/uprintf.ml" 70 2969 2983 "ubase/uprintf.ml" 70 2969 3023
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/uprintf.ml" 71 3025 3039 "ubase/uprintf.ml" 71 3025 3044
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 71 3025 3046 "ubase/uprintf.ml" 71 3025 3050
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 71 3025 3051 "ubase/uprintf.ml" 71 3025 3052
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 71 3025 3045 "ubase/uprintf.ml" 71 3025 3053
+type(
+  int
+)
+"ubase/uprintf.ml" 71 3025 3039 "ubase/uprintf.ml" 71 3025 3053
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 70 2969 2983 "ubase/uprintf.ml" 71 3025 3053
+type(
+  'd
+)
+"ubase/uprintf.ml" 69 2938 2959 "ubase/uprintf.ml" 71 3025 3054
+type(
+  bool -> 'd
+)
+"ubase/uprintf.ml" 69 2938 2950 "ubase/uprintf.ml" 71 3025 3054
+type(
+  'd
+)
+"ubase/uprintf.ml" 72 3055 3065 "ubase/uprintf.ml" 72 3055 3068
+type(
+  char
+)
+"ubase/uprintf.ml" 73 3072 3084 "ubase/uprintf.ml" 73 3072 3093
+type(
+  ((out_channel -> '_e -> '_f) -> '_e -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 73 3072 3098 "ubase/uprintf.ml" 73 3072 3105
+type(
+  out_channel -> '_e -> '_f
+)
+ident(
+  def printer "ubase/uprintf.ml" 73 3072 3106 "ubase/uprintf.ml" 75 3148 3175
+)
+"ubase/uprintf.ml" 73 3072 3106 "ubase/uprintf.ml" 73 3072 3109
+type(
+  '_e
+)
+ident(
+  def arg "ubase/uprintf.ml" 74 3113 3127 "ubase/uprintf.ml" 75 3148 3175
+)
+"ubase/uprintf.ml" 74 3113 3127 "ubase/uprintf.ml" 74 3113 3134
+type(
+  out_channel -> '_e -> '_f
+)
+ident(
+  int_ref printer "ubase/uprintf.ml" 73 3072 3098 "ubase/uprintf.ml" 73 3072 3105
+)
+"ubase/uprintf.ml" 74 3113 3135 "ubase/uprintf.ml" 74 3113 3142
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 74 3113 3143 "ubase/uprintf.ml" 74 3113 3146
+type(
+  '_e
+)
+ident(
+  int_ref arg "ubase/uprintf.ml" 73 3072 3106 "ubase/uprintf.ml" 73 3072 3109
+)
+"ubase/uprintf.ml" 74 3113 3127 "ubase/uprintf.ml" 74 3113 3146
+call(
+  stack
+)
+type(
+  '_f
+)
+"ubase/uprintf.ml" 75 3148 3162 "ubase/uprintf.ml" 75 3148 3167
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 75 3148 3168 "ubase/uprintf.ml" 75 3148 3172
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 75 3148 3173 "ubase/uprintf.ml" 75 3148 3174
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 75 3148 3167 "ubase/uprintf.ml" 75 3148 3175
+type(
+  int
+)
+"ubase/uprintf.ml" 75 3148 3162 "ubase/uprintf.ml" 75 3148 3175
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 74 3113 3127 "ubase/uprintf.ml" 75 3148 3175
+type(
+  'd
+)
+"ubase/uprintf.ml" 73 3072 3093 "ubase/uprintf.ml" 75 3148 3176
+type(
+  (out_channel -> '_e -> '_f) -> '_e -> 'd
+)
+"ubase/uprintf.ml" 73 3072 3084 "ubase/uprintf.ml" 75 3148 3176
+type(
+  'd
+)
+"ubase/uprintf.ml" 76 3177 3187 "ubase/uprintf.ml" 76 3177 3190
+type(
+  char
+)
+"ubase/uprintf.ml" 77 3194 3206 "ubase/uprintf.ml" 77 3194 3215
+type(
+  ((out_channel -> '_g) -> 'd) -> 'd
+)
+ident(
+  ext_ref Obj.magic
+)
+"ubase/uprintf.ml" 77 3194 3220 "ubase/uprintf.ml" 77 3194 3227
+type(
+  out_channel -> '_g
+)
+ident(
+  def printer "ubase/uprintf.ml" 78 3231 3245 "ubase/uprintf.ml" 79 3262 3289
+)
+"ubase/uprintf.ml" 78 3231 3245 "ubase/uprintf.ml" 78 3231 3252
+type(
+  out_channel -> '_g
+)
+ident(
+  int_ref printer "ubase/uprintf.ml" 77 3194 3220 "ubase/uprintf.ml" 77 3194 3227
+)
+"ubase/uprintf.ml" 78 3231 3253 "ubase/uprintf.ml" 78 3231 3260
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "ubase/uprintf.ml" 16 962 974 "ubase/uprintf.ml" 16 962 981
+)
+"ubase/uprintf.ml" 78 3231 3245 "ubase/uprintf.ml" 78 3231 3260
+call(
+  stack
+)
+type(
+  '_g
+)
+"ubase/uprintf.ml" 79 3262 3276 "ubase/uprintf.ml" 79 3262 3281
+type(
+  int -> 'd
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 79 3262 3282 "ubase/uprintf.ml" 79 3262 3286
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 79 3262 3287 "ubase/uprintf.ml" 79 3262 3288
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 27 1298 1310 "ubase/uprintf.ml" 27 1298 1311
+)
+"ubase/uprintf.ml" 79 3262 3281 "ubase/uprintf.ml" 79 3262 3289
+type(
+  int
+)
+"ubase/uprintf.ml" 79 3262 3276 "ubase/uprintf.ml" 79 3262 3289
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 78 3231 3245 "ubase/uprintf.ml" 79 3262 3289
+type(
+  'd
+)
+"ubase/uprintf.ml" 77 3194 3215 "ubase/uprintf.ml" 79 3262 3290
+type(
+  (out_channel -> '_g) -> 'd
+)
+"ubase/uprintf.ml" 77 3194 3206 "ubase/uprintf.ml" 79 3262 3290
+type(
+  'd
+)
+"ubase/uprintf.ml" 80 3291 3301 "ubase/uprintf.ml" 80 3291 3302
+type(
+  char
+)
+ident(
+  def c "ubase/uprintf.ml" 81 3306 3318 "ubase/uprintf.ml" 81 3306 3357
+)
+"ubase/uprintf.ml" 81 3306 3318 "ubase/uprintf.ml" 81 3306 3329
+type(
+  string -> 'd
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"ubase/uprintf.ml" 81 3306 3330 "ubase/uprintf.ml" 81 3306 3357
+type(
+  string
+)
+"ubase/uprintf.ml" 81 3306 3318 "ubase/uprintf.ml" 81 3306 3357
+call(
+  tail
+)
+type(
+  'd
+)
+"ubase/uprintf.ml" 28 1336 1344 "ubase/uprintf.ml" 81 3306 3357
+type(
+  'd
+)
+"ubase/uprintf.ml" 26 1277 1292 "ubase/uprintf.ml" 82 3358 3367
+type(
+  'd
+)
+"ubase/uprintf.ml" 23 1194 1200 "ubase/uprintf.ml" 82 3358 3367
+type(
+  'd
+)
+"ubase/uprintf.ml" 21 1135 1144 "ubase/uprintf.ml" 83 3368 3375
+type(
+  'd
+)
+"ubase/uprintf.ml" 19 1065 1069 "ubase/uprintf.ml" 83 3368 3375
+type(
+  'd
+)
+"ubase/uprintf.ml" 85 3377 3383 "ubase/uprintf.ml" 85 3377 3392
+type(
+  int -> int
+)
+ident(
+  def skip_args "ubase/uprintf.ml" 18 1045 1047 "ubase/uprintf.ml" 90 3510 3522
+)
+"ubase/uprintf.ml" 85 3377 3393 "ubase/uprintf.ml" 85 3377 3394
+type(
+  int
+)
+ident(
+  def j "ubase/uprintf.ml" 86 3397 3401 "ubase/uprintf.ml" 88 3496 3508
+)
+"ubase/uprintf.ml" 86 3397 3407 "ubase/uprintf.ml" 86 3397 3424
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.unsafe_get
+)
+"ubase/uprintf.ml" 86 3397 3425 "ubase/uprintf.ml" 86 3397 3431
+type(
+  string
+)
+ident(
+  int_ref format "ubase/uprintf.ml" 17 999 1005 "ubase/uprintf.ml" 17 999 1011
+)
+"ubase/uprintf.ml" 86 3397 3432 "ubase/uprintf.ml" 86 3397 3433
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 85 3377 3393 "ubase/uprintf.ml" 85 3377 3394
+)
+"ubase/uprintf.ml" 86 3397 3407 "ubase/uprintf.ml" 86 3397 3433
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3445 "ubase/uprintf.ml" 87 3439 3455
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3458 "ubase/uprintf.ml" 87 3439 3461
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3445 "ubase/uprintf.ml" 87 3439 3461
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3464 "ubase/uprintf.ml" 87 3439 3467
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3445 "ubase/uprintf.ml" 87 3439 3467
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3470 "ubase/uprintf.ml" 87 3439 3473
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3445 "ubase/uprintf.ml" 87 3439 3473
+type(
+  char
+)
+"ubase/uprintf.ml" 87 3439 3477 "ubase/uprintf.ml" 87 3439 3486
+type(
+  int -> int
+)
+ident(
+  int_ref skip_args "ubase/uprintf.ml" 85 3377 3383 "ubase/uprintf.ml" 85 3377 3392
+)
+"ubase/uprintf.ml" 87 3439 3488 "ubase/uprintf.ml" 87 3439 3492
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.succ
+)
+"ubase/uprintf.ml" 87 3439 3493 "ubase/uprintf.ml" 87 3439 3494
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 85 3377 3393 "ubase/uprintf.ml" 85 3377 3394
+)
+"ubase/uprintf.ml" 87 3439 3487 "ubase/uprintf.ml" 87 3439 3495
+type(
+  int
+)
+"ubase/uprintf.ml" 87 3439 3477 "ubase/uprintf.ml" 87 3439 3495
+call(
+  tail
+)
+type(
+  int
+)
+"ubase/uprintf.ml" 88 3496 3502 "ubase/uprintf.ml" 88 3496 3503
+type(
+  char
+)
+ident(
+  def c "ubase/uprintf.ml" 88 3496 3507 "ubase/uprintf.ml" 88 3496 3508
+)
+"ubase/uprintf.ml" 88 3496 3507 "ubase/uprintf.ml" 88 3496 3508
+type(
+  int
+)
+ident(
+  int_ref j "ubase/uprintf.ml" 85 3377 3393 "ubase/uprintf.ml" 85 3377 3394
+)
+"ubase/uprintf.ml" 86 3397 3401 "ubase/uprintf.ml" 88 3496 3508
+type(
+  int
+)
+"ubase/uprintf.ml" 90 3510 3515 "ubase/uprintf.ml" 90 3510 3520
+type(
+  int -> 'c
+)
+ident(
+  int_ref doprn "ubase/uprintf.ml" 18 1045 1055 "ubase/uprintf.ml" 18 1045 1060
+)
+"ubase/uprintf.ml" 90 3510 3521 "ubase/uprintf.ml" 90 3510 3522
+type(
+  int
+)
+"ubase/uprintf.ml" 90 3510 3515 "ubase/uprintf.ml" 90 3510 3522
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uprintf.ml" 18 1045 1047 "ubase/uprintf.ml" 90 3510 3522
+type(
+  'c
+)
+"ubase/uprintf.ml" 17 999 1001 "ubase/uprintf.ml" 90 3510 3522
+type(
+  'c
+)
+"ubase/uprintf.ml" 92 3524 3528 "ubase/uprintf.ml" 92 3524 3534
+type(
+  (unit -> 'a) -> 'b -> 'c
+)
+ident(
+  def printf "ubase/uprintf.ml" 93 3576 3628 "ubase/uprintf.ml" 1 0 -1
+)
+"ubase/uprintf.ml" 92 3524 3535 "ubase/uprintf.ml" 92 3524 3542
+type(
+  unit -> 'a
+)
+ident(
+  def doafter "ubase/uprintf.ml" 92 3524 3543 "ubase/uprintf.ml" 92 3524 3575
+)
+"ubase/uprintf.ml" 92 3524 3543 "ubase/uprintf.ml" 92 3524 3546
+type(
+  'b
+)
+ident(
+  def fmt "ubase/uprintf.ml" 92 3524 3549 "ubase/uprintf.ml" 92 3524 3575
+)
+"ubase/uprintf.ml" 92 3524 3549 "ubase/uprintf.ml" 92 3524 3556
+type(
+  out_channel -> (unit -> 'a) -> 'b -> 'c
+)
+ident(
+  int_ref fprintf "ubase/uprintf.ml" 16 962 966 "ubase/uprintf.ml" 16 962 973
+)
+"ubase/uprintf.ml" 92 3524 3557 "ubase/uprintf.ml" 92 3524 3563
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stdout
+)
+"ubase/uprintf.ml" 92 3524 3564 "ubase/uprintf.ml" 92 3524 3571
+type(
+  unit -> 'a
+)
+ident(
+  int_ref doafter "ubase/uprintf.ml" 92 3524 3535 "ubase/uprintf.ml" 92 3524 3542
+)
+"ubase/uprintf.ml" 92 3524 3572 "ubase/uprintf.ml" 92 3524 3575
+type(
+  'b
+)
+ident(
+  int_ref fmt "ubase/uprintf.ml" 92 3524 3543 "ubase/uprintf.ml" 92 3524 3546
+)
+"ubase/uprintf.ml" 92 3524 3549 "ubase/uprintf.ml" 92 3524 3575
+call(
+  tail
+)
+type(
+  'c
+)
+"ubase/uprintf.ml" 93 3576 3580 "ubase/uprintf.ml" 93 3576 3587
+type(
+  (unit -> 'd) -> 'e -> 'f
+)
+ident(
+  def eprintf "ubase/uprintf.ml" 93 3576 3628 "ubase/uprintf.ml" 1 0 -1
+)
+"ubase/uprintf.ml" 93 3576 3588 "ubase/uprintf.ml" 93 3576 3595
+type(
+  unit -> 'd
+)
+ident(
+  def doafter "ubase/uprintf.ml" 93 3576 3596 "ubase/uprintf.ml" 93 3576 3628
+)
+"ubase/uprintf.ml" 93 3576 3596 "ubase/uprintf.ml" 93 3576 3599
+type(
+  'e
+)
+ident(
+  def fmt "ubase/uprintf.ml" 93 3576 3602 "ubase/uprintf.ml" 93 3576 3628
+)
+"ubase/uprintf.ml" 93 3576 3602 "ubase/uprintf.ml" 93 3576 3609
+type(
+  out_channel -> (unit -> 'd) -> 'e -> 'f
+)
+ident(
+  int_ref fprintf "ubase/uprintf.ml" 16 962 966 "ubase/uprintf.ml" 16 962 973
+)
+"ubase/uprintf.ml" 93 3576 3610 "ubase/uprintf.ml" 93 3576 3616
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stderr
+)
+"ubase/uprintf.ml" 93 3576 3617 "ubase/uprintf.ml" 93 3576 3624
+type(
+  unit -> 'd
+)
+ident(
+  int_ref doafter "ubase/uprintf.ml" 93 3576 3588 "ubase/uprintf.ml" 93 3576 3595
+)
+"ubase/uprintf.ml" 93 3576 3625 "ubase/uprintf.ml" 93 3576 3628
+type(
+  'e
+)
+ident(
+  int_ref fmt "ubase/uprintf.ml" 93 3576 3596 "ubase/uprintf.ml" 93 3576 3599
+)
+"ubase/uprintf.ml" 93 3576 3602 "ubase/uprintf.ml" 93 3576 3628
+call(
+  tail
+)
+type(
+  'f
+)

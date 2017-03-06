@@ -1,0 +1,3844 @@
+"hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+type(
+  lineMode ref
+)
+ident(
+  def mode "hbase/src2fcl.mll" 13 159 161 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 9 86 99 "hbase/src2fcl.mll" 9 86 102
+type(
+  lineMode -> lineMode ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 9 86 103 "hbase/src2fcl.mll" 9 86 106
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 9 86 99 "hbase/src2fcl.mll" 9 86 106
+type(
+  lineMode ref
+)
+"hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+type(
+  lineMode ref
+)
+ident(
+  def lineMode "hbase/src2fcl.mll" 13 159 161 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 10 107 124 "hbase/src2fcl.mll" 10 107 127
+type(
+  lineMode -> lineMode ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 10 107 128 "hbase/src2fcl.mll" 10 107 132
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 10 107 124 "hbase/src2fcl.mll" 10 107 132
+type(
+  lineMode ref
+)
+"hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+type(
+  bool ref
+)
+ident(
+  def newLine "hbase/src2fcl.mll" 13 159 161 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 11 133 149 "hbase/src2fcl.mll" 11 133 152
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 11 133 153 "hbase/src2fcl.mll" 11 133 157
+type(
+  bool
+)
+"hbase/src2fcl.mll" 11 133 149 "hbase/src2fcl.mll" 11 133 157
+type(
+  bool ref
+)
+"hbase/src2fcl.mll" 13 159 165 "hbase/src2fcl.mll" 13 159 176
+type(
+  int
+)
+ident(
+  def buffer_size "hbase/src2fcl.mll" 14 183 185 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 13 159 179 "hbase/src2fcl.mll" 13 159 182
+type(
+  int
+)
+"hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+type(
+  Buffer.t
+)
+ident(
+  def current "hbase/src2fcl.mll" 15 225 227 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 14 183 199 "hbase/src2fcl.mll" 14 183 212
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"hbase/src2fcl.mll" 14 183 213 "hbase/src2fcl.mll" 14 183 224
+type(
+  int
+)
+ident(
+  int_ref buffer_size "hbase/src2fcl.mll" 13 159 165 "hbase/src2fcl.mll" 13 159 176
+)
+"hbase/src2fcl.mll" 14 183 199 "hbase/src2fcl.mll" 14 183 224
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+type(
+  Buffer.t
+)
+ident(
+  def old "hbase/src2fcl.mll" 17 264 266 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 15 225 237 "hbase/src2fcl.mll" 15 225 250
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"hbase/src2fcl.mll" 15 225 251 "hbase/src2fcl.mll" 15 225 262
+type(
+  int
+)
+ident(
+  int_ref buffer_size "hbase/src2fcl.mll" 13 159 165 "hbase/src2fcl.mll" 13 159 176
+)
+"hbase/src2fcl.mll" 15 225 237 "hbase/src2fcl.mll" 15 225 262
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"hbase/src2fcl.mll" 17 264 270 "hbase/src2fcl.mll" 17 264 276
+type(
+  string ref
+)
+ident(
+  def suffix "hbase/src2fcl.mll" 18 288 290 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 17 264 279 "hbase/src2fcl.mll" 17 264 282
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 17 264 283 "hbase/src2fcl.mll" 17 264 286
+type(
+  string
+)
+"hbase/src2fcl.mll" 17 264 279 "hbase/src2fcl.mll" 17 264 286
+type(
+  string ref
+)
+"hbase/src2fcl.mll" 18 288 294 "hbase/src2fcl.mll" 18 288 304
+type(
+  string ref
+)
+ident(
+  def terminator "hbase/src2fcl.mll" 19 316 318 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 18 288 307 "hbase/src2fcl.mll" 18 288 310
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 18 288 311 "hbase/src2fcl.mll" 18 288 314
+type(
+  string
+)
+"hbase/src2fcl.mll" 18 288 307 "hbase/src2fcl.mll" 18 288 314
+type(
+  string ref
+)
+"hbase/src2fcl.mll" 19 316 322 "hbase/src2fcl.mll" 19 316 335
+type(
+  string ref
+)
+ident(
+  def created_files "hbase/src2fcl.mll" 20 345 347 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 19 316 338 "hbase/src2fcl.mll" 19 316 341
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 19 316 342 "hbase/src2fcl.mll" 19 316 344
+type(
+  string
+)
+"hbase/src2fcl.mll" 19 316 338 "hbase/src2fcl.mll" 19 316 344
+type(
+  string ref
+)
+"hbase/src2fcl.mll" 20 345 351 "hbase/src2fcl.mll" 20 345 359
+type(
+  string ref
+)
+ident(
+  def basename "hbase/src2fcl.mll" 21 369 371 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 20 345 362 "hbase/src2fcl.mll" 20 345 365
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 20 345 366 "hbase/src2fcl.mll" 20 345 368
+type(
+  string
+)
+"hbase/src2fcl.mll" 20 345 362 "hbase/src2fcl.mll" 20 345 368
+type(
+  string ref
+)
+"hbase/src2fcl.mll" 21 369 375 "hbase/src2fcl.mll" 21 369 384
+type(
+  string ref
+)
+ident(
+  def wholename "hbase/src2fcl.mll" 22 394 396 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 21 369 387 "hbase/src2fcl.mll" 21 369 390
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 21 369 391 "hbase/src2fcl.mll" 21 369 393
+type(
+  string
+)
+"hbase/src2fcl.mll" 21 369 387 "hbase/src2fcl.mll" 21 369 393
+type(
+  string ref
+)
+"hbase/src2fcl.mll" 22 394 400 "hbase/src2fcl.mll" 22 394 405
+type(
+  int ref
+)
+ident(
+  def count "hbase/src2fcl.mll" 24 415 417 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 22 394 408 "hbase/src2fcl.mll" 22 394 411
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/src2fcl.mll" 22 394 412 "hbase/src2fcl.mll" 22 394 413
+type(
+  int
+)
+"hbase/src2fcl.mll" 22 394 408 "hbase/src2fcl.mll" 22 394 413
+type(
+  int ref
+)
+"hbase/src2fcl.mll" 24 415 421 "hbase/src2fcl.mll" 24 415 425
+type(
+  string -> unit
+)
+ident(
+  def emit "hbase/src2fcl.mll" 26 459 461 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 24 415 426 "hbase/src2fcl.mll" 24 415 427
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 24 415 430 "hbase/src2fcl.mll" 24 415 457
+)
+"hbase/src2fcl.mll" 24 415 430 "hbase/src2fcl.mll" 24 415 447
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"hbase/src2fcl.mll" 24 415 448 "hbase/src2fcl.mll" 24 415 455
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 24 415 456 "hbase/src2fcl.mll" 24 415 457
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 24 415 426 "hbase/src2fcl.mll" 24 415 427
+)
+"hbase/src2fcl.mll" 24 415 430 "hbase/src2fcl.mll" 24 415 457
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 26 459 465 "hbase/src2fcl.mll" 26 459 470
+type(
+  unit -> unit
+)
+ident(
+  def reset "hbase/src2fcl.mll" 34 601 603 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 26 459 471 "hbase/src2fcl.mll" 26 459 473
+type(
+  unit
+)
+"hbase/src2fcl.mll" 27 477 481 "hbase/src2fcl.mll" 27 477 485
+type(
+  lineMode ref
+)
+ident(
+  int_ref mode "hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+)
+"hbase/src2fcl.mll" 27 477 486 "hbase/src2fcl.mll" 27 477 488
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 27 477 489 "hbase/src2fcl.mll" 27 477 492
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 27 477 481 "hbase/src2fcl.mll" 27 477 492
+type(
+  unit
+)
+"hbase/src2fcl.mll" 28 494 498 "hbase/src2fcl.mll" 28 494 506
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 28 494 507 "hbase/src2fcl.mll" 28 494 509
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 28 494 510 "hbase/src2fcl.mll" 28 494 514
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 28 494 498 "hbase/src2fcl.mll" 28 494 514
+type(
+  unit
+)
+"hbase/src2fcl.mll" 29 516 520 "hbase/src2fcl.mll" 29 516 527
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 29 516 528 "hbase/src2fcl.mll" 29 516 530
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 29 516 531 "hbase/src2fcl.mll" 29 516 535
+type(
+  bool
+)
+"hbase/src2fcl.mll" 29 516 520 "hbase/src2fcl.mll" 29 516 535
+type(
+  unit
+)
+"hbase/src2fcl.mll" 30 537 541 "hbase/src2fcl.mll" 30 537 553
+type(
+  Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.reset
+)
+"hbase/src2fcl.mll" 30 537 554 "hbase/src2fcl.mll" 30 537 561
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 30 537 541 "hbase/src2fcl.mll" 30 537 561
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 31 563 567 "hbase/src2fcl.mll" 31 563 579
+type(
+  Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.reset
+)
+"hbase/src2fcl.mll" 31 563 580 "hbase/src2fcl.mll" 31 563 583
+type(
+  Buffer.t
+)
+ident(
+  int_ref old "hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+)
+"hbase/src2fcl.mll" 31 563 567 "hbase/src2fcl.mll" 31 563 583
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 32 585 589 "hbase/src2fcl.mll" 32 585 594
+type(
+  int ref
+)
+ident(
+  int_ref count "hbase/src2fcl.mll" 22 394 400 "hbase/src2fcl.mll" 22 394 405
+)
+"hbase/src2fcl.mll" 32 585 595 "hbase/src2fcl.mll" 32 585 597
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 32 585 598 "hbase/src2fcl.mll" 32 585 599
+type(
+  int
+)
+"hbase/src2fcl.mll" 32 585 589 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 31 563 567 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 30 537 541 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 29 516 520 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 28 494 498 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 27 477 481 "hbase/src2fcl.mll" 32 585 599
+type(
+  unit
+)
+"hbase/src2fcl.mll" 34 601 607 "hbase/src2fcl.mll" 34 601 611
+type(
+  unit -> unit
+)
+ident(
+  def dump "hbase/src2fcl.mll" 49 1254 1256 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 34 601 611 "hbase/src2fcl.mll" 34 601 613
+type(
+  unit
+)
+"hbase/src2fcl.mll" 35 616 621 "hbase/src2fcl.mll" 35 616 626
+type(
+  int ref
+)
+ident(
+  int_ref count "hbase/src2fcl.mll" 22 394 400 "hbase/src2fcl.mll" 22 394 405
+)
+"hbase/src2fcl.mll" 35 616 627 "hbase/src2fcl.mll" 35 616 629
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 35 616 630 "hbase/src2fcl.mll" 35 616 631
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 35 616 631 "hbase/src2fcl.mll" 35 616 636
+type(
+  int ref
+)
+ident(
+  int_ref count "hbase/src2fcl.mll" 22 394 400 "hbase/src2fcl.mll" 22 394 405
+)
+"hbase/src2fcl.mll" 35 616 630 "hbase/src2fcl.mll" 35 616 636
+type(
+  int
+)
+"hbase/src2fcl.mll" 35 616 637 "hbase/src2fcl.mll" 35 616 638
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"hbase/src2fcl.mll" 35 616 639 "hbase/src2fcl.mll" 35 616 640
+type(
+  int
+)
+"hbase/src2fcl.mll" 35 616 630 "hbase/src2fcl.mll" 35 616 640
+type(
+  int
+)
+"hbase/src2fcl.mll" 35 616 621 "hbase/src2fcl.mll" 35 616 640
+type(
+  unit
+)
+"hbase/src2fcl.mll" 36 642 651 "hbase/src2fcl.mll" 36 642 658
+type(
+  string
+)
+ident(
+  def outname "hbase/src2fcl.mll" 37 727 732 "hbase/src2fcl.mll" 47 1225 1252
+)
+"hbase/src2fcl.mll" 36 642 661 "hbase/src2fcl.mll" 36 642 662
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 36 642 662 "hbase/src2fcl.mll" 36 642 670
+type(
+  string ref
+)
+ident(
+  int_ref basename "hbase/src2fcl.mll" 20 345 351 "hbase/src2fcl.mll" 20 345 359
+)
+"hbase/src2fcl.mll" 36 642 661 "hbase/src2fcl.mll" 36 642 670
+type(
+  string
+)
+"hbase/src2fcl.mll" 37 727 732 "hbase/src2fcl.mll" 37 727 745
+type(
+  string ref
+)
+ident(
+  int_ref created_files "hbase/src2fcl.mll" 19 316 322 "hbase/src2fcl.mll" 19 316 335
+)
+"hbase/src2fcl.mll" 37 727 746 "hbase/src2fcl.mll" 37 727 748
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 37 727 750 "hbase/src2fcl.mll" 37 727 757
+type(
+  string
+)
+ident(
+  int_ref outname "hbase/src2fcl.mll" 36 642 651 "hbase/src2fcl.mll" 36 642 658
+)
+"hbase/src2fcl.mll" 38 758 781 "hbase/src2fcl.mll" 38 758 782
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 38 758 787 "hbase/src2fcl.mll" 38 758 788
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 38 758 788 "hbase/src2fcl.mll" 38 758 801
+type(
+  string ref
+)
+ident(
+  int_ref created_files "hbase/src2fcl.mll" 19 316 322 "hbase/src2fcl.mll" 19 316 335
+)
+"hbase/src2fcl.mll" 38 758 787 "hbase/src2fcl.mll" 38 758 801
+type(
+  string
+)
+"hbase/src2fcl.mll" 38 758 802 "hbase/src2fcl.mll" 38 758 804
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"hbase/src2fcl.mll" 38 758 805 "hbase/src2fcl.mll" 38 758 807
+type(
+  string
+)
+"hbase/src2fcl.mll" 38 758 787 "hbase/src2fcl.mll" 38 758 807
+type(
+  bool
+)
+"hbase/src2fcl.mll" 38 758 813 "hbase/src2fcl.mll" 38 758 816
+type(
+  string
+)
+"hbase/src2fcl.mll" 38 758 822 "hbase/src2fcl.mll" 38 758 824
+type(
+  string
+)
+"hbase/src2fcl.mll" 38 758 783 "hbase/src2fcl.mll" 38 758 825
+type(
+  string
+)
+"hbase/src2fcl.mll" 39 826 849 "hbase/src2fcl.mll" 39 826 850
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 39 826 851 "hbase/src2fcl.mll" 39 826 852
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 39 826 852 "hbase/src2fcl.mll" 39 826 865
+type(
+  string ref
+)
+ident(
+  int_ref created_files "hbase/src2fcl.mll" 19 316 322 "hbase/src2fcl.mll" 19 316 335
+)
+"hbase/src2fcl.mll" 39 826 851 "hbase/src2fcl.mll" 39 826 865
+type(
+  string
+)
+"hbase/src2fcl.mll" 38 758 783 "hbase/src2fcl.mll" 39 826 865
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 37 727 749 "hbase/src2fcl.mll" 39 826 866
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 37 727 732 "hbase/src2fcl.mll" 39 826 866
+type(
+  unit
+)
+"hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+type(
+  out_channel
+)
+ident(
+  def o "hbase/src2fcl.mll" 41 905 912 "hbase/src2fcl.mll" 47 1225 1252
+)
+"hbase/src2fcl.mll" 40 868 881 "hbase/src2fcl.mll" 40 868 893
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out_bin
+)
+"hbase/src2fcl.mll" 40 868 894 "hbase/src2fcl.mll" 40 868 901
+type(
+  string
+)
+ident(
+  int_ref outname "hbase/src2fcl.mll" 36 642 651 "hbase/src2fcl.mll" 36 642 658
+)
+"hbase/src2fcl.mll" 40 868 881 "hbase/src2fcl.mll" 40 868 901
+call(
+  stack
+)
+type(
+  out_channel
+)
+"hbase/src2fcl.mll" 41 905 916 "hbase/src2fcl.mll" 41 905 929
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"hbase/src2fcl.mll" 41 905 930 "hbase/src2fcl.mll" 41 905 933
+type(
+  Buffer.t
+)
+ident(
+  int_ref old "hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+)
+"hbase/src2fcl.mll" 41 905 915 "hbase/src2fcl.mll" 41 905 934
+call(
+  stack
+)
+type(
+  int
+)
+"hbase/src2fcl.mll" 41 905 935 "hbase/src2fcl.mll" 41 905 937
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"hbase/src2fcl.mll" 41 905 938 "hbase/src2fcl.mll" 41 905 939
+type(
+  int
+)
+"hbase/src2fcl.mll" 41 905 915 "hbase/src2fcl.mll" 41 905 939
+type(
+  bool
+)
+"hbase/src2fcl.mll" 42 945 955 "hbase/src2fcl.mll" 42 945 968
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"hbase/src2fcl.mll" 42 945 969 "hbase/src2fcl.mll" 42 945 970
+type(
+  out_channel
+)
+ident(
+  int_ref o "hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+)
+"hbase/src2fcl.mll" 42 945 972 "hbase/src2fcl.mll" 42 945 988
+type(
+  string
+)
+"hbase/src2fcl.mll" 42 945 989 "hbase/src2fcl.mll" 42 945 990
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 42 945 991 "hbase/src2fcl.mll" 42 945 992
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 42 945 992 "hbase/src2fcl.mll" 42 945 1002
+type(
+  string ref
+)
+ident(
+  int_ref terminator "hbase/src2fcl.mll" 18 288 294 "hbase/src2fcl.mll" 18 288 304
+)
+"hbase/src2fcl.mll" 42 945 991 "hbase/src2fcl.mll" 42 945 1002
+type(
+  string
+)
+"hbase/src2fcl.mll" 42 945 1003 "hbase/src2fcl.mll" 42 945 1004
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 42 945 1005 "hbase/src2fcl.mll" 42 945 1009
+type(
+  string
+)
+"hbase/src2fcl.mll" 42 945 991 "hbase/src2fcl.mll" 42 945 1009
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 42 945 971 "hbase/src2fcl.mll" 42 945 1010
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 42 945 955 "hbase/src2fcl.mll" 42 945 1010
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 43 1012 1022 "hbase/src2fcl.mll" 43 1012 1042
+type(
+  out_channel -> Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.output_buffer
+)
+"hbase/src2fcl.mll" 43 1012 1043 "hbase/src2fcl.mll" 43 1012 1044
+type(
+  out_channel
+)
+ident(
+  int_ref o "hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+)
+"hbase/src2fcl.mll" 43 1012 1045 "hbase/src2fcl.mll" 43 1012 1048
+type(
+  Buffer.t
+)
+ident(
+  int_ref old "hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+)
+"hbase/src2fcl.mll" 43 1012 1022 "hbase/src2fcl.mll" 43 1012 1048
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 44 1050 1060 "hbase/src2fcl.mll" 44 1050 1073
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"hbase/src2fcl.mll" 44 1050 1074 "hbase/src2fcl.mll" 44 1050 1075
+type(
+  out_channel
+)
+ident(
+  int_ref o "hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+)
+"hbase/src2fcl.mll" 44 1050 1077 "hbase/src2fcl.mll" 44 1050 1092
+type(
+  string
+)
+"hbase/src2fcl.mll" 44 1050 1093 "hbase/src2fcl.mll" 44 1050 1094
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 44 1050 1095 "hbase/src2fcl.mll" 44 1050 1096
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 44 1050 1096 "hbase/src2fcl.mll" 44 1050 1106
+type(
+  string ref
+)
+ident(
+  int_ref terminator "hbase/src2fcl.mll" 18 288 294 "hbase/src2fcl.mll" 18 288 304
+)
+"hbase/src2fcl.mll" 44 1050 1095 "hbase/src2fcl.mll" 44 1050 1106
+type(
+  string
+)
+"hbase/src2fcl.mll" 44 1050 1107 "hbase/src2fcl.mll" 44 1050 1108
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"hbase/src2fcl.mll" 44 1050 1109 "hbase/src2fcl.mll" 44 1050 1113
+type(
+  string
+)
+"hbase/src2fcl.mll" 44 1050 1095 "hbase/src2fcl.mll" 44 1050 1113
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 44 1050 1076 "hbase/src2fcl.mll" 44 1050 1114
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 44 1050 1060 "hbase/src2fcl.mll" 44 1050 1114
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 43 1012 1022 "hbase/src2fcl.mll" 44 1050 1114
+type(
+  unit
+)
+"hbase/src2fcl.mll" 42 945 954 "hbase/src2fcl.mll" 44 1050 1115
+type(
+  unit
+)
+"hbase/src2fcl.mll" 41 905 912 "hbase/src2fcl.mll" 44 1050 1115
+type(
+  unit
+)
+"hbase/src2fcl.mll" 45 1117 1124 "hbase/src2fcl.mll" 45 1117 1144
+type(
+  out_channel -> Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.output_buffer
+)
+"hbase/src2fcl.mll" 45 1117 1145 "hbase/src2fcl.mll" 45 1117 1146
+type(
+  out_channel
+)
+ident(
+  int_ref o "hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+)
+"hbase/src2fcl.mll" 45 1117 1147 "hbase/src2fcl.mll" 45 1117 1154
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 45 1117 1124 "hbase/src2fcl.mll" 45 1117 1154
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 45 1117 1156 "hbase/src2fcl.mll" 45 1117 1165
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"hbase/src2fcl.mll" 45 1117 1166 "hbase/src2fcl.mll" 45 1117 1167
+type(
+  out_channel
+)
+ident(
+  int_ref o "hbase/src2fcl.mll" 40 868 877 "hbase/src2fcl.mll" 40 868 878
+)
+"hbase/src2fcl.mll" 45 1117 1156 "hbase/src2fcl.mll" 45 1117 1167
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 46 1169 1176 "hbase/src2fcl.mll" 46 1169 1188
+type(
+  Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.reset
+)
+"hbase/src2fcl.mll" 46 1169 1189 "hbase/src2fcl.mll" 46 1169 1192
+type(
+  Buffer.t
+)
+ident(
+  int_ref old "hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+)
+"hbase/src2fcl.mll" 46 1169 1176 "hbase/src2fcl.mll" 46 1169 1192
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 46 1169 1194 "hbase/src2fcl.mll" 46 1169 1211
+type(
+  Buffer.t -> Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.add_buffer
+)
+"hbase/src2fcl.mll" 46 1169 1212 "hbase/src2fcl.mll" 46 1169 1215
+type(
+  Buffer.t
+)
+ident(
+  int_ref old "hbase/src2fcl.mll" 15 225 231 "hbase/src2fcl.mll" 15 225 234
+)
+"hbase/src2fcl.mll" 46 1169 1216 "hbase/src2fcl.mll" 46 1169 1223
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 46 1169 1194 "hbase/src2fcl.mll" 46 1169 1223
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 47 1225 1232 "hbase/src2fcl.mll" 47 1225 1244
+type(
+  Buffer.t -> unit
+)
+ident(
+  ext_ref Buffer.reset
+)
+"hbase/src2fcl.mll" 47 1225 1245 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 47 1225 1232 "hbase/src2fcl.mll" 47 1225 1252
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 46 1169 1194 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 46 1169 1176 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 45 1117 1156 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 45 1117 1124 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 41 905 912 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 40 868 873 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 37 727 732 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 36 642 647 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 35 616 621 "hbase/src2fcl.mll" 47 1225 1252
+type(
+  unit
+)
+"hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+type(
+  string -> unit
+)
+ident(
+  def pr "hbase/src2fcl.ml" 53 1388 1388 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 49 1254 1263 "hbase/src2fcl.mll" 49 1254 1264
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 50 1267 1271 "hbase/src2fcl.mll" 53 1354 1362
+)
+"hbase/src2fcl.mll" 50 1267 1275 "hbase/src2fcl.mll" 50 1267 1276
+type(
+  lineMode ref -> lineMode
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 50 1267 1276 "hbase/src2fcl.mll" 50 1267 1280
+type(
+  lineMode ref
+)
+ident(
+  int_ref mode "hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+)
+"hbase/src2fcl.mll" 50 1267 1275 "hbase/src2fcl.mll" 50 1267 1280
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1281 "hbase/src2fcl.mll" 50 1267 1282
+type(
+  lineMode -> lineMode -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"hbase/src2fcl.mll" 50 1267 1283 "hbase/src2fcl.mll" 50 1267 1286
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1275 "hbase/src2fcl.mll" 50 1267 1286
+type(
+  bool
+)
+"hbase/src2fcl.mll" 50 1267 1287 "hbase/src2fcl.mll" 50 1267 1289
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"hbase/src2fcl.mll" 50 1267 1290 "hbase/src2fcl.mll" 50 1267 1291
+type(
+  lineMode ref -> lineMode
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 50 1267 1291 "hbase/src2fcl.mll" 50 1267 1299
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 50 1267 1290 "hbase/src2fcl.mll" 50 1267 1299
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1300 "hbase/src2fcl.mll" 50 1267 1301
+type(
+  lineMode -> lineMode -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"hbase/src2fcl.mll" 50 1267 1302 "hbase/src2fcl.mll" 50 1267 1306
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1290 "hbase/src2fcl.mll" 50 1267 1306
+type(
+  bool
+)
+"hbase/src2fcl.mll" 50 1267 1274 "hbase/src2fcl.mll" 50 1267 1307
+type(
+  bool
+)
+"hbase/src2fcl.mll" 50 1267 1308 "hbase/src2fcl.mll" 50 1267 1310
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"hbase/src2fcl.mll" 50 1267 1311 "hbase/src2fcl.mll" 50 1267 1312
+type(
+  lineMode ref -> lineMode
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 50 1267 1312 "hbase/src2fcl.mll" 50 1267 1320
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 50 1267 1311 "hbase/src2fcl.mll" 50 1267 1320
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1321 "hbase/src2fcl.mll" 50 1267 1322
+type(
+  lineMode -> lineMode -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"hbase/src2fcl.mll" 50 1267 1323 "hbase/src2fcl.mll" 50 1267 1326
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 50 1267 1311 "hbase/src2fcl.mll" 50 1267 1326
+type(
+  bool
+)
+"hbase/src2fcl.mll" 50 1267 1274 "hbase/src2fcl.mll" 50 1267 1326
+type(
+  bool
+)
+"hbase/src2fcl.mll" 51 1332 1338 "hbase/src2fcl.mll" 51 1332 1342
+type(
+  string -> unit
+)
+ident(
+  int_ref emit "hbase/src2fcl.mll" 24 415 421 "hbase/src2fcl.mll" 24 415 425
+)
+"hbase/src2fcl.mll" 51 1332 1343 "hbase/src2fcl.mll" 51 1332 1344
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 49 1254 1263 "hbase/src2fcl.mll" 49 1254 1264
+)
+"hbase/src2fcl.mll" 51 1332 1338 "hbase/src2fcl.mll" 51 1332 1344
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 53 1354 1360 "hbase/src2fcl.mll" 53 1354 1362
+type(
+  unit
+)
+"hbase/src2fcl.mll" 50 1267 1271 "hbase/src2fcl.mll" 53 1354 1362
+type(
+  unit
+)
+"hbase/src2fcl.ml" 53 1388 1392 "hbase/src2fcl.ml" 53 1388 1410
+type(
+  Lexing.lex_tables
+)
+ident(
+  def __ocaml_lex_tables "hbase/src2fcl.ml" 162 7727 7727 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.ml" 55 1436 1439 "hbase/src2fcl.ml" 61 1856 1861
+type(
+  string
+)
+"hbase/src2fcl.ml" 63 1887 1890 "hbase/src2fcl.ml" 69 2307 2312
+type(
+  string
+)
+"hbase/src2fcl.ml" 71 2338 2341 "hbase/src2fcl.ml" 77 2758 2763
+type(
+  string
+)
+"hbase/src2fcl.ml" 79 2787 2790 "hbase/src2fcl.ml" 112 5097 5142
+type(
+  string
+)
+"hbase/src2fcl.ml" 114 5166 5169 "hbase/src2fcl.ml" 147 7476 7521
+type(
+  string
+)
+"hbase/src2fcl.ml" 149 7549 7552 "hbase/src2fcl.ml" 149 7549 7554
+type(
+  string
+)
+"hbase/src2fcl.ml" 151 7585 7588 "hbase/src2fcl.ml" 151 7585 7590
+type(
+  string
+)
+"hbase/src2fcl.ml" 153 7621 7624 "hbase/src2fcl.ml" 153 7621 7626
+type(
+  string
+)
+"hbase/src2fcl.ml" 155 7655 7658 "hbase/src2fcl.ml" 155 7655 7660
+type(
+  string
+)
+"hbase/src2fcl.ml" 157 7689 7692 "hbase/src2fcl.ml" 157 7689 7694
+type(
+  string
+)
+"hbase/src2fcl.ml" 159 7717 7720 "hbase/src2fcl.ml" 159 7717 7722
+type(
+  string
+)
+"hbase/src2fcl.ml" 53 1388 1413 "hbase/src2fcl.ml" 160 7724 7725
+type(
+  Lexing.lex_tables
+)
+"hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  def lex "hbase/src2fcl.ml" 162 7727 7727 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.ml" 162 7727 7739 "hbase/src2fcl.ml" 162 7727 7745
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "hbase/src2fcl.ml" 163 7748 7752 "hbase/src2fcl.ml" 163 7748 7780
+)
+"hbase/src2fcl.ml" 163 7748 7752 "hbase/src2fcl.ml" 163 7748 7771
+type(
+  Lexing.lexbuf -> int -> unit
+)
+ident(
+  int_ref __ocaml_lex_lex_rec "hbase/src2fcl.ml" 164 7781 7785 "hbase/src2fcl.ml" 164 7781 7804
+)
+"hbase/src2fcl.ml" 163 7748 7772 "hbase/src2fcl.ml" 163 7748 7778
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 162 7727 7739 "hbase/src2fcl.ml" 162 7727 7745
+)
+"hbase/src2fcl.ml" 163 7748 7779 "hbase/src2fcl.ml" 163 7748 7780
+type(
+  int
+)
+"hbase/src2fcl.ml" 163 7748 7752 "hbase/src2fcl.ml" 163 7748 7780
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.ml" 164 7781 7785 "hbase/src2fcl.ml" 164 7781 7804
+type(
+  Lexing.lexbuf -> int -> unit
+)
+ident(
+  def __ocaml_lex_lex_rec "hbase/src2fcl.ml" 162 7727 7727 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "hbase/src2fcl.ml" 164 7781 7812 "hbase/src2fcl.ml" 306 10869 10919
+)
+"hbase/src2fcl.ml" 164 7781 7812 "hbase/src2fcl.ml" 164 7781 7829
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "hbase/src2fcl.ml" 165 7832 7834 "hbase/src2fcl.ml" 306 10869 10919
+)
+"hbase/src2fcl.ml" 165 7832 7840 "hbase/src2fcl.ml" 165 7832 7853
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"hbase/src2fcl.ml" 165 7832 7854 "hbase/src2fcl.ml" 165 7832 7872
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "hbase/src2fcl.ml" 53 1388 1392 "hbase/src2fcl.ml" 53 1388 1410
+)
+"hbase/src2fcl.ml" 165 7832 7873 "hbase/src2fcl.ml" 165 7832 7890
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "hbase/src2fcl.ml" 164 7781 7812 "hbase/src2fcl.ml" 164 7781 7829
+)
+"hbase/src2fcl.ml" 165 7832 7891 "hbase/src2fcl.ml" 165 7832 7897
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.ml" 165 7832 7840 "hbase/src2fcl.ml" 165 7832 7897
+call(
+  stack
+)
+type(
+  int
+)
+"hbase/src2fcl.ml" 166 7903 7911 "hbase/src2fcl.ml" 166 7903 7912
+type(
+  int
+)
+"hbase/src2fcl.mll" 57 7941 7947 "hbase/src2fcl.mll" 57 7941 7950
+type(
+  unit
+)
+"hbase/src2fcl.ml" 171 7977 7981 "hbase/src2fcl.ml" 171 7977 7982
+type(
+  int
+)
+"hbase/src2fcl.mll" 59 8020 8024 "hbase/src2fcl.mll" 59 8020 8028
+type(
+  string -> unit
+)
+ident(
+  int_ref emit "hbase/src2fcl.mll" 24 415 421 "hbase/src2fcl.mll" 24 415 425
+)
+"hbase/src2fcl.mll" 59 8020 8029 "hbase/src2fcl.mll" 59 8020 8033
+type(
+  string
+)
+"hbase/src2fcl.mll" 59 8020 8024 "hbase/src2fcl.mll" 59 8020 8033
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 59 8020 8035 "hbase/src2fcl.mll" 59 8020 8042
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 59 8020 8043 "hbase/src2fcl.mll" 59 8020 8045
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 59 8020 8046 "hbase/src2fcl.mll" 59 8020 8050
+type(
+  bool
+)
+"hbase/src2fcl.mll" 59 8020 8035 "hbase/src2fcl.mll" 59 8020 8050
+type(
+  unit
+)
+"hbase/src2fcl.mll" 59 8020 8052 "hbase/src2fcl.mll" 59 8020 8060
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 59 8020 8061 "hbase/src2fcl.mll" 59 8020 8063
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 59 8020 8064 "hbase/src2fcl.mll" 59 8020 8068
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 59 8020 8052 "hbase/src2fcl.mll" 59 8020 8068
+type(
+  unit
+)
+"hbase/src2fcl.mll" 59 8020 8070 "hbase/src2fcl.mll" 59 8020 8073
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 59 8020 8074 "hbase/src2fcl.mll" 59 8020 8080
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 59 8020 8070 "hbase/src2fcl.mll" 59 8020 8080
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 59 8020 8052 "hbase/src2fcl.mll" 59 8020 8080
+type(
+  unit
+)
+"hbase/src2fcl.mll" 59 8020 8035 "hbase/src2fcl.mll" 59 8020 8080
+type(
+  unit
+)
+"hbase/src2fcl.mll" 58 8011 8018 "hbase/src2fcl.mll" 60 8081 8084
+type(
+  unit
+)
+"hbase/src2fcl.ml" 178 8111 8115 "hbase/src2fcl.ml" 178 8111 8116
+type(
+  int
+)
+"hbase/src2fcl.mll" 62 8156 8163 "hbase/src2fcl.mll" 62 8156 8164
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 62 8156 8164 "hbase/src2fcl.mll" 62 8156 8171
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 62 8156 8163 "hbase/src2fcl.mll" 62 8156 8171
+type(
+  bool
+)
+"hbase/src2fcl.mll" 62 8156 8178 "hbase/src2fcl.mll" 62 8156 8185
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 62 8156 8186 "hbase/src2fcl.mll" 62 8156 8188
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 62 8156 8189 "hbase/src2fcl.mll" 62 8156 8194
+type(
+  bool
+)
+"hbase/src2fcl.mll" 62 8156 8178 "hbase/src2fcl.mll" 62 8156 8194
+type(
+  unit
+)
+"hbase/src2fcl.mll" 62 8156 8196 "hbase/src2fcl.mll" 62 8156 8200
+type(
+  lineMode ref
+)
+ident(
+  int_ref mode "hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+)
+"hbase/src2fcl.mll" 62 8156 8201 "hbase/src2fcl.mll" 62 8156 8203
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 62 8156 8204 "hbase/src2fcl.mll" 62 8156 8207
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 62 8156 8196 "hbase/src2fcl.mll" 62 8156 8207
+type(
+  unit
+)
+"hbase/src2fcl.mll" 62 8156 8177 "hbase/src2fcl.mll" 62 8156 8208
+type(
+  unit
+)
+"hbase/src2fcl.mll" 63 8209 8219 "hbase/src2fcl.mll" 63 8209 8221
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 63 8209 8222 "hbase/src2fcl.mll" 63 8209 8228
+type(
+  string
+)
+"hbase/src2fcl.mll" 63 8209 8218 "hbase/src2fcl.mll" 63 8209 8229
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 62 8156 8160 "hbase/src2fcl.mll" 63 8209 8229
+type(
+  unit
+)
+"hbase/src2fcl.mll" 63 8209 8231 "hbase/src2fcl.mll" 63 8209 8234
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 63 8209 8235 "hbase/src2fcl.mll" 63 8209 8241
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 63 8209 8231 "hbase/src2fcl.mll" 63 8209 8241
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 61 8145 8154 "hbase/src2fcl.mll" 64 8242 8245
+type(
+  unit
+)
+"hbase/src2fcl.ml" 186 8272 8276 "hbase/src2fcl.ml" 186 8272 8277
+type(
+  int
+)
+"hbase/src2fcl.mll" 66 8317 8324 "hbase/src2fcl.mll" 66 8317 8325
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 66 8317 8325 "hbase/src2fcl.mll" 66 8317 8332
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 66 8317 8324 "hbase/src2fcl.mll" 66 8317 8332
+type(
+  bool
+)
+"hbase/src2fcl.mll" 66 8317 8339 "hbase/src2fcl.mll" 66 8317 8346
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 66 8317 8347 "hbase/src2fcl.mll" 66 8317 8349
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 66 8317 8350 "hbase/src2fcl.mll" 66 8317 8355
+type(
+  bool
+)
+"hbase/src2fcl.mll" 66 8317 8339 "hbase/src2fcl.mll" 66 8317 8355
+type(
+  unit
+)
+"hbase/src2fcl.mll" 66 8317 8357 "hbase/src2fcl.mll" 66 8317 8361
+type(
+  lineMode ref
+)
+ident(
+  int_ref mode "hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+)
+"hbase/src2fcl.mll" 66 8317 8362 "hbase/src2fcl.mll" 66 8317 8364
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 66 8317 8365 "hbase/src2fcl.mll" 66 8317 8368
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 66 8317 8357 "hbase/src2fcl.mll" 66 8317 8368
+type(
+  unit
+)
+"hbase/src2fcl.mll" 66 8317 8370 "hbase/src2fcl.mll" 66 8317 8372
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 66 8317 8373 "hbase/src2fcl.mll" 66 8317 8379
+type(
+  string
+)
+"hbase/src2fcl.mll" 66 8317 8370 "hbase/src2fcl.mll" 66 8317 8379
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 66 8317 8357 "hbase/src2fcl.mll" 66 8317 8379
+type(
+  unit
+)
+"hbase/src2fcl.mll" 66 8317 8338 "hbase/src2fcl.mll" 66 8317 8380
+type(
+  unit
+)
+"hbase/src2fcl.mll" 67 8381 8391 "hbase/src2fcl.mll" 67 8381 8393
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 67 8381 8394 "hbase/src2fcl.mll" 67 8381 8400
+type(
+  string
+)
+"hbase/src2fcl.mll" 67 8381 8390 "hbase/src2fcl.mll" 67 8381 8401
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 66 8317 8321 "hbase/src2fcl.mll" 67 8381 8401
+type(
+  unit
+)
+"hbase/src2fcl.mll" 67 8381 8403 "hbase/src2fcl.mll" 67 8381 8406
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 67 8381 8407 "hbase/src2fcl.mll" 67 8381 8413
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 67 8381 8403 "hbase/src2fcl.mll" 67 8381 8413
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 65 8306 8315 "hbase/src2fcl.mll" 68 8414 8417
+type(
+  unit
+)
+"hbase/src2fcl.ml" 194 8444 8448 "hbase/src2fcl.ml" 194 8444 8449
+type(
+  int
+)
+"hbase/src2fcl.mll" 70 8489 8496 "hbase/src2fcl.mll" 70 8489 8497
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 70 8489 8497 "hbase/src2fcl.mll" 70 8489 8504
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 70 8489 8496 "hbase/src2fcl.mll" 70 8489 8504
+type(
+  bool
+)
+"hbase/src2fcl.mll" 70 8489 8511 "hbase/src2fcl.mll" 70 8489 8518
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 70 8489 8519 "hbase/src2fcl.mll" 70 8489 8521
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 70 8489 8522 "hbase/src2fcl.mll" 70 8489 8527
+type(
+  bool
+)
+"hbase/src2fcl.mll" 70 8489 8511 "hbase/src2fcl.mll" 70 8489 8527
+type(
+  unit
+)
+"hbase/src2fcl.mll" 70 8489 8529 "hbase/src2fcl.mll" 70 8489 8533
+type(
+  lineMode ref
+)
+ident(
+  int_ref mode "hbase/src2fcl.mll" 9 86 92 "hbase/src2fcl.mll" 9 86 96
+)
+"hbase/src2fcl.mll" 70 8489 8534 "hbase/src2fcl.mll" 70 8489 8536
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 70 8489 8537 "hbase/src2fcl.mll" 70 8489 8540
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 70 8489 8529 "hbase/src2fcl.mll" 70 8489 8540
+type(
+  unit
+)
+"hbase/src2fcl.mll" 70 8489 8542 "hbase/src2fcl.mll" 70 8489 8544
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 70 8489 8545 "hbase/src2fcl.mll" 70 8489 8551
+type(
+  string
+)
+"hbase/src2fcl.mll" 70 8489 8542 "hbase/src2fcl.mll" 70 8489 8551
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 70 8489 8529 "hbase/src2fcl.mll" 70 8489 8551
+type(
+  unit
+)
+"hbase/src2fcl.mll" 70 8489 8510 "hbase/src2fcl.mll" 70 8489 8552
+type(
+  unit
+)
+"hbase/src2fcl.mll" 71 8553 8563 "hbase/src2fcl.mll" 71 8553 8565
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 71 8553 8566 "hbase/src2fcl.mll" 71 8553 8572
+type(
+  string
+)
+"hbase/src2fcl.mll" 71 8553 8562 "hbase/src2fcl.mll" 71 8553 8573
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 70 8489 8493 "hbase/src2fcl.mll" 71 8553 8573
+type(
+  unit
+)
+"hbase/src2fcl.mll" 71 8553 8575 "hbase/src2fcl.mll" 71 8553 8578
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 71 8553 8579 "hbase/src2fcl.mll" 71 8553 8585
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 71 8553 8575 "hbase/src2fcl.mll" 71 8553 8585
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 69 8478 8487 "hbase/src2fcl.mll" 72 8586 8589
+type(
+  unit
+)
+"hbase/src2fcl.ml" 202 8616 8620 "hbase/src2fcl.ml" 202 8616 8621
+type(
+  int
+)
+"hbase/src2fcl.mll" 74 8659 8666 "hbase/src2fcl.mll" 74 8659 8667
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 74 8659 8667 "hbase/src2fcl.mll" 74 8659 8674
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 74 8659 8666 "hbase/src2fcl.mll" 74 8659 8674
+type(
+  bool
+)
+"hbase/src2fcl.mll" 74 8659 8681 "hbase/src2fcl.mll" 74 8659 8688
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 74 8659 8689 "hbase/src2fcl.mll" 74 8659 8691
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 74 8659 8692 "hbase/src2fcl.mll" 74 8659 8697
+type(
+  bool
+)
+"hbase/src2fcl.mll" 74 8659 8681 "hbase/src2fcl.mll" 74 8659 8697
+type(
+  unit
+)
+"hbase/src2fcl.mll" 74 8659 8699 "hbase/src2fcl.mll" 74 8659 8707
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 74 8659 8708 "hbase/src2fcl.mll" 74 8659 8710
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 74 8659 8711 "hbase/src2fcl.mll" 74 8659 8714
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 74 8659 8699 "hbase/src2fcl.mll" 74 8659 8714
+type(
+  unit
+)
+"hbase/src2fcl.mll" 74 8659 8680 "hbase/src2fcl.mll" 74 8659 8715
+type(
+  unit
+)
+"hbase/src2fcl.mll" 75 8716 8726 "hbase/src2fcl.mll" 75 8716 8728
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 75 8716 8729 "hbase/src2fcl.mll" 75 8716 8733
+type(
+  string
+)
+"hbase/src2fcl.mll" 75 8716 8725 "hbase/src2fcl.mll" 75 8716 8734
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 74 8659 8663 "hbase/src2fcl.mll" 75 8716 8734
+type(
+  unit
+)
+"hbase/src2fcl.mll" 75 8716 8736 "hbase/src2fcl.mll" 75 8716 8739
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 75 8716 8740 "hbase/src2fcl.mll" 75 8716 8746
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 75 8716 8736 "hbase/src2fcl.mll" 75 8716 8746
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 73 8650 8657 "hbase/src2fcl.mll" 76 8747 8750
+type(
+  unit
+)
+"hbase/src2fcl.ml" 210 8777 8781 "hbase/src2fcl.ml" 210 8777 8782
+type(
+  int
+)
+"hbase/src2fcl.mll" 78 8820 8827 "hbase/src2fcl.mll" 78 8820 8828
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 78 8820 8828 "hbase/src2fcl.mll" 78 8820 8835
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 78 8820 8827 "hbase/src2fcl.mll" 78 8820 8835
+type(
+  bool
+)
+"hbase/src2fcl.mll" 78 8820 8842 "hbase/src2fcl.mll" 78 8820 8849
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 78 8820 8850 "hbase/src2fcl.mll" 78 8820 8852
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 78 8820 8853 "hbase/src2fcl.mll" 78 8820 8858
+type(
+  bool
+)
+"hbase/src2fcl.mll" 78 8820 8842 "hbase/src2fcl.mll" 78 8820 8858
+type(
+  unit
+)
+"hbase/src2fcl.mll" 78 8820 8860 "hbase/src2fcl.mll" 78 8820 8868
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 78 8820 8869 "hbase/src2fcl.mll" 78 8820 8871
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 78 8820 8872 "hbase/src2fcl.mll" 78 8820 8875
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 78 8820 8860 "hbase/src2fcl.mll" 78 8820 8875
+type(
+  unit
+)
+"hbase/src2fcl.mll" 78 8820 8841 "hbase/src2fcl.mll" 78 8820 8876
+type(
+  unit
+)
+"hbase/src2fcl.mll" 79 8877 8887 "hbase/src2fcl.mll" 79 8877 8889
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 79 8877 8890 "hbase/src2fcl.mll" 79 8877 8894
+type(
+  string
+)
+"hbase/src2fcl.mll" 79 8877 8886 "hbase/src2fcl.mll" 79 8877 8895
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 78 8820 8824 "hbase/src2fcl.mll" 79 8877 8895
+type(
+  unit
+)
+"hbase/src2fcl.mll" 79 8877 8897 "hbase/src2fcl.mll" 79 8877 8900
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 79 8877 8901 "hbase/src2fcl.mll" 79 8877 8907
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 79 8877 8897 "hbase/src2fcl.mll" 79 8877 8907
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 77 8811 8818 "hbase/src2fcl.mll" 80 8908 8911
+type(
+  unit
+)
+"hbase/src2fcl.ml" 218 8938 8942 "hbase/src2fcl.ml" 218 8938 8943
+type(
+  int
+)
+"hbase/src2fcl.mll" 82 8981 8988 "hbase/src2fcl.mll" 82 8981 8989
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 82 8981 8989 "hbase/src2fcl.mll" 82 8981 8996
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 82 8981 8988 "hbase/src2fcl.mll" 82 8981 8996
+type(
+  bool
+)
+"hbase/src2fcl.mll" 82 8981 9003 "hbase/src2fcl.mll" 82 8981 9010
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 82 8981 9011 "hbase/src2fcl.mll" 82 8981 9013
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 82 8981 9014 "hbase/src2fcl.mll" 82 8981 9019
+type(
+  bool
+)
+"hbase/src2fcl.mll" 82 8981 9003 "hbase/src2fcl.mll" 82 8981 9019
+type(
+  unit
+)
+"hbase/src2fcl.mll" 82 8981 9021 "hbase/src2fcl.mll" 82 8981 9029
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 82 8981 9030 "hbase/src2fcl.mll" 82 8981 9032
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 82 8981 9033 "hbase/src2fcl.mll" 82 8981 9036
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 82 8981 9021 "hbase/src2fcl.mll" 82 8981 9036
+type(
+  unit
+)
+"hbase/src2fcl.mll" 82 8981 9038 "hbase/src2fcl.mll" 82 8981 9040
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 82 8981 9041 "hbase/src2fcl.mll" 82 8981 9045
+type(
+  string
+)
+"hbase/src2fcl.mll" 82 8981 9038 "hbase/src2fcl.mll" 82 8981 9045
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 82 8981 9021 "hbase/src2fcl.mll" 82 8981 9045
+type(
+  unit
+)
+"hbase/src2fcl.mll" 82 8981 9002 "hbase/src2fcl.mll" 82 8981 9046
+type(
+  unit
+)
+"hbase/src2fcl.mll" 83 9047 9057 "hbase/src2fcl.mll" 83 9047 9059
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 83 9047 9060 "hbase/src2fcl.mll" 83 9047 9064
+type(
+  string
+)
+"hbase/src2fcl.mll" 83 9047 9056 "hbase/src2fcl.mll" 83 9047 9065
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 82 8981 8985 "hbase/src2fcl.mll" 83 9047 9065
+type(
+  unit
+)
+"hbase/src2fcl.mll" 83 9047 9067 "hbase/src2fcl.mll" 83 9047 9070
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 83 9047 9071 "hbase/src2fcl.mll" 83 9047 9077
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 83 9047 9067 "hbase/src2fcl.mll" 83 9047 9077
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 81 8972 8979 "hbase/src2fcl.mll" 84 9078 9081
+type(
+  unit
+)
+"hbase/src2fcl.ml" 226 9108 9112 "hbase/src2fcl.ml" 226 9108 9113
+type(
+  int
+)
+"hbase/src2fcl.mll" 86 9161 9168 "hbase/src2fcl.mll" 86 9161 9169
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 86 9161 9169 "hbase/src2fcl.mll" 86 9161 9176
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 86 9161 9168 "hbase/src2fcl.mll" 86 9161 9176
+type(
+  bool
+)
+"hbase/src2fcl.mll" 86 9161 9183 "hbase/src2fcl.mll" 86 9161 9187
+type(
+  unit -> unit
+)
+ident(
+  int_ref dump "hbase/src2fcl.mll" 34 601 607 "hbase/src2fcl.mll" 34 601 611
+)
+"hbase/src2fcl.mll" 86 9161 9187 "hbase/src2fcl.mll" 86 9161 9189
+type(
+  unit
+)
+"hbase/src2fcl.mll" 86 9161 9183 "hbase/src2fcl.mll" 86 9161 9189
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 86 9161 9191 "hbase/src2fcl.mll" 86 9161 9195
+type(
+  string -> unit
+)
+ident(
+  int_ref emit "hbase/src2fcl.mll" 24 415 421 "hbase/src2fcl.mll" 24 415 425
+)
+"hbase/src2fcl.mll" 86 9161 9196 "hbase/src2fcl.mll" 86 9161 9200
+type(
+  string
+)
+"hbase/src2fcl.mll" 86 9161 9191 "hbase/src2fcl.mll" 86 9161 9200
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 86 9161 9182 "hbase/src2fcl.mll" 86 9161 9201
+type(
+  unit
+)
+"hbase/src2fcl.mll" 86 9161 9208 "hbase/src2fcl.mll" 86 9161 9210
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 86 9161 9211 "hbase/src2fcl.mll" 86 9161 9217
+type(
+  string
+)
+"hbase/src2fcl.mll" 86 9161 9207 "hbase/src2fcl.mll" 86 9161 9218
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 86 9161 9165 "hbase/src2fcl.mll" 86 9161 9218
+type(
+  unit
+)
+"hbase/src2fcl.mll" 87 9220 9224 "hbase/src2fcl.mll" 87 9220 9231
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 87 9220 9232 "hbase/src2fcl.mll" 87 9220 9234
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 87 9220 9235 "hbase/src2fcl.mll" 87 9220 9239
+type(
+  bool
+)
+"hbase/src2fcl.mll" 87 9220 9224 "hbase/src2fcl.mll" 87 9220 9239
+type(
+  unit
+)
+"hbase/src2fcl.mll" 87 9220 9241 "hbase/src2fcl.mll" 87 9220 9244
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 87 9220 9245 "hbase/src2fcl.mll" 87 9220 9251
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 87 9220 9241 "hbase/src2fcl.mll" 87 9220 9251
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 87 9220 9224 "hbase/src2fcl.mll" 87 9220 9251
+type(
+  unit
+)
+"hbase/src2fcl.mll" 85 9142 9159 "hbase/src2fcl.mll" 88 9252 9255
+type(
+  unit
+)
+"hbase/src2fcl.ml" 234 9282 9286 "hbase/src2fcl.ml" 234 9282 9287
+type(
+  int
+)
+"hbase/src2fcl.mll" 91 9347 9355 "hbase/src2fcl.mll" 91 9347 9356
+type(
+  string
+)
+"hbase/src2fcl.mll" 91 9347 9359 "hbase/src2fcl.mll" 91 9347 9372
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 91 9347 9373 "hbase/src2fcl.mll" 91 9347 9379
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 91 9347 9359 "hbase/src2fcl.mll" 91 9347 9379
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 92 9384 9391 "hbase/src2fcl.mll" 92 9384 9392
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 92 9384 9392 "hbase/src2fcl.mll" 92 9384 9399
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 92 9384 9391 "hbase/src2fcl.mll" 92 9384 9399
+type(
+  bool
+)
+"hbase/src2fcl.mll" 93 9405 9412 "hbase/src2fcl.mll" 93 9405 9418
+type(
+  string ref
+)
+ident(
+  int_ref suffix "hbase/src2fcl.mll" 17 264 270 "hbase/src2fcl.mll" 17 264 276
+)
+"hbase/src2fcl.mll" 93 9405 9419 "hbase/src2fcl.mll" 93 9405 9421
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 93 9405 9422 "hbase/src2fcl.mll" 93 9405 9426
+type(
+  string
+)
+"hbase/src2fcl.mll" 93 9405 9412 "hbase/src2fcl.mll" 93 9405 9426
+type(
+  unit
+)
+"hbase/src2fcl.mll" 93 9405 9428 "hbase/src2fcl.mll" 93 9405 9438
+type(
+  string ref
+)
+ident(
+  int_ref terminator "hbase/src2fcl.mll" 18 288 294 "hbase/src2fcl.mll" 18 288 304
+)
+"hbase/src2fcl.mll" 93 9405 9438 "hbase/src2fcl.mll" 93 9405 9440
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 93 9405 9440 "hbase/src2fcl.mll" 93 9405 9443
+type(
+  string
+)
+"hbase/src2fcl.mll" 93 9405 9428 "hbase/src2fcl.mll" 93 9405 9443
+type(
+  unit
+)
+"hbase/src2fcl.mll" 93 9405 9445 "hbase/src2fcl.mll" 93 9405 9449
+type(
+  string -> unit
+)
+ident(
+  int_ref emit "hbase/src2fcl.mll" 24 415 421 "hbase/src2fcl.mll" 24 415 425
+)
+"hbase/src2fcl.mll" 93 9405 9450 "hbase/src2fcl.mll" 93 9405 9454
+type(
+  string
+)
+"hbase/src2fcl.mll" 93 9405 9445 "hbase/src2fcl.mll" 93 9405 9454
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 93 9405 9428 "hbase/src2fcl.mll" 93 9405 9454
+type(
+  unit
+)
+"hbase/src2fcl.mll" 93 9405 9411 "hbase/src2fcl.mll" 93 9405 9455
+type(
+  unit
+)
+"hbase/src2fcl.mll" 95 9465 9471 "hbase/src2fcl.mll" 95 9465 9473
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 95 9465 9475 "hbase/src2fcl.mll" 95 9465 9488
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 95 9465 9489 "hbase/src2fcl.mll" 95 9465 9495
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 95 9465 9474 "hbase/src2fcl.mll" 95 9465 9496
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 95 9465 9471 "hbase/src2fcl.mll" 95 9465 9496
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 92 9384 9388 "hbase/src2fcl.mll" 95 9465 9496
+type(
+  unit
+)
+"hbase/src2fcl.mll" 96 9498 9502 "hbase/src2fcl.mll" 96 9498 9509
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 96 9498 9510 "hbase/src2fcl.mll" 96 9498 9512
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 96 9498 9513 "hbase/src2fcl.mll" 96 9498 9517
+type(
+  bool
+)
+"hbase/src2fcl.mll" 96 9498 9502 "hbase/src2fcl.mll" 96 9498 9517
+type(
+  unit
+)
+"hbase/src2fcl.mll" 96 9498 9519 "hbase/src2fcl.mll" 96 9498 9522
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 96 9498 9523 "hbase/src2fcl.mll" 96 9498 9529
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 96 9498 9519 "hbase/src2fcl.mll" 96 9498 9529
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 96 9498 9502 "hbase/src2fcl.mll" 96 9498 9529
+type(
+  unit
+)
+"hbase/src2fcl.mll" 92 9384 9388 "hbase/src2fcl.mll" 96 9498 9529
+type(
+  unit
+)
+"hbase/src2fcl.mll" 90 9316 9345 "hbase/src2fcl.mll" 97 9530 9533
+type(
+  unit
+)
+"hbase/src2fcl.ml" 246 9560 9564 "hbase/src2fcl.ml" 246 9560 9566
+type(
+  int
+)
+"hbase/src2fcl.mll" 99 9605 9612 "hbase/src2fcl.mll" 99 9605 9613
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 99 9605 9613 "hbase/src2fcl.mll" 99 9605 9620
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 99 9605 9612 "hbase/src2fcl.mll" 99 9605 9620
+type(
+  bool
+)
+"hbase/src2fcl.mll" 99 9605 9627 "hbase/src2fcl.mll" 99 9605 9634
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 99 9605 9635 "hbase/src2fcl.mll" 99 9605 9637
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 99 9605 9638 "hbase/src2fcl.mll" 99 9605 9643
+type(
+  bool
+)
+"hbase/src2fcl.mll" 99 9605 9627 "hbase/src2fcl.mll" 99 9605 9643
+type(
+  unit
+)
+"hbase/src2fcl.mll" 99 9605 9645 "hbase/src2fcl.mll" 99 9605 9653
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 99 9605 9654 "hbase/src2fcl.mll" 99 9605 9656
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 99 9605 9657 "hbase/src2fcl.mll" 99 9605 9660
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 99 9605 9645 "hbase/src2fcl.mll" 99 9605 9660
+type(
+  unit
+)
+"hbase/src2fcl.mll" 99 9605 9662 "hbase/src2fcl.mll" 99 9605 9664
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 99 9605 9665 "hbase/src2fcl.mll" 99 9605 9668
+type(
+  string
+)
+"hbase/src2fcl.mll" 99 9605 9662 "hbase/src2fcl.mll" 99 9605 9668
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 99 9605 9645 "hbase/src2fcl.mll" 99 9605 9668
+type(
+  unit
+)
+"hbase/src2fcl.mll" 99 9605 9626 "hbase/src2fcl.mll" 99 9605 9669
+type(
+  unit
+)
+"hbase/src2fcl.mll" 100 9670 9680 "hbase/src2fcl.mll" 100 9670 9682
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 100 9670 9683 "hbase/src2fcl.mll" 100 9670 9688
+type(
+  string
+)
+"hbase/src2fcl.mll" 100 9670 9679 "hbase/src2fcl.mll" 100 9670 9689
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 99 9605 9609 "hbase/src2fcl.mll" 100 9670 9689
+type(
+  unit
+)
+"hbase/src2fcl.mll" 100 9670 9691 "hbase/src2fcl.mll" 100 9670 9694
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 100 9670 9695 "hbase/src2fcl.mll" 100 9670 9701
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 100 9670 9691 "hbase/src2fcl.mll" 100 9670 9701
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 98 9595 9603 "hbase/src2fcl.mll" 101 9702 9705
+type(
+  unit
+)
+"hbase/src2fcl.ml" 254 9732 9736 "hbase/src2fcl.ml" 254 9732 9738
+type(
+  int
+)
+"hbase/src2fcl.mll" 103 9777 9784 "hbase/src2fcl.mll" 103 9777 9785
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/src2fcl.mll" 103 9777 9785 "hbase/src2fcl.mll" 103 9777 9792
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 103 9777 9784 "hbase/src2fcl.mll" 103 9777 9792
+type(
+  bool
+)
+"hbase/src2fcl.mll" 103 9777 9799 "hbase/src2fcl.mll" 103 9777 9806
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 103 9777 9807 "hbase/src2fcl.mll" 103 9777 9809
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 103 9777 9810 "hbase/src2fcl.mll" 103 9777 9815
+type(
+  bool
+)
+"hbase/src2fcl.mll" 103 9777 9799 "hbase/src2fcl.mll" 103 9777 9815
+type(
+  unit
+)
+"hbase/src2fcl.mll" 103 9777 9817 "hbase/src2fcl.mll" 103 9777 9825
+type(
+  lineMode ref
+)
+ident(
+  int_ref lineMode "hbase/src2fcl.mll" 10 107 113 "hbase/src2fcl.mll" 10 107 121
+)
+"hbase/src2fcl.mll" 103 9777 9826 "hbase/src2fcl.mll" 103 9777 9828
+type(
+  lineMode ref -> lineMode -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 103 9777 9829 "hbase/src2fcl.mll" 103 9777 9832
+type(
+  lineMode
+)
+"hbase/src2fcl.mll" 103 9777 9817 "hbase/src2fcl.mll" 103 9777 9832
+type(
+  unit
+)
+"hbase/src2fcl.mll" 103 9777 9834 "hbase/src2fcl.mll" 103 9777 9836
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 103 9777 9837 "hbase/src2fcl.mll" 103 9777 9841
+type(
+  string
+)
+"hbase/src2fcl.mll" 103 9777 9834 "hbase/src2fcl.mll" 103 9777 9841
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 103 9777 9817 "hbase/src2fcl.mll" 103 9777 9841
+type(
+  unit
+)
+"hbase/src2fcl.mll" 103 9777 9798 "hbase/src2fcl.mll" 103 9777 9842
+type(
+  unit
+)
+"hbase/src2fcl.mll" 104 9843 9853 "hbase/src2fcl.mll" 104 9843 9855
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 104 9843 9856 "hbase/src2fcl.mll" 104 9843 9860
+type(
+  string
+)
+"hbase/src2fcl.mll" 104 9843 9852 "hbase/src2fcl.mll" 104 9843 9861
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 103 9777 9781 "hbase/src2fcl.mll" 104 9843 9861
+type(
+  unit
+)
+"hbase/src2fcl.mll" 104 9843 9863 "hbase/src2fcl.mll" 104 9843 9866
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 104 9843 9867 "hbase/src2fcl.mll" 104 9843 9873
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 104 9843 9863 "hbase/src2fcl.mll" 104 9843 9873
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 102 9768 9775 "hbase/src2fcl.mll" 105 9874 9877
+type(
+  unit
+)
+"hbase/src2fcl.ml" 262 9904 9908 "hbase/src2fcl.ml" 262 9904 9910
+type(
+  int
+)
+"hbase/src2fcl.mll" 107 9966 9974 "hbase/src2fcl.mll" 107 9966 9975
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 108 10002 10006 "hbase/src2fcl.mll" 109 10051 10065
+)
+"hbase/src2fcl.mll" 107 9966 9978 "hbase/src2fcl.mll" 107 9966 9991
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 107 9966 9992 "hbase/src2fcl.mll" 107 9966 9998
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 107 9966 9978 "hbase/src2fcl.mll" 107 9966 9998
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 108 10002 10006 "hbase/src2fcl.mll" 108 10002 10008
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 108 10002 10010 "hbase/src2fcl.mll" 108 10002 10020
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"hbase/src2fcl.mll" 108 10002 10021 "hbase/src2fcl.mll" 108 10002 10022
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 107 9966 9974 "hbase/src2fcl.mll" 107 9966 9975
+)
+"hbase/src2fcl.mll" 108 10002 10023 "hbase/src2fcl.mll" 108 10002 10024
+type(
+  int
+)
+"hbase/src2fcl.mll" 108 10002 10027 "hbase/src2fcl.mll" 108 10002 10040
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"hbase/src2fcl.mll" 108 10002 10041 "hbase/src2fcl.mll" 108 10002 10042
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 107 9966 9974 "hbase/src2fcl.mll" 107 9966 9975
+)
+"hbase/src2fcl.mll" 108 10002 10026 "hbase/src2fcl.mll" 108 10002 10043
+type(
+  int
+)
+"hbase/src2fcl.mll" 108 10002 10044 "hbase/src2fcl.mll" 108 10002 10045
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"hbase/src2fcl.mll" 108 10002 10046 "hbase/src2fcl.mll" 108 10002 10047
+type(
+  int
+)
+"hbase/src2fcl.mll" 108 10002 10025 "hbase/src2fcl.mll" 108 10002 10048
+type(
+  int
+)
+"hbase/src2fcl.mll" 108 10002 10009 "hbase/src2fcl.mll" 108 10002 10049
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 108 10002 10006 "hbase/src2fcl.mll" 108 10002 10049
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 109 10051 10055 "hbase/src2fcl.mll" 109 10051 10058
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 109 10051 10059 "hbase/src2fcl.mll" 109 10051 10065
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 109 10051 10055 "hbase/src2fcl.mll" 109 10051 10065
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 108 10002 10006 "hbase/src2fcl.mll" 109 10051 10065
+type(
+  unit
+)
+"hbase/src2fcl.mll" 106 9940 9964 "hbase/src2fcl.mll" 110 10066 10069
+type(
+  unit
+)
+"hbase/src2fcl.ml" 271 10096 10100 "hbase/src2fcl.ml" 271 10096 10102
+type(
+  int
+)
+"hbase/src2fcl.mll" 112 10158 10166 "hbase/src2fcl.mll" 112 10158 10167
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 113 10194 10198 "hbase/src2fcl.mll" 114 10244 10258
+)
+"hbase/src2fcl.mll" 112 10158 10170 "hbase/src2fcl.mll" 112 10158 10183
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 112 10158 10184 "hbase/src2fcl.mll" 112 10158 10190
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 112 10158 10170 "hbase/src2fcl.mll" 112 10158 10190
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 113 10194 10198 "hbase/src2fcl.mll" 113 10194 10200
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 113 10194 10202 "hbase/src2fcl.mll" 113 10194 10212
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"hbase/src2fcl.mll" 113 10194 10213 "hbase/src2fcl.mll" 113 10194 10214
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 112 10158 10166 "hbase/src2fcl.mll" 112 10158 10167
+)
+"hbase/src2fcl.mll" 113 10194 10215 "hbase/src2fcl.mll" 113 10194 10216
+type(
+  int
+)
+"hbase/src2fcl.mll" 113 10194 10219 "hbase/src2fcl.mll" 113 10194 10232
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"hbase/src2fcl.mll" 113 10194 10233 "hbase/src2fcl.mll" 113 10194 10234
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 112 10158 10166 "hbase/src2fcl.mll" 112 10158 10167
+)
+"hbase/src2fcl.mll" 113 10194 10218 "hbase/src2fcl.mll" 113 10194 10235
+type(
+  int
+)
+"hbase/src2fcl.mll" 113 10194 10236 "hbase/src2fcl.mll" 113 10194 10237
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"hbase/src2fcl.mll" 113 10194 10238 "hbase/src2fcl.mll" 113 10194 10239
+type(
+  int
+)
+"hbase/src2fcl.mll" 113 10194 10217 "hbase/src2fcl.mll" 113 10194 10240
+type(
+  int
+)
+"hbase/src2fcl.mll" 113 10194 10201 "hbase/src2fcl.mll" 113 10194 10241
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 113 10194 10198 "hbase/src2fcl.mll" 113 10194 10241
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 114 10244 10248 "hbase/src2fcl.mll" 114 10244 10251
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 114 10244 10252 "hbase/src2fcl.mll" 114 10244 10258
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 114 10244 10248 "hbase/src2fcl.mll" 114 10244 10258
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 113 10194 10198 "hbase/src2fcl.mll" 114 10244 10258
+type(
+  unit
+)
+"hbase/src2fcl.mll" 111 10132 10156 "hbase/src2fcl.mll" 115 10259 10262
+type(
+  unit
+)
+"hbase/src2fcl.ml" 280 10289 10293 "hbase/src2fcl.ml" 280 10289 10295
+type(
+  int
+)
+"hbase/src2fcl.mll" 117 10352 10360 "hbase/src2fcl.mll" 117 10352 10361
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 118 10388 10392 "hbase/src2fcl.mll" 119 10438 10452
+)
+"hbase/src2fcl.mll" 117 10352 10364 "hbase/src2fcl.mll" 117 10352 10377
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 117 10352 10378 "hbase/src2fcl.mll" 117 10352 10384
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 117 10352 10364 "hbase/src2fcl.mll" 117 10352 10384
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 118 10388 10392 "hbase/src2fcl.mll" 118 10388 10394
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 118 10388 10396 "hbase/src2fcl.mll" 118 10388 10406
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"hbase/src2fcl.mll" 118 10388 10407 "hbase/src2fcl.mll" 118 10388 10408
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 117 10352 10360 "hbase/src2fcl.mll" 117 10352 10361
+)
+"hbase/src2fcl.mll" 118 10388 10409 "hbase/src2fcl.mll" 118 10388 10410
+type(
+  int
+)
+"hbase/src2fcl.mll" 118 10388 10413 "hbase/src2fcl.mll" 118 10388 10426
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"hbase/src2fcl.mll" 118 10388 10427 "hbase/src2fcl.mll" 118 10388 10428
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 117 10352 10360 "hbase/src2fcl.mll" 117 10352 10361
+)
+"hbase/src2fcl.mll" 118 10388 10412 "hbase/src2fcl.mll" 118 10388 10429
+type(
+  int
+)
+"hbase/src2fcl.mll" 118 10388 10430 "hbase/src2fcl.mll" 118 10388 10431
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"hbase/src2fcl.mll" 118 10388 10432 "hbase/src2fcl.mll" 118 10388 10433
+type(
+  int
+)
+"hbase/src2fcl.mll" 118 10388 10411 "hbase/src2fcl.mll" 118 10388 10434
+type(
+  int
+)
+"hbase/src2fcl.mll" 118 10388 10395 "hbase/src2fcl.mll" 118 10388 10435
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 118 10388 10392 "hbase/src2fcl.mll" 118 10388 10435
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 119 10438 10442 "hbase/src2fcl.mll" 119 10438 10445
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 119 10438 10446 "hbase/src2fcl.mll" 119 10438 10452
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 119 10438 10442 "hbase/src2fcl.mll" 119 10438 10452
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 118 10388 10392 "hbase/src2fcl.mll" 119 10438 10452
+type(
+  unit
+)
+"hbase/src2fcl.mll" 116 10325 10350 "hbase/src2fcl.mll" 120 10453 10456
+type(
+  unit
+)
+"hbase/src2fcl.ml" 289 10483 10487 "hbase/src2fcl.ml" 289 10483 10489
+type(
+  int
+)
+"hbase/src2fcl.mll" 122 10546 10554 "hbase/src2fcl.mll" 122 10546 10555
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 123 10582 10586 "hbase/src2fcl.mll" 124 10632 10646
+)
+"hbase/src2fcl.mll" 122 10546 10558 "hbase/src2fcl.mll" 122 10546 10571
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 122 10546 10572 "hbase/src2fcl.mll" 122 10546 10578
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 122 10546 10558 "hbase/src2fcl.mll" 122 10546 10578
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 123 10582 10586 "hbase/src2fcl.mll" 123 10582 10588
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 123 10582 10590 "hbase/src2fcl.mll" 123 10582 10600
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"hbase/src2fcl.mll" 123 10582 10601 "hbase/src2fcl.mll" 123 10582 10602
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 122 10546 10554 "hbase/src2fcl.mll" 122 10546 10555
+)
+"hbase/src2fcl.mll" 123 10582 10603 "hbase/src2fcl.mll" 123 10582 10604
+type(
+  int
+)
+"hbase/src2fcl.mll" 123 10582 10607 "hbase/src2fcl.mll" 123 10582 10620
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"hbase/src2fcl.mll" 123 10582 10621 "hbase/src2fcl.mll" 123 10582 10622
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 122 10546 10554 "hbase/src2fcl.mll" 122 10546 10555
+)
+"hbase/src2fcl.mll" 123 10582 10606 "hbase/src2fcl.mll" 123 10582 10623
+type(
+  int
+)
+"hbase/src2fcl.mll" 123 10582 10624 "hbase/src2fcl.mll" 123 10582 10625
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"hbase/src2fcl.mll" 123 10582 10626 "hbase/src2fcl.mll" 123 10582 10627
+type(
+  int
+)
+"hbase/src2fcl.mll" 123 10582 10605 "hbase/src2fcl.mll" 123 10582 10628
+type(
+  int
+)
+"hbase/src2fcl.mll" 123 10582 10589 "hbase/src2fcl.mll" 123 10582 10629
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 123 10582 10586 "hbase/src2fcl.mll" 123 10582 10629
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 124 10632 10636 "hbase/src2fcl.mll" 124 10632 10639
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 124 10632 10640 "hbase/src2fcl.mll" 124 10632 10646
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 124 10632 10636 "hbase/src2fcl.mll" 124 10632 10646
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 123 10582 10586 "hbase/src2fcl.mll" 124 10632 10646
+type(
+  unit
+)
+"hbase/src2fcl.mll" 121 10519 10544 "hbase/src2fcl.mll" 125 10647 10650
+type(
+  unit
+)
+"hbase/src2fcl.ml" 298 10677 10681 "hbase/src2fcl.ml" 298 10677 10683
+type(
+  int
+)
+"hbase/src2fcl.mll" 127 10719 10723 "hbase/src2fcl.mll" 127 10719 10730
+type(
+  bool ref
+)
+ident(
+  int_ref newLine "hbase/src2fcl.mll" 11 133 139 "hbase/src2fcl.mll" 11 133 146
+)
+"hbase/src2fcl.mll" 127 10719 10731 "hbase/src2fcl.mll" 127 10719 10733
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/src2fcl.mll" 127 10719 10734 "hbase/src2fcl.mll" 127 10719 10739
+type(
+  bool
+)
+"hbase/src2fcl.mll" 127 10719 10723 "hbase/src2fcl.mll" 127 10719 10739
+type(
+  unit
+)
+"hbase/src2fcl.mll" 127 10719 10741 "hbase/src2fcl.mll" 127 10719 10743
+type(
+  string -> unit
+)
+ident(
+  int_ref pr "hbase/src2fcl.mll" 49 1254 1260 "hbase/src2fcl.mll" 49 1254 1262
+)
+"hbase/src2fcl.mll" 127 10719 10745 "hbase/src2fcl.mll" 127 10719 10758
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"hbase/src2fcl.mll" 127 10719 10759 "hbase/src2fcl.mll" 127 10719 10765
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 127 10719 10744 "hbase/src2fcl.mll" 127 10719 10766
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 127 10719 10741 "hbase/src2fcl.mll" 127 10719 10766
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 127 10719 10768 "hbase/src2fcl.mll" 127 10719 10771
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 127 10719 10772 "hbase/src2fcl.mll" 127 10719 10778
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.mll" 127 10719 10768 "hbase/src2fcl.mll" 127 10719 10778
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 127 10719 10741 "hbase/src2fcl.mll" 127 10719 10778
+type(
+  unit
+)
+"hbase/src2fcl.mll" 126 10713 10717 "hbase/src2fcl.mll" 128 10779 10782
+type(
+  unit
+)
+"hbase/src2fcl.ml" 305 10809 10813 "hbase/src2fcl.ml" 305 10809 10830
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "hbase/src2fcl.ml" 305 10809 10834 "hbase/src2fcl.ml" 306 10869 10919
+)
+"hbase/src2fcl.ml" 305 10809 10834 "hbase/src2fcl.ml" 305 10809 10840
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.ml" 305 10809 10834 "hbase/src2fcl.ml" 305 10809 10859
+type(
+  Lexing.lexbuf -> unit
+)
+"hbase/src2fcl.ml" 305 10809 10860 "hbase/src2fcl.ml" 305 10809 10866
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.ml" 305 10809 10834 "hbase/src2fcl.ml" 305 10809 10866
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.ml" 306 10869 10875 "hbase/src2fcl.ml" 306 10869 10894
+type(
+  Lexing.lexbuf -> int -> unit
+)
+ident(
+  int_ref __ocaml_lex_lex_rec "hbase/src2fcl.ml" 164 7781 7785 "hbase/src2fcl.ml" 164 7781 7804
+)
+"hbase/src2fcl.ml" 306 10869 10895 "hbase/src2fcl.ml" 306 10869 10901
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "hbase/src2fcl.ml" 164 7781 7805 "hbase/src2fcl.ml" 164 7781 7811
+)
+"hbase/src2fcl.ml" 306 10869 10902 "hbase/src2fcl.ml" 306 10869 10919
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "hbase/src2fcl.ml" 305 10809 10813 "hbase/src2fcl.ml" 305 10809 10830
+)
+"hbase/src2fcl.ml" 306 10869 10875 "hbase/src2fcl.ml" 306 10869 10919
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/src2fcl.ml" 305 10809 10834 "hbase/src2fcl.ml" 306 10869 10919
+type(
+  unit
+)
+"hbase/src2fcl.ml" 165 7832 7834 "hbase/src2fcl.ml" 306 10869 10919
+type(
+  unit
+)
+"hbase/src2fcl.mll" 131 10953 10959 "hbase/src2fcl.mll" 131 10953 10973
+type(
+  string -> string
+)
+ident(
+  def fcl_of_src_str "hbase/src2fcl.mll" 136 11065 11067 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 131 10953 10974 "hbase/src2fcl.mll" 131 10953 10975
+type(
+  string
+)
+ident(
+  def s "hbase/src2fcl.mll" 132 10979 10983 "hbase/src2fcl.mll" 134 11036 11063
+)
+"hbase/src2fcl.mll" 132 10979 10983 "hbase/src2fcl.mll" 132 10979 10988
+type(
+  unit -> unit
+)
+ident(
+  int_ref reset "hbase/src2fcl.mll" 26 459 465 "hbase/src2fcl.mll" 26 459 470
+)
+"hbase/src2fcl.mll" 132 10979 10989 "hbase/src2fcl.mll" 132 10979 10991
+type(
+  unit
+)
+"hbase/src2fcl.mll" 132 10979 10983 "hbase/src2fcl.mll" 132 10979 10991
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 133 10993 11001 "hbase/src2fcl.mll" 133 10993 11002
+type(
+  unit
+)
+"hbase/src2fcl.mll" 133 10993 11005 "hbase/src2fcl.mll" 133 10993 11008
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 133 10993 11010 "hbase/src2fcl.mll" 133 10993 11028
+type(
+  string -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_string
+)
+"hbase/src2fcl.mll" 133 10993 11029 "hbase/src2fcl.mll" 133 10993 11030
+type(
+  string
+)
+ident(
+  int_ref s "hbase/src2fcl.mll" 131 10953 10974 "hbase/src2fcl.mll" 131 10953 10975
+)
+"hbase/src2fcl.mll" 133 10993 11009 "hbase/src2fcl.mll" 133 10993 11031
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"hbase/src2fcl.mll" 133 10993 11005 "hbase/src2fcl.mll" 133 10993 11031
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 134 11036 11040 "hbase/src2fcl.mll" 134 11036 11055
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"hbase/src2fcl.mll" 134 11036 11056 "hbase/src2fcl.mll" 134 11036 11063
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 134 11036 11040 "hbase/src2fcl.mll" 134 11036 11063
+call(
+  tail
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 133 10993 10997 "hbase/src2fcl.mll" 134 11036 11063
+type(
+  string
+)
+"hbase/src2fcl.mll" 132 10979 10983 "hbase/src2fcl.mll" 134 11036 11063
+type(
+  string
+)
+"hbase/src2fcl.mll" 136 11065 11071 "hbase/src2fcl.mll" 136 11065 11081
+type(
+  string -> string
+)
+ident(
+  def fcl_of_src "hbase/src2fcl.mll" 141 11215 11242 "hbase/src2fcl.ml" 1 0 -1
+)
+"hbase/src2fcl.mll" 136 11065 11082 "hbase/src2fcl.mll" 136 11065 11084
+type(
+  string
+)
+ident(
+  def fn "hbase/src2fcl.mll" 137 11088 11092 "hbase/src2fcl.mll" 141 11215 11242
+)
+"hbase/src2fcl.mll" 137 11088 11092 "hbase/src2fcl.mll" 137 11088 11097
+type(
+  unit -> unit
+)
+ident(
+  int_ref reset "hbase/src2fcl.mll" 26 459 465 "hbase/src2fcl.mll" 26 459 470
+)
+"hbase/src2fcl.mll" 137 11088 11098 "hbase/src2fcl.mll" 137 11088 11100
+type(
+  unit
+)
+"hbase/src2fcl.mll" 137 11088 11092 "hbase/src2fcl.mll" 137 11088 11100
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 138 11102 11110 "hbase/src2fcl.mll" 138 11102 11115
+type(
+  in_channel
+)
+ident(
+  def fchan "hbase/src2fcl.mll" 139 11136 11140 "hbase/src2fcl.mll" 141 11215 11242
+)
+"hbase/src2fcl.mll" 138 11102 11118 "hbase/src2fcl.mll" 138 11102 11129
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in_bin
+)
+"hbase/src2fcl.mll" 138 11102 11130 "hbase/src2fcl.mll" 138 11102 11132
+type(
+  string
+)
+ident(
+  int_ref fn "hbase/src2fcl.mll" 136 11065 11082 "hbase/src2fcl.mll" 136 11065 11084
+)
+"hbase/src2fcl.mll" 138 11102 11118 "hbase/src2fcl.mll" 138 11102 11132
+call(
+  stack
+)
+type(
+  in_channel
+)
+"hbase/src2fcl.mll" 139 11136 11144 "hbase/src2fcl.mll" 139 11136 11145
+type(
+  unit
+)
+"hbase/src2fcl.mll" 139 11136 11148 "hbase/src2fcl.mll" 139 11136 11151
+type(
+  Lexing.lexbuf -> unit
+)
+ident(
+  int_ref lex "hbase/src2fcl.ml" 162 7727 7735 "hbase/src2fcl.ml" 162 7727 7738
+)
+"hbase/src2fcl.mll" 139 11136 11153 "hbase/src2fcl.mll" 139 11136 11172
+type(
+  in_channel -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_channel
+)
+"hbase/src2fcl.mll" 139 11136 11173 "hbase/src2fcl.mll" 139 11136 11178
+type(
+  in_channel
+)
+ident(
+  int_ref fchan "hbase/src2fcl.mll" 138 11102 11110 "hbase/src2fcl.mll" 138 11102 11115
+)
+"hbase/src2fcl.mll" 139 11136 11152 "hbase/src2fcl.mll" 139 11136 11179
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"hbase/src2fcl.mll" 139 11136 11148 "hbase/src2fcl.mll" 139 11136 11179
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 140 11184 11192 "hbase/src2fcl.mll" 140 11184 11193
+type(
+  unit
+)
+"hbase/src2fcl.mll" 140 11184 11196 "hbase/src2fcl.mll" 140 11184 11204
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"hbase/src2fcl.mll" 140 11184 11205 "hbase/src2fcl.mll" 140 11184 11210
+type(
+  in_channel
+)
+ident(
+  int_ref fchan "hbase/src2fcl.mll" 138 11102 11110 "hbase/src2fcl.mll" 138 11102 11115
+)
+"hbase/src2fcl.mll" 140 11184 11196 "hbase/src2fcl.mll" 140 11184 11210
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/src2fcl.mll" 141 11215 11219 "hbase/src2fcl.mll" 141 11215 11234
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"hbase/src2fcl.mll" 141 11215 11235 "hbase/src2fcl.mll" 141 11215 11242
+type(
+  Buffer.t
+)
+ident(
+  int_ref current "hbase/src2fcl.mll" 14 183 189 "hbase/src2fcl.mll" 14 183 196
+)
+"hbase/src2fcl.mll" 141 11215 11219 "hbase/src2fcl.mll" 141 11215 11242
+call(
+  tail
+)
+type(
+  string
+)
+"hbase/src2fcl.mll" 140 11184 11188 "hbase/src2fcl.mll" 141 11215 11242
+type(
+  string
+)
+"hbase/src2fcl.mll" 139 11136 11140 "hbase/src2fcl.mll" 141 11215 11242
+type(
+  string
+)
+"hbase/src2fcl.mll" 138 11102 11106 "hbase/src2fcl.mll" 141 11215 11242
+type(
+  string
+)
+"hbase/src2fcl.mll" 137 11088 11092 "hbase/src2fcl.mll" 141 11215 11242
+type(
+  string
+)

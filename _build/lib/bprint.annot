@@ -1,0 +1,8270 @@
+"lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  def msg "lib/bprint.ml" 27 1767 1767 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 26 1745 1755 "lib/bprint.ml" 26 1745 1766
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  ext_ref Util.format
+)
+"lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+type(
+  (unit -> unit) -> string
+)
+ident(
+  def to_string "lib/bprint.ml" 32 1891 1891 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 27 1767 1783 "lib/bprint.ml" 27 1767 1804
+type(
+  (unit -> unit) -> string
+)
+ident(
+  ext_ref Util.format_to_string
+)
+"lib/bprint.ml" 32 1891 1895 "lib/bprint.ml" 32 1891 1900
+type(
+  string -> unit
+)
+ident(
+  def nlify "lib/bprint.ml" 36 1984 1984 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 32 1891 1901 "lib/bprint.ml" 32 1891 1902
+type(
+  string
+)
+ident(
+  def s "lib/bprint.ml" 32 1891 1905 "lib/bprint.ml" 34 1951 1982
+)
+"lib/bprint.ml" 32 1891 1905 "lib/bprint.ml" 32 1891 1921
+type(
+  (unit, Format.formatter, unit) format ->
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 32 1891 1922 "lib/bprint.ml" 32 1891 1927
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 33 1929 1932 "lib/bprint.ml" 33 1929 1943
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"lib/bprint.ml" 33 1929 1944 "lib/bprint.ml" 33 1929 1948
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 33 1929 1931 "lib/bprint.ml" 33 1929 1949
+call(
+  stack
+)
+type(
+  string -> unit
+)
+"lib/bprint.ml" 34 1951 1954 "lib/bprint.ml" 34 1951 1974
+type(
+  char -> string -> string list
+)
+ident(
+  ext_ref Misc.split_nonescape
+)
+"lib/bprint.ml" 34 1951 1975 "lib/bprint.ml" 34 1951 1979
+type(
+  char
+)
+"lib/bprint.ml" 34 1951 1980 "lib/bprint.ml" 34 1951 1981
+type(
+  string
+)
+ident(
+  int_ref s "lib/bprint.ml" 32 1891 1901 "lib/bprint.ml" 32 1891 1902
+)
+"lib/bprint.ml" 34 1951 1953 "lib/bprint.ml" 34 1951 1982
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bprint.ml" 32 1891 1905 "lib/bprint.ml" 34 1951 1982
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 36 1984 1988 "lib/bprint.ml" 36 1984 1998
+type(
+  ('a -> 'b) -> bool -> 'a -> unit
+)
+ident(
+  def maybe_wrap "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 36 1984 1999 "lib/bprint.ml" 36 1984 2002
+type(
+  'a -> 'b
+)
+ident(
+  def fmt "lib/bprint.ml" 36 1984 2003 "lib/bprint.ml" 39 2040 2059
+)
+"lib/bprint.ml" 36 1984 2003 "lib/bprint.ml" 36 1984 2004
+type(
+  bool
+)
+ident(
+  def b "lib/bprint.ml" 36 1984 2005 "lib/bprint.ml" 39 2040 2059
+)
+"lib/bprint.ml" 36 1984 2005 "lib/bprint.ml" 36 1984 2006
+type(
+  'a
+)
+ident(
+  def r "lib/bprint.ml" 37 2010 2012 "lib/bprint.ml" 39 2040 2059
+)
+"lib/bprint.ml" 37 2010 2015 "lib/bprint.ml" 37 2010 2016
+type(
+  bool
+)
+ident(
+  int_ref b "lib/bprint.ml" 36 1984 2003 "lib/bprint.ml" 36 1984 2004
+)
+"lib/bprint.ml" 37 2010 2022 "lib/bprint.ml" 37 2010 2025
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 37 2010 2026 "lib/bprint.ml" 37 2010 2029
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 37 2010 2022 "lib/bprint.ml" 37 2010 2029
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 37 2010 2012 "lib/bprint.ml" 37 2010 2029
+type(
+  unit
+)
+"lib/bprint.ml" 38 2031 2033 "lib/bprint.ml" 38 2031 2036
+type(
+  'a -> 'b
+)
+ident(
+  int_ref fmt "lib/bprint.ml" 36 1984 1999 "lib/bprint.ml" 36 1984 2002
+)
+"lib/bprint.ml" 38 2031 2037 "lib/bprint.ml" 38 2031 2038
+type(
+  'a
+)
+ident(
+  int_ref r "lib/bprint.ml" 36 1984 2005 "lib/bprint.ml" 36 1984 2006
+)
+"lib/bprint.ml" 38 2031 2033 "lib/bprint.ml" 38 2031 2038
+call(
+  stack
+)
+type(
+  'b
+)
+"lib/bprint.ml" 39 2040 2045 "lib/bprint.ml" 39 2040 2046
+type(
+  bool
+)
+ident(
+  int_ref b "lib/bprint.ml" 36 1984 2003 "lib/bprint.ml" 36 1984 2004
+)
+"lib/bprint.ml" 39 2040 2052 "lib/bprint.ml" 39 2040 2055
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 39 2040 2056 "lib/bprint.ml" 39 2040 2059
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 39 2040 2052 "lib/bprint.ml" 39 2040 2059
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 39 2040 2042 "lib/bprint.ml" 39 2040 2059
+type(
+  unit
+)
+"lib/bprint.ml" 38 2031 2033 "lib/bprint.ml" 39 2040 2059
+type(
+  unit
+)
+"lib/bprint.ml" 37 2010 2012 "lib/bprint.ml" 39 2040 2059
+type(
+  unit
+)
+"lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  def format_sort "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 43 2149 2153 "lib/bprint.ml" 43 2149 2158
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 43 2149 2162 "lib/bprint.ml" 43 2149 2165
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 43 2149 2166 "lib/bprint.ml" 43 2149 2176
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 43 2149 2162 "lib/bprint.ml" 43 2149 2176
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 44 2177 2181 "lib/bprint.ml" 44 2177 2186
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 44 2177 2190 "lib/bprint.ml" 44 2177 2193
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 44 2177 2194 "lib/bprint.ml" 44 2177 2204
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 44 2177 2190 "lib/bprint.ml" 44 2177 2204
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 45 2205 2209 "lib/bprint.ml" 45 2205 2217
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 45 2205 2221 "lib/bprint.ml" 45 2205 2224
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 45 2205 2225 "lib/bprint.ml" 45 2205 2234
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 45 2205 2221 "lib/bprint.ml" 45 2205 2234
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 46 2235 2239 "lib/bprint.ml" 46 2235 2244
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 46 2235 2251 "lib/bprint.ml" 46 2235 2254
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 46 2235 2255 "lib/bprint.ml" 46 2235 2265
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 46 2235 2251 "lib/bprint.ml" 46 2235 2265
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 47 2266 2270 "lib/bprint.ml" 47 2266 2277
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 47 2266 2281 "lib/bprint.ml" 47 2266 2284
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 47 2266 2285 "lib/bprint.ml" 47 2266 2297
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 47 2266 2281 "lib/bprint.ml" 47 2266 2297
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 48 2298 2302 "lib/bprint.ml" 48 2298 2309
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 48 2298 2313 "lib/bprint.ml" 48 2298 2316
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 48 2298 2317 "lib/bprint.ml" 48 2298 2329
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 48 2298 2313 "lib/bprint.ml" 48 2298 2329
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 49 2330 2334 "lib/bprint.ml" 49 2330 2342
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 49 2330 2346 "lib/bprint.ml" 49 2330 2349
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 49 2330 2350 "lib/bprint.ml" 49 2330 2363
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 49 2330 2346 "lib/bprint.ml" 49 2330 2363
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 50 2364 2368 "lib/bprint.ml" 50 2364 2378
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 50 2364 2382 "lib/bprint.ml" 50 2364 2385
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 50 2364 2386 "lib/bprint.ml" 50 2364 2404
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 50 2364 2382 "lib/bprint.ml" 50 2364 2404
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 51 2405 2409 "lib/bprint.ml" 51 2405 2419
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 51 2405 2423 "lib/bprint.ml" 51 2405 2426
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 51 2405 2427 "lib/bprint.ml" 51 2405 2445
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 51 2405 2423 "lib/bprint.ml" 51 2405 2445
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 52 2446 2450 "lib/bprint.ml" 52 2446 2455
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 52 2446 2459 "lib/bprint.ml" 52 2446 2462
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 52 2446 2463 "lib/bprint.ml" 52 2446 2473
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 52 2446 2459 "lib/bprint.ml" 52 2446 2473
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 53 2474 2478 "lib/bprint.ml" 53 2474 2488
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 53 2474 2492 "lib/bprint.ml" 53 2474 2495
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 53 2474 2496 "lib/bprint.ml" 53 2474 2511
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 53 2474 2492 "lib/bprint.ml" 53 2474 2511
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 54 2512 2523 "lib/bprint.ml" 54 2512 2524
+type(
+  Bsyntax.prefs
+)
+ident(
+  def p "lib/bprint.ml" 54 2512 2528 "lib/bprint.ml" 54 2512 2565
+)
+"lib/bprint.ml" 54 2512 2516 "lib/bprint.ml" 54 2512 2524
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 54 2512 2528 "lib/bprint.ml" 54 2512 2531
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 54 2512 2532 "lib/bprint.ml" 54 2512 2545
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 54 2512 2547 "lib/bprint.ml" 54 2512 2562
+type(
+  Bsyntax.prefs -> string
+)
+ident(
+  ext_ref Bsyntax.string_of_prefs
+)
+"lib/bprint.ml" 54 2512 2563 "lib/bprint.ml" 54 2512 2564
+type(
+  Bsyntax.prefs
+)
+ident(
+  int_ref p "lib/bprint.ml" 54 2512 2523 "lib/bprint.ml" 54 2512 2524
+)
+"lib/bprint.ml" 54 2512 2546 "lib/bprint.ml" 54 2512 2565
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 54 2512 2528 "lib/bprint.ml" 54 2512 2565
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 56 2573 2587 "lib/bprint.ml" 56 2573 2589
+type(
+  Bident.Id.t
+)
+ident(
+  def x0 "lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 63 2762 2777
+)
+"lib/bprint.ml" 56 2573 2591 "lib/bprint.ml" 56 2573 2593
+type(
+  Bsyntax.sort
+)
+ident(
+  def s1 "lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 63 2762 2777
+)
+"lib/bprint.ml" 56 2573 2595 "lib/bprint.ml" 56 2573 2597
+type(
+  Bsyntax.sort
+)
+ident(
+  def s2 "lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 63 2762 2777
+)
+"lib/bprint.ml" 56 2573 2577 "lib/bprint.ml" 56 2573 2598
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 57 2602 2611
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 57 2602 2612 "lib/bprint.ml" 57 2602 2617
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 57 2602 2617
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 58 2619 2628 "lib/bprint.ml" 58 2619 2631
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"lib/bprint.ml" 58 2619 2633 "lib/bprint.ml" 58 2619 2641
+type(
+  Bident.Id.t -> Bident.Id.t -> bool
+)
+ident(
+  ext_ref Bident.Id.equal
+)
+"lib/bprint.ml" 58 2619 2642 "lib/bprint.ml" 58 2619 2644
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x0 "lib/bprint.ml" 56 2573 2587 "lib/bprint.ml" 56 2573 2589
+)
+"lib/bprint.ml" 58 2619 2645 "lib/bprint.ml" 58 2619 2652
+type(
+  Bident.Id.t
+)
+ident(
+  ext_ref Bident.Id.wild
+)
+"lib/bprint.ml" 58 2619 2632 "lib/bprint.ml" 58 2619 2653
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bprint.ml" 58 2619 2628 "lib/bprint.ml" 58 2619 2653
+type(
+  bool
+)
+"lib/bprint.ml" 59 2654 2665 "lib/bprint.ml" 59 2654 2668
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 59 2654 2669 "lib/bprint.ml" 59 2654 2676
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 59 2654 2678 "lib/bprint.ml" 59 2654 2692
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 59 2654 2693 "lib/bprint.ml" 59 2654 2695
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x0 "lib/bprint.ml" 56 2573 2587 "lib/bprint.ml" 56 2573 2589
+)
+"lib/bprint.ml" 59 2654 2677 "lib/bprint.ml" 59 2654 2696
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 59 2654 2665 "lib/bprint.ml" 59 2654 2696
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 58 2619 2625 "lib/bprint.ml" 59 2654 2696
+type(
+  unit
+)
+"lib/bprint.ml" 60 2698 2704 "lib/bprint.ml" 60 2698 2715
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 60 2698 2716 "lib/bprint.ml" 60 2698 2718
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s1 "lib/bprint.ml" 56 2573 2591 "lib/bprint.ml" 56 2573 2593
+)
+"lib/bprint.ml" 60 2698 2704 "lib/bprint.ml" 60 2698 2718
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 61 2720 2726 "lib/bprint.ml" 61 2720 2729
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 61 2720 2730 "lib/bprint.ml" 61 2720 2738
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 61 2720 2726 "lib/bprint.ml" 61 2720 2738
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 62 2740 2746 "lib/bprint.ml" 62 2740 2757
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 62 2740 2758 "lib/bprint.ml" 62 2740 2760
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s2 "lib/bprint.ml" 56 2573 2595 "lib/bprint.ml" 56 2573 2597
+)
+"lib/bprint.ml" 62 2740 2746 "lib/bprint.ml" 62 2740 2760
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 63 2762 2768 "lib/bprint.ml" 63 2762 2771
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 63 2762 2772 "lib/bprint.ml" 63 2762 2777
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 63 2762 2768 "lib/bprint.ml" 63 2762 2777
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 62 2740 2746 "lib/bprint.ml" 63 2762 2777
+type(
+  unit
+)
+"lib/bprint.ml" 61 2720 2726 "lib/bprint.ml" 63 2762 2777
+type(
+  unit
+)
+"lib/bprint.ml" 60 2698 2704 "lib/bprint.ml" 63 2762 2777
+type(
+  unit
+)
+"lib/bprint.ml" 58 2619 2625 "lib/bprint.ml" 63 2762 2777
+type(
+  unit
+)
+"lib/bprint.ml" 57 2602 2608 "lib/bprint.ml" 63 2762 2777
+type(
+  unit
+)
+"lib/bprint.ml" 65 2787 2800 "lib/bprint.ml" 65 2787 2802
+type(
+  Bsyntax.sort
+)
+ident(
+  def s1 "lib/bprint.ml" 66 2811 2817 "lib/bprint.ml" 70 2894 2909
+)
+"lib/bprint.ml" 65 2787 2803 "lib/bprint.ml" 65 2787 2805
+type(
+  Bsyntax.sort
+)
+ident(
+  def s2 "lib/bprint.ml" 66 2811 2817 "lib/bprint.ml" 70 2894 2909
+)
+"lib/bprint.ml" 65 2787 2791 "lib/bprint.ml" 65 2787 2806
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 66 2811 2817 "lib/bprint.ml" 66 2811 2820
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 66 2811 2821 "lib/bprint.ml" 66 2811 2829
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 66 2811 2817 "lib/bprint.ml" 66 2811 2829
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 67 2831 2837 "lib/bprint.ml" 67 2831 2848
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 67 2831 2849 "lib/bprint.ml" 67 2831 2851
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s1 "lib/bprint.ml" 65 2787 2800 "lib/bprint.ml" 65 2787 2802
+)
+"lib/bprint.ml" 67 2831 2837 "lib/bprint.ml" 67 2831 2851
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 68 2853 2859 "lib/bprint.ml" 68 2853 2862
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 68 2853 2863 "lib/bprint.ml" 68 2853 2870
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 68 2853 2859 "lib/bprint.ml" 68 2853 2870
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 69 2872 2878 "lib/bprint.ml" 69 2872 2889
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 69 2872 2890 "lib/bprint.ml" 69 2872 2892
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s2 "lib/bprint.ml" 65 2787 2803 "lib/bprint.ml" 65 2787 2805
+)
+"lib/bprint.ml" 69 2872 2878 "lib/bprint.ml" 69 2872 2892
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 70 2894 2900 "lib/bprint.ml" 70 2894 2903
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 70 2894 2904 "lib/bprint.ml" 70 2894 2909
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 70 2894 2900 "lib/bprint.ml" 70 2894 2909
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 69 2872 2878 "lib/bprint.ml" 70 2894 2909
+type(
+  unit
+)
+"lib/bprint.ml" 68 2853 2859 "lib/bprint.ml" 70 2894 2909
+type(
+  unit
+)
+"lib/bprint.ml" 67 2831 2837 "lib/bprint.ml" 70 2894 2909
+type(
+  unit
+)
+"lib/bprint.ml" 66 2811 2817 "lib/bprint.ml" 70 2894 2909
+type(
+  unit
+)
+"lib/bprint.ml" 72 2911 2921 "lib/bprint.ml" 72 2911 2923
+type(
+  Bsyntax.sort list
+)
+"lib/bprint.ml" 72 2911 2924 "lib/bprint.ml" 72 2911 2926
+type(
+  Bident.Qid.t
+)
+ident(
+  def q1 "lib/bprint.ml" 72 2911 2931 "lib/bprint.ml" 72 2911 2964
+)
+"lib/bprint.ml" 72 2911 2915 "lib/bprint.ml" 72 2911 2927
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 72 2911 2931 "lib/bprint.ml" 72 2911 2934
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 72 2911 2935 "lib/bprint.ml" 72 2911 2943
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 72 2911 2945 "lib/bprint.ml" 72 2911 2960
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 72 2911 2961 "lib/bprint.ml" 72 2911 2963
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q1 "lib/bprint.ml" 72 2911 2924 "lib/bprint.ml" 72 2911 2926
+)
+"lib/bprint.ml" 72 2911 2944 "lib/bprint.ml" 72 2911 2964
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 72 2911 2931 "lib/bprint.ml" 72 2911 2964
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 74 2966 2977 "lib/bprint.ml" 74 2966 2978
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 75 2988 2994 "lib/bprint.ml" 78 3041 3078
+)
+"lib/bprint.ml" 74 2966 2976 "lib/bprint.ml" 74 2966 2979
+type(
+  Bsyntax.sort list
+)
+"lib/bprint.ml" 74 2966 2980 "lib/bprint.ml" 74 2966 2982
+type(
+  Bident.Qid.t
+)
+ident(
+  def q1 "lib/bprint.ml" 75 2988 2994 "lib/bprint.ml" 78 3041 3078
+)
+"lib/bprint.ml" 74 2966 2970 "lib/bprint.ml" 74 2966 2983
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 75 2988 2994 "lib/bprint.ml" 75 2988 2997
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 75 2988 2998 "lib/bprint.ml" 75 2988 3002
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 75 2988 2994 "lib/bprint.ml" 75 2988 3002
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 76 3004 3010 "lib/bprint.ml" 76 3004 3021
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 76 3004 3022 "lib/bprint.ml" 76 3004 3023
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 74 2966 2977 "lib/bprint.ml" 74 2966 2978
+)
+"lib/bprint.ml" 76 3004 3010 "lib/bprint.ml" 76 3004 3023
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 77 3025 3031 "lib/bprint.ml" 77 3025 3034
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 77 3025 3035 "lib/bprint.ml" 77 3025 3039
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 77 3025 3031 "lib/bprint.ml" 77 3025 3039
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 78 3041 3047 "lib/bprint.ml" 78 3041 3050
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 78 3041 3051 "lib/bprint.ml" 78 3041 3057
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 78 3041 3059 "lib/bprint.ml" 78 3041 3074
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 78 3041 3075 "lib/bprint.ml" 78 3041 3077
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q1 "lib/bprint.ml" 74 2966 2980 "lib/bprint.ml" 74 2966 2982
+)
+"lib/bprint.ml" 78 3041 3058 "lib/bprint.ml" 78 3041 3078
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 78 3041 3047 "lib/bprint.ml" 78 3041 3078
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 77 3025 3031 "lib/bprint.ml" 78 3041 3078
+type(
+  unit
+)
+"lib/bprint.ml" 76 3004 3010 "lib/bprint.ml" 78 3041 3078
+type(
+  unit
+)
+"lib/bprint.ml" 75 2988 2994 "lib/bprint.ml" 78 3041 3078
+type(
+  unit
+)
+"lib/bprint.ml" 80 3080 3090 "lib/bprint.ml" 80 3080 3092
+type(
+  Bsyntax.sort list
+)
+ident(
+  def ms "lib/bprint.ml" 81 3109 3115 "lib/bprint.ml" 83 3187 3229
+)
+"lib/bprint.ml" 80 3080 3093 "lib/bprint.ml" 80 3080 3095
+type(
+  Bident.Qid.t
+)
+ident(
+  def q1 "lib/bprint.ml" 81 3109 3115 "lib/bprint.ml" 83 3187 3229
+)
+"lib/bprint.ml" 80 3080 3084 "lib/bprint.ml" 80 3080 3096
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 81 3109 3115 "lib/bprint.ml" 81 3109 3118
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 81 3109 3119 "lib/bprint.ml" 81 3109 3132
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 81 3109 3115 "lib/bprint.ml" 81 3109 3132
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 82 3134 3140 "lib/bprint.ml" 82 3134 3156
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.sort -> unit) -> Bsyntax.sort list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 82 3134 3157 "lib/bprint.ml" 82 3134 3162
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 82 3134 3163 "lib/bprint.ml" 82 3134 3176
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 82 3134 3177 "lib/bprint.ml" 82 3134 3179
+type(
+  Bsyntax.sort list
+)
+ident(
+  int_ref ms "lib/bprint.ml" 80 3080 3090 "lib/bprint.ml" 80 3080 3092
+)
+"lib/bprint.ml" 82 3134 3140 "lib/bprint.ml" 82 3134 3179
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 83 3187 3193 "lib/bprint.ml" 83 3187 3196
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 83 3187 3197 "lib/bprint.ml" 83 3187 3208
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 83 3187 3210 "lib/bprint.ml" 83 3187 3225
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 83 3187 3226 "lib/bprint.ml" 83 3187 3228
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q1 "lib/bprint.ml" 80 3080 3093 "lib/bprint.ml" 80 3080 3095
+)
+"lib/bprint.ml" 83 3187 3209 "lib/bprint.ml" 83 3187 3229
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 83 3187 3193 "lib/bprint.ml" 83 3187 3229
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 82 3134 3140 "lib/bprint.ml" 83 3187 3229
+type(
+  unit
+)
+"lib/bprint.ml" 81 3109 3115 "lib/bprint.ml" 83 3187 3229
+type(
+  unit
+)
+"lib/bprint.ml" 85 3231 3240 "lib/bprint.ml" 85 3231 3241
+ident(
+  def x "lib/bprint.ml" 85 3231 3246 "lib/bprint.ml" 85 3231 3278
+)
+"lib/bprint.ml" 85 3231 3239 "lib/bprint.ml" 85 3231 3242
+type(
+  Bident.Id.t
+)
+"lib/bprint.ml" 85 3231 3235 "lib/bprint.ml" 85 3231 3242
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 85 3231 3246 "lib/bprint.ml" 85 3231 3249
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 85 3231 3250 "lib/bprint.ml" 85 3231 3259
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 85 3231 3261 "lib/bprint.ml" 85 3231 3275
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 85 3231 3276 "lib/bprint.ml" 85 3231 3277
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 85 3231 3239 "lib/bprint.ml" 85 3231 3242
+)
+"lib/bprint.ml" 85 3231 3260 "lib/bprint.ml" 85 3231 3278
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 85 3231 3246 "lib/bprint.ml" 85 3231 3278
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 87 3280 3292 "lib/bprint.ml" 87 3280 3293
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 88 3301 3307 "lib/bprint.ml" 90 3376 3392
+)
+"lib/bprint.ml" 87 3280 3294 "lib/bprint.ml" 87 3280 3295
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 88 3301 3307 "lib/bprint.ml" 90 3376 3392
+)
+"lib/bprint.ml" 87 3280 3284 "lib/bprint.ml" 87 3280 3296
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 88 3301 3307 "lib/bprint.ml" 88 3301 3310
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 88 3301 3311 "lib/bprint.ml" 88 3301 3334
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 88 3301 3336 "lib/bprint.ml" 88 3301 3350
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 88 3301 3351 "lib/bprint.ml" 88 3301 3352
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 87 3280 3292 "lib/bprint.ml" 87 3280 3293
+)
+"lib/bprint.ml" 88 3301 3335 "lib/bprint.ml" 88 3301 3353
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 88 3301 3307 "lib/bprint.ml" 88 3301 3353
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 89 3355 3361 "lib/bprint.ml" 89 3355 3372
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 89 3355 3373 "lib/bprint.ml" 89 3355 3374
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 87 3280 3294 "lib/bprint.ml" 87 3280 3295
+)
+"lib/bprint.ml" 89 3355 3361 "lib/bprint.ml" 89 3355 3374
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 90 3376 3382 "lib/bprint.ml" 90 3376 3385
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 90 3376 3386 "lib/bprint.ml" 90 3376 3391
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 90 3376 3382 "lib/bprint.ml" 90 3376 3392
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 89 3355 3361 "lib/bprint.ml" 90 3376 3392
+type(
+  unit
+)
+"lib/bprint.ml" 88 3301 3307 "lib/bprint.ml" 90 3376 3392
+type(
+  unit
+)
+"lib/bprint.ml" 92 3394 3406 "lib/bprint.ml" 92 3394 3408
+type(
+  Bident.Id.t
+)
+ident(
+  def x0 "lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 99 3611 3626
+)
+"lib/bprint.ml" 92 3394 3409 "lib/bprint.ml" 92 3394 3411
+type(
+  bool
+)
+ident(
+  def b0 "lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 99 3611 3626
+)
+"lib/bprint.ml" 92 3394 3412 "lib/bprint.ml" 92 3394 3414
+type(
+  Bsyntax.sort
+)
+ident(
+  def s0 "lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 99 3611 3626
+)
+"lib/bprint.ml" 92 3394 3415 "lib/bprint.ml" 92 3394 3417
+type(
+  Bsyntax.exp
+)
+ident(
+  def e0 "lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 99 3611 3626
+)
+"lib/bprint.ml" 92 3394 3398 "lib/bprint.ml" 92 3394 3418
+type(
+  Bsyntax.sort
+)
+"lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 93 3422 3431
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 93 3422 3432 "lib/bprint.ml" 93 3422 3437
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 93 3422 3437
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 94 3439 3448 "lib/bprint.ml" 94 3439 3451
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"lib/bprint.ml" 94 3439 3453 "lib/bprint.ml" 94 3439 3461
+type(
+  Bident.Id.t -> Bident.Id.t -> bool
+)
+ident(
+  ext_ref Bident.Id.equal
+)
+"lib/bprint.ml" 94 3439 3462 "lib/bprint.ml" 94 3439 3464
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x0 "lib/bprint.ml" 92 3394 3406 "lib/bprint.ml" 92 3394 3408
+)
+"lib/bprint.ml" 94 3439 3465 "lib/bprint.ml" 94 3439 3472
+type(
+  Bident.Id.t
+)
+ident(
+  ext_ref Bident.Id.wild
+)
+"lib/bprint.ml" 94 3439 3452 "lib/bprint.ml" 94 3439 3473
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bprint.ml" 94 3439 3448 "lib/bprint.ml" 94 3439 3473
+type(
+  bool
+)
+"lib/bprint.ml" 95 3474 3485 "lib/bprint.ml" 95 3474 3488
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 95 3474 3489 "lib/bprint.ml" 95 3474 3496
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 95 3474 3498 "lib/bprint.ml" 95 3474 3512
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 95 3474 3513 "lib/bprint.ml" 95 3474 3515
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x0 "lib/bprint.ml" 92 3394 3406 "lib/bprint.ml" 92 3394 3408
+)
+"lib/bprint.ml" 95 3474 3497 "lib/bprint.ml" 95 3474 3516
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 95 3474 3485 "lib/bprint.ml" 95 3474 3516
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 94 3439 3445 "lib/bprint.ml" 95 3474 3516
+type(
+  unit
+)
+"lib/bprint.ml" 96 3518 3524 "lib/bprint.ml" 96 3518 3535
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 96 3518 3536 "lib/bprint.ml" 96 3518 3538
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s0 "lib/bprint.ml" 92 3394 3412 "lib/bprint.ml" 92 3394 3414
+)
+"lib/bprint.ml" 96 3518 3524 "lib/bprint.ml" 96 3518 3538
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 97 3540 3546 "lib/bprint.ml" 97 3540 3549
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 97 3540 3550 "lib/bprint.ml" 97 3540 3563
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 97 3540 3568 "lib/bprint.ml" 97 3540 3570
+type(
+  bool
+)
+ident(
+  int_ref b0 "lib/bprint.ml" 92 3394 3409 "lib/bprint.ml" 92 3394 3411
+)
+"lib/bprint.ml" 97 3540 3576 "lib/bprint.ml" 97 3540 3579
+type(
+  string
+)
+"lib/bprint.ml" 97 3540 3585 "lib/bprint.ml" 97 3540 3587
+type(
+  string
+)
+"lib/bprint.ml" 97 3540 3564 "lib/bprint.ml" 97 3540 3588
+type(
+  string
+)
+"lib/bprint.ml" 97 3540 3546 "lib/bprint.ml" 97 3540 3588
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 98 3590 3596 "lib/bprint.ml" 98 3590 3606
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 98 3590 3607 "lib/bprint.ml" 98 3590 3609
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e0 "lib/bprint.ml" 92 3394 3415 "lib/bprint.ml" 92 3394 3417
+)
+"lib/bprint.ml" 98 3590 3596 "lib/bprint.ml" 98 3590 3609
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 99 3611 3617 "lib/bprint.ml" 99 3611 3620
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 99 3611 3621 "lib/bprint.ml" 99 3611 3626
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 99 3611 3617 "lib/bprint.ml" 99 3611 3626
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 98 3590 3596 "lib/bprint.ml" 99 3611 3626
+type(
+  unit
+)
+"lib/bprint.ml" 97 3540 3546 "lib/bprint.ml" 99 3611 3626
+type(
+  unit
+)
+"lib/bprint.ml" 96 3518 3524 "lib/bprint.ml" 99 3611 3626
+type(
+  unit
+)
+"lib/bprint.ml" 94 3439 3445 "lib/bprint.ml" 99 3611 3626
+type(
+  unit
+)
+"lib/bprint.ml" 93 3422 3428 "lib/bprint.ml" 99 3611 3626
+type(
+  unit
+)
+"lib/bprint.ml" 42 2118 2140 "lib/bprint.ml" 99 3611 3626
+type(
+  Bsyntax.sort -> unit
+)
+"lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  def format_pat "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 101 3628 3643 "lib/bprint.ml" 101 3628 3645
+type(
+  Bsyntax.pat
+)
+ident(
+  def p0 "lib/bprint.ml" 101 3628 3648 "lib/bprint.ml" 119 4155 4170
+)
+"lib/bprint.ml" 101 3628 3654 "lib/bprint.ml" 101 3628 3656
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p0 "lib/bprint.ml" 101 3628 3643 "lib/bprint.ml" 101 3628 3645
+)
+"lib/bprint.ml" 102 3663 3672 "lib/bprint.ml" 102 3663 3673
+type(
+  Info.t
+)
+"lib/bprint.ml" 102 3663 3667 "lib/bprint.ml" 102 3663 3673
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 102 3663 3677 "lib/bprint.ml" 102 3663 3680
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 102 3663 3681 "lib/bprint.ml" 102 3663 3684
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 102 3663 3677 "lib/bprint.ml" 102 3663 3684
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 103 3685 3694 "lib/bprint.ml" 103 3685 3695
+type(
+  Info.t
+)
+"lib/bprint.ml" 103 3685 3689 "lib/bprint.ml" 103 3685 3695
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 103 3685 3699 "lib/bprint.ml" 103 3685 3702
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 103 3685 3703 "lib/bprint.ml" 103 3685 3707
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 103 3685 3699 "lib/bprint.ml" 103 3685 3707
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 104 3708 3717 "lib/bprint.ml" 104 3708 3718
+type(
+  Info.t
+)
+"lib/bprint.ml" 104 3708 3719 "lib/bprint.ml" 104 3708 3720
+type(
+  int
+)
+ident(
+  def n "lib/bprint.ml" 104 3708 3725 "lib/bprint.ml" 104 3708 3735
+)
+"lib/bprint.ml" 104 3708 3712 "lib/bprint.ml" 104 3708 3721
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 104 3708 3725 "lib/bprint.ml" 104 3708 3728
+type(
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 104 3708 3729 "lib/bprint.ml" 104 3708 3733
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 104 3708 3734 "lib/bprint.ml" 104 3708 3735
+type(
+  int
+)
+ident(
+  int_ref n "lib/bprint.ml" 104 3708 3719 "lib/bprint.ml" 104 3708 3720
+)
+"lib/bprint.ml" 104 3708 3725 "lib/bprint.ml" 104 3708 3735
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 105 3736 3745 "lib/bprint.ml" 105 3736 3746
+type(
+  Info.t
+)
+"lib/bprint.ml" 105 3736 3747 "lib/bprint.ml" 105 3736 3748
+type(
+  bool
+)
+ident(
+  def b "lib/bprint.ml" 105 3736 3753 "lib/bprint.ml" 105 3736 3763
+)
+"lib/bprint.ml" 105 3736 3740 "lib/bprint.ml" 105 3736 3749
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 105 3736 3753 "lib/bprint.ml" 105 3736 3756
+type(
+  (bool -> unit, Format.formatter, unit) format -> bool -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 105 3736 3757 "lib/bprint.ml" 105 3736 3761
+type(
+  (bool -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 105 3736 3762 "lib/bprint.ml" 105 3736 3763
+type(
+  bool
+)
+ident(
+  int_ref b "lib/bprint.ml" 105 3736 3747 "lib/bprint.ml" 105 3736 3748
+)
+"lib/bprint.ml" 105 3736 3753 "lib/bprint.ml" 105 3736 3763
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 106 3764 3773 "lib/bprint.ml" 106 3764 3774
+type(
+  Info.t
+)
+"lib/bprint.ml" 106 3764 3775 "lib/bprint.ml" 106 3764 3776
+type(
+  Bsyntax.pat
+)
+ident(
+  def p "lib/bprint.ml" 106 3764 3781 "lib/bprint.ml" 106 3764 3818
+)
+"lib/bprint.ml" 106 3764 3768 "lib/bprint.ml" 106 3764 3777
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 106 3764 3781 "lib/bprint.ml" 106 3764 3784
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 106 3764 3785 "lib/bprint.ml" 106 3764 3794
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 106 3764 3781 "lib/bprint.ml" 106 3764 3794
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 106 3764 3796 "lib/bprint.ml" 106 3764 3806
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 106 3764 3807 "lib/bprint.ml" 106 3764 3808
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p "lib/bprint.ml" 106 3764 3775 "lib/bprint.ml" 106 3764 3776
+)
+"lib/bprint.ml" 106 3764 3796 "lib/bprint.ml" 106 3764 3808
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 106 3764 3810 "lib/bprint.ml" 106 3764 3813
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 106 3764 3814 "lib/bprint.ml" 106 3764 3818
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 106 3764 3810 "lib/bprint.ml" 106 3764 3818
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 106 3764 3796 "lib/bprint.ml" 106 3764 3818
+type(
+  unit
+)
+"lib/bprint.ml" 106 3764 3781 "lib/bprint.ml" 106 3764 3818
+type(
+  unit
+)
+"lib/bprint.ml" 107 3819 3828 "lib/bprint.ml" 107 3819 3829
+type(
+  Info.t
+)
+"lib/bprint.ml" 107 3819 3830 "lib/bprint.ml" 107 3819 3831
+type(
+  string
+)
+ident(
+  def s "lib/bprint.ml" 107 3819 3836 "lib/bprint.ml" 107 3819 3846
+)
+"lib/bprint.ml" 107 3819 3823 "lib/bprint.ml" 107 3819 3832
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 107 3819 3836 "lib/bprint.ml" 107 3819 3839
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 107 3819 3840 "lib/bprint.ml" 107 3819 3844
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 107 3819 3845 "lib/bprint.ml" 107 3819 3846
+type(
+  string
+)
+ident(
+  int_ref s "lib/bprint.ml" 107 3819 3830 "lib/bprint.ml" 107 3819 3831
+)
+"lib/bprint.ml" 107 3819 3836 "lib/bprint.ml" 107 3819 3846
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 108 3847 3856 "lib/bprint.ml" 108 3847 3857
+type(
+  Info.t
+)
+"lib/bprint.ml" 108 3847 3858 "lib/bprint.ml" 108 3847 3859
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 108 3847 3866 "lib/bprint.ml" 108 3847 3893
+)
+"lib/bprint.ml" 108 3847 3860 "lib/bprint.ml" 108 3847 3861
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 108 3847 3851 "lib/bprint.ml" 108 3847 3862
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 108 3847 3866 "lib/bprint.ml" 108 3847 3869
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 108 3847 3870 "lib/bprint.ml" 108 3847 3874
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 108 3847 3876 "lib/bprint.ml" 108 3847 3890
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 108 3847 3891 "lib/bprint.ml" 108 3847 3892
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 108 3847 3858 "lib/bprint.ml" 108 3847 3859
+)
+"lib/bprint.ml" 108 3847 3875 "lib/bprint.ml" 108 3847 3893
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 108 3847 3866 "lib/bprint.ml" 108 3847 3893
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 109 3894 3903 "lib/bprint.ml" 109 3894 3904
+type(
+  Info.t
+)
+"lib/bprint.ml" 109 3894 3905 "lib/bprint.ml" 109 3894 3907
+type(
+  Bsyntax.pat
+)
+ident(
+  def p1 "lib/bprint.ml" 110 3916 3922 "lib/bprint.ml" 114 3995 4011
+)
+"lib/bprint.ml" 109 3894 3908 "lib/bprint.ml" 109 3894 3910
+type(
+  Bsyntax.pat
+)
+ident(
+  def p2 "lib/bprint.ml" 110 3916 3922 "lib/bprint.ml" 114 3995 4011
+)
+"lib/bprint.ml" 109 3894 3898 "lib/bprint.ml" 109 3894 3911
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 110 3916 3922 "lib/bprint.ml" 110 3916 3925
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 110 3916 3926 "lib/bprint.ml" 110 3916 3934
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 110 3916 3922 "lib/bprint.ml" 110 3916 3934
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 111 3936 3942 "lib/bprint.ml" 111 3936 3952
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 111 3936 3953 "lib/bprint.ml" 111 3936 3955
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p1 "lib/bprint.ml" 109 3894 3905 "lib/bprint.ml" 109 3894 3907
+)
+"lib/bprint.ml" 111 3936 3942 "lib/bprint.ml" 111 3936 3955
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 112 3957 3963 "lib/bprint.ml" 112 3957 3966
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 112 3957 3967 "lib/bprint.ml" 112 3957 3972
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 112 3957 3963 "lib/bprint.ml" 112 3957 3972
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 113 3974 3980 "lib/bprint.ml" 113 3974 3990
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 113 3974 3991 "lib/bprint.ml" 113 3974 3993
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p2 "lib/bprint.ml" 109 3894 3908 "lib/bprint.ml" 109 3894 3910
+)
+"lib/bprint.ml" 113 3974 3980 "lib/bprint.ml" 113 3974 3993
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 114 3995 4001 "lib/bprint.ml" 114 3995 4004
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 114 3995 4005 "lib/bprint.ml" 114 3995 4010
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 114 3995 4001 "lib/bprint.ml" 114 3995 4011
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 113 3974 3980 "lib/bprint.ml" 114 3995 4011
+type(
+  unit
+)
+"lib/bprint.ml" 112 3957 3963 "lib/bprint.ml" 114 3995 4011
+type(
+  unit
+)
+"lib/bprint.ml" 111 3936 3942 "lib/bprint.ml" 114 3995 4011
+type(
+  unit
+)
+"lib/bprint.ml" 110 3916 3922 "lib/bprint.ml" 114 3995 4011
+type(
+  unit
+)
+"lib/bprint.ml" 115 4012 4021 "lib/bprint.ml" 115 4012 4022
+type(
+  Info.t
+)
+"lib/bprint.ml" 115 4012 4023 "lib/bprint.ml" 115 4012 4024
+type(
+  Bident.Qid.t
+)
+ident(
+  def l "lib/bprint.ml" 115 4012 4034 "lib/bprint.ml" 115 4012 4062
+)
+"lib/bprint.ml" 115 4012 4025 "lib/bprint.ml" 115 4012 4029
+type(
+  Bsyntax.pat option
+)
+"lib/bprint.ml" 115 4012 4016 "lib/bprint.ml" 115 4012 4030
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 115 4012 4034 "lib/bprint.ml" 115 4012 4037
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 115 4012 4038 "lib/bprint.ml" 115 4012 4042
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 115 4012 4044 "lib/bprint.ml" 115 4012 4059
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 115 4012 4060 "lib/bprint.ml" 115 4012 4061
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref l "lib/bprint.ml" 115 4012 4023 "lib/bprint.ml" 115 4012 4024
+)
+"lib/bprint.ml" 115 4012 4043 "lib/bprint.ml" 115 4012 4062
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 115 4012 4034 "lib/bprint.ml" 115 4012 4062
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 116 4063 4072 "lib/bprint.ml" 116 4063 4073
+type(
+  Info.t
+)
+"lib/bprint.ml" 116 4063 4074 "lib/bprint.ml" 116 4063 4075
+type(
+  Bident.Qid.t
+)
+ident(
+  def l "lib/bprint.ml" 117 4090 4096 "lib/bprint.ml" 119 4155 4170
+)
+"lib/bprint.ml" 116 4063 4081 "lib/bprint.ml" 116 4063 4083
+type(
+  Bsyntax.pat
+)
+ident(
+  def p1 "lib/bprint.ml" 117 4090 4096 "lib/bprint.ml" 119 4155 4170
+)
+"lib/bprint.ml" 116 4063 4076 "lib/bprint.ml" 116 4063 4083
+type(
+  Bsyntax.pat option
+)
+"lib/bprint.ml" 116 4063 4067 "lib/bprint.ml" 116 4063 4084
+type(
+  Bsyntax.pat
+)
+"lib/bprint.ml" 117 4090 4096 "lib/bprint.ml" 117 4090 4099
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 117 4090 4100 "lib/bprint.ml" 117 4090 4112
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 117 4090 4114 "lib/bprint.ml" 117 4090 4129
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 117 4090 4130 "lib/bprint.ml" 117 4090 4131
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref l "lib/bprint.ml" 116 4063 4074 "lib/bprint.ml" 116 4063 4075
+)
+"lib/bprint.ml" 117 4090 4113 "lib/bprint.ml" 117 4090 4132
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 117 4090 4096 "lib/bprint.ml" 117 4090 4132
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 118 4134 4140 "lib/bprint.ml" 118 4134 4150
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 118 4134 4151 "lib/bprint.ml" 118 4134 4153
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p1 "lib/bprint.ml" 116 4063 4081 "lib/bprint.ml" 116 4063 4083
+)
+"lib/bprint.ml" 118 4134 4140 "lib/bprint.ml" 118 4134 4153
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 119 4155 4161 "lib/bprint.ml" 119 4155 4164
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 119 4155 4165 "lib/bprint.ml" 119 4155 4170
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 119 4155 4161 "lib/bprint.ml" 119 4155 4170
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 118 4134 4140 "lib/bprint.ml" 119 4155 4170
+type(
+  unit
+)
+"lib/bprint.ml" 117 4090 4096 "lib/bprint.ml" 119 4155 4170
+type(
+  unit
+)
+"lib/bprint.ml" 101 3628 3648 "lib/bprint.ml" 119 4155 4170
+type(
+  unit
+)
+"lib/bprint.ml" 121 4172 4176 "lib/bprint.ml" 121 4172 4188
+type(
+  Bsyntax.param -> unit
+)
+ident(
+  def format_param "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 121 4172 4189 "lib/bprint.ml" 121 4172 4191
+type(
+  Bsyntax.param
+)
+ident(
+  def p0 "lib/bprint.ml" 121 4172 4194 "lib/bprint.ml" 125 4294 4309
+)
+"lib/bprint.ml" 121 4172 4200 "lib/bprint.ml" 121 4172 4202
+type(
+  Bsyntax.param
+)
+ident(
+  int_ref p0 "lib/bprint.ml" 121 4172 4189 "lib/bprint.ml" 121 4172 4191
+)
+"lib/bprint.ml" 122 4208 4218 "lib/bprint.ml" 122 4208 4219
+type(
+  Info.t
+)
+"lib/bprint.ml" 122 4208 4220 "lib/bprint.ml" 122 4208 4221
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 123 4228 4234 "lib/bprint.ml" 125 4294 4309
+)
+"lib/bprint.ml" 122 4208 4222 "lib/bprint.ml" 122 4208 4223
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 123 4228 4234 "lib/bprint.ml" 125 4294 4309
+)
+"lib/bprint.ml" 122 4208 4212 "lib/bprint.ml" 122 4208 4224
+type(
+  Bsyntax.param
+)
+"lib/bprint.ml" 123 4228 4234 "lib/bprint.ml" 123 4228 4237
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 123 4228 4238 "lib/bprint.ml" 123 4228 4246
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 123 4228 4248 "lib/bprint.ml" 123 4228 4262
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 123 4228 4263 "lib/bprint.ml" 123 4228 4264
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 122 4208 4220 "lib/bprint.ml" 122 4208 4221
+)
+"lib/bprint.ml" 123 4228 4247 "lib/bprint.ml" 123 4228 4265
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 123 4228 4234 "lib/bprint.ml" 123 4228 4265
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 124 4273 4279 "lib/bprint.ml" 124 4273 4290
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 124 4273 4291 "lib/bprint.ml" 124 4273 4292
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 122 4208 4222 "lib/bprint.ml" 122 4208 4223
+)
+"lib/bprint.ml" 124 4273 4279 "lib/bprint.ml" 124 4273 4292
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 125 4294 4300 "lib/bprint.ml" 125 4294 4303
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 125 4294 4304 "lib/bprint.ml" 125 4294 4309
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 125 4294 4300 "lib/bprint.ml" 125 4294 4309
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 124 4273 4279 "lib/bprint.ml" 125 4294 4309
+type(
+  unit
+)
+"lib/bprint.ml" 123 4228 4234 "lib/bprint.ml" 125 4294 4309
+type(
+  unit
+)
+"lib/bprint.ml" 121 4172 4194 "lib/bprint.ml" 125 4294 4309
+type(
+  unit
+)
+"lib/bprint.ml" 127 4311 4315 "lib/bprint.ml" 127 4311 4329
+type(
+  Bsyntax.binding -> unit
+)
+ident(
+  def format_binding "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 127 4311 4330 "lib/bprint.ml" 127 4311 4332
+type(
+  Bsyntax.binding
+)
+ident(
+  def b0 "lib/bprint.ml" 127 4311 4335 "lib/bprint.ml" 134 4520 4534
+)
+"lib/bprint.ml" 127 4311 4341 "lib/bprint.ml" 127 4311 4343
+type(
+  Bsyntax.binding
+)
+ident(
+  int_ref b0 "lib/bprint.ml" 127 4311 4330 "lib/bprint.ml" 127 4311 4332
+)
+"lib/bprint.ml" 128 4349 4359 "lib/bprint.ml" 128 4349 4360
+type(
+  Info.t
+)
+"lib/bprint.ml" 128 4349 4361 "lib/bprint.ml" 128 4349 4362
+type(
+  Bsyntax.pat
+)
+ident(
+  def p "lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 134 4520 4534
+)
+"lib/bprint.ml" 128 4349 4363 "lib/bprint.ml" 128 4349 4365
+type(
+  Bsyntax.sort option
+)
+ident(
+  def so "lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 134 4520 4534
+)
+"lib/bprint.ml" 128 4349 4366 "lib/bprint.ml" 128 4349 4367
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 134 4520 4534
+)
+"lib/bprint.ml" 128 4349 4353 "lib/bprint.ml" 128 4349 4368
+type(
+  Bsyntax.binding
+)
+"lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 129 4372 4381
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 129 4372 4382 "lib/bprint.ml" 129 4372 4386
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 129 4372 4386
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 130 4388 4394 "lib/bprint.ml" 130 4388 4404
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 130 4388 4405 "lib/bprint.ml" 130 4388 4406
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p "lib/bprint.ml" 128 4349 4361 "lib/bprint.ml" 128 4349 4362
+)
+"lib/bprint.ml" 130 4388 4394 "lib/bprint.ml" 130 4388 4406
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4421 "lib/bprint.ml" 131 4408 4423
+type(
+  Bsyntax.sort option
+)
+ident(
+  int_ref so "lib/bprint.ml" 128 4349 4363 "lib/bprint.ml" 128 4349 4365
+)
+"lib/bprint.ml" 131 4408 4429 "lib/bprint.ml" 131 4408 4433
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 131 4408 4437 "lib/bprint.ml" 131 4408 4439
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4447 "lib/bprint.ml" 131 4408 4448
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 131 4408 4452 "lib/bprint.ml" 131 4408 4478
+)
+"lib/bprint.ml" 131 4408 4442 "lib/bprint.ml" 131 4408 4448
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 131 4408 4452 "lib/bprint.ml" 131 4408 4455
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 131 4408 4456 "lib/bprint.ml" 131 4408 4463
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 131 4408 4452 "lib/bprint.ml" 131 4408 4463
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4465 "lib/bprint.ml" 131 4408 4476
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 131 4408 4477 "lib/bprint.ml" 131 4408 4478
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 131 4408 4447 "lib/bprint.ml" 131 4408 4448
+)
+"lib/bprint.ml" 131 4408 4465 "lib/bprint.ml" 131 4408 4478
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4452 "lib/bprint.ml" 131 4408 4478
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4414 "lib/bprint.ml" 131 4408 4479
+type(
+  unit
+)
+"lib/bprint.ml" 132 4481 4487 "lib/bprint.ml" 132 4481 4490
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 132 4481 4491 "lib/bprint.ml" 132 4481 4498
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 132 4481 4487 "lib/bprint.ml" 132 4481 4498
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 133 4500 4506 "lib/bprint.ml" 133 4500 4516
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 133 4500 4517 "lib/bprint.ml" 133 4500 4518
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 128 4349 4366 "lib/bprint.ml" 128 4349 4367
+)
+"lib/bprint.ml" 133 4500 4506 "lib/bprint.ml" 133 4500 4518
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 134 4520 4526 "lib/bprint.ml" 134 4520 4529
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 134 4520 4530 "lib/bprint.ml" 134 4520 4534
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 134 4520 4526 "lib/bprint.ml" 134 4520 4534
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 133 4500 4506 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 132 4481 4487 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 131 4408 4414 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 130 4388 4394 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 129 4372 4378 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 127 4311 4335 "lib/bprint.ml" 134 4520 4534
+type(
+  unit
+)
+"lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  def format_exp "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 136 4544 4559 "lib/bprint.ml" 136 4544 4561
+type(
+  Bsyntax.exp
+)
+ident(
+  def e0 "lib/bprint.ml" 136 4544 4564 "lib/bprint.ml" 274 7474 7491
+)
+"lib/bprint.ml" 136 4544 4570 "lib/bprint.ml" 136 4544 4572
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e0 "lib/bprint.ml" 136 4544 4559 "lib/bprint.ml" 136 4544 4561
+)
+"lib/bprint.ml" 137 4579 4589 "lib/bprint.ml" 137 4579 4590
+type(
+  Info.t
+)
+"lib/bprint.ml" 137 4579 4591 "lib/bprint.ml" 137 4579 4593
+type(
+  Bsyntax.exp
+)
+ident(
+  def e1 "lib/bprint.ml" 138 4601 4607 "lib/bprint.ml" 142 4679 4694
+)
+"lib/bprint.ml" 137 4579 4594 "lib/bprint.ml" 137 4579 4596
+type(
+  Bsyntax.exp
+)
+ident(
+  def e2 "lib/bprint.ml" 138 4601 4607 "lib/bprint.ml" 142 4679 4694
+)
+"lib/bprint.ml" 137 4579 4583 "lib/bprint.ml" 137 4579 4597
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 138 4601 4607 "lib/bprint.ml" 138 4601 4610
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 138 4601 4611 "lib/bprint.ml" 138 4601 4619
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 138 4601 4607 "lib/bprint.ml" 138 4601 4619
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 139 4621 4627 "lib/bprint.ml" 139 4621 4637
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 139 4621 4638 "lib/bprint.ml" 139 4621 4640
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e1 "lib/bprint.ml" 137 4579 4591 "lib/bprint.ml" 137 4579 4593
+)
+"lib/bprint.ml" 139 4621 4627 "lib/bprint.ml" 139 4621 4640
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 140 4642 4648 "lib/bprint.ml" 140 4642 4651
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 140 4642 4652 "lib/bprint.ml" 140 4642 4656
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 140 4642 4648 "lib/bprint.ml" 140 4642 4656
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 141 4658 4664 "lib/bprint.ml" 141 4658 4674
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 141 4658 4675 "lib/bprint.ml" 141 4658 4677
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e2 "lib/bprint.ml" 137 4579 4594 "lib/bprint.ml" 137 4579 4596
+)
+"lib/bprint.ml" 141 4658 4664 "lib/bprint.ml" 141 4658 4677
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 142 4679 4685 "lib/bprint.ml" 142 4679 4688
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 142 4679 4689 "lib/bprint.ml" 142 4679 4694
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 142 4679 4685 "lib/bprint.ml" 142 4679 4694
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 141 4658 4664 "lib/bprint.ml" 142 4679 4694
+type(
+  unit
+)
+"lib/bprint.ml" 140 4642 4648 "lib/bprint.ml" 142 4679 4694
+type(
+  unit
+)
+"lib/bprint.ml" 139 4621 4627 "lib/bprint.ml" 142 4679 4694
+type(
+  unit
+)
+"lib/bprint.ml" 138 4601 4607 "lib/bprint.ml" 142 4679 4694
+type(
+  unit
+)
+"lib/bprint.ml" 144 4696 4705 "lib/bprint.ml" 144 4696 4706
+type(
+  Info.t
+)
+"lib/bprint.ml" 144 4696 4707 "lib/bprint.ml" 144 4696 4708
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bprint.ml" 145 4714 4720 "lib/bprint.ml" 145 4714 4752
+)
+"lib/bprint.ml" 144 4696 4700 "lib/bprint.ml" 144 4696 4709
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 145 4714 4720 "lib/bprint.ml" 145 4714 4723
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 145 4714 4724 "lib/bprint.ml" 145 4714 4732
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 145 4714 4734 "lib/bprint.ml" 145 4714 4749
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 145 4714 4750 "lib/bprint.ml" 145 4714 4751
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bprint.ml" 144 4696 4707 "lib/bprint.ml" 144 4696 4708
+)
+"lib/bprint.ml" 145 4714 4733 "lib/bprint.ml" 145 4714 4752
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 145 4714 4720 "lib/bprint.ml" 145 4714 4752
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 147 4755 4765 "lib/bprint.ml" 147 4755 4766
+type(
+  Info.t
+)
+"lib/bprint.ml" 147 4755 4767 "lib/bprint.ml" 147 4755 4774
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 147 4755 4776 "lib/bprint.ml" 147 4755 4777
+type(
+  Bsyntax.exp
+)
+ident(
+  def b "lib/bprint.ml" 148 4787 4793 "lib/bprint.ml" 148 4787 4885
+)
+"lib/bprint.ml" 147 4755 4778 "lib/bprint.ml" 147 4755 4779
+type(
+  Bsyntax.exp
+)
+ident(
+  def w "lib/bprint.ml" 148 4787 4793 "lib/bprint.ml" 148 4787 4885
+)
+"lib/bprint.ml" 147 4755 4780 "lib/bprint.ml" 147 4755 4781
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 148 4787 4793 "lib/bprint.ml" 148 4787 4885
+)
+"lib/bprint.ml" 147 4755 4775 "lib/bprint.ml" 147 4755 4782
+type(
+  Bsyntax.exp list
+)
+"lib/bprint.ml" 147 4755 4759 "lib/bprint.ml" 147 4755 4783
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 148 4787 4793 "lib/bprint.ml" 148 4787 4796
+type(
+  ((Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit,
+   Format.formatter, unit)
+  format ->
+  (Format.formatter -> Bsyntax.exp -> unit) ->
+  Bsyntax.exp ->
+  (Format.formatter -> Bsyntax.exp -> unit) ->
+  Bsyntax.exp ->
+  (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 148 4787 4797 "lib/bprint.ml" 148 4787 4813
+type(
+  ((Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit,
+   Format.formatter, unit)
+  format
+)
+"lib/bprint.ml" 148 4787 4819 "lib/bprint.ml" 148 4787 4820
+type(
+  Format.formatter
+)
+"lib/bprint.ml" 148 4787 4824 "lib/bprint.ml" 148 4787 4834
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 148 4787 4814 "lib/bprint.ml" 148 4787 4835
+type(
+  Format.formatter -> Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 148 4787 4836 "lib/bprint.ml" 148 4787 4837
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref b "lib/bprint.ml" 147 4755 4776 "lib/bprint.ml" 147 4755 4777
+)
+"lib/bprint.ml" 148 4787 4843 "lib/bprint.ml" 148 4787 4844
+type(
+  Format.formatter
+)
+"lib/bprint.ml" 148 4787 4848 "lib/bprint.ml" 148 4787 4858
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 148 4787 4838 "lib/bprint.ml" 148 4787 4859
+type(
+  Format.formatter -> Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 148 4787 4860 "lib/bprint.ml" 148 4787 4861
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref w "lib/bprint.ml" 147 4755 4778 "lib/bprint.ml" 147 4755 4779
+)
+"lib/bprint.ml" 148 4787 4867 "lib/bprint.ml" 148 4787 4868
+type(
+  Format.formatter
+)
+"lib/bprint.ml" 148 4787 4872 "lib/bprint.ml" 148 4787 4882
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 148 4787 4862 "lib/bprint.ml" 148 4787 4883
+type(
+  Format.formatter -> Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 148 4787 4884 "lib/bprint.ml" 148 4787 4885
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 147 4755 4780 "lib/bprint.ml" 147 4755 4781
+)
+"lib/bprint.ml" 148 4787 4793 "lib/bprint.ml" 148 4787 4885
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 150 4887 4897 "lib/bprint.ml" 150 4887 4898
+type(
+  Info.t
+)
+"lib/bprint.ml" 150 4887 4899 "lib/bprint.ml" 150 4887 4905
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 150 4887 4907 "lib/bprint.ml" 150 4887 4908
+type(
+  Bsyntax.exp
+)
+ident(
+  def t "lib/bprint.ml" 151 4916 4922 "lib/bprint.ml" 151 4916 4995
+)
+"lib/bprint.ml" 150 4887 4909 "lib/bprint.ml" 150 4887 4910
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 151 4916 4922 "lib/bprint.ml" 151 4916 4995
+)
+"lib/bprint.ml" 150 4887 4906 "lib/bprint.ml" 150 4887 4911
+type(
+  Bsyntax.exp list
+)
+"lib/bprint.ml" 150 4887 4891 "lib/bprint.ml" 150 4887 4912
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 151 4916 4922 "lib/bprint.ml" 151 4916 4925
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 151 4916 4926 "lib/bprint.ml" 151 4916 4930
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 151 4916 4922 "lib/bprint.ml" 151 4916 4930
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 151 4916 4932 "lib/bprint.ml" 151 4916 4935
+type(
+  ((Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit,
+   Format.formatter, unit)
+  format ->
+  (Format.formatter -> Bsyntax.exp -> unit) ->
+  Bsyntax.exp ->
+  (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 151 4916 4936 "lib/bprint.ml" 151 4916 4947
+type(
+  ((Format.formatter -> Bsyntax.exp -> unit) ->
+   Bsyntax.exp ->
+   (Format.formatter -> Bsyntax.exp -> unit) -> Bsyntax.exp -> unit,
+   Format.formatter, unit)
+  format
+)
+"lib/bprint.ml" 151 4916 4953 "lib/bprint.ml" 151 4916 4954
+type(
+  Format.formatter
+)
+"lib/bprint.ml" 151 4916 4958 "lib/bprint.ml" 151 4916 4968
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 151 4916 4948 "lib/bprint.ml" 151 4916 4969
+type(
+  Format.formatter -> Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 151 4916 4970 "lib/bprint.ml" 151 4916 4971
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref t "lib/bprint.ml" 150 4887 4907 "lib/bprint.ml" 150 4887 4908
+)
+"lib/bprint.ml" 151 4916 4977 "lib/bprint.ml" 151 4916 4978
+type(
+  Format.formatter
+)
+"lib/bprint.ml" 151 4916 4982 "lib/bprint.ml" 151 4916 4992
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 151 4916 4972 "lib/bprint.ml" 151 4916 4993
+type(
+  Format.formatter -> Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 151 4916 4994 "lib/bprint.ml" 151 4916 4995
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 150 4887 4909 "lib/bprint.ml" 150 4887 4910
+)
+"lib/bprint.ml" 151 4916 4932 "lib/bprint.ml" 151 4916 4995
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 151 4916 4922 "lib/bprint.ml" 151 4916 4995
+type(
+  unit
+)
+"lib/bprint.ml" 153 4997 5007 "lib/bprint.ml" 153 4997 5008
+type(
+  Info.t
+)
+"lib/bprint.ml" 153 4997 5009 "lib/bprint.ml" 153 4997 5011
+type(
+  Bsyntax.op
+)
+ident(
+  def op "lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 166 5330 5353
+)
+"lib/bprint.ml" 153 4997 5012 "lib/bprint.ml" 153 4997 5014
+type(
+  Bsyntax.exp
+)
+ident(
+  def e1 "lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 166 5330 5353
+)
+"lib/bprint.ml" 153 4997 5016 "lib/bprint.ml" 153 4997 5020
+type(
+  Bsyntax.exp list
+)
+ident(
+  def rest "lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 166 5330 5353
+)
+"lib/bprint.ml" 153 4997 5012 "lib/bprint.ml" 153 4997 5020
+type(
+  Bsyntax.exp list
+)
+"lib/bprint.ml" 153 4997 5001 "lib/bprint.ml" 153 4997 5021
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 154 5026 5035
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 154 5026 5036 "lib/bprint.ml" 154 5026 5044
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 154 5026 5044
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 155 5046 5052 "lib/bprint.ml" 155 5046 5062
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 155 5046 5063 "lib/bprint.ml" 155 5046 5065
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e1 "lib/bprint.ml" 153 4997 5012 "lib/bprint.ml" 153 4997 5014
+)
+"lib/bprint.ml" 155 5046 5052 "lib/bprint.ml" 155 5046 5065
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 156 5067 5080 "lib/bprint.ml" 156 5067 5084
+type(
+  Bsyntax.exp list
+)
+ident(
+  int_ref rest "lib/bprint.ml" 153 4997 5016 "lib/bprint.ml" 153 4997 5020
+)
+"lib/bprint.ml" 157 5091 5102 "lib/bprint.ml" 157 5091 5104
+type(
+  Bsyntax.exp list
+)
+"lib/bprint.ml" 158 5109 5122 "lib/bprint.ml" 158 5109 5125
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 158 5109 5126 "lib/bprint.ml" 158 5109 5129
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 158 5109 5122 "lib/bprint.ml" 158 5109 5129
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 159 5131 5144 "lib/bprint.ml" 159 5131 5153
+type(
+  Bsyntax.op -> unit
+)
+ident(
+  int_ref format_op "lib/bprint.ml" 276 7493 7497 "lib/bprint.ml" 276 7493 7506
+)
+"lib/bprint.ml" 159 5131 5154 "lib/bprint.ml" 159 5131 5156
+type(
+  Bsyntax.op
+)
+ident(
+  int_ref op "lib/bprint.ml" 153 4997 5009 "lib/bprint.ml" 153 4997 5011
+)
+"lib/bprint.ml" 159 5131 5144 "lib/bprint.ml" 159 5131 5156
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 160 5158 5171 "lib/bprint.ml" 160 5158 5174
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 160 5158 5175 "lib/bprint.ml" 160 5158 5179
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 160 5158 5171 "lib/bprint.ml" 160 5158 5179
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 159 5131 5144 "lib/bprint.ml" 160 5158 5179
+type(
+  unit
+)
+"lib/bprint.ml" 158 5109 5122 "lib/bprint.ml" 160 5158 5179
+type(
+  unit
+)
+"lib/bprint.ml" 161 5180 5191 "lib/bprint.ml" 161 5180 5192
+type(
+  Bsyntax.exp list
+)
+"lib/bprint.ml" 162 5197 5210 "lib/bprint.ml" 162 5197 5213
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 162 5197 5214 "lib/bprint.ml" 162 5197 5217
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 162 5197 5210 "lib/bprint.ml" 162 5197 5217
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 163 5219 5232 "lib/bprint.ml" 163 5219 5241
+type(
+  Bsyntax.op -> unit
+)
+ident(
+  int_ref format_op "lib/bprint.ml" 276 7493 7497 "lib/bprint.ml" 276 7493 7506
+)
+"lib/bprint.ml" 163 5219 5242 "lib/bprint.ml" 163 5219 5244
+type(
+  Bsyntax.op
+)
+ident(
+  int_ref op "lib/bprint.ml" 153 4997 5009 "lib/bprint.ml" 153 4997 5011
+)
+"lib/bprint.ml" 163 5219 5232 "lib/bprint.ml" 163 5219 5244
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 164 5246 5259 "lib/bprint.ml" 164 5246 5262
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 164 5246 5263 "lib/bprint.ml" 164 5246 5266
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 164 5246 5259 "lib/bprint.ml" 164 5246 5266
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 165 5268 5281 "lib/bprint.ml" 165 5268 5297
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.exp -> unit) -> Bsyntax.exp list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 165 5268 5298 "lib/bprint.ml" 165 5268 5300
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 165 5268 5301 "lib/bprint.ml" 165 5268 5311
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 165 5268 5312 "lib/bprint.ml" 165 5268 5316
+type(
+  Bsyntax.exp list
+)
+ident(
+  int_ref rest "lib/bprint.ml" 153 4997 5016 "lib/bprint.ml" 153 4997 5020
+)
+"lib/bprint.ml" 165 5268 5281 "lib/bprint.ml" 165 5268 5316
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 166 5330 5343 "lib/bprint.ml" 166 5330 5346
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 166 5330 5347 "lib/bprint.ml" 166 5330 5352
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 166 5330 5343 "lib/bprint.ml" 166 5330 5352
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 165 5268 5281 "lib/bprint.ml" 166 5330 5352
+type(
+  unit
+)
+"lib/bprint.ml" 164 5246 5259 "lib/bprint.ml" 166 5330 5352
+type(
+  unit
+)
+"lib/bprint.ml" 163 5219 5232 "lib/bprint.ml" 166 5330 5352
+type(
+  unit
+)
+"lib/bprint.ml" 162 5197 5210 "lib/bprint.ml" 166 5330 5352
+type(
+  unit
+)
+"lib/bprint.ml" 156 5067 5073 "lib/bprint.ml" 166 5330 5353
+type(
+  unit
+)
+"lib/bprint.ml" 155 5046 5052 "lib/bprint.ml" 166 5330 5353
+type(
+  unit
+)
+"lib/bprint.ml" 154 5026 5032 "lib/bprint.ml" 166 5330 5353
+type(
+  unit
+)
+"lib/bprint.ml" 168 5355 5365 "lib/bprint.ml" 168 5355 5366
+type(
+  Bsyntax.exp list
+)
+type(
+  Bsyntax.op
+)
+type(
+  Info.t
+)
+"lib/bprint.ml" 168 5355 5359 "lib/bprint.ml" 168 5355 5366
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 168 5355 5377 "lib/bprint.ml" 168 5355 5382
+type(
+  bool
+)
+"lib/bprint.ml" 168 5355 5370 "lib/bprint.ml" 168 5355 5382
+type(
+  unit
+)
+"lib/bprint.ml" 170 5390 5400 "lib/bprint.ml" 170 5390 5401
+type(
+  Info.t
+)
+"lib/bprint.ml" 170 5390 5402 "lib/bprint.ml" 170 5390 5403
+type(
+  Bsyntax.param
+)
+ident(
+  def p "lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 178 5584 5600
+)
+"lib/bprint.ml" 170 5390 5404 "lib/bprint.ml" 170 5390 5405
+type(
+  Bsyntax.sort option
+)
+ident(
+  def s "lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 178 5584 5600
+)
+"lib/bprint.ml" 170 5390 5406 "lib/bprint.ml" 170 5390 5407
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 178 5584 5600
+)
+"lib/bprint.ml" 170 5390 5394 "lib/bprint.ml" 170 5390 5408
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 171 5412 5421
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 171 5412 5422 "lib/bprint.ml" 171 5412 5435
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 171 5412 5435
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 172 5437 5443 "lib/bprint.ml" 172 5437 5455
+type(
+  Bsyntax.param -> unit
+)
+ident(
+  int_ref format_param "lib/bprint.ml" 121 4172 4176 "lib/bprint.ml" 121 4172 4188
+)
+"lib/bprint.ml" 172 5437 5456 "lib/bprint.ml" 172 5437 5457
+type(
+  Bsyntax.param
+)
+ident(
+  int_ref p "lib/bprint.ml" 170 5390 5402 "lib/bprint.ml" 170 5390 5403
+)
+"lib/bprint.ml" 172 5437 5443 "lib/bprint.ml" 172 5437 5457
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 173 5459 5472 "lib/bprint.ml" 173 5459 5473
+type(
+  Bsyntax.sort option
+)
+ident(
+  int_ref s "lib/bprint.ml" 170 5390 5404 "lib/bprint.ml" 170 5390 5405
+)
+"lib/bprint.ml" 174 5479 5483 "lib/bprint.ml" 174 5479 5487
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 174 5479 5491 "lib/bprint.ml" 174 5479 5493
+type(
+  unit
+)
+"lib/bprint.ml" 175 5494 5510 "lib/bprint.ml" 175 5494 5511
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 175 5494 5515 "lib/bprint.ml" 175 5494 5541
+)
+"lib/bprint.ml" 175 5494 5505 "lib/bprint.ml" 175 5494 5511
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 175 5494 5515 "lib/bprint.ml" 175 5494 5518
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 175 5494 5519 "lib/bprint.ml" 175 5494 5526
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 175 5494 5515 "lib/bprint.ml" 175 5494 5526
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 175 5494 5528 "lib/bprint.ml" 175 5494 5539
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 175 5494 5540 "lib/bprint.ml" 175 5494 5541
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 175 5494 5510 "lib/bprint.ml" 175 5494 5511
+)
+"lib/bprint.ml" 175 5494 5528 "lib/bprint.ml" 175 5494 5541
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 175 5494 5515 "lib/bprint.ml" 175 5494 5541
+type(
+  unit
+)
+"lib/bprint.ml" 173 5459 5465 "lib/bprint.ml" 175 5494 5542
+type(
+  unit
+)
+"lib/bprint.ml" 176 5544 5550 "lib/bprint.ml" 176 5544 5553
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 176 5544 5554 "lib/bprint.ml" 176 5544 5562
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 176 5544 5550 "lib/bprint.ml" 176 5544 5562
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 177 5564 5570 "lib/bprint.ml" 177 5564 5580
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 177 5564 5581 "lib/bprint.ml" 177 5564 5582
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 170 5390 5406 "lib/bprint.ml" 170 5390 5407
+)
+"lib/bprint.ml" 177 5564 5570 "lib/bprint.ml" 177 5564 5582
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 178 5584 5590 "lib/bprint.ml" 178 5584 5593
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 178 5584 5594 "lib/bprint.ml" 178 5584 5599
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 178 5584 5590 "lib/bprint.ml" 178 5584 5600
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 177 5564 5570 "lib/bprint.ml" 178 5584 5600
+type(
+  unit
+)
+"lib/bprint.ml" 176 5544 5550 "lib/bprint.ml" 178 5584 5600
+type(
+  unit
+)
+"lib/bprint.ml" 173 5459 5465 "lib/bprint.ml" 178 5584 5600
+type(
+  unit
+)
+"lib/bprint.ml" 172 5437 5443 "lib/bprint.ml" 178 5584 5600
+type(
+  unit
+)
+"lib/bprint.ml" 171 5412 5418 "lib/bprint.ml" 178 5584 5600
+type(
+  unit
+)
+"lib/bprint.ml" 180 5608 5618 "lib/bprint.ml" 180 5608 5619
+type(
+  Info.t
+)
+"lib/bprint.ml" 180 5608 5620 "lib/bprint.ml" 180 5608 5621
+type(
+  Bsyntax.binding
+)
+ident(
+  def b "lib/bprint.ml" 181 5628 5634 "lib/bprint.ml" 185 5715 5730
+)
+"lib/bprint.ml" 180 5608 5622 "lib/bprint.ml" 180 5608 5623
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 181 5628 5634 "lib/bprint.ml" 185 5715 5730
+)
+"lib/bprint.ml" 180 5608 5612 "lib/bprint.ml" 180 5608 5624
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 181 5628 5634 "lib/bprint.ml" 181 5628 5637
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 181 5628 5638 "lib/bprint.ml" 181 5628 5649
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 181 5628 5634 "lib/bprint.ml" 181 5628 5649
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 182 5651 5657 "lib/bprint.ml" 182 5651 5671
+type(
+  Bsyntax.binding -> unit
+)
+ident(
+  int_ref format_binding "lib/bprint.ml" 127 4311 4315 "lib/bprint.ml" 127 4311 4329
+)
+"lib/bprint.ml" 182 5651 5672 "lib/bprint.ml" 182 5651 5673
+type(
+  Bsyntax.binding
+)
+ident(
+  int_ref b "lib/bprint.ml" 180 5608 5620 "lib/bprint.ml" 180 5608 5621
+)
+"lib/bprint.ml" 182 5651 5657 "lib/bprint.ml" 182 5651 5673
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 183 5675 5681 "lib/bprint.ml" 183 5675 5684
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 183 5675 5685 "lib/bprint.ml" 183 5675 5693
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 183 5675 5681 "lib/bprint.ml" 183 5675 5693
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 184 5695 5701 "lib/bprint.ml" 184 5695 5711
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 184 5695 5712 "lib/bprint.ml" 184 5695 5713
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 180 5608 5622 "lib/bprint.ml" 180 5608 5623
+)
+"lib/bprint.ml" 184 5695 5701 "lib/bprint.ml" 184 5695 5713
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 185 5715 5721 "lib/bprint.ml" 185 5715 5724
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 185 5715 5725 "lib/bprint.ml" 185 5715 5729
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 185 5715 5721 "lib/bprint.ml" 185 5715 5730
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 184 5695 5701 "lib/bprint.ml" 185 5715 5730
+type(
+  unit
+)
+"lib/bprint.ml" 183 5675 5681 "lib/bprint.ml" 185 5715 5730
+type(
+  unit
+)
+"lib/bprint.ml" 182 5651 5657 "lib/bprint.ml" 185 5715 5730
+type(
+  unit
+)
+"lib/bprint.ml" 181 5628 5634 "lib/bprint.ml" 185 5715 5730
+type(
+  unit
+)
+"lib/bprint.ml" 187 5732 5743 "lib/bprint.ml" 187 5732 5744
+type(
+  Info.t
+)
+"lib/bprint.ml" 187 5732 5745 "lib/bprint.ml" 187 5732 5746
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 188 5754 5760 "lib/bprint.ml" 190 5829 5844
+)
+"lib/bprint.ml" 187 5732 5747 "lib/bprint.ml" 187 5732 5748
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 188 5754 5760 "lib/bprint.ml" 190 5829 5844
+)
+"lib/bprint.ml" 187 5732 5736 "lib/bprint.ml" 187 5732 5749
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 188 5754 5760 "lib/bprint.ml" 188 5754 5763
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 188 5754 5764 "lib/bprint.ml" 188 5754 5788
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 188 5754 5790 "lib/bprint.ml" 188 5754 5804
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 188 5754 5805 "lib/bprint.ml" 188 5754 5806
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 187 5732 5745 "lib/bprint.ml" 187 5732 5746
+)
+"lib/bprint.ml" 188 5754 5789 "lib/bprint.ml" 188 5754 5807
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 188 5754 5760 "lib/bprint.ml" 188 5754 5807
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 189 5809 5815 "lib/bprint.ml" 189 5809 5825
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 189 5809 5826 "lib/bprint.ml" 189 5809 5827
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 187 5732 5747 "lib/bprint.ml" 187 5732 5748
+)
+"lib/bprint.ml" 189 5809 5815 "lib/bprint.ml" 189 5809 5827
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 190 5829 5835 "lib/bprint.ml" 190 5829 5838
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 190 5829 5839 "lib/bprint.ml" 190 5829 5844
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 190 5829 5835 "lib/bprint.ml" 190 5829 5844
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 189 5809 5815 "lib/bprint.ml" 190 5829 5844
+type(
+  unit
+)
+"lib/bprint.ml" 188 5754 5760 "lib/bprint.ml" 190 5829 5844
+type(
+  unit
+)
+"lib/bprint.ml" 192 5847 5858 "lib/bprint.ml" 192 5847 5859
+type(
+  Info.t
+)
+"lib/bprint.ml" 192 5847 5860 "lib/bprint.ml" 192 5847 5861
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 193 5869 5875 "lib/bprint.ml" 197 5950 5967
+)
+"lib/bprint.ml" 192 5847 5862 "lib/bprint.ml" 192 5847 5863
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 193 5869 5875 "lib/bprint.ml" 197 5950 5967
+)
+"lib/bprint.ml" 192 5847 5851 "lib/bprint.ml" 192 5847 5864
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 193 5869 5875 "lib/bprint.ml" 193 5869 5878
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 193 5869 5879 "lib/bprint.ml" 193 5869 5886
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 193 5869 5875 "lib/bprint.ml" 193 5869 5886
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 194 5888 5894 "lib/bprint.ml" 194 5888 5904
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 194 5888 5905 "lib/bprint.ml" 194 5888 5906
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 192 5847 5860 "lib/bprint.ml" 192 5847 5861
+)
+"lib/bprint.ml" 194 5888 5894 "lib/bprint.ml" 194 5888 5906
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 195 5908 5914 "lib/bprint.ml" 195 5908 5917
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 195 5908 5918 "lib/bprint.ml" 195 5908 5925
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 195 5908 5914 "lib/bprint.ml" 195 5908 5925
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 196 5928 5934 "lib/bprint.ml" 196 5928 5945
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 196 5928 5946 "lib/bprint.ml" 196 5928 5947
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 192 5847 5862 "lib/bprint.ml" 192 5847 5863
+)
+"lib/bprint.ml" 196 5928 5934 "lib/bprint.ml" 196 5928 5947
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 197 5950 5956 "lib/bprint.ml" 197 5950 5959
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 197 5950 5960 "lib/bprint.ml" 197 5950 5967
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 197 5950 5956 "lib/bprint.ml" 197 5950 5967
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 196 5928 5934 "lib/bprint.ml" 197 5950 5967
+type(
+  unit
+)
+"lib/bprint.ml" 195 5908 5914 "lib/bprint.ml" 197 5950 5967
+type(
+  unit
+)
+"lib/bprint.ml" 194 5888 5894 "lib/bprint.ml" 197 5950 5967
+type(
+  unit
+)
+"lib/bprint.ml" 193 5869 5875 "lib/bprint.ml" 197 5950 5967
+type(
+  unit
+)
+"lib/bprint.ml" 199 5970 5980 "lib/bprint.ml" 199 5970 5981
+type(
+  Info.t
+)
+"lib/bprint.ml" 199 5970 5974 "lib/bprint.ml" 199 5970 5981
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 199 5970 5985 "lib/bprint.ml" 199 5970 5988
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 199 5970 5989 "lib/bprint.ml" 199 5970 5993
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 199 5970 5985 "lib/bprint.ml" 199 5970 5993
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 201 6001 6011 "lib/bprint.ml" 201 6001 6012
+type(
+  Info.t
+)
+"lib/bprint.ml" 201 6001 6013 "lib/bprint.ml" 201 6001 6015
+type(
+  Bsyntax.exp
+)
+ident(
+  def e1 "lib/bprint.ml" 202 6024 6030 "lib/bprint.ml" 206 6105 6122
+)
+"lib/bprint.ml" 201 6001 6016 "lib/bprint.ml" 201 6001 6018
+type(
+  Bsyntax.exp
+)
+ident(
+  def e2 "lib/bprint.ml" 202 6024 6030 "lib/bprint.ml" 206 6105 6122
+)
+"lib/bprint.ml" 201 6001 6005 "lib/bprint.ml" 201 6001 6019
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 202 6024 6030 "lib/bprint.ml" 202 6024 6033
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 202 6024 6034 "lib/bprint.ml" 202 6024 6044
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 202 6024 6030 "lib/bprint.ml" 202 6024 6044
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 203 6046 6052 "lib/bprint.ml" 203 6046 6062
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 203 6046 6063 "lib/bprint.ml" 203 6046 6065
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e1 "lib/bprint.ml" 201 6001 6013 "lib/bprint.ml" 201 6001 6015
+)
+"lib/bprint.ml" 203 6046 6052 "lib/bprint.ml" 203 6046 6065
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 204 6067 6073 "lib/bprint.ml" 204 6067 6076
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 204 6067 6077 "lib/bprint.ml" 204 6067 6082
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 204 6067 6073 "lib/bprint.ml" 204 6067 6082
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 205 6084 6090 "lib/bprint.ml" 205 6084 6100
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 205 6084 6101 "lib/bprint.ml" 205 6084 6103
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e2 "lib/bprint.ml" 201 6001 6016 "lib/bprint.ml" 201 6001 6018
+)
+"lib/bprint.ml" 205 6084 6090 "lib/bprint.ml" 205 6084 6103
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 206 6105 6111 "lib/bprint.ml" 206 6105 6114
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 206 6105 6115 "lib/bprint.ml" 206 6105 6122
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 206 6105 6111 "lib/bprint.ml" 206 6105 6122
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 205 6084 6090 "lib/bprint.ml" 206 6105 6122
+type(
+  unit
+)
+"lib/bprint.ml" 204 6067 6073 "lib/bprint.ml" 206 6105 6122
+type(
+  unit
+)
+"lib/bprint.ml" 203 6046 6052 "lib/bprint.ml" 206 6105 6122
+type(
+  unit
+)
+"lib/bprint.ml" 202 6024 6030 "lib/bprint.ml" 206 6105 6122
+type(
+  unit
+)
+"lib/bprint.ml" 208 6125 6135 "lib/bprint.ml" 208 6125 6136
+type(
+  Info.t
+)
+"lib/bprint.ml" 208 6125 6137 "lib/bprint.ml" 208 6125 6139
+type(
+  Bsyntax.exp
+)
+ident(
+  def e1 "lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 228 6539 6548
+)
+"lib/bprint.ml" 208 6125 6140 "lib/bprint.ml" 208 6125 6142
+type(
+  (Bsyntax.pat * Bsyntax.exp) list
+)
+ident(
+  def pl "lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 228 6539 6548
+)
+"lib/bprint.ml" 208 6125 6143 "lib/bprint.ml" 208 6125 6144
+type(
+  Bsyntax.sort option
+)
+ident(
+  def s "lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 228 6539 6548
+)
+"lib/bprint.ml" 208 6125 6129 "lib/bprint.ml" 208 6125 6145
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 209 6150 6159
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 209 6150 6160 "lib/bprint.ml" 209 6150 6175
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 209 6150 6175
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 210 6177 6183 "lib/bprint.ml" 210 6177 6193
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 210 6177 6194 "lib/bprint.ml" 210 6177 6196
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e1 "lib/bprint.ml" 208 6125 6137 "lib/bprint.ml" 208 6125 6139
+)
+"lib/bprint.ml" 210 6177 6183 "lib/bprint.ml" 210 6177 6196
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 211 6198 6204 "lib/bprint.ml" 211 6198 6207
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 211 6198 6208 "lib/bprint.ml" 211 6198 6218
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 211 6198 6204 "lib/bprint.ml" 211 6198 6218
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 212 6220 6226 "lib/bprint.ml" 212 6220 6242
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.pat * Bsyntax.exp -> unit) ->
+  (Bsyntax.pat * Bsyntax.exp) list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 212 6220 6243 "lib/bprint.ml" 212 6220 6249
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 213 6250 6264 "lib/bprint.ml" 213 6250 6265
+type(
+  Bsyntax.pat
+)
+ident(
+  def p "lib/bprint.ml" 214 6273 6284 "lib/bprint.ml" 218 6372 6391
+)
+"lib/bprint.ml" 213 6250 6266 "lib/bprint.ml" 213 6250 6267
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 214 6273 6284 "lib/bprint.ml" 218 6372 6391
+)
+"lib/bprint.ml" 213 6250 6263 "lib/bprint.ml" 213 6250 6268
+type(
+  Bsyntax.pat * Bsyntax.exp
+)
+"lib/bprint.ml" 214 6273 6284 "lib/bprint.ml" 214 6273 6287
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 214 6273 6288 "lib/bprint.ml" 214 6273 6295
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 214 6273 6284 "lib/bprint.ml" 214 6273 6295
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 215 6297 6308 "lib/bprint.ml" 215 6297 6318
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 215 6297 6319 "lib/bprint.ml" 215 6297 6320
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p "lib/bprint.ml" 213 6250 6264 "lib/bprint.ml" 213 6250 6265
+)
+"lib/bprint.ml" 215 6297 6308 "lib/bprint.ml" 215 6297 6320
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 216 6322 6333 "lib/bprint.ml" 216 6322 6336
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 216 6322 6337 "lib/bprint.ml" 216 6322 6345
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 216 6322 6333 "lib/bprint.ml" 216 6322 6345
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 217 6347 6358 "lib/bprint.ml" 217 6347 6368
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 217 6347 6369 "lib/bprint.ml" 217 6347 6370
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 213 6250 6266 "lib/bprint.ml" 213 6250 6267
+)
+"lib/bprint.ml" 217 6347 6358 "lib/bprint.ml" 217 6347 6370
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 218 6372 6383 "lib/bprint.ml" 218 6372 6386
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 218 6372 6387 "lib/bprint.ml" 218 6372 6391
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 218 6372 6383 "lib/bprint.ml" 218 6372 6391
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 217 6347 6358 "lib/bprint.ml" 218 6372 6391
+type(
+  unit
+)
+"lib/bprint.ml" 216 6322 6333 "lib/bprint.ml" 218 6372 6391
+type(
+  unit
+)
+"lib/bprint.ml" 215 6297 6308 "lib/bprint.ml" 218 6372 6391
+type(
+  unit
+)
+"lib/bprint.ml" 214 6273 6284 "lib/bprint.ml" 218 6372 6391
+type(
+  unit
+)
+"lib/bprint.ml" 213 6250 6258 "lib/bprint.ml" 218 6372 6392
+type(
+  Bsyntax.pat * Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 219 6393 6401 "lib/bprint.ml" 219 6393 6403
+type(
+  (Bsyntax.pat * Bsyntax.exp) list
+)
+ident(
+  int_ref pl "lib/bprint.ml" 208 6125 6140 "lib/bprint.ml" 208 6125 6142
+)
+"lib/bprint.ml" 212 6220 6226 "lib/bprint.ml" 219 6393 6403
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 220 6405 6411 "lib/bprint.ml" 220 6405 6414
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 220 6405 6415 "lib/bprint.ml" 220 6405 6420
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 220 6405 6411 "lib/bprint.ml" 220 6405 6420
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 221 6422 6440 "lib/bprint.ml" 221 6422 6441
+type(
+  Bsyntax.sort option
+)
+ident(
+  int_ref s "lib/bprint.ml" 208 6125 6143 "lib/bprint.ml" 208 6125 6144
+)
+"lib/bprint.ml" 222 6447 6455 "lib/bprint.ml" 222 6447 6456
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 223 6460 6465 "lib/bprint.ml" 225 6499 6512
+)
+"lib/bprint.ml" 222 6447 6450 "lib/bprint.ml" 222 6447 6456
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 223 6460 6465 "lib/bprint.ml" 223 6460 6468
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 223 6460 6469 "lib/bprint.ml" 223 6460 6477
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 223 6460 6465 "lib/bprint.ml" 223 6460 6477
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 224 6479 6484 "lib/bprint.ml" 224 6479 6495
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 224 6479 6496 "lib/bprint.ml" 224 6479 6497
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 222 6447 6455 "lib/bprint.ml" 222 6447 6456
+)
+"lib/bprint.ml" 224 6479 6484 "lib/bprint.ml" 224 6479 6497
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 225 6499 6504 "lib/bprint.ml" 225 6499 6507
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 225 6499 6508 "lib/bprint.ml" 225 6499 6512
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 225 6499 6504 "lib/bprint.ml" 225 6499 6512
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 224 6479 6484 "lib/bprint.ml" 225 6499 6512
+type(
+  unit
+)
+"lib/bprint.ml" 223 6460 6465 "lib/bprint.ml" 225 6499 6512
+type(
+  unit
+)
+"lib/bprint.ml" 226 6513 6516 "lib/bprint.ml" 226 6513 6520
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 227 6524 6529 "lib/bprint.ml" 227 6524 6532
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 227 6524 6533 "lib/bprint.ml" 227 6524 6538
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 227 6524 6529 "lib/bprint.ml" 227 6524 6538
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 221 6422 6428 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 220 6405 6411 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 212 6220 6226 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 211 6198 6204 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 210 6177 6183 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 209 6150 6156 "lib/bprint.ml" 228 6539 6548
+type(
+  unit
+)
+"lib/bprint.ml" 230 6550 6560 "lib/bprint.ml" 230 6550 6561
+type(
+  Info.t
+)
+"lib/bprint.ml" 230 6550 6562 "lib/bprint.ml" 230 6550 6563
+type(
+  Bsyntax.sort
+)
+ident(
+  def f "lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 237 6696 6710
+)
+"lib/bprint.ml" 230 6550 6564 "lib/bprint.ml" 230 6550 6565
+type(
+  Bsyntax.sort
+)
+ident(
+  def t "lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 237 6696 6710
+)
+"lib/bprint.ml" 230 6550 6566 "lib/bprint.ml" 230 6550 6567
+type(
+  Info.t
+)
+ident(
+  def b "lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 237 6696 6710
+)
+"lib/bprint.ml" 230 6550 6568 "lib/bprint.ml" 230 6550 6569
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 237 6696 6710
+)
+"lib/bprint.ml" 230 6550 6554 "lib/bprint.ml" 230 6550 6570
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 231 6575 6584
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 231 6575 6585 "lib/bprint.ml" 231 6575 6594
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 231 6575 6594
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 232 6596 6602 "lib/bprint.ml" 232 6596 6613
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 232 6596 6614 "lib/bprint.ml" 232 6596 6615
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref t "lib/bprint.ml" 230 6550 6564 "lib/bprint.ml" 230 6550 6565
+)
+"lib/bprint.ml" 232 6596 6602 "lib/bprint.ml" 232 6596 6615
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 233 6617 6623 "lib/bprint.ml" 233 6617 6626
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 233 6617 6627 "lib/bprint.ml" 233 6617 6635
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 233 6617 6623 "lib/bprint.ml" 233 6617 6635
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 234 6637 6643 "lib/bprint.ml" 234 6637 6654
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 234 6637 6655 "lib/bprint.ml" 234 6637 6656
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref f "lib/bprint.ml" 230 6550 6562 "lib/bprint.ml" 230 6550 6563
+)
+"lib/bprint.ml" 234 6637 6643 "lib/bprint.ml" 234 6637 6656
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 235 6658 6664 "lib/bprint.ml" 235 6658 6667
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 235 6658 6668 "lib/bprint.ml" 235 6658 6674
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 235 6658 6664 "lib/bprint.ml" 235 6658 6674
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 236 6676 6682 "lib/bprint.ml" 236 6676 6692
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 236 6676 6693 "lib/bprint.ml" 236 6676 6694
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 230 6550 6568 "lib/bprint.ml" 230 6550 6569
+)
+"lib/bprint.ml" 236 6676 6682 "lib/bprint.ml" 236 6676 6694
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 237 6696 6702 "lib/bprint.ml" 237 6696 6705
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 237 6696 6706 "lib/bprint.ml" 237 6696 6710
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 237 6696 6702 "lib/bprint.ml" 237 6696 6710
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 236 6676 6682 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 235 6658 6664 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 234 6637 6643 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 233 6617 6623 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 232 6596 6602 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 231 6575 6581 "lib/bprint.ml" 237 6696 6710
+type(
+  unit
+)
+"lib/bprint.ml" 239 6712 6726 "lib/bprint.ml" 239 6712 6727
+type(
+  Info.t
+)
+"lib/bprint.ml" 239 6712 6728 "lib/bprint.ml" 239 6712 6732
+type(
+  Bsyntax.exp option
+)
+"lib/bprint.ml" 239 6712 6716 "lib/bprint.ml" 239 6712 6733
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 240 6738 6744 "lib/bprint.ml" 240 6738 6747
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 240 6738 6748 "lib/bprint.ml" 240 6738 6758
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 240 6738 6744 "lib/bprint.ml" 240 6738 6758
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 242 6760 6774 "lib/bprint.ml" 242 6760 6775
+type(
+  Info.t
+)
+"lib/bprint.ml" 242 6760 6790 "lib/bprint.ml" 242 6760 6791
+type(
+  Info.t
+)
+"lib/bprint.ml" 242 6760 6792 "lib/bprint.ml" 242 6760 6794
+type(
+  string
+)
+"lib/bprint.ml" 242 6760 6781 "lib/bprint.ml" 242 6760 6796
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 242 6760 6776 "lib/bprint.ml" 242 6760 6796
+type(
+  Bsyntax.exp option
+)
+"lib/bprint.ml" 242 6760 6764 "lib/bprint.ml" 242 6760 6797
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 243 6801 6807 "lib/bprint.ml" 243 6801 6810
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 243 6801 6811 "lib/bprint.ml" 243 6801 6822
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 243 6801 6807 "lib/bprint.ml" 243 6801 6822
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 245 6824 6838 "lib/bprint.ml" 245 6824 6839
+type(
+  Info.t
+)
+"lib/bprint.ml" 245 6824 6845 "lib/bprint.ml" 245 6824 6846
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 246 6851 6857 "lib/bprint.ml" 248 6915 6929
+)
+"lib/bprint.ml" 245 6824 6840 "lib/bprint.ml" 245 6824 6846
+type(
+  Bsyntax.exp option
+)
+"lib/bprint.ml" 245 6824 6828 "lib/bprint.ml" 245 6824 6847
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 246 6851 6857 "lib/bprint.ml" 246 6851 6860
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 246 6851 6861 "lib/bprint.ml" 246 6851 6893
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 246 6851 6857 "lib/bprint.ml" 246 6851 6893
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 247 6895 6901 "lib/bprint.ml" 247 6895 6911
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 247 6895 6912 "lib/bprint.ml" 247 6895 6913
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 245 6824 6845 "lib/bprint.ml" 245 6824 6846
+)
+"lib/bprint.ml" 247 6895 6901 "lib/bprint.ml" 247 6895 6913
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 248 6915 6921 "lib/bprint.ml" 248 6915 6924
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 248 6915 6925 "lib/bprint.ml" 248 6915 6929
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 248 6915 6921 "lib/bprint.ml" 248 6915 6929
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 247 6895 6901 "lib/bprint.ml" 248 6915 6929
+type(
+  unit
+)
+"lib/bprint.ml" 246 6851 6857 "lib/bprint.ml" 248 6915 6929
+type(
+  unit
+)
+"lib/bprint.ml" 250 6931 6941 "lib/bprint.ml" 250 6931 6942
+type(
+  Info.t
+)
+"lib/bprint.ml" 250 6931 6943 "lib/bprint.ml" 250 6931 6944
+type(
+  char
+)
+ident(
+  def c "lib/bprint.ml" 250 6931 6949 "lib/bprint.ml" 250 6931 6976
+)
+"lib/bprint.ml" 250 6931 6935 "lib/bprint.ml" 250 6931 6945
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 250 6931 6949 "lib/bprint.ml" 250 6931 6952
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 250 6931 6953 "lib/bprint.ml" 250 6931 6959
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 250 6931 6961 "lib/bprint.ml" 250 6931 6973
+type(
+  char -> string
+)
+ident(
+  ext_ref Char.escaped
+)
+"lib/bprint.ml" 250 6931 6974 "lib/bprint.ml" 250 6931 6975
+type(
+  char
+)
+ident(
+  int_ref c "lib/bprint.ml" 250 6931 6943 "lib/bprint.ml" 250 6931 6944
+)
+"lib/bprint.ml" 250 6931 6960 "lib/bprint.ml" 250 6931 6976
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 250 6931 6949 "lib/bprint.ml" 250 6931 6976
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 252 6978 6991 "lib/bprint.ml" 252 6978 6992
+type(
+  Info.t
+)
+"lib/bprint.ml" 252 6978 6993 "lib/bprint.ml" 252 6978 6994
+type(
+  string
+)
+ident(
+  def s "lib/bprint.ml" 253 6999 7005 "lib/bprint.ml" 253 6999 7040
+)
+"lib/bprint.ml" 252 6978 6982 "lib/bprint.ml" 252 6978 6995
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 253 6999 7005 "lib/bprint.ml" 253 6999 7008
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 253 6999 7009 "lib/bprint.ml" 253 6999 7021
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 253 6999 7023 "lib/bprint.ml" 253 6999 7037
+type(
+  string -> string
+)
+ident(
+  ext_ref String.escaped
+)
+"lib/bprint.ml" 253 6999 7038 "lib/bprint.ml" 253 6999 7039
+type(
+  string
+)
+ident(
+  int_ref s "lib/bprint.ml" 252 6978 6993 "lib/bprint.ml" 252 6978 6994
+)
+"lib/bprint.ml" 253 6999 7022 "lib/bprint.ml" 253 6999 7040
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 253 6999 7005 "lib/bprint.ml" 253 6999 7040
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 255 7042 7056 "lib/bprint.ml" 255 7042 7057
+type(
+  Info.t
+)
+"lib/bprint.ml" 255 7042 7058 "lib/bprint.ml" 255 7042 7059
+type(
+  int
+)
+ident(
+  def i "lib/bprint.ml" 256 7064 7070 "lib/bprint.ml" 256 7064 7084
+)
+"lib/bprint.ml" 255 7042 7046 "lib/bprint.ml" 255 7042 7060
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 256 7064 7070 "lib/bprint.ml" 256 7064 7073
+type(
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 256 7064 7074 "lib/bprint.ml" 256 7064 7082
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 256 7064 7083 "lib/bprint.ml" 256 7064 7084
+type(
+  int
+)
+ident(
+  int_ref i "lib/bprint.ml" 255 7042 7058 "lib/bprint.ml" 255 7042 7059
+)
+"lib/bprint.ml" 256 7064 7070 "lib/bprint.ml" 256 7064 7084
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 258 7086 7097 "lib/bprint.ml" 258 7086 7098
+type(
+  Info.t
+)
+"lib/bprint.ml" 258 7086 7099 "lib/bprint.ml" 258 7086 7102
+type(
+  bool
+)
+ident(
+  def pos "lib/bprint.ml" 259 7115 7121 "lib/bprint.ml" 269 7362 7377
+)
+"lib/bprint.ml" 258 7086 7104 "lib/bprint.ml" 258 7086 7110
+type(
+  (char * char) list
+)
+ident(
+  def ranges "lib/bprint.ml" 259 7115 7121 "lib/bprint.ml" 269 7362 7377
+)
+"lib/bprint.ml" 258 7086 7090 "lib/bprint.ml" 258 7086 7111
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 259 7115 7121 "lib/bprint.ml" 259 7115 7124
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 259 7115 7125 "lib/bprint.ml" 259 7115 7130
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 259 7115 7121 "lib/bprint.ml" 259 7115 7130
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 260 7132 7142 "lib/bprint.ml" 260 7132 7145
+type(
+  bool
+)
+ident(
+  int_ref pos "lib/bprint.ml" 258 7086 7099 "lib/bprint.ml" 258 7086 7102
+)
+"lib/bprint.ml" 260 7132 7151 "lib/bprint.ml" 260 7132 7153
+type(
+  unit
+)
+"lib/bprint.ml" 260 7132 7159 "lib/bprint.ml" 260 7132 7162
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 260 7132 7163 "lib/bprint.ml" 260 7132 7166
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 260 7132 7159 "lib/bprint.ml" 260 7132 7166
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 260 7132 7138 "lib/bprint.ml" 260 7132 7167
+type(
+  unit
+)
+"lib/bprint.ml" 261 7169 7175 "lib/bprint.ml" 261 7169 7191
+type(
+  (unit, Format.formatter, unit) format ->
+  (char * char -> unit) -> (char * char) list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 261 7169 7192 "lib/bprint.ml" 261 7169 7194
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 262 7195 7202 "lib/bprint.ml" 262 7195 7207
+type(
+  char
+)
+ident(
+  def first "lib/bprint.ml" 263 7218 7222 "lib/bprint.ml" 267 7326 7351
+)
+"lib/bprint.ml" 262 7195 7209 "lib/bprint.ml" 262 7195 7213
+type(
+  char
+)
+ident(
+  def last "lib/bprint.ml" 263 7218 7222 "lib/bprint.ml" 267 7326 7351
+)
+"lib/bprint.ml" 262 7195 7201 "lib/bprint.ml" 262 7195 7214
+type(
+  char * char
+)
+"lib/bprint.ml" 263 7218 7225 "lib/bprint.ml" 263 7218 7230
+type(
+  char
+)
+ident(
+  int_ref first "lib/bprint.ml" 262 7195 7202 "lib/bprint.ml" 262 7195 7207
+)
+"lib/bprint.ml" 263 7218 7231 "lib/bprint.ml" 263 7218 7232
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bprint.ml" 263 7218 7233 "lib/bprint.ml" 263 7218 7237
+type(
+  char
+)
+ident(
+  int_ref last "lib/bprint.ml" 262 7195 7209 "lib/bprint.ml" 262 7195 7213
+)
+"lib/bprint.ml" 263 7218 7225 "lib/bprint.ml" 263 7218 7237
+type(
+  bool
+)
+"lib/bprint.ml" 264 7238 7247 "lib/bprint.ml" 264 7238 7250
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 264 7238 7251 "lib/bprint.ml" 264 7238 7255
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 264 7238 7257 "lib/bprint.ml" 264 7238 7269
+type(
+  char -> string
+)
+ident(
+  ext_ref Char.escaped
+)
+"lib/bprint.ml" 264 7238 7270 "lib/bprint.ml" 264 7238 7275
+type(
+  char
+)
+ident(
+  int_ref first "lib/bprint.ml" 262 7195 7202 "lib/bprint.ml" 262 7195 7207
+)
+"lib/bprint.ml" 264 7238 7256 "lib/bprint.ml" 264 7238 7276
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 264 7238 7247 "lib/bprint.ml" 264 7238 7276
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 265 7277 7286 "lib/bprint.ml" 265 7277 7289
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 265 7277 7290 "lib/bprint.ml" 265 7277 7297
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 266 7299 7306 "lib/bprint.ml" 266 7299 7318
+type(
+  char -> string
+)
+ident(
+  ext_ref Char.escaped
+)
+"lib/bprint.ml" 266 7299 7319 "lib/bprint.ml" 266 7299 7324
+type(
+  char
+)
+ident(
+  int_ref first "lib/bprint.ml" 262 7195 7202 "lib/bprint.ml" 262 7195 7207
+)
+"lib/bprint.ml" 266 7299 7305 "lib/bprint.ml" 266 7299 7325
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 267 7326 7333 "lib/bprint.ml" 267 7326 7345
+type(
+  char -> string
+)
+ident(
+  ext_ref Char.escaped
+)
+"lib/bprint.ml" 267 7326 7346 "lib/bprint.ml" 267 7326 7350
+type(
+  char
+)
+ident(
+  int_ref last "lib/bprint.ml" 262 7195 7209 "lib/bprint.ml" 262 7195 7213
+)
+"lib/bprint.ml" 267 7326 7332 "lib/bprint.ml" 267 7326 7351
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 265 7277 7286 "lib/bprint.ml" 267 7326 7351
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 263 7218 7222 "lib/bprint.ml" 267 7326 7351
+type(
+  unit
+)
+"lib/bprint.ml" 262 7195 7196 "lib/bprint.ml" 267 7326 7352
+type(
+  char * char -> unit
+)
+"lib/bprint.ml" 268 7353 7354 "lib/bprint.ml" 268 7353 7360
+type(
+  (char * char) list
+)
+ident(
+  int_ref ranges "lib/bprint.ml" 258 7086 7104 "lib/bprint.ml" 258 7086 7110
+)
+"lib/bprint.ml" 261 7169 7175 "lib/bprint.ml" 268 7353 7360
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 269 7362 7368 "lib/bprint.ml" 269 7362 7371
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 269 7362 7372 "lib/bprint.ml" 269 7362 7377
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 269 7362 7368 "lib/bprint.ml" 269 7362 7377
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 261 7169 7175 "lib/bprint.ml" 269 7362 7377
+type(
+  unit
+)
+"lib/bprint.ml" 260 7132 7138 "lib/bprint.ml" 269 7362 7377
+type(
+  unit
+)
+"lib/bprint.ml" 259 7115 7121 "lib/bprint.ml" 269 7362 7377
+type(
+  unit
+)
+"lib/bprint.ml" 271 7379 7392 "lib/bprint.ml" 271 7379 7393
+type(
+  Info.t
+)
+"lib/bprint.ml" 271 7379 7394 "lib/bprint.ml" 271 7379 7396
+type(
+  Bsyntax.prod list
+)
+ident(
+  def ps "lib/bprint.ml" 272 7401 7407 "lib/bprint.ml" 274 7474 7491
+)
+"lib/bprint.ml" 271 7379 7383 "lib/bprint.ml" 271 7379 7397
+type(
+  Bsyntax.exp
+)
+"lib/bprint.ml" 272 7401 7407 "lib/bprint.ml" 272 7401 7410
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 272 7401 7411 "lib/bprint.ml" 272 7401 7422
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 272 7401 7407 "lib/bprint.ml" 272 7401 7422
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 273 7424 7430 "lib/bprint.ml" 273 7424 7446
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.prod -> unit) -> Bsyntax.prod list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 273 7424 7447 "lib/bprint.ml" 273 7424 7457
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 273 7424 7458 "lib/bprint.ml" 273 7424 7469
+type(
+  Bsyntax.prod -> unit
+)
+ident(
+  int_ref format_prod "lib/bprint.ml" 303 8108 8112 "lib/bprint.ml" 303 8108 8123
+)
+"lib/bprint.ml" 273 7424 7470 "lib/bprint.ml" 273 7424 7472
+type(
+  Bsyntax.prod list
+)
+ident(
+  int_ref ps "lib/bprint.ml" 271 7379 7394 "lib/bprint.ml" 271 7379 7396
+)
+"lib/bprint.ml" 273 7424 7430 "lib/bprint.ml" 273 7424 7472
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 274 7474 7480 "lib/bprint.ml" 274 7474 7483
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 274 7474 7484 "lib/bprint.ml" 274 7474 7491
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 274 7474 7480 "lib/bprint.ml" 274 7474 7491
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 273 7424 7430 "lib/bprint.ml" 274 7474 7491
+type(
+  unit
+)
+"lib/bprint.ml" 272 7401 7407 "lib/bprint.ml" 274 7474 7491
+type(
+  unit
+)
+"lib/bprint.ml" 136 4544 4564 "lib/bprint.ml" 274 7474 7491
+type(
+  unit
+)
+"lib/bprint.ml" 276 7493 7497 "lib/bprint.ml" 276 7493 7506
+type(
+  Bsyntax.op -> unit
+)
+ident(
+  def format_op "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 277 7518 7528 "lib/bprint.ml" 277 7518 7529
+type(
+  int
+)
+"lib/bprint.ml" 277 7518 7530 "lib/bprint.ml" 277 7518 7532
+type(
+  int
+)
+"lib/bprint.ml" 277 7518 7522 "lib/bprint.ml" 277 7518 7533
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 277 7518 7537 "lib/bprint.ml" 277 7518 7540
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 277 7518 7541 "lib/bprint.ml" 277 7518 7544
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 277 7518 7537 "lib/bprint.ml" 277 7518 7544
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 278 7545 7555 "lib/bprint.ml" 278 7545 7556
+type(
+  int
+)
+"lib/bprint.ml" 278 7545 7557 "lib/bprint.ml" 278 7545 7559
+type(
+  int
+)
+"lib/bprint.ml" 278 7545 7549 "lib/bprint.ml" 278 7545 7560
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 278 7545 7564 "lib/bprint.ml" 278 7545 7567
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 278 7545 7568 "lib/bprint.ml" 278 7545 7571
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 278 7545 7564 "lib/bprint.ml" 278 7545 7571
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 279 7572 7582 "lib/bprint.ml" 279 7572 7583
+type(
+  int
+)
+"lib/bprint.ml" 279 7572 7584 "lib/bprint.ml" 279 7572 7585
+type(
+  int
+)
+"lib/bprint.ml" 279 7572 7576 "lib/bprint.ml" 279 7572 7586
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 279 7572 7591 "lib/bprint.ml" 279 7572 7594
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 279 7572 7595 "lib/bprint.ml" 279 7572 7598
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 279 7572 7591 "lib/bprint.ml" 279 7572 7598
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 280 7599 7609 "lib/bprint.ml" 280 7599 7610
+type(
+  int
+)
+ident(
+  def m "lib/bprint.ml" 280 7599 7618 "lib/bprint.ml" 280 7599 7631
+)
+"lib/bprint.ml" 280 7599 7611 "lib/bprint.ml" 280 7599 7613
+type(
+  int
+)
+"lib/bprint.ml" 280 7599 7603 "lib/bprint.ml" 280 7599 7614
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 280 7599 7618 "lib/bprint.ml" 280 7599 7621
+type(
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 280 7599 7622 "lib/bprint.ml" 280 7599 7629
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 280 7599 7630 "lib/bprint.ml" 280 7599 7631
+type(
+  int
+)
+ident(
+  int_ref m "lib/bprint.ml" 280 7599 7609 "lib/bprint.ml" 280 7599 7610
+)
+"lib/bprint.ml" 280 7599 7618 "lib/bprint.ml" 280 7599 7631
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 281 7632 7642 "lib/bprint.ml" 281 7632 7643
+type(
+  int
+)
+ident(
+  def m "lib/bprint.ml" 282 7652 7658 "lib/bprint.ml" 285 7703 7728
+)
+"lib/bprint.ml" 281 7632 7644 "lib/bprint.ml" 281 7632 7645
+type(
+  int
+)
+ident(
+  def n "lib/bprint.ml" 282 7652 7658 "lib/bprint.ml" 285 7703 7728
+)
+"lib/bprint.ml" 281 7632 7636 "lib/bprint.ml" 281 7632 7646
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 282 7652 7661 "lib/bprint.ml" 282 7652 7662
+type(
+  int
+)
+ident(
+  int_ref m "lib/bprint.ml" 281 7632 7642 "lib/bprint.ml" 281 7632 7643
+)
+"lib/bprint.ml" 282 7652 7662 "lib/bprint.ml" 282 7652 7663
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bprint.ml" 282 7652 7663 "lib/bprint.ml" 282 7652 7664
+type(
+  int
+)
+ident(
+  int_ref n "lib/bprint.ml" 281 7632 7644 "lib/bprint.ml" 281 7632 7645
+)
+"lib/bprint.ml" 282 7652 7661 "lib/bprint.ml" 282 7652 7664
+type(
+  bool
+)
+"lib/bprint.ml" 283 7671 7679 "lib/bprint.ml" 283 7671 7682
+type(
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 283 7671 7683 "lib/bprint.ml" 283 7671 7689
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 283 7671 7690 "lib/bprint.ml" 283 7671 7691
+type(
+  int
+)
+ident(
+  int_ref m "lib/bprint.ml" 281 7632 7642 "lib/bprint.ml" 281 7632 7643
+)
+"lib/bprint.ml" 283 7671 7679 "lib/bprint.ml" 283 7671 7691
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 285 7703 7711 "lib/bprint.ml" 285 7703 7714
+type(
+  (int -> int -> unit, Format.formatter, unit) format -> int -> int -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 285 7703 7715 "lib/bprint.ml" 285 7703 7724
+type(
+  (int -> int -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 285 7703 7725 "lib/bprint.ml" 285 7703 7726
+type(
+  int
+)
+ident(
+  int_ref m "lib/bprint.ml" 281 7632 7642 "lib/bprint.ml" 281 7632 7643
+)
+"lib/bprint.ml" 285 7703 7727 "lib/bprint.ml" 285 7703 7728
+type(
+  int
+)
+ident(
+  int_ref n "lib/bprint.ml" 281 7632 7644 "lib/bprint.ml" 281 7632 7645
+)
+"lib/bprint.ml" 285 7703 7711 "lib/bprint.ml" 285 7703 7728
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 282 7652 7658 "lib/bprint.ml" 285 7703 7728
+type(
+  unit
+)
+"lib/bprint.ml" 286 7729 7733 "lib/bprint.ml" 286 7729 7737
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 286 7729 7741 "lib/bprint.ml" 286 7729 7744
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 286 7729 7745 "lib/bprint.ml" 286 7729 7748
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 286 7729 7741 "lib/bprint.ml" 286 7729 7748
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 287 7749 7753 "lib/bprint.ml" 287 7749 7759
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 287 7749 7763 "lib/bprint.ml" 287 7749 7766
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 287 7749 7767 "lib/bprint.ml" 287 7749 7770
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 287 7749 7763 "lib/bprint.ml" 287 7749 7770
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 288 7771 7775 "lib/bprint.ml" 288 7771 7781
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 288 7771 7785 "lib/bprint.ml" 288 7771 7788
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 288 7771 7789 "lib/bprint.ml" 288 7771 7792
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 288 7771 7785 "lib/bprint.ml" 288 7771 7792
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 289 7793 7797 "lib/bprint.ml" 289 7793 7801
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 289 7793 7805 "lib/bprint.ml" 289 7793 7808
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 289 7793 7809 "lib/bprint.ml" 289 7793 7812
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 289 7793 7805 "lib/bprint.ml" 289 7793 7812
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 290 7813 7817 "lib/bprint.ml" 290 7813 7821
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 290 7813 7825 "lib/bprint.ml" 290 7813 7828
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 290 7813 7829 "lib/bprint.ml" 290 7813 7832
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 290 7813 7825 "lib/bprint.ml" 290 7813 7832
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 291 7833 7837 "lib/bprint.ml" 291 7833 7844
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 291 7833 7848 "lib/bprint.ml" 291 7833 7851
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 291 7833 7852 "lib/bprint.ml" 291 7833 7856
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 291 7833 7848 "lib/bprint.ml" 291 7833 7856
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 292 7857 7861 "lib/bprint.ml" 292 7857 7868
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 292 7857 7872 "lib/bprint.ml" 292 7857 7875
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 292 7857 7876 "lib/bprint.ml" 292 7857 7880
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 292 7857 7872 "lib/bprint.ml" 292 7857 7880
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 293 7881 7885 "lib/bprint.ml" 293 7881 7892
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 293 7881 7896 "lib/bprint.ml" 293 7881 7899
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 293 7881 7900 "lib/bprint.ml" 293 7881 7905
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 293 7881 7896 "lib/bprint.ml" 293 7881 7905
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 294 7907 7911 "lib/bprint.ml" 294 7907 7920
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 294 7907 7924 "lib/bprint.ml" 294 7907 7927
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 294 7907 7928 "lib/bprint.ml" 294 7907 7933
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 294 7907 7924 "lib/bprint.ml" 294 7907 7933
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 295 7935 7939 "lib/bprint.ml" 295 7935 7945
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 295 7935 7950 "lib/bprint.ml" 295 7935 7953
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 295 7935 7954 "lib/bprint.ml" 295 7935 7957
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 295 7935 7950 "lib/bprint.ml" 295 7935 7957
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 296 7958 7962 "lib/bprint.ml" 296 7958 7965
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 296 7958 7973 "lib/bprint.ml" 296 7958 7976
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 296 7958 7977 "lib/bprint.ml" 296 7958 7980
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 296 7958 7973 "lib/bprint.ml" 296 7958 7980
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 297 7981 7985 "lib/bprint.ml" 297 7981 7989
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 297 7981 7997 "lib/bprint.ml" 297 7981 8000
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 297 7981 8001 "lib/bprint.ml" 297 7981 8005
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 297 7981 7997 "lib/bprint.ml" 297 7981 8005
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 298 8006 8010 "lib/bprint.ml" 298 8006 8013
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 298 8006 8021 "lib/bprint.ml" 298 8006 8024
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 298 8006 8025 "lib/bprint.ml" 298 8006 8028
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 298 8006 8021 "lib/bprint.ml" 298 8006 8028
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 299 8029 8033 "lib/bprint.ml" 299 8029 8037
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 299 8029 8044 "lib/bprint.ml" 299 8029 8047
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 299 8029 8048 "lib/bprint.ml" 299 8029 8052
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 299 8029 8044 "lib/bprint.ml" 299 8029 8052
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 300 8053 8057 "lib/bprint.ml" 300 8053 8063
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 300 8053 8067 "lib/bprint.ml" 300 8053 8070
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 300 8053 8071 "lib/bprint.ml" 300 8053 8078
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 300 8053 8067 "lib/bprint.ml" 300 8053 8078
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 301 8079 8083 "lib/bprint.ml" 301 8079 8090
+type(
+  Bsyntax.op
+)
+"lib/bprint.ml" 301 8079 8094 "lib/bprint.ml" 301 8079 8097
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 301 8079 8098 "lib/bprint.ml" 301 8079 8106
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 301 8079 8094 "lib/bprint.ml" 301 8079 8106
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 276 7493 7509 "lib/bprint.ml" 301 8079 8106
+type(
+  Bsyntax.op -> unit
+)
+"lib/bprint.ml" 303 8108 8112 "lib/bprint.ml" 303 8108 8123
+type(
+  Bsyntax.prod -> unit
+)
+ident(
+  def format_prod "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 303 8108 8130 "lib/bprint.ml" 303 8108 8131
+type(
+  Info.t
+)
+"lib/bprint.ml" 303 8108 8132 "lib/bprint.ml" 303 8108 8133
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 304 8141 8143 "lib/bprint.ml" 306 8226 8238
+)
+"lib/bprint.ml" 303 8108 8134 "lib/bprint.ml" 303 8108 8136
+type(
+  Bsyntax.rule list
+)
+ident(
+  def rs "lib/bprint.ml" 304 8141 8143 "lib/bprint.ml" 306 8226 8238
+)
+"lib/bprint.ml" 303 8108 8124 "lib/bprint.ml" 303 8108 8138
+type(
+  Bsyntax.prod
+)
+"lib/bprint.ml" 304 8141 8143 "lib/bprint.ml" 304 8141 8146
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 304 8141 8147 "lib/bprint.ml" 304 8141 8161
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 304 8141 8163 "lib/bprint.ml" 304 8141 8177
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 304 8141 8178 "lib/bprint.ml" 304 8141 8179
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 303 8108 8132 "lib/bprint.ml" 303 8108 8133
+)
+"lib/bprint.ml" 304 8141 8162 "lib/bprint.ml" 304 8141 8180
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 304 8141 8143 "lib/bprint.ml" 304 8141 8180
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 305 8182 8184 "lib/bprint.ml" 305 8182 8200
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.rule -> unit) -> Bsyntax.rule list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 305 8182 8201 "lib/bprint.ml" 305 8182 8209
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 305 8182 8210 "lib/bprint.ml" 305 8182 8221
+type(
+  Bsyntax.rule -> unit
+)
+ident(
+  int_ref format_rule "lib/bprint.ml" 308 8240 8244 "lib/bprint.ml" 308 8240 8255
+)
+"lib/bprint.ml" 305 8182 8222 "lib/bprint.ml" 305 8182 8224
+type(
+  Bsyntax.rule list
+)
+ident(
+  int_ref rs "lib/bprint.ml" 303 8108 8134 "lib/bprint.ml" 303 8108 8136
+)
+"lib/bprint.ml" 305 8182 8184 "lib/bprint.ml" 305 8182 8224
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 306 8226 8228 "lib/bprint.ml" 306 8226 8231
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 306 8226 8232 "lib/bprint.ml" 306 8226 8238
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 306 8226 8228 "lib/bprint.ml" 306 8226 8238
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 305 8182 8184 "lib/bprint.ml" 306 8226 8238
+type(
+  unit
+)
+"lib/bprint.ml" 304 8141 8143 "lib/bprint.ml" 306 8226 8238
+type(
+  unit
+)
+"lib/bprint.ml" 308 8240 8244 "lib/bprint.ml" 308 8240 8255
+type(
+  Bsyntax.rule -> unit
+)
+ident(
+  def format_rule "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 308 8240 8262 "lib/bprint.ml" 308 8240 8263
+type(
+  Info.t
+)
+"lib/bprint.ml" 308 8240 8264 "lib/bprint.ml" 308 8240 8266
+type(
+  Bsyntax.exp list
+)
+ident(
+  def xs "lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 316 8513 8523
+)
+"lib/bprint.ml" 308 8240 8267 "lib/bprint.ml" 308 8240 8269
+type(
+  Bsyntax.exp list
+)
+ident(
+  def ys "lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 316 8513 8523
+)
+"lib/bprint.ml" 308 8240 8270 "lib/bprint.ml" 308 8240 8272
+type(
+  (Bident.Id.t * Bsyntax.exp) list
+)
+ident(
+  def bs "lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 316 8513 8523
+)
+"lib/bprint.ml" 308 8240 8256 "lib/bprint.ml" 308 8240 8274
+type(
+  Bsyntax.rule
+)
+"lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 309 8277 8282
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 309 8277 8283 "lib/bprint.ml" 309 8277 8287
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 309 8277 8287
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 310 8289 8291 "lib/bprint.ml" 310 8289 8307
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.exp -> unit) -> Bsyntax.exp list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 310 8289 8308 "lib/bprint.ml" 310 8289 8310
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 310 8289 8311 "lib/bprint.ml" 310 8289 8321
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 310 8289 8322 "lib/bprint.ml" 310 8289 8324
+type(
+  Bsyntax.exp list
+)
+ident(
+  int_ref xs "lib/bprint.ml" 308 8240 8264 "lib/bprint.ml" 308 8240 8266
+)
+"lib/bprint.ml" 310 8289 8291 "lib/bprint.ml" 310 8289 8324
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 311 8326 8328 "lib/bprint.ml" 311 8326 8331
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 311 8326 8332 "lib/bprint.ml" 311 8326 8342
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 311 8326 8328 "lib/bprint.ml" 311 8326 8342
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 312 8344 8346 "lib/bprint.ml" 312 8344 8362
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.exp -> unit) -> Bsyntax.exp list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 312 8344 8363 "lib/bprint.ml" 312 8344 8365
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 312 8344 8366 "lib/bprint.ml" 312 8344 8376
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 312 8344 8377 "lib/bprint.ml" 312 8344 8379
+type(
+  Bsyntax.exp list
+)
+ident(
+  int_ref ys "lib/bprint.ml" 308 8240 8267 "lib/bprint.ml" 308 8240 8269
+)
+"lib/bprint.ml" 312 8344 8346 "lib/bprint.ml" 312 8344 8379
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 313 8381 8383 "lib/bprint.ml" 313 8381 8386
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 313 8381 8387 "lib/bprint.ml" 313 8381 8399
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 313 8381 8383 "lib/bprint.ml" 313 8381 8399
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 314 8401 8403 "lib/bprint.ml" 314 8401 8419
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bident.Id.t * Bsyntax.exp -> unit) ->
+  (Bident.Id.t * Bsyntax.exp) list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 314 8401 8420 "lib/bprint.ml" 314 8401 8430
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 315 8431 8441 "lib/bprint.ml" 315 8431 8443
+type(
+  Bident.Id.t
+)
+ident(
+  def li "lib/bprint.ml" 315 8431 8451 "lib/bprint.ml" 315 8431 8507
+)
+"lib/bprint.ml" 315 8431 8444 "lib/bprint.ml" 315 8431 8446
+type(
+  Bsyntax.exp
+)
+ident(
+  def ei "lib/bprint.ml" 315 8431 8451 "lib/bprint.ml" 315 8431 8507
+)
+"lib/bprint.ml" 315 8431 8440 "lib/bprint.ml" 315 8431 8447
+type(
+  Bident.Id.t * Bsyntax.exp
+)
+"lib/bprint.ml" 315 8431 8451 "lib/bprint.ml" 315 8431 8454
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 315 8431 8455 "lib/bprint.ml" 315 8431 8462
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 315 8431 8464 "lib/bprint.ml" 315 8431 8478
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 315 8431 8479 "lib/bprint.ml" 315 8431 8481
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref li "lib/bprint.ml" 315 8431 8441 "lib/bprint.ml" 315 8431 8443
+)
+"lib/bprint.ml" 315 8431 8463 "lib/bprint.ml" 315 8431 8482
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 315 8431 8451 "lib/bprint.ml" 315 8431 8482
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 315 8431 8484 "lib/bprint.ml" 315 8431 8494
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 315 8431 8495 "lib/bprint.ml" 315 8431 8497
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref ei "lib/bprint.ml" 315 8431 8444 "lib/bprint.ml" 315 8431 8446
+)
+"lib/bprint.ml" 315 8431 8484 "lib/bprint.ml" 315 8431 8497
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 315 8431 8499 "lib/bprint.ml" 315 8431 8502
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 315 8431 8503 "lib/bprint.ml" 315 8431 8507
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 315 8431 8499 "lib/bprint.ml" 315 8431 8507
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 315 8431 8484 "lib/bprint.ml" 315 8431 8507
+type(
+  unit
+)
+"lib/bprint.ml" 315 8431 8451 "lib/bprint.ml" 315 8431 8507
+type(
+  unit
+)
+"lib/bprint.ml" 315 8431 8435 "lib/bprint.ml" 315 8431 8508
+type(
+  Bident.Id.t * Bsyntax.exp -> unit
+)
+"lib/bprint.ml" 315 8431 8509 "lib/bprint.ml" 315 8431 8511
+type(
+  (Bident.Id.t * Bsyntax.exp) list
+)
+ident(
+  int_ref bs "lib/bprint.ml" 308 8240 8270 "lib/bprint.ml" 308 8240 8272
+)
+"lib/bprint.ml" 314 8401 8403 "lib/bprint.ml" 315 8431 8511
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 316 8513 8515 "lib/bprint.ml" 316 8513 8518
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 316 8513 8519 "lib/bprint.ml" 316 8513 8523
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 316 8513 8515 "lib/bprint.ml" 316 8513 8523
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 314 8401 8403 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 313 8381 8383 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 312 8344 8346 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 311 8326 8328 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 310 8289 8291 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 309 8277 8279 "lib/bprint.ml" 316 8513 8523
+type(
+  unit
+)
+"lib/bprint.ml" 318 8525 8529 "lib/bprint.ml" 318 8525 8547
+type(
+  Bsyntax.test_result -> unit
+)
+ident(
+  def format_test_result "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 318 8525 8548 "lib/bprint.ml" 318 8525 8550
+type(
+  Bsyntax.test_result
+)
+ident(
+  def tr "lib/bprint.ml" 319 8553 8555 "lib/bprint.ml" 330 8849 8865
+)
+"lib/bprint.ml" 319 8553 8561 "lib/bprint.ml" 319 8553 8563
+type(
+  Bsyntax.test_result
+)
+ident(
+  int_ref tr "lib/bprint.ml" 318 8525 8548 "lib/bprint.ml" 318 8525 8550
+)
+"lib/bprint.ml" 320 8569 8585 "lib/bprint.ml" 320 8569 8586
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 321 8591 8599 "lib/bprint.ml" 323 8638 8655
+)
+"lib/bprint.ml" 320 8569 8575 "lib/bprint.ml" 320 8569 8586
+type(
+  Bsyntax.test_result
+)
+"lib/bprint.ml" 321 8591 8599 "lib/bprint.ml" 321 8591 8602
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 321 8591 8603 "lib/bprint.ml" 321 8591 8612
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 321 8591 8599 "lib/bprint.ml" 321 8591 8612
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 322 8616 8624 "lib/bprint.ml" 322 8616 8634
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 322 8616 8635 "lib/bprint.ml" 322 8616 8636
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 320 8569 8585 "lib/bprint.ml" 320 8569 8586
+)
+"lib/bprint.ml" 322 8616 8624 "lib/bprint.ml" 322 8616 8636
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 323 8638 8646 "lib/bprint.ml" 323 8638 8649
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 323 8638 8650 "lib/bprint.ml" 323 8638 8654
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 323 8638 8646 "lib/bprint.ml" 323 8638 8655
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 322 8616 8624 "lib/bprint.ml" 323 8638 8655
+type(
+  unit
+)
+"lib/bprint.ml" 321 8591 8599 "lib/bprint.ml" 323 8638 8655
+type(
+  unit
+)
+"lib/bprint.ml" 324 8656 8662 "lib/bprint.ml" 324 8656 8671
+type(
+  Bsyntax.test_result
+)
+"lib/bprint.ml" 324 8656 8675 "lib/bprint.ml" 324 8656 8678
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 324 8656 8679 "lib/bprint.ml" 324 8656 8695
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 324 8656 8675 "lib/bprint.ml" 324 8656 8695
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 325 8696 8702 "lib/bprint.ml" 325 8696 8711
+type(
+  Bsyntax.test_result
+)
+"lib/bprint.ml" 325 8696 8715 "lib/bprint.ml" 325 8696 8718
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 325 8696 8719 "lib/bprint.ml" 325 8696 8731
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 325 8696 8715 "lib/bprint.ml" 325 8696 8731
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 326 8732 8752 "lib/bprint.ml" 326 8732 8753
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 326 8732 8738 "lib/bprint.ml" 326 8732 8753
+type(
+  Bsyntax.test_result
+)
+"lib/bprint.ml" 326 8732 8757 "lib/bprint.ml" 326 8732 8760
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 326 8732 8761 "lib/bprint.ml" 326 8732 8773
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 326 8732 8757 "lib/bprint.ml" 326 8732 8773
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 327 8774 8794 "lib/bprint.ml" 327 8774 8795
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 327 8774 8796 "lib/bprint.ml" 327 8774 8797
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 328 8803 8811 "lib/bprint.ml" 330 8849 8865
+)
+"lib/bprint.ml" 327 8774 8780 "lib/bprint.ml" 327 8774 8798
+type(
+  Bsyntax.test_result
+)
+"lib/bprint.ml" 328 8803 8811 "lib/bprint.ml" 328 8803 8814
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 328 8803 8815 "lib/bprint.ml" 328 8803 8824
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 328 8803 8811 "lib/bprint.ml" 328 8803 8824
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 329 8826 8834 "lib/bprint.ml" 329 8826 8845
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 329 8826 8846 "lib/bprint.ml" 329 8826 8847
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 327 8774 8796 "lib/bprint.ml" 327 8774 8797
+)
+"lib/bprint.ml" 329 8826 8834 "lib/bprint.ml" 329 8826 8847
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 330 8849 8857 "lib/bprint.ml" 330 8849 8860
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 330 8849 8861 "lib/bprint.ml" 330 8849 8865
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 330 8849 8857 "lib/bprint.ml" 330 8849 8865
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 329 8826 8834 "lib/bprint.ml" 330 8849 8865
+type(
+  unit
+)
+"lib/bprint.ml" 328 8803 8811 "lib/bprint.ml" 330 8849 8865
+type(
+  unit
+)
+"lib/bprint.ml" 319 8553 8555 "lib/bprint.ml" 330 8849 8865
+type(
+  unit
+)
+"lib/bprint.ml" 332 8867 8871 "lib/bprint.ml" 332 8867 8882
+type(
+  Bsyntax.decl -> unit
+)
+ident(
+  def format_decl "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 333 8894 8904 "lib/bprint.ml" 333 8894 8905
+type(
+  Info.t
+)
+"lib/bprint.ml" 333 8894 8906 "lib/bprint.ml" 333 8894 8907
+type(
+  Bsyntax.binding
+)
+ident(
+  def b "lib/bprint.ml" 334 8912 8918 "lib/bprint.ml" 336 8959 8973
+)
+"lib/bprint.ml" 333 8894 8898 "lib/bprint.ml" 333 8894 8908
+type(
+  Bsyntax.decl
+)
+"lib/bprint.ml" 334 8912 8918 "lib/bprint.ml" 334 8912 8921
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 334 8912 8922 "lib/bprint.ml" 334 8912 8933
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 334 8912 8918 "lib/bprint.ml" 334 8912 8933
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 335 8935 8941 "lib/bprint.ml" 335 8935 8955
+type(
+  Bsyntax.binding -> unit
+)
+ident(
+  int_ref format_binding "lib/bprint.ml" 127 4311 4315 "lib/bprint.ml" 127 4311 4329
+)
+"lib/bprint.ml" 335 8935 8956 "lib/bprint.ml" 335 8935 8957
+type(
+  Bsyntax.binding
+)
+ident(
+  int_ref b "lib/bprint.ml" 333 8894 8906 "lib/bprint.ml" 333 8894 8907
+)
+"lib/bprint.ml" 335 8935 8941 "lib/bprint.ml" 335 8935 8957
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 336 8959 8965 "lib/bprint.ml" 336 8959 8968
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 336 8959 8969 "lib/bprint.ml" 336 8959 8973
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 336 8959 8965 "lib/bprint.ml" 336 8959 8973
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 335 8935 8941 "lib/bprint.ml" 336 8959 8973
+type(
+  unit
+)
+"lib/bprint.ml" 334 8912 8918 "lib/bprint.ml" 336 8959 8973
+type(
+  unit
+)
+"lib/bprint.ml" 338 8975 8985 "lib/bprint.ml" 338 8975 8986
+type(
+  Info.t
+)
+"lib/bprint.ml" 338 8975 8987 "lib/bprint.ml" 338 8975 8989
+type(
+  Bident.Id.t list
+)
+ident(
+  def xl "lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 356 9550 9564
+)
+"lib/bprint.ml" 338 8975 8990 "lib/bprint.ml" 338 8975 8991
+type(
+  Bident.Qid.t
+)
+ident(
+  def x "lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 356 9550 9564
+)
+"lib/bprint.ml" 338 8975 8992 "lib/bprint.ml" 338 8975 8994
+type(
+  (Bident.Id.t * Bsyntax.sort option) list
+)
+ident(
+  def cl "lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 356 9550 9564
+)
+"lib/bprint.ml" 338 8975 8979 "lib/bprint.ml" 338 8975 8995
+type(
+  Bsyntax.decl
+)
+"lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 339 9001 9010
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 339 9001 9011 "lib/bprint.ml" 339 9001 9024
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 339 9001 9024
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 340 9026 9039 "lib/bprint.ml" 340 9026 9041
+type(
+  Bident.Id.t list
+)
+ident(
+  int_ref xl "lib/bprint.ml" 338 8975 8987 "lib/bprint.ml" 338 8975 8989
+)
+"lib/bprint.ml" 341 9048 9059 "lib/bprint.ml" 341 9048 9061
+type(
+  Bident.Id.t list
+)
+"lib/bprint.ml" 341 9048 9065 "lib/bprint.ml" 341 9048 9067
+type(
+  unit
+)
+"lib/bprint.ml" 342 9068 9080 "lib/bprint.ml" 342 9068 9081
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bprint.ml" 342 9068 9086 "lib/bprint.ml" 342 9068 9113
+)
+"lib/bprint.ml" 342 9068 9079 "lib/bprint.ml" 342 9068 9082
+type(
+  Bident.Id.t list
+)
+"lib/bprint.ml" 342 9068 9086 "lib/bprint.ml" 342 9068 9089
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 342 9068 9090 "lib/bprint.ml" 342 9068 9094
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 342 9068 9096 "lib/bprint.ml" 342 9068 9110
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 342 9068 9111 "lib/bprint.ml" 342 9068 9112
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 342 9068 9080 "lib/bprint.ml" 342 9068 9081
+)
+"lib/bprint.ml" 342 9068 9095 "lib/bprint.ml" 342 9068 9113
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 342 9068 9086 "lib/bprint.ml" 342 9068 9113
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 343 9114 9125 "lib/bprint.ml" 343 9114 9126
+type(
+  Bident.Id.t list
+)
+"lib/bprint.ml" 344 9131 9144 "lib/bprint.ml" 344 9131 9147
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 344 9131 9148 "lib/bprint.ml" 344 9131 9151
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 344 9131 9144 "lib/bprint.ml" 344 9131 9151
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 345 9153 9166 "lib/bprint.ml" 345 9153 9182
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bident.Id.t -> unit) -> Bident.Id.t list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 345 9153 9183 "lib/bprint.ml" 345 9153 9188
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 345 9153 9194 "lib/bprint.ml" 345 9153 9196
+type(
+  Bident.Id.t
+)
+ident(
+  def xi "lib/bprint.ml" 345 9153 9200 "lib/bprint.ml" 345 9153 9228
+)
+"lib/bprint.ml" 345 9153 9200 "lib/bprint.ml" 345 9153 9203
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 345 9153 9204 "lib/bprint.ml" 345 9153 9208
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 345 9153 9210 "lib/bprint.ml" 345 9153 9224
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 345 9153 9225 "lib/bprint.ml" 345 9153 9227
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref xi "lib/bprint.ml" 345 9153 9194 "lib/bprint.ml" 345 9153 9196
+)
+"lib/bprint.ml" 345 9153 9209 "lib/bprint.ml" 345 9153 9228
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 345 9153 9200 "lib/bprint.ml" 345 9153 9228
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 345 9153 9189 "lib/bprint.ml" 345 9153 9229
+type(
+  Bident.Id.t -> unit
+)
+"lib/bprint.ml" 345 9153 9230 "lib/bprint.ml" 345 9153 9232
+type(
+  Bident.Id.t list
+)
+ident(
+  int_ref xl "lib/bprint.ml" 338 8975 8987 "lib/bprint.ml" 338 8975 8989
+)
+"lib/bprint.ml" 345 9153 9166 "lib/bprint.ml" 345 9153 9232
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 346 9234 9247 "lib/bprint.ml" 346 9234 9250
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 346 9234 9251 "lib/bprint.ml" 346 9234 9254
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 346 9234 9247 "lib/bprint.ml" 346 9234 9254
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 345 9153 9166 "lib/bprint.ml" 346 9234 9254
+type(
+  unit
+)
+"lib/bprint.ml" 344 9131 9144 "lib/bprint.ml" 346 9234 9254
+type(
+  unit
+)
+"lib/bprint.ml" 340 9026 9032 "lib/bprint.ml" 346 9234 9255
+type(
+  unit
+)
+"lib/bprint.ml" 347 9257 9263 "lib/bprint.ml" 347 9257 9266
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 347 9257 9267 "lib/bprint.ml" 347 9257 9278
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 347 9257 9280 "lib/bprint.ml" 347 9257 9295
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 347 9257 9296 "lib/bprint.ml" 347 9257 9297
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 338 8975 8990 "lib/bprint.ml" 338 8975 8991
+)
+"lib/bprint.ml" 347 9257 9279 "lib/bprint.ml" 347 9257 9298
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 347 9257 9263 "lib/bprint.ml" 347 9257 9298
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 348 9300 9306 "lib/bprint.ml" 348 9300 9322
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bident.Id.t * Bsyntax.sort option -> unit) ->
+  (Bident.Id.t * Bsyntax.sort option) list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 348 9300 9323 "lib/bprint.ml" 348 9300 9328
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 349 9329 9343 "lib/bprint.ml" 349 9329 9344
+type(
+  Bident.Id.t
+)
+ident(
+  def l "lib/bprint.ml" 349 9329 9351 "lib/bprint.ml" 354 9514 9536
+)
+"lib/bprint.ml" 349 9329 9345 "lib/bprint.ml" 349 9329 9346
+type(
+  Bsyntax.sort option
+)
+ident(
+  def s "lib/bprint.ml" 349 9329 9351 "lib/bprint.ml" 354 9514 9536
+)
+"lib/bprint.ml" 349 9329 9342 "lib/bprint.ml" 349 9329 9347
+type(
+  Bident.Id.t * Bsyntax.sort option
+)
+"lib/bprint.ml" 349 9329 9357 "lib/bprint.ml" 349 9329 9358
+type(
+  Bsyntax.sort option
+)
+ident(
+  int_ref s "lib/bprint.ml" 349 9329 9345 "lib/bprint.ml" 349 9329 9346
+)
+"lib/bprint.ml" 350 9364 9377 "lib/bprint.ml" 350 9364 9381
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 350 9364 9385 "lib/bprint.ml" 350 9364 9388
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 350 9364 9389 "lib/bprint.ml" 350 9364 9393
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 350 9364 9395 "lib/bprint.ml" 350 9364 9409
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 350 9364 9410 "lib/bprint.ml" 350 9364 9411
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref l "lib/bprint.ml" 349 9329 9343 "lib/bprint.ml" 349 9329 9344
+)
+"lib/bprint.ml" 350 9364 9394 "lib/bprint.ml" 350 9364 9412
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 350 9364 9385 "lib/bprint.ml" 350 9364 9412
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 351 9413 9431 "lib/bprint.ml" 351 9413 9432
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 352 9437 9452 "lib/bprint.ml" 354 9514 9536
+)
+"lib/bprint.ml" 351 9413 9426 "lib/bprint.ml" 351 9413 9432
+type(
+  Bsyntax.sort option
+)
+"lib/bprint.ml" 352 9437 9452 "lib/bprint.ml" 352 9437 9455
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 352 9437 9456 "lib/bprint.ml" 352 9437 9463
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 352 9437 9465 "lib/bprint.ml" 352 9437 9479
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 352 9437 9480 "lib/bprint.ml" 352 9437 9481
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref l "lib/bprint.ml" 349 9329 9343 "lib/bprint.ml" 349 9329 9344
+)
+"lib/bprint.ml" 352 9437 9464 "lib/bprint.ml" 352 9437 9482
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 352 9437 9452 "lib/bprint.ml" 352 9437 9482
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 353 9484 9499 "lib/bprint.ml" 353 9484 9510
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 353 9484 9511 "lib/bprint.ml" 353 9484 9512
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 351 9413 9431 "lib/bprint.ml" 351 9413 9432
+)
+"lib/bprint.ml" 353 9484 9499 "lib/bprint.ml" 353 9484 9512
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 354 9514 9529 "lib/bprint.ml" 354 9514 9532
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 354 9514 9533 "lib/bprint.ml" 354 9514 9536
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 354 9514 9529 "lib/bprint.ml" 354 9514 9536
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 353 9484 9499 "lib/bprint.ml" 354 9514 9536
+type(
+  unit
+)
+"lib/bprint.ml" 352 9437 9452 "lib/bprint.ml" 354 9514 9536
+type(
+  unit
+)
+"lib/bprint.ml" 349 9329 9351 "lib/bprint.ml" 354 9514 9536
+type(
+  unit
+)
+"lib/bprint.ml" 349 9329 9337 "lib/bprint.ml" 354 9514 9537
+type(
+  Bident.Id.t * Bsyntax.sort option -> unit
+)
+"lib/bprint.ml" 355 9538 9546 "lib/bprint.ml" 355 9538 9548
+type(
+  (Bident.Id.t * Bsyntax.sort option) list
+)
+ident(
+  int_ref cl "lib/bprint.ml" 338 8975 8992 "lib/bprint.ml" 338 8975 8994
+)
+"lib/bprint.ml" 348 9300 9306 "lib/bprint.ml" 355 9538 9548
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 356 9550 9556 "lib/bprint.ml" 356 9550 9559
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 356 9550 9560 "lib/bprint.ml" 356 9550 9564
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 356 9550 9556 "lib/bprint.ml" 356 9550 9564
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 348 9300 9306 "lib/bprint.ml" 356 9550 9564
+type(
+  unit
+)
+"lib/bprint.ml" 347 9257 9263 "lib/bprint.ml" 356 9550 9564
+type(
+  unit
+)
+"lib/bprint.ml" 340 9026 9032 "lib/bprint.ml" 356 9550 9564
+type(
+  unit
+)
+"lib/bprint.ml" 339 9001 9007 "lib/bprint.ml" 356 9550 9564
+type(
+  unit
+)
+"lib/bprint.ml" 358 9574 9584 "lib/bprint.ml" 358 9574 9585
+type(
+  Info.t
+)
+ident(
+  def i "lib/bprint.ml" 359 9595 9601 "lib/bprint.ml" 359 9595 9633
+)
+"lib/bprint.ml" 358 9574 9586 "lib/bprint.ml" 358 9574 9587
+type(
+  Bident.Id.t
+)
+ident(
+  def m "lib/bprint.ml" 359 9595 9601 "lib/bprint.ml" 359 9595 9633
+)
+"lib/bprint.ml" 358 9574 9588 "lib/bprint.ml" 358 9574 9590
+type(
+  Bsyntax.decl list
+)
+ident(
+  def ds "lib/bprint.ml" 359 9595 9601 "lib/bprint.ml" 359 9595 9633
+)
+"lib/bprint.ml" 358 9574 9578 "lib/bprint.ml" 358 9574 9591
+type(
+  Bsyntax.decl
+)
+"lib/bprint.ml" 359 9595 9601 "lib/bprint.ml" 359 9595 9614
+type(
+  Bsyntax.modl -> unit
+)
+ident(
+  int_ref format_module "lib/bprint.ml" 368 9766 9770 "lib/bprint.ml" 368 9766 9783
+)
+"lib/bprint.ml" 359 9595 9621 "lib/bprint.ml" 359 9595 9622
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bprint.ml" 358 9574 9584 "lib/bprint.ml" 358 9574 9585
+)
+"lib/bprint.ml" 359 9595 9623 "lib/bprint.ml" 359 9595 9624
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bprint.ml" 358 9574 9586 "lib/bprint.ml" 358 9574 9587
+)
+"lib/bprint.ml" 359 9595 9625 "lib/bprint.ml" 359 9595 9627
+type(
+  Bident.Qid.t list
+)
+"lib/bprint.ml" 359 9595 9629 "lib/bprint.ml" 359 9595 9631
+type(
+  Bsyntax.decl list
+)
+ident(
+  int_ref ds "lib/bprint.ml" 358 9574 9588 "lib/bprint.ml" 358 9574 9590
+)
+"lib/bprint.ml" 359 9595 9615 "lib/bprint.ml" 359 9595 9633
+type(
+  Bsyntax.modl
+)
+"lib/bprint.ml" 359 9595 9601 "lib/bprint.ml" 359 9595 9633
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 361 9635 9646 "lib/bprint.ml" 361 9635 9647
+type(
+  Info.t
+)
+"lib/bprint.ml" 361 9635 9648 "lib/bprint.ml" 361 9635 9649
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 362 9657 9663 "lib/bprint.ml" 366 9748 9764
+)
+"lib/bprint.ml" 361 9635 9650 "lib/bprint.ml" 361 9635 9652
+type(
+  Bsyntax.test_result
+)
+ident(
+  def tr "lib/bprint.ml" 362 9657 9663 "lib/bprint.ml" 366 9748 9764
+)
+"lib/bprint.ml" 361 9635 9639 "lib/bprint.ml" 361 9635 9653
+type(
+  Bsyntax.decl
+)
+"lib/bprint.ml" 362 9657 9663 "lib/bprint.ml" 362 9657 9666
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 362 9657 9666 "lib/bprint.ml" 362 9657 9681
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 362 9657 9663 "lib/bprint.ml" 362 9657 9681
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 363 9683 9689 "lib/bprint.ml" 363 9683 9699
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 363 9683 9700 "lib/bprint.ml" 363 9683 9701
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 361 9635 9648 "lib/bprint.ml" 361 9635 9649
+)
+"lib/bprint.ml" 363 9683 9689 "lib/bprint.ml" 363 9683 9701
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 364 9703 9709 "lib/bprint.ml" 364 9703 9712
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 364 9703 9713 "lib/bprint.ml" 364 9703 9717
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 364 9703 9709 "lib/bprint.ml" 364 9703 9717
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 365 9719 9725 "lib/bprint.ml" 365 9719 9743
+type(
+  Bsyntax.test_result -> unit
+)
+ident(
+  int_ref format_test_result "lib/bprint.ml" 318 8525 8529 "lib/bprint.ml" 318 8525 8547
+)
+"lib/bprint.ml" 365 9719 9744 "lib/bprint.ml" 365 9719 9746
+type(
+  Bsyntax.test_result
+)
+ident(
+  int_ref tr "lib/bprint.ml" 361 9635 9650 "lib/bprint.ml" 361 9635 9652
+)
+"lib/bprint.ml" 365 9719 9725 "lib/bprint.ml" 365 9719 9746
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 366 9748 9754 "lib/bprint.ml" 366 9748 9757
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 366 9748 9758 "lib/bprint.ml" 366 9748 9764
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 366 9748 9754 "lib/bprint.ml" 366 9748 9764
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 365 9719 9725 "lib/bprint.ml" 366 9748 9764
+type(
+  unit
+)
+"lib/bprint.ml" 364 9703 9709 "lib/bprint.ml" 366 9748 9764
+type(
+  unit
+)
+"lib/bprint.ml" 363 9683 9689 "lib/bprint.ml" 366 9748 9764
+type(
+  unit
+)
+"lib/bprint.ml" 362 9657 9663 "lib/bprint.ml" 366 9748 9764
+type(
+  unit
+)
+"lib/bprint.ml" 332 8867 8885 "lib/bprint.ml" 366 9748 9764
+type(
+  Bsyntax.decl -> unit
+)
+"lib/bprint.ml" 368 9766 9770 "lib/bprint.ml" 368 9766 9783
+type(
+  Bsyntax.modl -> unit
+)
+ident(
+  def format_module "lib/bprint.ml" 42 2118 2118 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 369 9795 9804 "lib/bprint.ml" 369 9795 9805
+type(
+  Info.t
+)
+"lib/bprint.ml" 369 9795 9806 "lib/bprint.ml" 369 9795 9807
+type(
+  Bident.Id.t
+)
+ident(
+  def m "lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 376 10041 10063
+)
+"lib/bprint.ml" 369 9795 9808 "lib/bprint.ml" 369 9795 9810
+type(
+  Bident.Qid.t list
+)
+ident(
+  def qs "lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 376 10041 10063
+)
+"lib/bprint.ml" 369 9795 9811 "lib/bprint.ml" 369 9795 9813
+type(
+  Bsyntax.decl list
+)
+ident(
+  def ds "lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 376 10041 10063
+)
+"lib/bprint.ml" 369 9795 9799 "lib/bprint.ml" 369 9795 9814
+type(
+  Bsyntax.modl
+)
+"lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 370 9818 9827
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 370 9818 9828 "lib/bprint.ml" 370 9818 9850
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 370 9818 9852 "lib/bprint.ml" 370 9818 9866
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bprint.ml" 370 9818 9867 "lib/bprint.ml" 370 9818 9868
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bprint.ml" 369 9795 9806 "lib/bprint.ml" 369 9795 9807
+)
+"lib/bprint.ml" 370 9818 9851 "lib/bprint.ml" 370 9818 9869
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 370 9818 9869
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 371 9871 9880 "lib/bprint.ml" 371 9871 9882
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref qs "lib/bprint.ml" 369 9795 9808 "lib/bprint.ml" 369 9795 9810
+)
+"lib/bprint.ml" 371 9871 9883 "lib/bprint.ml" 371 9871 9885
+type(
+  Bident.Qid.t list -> Bident.Qid.t list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"lib/bprint.ml" 371 9871 9886 "lib/bprint.ml" 371 9871 9888
+type(
+  Bident.Qid.t list
+)
+"lib/bprint.ml" 371 9871 9880 "lib/bprint.ml" 371 9871 9888
+type(
+  bool
+)
+"lib/bprint.ml" 372 9895 9903 "lib/bprint.ml" 372 9895 9919
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bident.Qid.t -> unit) -> Bident.Qid.t list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 372 9895 9920 "lib/bprint.ml" 372 9895 9925
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 373 9927 9942 "lib/bprint.ml" 373 9927 9943
+type(
+  Bident.Qid.t
+)
+ident(
+  def x "lib/bprint.ml" 373 9927 9947 "lib/bprint.ml" 373 9927 9980
+)
+"lib/bprint.ml" 373 9927 9947 "lib/bprint.ml" 373 9927 9950
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 373 9927 9951 "lib/bprint.ml" 373 9927 9960
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 373 9927 9962 "lib/bprint.ml" 373 9927 9977
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bprint.ml" 373 9927 9978 "lib/bprint.ml" 373 9927 9979
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bprint.ml" 373 9927 9942 "lib/bprint.ml" 373 9927 9943
+)
+"lib/bprint.ml" 373 9927 9961 "lib/bprint.ml" 373 9927 9980
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bprint.ml" 373 9927 9947 "lib/bprint.ml" 373 9927 9980
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 373 9927 9937 "lib/bprint.ml" 373 9927 9981
+type(
+  Bident.Qid.t -> unit
+)
+"lib/bprint.ml" 374 9982 9992 "lib/bprint.ml" 374 9982 9994
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref qs "lib/bprint.ml" 369 9795 9808 "lib/bprint.ml" 369 9795 9810
+)
+"lib/bprint.ml" 372 9895 9903 "lib/bprint.ml" 374 9982 9994
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 371 9871 9877 "lib/bprint.ml" 374 9982 9994
+type(
+  unit
+)
+"lib/bprint.ml" 375 9996 10002 "lib/bprint.ml" 375 9996 10018
+type(
+  (unit, Format.formatter, unit) format ->
+  (Bsyntax.decl -> unit) -> Bsyntax.decl list -> unit
+)
+ident(
+  ext_ref Misc.format_list
+)
+"lib/bprint.ml" 375 9996 10019 "lib/bprint.ml" 375 9996 10024
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 375 9996 10025 "lib/bprint.ml" 375 9996 10036
+type(
+  Bsyntax.decl -> unit
+)
+ident(
+  int_ref format_decl "lib/bprint.ml" 332 8867 8871 "lib/bprint.ml" 332 8867 8882
+)
+"lib/bprint.ml" 375 9996 10037 "lib/bprint.ml" 375 9996 10039
+type(
+  Bsyntax.decl list
+)
+ident(
+  int_ref ds "lib/bprint.ml" 369 9795 9811 "lib/bprint.ml" 369 9795 9813
+)
+"lib/bprint.ml" 375 9996 10002 "lib/bprint.ml" 375 9996 10039
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bprint.ml" 376 10041 10047 "lib/bprint.ml" 376 10041 10050
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bprint.ml" 26 1745 1749 "lib/bprint.ml" 26 1745 1752
+)
+"lib/bprint.ml" 376 10041 10051 "lib/bprint.ml" 376 10041 10063
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bprint.ml" 376 10041 10047 "lib/bprint.ml" 376 10041 10063
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 375 9996 10002 "lib/bprint.ml" 376 10041 10063
+type(
+  unit
+)
+"lib/bprint.ml" 371 9871 9877 "lib/bprint.ml" 376 10041 10063
+type(
+  unit
+)
+"lib/bprint.ml" 370 9818 9824 "lib/bprint.ml" 376 10041 10063
+type(
+  unit
+)
+"lib/bprint.ml" 368 9766 9786 "lib/bprint.ml" 376 10041 10063
+type(
+  Bsyntax.modl -> unit
+)
+"lib/bprint.ml" 379 10107 10111 "lib/bprint.ml" 379 10107 10124
+type(
+  Bsyntax.exp -> string
+)
+ident(
+  def string_of_exp "lib/bprint.ml" 380 10164 10164 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 379 10107 10125 "lib/bprint.ml" 379 10107 10126
+type(
+  Bsyntax.exp
+)
+ident(
+  def e "lib/bprint.ml" 379 10107 10129 "lib/bprint.ml" 379 10107 10163
+)
+"lib/bprint.ml" 379 10107 10129 "lib/bprint.ml" 379 10107 10138
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 379 10107 10144 "lib/bprint.ml" 379 10107 10146
+type(
+  unit
+)
+"lib/bprint.ml" 379 10107 10150 "lib/bprint.ml" 379 10107 10160
+type(
+  Bsyntax.exp -> unit
+)
+ident(
+  int_ref format_exp "lib/bprint.ml" 136 4544 4548 "lib/bprint.ml" 136 4544 4558
+)
+"lib/bprint.ml" 379 10107 10161 "lib/bprint.ml" 379 10107 10162
+type(
+  Bsyntax.exp
+)
+ident(
+  int_ref e "lib/bprint.ml" 379 10107 10125 "lib/bprint.ml" 379 10107 10126
+)
+"lib/bprint.ml" 379 10107 10150 "lib/bprint.ml" 379 10107 10162
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 379 10107 10139 "lib/bprint.ml" 379 10107 10163
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 379 10107 10129 "lib/bprint.ml" 379 10107 10163
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 380 10164 10168 "lib/bprint.ml" 380 10164 10185
+type(
+  Bsyntax.binding -> string
+)
+ident(
+  def string_of_binding "lib/bprint.ml" 381 10229 10229 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 380 10164 10186 "lib/bprint.ml" 380 10164 10187
+type(
+  Bsyntax.binding
+)
+ident(
+  def b "lib/bprint.ml" 380 10164 10190 "lib/bprint.ml" 380 10164 10228
+)
+"lib/bprint.ml" 380 10164 10190 "lib/bprint.ml" 380 10164 10199
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 380 10164 10205 "lib/bprint.ml" 380 10164 10207
+type(
+  unit
+)
+"lib/bprint.ml" 380 10164 10211 "lib/bprint.ml" 380 10164 10225
+type(
+  Bsyntax.binding -> unit
+)
+ident(
+  int_ref format_binding "lib/bprint.ml" 127 4311 4315 "lib/bprint.ml" 127 4311 4329
+)
+"lib/bprint.ml" 380 10164 10226 "lib/bprint.ml" 380 10164 10227
+type(
+  Bsyntax.binding
+)
+ident(
+  int_ref b "lib/bprint.ml" 380 10164 10186 "lib/bprint.ml" 380 10164 10187
+)
+"lib/bprint.ml" 380 10164 10211 "lib/bprint.ml" 380 10164 10227
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 380 10164 10200 "lib/bprint.ml" 380 10164 10228
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 380 10164 10190 "lib/bprint.ml" 380 10164 10228
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 381 10229 10233 "lib/bprint.ml" 381 10229 10247
+type(
+  Bsyntax.decl -> string
+)
+ident(
+  def string_of_decl "lib/bprint.ml" 382 10288 10288 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 381 10229 10248 "lib/bprint.ml" 381 10229 10249
+type(
+  Bsyntax.decl
+)
+ident(
+  def d "lib/bprint.ml" 381 10229 10252 "lib/bprint.ml" 381 10229 10287
+)
+"lib/bprint.ml" 381 10229 10252 "lib/bprint.ml" 381 10229 10261
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 381 10229 10267 "lib/bprint.ml" 381 10229 10269
+type(
+  unit
+)
+"lib/bprint.ml" 381 10229 10273 "lib/bprint.ml" 381 10229 10284
+type(
+  Bsyntax.decl -> unit
+)
+ident(
+  int_ref format_decl "lib/bprint.ml" 332 8867 8871 "lib/bprint.ml" 332 8867 8882
+)
+"lib/bprint.ml" 381 10229 10285 "lib/bprint.ml" 381 10229 10286
+type(
+  Bsyntax.decl
+)
+ident(
+  int_ref d "lib/bprint.ml" 381 10229 10248 "lib/bprint.ml" 381 10229 10249
+)
+"lib/bprint.ml" 381 10229 10273 "lib/bprint.ml" 381 10229 10286
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 381 10229 10262 "lib/bprint.ml" 381 10229 10287
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 381 10229 10252 "lib/bprint.ml" 381 10229 10287
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 382 10288 10292 "lib/bprint.ml" 382 10288 10313
+type(
+  Bsyntax.test_result -> string
+)
+ident(
+  def string_of_test_result "lib/bprint.ml" 383 10363 10363 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 382 10288 10314 "lib/bprint.ml" 382 10288 10316
+type(
+  Bsyntax.test_result
+)
+ident(
+  def tr "lib/bprint.ml" 382 10288 10319 "lib/bprint.ml" 382 10288 10362
+)
+"lib/bprint.ml" 382 10288 10319 "lib/bprint.ml" 382 10288 10328
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 382 10288 10334 "lib/bprint.ml" 382 10288 10336
+type(
+  unit
+)
+"lib/bprint.ml" 382 10288 10340 "lib/bprint.ml" 382 10288 10358
+type(
+  Bsyntax.test_result -> unit
+)
+ident(
+  int_ref format_test_result "lib/bprint.ml" 318 8525 8529 "lib/bprint.ml" 318 8525 8547
+)
+"lib/bprint.ml" 382 10288 10359 "lib/bprint.ml" 382 10288 10361
+type(
+  Bsyntax.test_result
+)
+ident(
+  int_ref tr "lib/bprint.ml" 382 10288 10314 "lib/bprint.ml" 382 10288 10316
+)
+"lib/bprint.ml" 382 10288 10340 "lib/bprint.ml" 382 10288 10361
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 382 10288 10329 "lib/bprint.ml" 382 10288 10362
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 382 10288 10319 "lib/bprint.ml" 382 10288 10362
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 383 10363 10367 "lib/bprint.ml" 383 10363 10379
+type(
+  Bsyntax.op -> string
+)
+ident(
+  def string_of_op "lib/bprint.ml" 384 10418 10418 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 383 10363 10380 "lib/bprint.ml" 383 10363 10381
+type(
+  Bsyntax.op
+)
+ident(
+  def o "lib/bprint.ml" 383 10363 10384 "lib/bprint.ml" 383 10363 10417
+)
+"lib/bprint.ml" 383 10363 10384 "lib/bprint.ml" 383 10363 10393
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 383 10363 10399 "lib/bprint.ml" 383 10363 10401
+type(
+  unit
+)
+"lib/bprint.ml" 383 10363 10405 "lib/bprint.ml" 383 10363 10414
+type(
+  Bsyntax.op -> unit
+)
+ident(
+  int_ref format_op "lib/bprint.ml" 276 7493 7497 "lib/bprint.ml" 276 7493 7506
+)
+"lib/bprint.ml" 383 10363 10415 "lib/bprint.ml" 383 10363 10416
+type(
+  Bsyntax.op
+)
+ident(
+  int_ref o "lib/bprint.ml" 383 10363 10380 "lib/bprint.ml" 383 10363 10381
+)
+"lib/bprint.ml" 383 10363 10405 "lib/bprint.ml" 383 10363 10416
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 383 10363 10394 "lib/bprint.ml" 383 10363 10417
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 383 10363 10384 "lib/bprint.ml" 383 10363 10417
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 384 10418 10422 "lib/bprint.ml" 384 10418 10438
+type(
+  Bsyntax.modl -> string
+)
+ident(
+  def string_of_module "lib/bprint.ml" 385 10481 10481 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 384 10418 10439 "lib/bprint.ml" 384 10418 10440
+type(
+  Bsyntax.modl
+)
+ident(
+  def m "lib/bprint.ml" 384 10418 10443 "lib/bprint.ml" 384 10418 10480
+)
+"lib/bprint.ml" 384 10418 10443 "lib/bprint.ml" 384 10418 10452
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 384 10418 10458 "lib/bprint.ml" 384 10418 10460
+type(
+  unit
+)
+"lib/bprint.ml" 384 10418 10464 "lib/bprint.ml" 384 10418 10477
+type(
+  Bsyntax.modl -> unit
+)
+ident(
+  int_ref format_module "lib/bprint.ml" 368 9766 9770 "lib/bprint.ml" 368 9766 9783
+)
+"lib/bprint.ml" 384 10418 10478 "lib/bprint.ml" 384 10418 10479
+type(
+  Bsyntax.modl
+)
+ident(
+  int_ref m "lib/bprint.ml" 384 10418 10439 "lib/bprint.ml" 384 10418 10440
+)
+"lib/bprint.ml" 384 10418 10464 "lib/bprint.ml" 384 10418 10479
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 384 10418 10453 "lib/bprint.ml" 384 10418 10480
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 384 10418 10443 "lib/bprint.ml" 384 10418 10480
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 385 10481 10485 "lib/bprint.ml" 385 10481 10499
+type(
+  Bsyntax.sort -> string
+)
+ident(
+  def string_of_sort "lib/bprint.ml" 386 10540 10540 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 385 10481 10500 "lib/bprint.ml" 385 10481 10501
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bprint.ml" 385 10481 10504 "lib/bprint.ml" 385 10481 10539
+)
+"lib/bprint.ml" 385 10481 10504 "lib/bprint.ml" 385 10481 10513
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 385 10481 10519 "lib/bprint.ml" 385 10481 10521
+type(
+  unit
+)
+"lib/bprint.ml" 385 10481 10525 "lib/bprint.ml" 385 10481 10536
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  int_ref format_sort "lib/bprint.ml" 42 2118 2126 "lib/bprint.ml" 42 2118 2137
+)
+"lib/bprint.ml" 385 10481 10537 "lib/bprint.ml" 385 10481 10538
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bprint.ml" 385 10481 10500 "lib/bprint.ml" 385 10481 10501
+)
+"lib/bprint.ml" 385 10481 10525 "lib/bprint.ml" 385 10481 10538
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 385 10481 10514 "lib/bprint.ml" 385 10481 10539
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 385 10481 10504 "lib/bprint.ml" 385 10481 10539
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 386 10540 10544 "lib/bprint.ml" 386 10540 10559
+type(
+  Bsyntax.param -> string
+)
+ident(
+  def string_of_param "lib/bprint.ml" 387 10601 10601 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 386 10540 10560 "lib/bprint.ml" 386 10540 10561
+type(
+  Bsyntax.param
+)
+ident(
+  def p "lib/bprint.ml" 386 10540 10564 "lib/bprint.ml" 386 10540 10600
+)
+"lib/bprint.ml" 386 10540 10564 "lib/bprint.ml" 386 10540 10573
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 386 10540 10579 "lib/bprint.ml" 386 10540 10581
+type(
+  unit
+)
+"lib/bprint.ml" 386 10540 10585 "lib/bprint.ml" 386 10540 10597
+type(
+  Bsyntax.param -> unit
+)
+ident(
+  int_ref format_param "lib/bprint.ml" 121 4172 4176 "lib/bprint.ml" 121 4172 4188
+)
+"lib/bprint.ml" 386 10540 10598 "lib/bprint.ml" 386 10540 10599
+type(
+  Bsyntax.param
+)
+ident(
+  int_ref p "lib/bprint.ml" 386 10540 10560 "lib/bprint.ml" 386 10540 10561
+)
+"lib/bprint.ml" 386 10540 10585 "lib/bprint.ml" 386 10540 10599
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 386 10540 10574 "lib/bprint.ml" 386 10540 10600
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 386 10540 10564 "lib/bprint.ml" 386 10540 10600
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bprint.ml" 387 10601 10605 "lib/bprint.ml" 387 10601 10618
+type(
+  Bsyntax.pat -> string
+)
+ident(
+  def string_of_pat "lib/bprint.ml" 387 10601 10657 "lib/bprint.ml" 1 0 -1
+)
+"lib/bprint.ml" 387 10601 10619 "lib/bprint.ml" 387 10601 10620
+type(
+  Bsyntax.pat
+)
+ident(
+  def p "lib/bprint.ml" 387 10601 10623 "lib/bprint.ml" 387 10601 10657
+)
+"lib/bprint.ml" 387 10601 10623 "lib/bprint.ml" 387 10601 10632
+type(
+  (unit -> unit) -> string
+)
+ident(
+  int_ref to_string "lib/bprint.ml" 27 1767 1771 "lib/bprint.ml" 27 1767 1780
+)
+"lib/bprint.ml" 387 10601 10638 "lib/bprint.ml" 387 10601 10640
+type(
+  unit
+)
+"lib/bprint.ml" 387 10601 10644 "lib/bprint.ml" 387 10601 10654
+type(
+  Bsyntax.pat -> unit
+)
+ident(
+  int_ref format_pat "lib/bprint.ml" 101 3628 3632 "lib/bprint.ml" 101 3628 3642
+)
+"lib/bprint.ml" 387 10601 10655 "lib/bprint.ml" 387 10601 10656
+type(
+  Bsyntax.pat
+)
+ident(
+  int_ref p "lib/bprint.ml" 387 10601 10619 "lib/bprint.ml" 387 10601 10620
+)
+"lib/bprint.ml" 387 10601 10644 "lib/bprint.ml" 387 10601 10656
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bprint.ml" 387 10601 10633 "lib/bprint.ml" 387 10601 10657
+type(
+  unit -> unit
+)
+"lib/bprint.ml" 387 10601 10623 "lib/bprint.ml" 387 10601 10657
+call(
+  tail
+)
+type(
+  string
+)

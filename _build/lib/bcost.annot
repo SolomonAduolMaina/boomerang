@@ -1,0 +1,1418 @@
+"lib/bcost.ml" 28 1662 1666 "lib/bcost.ml" 28 1662 1675
+type(
+  t -> int option
+)
+ident(
+  def to_option "lib/bcost.ml" 33 1740 1740 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 28 1662 1676 "lib/bcost.ml" 28 1662 1677
+type(
+  t
+)
+ident(
+  def t "lib/bcost.ml" 29 1680 1682 "lib/bcost.ml" 31 1716 1738
+)
+"lib/bcost.ml" 29 1680 1688 "lib/bcost.ml" 29 1680 1689
+type(
+  t
+)
+ident(
+  int_ref t "lib/bcost.ml" 28 1662 1676 "lib/bcost.ml" 28 1662 1677
+)
+"lib/bcost.ml" 30 1695 1699 "lib/bcost.ml" 30 1695 1707
+type(
+  t
+)
+"lib/bcost.ml" 30 1695 1711 "lib/bcost.ml" 30 1695 1715
+type(
+  int option
+)
+"lib/bcost.ml" 31 1716 1727 "lib/bcost.ml" 31 1716 1728
+type(
+  int
+)
+ident(
+  def i "lib/bcost.ml" 31 1716 1732 "lib/bcost.ml" 31 1716 1738
+)
+"lib/bcost.ml" 31 1716 1720 "lib/bcost.ml" 31 1716 1728
+type(
+  t
+)
+"lib/bcost.ml" 31 1716 1737 "lib/bcost.ml" 31 1716 1738
+type(
+  int
+)
+ident(
+  int_ref i "lib/bcost.ml" 31 1716 1727 "lib/bcost.ml" 31 1716 1728
+)
+"lib/bcost.ml" 31 1716 1732 "lib/bcost.ml" 31 1716 1738
+type(
+  int option
+)
+"lib/bcost.ml" 29 1680 1682 "lib/bcost.ml" 31 1716 1738
+type(
+  int option
+)
+"lib/bcost.ml" 33 1740 1744 "lib/bcost.ml" 33 1740 1753
+type(
+  t -> string
+)
+ident(
+  def to_string "lib/bcost.ml" 38 1827 1827 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 33 1740 1754 "lib/bcost.ml" 33 1740 1755
+type(
+  t
+)
+ident(
+  def t "lib/bcost.ml" 34 1758 1760 "lib/bcost.ml" 36 1794 1825
+)
+"lib/bcost.ml" 34 1758 1766 "lib/bcost.ml" 34 1758 1767
+type(
+  t
+)
+ident(
+  int_ref t "lib/bcost.ml" 33 1740 1754 "lib/bcost.ml" 33 1740 1755
+)
+"lib/bcost.ml" 35 1773 1777 "lib/bcost.ml" 35 1773 1785
+type(
+  t
+)
+"lib/bcost.ml" 35 1773 1789 "lib/bcost.ml" 35 1773 1793
+type(
+  string
+)
+"lib/bcost.ml" 36 1794 1805 "lib/bcost.ml" 36 1794 1806
+type(
+  int
+)
+ident(
+  def i "lib/bcost.ml" 36 1794 1810 "lib/bcost.ml" 36 1794 1825
+)
+"lib/bcost.ml" 36 1794 1798 "lib/bcost.ml" 36 1794 1806
+type(
+  t
+)
+"lib/bcost.ml" 36 1794 1810 "lib/bcost.ml" 36 1794 1823
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"lib/bcost.ml" 36 1794 1824 "lib/bcost.ml" 36 1794 1825
+type(
+  int
+)
+ident(
+  int_ref i "lib/bcost.ml" 36 1794 1805 "lib/bcost.ml" 36 1794 1806
+)
+"lib/bcost.ml" 36 1794 1810 "lib/bcost.ml" 36 1794 1825
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bcost.ml" 34 1758 1760 "lib/bcost.ml" 36 1794 1825
+type(
+  string
+)
+"lib/bcost.ml" 38 1827 1831 "lib/bcost.ml" 38 1827 1835
+type(
+  t
+)
+ident(
+  def zero "lib/bcost.ml" 39 1847 1847 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 38 1827 1845 "lib/bcost.ml" 38 1827 1846
+type(
+  int
+)
+"lib/bcost.ml" 38 1827 1838 "lib/bcost.ml" 38 1827 1846
+type(
+  t
+)
+"lib/bcost.ml" 39 1847 1851 "lib/bcost.ml" 39 1847 1854
+type(
+  t
+)
+ident(
+  def one "lib/bcost.ml" 41 1867 1867 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 39 1847 1864 "lib/bcost.ml" 39 1847 1865
+type(
+  int
+)
+"lib/bcost.ml" 39 1847 1857 "lib/bcost.ml" 39 1847 1865
+type(
+  t
+)
+"lib/bcost.ml" 41 1867 1871 "lib/bcost.ml" 41 1867 1879
+type(
+  t
+)
+ident(
+  def infinite "lib/bcost.ml" 42 1891 1891 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 41 1867 1882 "lib/bcost.ml" 41 1867 1890
+type(
+  t
+)
+"lib/bcost.ml" 42 1891 1895 "lib/bcost.ml" 42 1891 1906
+type(
+  t -> bool
+)
+ident(
+  def is_infinite "lib/bcost.ml" 44 1925 1925 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 42 1891 1907 "lib/bcost.ml" 42 1891 1908
+type(
+  t
+)
+ident(
+  def t "lib/bcost.ml" 42 1891 1911 "lib/bcost.ml" 42 1891 1923
+)
+"lib/bcost.ml" 42 1891 1911 "lib/bcost.ml" 42 1891 1912
+type(
+  t
+)
+ident(
+  int_ref t "lib/bcost.ml" 42 1891 1907 "lib/bcost.ml" 42 1891 1908
+)
+"lib/bcost.ml" 42 1891 1913 "lib/bcost.ml" 42 1891 1914
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bcost.ml" 42 1891 1915 "lib/bcost.ml" 42 1891 1923
+type(
+  t
+)
+"lib/bcost.ml" 42 1891 1911 "lib/bcost.ml" 42 1891 1923
+type(
+  bool
+)
+"lib/bcost.ml" 44 1925 1929 "lib/bcost.ml" 44 1925 1933
+type(
+  t -> t -> t
+)
+ident(
+  def plus "lib/bcost.ml" 52 2056 2056 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 44 1925 1934 "lib/bcost.ml" 44 1925 1935
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 44 1925 1936 "lib/bcost.ml" 50 2031 2054
+)
+"lib/bcost.ml" 44 1925 1936 "lib/bcost.ml" 44 1925 1937
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 45 1940 1942 "lib/bcost.ml" 50 2031 2054
+)
+"lib/bcost.ml" 45 1940 1948 "lib/bcost.ml" 45 1940 1949
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 44 1925 1934 "lib/bcost.ml" 44 1925 1935
+)
+"lib/bcost.ml" 45 1940 1951 "lib/bcost.ml" 45 1940 1952
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 44 1925 1936 "lib/bcost.ml" 44 1925 1937
+)
+"lib/bcost.ml" 45 1940 1948 "lib/bcost.ml" 45 1940 1952
+type(
+  t * t
+)
+"lib/bcost.ml" 46 1958 1962 "lib/bcost.ml" 46 1958 1970
+type(
+  t
+)
+"lib/bcost.ml" 46 1958 1972 "lib/bcost.ml" 46 1958 1973
+type(
+  t
+)
+"lib/bcost.ml" 46 1958 1962 "lib/bcost.ml" 46 1958 1973
+type(
+  t * t
+)
+"lib/bcost.ml" 47 1974 1978 "lib/bcost.ml" 47 1974 1979
+type(
+  t
+)
+"lib/bcost.ml" 47 1974 1981 "lib/bcost.ml" 47 1974 1989
+type(
+  t
+)
+"lib/bcost.ml" 47 1974 1978 "lib/bcost.ml" 47 1974 1989
+type(
+  t * t
+)
+"lib/bcost.ml" 46 1958 1962 "lib/bcost.ml" 47 1974 1989
+type(
+  t * t
+)
+"lib/bcost.ml" 48 1990 1999 "lib/bcost.ml" 48 1990 2007
+type(
+  t
+)
+"lib/bcost.ml" 49 2008 2019 "lib/bcost.ml" 49 2008 2020
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 50 2031 2040 "lib/bcost.ml" 50 2031 2054
+)
+"lib/bcost.ml" 49 2008 2012 "lib/bcost.ml" 49 2008 2020
+type(
+  t
+)
+"lib/bcost.ml" 49 2008 2029 "lib/bcost.ml" 49 2008 2030
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 50 2031 2040 "lib/bcost.ml" 50 2031 2054
+)
+"lib/bcost.ml" 49 2008 2022 "lib/bcost.ml" 49 2008 2030
+type(
+  t
+)
+"lib/bcost.ml" 49 2008 2012 "lib/bcost.ml" 49 2008 2030
+type(
+  t * t
+)
+"lib/bcost.ml" 50 2031 2048 "lib/bcost.ml" 50 2031 2049
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 49 2008 2019 "lib/bcost.ml" 49 2008 2020
+)
+"lib/bcost.ml" 50 2031 2050 "lib/bcost.ml" 50 2031 2051
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"lib/bcost.ml" 50 2031 2052 "lib/bcost.ml" 50 2031 2053
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 49 2008 2029 "lib/bcost.ml" 49 2008 2030
+)
+"lib/bcost.ml" 50 2031 2047 "lib/bcost.ml" 50 2031 2054
+type(
+  int
+)
+"lib/bcost.ml" 50 2031 2040 "lib/bcost.ml" 50 2031 2054
+type(
+  t
+)
+"lib/bcost.ml" 45 1940 1942 "lib/bcost.ml" 50 2031 2054
+type(
+  t
+)
+"lib/bcost.ml" 52 2056 2060 "lib/bcost.ml" 52 2056 2065
+type(
+  t -> t -> t
+)
+ident(
+  def minus "lib/bcost.ml" 58 2198 2198 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 52 2056 2066 "lib/bcost.ml" 52 2056 2067
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 52 2056 2068 "lib/bcost.ml" 56 2154 2196
+)
+"lib/bcost.ml" 52 2056 2068 "lib/bcost.ml" 52 2056 2069
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 53 2072 2074 "lib/bcost.ml" 56 2154 2196
+)
+"lib/bcost.ml" 53 2072 2080 "lib/bcost.ml" 53 2072 2081
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 52 2056 2066 "lib/bcost.ml" 52 2056 2067
+)
+"lib/bcost.ml" 53 2072 2083 "lib/bcost.ml" 53 2072 2084
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 52 2056 2068 "lib/bcost.ml" 52 2056 2069
+)
+"lib/bcost.ml" 53 2072 2080 "lib/bcost.ml" 53 2072 2084
+type(
+  t * t
+)
+"lib/bcost.ml" 54 2090 2096 "lib/bcost.ml" 54 2090 2097
+type(
+  t
+)
+"lib/bcost.ml" 54 2090 2099 "lib/bcost.ml" 54 2090 2107
+type(
+  t
+)
+"lib/bcost.ml" 54 2090 2096 "lib/bcost.ml" 54 2090 2107
+type(
+  t * t
+)
+"lib/bcost.ml" 54 2090 2118 "lib/bcost.ml" 54 2090 2123
+type(
+  bool
+)
+"lib/bcost.ml" 54 2090 2111 "lib/bcost.ml" 54 2090 2123
+type(
+  t
+)
+"lib/bcost.ml" 55 2124 2130 "lib/bcost.ml" 55 2124 2138
+type(
+  t
+)
+"lib/bcost.ml" 55 2124 2140 "lib/bcost.ml" 55 2124 2141
+type(
+  t
+)
+"lib/bcost.ml" 55 2124 2130 "lib/bcost.ml" 55 2124 2141
+type(
+  t * t
+)
+"lib/bcost.ml" 55 2124 2145 "lib/bcost.ml" 55 2124 2153
+type(
+  t
+)
+"lib/bcost.ml" 56 2154 2167 "lib/bcost.ml" 56 2154 2168
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 56 2154 2182 "lib/bcost.ml" 56 2154 2196
+)
+"lib/bcost.ml" 56 2154 2160 "lib/bcost.ml" 56 2154 2168
+type(
+  t
+)
+"lib/bcost.ml" 56 2154 2177 "lib/bcost.ml" 56 2154 2178
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 56 2154 2182 "lib/bcost.ml" 56 2154 2196
+)
+"lib/bcost.ml" 56 2154 2170 "lib/bcost.ml" 56 2154 2178
+type(
+  t
+)
+"lib/bcost.ml" 56 2154 2160 "lib/bcost.ml" 56 2154 2178
+type(
+  t * t
+)
+"lib/bcost.ml" 56 2154 2190 "lib/bcost.ml" 56 2154 2191
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 56 2154 2167 "lib/bcost.ml" 56 2154 2168
+)
+"lib/bcost.ml" 56 2154 2192 "lib/bcost.ml" 56 2154 2193
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"lib/bcost.ml" 56 2154 2194 "lib/bcost.ml" 56 2154 2195
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 56 2154 2177 "lib/bcost.ml" 56 2154 2178
+)
+"lib/bcost.ml" 56 2154 2189 "lib/bcost.ml" 56 2154 2196
+type(
+  int
+)
+"lib/bcost.ml" 56 2154 2182 "lib/bcost.ml" 56 2154 2196
+type(
+  t
+)
+"lib/bcost.ml" 53 2072 2074 "lib/bcost.ml" 56 2154 2196
+type(
+  t
+)
+"lib/bcost.ml" 58 2198 2202 "lib/bcost.ml" 58 2198 2213
+type(
+  t -> t -> t
+)
+ident(
+  def limit_minus "lib/bcost.ml" 64 2350 2350 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 58 2198 2214 "lib/bcost.ml" 58 2198 2215
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 58 2198 2216 "lib/bcost.ml" 62 2298 2348
+)
+"lib/bcost.ml" 58 2198 2216 "lib/bcost.ml" 58 2198 2217
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 59 2220 2222 "lib/bcost.ml" 62 2298 2348
+)
+"lib/bcost.ml" 59 2220 2228 "lib/bcost.ml" 59 2220 2229
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 58 2198 2214 "lib/bcost.ml" 58 2198 2215
+)
+"lib/bcost.ml" 59 2220 2231 "lib/bcost.ml" 59 2220 2232
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 58 2198 2216 "lib/bcost.ml" 58 2198 2217
+)
+"lib/bcost.ml" 59 2220 2228 "lib/bcost.ml" 59 2220 2232
+type(
+  t * t
+)
+"lib/bcost.ml" 60 2238 2244 "lib/bcost.ml" 60 2238 2245
+type(
+  t
+)
+"lib/bcost.ml" 60 2238 2247 "lib/bcost.ml" 60 2238 2255
+type(
+  t
+)
+"lib/bcost.ml" 60 2238 2244 "lib/bcost.ml" 60 2238 2255
+type(
+  t * t
+)
+"lib/bcost.ml" 60 2238 2266 "lib/bcost.ml" 60 2238 2267
+type(
+  int
+)
+"lib/bcost.ml" 60 2238 2259 "lib/bcost.ml" 60 2238 2267
+type(
+  t
+)
+"lib/bcost.ml" 61 2268 2274 "lib/bcost.ml" 61 2268 2282
+type(
+  t
+)
+"lib/bcost.ml" 61 2268 2284 "lib/bcost.ml" 61 2268 2285
+type(
+  t
+)
+"lib/bcost.ml" 61 2268 2274 "lib/bcost.ml" 61 2268 2285
+type(
+  t * t
+)
+"lib/bcost.ml" 61 2268 2289 "lib/bcost.ml" 61 2268 2297
+type(
+  t
+)
+"lib/bcost.ml" 62 2298 2311 "lib/bcost.ml" 62 2298 2312
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 62 2298 2326 "lib/bcost.ml" 62 2298 2348
+)
+"lib/bcost.ml" 62 2298 2304 "lib/bcost.ml" 62 2298 2312
+type(
+  t
+)
+"lib/bcost.ml" 62 2298 2321 "lib/bcost.ml" 62 2298 2322
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 62 2298 2326 "lib/bcost.ml" 62 2298 2348
+)
+"lib/bcost.ml" 62 2298 2314 "lib/bcost.ml" 62 2298 2322
+type(
+  t
+)
+"lib/bcost.ml" 62 2298 2304 "lib/bcost.ml" 62 2298 2322
+type(
+  t * t
+)
+"lib/bcost.ml" 62 2298 2334 "lib/bcost.ml" 62 2298 2337
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.max
+)
+"lib/bcost.ml" 62 2298 2339 "lib/bcost.ml" 62 2298 2340
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 62 2298 2311 "lib/bcost.ml" 62 2298 2312
+)
+"lib/bcost.ml" 62 2298 2341 "lib/bcost.ml" 62 2298 2342
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"lib/bcost.ml" 62 2298 2343 "lib/bcost.ml" 62 2298 2344
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 62 2298 2321 "lib/bcost.ml" 62 2298 2322
+)
+"lib/bcost.ml" 62 2298 2338 "lib/bcost.ml" 62 2298 2345
+type(
+  int
+)
+"lib/bcost.ml" 62 2298 2346 "lib/bcost.ml" 62 2298 2347
+type(
+  int
+)
+"lib/bcost.ml" 62 2298 2333 "lib/bcost.ml" 62 2298 2348
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bcost.ml" 62 2298 2326 "lib/bcost.ml" 62 2298 2348
+type(
+  t
+)
+"lib/bcost.ml" 59 2220 2222 "lib/bcost.ml" 62 2298 2348
+type(
+  t
+)
+"lib/bcost.ml" 64 2350 2354 "lib/bcost.ml" 64 2350 2369
+type(
+  W.t -> int -> t
+)
+ident(
+  def of_weighted_int "lib/bcost.ml" 66 2401 2401 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 64 2350 2370 "lib/bcost.ml" 64 2350 2371
+type(
+  W.t
+)
+ident(
+  def w "lib/bcost.ml" 64 2350 2372 "lib/bcost.ml" 64 2350 2399
+)
+"lib/bcost.ml" 64 2350 2372 "lib/bcost.ml" 64 2350 2373
+type(
+  int
+)
+ident(
+  def i "lib/bcost.ml" 64 2350 2376 "lib/bcost.ml" 64 2350 2399
+)
+"lib/bcost.ml" 64 2350 2384 "lib/bcost.ml" 64 2350 2392
+type(
+  W.t -> int
+)
+ident(
+  ext_ref W.to_int
+)
+"lib/bcost.ml" 64 2350 2393 "lib/bcost.ml" 64 2350 2394
+type(
+  W.t
+)
+ident(
+  int_ref w "lib/bcost.ml" 64 2350 2370 "lib/bcost.ml" 64 2350 2371
+)
+"lib/bcost.ml" 64 2350 2384 "lib/bcost.ml" 64 2350 2394
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bcost.ml" 64 2350 2395 "lib/bcost.ml" 64 2350 2396
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"lib/bcost.ml" 64 2350 2397 "lib/bcost.ml" 64 2350 2398
+type(
+  int
+)
+ident(
+  int_ref i "lib/bcost.ml" 64 2350 2372 "lib/bcost.ml" 64 2350 2373
+)
+"lib/bcost.ml" 64 2350 2383 "lib/bcost.ml" 64 2350 2399
+type(
+  int
+)
+"lib/bcost.ml" 64 2350 2376 "lib/bcost.ml" 64 2350 2399
+type(
+  t
+)
+"lib/bcost.ml" 66 2401 2405 "lib/bcost.ml" 66 2401 2411
+type(
+  int -> t
+)
+ident(
+  def of_int "lib/bcost.ml" 68 2441 2441 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 66 2401 2412 "lib/bcost.ml" 66 2401 2413
+type(
+  int
+)
+ident(
+  def i "lib/bcost.ml" 66 2401 2416 "lib/bcost.ml" 66 2401 2439
+)
+"lib/bcost.ml" 66 2401 2416 "lib/bcost.ml" 66 2401 2431
+type(
+  W.t -> int -> t
+)
+ident(
+  int_ref of_weighted_int "lib/bcost.ml" 64 2350 2354 "lib/bcost.ml" 64 2350 2369
+)
+"lib/bcost.ml" 66 2401 2432 "lib/bcost.ml" 66 2401 2437
+type(
+  W.t
+)
+ident(
+  ext_ref W.one
+)
+"lib/bcost.ml" 66 2401 2438 "lib/bcost.ml" 66 2401 2439
+type(
+  int
+)
+ident(
+  int_ref i "lib/bcost.ml" 66 2401 2412 "lib/bcost.ml" 66 2401 2413
+)
+"lib/bcost.ml" 66 2401 2416 "lib/bcost.ml" 66 2401 2439
+call(
+  tail
+)
+type(
+  t
+)
+"lib/bcost.ml" 68 2441 2445 "lib/bcost.ml" 68 2441 2449
+type(
+  W.t -> t -> t
+)
+ident(
+  def succ "lib/bcost.ml" 71 2488 2488 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 68 2441 2450 "lib/bcost.ml" 68 2441 2451
+type(
+  W.t
+)
+ident(
+  def w "lib/bcost.ml" 68 2441 2452 "lib/bcost.ml" 69 2456 2486
+)
+"lib/bcost.ml" 68 2441 2452 "lib/bcost.ml" 68 2441 2453
+type(
+  t
+)
+ident(
+  def c "lib/bcost.ml" 69 2456 2458 "lib/bcost.ml" 69 2456 2486
+)
+"lib/bcost.ml" 69 2456 2458 "lib/bcost.ml" 69 2456 2462
+type(
+  t -> t -> t
+)
+ident(
+  int_ref plus "lib/bcost.ml" 44 1925 1929 "lib/bcost.ml" 44 1925 1933
+)
+"lib/bcost.ml" 69 2456 2463 "lib/bcost.ml" 69 2456 2464
+type(
+  t
+)
+ident(
+  int_ref c "lib/bcost.ml" 68 2441 2452 "lib/bcost.ml" 68 2441 2453
+)
+"lib/bcost.ml" 69 2456 2466 "lib/bcost.ml" 69 2456 2481
+type(
+  W.t -> int -> t
+)
+ident(
+  int_ref of_weighted_int "lib/bcost.ml" 64 2350 2354 "lib/bcost.ml" 64 2350 2369
+)
+"lib/bcost.ml" 69 2456 2482 "lib/bcost.ml" 69 2456 2483
+type(
+  W.t
+)
+ident(
+  int_ref w "lib/bcost.ml" 68 2441 2450 "lib/bcost.ml" 68 2441 2451
+)
+"lib/bcost.ml" 69 2456 2484 "lib/bcost.ml" 69 2456 2485
+type(
+  int
+)
+"lib/bcost.ml" 69 2456 2465 "lib/bcost.ml" 69 2456 2486
+call(
+  stack
+)
+type(
+  t
+)
+"lib/bcost.ml" 69 2456 2458 "lib/bcost.ml" 69 2456 2486
+call(
+  tail
+)
+type(
+  t
+)
+"lib/bcost.ml" 71 2488 2492 "lib/bcost.ml" 71 2488 2495
+type(
+  t -> t -> t
+)
+ident(
+  def min "lib/bcost.ml" 79 2613 2613 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 71 2488 2496 "lib/bcost.ml" 71 2488 2497
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 71 2488 2498 "lib/bcost.ml" 77 2586 2611
+)
+"lib/bcost.ml" 71 2488 2498 "lib/bcost.ml" 71 2488 2499
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 72 2502 2504 "lib/bcost.ml" 77 2586 2611
+)
+"lib/bcost.ml" 72 2502 2510 "lib/bcost.ml" 72 2502 2511
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 71 2488 2496 "lib/bcost.ml" 71 2488 2497
+)
+"lib/bcost.ml" 72 2502 2513 "lib/bcost.ml" 72 2502 2514
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 71 2488 2498 "lib/bcost.ml" 71 2488 2499
+)
+"lib/bcost.ml" 72 2502 2510 "lib/bcost.ml" 72 2502 2514
+type(
+  t * t
+)
+"lib/bcost.ml" 73 2520 2524 "lib/bcost.ml" 73 2520 2532
+type(
+  t
+)
+"lib/bcost.ml" 73 2520 2534 "lib/bcost.ml" 73 2520 2535
+type(
+  t
+)
+ident(
+  def x "lib/bcost.ml" 75 2552 2561 "lib/bcost.ml" 75 2552 2562
+)
+"lib/bcost.ml" 73 2520 2524 "lib/bcost.ml" 73 2520 2535
+type(
+  t * t
+)
+"lib/bcost.ml" 74 2536 2540 "lib/bcost.ml" 74 2536 2541
+type(
+  t
+)
+ident(
+  def x "lib/bcost.ml" 75 2552 2561 "lib/bcost.ml" 75 2552 2562
+)
+"lib/bcost.ml" 74 2536 2543 "lib/bcost.ml" 74 2536 2551
+type(
+  t
+)
+"lib/bcost.ml" 74 2536 2540 "lib/bcost.ml" 74 2536 2551
+type(
+  t * t
+)
+"lib/bcost.ml" 73 2520 2524 "lib/bcost.ml" 74 2536 2551
+type(
+  t * t
+)
+"lib/bcost.ml" 75 2552 2561 "lib/bcost.ml" 75 2552 2562
+type(
+  t
+)
+ident(
+  int_ref x "lib/bcost.ml" 73 2520 2534 "lib/bcost.ml" 73 2520 2535
+)
+"lib/bcost.ml" 76 2563 2574 "lib/bcost.ml" 76 2563 2575
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 77 2586 2595 "lib/bcost.ml" 77 2586 2611
+)
+"lib/bcost.ml" 76 2563 2567 "lib/bcost.ml" 76 2563 2575
+type(
+  t
+)
+"lib/bcost.ml" 76 2563 2584 "lib/bcost.ml" 76 2563 2585
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 77 2586 2595 "lib/bcost.ml" 77 2586 2611
+)
+"lib/bcost.ml" 76 2563 2577 "lib/bcost.ml" 76 2563 2585
+type(
+  t
+)
+"lib/bcost.ml" 76 2563 2567 "lib/bcost.ml" 76 2563 2585
+type(
+  t * t
+)
+"lib/bcost.ml" 77 2586 2603 "lib/bcost.ml" 77 2586 2606
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.min
+)
+"lib/bcost.ml" 77 2586 2607 "lib/bcost.ml" 77 2586 2608
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 76 2563 2574 "lib/bcost.ml" 76 2563 2575
+)
+"lib/bcost.ml" 77 2586 2609 "lib/bcost.ml" 77 2586 2610
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 76 2563 2584 "lib/bcost.ml" 76 2563 2585
+)
+"lib/bcost.ml" 77 2586 2602 "lib/bcost.ml" 77 2586 2611
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bcost.ml" 77 2586 2595 "lib/bcost.ml" 77 2586 2611
+type(
+  t
+)
+"lib/bcost.ml" 72 2502 2504 "lib/bcost.ml" 77 2586 2611
+type(
+  t
+)
+"lib/bcost.ml" 79 2613 2617 "lib/bcost.ml" 79 2613 2619
+type(
+  t -> t -> bool
+)
+ident(
+  def lt "lib/bcost.ml" 85 2734 2734 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 79 2613 2620 "lib/bcost.ml" 79 2613 2621
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 79 2613 2622 "lib/bcost.ml" 83 2700 2732
+)
+"lib/bcost.ml" 79 2613 2622 "lib/bcost.ml" 79 2613 2623
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 80 2626 2628 "lib/bcost.ml" 83 2700 2732
+)
+"lib/bcost.ml" 80 2626 2634 "lib/bcost.ml" 80 2626 2635
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 79 2613 2620 "lib/bcost.ml" 79 2613 2621
+)
+"lib/bcost.ml" 80 2626 2637 "lib/bcost.ml" 80 2626 2638
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 79 2613 2622 "lib/bcost.ml" 79 2613 2623
+)
+"lib/bcost.ml" 80 2626 2634 "lib/bcost.ml" 80 2626 2638
+type(
+  t * t
+)
+"lib/bcost.ml" 81 2644 2648 "lib/bcost.ml" 81 2644 2656
+type(
+  t
+)
+"lib/bcost.ml" 81 2644 2658 "lib/bcost.ml" 81 2644 2659
+type(
+  t
+)
+"lib/bcost.ml" 81 2644 2648 "lib/bcost.ml" 81 2644 2659
+type(
+  t * t
+)
+"lib/bcost.ml" 81 2644 2663 "lib/bcost.ml" 81 2644 2668
+type(
+  bool
+)
+"lib/bcost.ml" 82 2669 2680 "lib/bcost.ml" 82 2669 2681
+type(
+  int
+)
+"lib/bcost.ml" 82 2669 2673 "lib/bcost.ml" 82 2669 2681
+type(
+  t
+)
+"lib/bcost.ml" 82 2669 2683 "lib/bcost.ml" 82 2669 2691
+type(
+  t
+)
+"lib/bcost.ml" 82 2669 2673 "lib/bcost.ml" 82 2669 2691
+type(
+  t * t
+)
+"lib/bcost.ml" 82 2669 2695 "lib/bcost.ml" 82 2669 2699
+type(
+  bool
+)
+"lib/bcost.ml" 83 2700 2711 "lib/bcost.ml" 83 2700 2712
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 83 2700 2727 "lib/bcost.ml" 83 2700 2732
+)
+"lib/bcost.ml" 83 2700 2704 "lib/bcost.ml" 83 2700 2712
+type(
+  t
+)
+"lib/bcost.ml" 83 2700 2721 "lib/bcost.ml" 83 2700 2722
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 83 2700 2727 "lib/bcost.ml" 83 2700 2732
+)
+"lib/bcost.ml" 83 2700 2714 "lib/bcost.ml" 83 2700 2722
+type(
+  t
+)
+"lib/bcost.ml" 83 2700 2704 "lib/bcost.ml" 83 2700 2722
+type(
+  t * t
+)
+"lib/bcost.ml" 83 2700 2727 "lib/bcost.ml" 83 2700 2728
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 83 2700 2711 "lib/bcost.ml" 83 2700 2712
+)
+"lib/bcost.ml" 83 2700 2729 "lib/bcost.ml" 83 2700 2730
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"lib/bcost.ml" 83 2700 2731 "lib/bcost.ml" 83 2700 2732
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 83 2700 2721 "lib/bcost.ml" 83 2700 2722
+)
+"lib/bcost.ml" 83 2700 2727 "lib/bcost.ml" 83 2700 2732
+type(
+  bool
+)
+"lib/bcost.ml" 80 2626 2628 "lib/bcost.ml" 83 2700 2732
+type(
+  bool
+)
+"lib/bcost.ml" 85 2734 2738 "lib/bcost.ml" 85 2734 2740
+type(
+  t -> t -> bool
+)
+ident(
+  def le "lib/bcost.ml" 91 2856 2856 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 85 2734 2741 "lib/bcost.ml" 85 2734 2742
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 85 2734 2743 "lib/bcost.ml" 89 2821 2854
+)
+"lib/bcost.ml" 85 2734 2743 "lib/bcost.ml" 85 2734 2744
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 86 2747 2749 "lib/bcost.ml" 89 2821 2854
+)
+"lib/bcost.ml" 86 2747 2755 "lib/bcost.ml" 86 2747 2756
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 85 2734 2741 "lib/bcost.ml" 85 2734 2742
+)
+"lib/bcost.ml" 86 2747 2758 "lib/bcost.ml" 86 2747 2759
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 85 2734 2743 "lib/bcost.ml" 85 2734 2744
+)
+"lib/bcost.ml" 86 2747 2755 "lib/bcost.ml" 86 2747 2759
+type(
+  t * t
+)
+"lib/bcost.ml" 87 2765 2769 "lib/bcost.ml" 87 2765 2770
+type(
+  t
+)
+"lib/bcost.ml" 87 2765 2772 "lib/bcost.ml" 87 2765 2780
+type(
+  t
+)
+"lib/bcost.ml" 87 2765 2769 "lib/bcost.ml" 87 2765 2780
+type(
+  t * t
+)
+"lib/bcost.ml" 87 2765 2784 "lib/bcost.ml" 87 2765 2788
+type(
+  bool
+)
+"lib/bcost.ml" 88 2789 2793 "lib/bcost.ml" 88 2789 2801
+type(
+  t
+)
+"lib/bcost.ml" 88 2789 2810 "lib/bcost.ml" 88 2789 2811
+type(
+  int
+)
+"lib/bcost.ml" 88 2789 2803 "lib/bcost.ml" 88 2789 2811
+type(
+  t
+)
+"lib/bcost.ml" 88 2789 2793 "lib/bcost.ml" 88 2789 2811
+type(
+  t * t
+)
+"lib/bcost.ml" 88 2789 2815 "lib/bcost.ml" 88 2789 2820
+type(
+  bool
+)
+"lib/bcost.ml" 89 2821 2832 "lib/bcost.ml" 89 2821 2833
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 89 2821 2848 "lib/bcost.ml" 89 2821 2854
+)
+"lib/bcost.ml" 89 2821 2825 "lib/bcost.ml" 89 2821 2833
+type(
+  t
+)
+"lib/bcost.ml" 89 2821 2842 "lib/bcost.ml" 89 2821 2843
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 89 2821 2848 "lib/bcost.ml" 89 2821 2854
+)
+"lib/bcost.ml" 89 2821 2835 "lib/bcost.ml" 89 2821 2843
+type(
+  t
+)
+"lib/bcost.ml" 89 2821 2825 "lib/bcost.ml" 89 2821 2843
+type(
+  t * t
+)
+"lib/bcost.ml" 89 2821 2848 "lib/bcost.ml" 89 2821 2849
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 89 2821 2832 "lib/bcost.ml" 89 2821 2833
+)
+"lib/bcost.ml" 89 2821 2850 "lib/bcost.ml" 89 2821 2852
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"lib/bcost.ml" 89 2821 2853 "lib/bcost.ml" 89 2821 2854
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 89 2821 2842 "lib/bcost.ml" 89 2821 2843
+)
+"lib/bcost.ml" 89 2821 2848 "lib/bcost.ml" 89 2821 2854
+type(
+  bool
+)
+"lib/bcost.ml" 86 2747 2749 "lib/bcost.ml" 89 2821 2854
+type(
+  bool
+)
+"lib/bcost.ml" 91 2856 2860 "lib/bcost.ml" 91 2856 2867
+type(
+  t -> t -> int
+)
+ident(
+  def compare "lib/bcost.ml" 98 3011 3011 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 91 2856 2868 "lib/bcost.ml" 91 2856 2869
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 91 2856 2870 "lib/bcost.ml" 96 2984 3007
+)
+"lib/bcost.ml" 91 2856 2870 "lib/bcost.ml" 91 2856 2871
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 92 2874 2876 "lib/bcost.ml" 96 2984 3007
+)
+"lib/bcost.ml" 92 2874 2882 "lib/bcost.ml" 92 2874 2883
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 91 2856 2868 "lib/bcost.ml" 91 2856 2869
+)
+"lib/bcost.ml" 92 2874 2884 "lib/bcost.ml" 92 2874 2885
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 91 2856 2870 "lib/bcost.ml" 91 2856 2871
+)
+"lib/bcost.ml" 92 2874 2882 "lib/bcost.ml" 92 2874 2885
+type(
+  t * t
+)
+"lib/bcost.ml" 93 2891 2904 "lib/bcost.ml" 93 2891 2905
+type(
+  int
+)
+ident(
+  def a "lib/bcost.ml" 93 2891 2919 "lib/bcost.ml" 93 2891 2930
+)
+"lib/bcost.ml" 93 2891 2897 "lib/bcost.ml" 93 2891 2905
+type(
+  t
+)
+"lib/bcost.ml" 93 2891 2914 "lib/bcost.ml" 93 2891 2915
+type(
+  int
+)
+ident(
+  def b "lib/bcost.ml" 93 2891 2919 "lib/bcost.ml" 93 2891 2930
+)
+"lib/bcost.ml" 93 2891 2907 "lib/bcost.ml" 93 2891 2915
+type(
+  t
+)
+"lib/bcost.ml" 93 2891 2897 "lib/bcost.ml" 93 2891 2915
+type(
+  t * t
+)
+"lib/bcost.ml" 93 2891 2919 "lib/bcost.ml" 93 2891 2926
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"lib/bcost.ml" 93 2891 2927 "lib/bcost.ml" 93 2891 2928
+type(
+  int
+)
+ident(
+  int_ref a "lib/bcost.ml" 93 2891 2904 "lib/bcost.ml" 93 2891 2905
+)
+"lib/bcost.ml" 93 2891 2929 "lib/bcost.ml" 93 2891 2930
+type(
+  int
+)
+ident(
+  int_ref b "lib/bcost.ml" 93 2891 2914 "lib/bcost.ml" 93 2891 2915
+)
+"lib/bcost.ml" 93 2891 2919 "lib/bcost.ml" 93 2891 2930
+type(
+  int
+)
+"lib/bcost.ml" 94 2931 2937 "lib/bcost.ml" 94 2931 2945
+type(
+  t
+)
+"lib/bcost.ml" 94 2931 2947 "lib/bcost.ml" 94 2931 2955
+type(
+  t
+)
+"lib/bcost.ml" 94 2931 2937 "lib/bcost.ml" 94 2931 2955
+type(
+  t * t
+)
+"lib/bcost.ml" 94 2931 2959 "lib/bcost.ml" 94 2931 2960
+type(
+  int
+)
+"lib/bcost.ml" 95 2961 2967 "lib/bcost.ml" 95 2961 2975
+type(
+  t
+)
+"lib/bcost.ml" 95 2961 2977 "lib/bcost.ml" 95 2961 2978
+type(
+  t
+)
+"lib/bcost.ml" 95 2961 2967 "lib/bcost.ml" 95 2961 2978
+type(
+  t * t
+)
+"lib/bcost.ml" 95 2961 2982 "lib/bcost.ml" 95 2961 2983
+type(
+  int
+)
+"lib/bcost.ml" 96 2984 2990 "lib/bcost.ml" 96 2984 2991
+type(
+  t
+)
+"lib/bcost.ml" 96 2984 2993 "lib/bcost.ml" 96 2984 3001
+type(
+  t
+)
+"lib/bcost.ml" 96 2984 2990 "lib/bcost.ml" 96 2984 3001
+type(
+  t * t
+)
+"lib/bcost.ml" 96 2984 3005 "lib/bcost.ml" 96 2984 3007
+type(
+  int
+)
+"lib/bcost.ml" 92 2874 2876 "lib/bcost.ml" 96 2984 3007
+type(
+  int
+)
+"lib/bcost.ml" 98 3011 3015 "lib/bcost.ml" 98 3011 3020
+type(
+  t -> t -> bool
+)
+ident(
+  def equal "lib/bcost.ml" 98 3011 3043 "lib/bcost.ml" 1 0 -1
+)
+"lib/bcost.ml" 98 3011 3021 "lib/bcost.ml" 98 3011 3022
+type(
+  t
+)
+ident(
+  def a "lib/bcost.ml" 98 3011 3023 "lib/bcost.ml" 98 3011 3043
+)
+"lib/bcost.ml" 98 3011 3023 "lib/bcost.ml" 98 3011 3024
+type(
+  t
+)
+ident(
+  def b "lib/bcost.ml" 98 3011 3027 "lib/bcost.ml" 98 3011 3043
+)
+"lib/bcost.ml" 98 3011 3027 "lib/bcost.ml" 98 3011 3029
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "lib/bcost.ml" 85 2734 2738 "lib/bcost.ml" 85 2734 2740
+)
+"lib/bcost.ml" 98 3011 3030 "lib/bcost.ml" 98 3011 3031
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 98 3011 3021 "lib/bcost.ml" 98 3011 3022
+)
+"lib/bcost.ml" 98 3011 3032 "lib/bcost.ml" 98 3011 3033
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 98 3011 3023 "lib/bcost.ml" 98 3011 3024
+)
+"lib/bcost.ml" 98 3011 3027 "lib/bcost.ml" 98 3011 3033
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bcost.ml" 98 3011 3034 "lib/bcost.ml" 98 3011 3036
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"lib/bcost.ml" 98 3011 3037 "lib/bcost.ml" 98 3011 3039
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "lib/bcost.ml" 85 2734 2738 "lib/bcost.ml" 85 2734 2740
+)
+"lib/bcost.ml" 98 3011 3040 "lib/bcost.ml" 98 3011 3041
+type(
+  t
+)
+ident(
+  int_ref b "lib/bcost.ml" 98 3011 3023 "lib/bcost.ml" 98 3011 3024
+)
+"lib/bcost.ml" 98 3011 3042 "lib/bcost.ml" 98 3011 3043
+type(
+  t
+)
+ident(
+  int_ref a "lib/bcost.ml" 98 3011 3021 "lib/bcost.ml" 98 3011 3022
+)
+"lib/bcost.ml" 98 3011 3037 "lib/bcost.ml" 98 3011 3043
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bcost.ml" 98 3011 3027 "lib/bcost.ml" 98 3011 3043
+type(
+  bool
+)

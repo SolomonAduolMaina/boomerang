@@ -1,0 +1,212 @@
+"hbase/int.ml" 17 485 495 "hbase/int.ml" 17 485 502
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "hbase/int.ml" 18 555 561 "hbase/int.ml" 19 591 598
+)
+"hbase/int.ml" 17 485 503 "hbase/int.ml" 17 485 504
+type(
+  'a
+)
+ident(
+  def x "hbase/int.ml" 17 485 505 "hbase/int.ml" 17 485 554
+)
+"hbase/int.ml" 17 485 505 "hbase/int.ml" 17 485 506
+type(
+  'a
+)
+ident(
+  def y "hbase/int.ml" 17 485 510 "hbase/int.ml" 17 485 554
+)
+"hbase/int.ml" 17 485 513 "hbase/int.ml" 17 485 514
+type(
+  'a
+)
+ident(
+  int_ref x "hbase/int.ml" 17 485 503 "hbase/int.ml" 17 485 504
+)
+"hbase/int.ml" 17 485 515 "hbase/int.ml" 17 485 516
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"hbase/int.ml" 17 485 517 "hbase/int.ml" 17 485 518
+type(
+  'a
+)
+ident(
+  int_ref y "hbase/int.ml" 17 485 505 "hbase/int.ml" 17 485 506
+)
+"hbase/int.ml" 17 485 513 "hbase/int.ml" 17 485 518
+type(
+  bool
+)
+"hbase/int.ml" 17 485 524 "hbase/int.ml" 17 485 526
+type(
+  int
+)
+"hbase/int.ml" 17 485 535 "hbase/int.ml" 17 485 536
+type(
+  'a
+)
+ident(
+  int_ref x "hbase/int.ml" 17 485 503 "hbase/int.ml" 17 485 504
+)
+"hbase/int.ml" 17 485 537 "hbase/int.ml" 17 485 538
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"hbase/int.ml" 17 485 539 "hbase/int.ml" 17 485 540
+type(
+  'a
+)
+ident(
+  int_ref y "hbase/int.ml" 17 485 505 "hbase/int.ml" 17 485 506
+)
+"hbase/int.ml" 17 485 535 "hbase/int.ml" 17 485 540
+type(
+  bool
+)
+"hbase/int.ml" 17 485 546 "hbase/int.ml" 17 485 547
+type(
+  int
+)
+"hbase/int.ml" 17 485 553 "hbase/int.ml" 17 485 554
+type(
+  int
+)
+"hbase/int.ml" 17 485 532 "hbase/int.ml" 17 485 554
+type(
+  int
+)
+"hbase/int.ml" 17 485 510 "hbase/int.ml" 17 485 554
+type(
+  int
+)
+"hbase/int.ml" 18 555 565 "hbase/int.ml" 18 555 574
+type(
+  int -> string
+)
+ident(
+  def to_string "hbase/int.ml" 18 555 590 "hbase/int.ml" 19 591 598
+)
+"hbase/int.ml" 18 555 577 "hbase/int.ml" 18 555 590
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"hbase/int.ml" 14 439 441 "hbase/int.ml" 19 591 599
+call(
+  stack
+)
+"hbase/int.ml" 27 687 697 "hbase/int.ml" 27 687 704
+type(
+  M.KeySet.t -> M.KeySet.t -> int
+)
+ident(
+  def compare "hbase/int.ml" 27 687 723 "hbase/int.ml" 28 724 731
+)
+"hbase/int.ml" 27 687 707 "hbase/int.ml" 27 687 723
+type(
+  M.KeySet.t -> M.KeySet.t -> int
+)
+ident(
+  ext_ref M.KeySet.compare
+)
+"hbase/int.ml" 24 638 640 "hbase/int.ml" 28 724 732
+call(
+  stack
+)
+"hbase/int.ml" 36 818 828 "hbase/int.ml" 36 818 833
+type(
+  int -> int -> bool
+)
+ident(
+  def equal "hbase/int.ml" 37 860 866 "hbase/int.ml" 38 900 907
+)
+"hbase/int.ml" 36 818 835 "hbase/int.ml" 36 818 836
+type(
+  int
+)
+ident(
+  def x "hbase/int.ml" 36 818 842 "hbase/int.ml" 36 818 859
+)
+"hbase/int.ml" 36 818 843 "hbase/int.ml" 36 818 844
+type(
+  int
+)
+ident(
+  def y "hbase/int.ml" 36 818 852 "hbase/int.ml" 36 818 859
+)
+"hbase/int.ml" 36 818 853 "hbase/int.ml" 36 818 854
+type(
+  int
+)
+ident(
+  int_ref x "hbase/int.ml" 36 818 835 "hbase/int.ml" 36 818 836
+)
+"hbase/int.ml" 36 818 855 "hbase/int.ml" 36 818 856
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"hbase/int.ml" 36 818 857 "hbase/int.ml" 36 818 858
+type(
+  int
+)
+ident(
+  int_ref y "hbase/int.ml" 36 818 843 "hbase/int.ml" 36 818 844
+)
+"hbase/int.ml" 36 818 852 "hbase/int.ml" 36 818 859
+type(
+  bool
+)
+"hbase/int.ml" 37 860 870 "hbase/int.ml" 37 860 874
+type(
+  int -> int
+)
+ident(
+  def hash "hbase/int.ml" 37 860 899 "hbase/int.ml" 38 900 907
+)
+"hbase/int.ml" 37 860 876 "hbase/int.ml" 37 860 877
+type(
+  int
+)
+ident(
+  def x "hbase/int.ml" 37 860 885 "hbase/int.ml" 37 860 899
+)
+"hbase/int.ml" 37 860 885 "hbase/int.ml" 37 860 897
+type(
+  int -> int
+)
+ident(
+  ext_ref Hashtbl.hash
+)
+"hbase/int.ml" 37 860 898 "hbase/int.ml" 37 860 899
+type(
+  int
+)
+ident(
+  int_ref x "hbase/int.ml" 37 860 876 "hbase/int.ml" 37 860 877
+)
+"hbase/int.ml" 37 860 885 "hbase/int.ml" 37 860 899
+call(
+  tail
+)
+type(
+  int
+)
+"hbase/int.ml" 33 772 774 "hbase/int.ml" 38 900 908
+call(
+  stack
+)

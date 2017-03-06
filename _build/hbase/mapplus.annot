@@ -1,0 +1,2753 @@
+"hbase/mapplus.ml" 42 1432 1445 "hbase/mapplus.ml" 42 1432 1458
+call(
+  stack
+)
+"hbase/mapplus.ml" 43 1459 1477 "hbase/mapplus.ml" 43 1459 1490
+call(
+  stack
+)
+"hbase/mapplus.ml" 52 1618 1626 "hbase/mapplus.ml" 52 1618 1631
+type(
+  'a M.t * KeySet.t
+)
+ident(
+  def empty "hbase/mapplus.ml" 53 1658 1662 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 52 1618 1635 "hbase/mapplus.ml" 52 1618 1642
+type(
+  'a M.t
+)
+ident(
+  ext_ref M.empty
+)
+"hbase/mapplus.ml" 52 1618 1644 "hbase/mapplus.ml" 52 1618 1656
+type(
+  KeySet.t
+)
+ident(
+  ext_ref KeySet.empty
+)
+"hbase/mapplus.ml" 52 1618 1634 "hbase/mapplus.ml" 52 1618 1657
+type(
+  'a M.t * KeySet.t
+)
+"hbase/mapplus.ml" 53 1658 1666 "hbase/mapplus.ml" 53 1658 1672
+type(
+  'b * 'c -> 'c
+)
+ident(
+  def domain "hbase/mapplus.ml" 54 1684 1688 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 53 1658 1674 "hbase/mapplus.ml" 53 1658 1675
+type(
+  'b
+)
+"hbase/mapplus.ml" 53 1658 1677 "hbase/mapplus.ml" 53 1658 1678
+type(
+  'c
+)
+ident(
+  def d "hbase/mapplus.ml" 53 1658 1682 "hbase/mapplus.ml" 53 1658 1683
+)
+"hbase/mapplus.ml" 53 1658 1673 "hbase/mapplus.ml" 53 1658 1679
+type(
+  'b * 'c
+)
+"hbase/mapplus.ml" 53 1658 1682 "hbase/mapplus.ml" 53 1658 1683
+type(
+  'c
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 53 1658 1677 "hbase/mapplus.ml" 53 1658 1678
+)
+"hbase/mapplus.ml" 54 1684 1692 "hbase/mapplus.ml" 54 1684 1700
+type(
+  'd * KeySet.t -> bool
+)
+ident(
+  def is_empty "hbase/mapplus.ml" 55 1728 1732 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 54 1684 1702 "hbase/mapplus.ml" 54 1684 1703
+type(
+  'd
+)
+"hbase/mapplus.ml" 54 1684 1705 "hbase/mapplus.ml" 54 1684 1706
+type(
+  KeySet.t
+)
+ident(
+  def d "hbase/mapplus.ml" 54 1684 1710 "hbase/mapplus.ml" 54 1684 1727
+)
+"hbase/mapplus.ml" 54 1684 1701 "hbase/mapplus.ml" 54 1684 1707
+type(
+  'd * KeySet.t
+)
+"hbase/mapplus.ml" 54 1684 1710 "hbase/mapplus.ml" 54 1684 1725
+type(
+  KeySet.t -> bool
+)
+ident(
+  ext_ref KeySet.is_empty
+)
+"hbase/mapplus.ml" 54 1684 1726 "hbase/mapplus.ml" 54 1684 1727
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 54 1684 1705 "hbase/mapplus.ml" 54 1684 1706
+)
+"hbase/mapplus.ml" 54 1684 1710 "hbase/mapplus.ml" 54 1684 1727
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 55 1728 1736 "hbase/mapplus.ml" 55 1728 1740
+type(
+  'e * KeySet.t -> int
+)
+ident(
+  def size "hbase/mapplus.ml" 56 1769 1773 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 55 1728 1742 "hbase/mapplus.ml" 55 1728 1743
+type(
+  'e
+)
+"hbase/mapplus.ml" 55 1728 1744 "hbase/mapplus.ml" 55 1728 1745
+type(
+  KeySet.t
+)
+ident(
+  def d "hbase/mapplus.ml" 55 1728 1749 "hbase/mapplus.ml" 55 1728 1768
+)
+"hbase/mapplus.ml" 55 1728 1741 "hbase/mapplus.ml" 55 1728 1746
+type(
+  'e * KeySet.t
+)
+"hbase/mapplus.ml" 55 1728 1750 "hbase/mapplus.ml" 55 1728 1765
+type(
+  KeySet.t -> int
+)
+ident(
+  ext_ref KeySet.cardinal
+)
+"hbase/mapplus.ml" 55 1728 1766 "hbase/mapplus.ml" 55 1728 1767
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 55 1728 1744 "hbase/mapplus.ml" 55 1728 1745
+)
+"hbase/mapplus.ml" 55 1728 1749 "hbase/mapplus.ml" 55 1728 1768
+call(
+  tail
+)
+type(
+  int
+)
+"hbase/mapplus.ml" 56 1769 1777 "hbase/mapplus.ml" 56 1769 1780
+type(
+  M.key -> 'f -> 'f M.t * KeySet.t -> 'f M.t * KeySet.t
+)
+ident(
+  def add "hbase/mapplus.ml" 57 1824 1828 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 56 1769 1781 "hbase/mapplus.ml" 56 1769 1782
+type(
+  M.key
+)
+ident(
+  def x "hbase/mapplus.ml" 56 1769 1783 "hbase/mapplus.ml" 56 1769 1823
+)
+"hbase/mapplus.ml" 56 1769 1783 "hbase/mapplus.ml" 56 1769 1784
+type(
+  'f
+)
+ident(
+  def v "hbase/mapplus.ml" 56 1769 1785 "hbase/mapplus.ml" 56 1769 1823
+)
+"hbase/mapplus.ml" 56 1769 1786 "hbase/mapplus.ml" 56 1769 1787
+type(
+  'f M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 56 1769 1794 "hbase/mapplus.ml" 56 1769 1823
+)
+"hbase/mapplus.ml" 56 1769 1789 "hbase/mapplus.ml" 56 1769 1790
+type(
+  KeySet.t
+)
+ident(
+  def d "hbase/mapplus.ml" 56 1769 1794 "hbase/mapplus.ml" 56 1769 1823
+)
+"hbase/mapplus.ml" 56 1769 1785 "hbase/mapplus.ml" 56 1769 1791
+type(
+  'f M.t * KeySet.t
+)
+"hbase/mapplus.ml" 56 1769 1795 "hbase/mapplus.ml" 56 1769 1800
+type(
+  M.key -> 'f -> 'f M.t -> 'f M.t
+)
+ident(
+  ext_ref M.add
+)
+"hbase/mapplus.ml" 56 1769 1801 "hbase/mapplus.ml" 56 1769 1802
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 56 1769 1781 "hbase/mapplus.ml" 56 1769 1782
+)
+"hbase/mapplus.ml" 56 1769 1803 "hbase/mapplus.ml" 56 1769 1804
+type(
+  'f
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 56 1769 1783 "hbase/mapplus.ml" 56 1769 1784
+)
+"hbase/mapplus.ml" 56 1769 1805 "hbase/mapplus.ml" 56 1769 1806
+type(
+  'f M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 56 1769 1786 "hbase/mapplus.ml" 56 1769 1787
+)
+"hbase/mapplus.ml" 56 1769 1795 "hbase/mapplus.ml" 56 1769 1806
+call(
+  stack
+)
+type(
+  'f M.t
+)
+"hbase/mapplus.ml" 56 1769 1808 "hbase/mapplus.ml" 56 1769 1818
+type(
+  KeySet.elt -> KeySet.t -> KeySet.t
+)
+ident(
+  ext_ref KeySet.add
+)
+"hbase/mapplus.ml" 56 1769 1819 "hbase/mapplus.ml" 56 1769 1820
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 56 1769 1781 "hbase/mapplus.ml" 56 1769 1782
+)
+"hbase/mapplus.ml" 56 1769 1821 "hbase/mapplus.ml" 56 1769 1822
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 56 1769 1789 "hbase/mapplus.ml" 56 1769 1790
+)
+"hbase/mapplus.ml" 56 1769 1808 "hbase/mapplus.ml" 56 1769 1822
+call(
+  stack
+)
+type(
+  KeySet.t
+)
+"hbase/mapplus.ml" 56 1769 1794 "hbase/mapplus.ml" 56 1769 1823
+type(
+  'f M.t * KeySet.t
+)
+"hbase/mapplus.ml" 57 1824 1832 "hbase/mapplus.ml" 57 1824 1839
+type(
+  'g M.t * KeySet.t -> 'g M.t * KeySet.t -> 'g M.t * KeySet.t
+)
+ident(
+  def combine "hbase/mapplus.ml" 59 1907 1911 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 57 1824 1841 "hbase/mapplus.ml" 57 1824 1843
+type(
+  'g M.t
+)
+ident(
+  def m1 "hbase/mapplus.ml" 57 1824 1849 "hbase/mapplus.ml" 58 1860 1906
+)
+"hbase/mapplus.ml" 57 1824 1845 "hbase/mapplus.ml" 57 1824 1847
+type(
+  KeySet.t
+)
+ident(
+  def d1 "hbase/mapplus.ml" 57 1824 1849 "hbase/mapplus.ml" 58 1860 1906
+)
+"hbase/mapplus.ml" 57 1824 1840 "hbase/mapplus.ml" 57 1824 1848
+type(
+  'g M.t * KeySet.t
+)
+"hbase/mapplus.ml" 57 1824 1850 "hbase/mapplus.ml" 57 1824 1852
+type(
+  'g M.t
+)
+ident(
+  def m2 "hbase/mapplus.ml" 58 1860 1866 "hbase/mapplus.ml" 58 1860 1906
+)
+"hbase/mapplus.ml" 57 1824 1854 "hbase/mapplus.ml" 57 1824 1856
+type(
+  KeySet.t
+)
+ident(
+  def d2 "hbase/mapplus.ml" 58 1860 1866 "hbase/mapplus.ml" 58 1860 1906
+)
+"hbase/mapplus.ml" 57 1824 1849 "hbase/mapplus.ml" 57 1824 1857
+type(
+  'g M.t * KeySet.t
+)
+"hbase/mapplus.ml" 58 1860 1867 "hbase/mapplus.ml" 58 1860 1873
+type(
+  (M.key -> 'g -> 'g M.t -> 'g M.t) -> 'g M.t -> 'g M.t -> 'g M.t
+)
+ident(
+  ext_ref M.fold
+)
+"hbase/mapplus.ml" 58 1860 1874 "hbase/mapplus.ml" 58 1860 1879
+type(
+  M.key -> 'g -> 'g M.t -> 'g M.t
+)
+ident(
+  ext_ref M.add
+)
+"hbase/mapplus.ml" 58 1860 1880 "hbase/mapplus.ml" 58 1860 1882
+type(
+  'g M.t
+)
+ident(
+  int_ref m2 "hbase/mapplus.ml" 57 1824 1850 "hbase/mapplus.ml" 57 1824 1852
+)
+"hbase/mapplus.ml" 58 1860 1883 "hbase/mapplus.ml" 58 1860 1885
+type(
+  'g M.t
+)
+ident(
+  int_ref m1 "hbase/mapplus.ml" 57 1824 1841 "hbase/mapplus.ml" 57 1824 1843
+)
+"hbase/mapplus.ml" 58 1860 1867 "hbase/mapplus.ml" 58 1860 1885
+call(
+  stack
+)
+type(
+  'g M.t
+)
+"hbase/mapplus.ml" 58 1860 1887 "hbase/mapplus.ml" 58 1860 1899
+type(
+  KeySet.t -> KeySet.t -> KeySet.t
+)
+ident(
+  ext_ref KeySet.union
+)
+"hbase/mapplus.ml" 58 1860 1900 "hbase/mapplus.ml" 58 1860 1902
+type(
+  KeySet.t
+)
+ident(
+  int_ref d1 "hbase/mapplus.ml" 57 1824 1845 "hbase/mapplus.ml" 57 1824 1847
+)
+"hbase/mapplus.ml" 58 1860 1903 "hbase/mapplus.ml" 58 1860 1905
+type(
+  KeySet.t
+)
+ident(
+  int_ref d2 "hbase/mapplus.ml" 57 1824 1854 "hbase/mapplus.ml" 57 1824 1856
+)
+"hbase/mapplus.ml" 58 1860 1887 "hbase/mapplus.ml" 58 1860 1905
+call(
+  stack
+)
+type(
+  KeySet.t
+)
+"hbase/mapplus.ml" 58 1860 1866 "hbase/mapplus.ml" 58 1860 1906
+type(
+  'g M.t * KeySet.t
+)
+"hbase/mapplus.ml" 59 1907 1915 "hbase/mapplus.ml" 59 1907 1919
+type(
+  M.key -> 'h M.t * 'i -> 'h
+)
+ident(
+  def find "hbase/mapplus.ml" 60 1942 1946 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 59 1907 1920 "hbase/mapplus.ml" 59 1907 1921
+type(
+  M.key
+)
+ident(
+  def x "hbase/mapplus.ml" 59 1907 1922 "hbase/mapplus.ml" 59 1907 1941
+)
+"hbase/mapplus.ml" 59 1907 1923 "hbase/mapplus.ml" 59 1907 1924
+type(
+  'h M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 59 1907 1931 "hbase/mapplus.ml" 59 1907 1941
+)
+"hbase/mapplus.ml" 59 1907 1926 "hbase/mapplus.ml" 59 1907 1927
+type(
+  'i
+)
+"hbase/mapplus.ml" 59 1907 1922 "hbase/mapplus.ml" 59 1907 1928
+type(
+  'h M.t * 'i
+)
+"hbase/mapplus.ml" 59 1907 1931 "hbase/mapplus.ml" 59 1907 1937
+type(
+  M.key -> 'h M.t -> 'h
+)
+ident(
+  ext_ref M.find
+)
+"hbase/mapplus.ml" 59 1907 1938 "hbase/mapplus.ml" 59 1907 1939
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 59 1907 1920 "hbase/mapplus.ml" 59 1907 1921
+)
+"hbase/mapplus.ml" 59 1907 1940 "hbase/mapplus.ml" 59 1907 1941
+type(
+  'h M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 59 1907 1923 "hbase/mapplus.ml" 59 1907 1924
+)
+"hbase/mapplus.ml" 59 1907 1931 "hbase/mapplus.ml" 59 1907 1941
+call(
+  tail
+)
+type(
+  'h
+)
+"hbase/mapplus.ml" 60 1942 1950 "hbase/mapplus.ml" 60 1942 1959
+type(
+  M.key -> 'j M.t * 'k -> 'j -> 'j
+)
+ident(
+  def safe_find "hbase/mapplus.ml" 62 2015 2019 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 60 1942 1960 "hbase/mapplus.ml" 60 1942 1961
+type(
+  M.key
+)
+ident(
+  def x "hbase/mapplus.ml" 60 1942 1962 "hbase/mapplus.ml" 61 1974 2014
+)
+"hbase/mapplus.ml" 60 1942 1963 "hbase/mapplus.ml" 60 1942 1964
+type(
+  'j M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 60 1942 1969 "hbase/mapplus.ml" 61 1974 2014
+)
+"hbase/mapplus.ml" 60 1942 1966 "hbase/mapplus.ml" 60 1942 1967
+type(
+  'k
+)
+"hbase/mapplus.ml" 60 1942 1962 "hbase/mapplus.ml" 60 1942 1968
+type(
+  'j M.t * 'k
+)
+"hbase/mapplus.ml" 60 1942 1969 "hbase/mapplus.ml" 60 1942 1970
+type(
+  'j
+)
+ident(
+  def d "hbase/mapplus.ml" 61 1974 1980 "hbase/mapplus.ml" 61 1974 2014
+)
+"hbase/mapplus.ml" 61 1974 1984 "hbase/mapplus.ml" 61 1974 1990
+type(
+  M.key -> 'j M.t -> 'j
+)
+ident(
+  ext_ref M.find
+)
+"hbase/mapplus.ml" 61 1974 1991 "hbase/mapplus.ml" 61 1974 1992
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 60 1942 1960 "hbase/mapplus.ml" 60 1942 1961
+)
+"hbase/mapplus.ml" 61 1974 1993 "hbase/mapplus.ml" 61 1974 1994
+type(
+  'j M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 60 1942 1963 "hbase/mapplus.ml" 60 1942 1964
+)
+"hbase/mapplus.ml" 61 1974 1984 "hbase/mapplus.ml" 61 1974 1994
+call(
+  stack
+)
+type(
+  'j
+)
+"hbase/mapplus.ml" 61 1974 2000 "hbase/mapplus.ml" 61 1974 2009
+type(
+  exn
+)
+"hbase/mapplus.ml" 61 1974 2013 "hbase/mapplus.ml" 61 1974 2014
+type(
+  'j
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 60 1942 1969 "hbase/mapplus.ml" 60 1942 1970
+)
+"hbase/mapplus.ml" 61 1974 1980 "hbase/mapplus.ml" 61 1974 2014
+type(
+  'j
+)
+"hbase/mapplus.ml" 62 2015 2023 "hbase/mapplus.ml" 62 2015 2036
+type(
+  KeySet.t -> (KeySet.elt -> 'l) -> 'l M.t * KeySet.t
+)
+ident(
+  def from_function "hbase/mapplus.ml" 65 2126 2130 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 62 2015 2037 "hbase/mapplus.ml" 62 2015 2038
+type(
+  KeySet.t
+)
+ident(
+  def d "hbase/mapplus.ml" 62 2015 2039 "hbase/mapplus.ml" 64 2111 2125
+)
+"hbase/mapplus.ml" 62 2015 2039 "hbase/mapplus.ml" 62 2015 2040
+type(
+  KeySet.elt -> 'l
+)
+ident(
+  def f "hbase/mapplus.ml" 63 2043 2049 "hbase/mapplus.ml" 64 2111 2125
+)
+"hbase/mapplus.ml" 63 2043 2053 "hbase/mapplus.ml" 63 2043 2054
+type(
+  'l M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 64 2111 2119 "hbase/mapplus.ml" 64 2111 2125
+)
+"hbase/mapplus.ml" 63 2043 2057 "hbase/mapplus.ml" 63 2043 2068
+type(
+  (KeySet.elt -> 'l M.t -> 'l M.t) -> KeySet.t -> 'l M.t -> 'l M.t
+)
+ident(
+  ext_ref KeySet.fold
+)
+"hbase/mapplus.ml" 63 2043 2074 "hbase/mapplus.ml" 63 2043 2075
+type(
+  KeySet.elt
+)
+ident(
+  def x "hbase/mapplus.ml" 63 2043 2076 "hbase/mapplus.ml" 63 2043 2096
+)
+"hbase/mapplus.ml" 63 2043 2076 "hbase/mapplus.ml" 63 2043 2077
+type(
+  'l M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 63 2043 2081 "hbase/mapplus.ml" 63 2043 2096
+)
+"hbase/mapplus.ml" 63 2043 2081 "hbase/mapplus.ml" 63 2043 2086
+type(
+  M.key -> 'l -> 'l M.t -> 'l M.t
+)
+ident(
+  ext_ref M.add
+)
+"hbase/mapplus.ml" 63 2043 2087 "hbase/mapplus.ml" 63 2043 2088
+type(
+  KeySet.elt
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 63 2043 2074 "hbase/mapplus.ml" 63 2043 2075
+)
+"hbase/mapplus.ml" 63 2043 2090 "hbase/mapplus.ml" 63 2043 2091
+type(
+  KeySet.elt -> 'l
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 62 2015 2039 "hbase/mapplus.ml" 62 2015 2040
+)
+"hbase/mapplus.ml" 63 2043 2092 "hbase/mapplus.ml" 63 2043 2093
+type(
+  KeySet.elt
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 63 2043 2074 "hbase/mapplus.ml" 63 2043 2075
+)
+"hbase/mapplus.ml" 63 2043 2089 "hbase/mapplus.ml" 63 2043 2094
+call(
+  stack
+)
+type(
+  'l
+)
+"hbase/mapplus.ml" 63 2043 2095 "hbase/mapplus.ml" 63 2043 2096
+type(
+  'l M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 63 2043 2076 "hbase/mapplus.ml" 63 2043 2077
+)
+"hbase/mapplus.ml" 63 2043 2081 "hbase/mapplus.ml" 63 2043 2096
+call(
+  tail
+)
+type(
+  'l M.t
+)
+"hbase/mapplus.ml" 63 2043 2069 "hbase/mapplus.ml" 63 2043 2097
+type(
+  KeySet.elt -> 'l M.t -> 'l M.t
+)
+"hbase/mapplus.ml" 63 2043 2098 "hbase/mapplus.ml" 63 2043 2099
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 62 2015 2037 "hbase/mapplus.ml" 62 2015 2038
+)
+"hbase/mapplus.ml" 63 2043 2100 "hbase/mapplus.ml" 63 2043 2107
+type(
+  'l M.t
+)
+ident(
+  ext_ref M.empty
+)
+"hbase/mapplus.ml" 63 2043 2057 "hbase/mapplus.ml" 63 2043 2107
+call(
+  stack
+)
+type(
+  'l M.t
+)
+"hbase/mapplus.ml" 64 2111 2120 "hbase/mapplus.ml" 64 2111 2121
+type(
+  'l M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 63 2043 2053 "hbase/mapplus.ml" 63 2043 2054
+)
+"hbase/mapplus.ml" 64 2111 2123 "hbase/mapplus.ml" 64 2111 2124
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 62 2015 2037 "hbase/mapplus.ml" 62 2015 2038
+)
+"hbase/mapplus.ml" 64 2111 2119 "hbase/mapplus.ml" 64 2111 2125
+type(
+  'l M.t * KeySet.t
+)
+"hbase/mapplus.ml" 63 2043 2049 "hbase/mapplus.ml" 64 2111 2125
+type(
+  'l M.t * KeySet.t
+)
+"hbase/mapplus.ml" 65 2126 2134 "hbase/mapplus.ml" 65 2126 2140
+type(
+  M.key -> 'm M.t * KeySet.t -> 'm M.t * KeySet.t
+)
+ident(
+  def remove "hbase/mapplus.ml" 66 2186 2190 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 65 2126 2141 "hbase/mapplus.ml" 65 2126 2142
+type(
+  M.key
+)
+ident(
+  def x "hbase/mapplus.ml" 65 2126 2143 "hbase/mapplus.ml" 65 2126 2185
+)
+"hbase/mapplus.ml" 65 2126 2144 "hbase/mapplus.ml" 65 2126 2145
+type(
+  'm M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 65 2126 2152 "hbase/mapplus.ml" 65 2126 2185
+)
+"hbase/mapplus.ml" 65 2126 2147 "hbase/mapplus.ml" 65 2126 2148
+type(
+  KeySet.t
+)
+ident(
+  def d "hbase/mapplus.ml" 65 2126 2152 "hbase/mapplus.ml" 65 2126 2185
+)
+"hbase/mapplus.ml" 65 2126 2143 "hbase/mapplus.ml" 65 2126 2149
+type(
+  'm M.t * KeySet.t
+)
+"hbase/mapplus.ml" 65 2126 2153 "hbase/mapplus.ml" 65 2126 2161
+type(
+  M.key -> 'm M.t -> 'm M.t
+)
+ident(
+  ext_ref M.remove
+)
+"hbase/mapplus.ml" 65 2126 2162 "hbase/mapplus.ml" 65 2126 2163
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 65 2126 2141 "hbase/mapplus.ml" 65 2126 2142
+)
+"hbase/mapplus.ml" 65 2126 2164 "hbase/mapplus.ml" 65 2126 2165
+type(
+  'm M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 65 2126 2144 "hbase/mapplus.ml" 65 2126 2145
+)
+"hbase/mapplus.ml" 65 2126 2153 "hbase/mapplus.ml" 65 2126 2165
+call(
+  stack
+)
+type(
+  'm M.t
+)
+"hbase/mapplus.ml" 65 2126 2167 "hbase/mapplus.ml" 65 2126 2180
+type(
+  KeySet.elt -> KeySet.t -> KeySet.t
+)
+ident(
+  ext_ref KeySet.remove
+)
+"hbase/mapplus.ml" 65 2126 2181 "hbase/mapplus.ml" 65 2126 2182
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 65 2126 2141 "hbase/mapplus.ml" 65 2126 2142
+)
+"hbase/mapplus.ml" 65 2126 2183 "hbase/mapplus.ml" 65 2126 2184
+type(
+  KeySet.t
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 65 2126 2147 "hbase/mapplus.ml" 65 2126 2148
+)
+"hbase/mapplus.ml" 65 2126 2167 "hbase/mapplus.ml" 65 2126 2184
+call(
+  stack
+)
+type(
+  KeySet.t
+)
+"hbase/mapplus.ml" 65 2126 2152 "hbase/mapplus.ml" 65 2126 2185
+type(
+  'm M.t * KeySet.t
+)
+"hbase/mapplus.ml" 66 2186 2194 "hbase/mapplus.ml" 66 2186 2197
+type(
+  M.key -> 'n M.t * 'o -> bool
+)
+ident(
+  def mem "hbase/mapplus.ml" 67 2219 2223 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 66 2186 2198 "hbase/mapplus.ml" 66 2186 2199
+type(
+  M.key
+)
+ident(
+  def x "hbase/mapplus.ml" 66 2186 2200 "hbase/mapplus.ml" 66 2186 2218
+)
+"hbase/mapplus.ml" 66 2186 2201 "hbase/mapplus.ml" 66 2186 2202
+type(
+  'n M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 66 2186 2209 "hbase/mapplus.ml" 66 2186 2218
+)
+"hbase/mapplus.ml" 66 2186 2204 "hbase/mapplus.ml" 66 2186 2205
+type(
+  'o
+)
+"hbase/mapplus.ml" 66 2186 2200 "hbase/mapplus.ml" 66 2186 2206
+type(
+  'n M.t * 'o
+)
+"hbase/mapplus.ml" 66 2186 2209 "hbase/mapplus.ml" 66 2186 2214
+type(
+  M.key -> 'n M.t -> bool
+)
+ident(
+  ext_ref M.mem
+)
+"hbase/mapplus.ml" 66 2186 2215 "hbase/mapplus.ml" 66 2186 2216
+type(
+  M.key
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 66 2186 2198 "hbase/mapplus.ml" 66 2186 2199
+)
+"hbase/mapplus.ml" 66 2186 2217 "hbase/mapplus.ml" 66 2186 2218
+type(
+  'n M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 66 2186 2201 "hbase/mapplus.ml" 66 2186 2202
+)
+"hbase/mapplus.ml" 66 2186 2209 "hbase/mapplus.ml" 66 2186 2218
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 67 2219 2227 "hbase/mapplus.ml" 67 2219 2236
+type(
+  (M.key * 'p) list -> 'p M.t * KeySet.t
+)
+ident(
+  def from_list "hbase/mapplus.ml" 76 2563 2567 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 67 2219 2237 "hbase/mapplus.ml" 67 2219 2238
+type(
+  (M.key * 'p) list
+)
+ident(
+  def l "hbase/mapplus.ml" 68 2242 2248 "hbase/mapplus.ml" 75 2537 2562
+)
+"hbase/mapplus.ml" 68 2242 2248 "hbase/mapplus.ml" 68 2242 2251
+type(
+  int * ('p M.t * KeySet.t) -> 'p M.t * KeySet.t
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"hbase/mapplus.ml" 68 2242 2253 "hbase/mapplus.ml" 68 2242 2271
+type(
+  (int * ('p M.t * KeySet.t) -> M.key * 'p -> int * ('p M.t * KeySet.t)) ->
+  int * ('p M.t * KeySet.t) -> (M.key * 'p) list -> int * ('p M.t * KeySet.t)
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"hbase/mapplus.ml" 69 2273 2292 "hbase/mapplus.ml" 69 2273 2295
+type(
+  int
+)
+ident(
+  def pos "hbase/mapplus.ml" 69 2273 2301 "hbase/mapplus.ml" 74 2495 2535
+)
+"hbase/mapplus.ml" 69 2273 2296 "hbase/mapplus.ml" 69 2273 2299
+type(
+  'p M.t * KeySet.t
+)
+ident(
+  def acc "hbase/mapplus.ml" 69 2273 2301 "hbase/mapplus.ml" 74 2495 2535
+)
+"hbase/mapplus.ml" 69 2273 2291 "hbase/mapplus.ml" 69 2273 2300
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 69 2273 2302 "hbase/mapplus.ml" 69 2273 2303
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 70 2311 2327 "hbase/mapplus.ml" 74 2495 2535
+)
+"hbase/mapplus.ml" 69 2273 2304 "hbase/mapplus.ml" 69 2273 2305
+type(
+  'p
+)
+ident(
+  def v "hbase/mapplus.ml" 70 2311 2327 "hbase/mapplus.ml" 74 2495 2535
+)
+"hbase/mapplus.ml" 69 2273 2301 "hbase/mapplus.ml" 69 2273 2306
+type(
+  M.key * 'p
+)
+"hbase/mapplus.ml" 70 2311 2330 "hbase/mapplus.ml" 70 2311 2333
+type(
+  M.key -> 'p M.t * KeySet.t -> bool
+)
+ident(
+  int_ref mem "hbase/mapplus.ml" 66 2186 2194 "hbase/mapplus.ml" 66 2186 2197
+)
+"hbase/mapplus.ml" 70 2311 2334 "hbase/mapplus.ml" 70 2311 2335
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 69 2273 2302 "hbase/mapplus.ml" 69 2273 2303
+)
+"hbase/mapplus.ml" 70 2311 2336 "hbase/mapplus.ml" 70 2311 2339
+type(
+  'p M.t * KeySet.t
+)
+ident(
+  int_ref acc "hbase/mapplus.ml" 69 2273 2296 "hbase/mapplus.ml" 69 2273 2299
+)
+"hbase/mapplus.ml" 70 2311 2330 "hbase/mapplus.ml" 70 2311 2339
+call(
+  stack
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 71 2346 2364 "hbase/mapplus.ml" 71 2346 2369
+type(
+  exn -> int * ('p M.t * KeySet.t)
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"hbase/mapplus.ml" 73 2410 2434 "hbase/mapplus.ml" 73 2410 2448
+type(
+  (int -> string, unit, string) format -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"hbase/mapplus.ml" 73 2410 2449 "hbase/mapplus.ml" 73 2410 2488
+type(
+  (int -> string, unit, string) format
+)
+"hbase/mapplus.ml" 73 2410 2489 "hbase/mapplus.ml" 73 2410 2492
+type(
+  int
+)
+ident(
+  int_ref pos "hbase/mapplus.ml" 69 2273 2292 "hbase/mapplus.ml" 69 2273 2295
+)
+"hbase/mapplus.ml" 73 2410 2433 "hbase/mapplus.ml" 73 2410 2493
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/mapplus.ml" 72 2371 2391 "hbase/mapplus.ml" 73 2410 2494
+type(
+  exn
+)
+"hbase/mapplus.ml" 71 2346 2364 "hbase/mapplus.ml" 73 2410 2494
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 74 2495 2517 "hbase/mapplus.ml" 74 2495 2520
+type(
+  int
+)
+ident(
+  int_ref pos "hbase/mapplus.ml" 69 2273 2292 "hbase/mapplus.ml" 69 2273 2295
+)
+"hbase/mapplus.ml" 74 2495 2520 "hbase/mapplus.ml" 74 2495 2521
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"hbase/mapplus.ml" 74 2495 2521 "hbase/mapplus.ml" 74 2495 2522
+type(
+  int
+)
+"hbase/mapplus.ml" 74 2495 2517 "hbase/mapplus.ml" 74 2495 2522
+type(
+  int
+)
+"hbase/mapplus.ml" 74 2495 2523 "hbase/mapplus.ml" 74 2495 2526
+type(
+  M.key -> 'p -> 'p M.t * KeySet.t -> 'p M.t * KeySet.t
+)
+ident(
+  int_ref add "hbase/mapplus.ml" 56 1769 1777 "hbase/mapplus.ml" 56 1769 1780
+)
+"hbase/mapplus.ml" 74 2495 2527 "hbase/mapplus.ml" 74 2495 2528
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 69 2273 2302 "hbase/mapplus.ml" 69 2273 2303
+)
+"hbase/mapplus.ml" 74 2495 2529 "hbase/mapplus.ml" 74 2495 2530
+type(
+  'p
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 69 2273 2304 "hbase/mapplus.ml" 69 2273 2305
+)
+"hbase/mapplus.ml" 74 2495 2531 "hbase/mapplus.ml" 74 2495 2534
+type(
+  'p M.t * KeySet.t
+)
+ident(
+  int_ref acc "hbase/mapplus.ml" 69 2273 2296 "hbase/mapplus.ml" 69 2273 2299
+)
+"hbase/mapplus.ml" 74 2495 2523 "hbase/mapplus.ml" 74 2495 2534
+call(
+  stack
+)
+type(
+  'p M.t * KeySet.t
+)
+"hbase/mapplus.ml" 74 2495 2516 "hbase/mapplus.ml" 74 2495 2535
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 70 2311 2327 "hbase/mapplus.ml" 74 2495 2535
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 69 2273 2286 "hbase/mapplus.ml" 74 2495 2536
+type(
+  int * ('p M.t * KeySet.t) -> M.key * 'p -> int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 75 2537 2551 "hbase/mapplus.ml" 75 2537 2552
+type(
+  int
+)
+"hbase/mapplus.ml" 75 2537 2553 "hbase/mapplus.ml" 75 2537 2558
+type(
+  'p M.t * KeySet.t
+)
+ident(
+  int_ref empty "hbase/mapplus.ml" 52 1618 1626 "hbase/mapplus.ml" 52 1618 1631
+)
+"hbase/mapplus.ml" 75 2537 2550 "hbase/mapplus.ml" 75 2537 2559
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 75 2537 2560 "hbase/mapplus.ml" 75 2537 2561
+type(
+  (M.key * 'p) list
+)
+ident(
+  int_ref l "hbase/mapplus.ml" 67 2219 2237 "hbase/mapplus.ml" 67 2219 2238
+)
+"hbase/mapplus.ml" 68 2242 2252 "hbase/mapplus.ml" 75 2537 2562
+call(
+  stack
+)
+type(
+  int * ('p M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 68 2242 2248 "hbase/mapplus.ml" 75 2537 2562
+type(
+  'p M.t * KeySet.t
+)
+"hbase/mapplus.ml" 76 2563 2571 "hbase/mapplus.ml" 76 2563 2575
+type(
+  (M.key -> 'q -> unit) -> 'q M.t * 'r -> unit
+)
+ident(
+  def iter "hbase/mapplus.ml" 77 2598 2602 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 76 2563 2576 "hbase/mapplus.ml" 76 2563 2577
+type(
+  M.key -> 'q -> unit
+)
+ident(
+  def f "hbase/mapplus.ml" 76 2563 2578 "hbase/mapplus.ml" 76 2563 2597
+)
+"hbase/mapplus.ml" 76 2563 2579 "hbase/mapplus.ml" 76 2563 2580
+type(
+  'q M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 76 2563 2587 "hbase/mapplus.ml" 76 2563 2597
+)
+"hbase/mapplus.ml" 76 2563 2582 "hbase/mapplus.ml" 76 2563 2583
+type(
+  'r
+)
+"hbase/mapplus.ml" 76 2563 2578 "hbase/mapplus.ml" 76 2563 2584
+type(
+  'q M.t * 'r
+)
+"hbase/mapplus.ml" 76 2563 2587 "hbase/mapplus.ml" 76 2563 2593
+type(
+  (M.key -> 'q -> unit) -> 'q M.t -> unit
+)
+ident(
+  ext_ref M.iter
+)
+"hbase/mapplus.ml" 76 2563 2594 "hbase/mapplus.ml" 76 2563 2595
+type(
+  M.key -> 'q -> unit
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 76 2563 2576 "hbase/mapplus.ml" 76 2563 2577
+)
+"hbase/mapplus.ml" 76 2563 2596 "hbase/mapplus.ml" 76 2563 2597
+type(
+  'q M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 76 2563 2579 "hbase/mapplus.ml" 76 2563 2580
+)
+"hbase/mapplus.ml" 76 2563 2587 "hbase/mapplus.ml" 76 2563 2597
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 77 2598 2606 "hbase/mapplus.ml" 77 2598 2619
+type(
+  (M.key -> 's -> unit) -> (unit -> unit) -> 's M.t * 't -> unit
+)
+ident(
+  def iter_with_sep "hbase/mapplus.ml" 85 2802 2806 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 77 2598 2620 "hbase/mapplus.ml" 77 2598 2621
+type(
+  M.key -> 's -> unit
+)
+ident(
+  def f "hbase/mapplus.ml" 77 2598 2622 "hbase/mapplus.ml" 84 2790 2801
+)
+"hbase/mapplus.ml" 77 2598 2622 "hbase/mapplus.ml" 77 2598 2625
+type(
+  unit -> unit
+)
+ident(
+  def sep "hbase/mapplus.ml" 77 2598 2626 "hbase/mapplus.ml" 84 2790 2801
+)
+"hbase/mapplus.ml" 77 2598 2627 "hbase/mapplus.ml" 77 2598 2628
+type(
+  's M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 78 2635 2641 "hbase/mapplus.ml" 84 2790 2801
+)
+"hbase/mapplus.ml" 77 2598 2630 "hbase/mapplus.ml" 77 2598 2631
+type(
+  't
+)
+"hbase/mapplus.ml" 77 2598 2626 "hbase/mapplus.ml" 77 2598 2632
+type(
+  's M.t * 't
+)
+"hbase/mapplus.ml" 78 2635 2645 "hbase/mapplus.ml" 78 2635 2650
+type(
+  bool ref
+)
+ident(
+  def first "hbase/mapplus.ml" 79 2665 2673 "hbase/mapplus.ml" 84 2790 2801
+)
+"hbase/mapplus.ml" 78 2635 2653 "hbase/mapplus.ml" 78 2635 2656
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"hbase/mapplus.ml" 78 2635 2657 "hbase/mapplus.ml" 78 2635 2661
+type(
+  bool
+)
+"hbase/mapplus.ml" 78 2635 2653 "hbase/mapplus.ml" 78 2635 2661
+type(
+  bool ref
+)
+"hbase/mapplus.ml" 79 2665 2673 "hbase/mapplus.ml" 79 2665 2679
+type(
+  (M.key -> 's -> unit) -> 's M.t -> unit
+)
+ident(
+  ext_ref M.iter
+)
+"hbase/mapplus.ml" 80 2680 2695 "hbase/mapplus.ml" 80 2680 2696
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 80 2680 2697 "hbase/mapplus.ml" 83 2770 2788
+)
+"hbase/mapplus.ml" 80 2680 2697 "hbase/mapplus.ml" 80 2680 2698
+type(
+  's
+)
+ident(
+  def x "hbase/mapplus.ml" 81 2702 2715 "hbase/mapplus.ml" 83 2770 2788
+)
+"hbase/mapplus.ml" 81 2702 2718 "hbase/mapplus.ml" 81 2702 2721
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"hbase/mapplus.ml" 81 2702 2722 "hbase/mapplus.ml" 81 2702 2723
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"hbase/mapplus.ml" 81 2702 2723 "hbase/mapplus.ml" 81 2702 2728
+type(
+  bool ref
+)
+ident(
+  int_ref first "hbase/mapplus.ml" 78 2635 2645 "hbase/mapplus.ml" 78 2635 2650
+)
+"hbase/mapplus.ml" 81 2702 2722 "hbase/mapplus.ml" 81 2702 2728
+type(
+  bool
+)
+"hbase/mapplus.ml" 81 2702 2718 "hbase/mapplus.ml" 81 2702 2728
+type(
+  bool
+)
+"hbase/mapplus.ml" 81 2702 2734 "hbase/mapplus.ml" 81 2702 2737
+type(
+  unit -> unit
+)
+ident(
+  int_ref sep "hbase/mapplus.ml" 77 2598 2622 "hbase/mapplus.ml" 77 2598 2625
+)
+"hbase/mapplus.ml" 81 2702 2737 "hbase/mapplus.ml" 81 2702 2739
+type(
+  unit
+)
+"hbase/mapplus.ml" 81 2702 2734 "hbase/mapplus.ml" 81 2702 2739
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 81 2702 2715 "hbase/mapplus.ml" 81 2702 2739
+type(
+  unit
+)
+"hbase/mapplus.ml" 82 2741 2754 "hbase/mapplus.ml" 82 2741 2759
+type(
+  bool ref
+)
+ident(
+  int_ref first "hbase/mapplus.ml" 78 2635 2645 "hbase/mapplus.ml" 78 2635 2650
+)
+"hbase/mapplus.ml" 82 2741 2760 "hbase/mapplus.ml" 82 2741 2762
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"hbase/mapplus.ml" 82 2741 2763 "hbase/mapplus.ml" 82 2741 2768
+type(
+  bool
+)
+"hbase/mapplus.ml" 82 2741 2754 "hbase/mapplus.ml" 82 2741 2768
+type(
+  unit
+)
+"hbase/mapplus.ml" 83 2770 2783 "hbase/mapplus.ml" 83 2770 2784
+type(
+  M.key -> 's -> unit
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 77 2598 2620 "hbase/mapplus.ml" 77 2598 2621
+)
+"hbase/mapplus.ml" 83 2770 2785 "hbase/mapplus.ml" 83 2770 2786
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 80 2680 2695 "hbase/mapplus.ml" 80 2680 2696
+)
+"hbase/mapplus.ml" 83 2770 2787 "hbase/mapplus.ml" 83 2770 2788
+type(
+  's
+)
+ident(
+  int_ref x "hbase/mapplus.ml" 80 2680 2697 "hbase/mapplus.ml" 80 2680 2698
+)
+"hbase/mapplus.ml" 83 2770 2783 "hbase/mapplus.ml" 83 2770 2788
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 82 2741 2754 "hbase/mapplus.ml" 83 2770 2788
+type(
+  unit
+)
+"hbase/mapplus.ml" 81 2702 2715 "hbase/mapplus.ml" 83 2770 2788
+type(
+  unit
+)
+"hbase/mapplus.ml" 80 2680 2690 "hbase/mapplus.ml" 83 2770 2789
+type(
+  M.key -> 's -> unit
+)
+"hbase/mapplus.ml" 84 2790 2800 "hbase/mapplus.ml" 84 2790 2801
+type(
+  's M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 77 2598 2627 "hbase/mapplus.ml" 77 2598 2628
+)
+"hbase/mapplus.ml" 79 2665 2673 "hbase/mapplus.ml" 84 2790 2801
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 78 2635 2641 "hbase/mapplus.ml" 84 2790 2801
+type(
+  unit
+)
+"hbase/mapplus.ml" 85 2802 2810 "hbase/mapplus.ml" 85 2802 2813
+type(
+  ('u -> 'v) -> 'u M.t * 'w -> 'v M.t * 'w
+)
+ident(
+  def map "hbase/mapplus.ml" 86 2838 2842 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 85 2802 2814 "hbase/mapplus.ml" 85 2802 2815
+type(
+  'u -> 'v
+)
+ident(
+  def f "hbase/mapplus.ml" 85 2802 2816 "hbase/mapplus.ml" 85 2802 2837
+)
+"hbase/mapplus.ml" 85 2802 2817 "hbase/mapplus.ml" 85 2802 2818
+type(
+  'u M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 85 2802 2825 "hbase/mapplus.ml" 85 2802 2837
+)
+"hbase/mapplus.ml" 85 2802 2820 "hbase/mapplus.ml" 85 2802 2821
+type(
+  'w
+)
+ident(
+  def d "hbase/mapplus.ml" 85 2802 2825 "hbase/mapplus.ml" 85 2802 2837
+)
+"hbase/mapplus.ml" 85 2802 2816 "hbase/mapplus.ml" 85 2802 2822
+type(
+  'u M.t * 'w
+)
+"hbase/mapplus.ml" 85 2802 2825 "hbase/mapplus.ml" 85 2802 2830
+type(
+  ('u -> 'v) -> 'u M.t -> 'v M.t
+)
+ident(
+  ext_ref M.map
+)
+"hbase/mapplus.ml" 85 2802 2831 "hbase/mapplus.ml" 85 2802 2832
+type(
+  'u -> 'v
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 85 2802 2814 "hbase/mapplus.ml" 85 2802 2815
+)
+"hbase/mapplus.ml" 85 2802 2833 "hbase/mapplus.ml" 85 2802 2834
+type(
+  'u M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 85 2802 2817 "hbase/mapplus.ml" 85 2802 2818
+)
+"hbase/mapplus.ml" 85 2802 2825 "hbase/mapplus.ml" 85 2802 2834
+call(
+  stack
+)
+type(
+  'v M.t
+)
+"hbase/mapplus.ml" 85 2802 2836 "hbase/mapplus.ml" 85 2802 2837
+type(
+  'w
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 85 2802 2820 "hbase/mapplus.ml" 85 2802 2821
+)
+"hbase/mapplus.ml" 85 2802 2825 "hbase/mapplus.ml" 85 2802 2837
+type(
+  'v M.t * 'w
+)
+"hbase/mapplus.ml" 86 2838 2846 "hbase/mapplus.ml" 86 2838 2850
+type(
+  (M.key -> 'x -> 'y) -> 'x M.t * 'z -> 'y M.t * 'z
+)
+ident(
+  def mapi "hbase/mapplus.ml" 87 2876 2880 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 86 2838 2851 "hbase/mapplus.ml" 86 2838 2852
+type(
+  M.key -> 'x -> 'y
+)
+ident(
+  def f "hbase/mapplus.ml" 86 2838 2853 "hbase/mapplus.ml" 86 2838 2875
+)
+"hbase/mapplus.ml" 86 2838 2854 "hbase/mapplus.ml" 86 2838 2855
+type(
+  'x M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 86 2838 2862 "hbase/mapplus.ml" 86 2838 2875
+)
+"hbase/mapplus.ml" 86 2838 2857 "hbase/mapplus.ml" 86 2838 2858
+type(
+  'z
+)
+ident(
+  def d "hbase/mapplus.ml" 86 2838 2862 "hbase/mapplus.ml" 86 2838 2875
+)
+"hbase/mapplus.ml" 86 2838 2853 "hbase/mapplus.ml" 86 2838 2859
+type(
+  'x M.t * 'z
+)
+"hbase/mapplus.ml" 86 2838 2862 "hbase/mapplus.ml" 86 2838 2868
+type(
+  (M.key -> 'x -> 'y) -> 'x M.t -> 'y M.t
+)
+ident(
+  ext_ref M.mapi
+)
+"hbase/mapplus.ml" 86 2838 2869 "hbase/mapplus.ml" 86 2838 2870
+type(
+  M.key -> 'x -> 'y
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 86 2838 2851 "hbase/mapplus.ml" 86 2838 2852
+)
+"hbase/mapplus.ml" 86 2838 2871 "hbase/mapplus.ml" 86 2838 2872
+type(
+  'x M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 86 2838 2854 "hbase/mapplus.ml" 86 2838 2855
+)
+"hbase/mapplus.ml" 86 2838 2862 "hbase/mapplus.ml" 86 2838 2872
+call(
+  stack
+)
+type(
+  'y M.t
+)
+"hbase/mapplus.ml" 86 2838 2874 "hbase/mapplus.ml" 86 2838 2875
+type(
+  'z
+)
+ident(
+  int_ref d "hbase/mapplus.ml" 86 2838 2857 "hbase/mapplus.ml" 86 2838 2858
+)
+"hbase/mapplus.ml" 86 2838 2862 "hbase/mapplus.ml" 86 2838 2875
+type(
+  'y M.t * 'z
+)
+"hbase/mapplus.ml" 87 2876 2884 "hbase/mapplus.ml" 87 2876 2888
+type(
+  (M.key -> 'a1 -> 'b1 -> 'b1) -> 'a1 M.t * 'c1 -> 'b1 -> 'b1
+)
+ident(
+  def fold "hbase/mapplus.ml" 88 2911 2915 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 87 2876 2889 "hbase/mapplus.ml" 87 2876 2890
+type(
+  M.key -> 'a1 -> 'b1 -> 'b1
+)
+ident(
+  def f "hbase/mapplus.ml" 87 2876 2891 "hbase/mapplus.ml" 87 2876 2910
+)
+"hbase/mapplus.ml" 87 2876 2892 "hbase/mapplus.ml" 87 2876 2893
+type(
+  'a1 M.t
+)
+ident(
+  def m "hbase/mapplus.ml" 87 2876 2900 "hbase/mapplus.ml" 87 2876 2910
+)
+"hbase/mapplus.ml" 87 2876 2895 "hbase/mapplus.ml" 87 2876 2896
+type(
+  'c1
+)
+"hbase/mapplus.ml" 87 2876 2891 "hbase/mapplus.ml" 87 2876 2897
+type(
+  'a1 M.t * 'c1
+)
+"hbase/mapplus.ml" 87 2876 2900 "hbase/mapplus.ml" 87 2876 2906
+type(
+  (M.key -> 'a1 -> 'b1 -> 'b1) -> 'a1 M.t -> 'b1 -> 'b1
+)
+ident(
+  ext_ref M.fold
+)
+"hbase/mapplus.ml" 87 2876 2907 "hbase/mapplus.ml" 87 2876 2908
+type(
+  M.key -> 'a1 -> 'b1 -> 'b1
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 87 2876 2889 "hbase/mapplus.ml" 87 2876 2890
+)
+"hbase/mapplus.ml" 87 2876 2909 "hbase/mapplus.ml" 87 2876 2910
+type(
+  'a1 M.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 87 2876 2892 "hbase/mapplus.ml" 87 2876 2893
+)
+"hbase/mapplus.ml" 87 2876 2900 "hbase/mapplus.ml" 87 2876 2910
+call(
+  tail
+)
+type(
+  'b1 -> 'b1
+)
+"hbase/mapplus.ml" 88 2911 2919 "hbase/mapplus.ml" 88 2911 2925
+type(
+  (M.key -> 'd1 -> bool) -> 'd1 M.t * 'e1 -> 'd1 M.t * KeySet.t
+)
+ident(
+  def filter "hbase/mapplus.ml" 89 2991 2995 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 88 2911 2926 "hbase/mapplus.ml" 88 2911 2927
+type(
+  M.key -> 'd1 -> bool
+)
+ident(
+  def f "hbase/mapplus.ml" 88 2911 2928 "hbase/mapplus.ml" 88 2911 2990
+)
+"hbase/mapplus.ml" 88 2911 2928 "hbase/mapplus.ml" 88 2911 2929
+type(
+  'd1 M.t * 'e1
+)
+ident(
+  def m "hbase/mapplus.ml" 88 2911 2932 "hbase/mapplus.ml" 88 2911 2990
+)
+"hbase/mapplus.ml" 88 2911 2932 "hbase/mapplus.ml" 88 2911 2936
+type(
+  (M.key -> 'd1 -> 'd1 M.t * KeySet.t -> 'd1 M.t * KeySet.t) ->
+  'd1 M.t * 'e1 -> 'd1 M.t * KeySet.t -> 'd1 M.t * KeySet.t
+)
+ident(
+  int_ref fold "hbase/mapplus.ml" 87 2876 2884 "hbase/mapplus.ml" 87 2876 2888
+)
+"hbase/mapplus.ml" 88 2911 2942 "hbase/mapplus.ml" 88 2911 2943
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 88 2911 2944 "hbase/mapplus.ml" 88 2911 2981
+)
+"hbase/mapplus.ml" 88 2911 2944 "hbase/mapplus.ml" 88 2911 2945
+type(
+  'd1
+)
+ident(
+  def v "hbase/mapplus.ml" 88 2911 2946 "hbase/mapplus.ml" 88 2911 2981
+)
+"hbase/mapplus.ml" 88 2911 2946 "hbase/mapplus.ml" 88 2911 2947
+type(
+  'd1 M.t * KeySet.t
+)
+ident(
+  def m "hbase/mapplus.ml" 88 2911 2951 "hbase/mapplus.ml" 88 2911 2981
+)
+"hbase/mapplus.ml" 88 2911 2954 "hbase/mapplus.ml" 88 2911 2955
+type(
+  M.key -> 'd1 -> bool
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 88 2911 2926 "hbase/mapplus.ml" 88 2911 2927
+)
+"hbase/mapplus.ml" 88 2911 2956 "hbase/mapplus.ml" 88 2911 2957
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 88 2911 2942 "hbase/mapplus.ml" 88 2911 2943
+)
+"hbase/mapplus.ml" 88 2911 2958 "hbase/mapplus.ml" 88 2911 2959
+type(
+  'd1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 88 2911 2944 "hbase/mapplus.ml" 88 2911 2945
+)
+"hbase/mapplus.ml" 88 2911 2954 "hbase/mapplus.ml" 88 2911 2959
+call(
+  stack
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 88 2911 2965 "hbase/mapplus.ml" 88 2911 2968
+type(
+  M.key -> 'd1 -> 'd1 M.t * KeySet.t -> 'd1 M.t * KeySet.t
+)
+ident(
+  int_ref add "hbase/mapplus.ml" 56 1769 1777 "hbase/mapplus.ml" 56 1769 1780
+)
+"hbase/mapplus.ml" 88 2911 2969 "hbase/mapplus.ml" 88 2911 2970
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 88 2911 2942 "hbase/mapplus.ml" 88 2911 2943
+)
+"hbase/mapplus.ml" 88 2911 2971 "hbase/mapplus.ml" 88 2911 2972
+type(
+  'd1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 88 2911 2944 "hbase/mapplus.ml" 88 2911 2945
+)
+"hbase/mapplus.ml" 88 2911 2973 "hbase/mapplus.ml" 88 2911 2974
+type(
+  'd1 M.t * KeySet.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 88 2911 2946 "hbase/mapplus.ml" 88 2911 2947
+)
+"hbase/mapplus.ml" 88 2911 2965 "hbase/mapplus.ml" 88 2911 2974
+call(
+  tail
+)
+type(
+  'd1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 88 2911 2980 "hbase/mapplus.ml" 88 2911 2981
+type(
+  'd1 M.t * KeySet.t
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 88 2911 2946 "hbase/mapplus.ml" 88 2911 2947
+)
+"hbase/mapplus.ml" 88 2911 2951 "hbase/mapplus.ml" 88 2911 2981
+type(
+  'd1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 88 2911 2937 "hbase/mapplus.ml" 88 2911 2982
+type(
+  M.key -> 'd1 -> 'd1 M.t * KeySet.t -> 'd1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 88 2911 2983 "hbase/mapplus.ml" 88 2911 2984
+type(
+  'd1 M.t * 'e1
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 88 2911 2928 "hbase/mapplus.ml" 88 2911 2929
+)
+"hbase/mapplus.ml" 88 2911 2985 "hbase/mapplus.ml" 88 2911 2990
+type(
+  'd1 M.t * KeySet.t
+)
+ident(
+  int_ref empty "hbase/mapplus.ml" 52 1618 1626 "hbase/mapplus.ml" 52 1618 1631
+)
+"hbase/mapplus.ml" 88 2911 2932 "hbase/mapplus.ml" 88 2911 2990
+call(
+  tail
+)
+type(
+  'd1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 89 2991 2999 "hbase/mapplus.ml" 89 2991 3008
+type(
+  (M.key -> 'f1 -> bool) ->
+  'f1 M.t * 'g1 -> ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+ident(
+  def partition "hbase/mapplus.ml" 92 3176 3180 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 89 2991 3009 "hbase/mapplus.ml" 89 2991 3010
+type(
+  M.key -> 'f1 -> bool
+)
+ident(
+  def f "hbase/mapplus.ml" 89 2991 3011 "hbase/mapplus.ml" 91 3104 3173
+)
+"hbase/mapplus.ml" 89 2991 3011 "hbase/mapplus.ml" 89 2991 3012
+type(
+  'f1 M.t * 'g1
+)
+ident(
+  def m "hbase/mapplus.ml" 89 2991 3015 "hbase/mapplus.ml" 91 3104 3173
+)
+"hbase/mapplus.ml" 89 2991 3015 "hbase/mapplus.ml" 89 2991 3019
+type(
+  (M.key ->
+   'f1 ->
+   ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t) ->
+   ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)) ->
+  'f1 M.t * 'g1 ->
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t) ->
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+ident(
+  int_ref fold "hbase/mapplus.ml" 87 2876 2884 "hbase/mapplus.ml" 87 2876 2888
+)
+"hbase/mapplus.ml" 89 2991 3025 "hbase/mapplus.ml" 89 2991 3026
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 89 2991 3027 "hbase/mapplus.ml" 91 3104 3156
+)
+"hbase/mapplus.ml" 89 2991 3027 "hbase/mapplus.ml" 89 2991 3028
+type(
+  'f1
+)
+ident(
+  def v "hbase/mapplus.ml" 89 2991 3029 "hbase/mapplus.ml" 91 3104 3156
+)
+"hbase/mapplus.ml" 89 2991 3030 "hbase/mapplus.ml" 89 2991 3032
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  def ym "hbase/mapplus.ml" 90 3041 3073 "hbase/mapplus.ml" 91 3104 3156
+)
+"hbase/mapplus.ml" 89 2991 3033 "hbase/mapplus.ml" 89 2991 3035
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  def nm "hbase/mapplus.ml" 90 3041 3073 "hbase/mapplus.ml" 91 3104 3156
+)
+"hbase/mapplus.ml" 89 2991 3029 "hbase/mapplus.ml" 89 2991 3036
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 90 3041 3076 "hbase/mapplus.ml" 90 3041 3077
+type(
+  M.key -> 'f1 -> bool
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 89 2991 3009 "hbase/mapplus.ml" 89 2991 3010
+)
+"hbase/mapplus.ml" 90 3041 3078 "hbase/mapplus.ml" 90 3041 3079
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 89 2991 3025 "hbase/mapplus.ml" 89 2991 3026
+)
+"hbase/mapplus.ml" 90 3041 3080 "hbase/mapplus.ml" 90 3041 3081
+type(
+  'f1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 89 2991 3027 "hbase/mapplus.ml" 89 2991 3028
+)
+"hbase/mapplus.ml" 90 3041 3076 "hbase/mapplus.ml" 90 3041 3081
+call(
+  stack
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 90 3041 3088 "hbase/mapplus.ml" 90 3041 3091
+type(
+  M.key -> 'f1 -> 'f1 M.t * KeySet.t -> 'f1 M.t * KeySet.t
+)
+ident(
+  int_ref add "hbase/mapplus.ml" 56 1769 1777 "hbase/mapplus.ml" 56 1769 1780
+)
+"hbase/mapplus.ml" 90 3041 3092 "hbase/mapplus.ml" 90 3041 3093
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 89 2991 3025 "hbase/mapplus.ml" 89 2991 3026
+)
+"hbase/mapplus.ml" 90 3041 3094 "hbase/mapplus.ml" 90 3041 3095
+type(
+  'f1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 89 2991 3027 "hbase/mapplus.ml" 89 2991 3028
+)
+"hbase/mapplus.ml" 90 3041 3096 "hbase/mapplus.ml" 90 3041 3098
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref ym "hbase/mapplus.ml" 89 2991 3030 "hbase/mapplus.ml" 89 2991 3032
+)
+"hbase/mapplus.ml" 90 3041 3088 "hbase/mapplus.ml" 90 3041 3098
+call(
+  stack
+)
+type(
+  'f1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 90 3041 3099 "hbase/mapplus.ml" 90 3041 3101
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref nm "hbase/mapplus.ml" 89 2991 3033 "hbase/mapplus.ml" 89 2991 3035
+)
+"hbase/mapplus.ml" 90 3041 3087 "hbase/mapplus.ml" 90 3041 3102
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 91 3104 3142 "hbase/mapplus.ml" 91 3104 3144
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref ym "hbase/mapplus.ml" 89 2991 3030 "hbase/mapplus.ml" 89 2991 3032
+)
+"hbase/mapplus.ml" 91 3104 3145 "hbase/mapplus.ml" 91 3104 3148
+type(
+  M.key -> 'f1 -> 'f1 M.t * KeySet.t -> 'f1 M.t * KeySet.t
+)
+ident(
+  int_ref add "hbase/mapplus.ml" 56 1769 1777 "hbase/mapplus.ml" 56 1769 1780
+)
+"hbase/mapplus.ml" 91 3104 3149 "hbase/mapplus.ml" 91 3104 3150
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 89 2991 3025 "hbase/mapplus.ml" 89 2991 3026
+)
+"hbase/mapplus.ml" 91 3104 3151 "hbase/mapplus.ml" 91 3104 3152
+type(
+  'f1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 89 2991 3027 "hbase/mapplus.ml" 89 2991 3028
+)
+"hbase/mapplus.ml" 91 3104 3153 "hbase/mapplus.ml" 91 3104 3155
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref nm "hbase/mapplus.ml" 89 2991 3033 "hbase/mapplus.ml" 89 2991 3035
+)
+"hbase/mapplus.ml" 91 3104 3145 "hbase/mapplus.ml" 91 3104 3155
+call(
+  stack
+)
+type(
+  'f1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 91 3104 3141 "hbase/mapplus.ml" 91 3104 3156
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 90 3041 3073 "hbase/mapplus.ml" 91 3104 3156
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 89 2991 3020 "hbase/mapplus.ml" 91 3104 3157
+type(
+  M.key ->
+  'f1 ->
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t) ->
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 91 3104 3158 "hbase/mapplus.ml" 91 3104 3159
+type(
+  'f1 M.t * 'g1
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 89 2991 3011 "hbase/mapplus.ml" 89 2991 3012
+)
+"hbase/mapplus.ml" 91 3104 3161 "hbase/mapplus.ml" 91 3104 3166
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref empty "hbase/mapplus.ml" 52 1618 1626 "hbase/mapplus.ml" 52 1618 1631
+)
+"hbase/mapplus.ml" 91 3104 3167 "hbase/mapplus.ml" 91 3104 3172
+type(
+  'f1 M.t * KeySet.t
+)
+ident(
+  int_ref empty "hbase/mapplus.ml" 52 1618 1626 "hbase/mapplus.ml" 52 1618 1631
+)
+"hbase/mapplus.ml" 91 3104 3160 "hbase/mapplus.ml" 91 3104 3173
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 89 2991 3015 "hbase/mapplus.ml" 91 3104 3173
+call(
+  tail
+)
+type(
+  ('f1 M.t * KeySet.t) * ('f1 M.t * KeySet.t)
+)
+"hbase/mapplus.ml" 92 3176 3184 "hbase/mapplus.ml" 92 3176 3191
+type(
+  KeySet.t -> 'h1 M.t * 'i1 -> 'h1 M.t * KeySet.t
+)
+ident(
+  def project "hbase/mapplus.ml" 93 3233 3237 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 92 3176 3192 "hbase/mapplus.ml" 92 3176 3194
+type(
+  KeySet.t
+)
+ident(
+  def ks "hbase/mapplus.ml" 92 3176 3197 "hbase/mapplus.ml" 92 3176 3232
+)
+"hbase/mapplus.ml" 92 3176 3197 "hbase/mapplus.ml" 92 3176 3203
+type(
+  (M.key -> 'h1 -> bool) -> 'h1 M.t * 'i1 -> 'h1 M.t * KeySet.t
+)
+ident(
+  int_ref filter "hbase/mapplus.ml" 88 2911 2919 "hbase/mapplus.ml" 88 2911 2925
+)
+"hbase/mapplus.ml" 92 3176 3209 "hbase/mapplus.ml" 92 3176 3210
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 92 3176 3211 "hbase/mapplus.ml" 92 3176 3231
+)
+"hbase/mapplus.ml" 92 3176 3211 "hbase/mapplus.ml" 92 3176 3212
+type(
+  'h1
+)
+ident(
+  def v "hbase/mapplus.ml" 92 3176 3216 "hbase/mapplus.ml" 92 3176 3231
+)
+"hbase/mapplus.ml" 92 3176 3216 "hbase/mapplus.ml" 92 3176 3226
+type(
+  KeySet.elt -> KeySet.t -> bool
+)
+ident(
+  ext_ref KeySet.mem
+)
+"hbase/mapplus.ml" 92 3176 3227 "hbase/mapplus.ml" 92 3176 3228
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 92 3176 3209 "hbase/mapplus.ml" 92 3176 3210
+)
+"hbase/mapplus.ml" 92 3176 3229 "hbase/mapplus.ml" 92 3176 3231
+type(
+  KeySet.t
+)
+ident(
+  int_ref ks "hbase/mapplus.ml" 92 3176 3192 "hbase/mapplus.ml" 92 3176 3194
+)
+"hbase/mapplus.ml" 92 3176 3216 "hbase/mapplus.ml" 92 3176 3231
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 92 3176 3204 "hbase/mapplus.ml" 92 3176 3232
+type(
+  M.key -> 'h1 -> bool
+)
+"hbase/mapplus.ml" 92 3176 3197 "hbase/mapplus.ml" 92 3176 3232
+call(
+  tail
+)
+type(
+  'h1 M.t * 'i1 -> 'h1 M.t * KeySet.t
+)
+"hbase/mapplus.ml" 93 3233 3241 "hbase/mapplus.ml" 93 3233 3253
+type(
+  M.key list -> 'j1 M.t * 'k1 -> 'j1 list
+)
+ident(
+  def list_project "hbase/mapplus.ml" 94 3295 3299 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 93 3233 3254 "hbase/mapplus.ml" 93 3233 3257
+type(
+  M.key list
+)
+ident(
+  def kls "hbase/mapplus.ml" 93 3233 3258 "hbase/mapplus.ml" 93 3233 3294
+)
+"hbase/mapplus.ml" 93 3233 3258 "hbase/mapplus.ml" 93 3233 3259
+type(
+  'j1 M.t * 'k1
+)
+ident(
+  def m "hbase/mapplus.ml" 93 3233 3262 "hbase/mapplus.ml" 93 3233 3294
+)
+"hbase/mapplus.ml" 93 3233 3262 "hbase/mapplus.ml" 93 3233 3270
+type(
+  (M.key -> 'j1) -> M.key list -> 'j1 list
+)
+ident(
+  ext_ref List.map
+)
+"hbase/mapplus.ml" 93 3233 3276 "hbase/mapplus.ml" 93 3233 3277
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 93 3233 3281 "hbase/mapplus.ml" 93 3233 3289
+)
+"hbase/mapplus.ml" 93 3233 3281 "hbase/mapplus.ml" 93 3233 3285
+type(
+  M.key -> 'j1 M.t * 'k1 -> 'j1
+)
+ident(
+  int_ref find "hbase/mapplus.ml" 59 1907 1915 "hbase/mapplus.ml" 59 1907 1919
+)
+"hbase/mapplus.ml" 93 3233 3286 "hbase/mapplus.ml" 93 3233 3287
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 93 3233 3276 "hbase/mapplus.ml" 93 3233 3277
+)
+"hbase/mapplus.ml" 93 3233 3288 "hbase/mapplus.ml" 93 3233 3289
+type(
+  'j1 M.t * 'k1
+)
+ident(
+  int_ref m "hbase/mapplus.ml" 93 3233 3258 "hbase/mapplus.ml" 93 3233 3259
+)
+"hbase/mapplus.ml" 93 3233 3281 "hbase/mapplus.ml" 93 3233 3289
+call(
+  tail
+)
+type(
+  'j1
+)
+"hbase/mapplus.ml" 93 3233 3271 "hbase/mapplus.ml" 93 3233 3290
+type(
+  M.key -> 'j1
+)
+"hbase/mapplus.ml" 93 3233 3291 "hbase/mapplus.ml" 93 3233 3294
+type(
+  M.key list
+)
+ident(
+  int_ref kls "hbase/mapplus.ml" 93 3233 3254 "hbase/mapplus.ml" 93 3233 3257
+)
+"hbase/mapplus.ml" 93 3233 3262 "hbase/mapplus.ml" 93 3233 3294
+call(
+  tail
+)
+type(
+  'j1 list
+)
+"hbase/mapplus.ml" 94 3295 3303 "hbase/mapplus.ml" 94 3295 3311
+type(
+  (M.key -> 'l1 -> bool) -> 'l1 M.t * 'm1 -> bool
+)
+ident(
+  def for_alli "hbase/mapplus.ml" 101 3720 3724 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 94 3295 3312 "hbase/mapplus.ml" 94 3295 3313
+type(
+  M.key -> 'l1 -> bool
+)
+ident(
+  def f "hbase/mapplus.ml" 94 3295 3314 "hbase/mapplus.ml" 100 3674 3719
+)
+"hbase/mapplus.ml" 94 3295 3314 "hbase/mapplus.ml" 94 3295 3315
+type(
+  'l1 M.t * 'm1
+)
+ident(
+  def s "hbase/mapplus.ml" 100 3674 3680 "hbase/mapplus.ml" 100 3674 3719
+)
+"hbase/mapplus.ml" 100 3674 3680 "hbase/mapplus.ml" 100 3674 3684
+type(
+  (M.key -> 'l1 -> bool -> bool) -> 'l1 M.t * 'm1 -> bool -> bool
+)
+ident(
+  int_ref fold "hbase/mapplus.ml" 87 2876 2884 "hbase/mapplus.ml" 87 2876 2888
+)
+"hbase/mapplus.ml" 100 3674 3690 "hbase/mapplus.ml" 100 3674 3691
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 100 3674 3692 "hbase/mapplus.ml" 100 3674 3711
+)
+"hbase/mapplus.ml" 100 3674 3692 "hbase/mapplus.ml" 100 3674 3693
+type(
+  'l1
+)
+ident(
+  def v "hbase/mapplus.ml" 100 3674 3694 "hbase/mapplus.ml" 100 3674 3711
+)
+"hbase/mapplus.ml" 100 3674 3694 "hbase/mapplus.ml" 100 3674 3695
+type(
+  bool
+)
+ident(
+  def b "hbase/mapplus.ml" 100 3674 3699 "hbase/mapplus.ml" 100 3674 3711
+)
+"hbase/mapplus.ml" 100 3674 3699 "hbase/mapplus.ml" 100 3674 3700
+type(
+  bool
+)
+ident(
+  int_ref b "hbase/mapplus.ml" 100 3674 3694 "hbase/mapplus.ml" 100 3674 3695
+)
+"hbase/mapplus.ml" 100 3674 3701 "hbase/mapplus.ml" 100 3674 3703
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"hbase/mapplus.ml" 100 3674 3705 "hbase/mapplus.ml" 100 3674 3706
+type(
+  M.key -> 'l1 -> bool
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 94 3295 3312 "hbase/mapplus.ml" 94 3295 3313
+)
+"hbase/mapplus.ml" 100 3674 3707 "hbase/mapplus.ml" 100 3674 3708
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 100 3674 3690 "hbase/mapplus.ml" 100 3674 3691
+)
+"hbase/mapplus.ml" 100 3674 3709 "hbase/mapplus.ml" 100 3674 3710
+type(
+  'l1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 100 3674 3692 "hbase/mapplus.ml" 100 3674 3693
+)
+"hbase/mapplus.ml" 100 3674 3704 "hbase/mapplus.ml" 100 3674 3711
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 100 3674 3699 "hbase/mapplus.ml" 100 3674 3711
+type(
+  bool
+)
+"hbase/mapplus.ml" 100 3674 3685 "hbase/mapplus.ml" 100 3674 3712
+type(
+  M.key -> 'l1 -> bool -> bool
+)
+"hbase/mapplus.ml" 100 3674 3713 "hbase/mapplus.ml" 100 3674 3714
+type(
+  'l1 M.t * 'm1
+)
+ident(
+  int_ref s "hbase/mapplus.ml" 94 3295 3314 "hbase/mapplus.ml" 94 3295 3315
+)
+"hbase/mapplus.ml" 100 3674 3715 "hbase/mapplus.ml" 100 3674 3719
+type(
+  bool
+)
+"hbase/mapplus.ml" 100 3674 3680 "hbase/mapplus.ml" 100 3674 3719
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 101 3720 3728 "hbase/mapplus.ml" 101 3720 3735
+type(
+  ('n1 -> bool) -> 'n1 M.t * 'o1 -> bool
+)
+ident(
+  def for_all "hbase/mapplus.ml" 103 3826 3830 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 101 3720 3736 "hbase/mapplus.ml" 101 3720 3737
+type(
+  'n1 -> bool
+)
+ident(
+  def f "hbase/mapplus.ml" 101 3720 3738 "hbase/mapplus.ml" 101 3720 3769
+)
+"hbase/mapplus.ml" 101 3720 3738 "hbase/mapplus.ml" 101 3720 3739
+type(
+  'n1 M.t * 'o1
+)
+ident(
+  def s "hbase/mapplus.ml" 101 3720 3742 "hbase/mapplus.ml" 101 3720 3769
+)
+"hbase/mapplus.ml" 101 3720 3742 "hbase/mapplus.ml" 101 3720 3750
+type(
+  (M.key -> 'n1 -> bool) -> 'n1 M.t * 'o1 -> bool
+)
+ident(
+  int_ref for_alli "hbase/mapplus.ml" 94 3295 3303 "hbase/mapplus.ml" 94 3295 3311
+)
+"hbase/mapplus.ml" 101 3720 3756 "hbase/mapplus.ml" 101 3720 3757
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 101 3720 3758 "hbase/mapplus.ml" 101 3720 3766
+)
+"hbase/mapplus.ml" 101 3720 3758 "hbase/mapplus.ml" 101 3720 3759
+type(
+  'n1
+)
+ident(
+  def v "hbase/mapplus.ml" 101 3720 3763 "hbase/mapplus.ml" 101 3720 3766
+)
+"hbase/mapplus.ml" 101 3720 3763 "hbase/mapplus.ml" 101 3720 3764
+type(
+  'n1 -> bool
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 101 3720 3736 "hbase/mapplus.ml" 101 3720 3737
+)
+"hbase/mapplus.ml" 101 3720 3765 "hbase/mapplus.ml" 101 3720 3766
+type(
+  'n1
+)
+ident(
+  int_ref v "hbase/mapplus.ml" 101 3720 3758 "hbase/mapplus.ml" 101 3720 3759
+)
+"hbase/mapplus.ml" 101 3720 3763 "hbase/mapplus.ml" 101 3720 3766
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 101 3720 3751 "hbase/mapplus.ml" 101 3720 3767
+type(
+  M.key -> 'n1 -> bool
+)
+"hbase/mapplus.ml" 101 3720 3768 "hbase/mapplus.ml" 101 3720 3769
+type(
+  'n1 M.t * 'o1
+)
+ident(
+  int_ref s "hbase/mapplus.ml" 101 3720 3738 "hbase/mapplus.ml" 101 3720 3739
+)
+"hbase/mapplus.ml" 101 3720 3742 "hbase/mapplus.ml" 101 3720 3769
+call(
+  tail
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 103 3826 3834 "hbase/mapplus.ml" 103 3826 3838
+type(
+  (KeySet.elt list -> M.key list) ->
+  (M.key -> string) ->
+  ('p1 -> 'q1) -> ('p1 -> bool) -> 'p1 M.t * KeySet.t -> unit
+)
+ident(
+  def dump "hbase/mapplus.ml" 125 4536 4561 "hbase/mapplus.ml" 127 4563 4568
+)
+"hbase/mapplus.ml" 103 3826 3839 "hbase/mapplus.ml" 103 3826 3844
+type(
+  KeySet.elt list -> M.key list
+)
+ident(
+  def sortf "hbase/mapplus.ml" 103 3826 3845 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 103 3826 3845 "hbase/mapplus.ml" 103 3826 3859
+type(
+  M.key -> string
+)
+ident(
+  def name_formatter "hbase/mapplus.ml" 103 3826 3860 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 103 3826 3860 "hbase/mapplus.ml" 103 3826 3861
+type(
+  'p1 -> 'q1
+)
+ident(
+  def f "hbase/mapplus.ml" 103 3826 3862 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 103 3826 3862 "hbase/mapplus.ml" 103 3826 3865
+type(
+  'p1 -> bool
+)
+ident(
+  def iep "hbase/mapplus.ml" 103 3826 3866 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 103 3826 3866 "hbase/mapplus.ml" 103 3826 3867
+type(
+  'p1 M.t * KeySet.t
+)
+ident(
+  def u "hbase/mapplus.ml" 104 3871 3877 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 104 3871 3881 "hbase/mapplus.ml" 104 3871 3885
+type(
+  M.key * 'p1 -> unit
+)
+ident(
+  def prch "hbase/mapplus.ml" 118 4294 4302 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 104 3871 3887 "hbase/mapplus.ml" 104 3871 3888
+type(
+  M.key
+)
+ident(
+  def n "hbase/mapplus.ml" 105 3896 3904 "hbase/mapplus.ml" 116 4271 4284
+)
+"hbase/mapplus.ml" 104 3871 3889 "hbase/mapplus.ml" 104 3871 3891
+type(
+  'p1
+)
+ident(
+  def ch "hbase/mapplus.ml" 105 3896 3904 "hbase/mapplus.ml" 116 4271 4284
+)
+"hbase/mapplus.ml" 104 3871 3886 "hbase/mapplus.ml" 104 3871 3892
+type(
+  M.key * 'p1
+)
+"hbase/mapplus.ml" 105 3896 3908 "hbase/mapplus.ml" 105 3896 3911
+type(
+  unit -> unit
+)
+ident(
+  def prf "hbase/mapplus.ml" 106 3960 3968 "hbase/mapplus.ml" 116 4271 4284
+)
+"hbase/mapplus.ml" 105 3896 3911 "hbase/mapplus.ml" 105 3896 3913
+type(
+  unit
+)
+"hbase/mapplus.ml" 105 3896 3916 "hbase/mapplus.ml" 105 3896 3927
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 105 3896 3928 "hbase/mapplus.ml" 105 3896 3932
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 105 3896 3916 "hbase/mapplus.ml" 105 3896 3932
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 105 3896 3934 "hbase/mapplus.ml" 105 3896 3935
+type(
+  'p1 -> 'q1
+)
+ident(
+  int_ref f "hbase/mapplus.ml" 103 3826 3860 "hbase/mapplus.ml" 103 3826 3861
+)
+"hbase/mapplus.ml" 105 3896 3936 "hbase/mapplus.ml" 105 3896 3938
+type(
+  'p1
+)
+ident(
+  int_ref ch "hbase/mapplus.ml" 104 3871 3889 "hbase/mapplus.ml" 104 3871 3891
+)
+"hbase/mapplus.ml" 105 3896 3934 "hbase/mapplus.ml" 105 3896 3938
+call(
+  stack
+)
+type(
+  'q1
+)
+"hbase/mapplus.ml" 105 3896 3940 "hbase/mapplus.ml" 105 3896 3951
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 105 3896 3952 "hbase/mapplus.ml" 105 3896 3956
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 105 3896 3940 "hbase/mapplus.ml" 105 3896 3956
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 105 3896 3934 "hbase/mapplus.ml" 105 3896 3956
+type(
+  unit
+)
+"hbase/mapplus.ml" 105 3896 3916 "hbase/mapplus.ml" 105 3896 3956
+type(
+  unit
+)
+"hbase/mapplus.ml" 106 3960 3972 "hbase/mapplus.ml" 106 3960 3973
+type(
+  string
+)
+ident(
+  def s "hbase/mapplus.ml" 110 4103 4113 "hbase/mapplus.ml" 116 4271 4284
+)
+"hbase/mapplus.ml" 106 3960 3976 "hbase/mapplus.ml" 106 3960 3990
+type(
+  M.key -> string
+)
+ident(
+  int_ref name_formatter "hbase/mapplus.ml" 103 3826 3845 "hbase/mapplus.ml" 103 3826 3859
+)
+"hbase/mapplus.ml" 106 3960 3991 "hbase/mapplus.ml" 106 3960 3992
+type(
+  M.key
+)
+ident(
+  int_ref n "hbase/mapplus.ml" 104 3871 3887 "hbase/mapplus.ml" 104 3871 3888
+)
+"hbase/mapplus.ml" 106 3960 3976 "hbase/mapplus.ml" 106 3960 3992
+call(
+  stack
+)
+type(
+  string
+)
+"hbase/mapplus.ml" 110 4103 4116 "hbase/mapplus.ml" 110 4103 4119
+type(
+  'p1 -> bool
+)
+ident(
+  int_ref iep "hbase/mapplus.ml" 103 3826 3862 "hbase/mapplus.ml" 103 3826 3865
+)
+"hbase/mapplus.ml" 110 4103 4120 "hbase/mapplus.ml" 110 4103 4122
+type(
+  'p1
+)
+ident(
+  int_ref ch "hbase/mapplus.ml" 104 3871 3889 "hbase/mapplus.ml" 104 3871 3891
+)
+"hbase/mapplus.ml" 110 4103 4116 "hbase/mapplus.ml" 110 4103 4122
+call(
+  stack
+)
+type(
+  bool
+)
+"hbase/mapplus.ml" 111 4128 4140 "hbase/mapplus.ml" 111 4128 4151
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 111 4128 4152 "hbase/mapplus.ml" 111 4128 4156
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 111 4128 4157 "hbase/mapplus.ml" 111 4128 4158
+type(
+  string
+)
+ident(
+  int_ref s "hbase/mapplus.ml" 106 3960 3972 "hbase/mapplus.ml" 106 3960 3973
+)
+"hbase/mapplus.ml" 111 4128 4140 "hbase/mapplus.ml" 111 4128 4158
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 113 4180 4192 "hbase/mapplus.ml" 113 4180 4203
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 113 4180 4204 "hbase/mapplus.ml" 113 4180 4219
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 113 4180 4220 "hbase/mapplus.ml" 113 4180 4221
+type(
+  string
+)
+ident(
+  int_ref s "hbase/mapplus.ml" 106 3960 3972 "hbase/mapplus.ml" 106 3960 3973
+)
+"hbase/mapplus.ml" 113 4180 4192 "hbase/mapplus.ml" 113 4180 4221
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 114 4223 4235 "hbase/mapplus.ml" 114 4223 4238
+type(
+  unit -> unit
+)
+ident(
+  int_ref prf "hbase/mapplus.ml" 105 3896 3908 "hbase/mapplus.ml" 105 3896 3911
+)
+"hbase/mapplus.ml" 114 4223 4238 "hbase/mapplus.ml" 114 4223 4240
+type(
+  unit
+)
+"hbase/mapplus.ml" 114 4223 4235 "hbase/mapplus.ml" 114 4223 4240
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 115 4242 4254 "hbase/mapplus.ml" 115 4242 4265
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 115 4242 4266 "hbase/mapplus.ml" 115 4242 4270
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 115 4242 4254 "hbase/mapplus.ml" 115 4242 4270
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 114 4223 4235 "hbase/mapplus.ml" 115 4242 4270
+type(
+  unit
+)
+"hbase/mapplus.ml" 112 4159 4174 "hbase/mapplus.ml" 116 4271 4284
+type(
+  unit
+)
+"hbase/mapplus.ml" 110 4103 4113 "hbase/mapplus.ml" 116 4271 4284
+type(
+  unit
+)
+"hbase/mapplus.ml" 106 3960 3968 "hbase/mapplus.ml" 116 4271 4284
+type(
+  unit
+)
+"hbase/mapplus.ml" 105 3896 3904 "hbase/mapplus.ml" 116 4271 4284
+type(
+  unit
+)
+"hbase/mapplus.ml" 118 4294 4302 "hbase/mapplus.ml" 118 4294 4313
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 118 4294 4314 "hbase/mapplus.ml" 118 4294 4324
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 118 4294 4302 "hbase/mapplus.ml" 118 4294 4324
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 119 4326 4338 "hbase/mapplus.ml" 119 4326 4343
+type(
+  (M.key * 'p1) list
+)
+ident(
+  def binds "hbase/mapplus.ml" 121 4434 4442 "hbase/mapplus.ml" 125 4536 4561
+)
+"hbase/mapplus.ml" 119 4326 4346 "hbase/mapplus.ml" 119 4326 4358
+type(
+  (M.key -> M.key * 'p1) -> M.key list -> (M.key * 'p1) list
+)
+ident(
+  ext_ref Safelist.map
+)
+"hbase/mapplus.ml" 119 4326 4364 "hbase/mapplus.ml" 119 4326 4365
+type(
+  M.key
+)
+ident(
+  def k "hbase/mapplus.ml" 119 4326 4369 "hbase/mapplus.ml" 119 4326 4382
+)
+"hbase/mapplus.ml" 119 4326 4370 "hbase/mapplus.ml" 119 4326 4371
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 119 4326 4364 "hbase/mapplus.ml" 119 4326 4365
+)
+"hbase/mapplus.ml" 119 4326 4373 "hbase/mapplus.ml" 119 4326 4377
+type(
+  M.key -> 'p1 M.t * KeySet.t -> 'p1
+)
+ident(
+  int_ref find "hbase/mapplus.ml" 59 1907 1915 "hbase/mapplus.ml" 59 1907 1919
+)
+"hbase/mapplus.ml" 119 4326 4378 "hbase/mapplus.ml" 119 4326 4379
+type(
+  M.key
+)
+ident(
+  int_ref k "hbase/mapplus.ml" 119 4326 4364 "hbase/mapplus.ml" 119 4326 4365
+)
+"hbase/mapplus.ml" 119 4326 4380 "hbase/mapplus.ml" 119 4326 4381
+type(
+  'p1 M.t * KeySet.t
+)
+ident(
+  int_ref u "hbase/mapplus.ml" 103 3826 3866 "hbase/mapplus.ml" 103 3826 3867
+)
+"hbase/mapplus.ml" 119 4326 4373 "hbase/mapplus.ml" 119 4326 4381
+call(
+  stack
+)
+type(
+  'p1
+)
+"hbase/mapplus.ml" 119 4326 4369 "hbase/mapplus.ml" 119 4326 4382
+type(
+  M.key * 'p1
+)
+"hbase/mapplus.ml" 119 4326 4359 "hbase/mapplus.ml" 119 4326 4383
+type(
+  M.key -> M.key * 'p1
+)
+"hbase/mapplus.ml" 120 4384 4395 "hbase/mapplus.ml" 120 4384 4400
+type(
+  KeySet.elt list -> M.key list
+)
+ident(
+  int_ref sortf "hbase/mapplus.ml" 103 3826 3839 "hbase/mapplus.ml" 103 3826 3844
+)
+"hbase/mapplus.ml" 120 4384 4402 "hbase/mapplus.ml" 120 4384 4417
+type(
+  KeySet.t -> KeySet.elt list
+)
+ident(
+  ext_ref KeySet.elements
+)
+"hbase/mapplus.ml" 120 4384 4419 "hbase/mapplus.ml" 120 4384 4425
+type(
+  'p1 M.t * KeySet.t -> KeySet.t
+)
+ident(
+  int_ref domain "hbase/mapplus.ml" 53 1658 1666 "hbase/mapplus.ml" 53 1658 1672
+)
+"hbase/mapplus.ml" 120 4384 4426 "hbase/mapplus.ml" 120 4384 4427
+type(
+  'p1 M.t * KeySet.t
+)
+ident(
+  int_ref u "hbase/mapplus.ml" 103 3826 3866 "hbase/mapplus.ml" 103 3826 3867
+)
+"hbase/mapplus.ml" 120 4384 4418 "hbase/mapplus.ml" 120 4384 4428
+call(
+  stack
+)
+type(
+  KeySet.t
+)
+"hbase/mapplus.ml" 120 4384 4401 "hbase/mapplus.ml" 120 4384 4429
+call(
+  stack
+)
+type(
+  KeySet.elt list
+)
+"hbase/mapplus.ml" 120 4384 4394 "hbase/mapplus.ml" 120 4384 4430
+call(
+  stack
+)
+type(
+  M.key list
+)
+"hbase/mapplus.ml" 119 4326 4346 "hbase/mapplus.ml" 120 4384 4430
+call(
+  stack
+)
+type(
+  (M.key * 'p1) list
+)
+"hbase/mapplus.ml" 121 4434 4442 "hbase/mapplus.ml" 121 4434 4460
+type(
+  (M.key * 'p1 -> unit) -> (unit -> unit) -> (M.key * 'p1) list -> unit
+)
+ident(
+  ext_ref Misc.iter_with_sep
+)
+"hbase/mapplus.ml" 122 4461 4471 "hbase/mapplus.ml" 122 4461 4475
+type(
+  M.key * 'p1 -> unit
+)
+ident(
+  int_ref prch "hbase/mapplus.ml" 104 3871 3881 "hbase/mapplus.ml" 104 3871 3885
+)
+"hbase/mapplus.ml" 123 4476 4490 "hbase/mapplus.ml" 123 4476 4492
+type(
+  unit
+)
+"hbase/mapplus.ml" 123 4476 4495 "hbase/mapplus.ml" 123 4476 4506
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 123 4476 4507 "hbase/mapplus.ml" 123 4476 4517
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 123 4476 4495 "hbase/mapplus.ml" 123 4476 4517
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 123 4476 4486 "hbase/mapplus.ml" 123 4476 4518
+type(
+  unit -> unit
+)
+"hbase/mapplus.ml" 124 4519 4529 "hbase/mapplus.ml" 124 4519 4534
+type(
+  (M.key * 'p1) list
+)
+ident(
+  int_ref binds "hbase/mapplus.ml" 119 4326 4338 "hbase/mapplus.ml" 119 4326 4343
+)
+"hbase/mapplus.ml" 121 4434 4442 "hbase/mapplus.ml" 124 4519 4534
+call(
+  stack
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 125 4536 4544 "hbase/mapplus.ml" 125 4536 4555
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Util.format
+)
+"hbase/mapplus.ml" 125 4536 4556 "hbase/mapplus.ml" 125 4536 4561
+type(
+  (unit, Format.formatter, unit) format
+)
+"hbase/mapplus.ml" 125 4536 4544 "hbase/mapplus.ml" 125 4536 4561
+call(
+  tail
+)
+type(
+  unit
+)
+"hbase/mapplus.ml" 121 4434 4442 "hbase/mapplus.ml" 125 4536 4561
+type(
+  unit
+)
+"hbase/mapplus.ml" 119 4326 4334 "hbase/mapplus.ml" 125 4536 4561
+type(
+  unit
+)
+"hbase/mapplus.ml" 118 4294 4302 "hbase/mapplus.ml" 125 4536 4561
+type(
+  unit
+)
+"hbase/mapplus.ml" 104 3871 3877 "hbase/mapplus.ml" 125 4536 4561
+type(
+  unit
+)

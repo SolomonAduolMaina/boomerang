@@ -1,0 +1,7704 @@
+"lib/bregistry.ml" 22 1601 1605 "lib/bregistry.ml" 22 1601 1612
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  def sprintf "lib/bregistry.ml" 23 1630 1630 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 22 1601 1615 "lib/bregistry.ml" 22 1601 1629
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bregistry.ml" 23 1630 1634 "lib/bregistry.ml" 23 1630 1639
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  def debug "lib/bregistry.ml" 24 1665 1665 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 23 1630 1642 "lib/bregistry.ml" 23 1630 1653
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Trace.debug
+)
+"lib/bregistry.ml" 23 1630 1654 "lib/bregistry.ml" 23 1630 1664
+type(
+  string
+)
+"lib/bregistry.ml" 23 1630 1642 "lib/bregistry.ml" 23 1630 1664
+call(
+  stack
+)
+type(
+  (unit -> unit) -> unit
+)
+"lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  def verbose "lib/bregistry.ml" 25 1703 1703 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 24 1665 1679 "lib/bregistry.ml" 24 1665 1690
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Trace.debug
+)
+"lib/bregistry.ml" 24 1665 1691 "lib/bregistry.ml" 24 1665 1702
+type(
+  string
+)
+"lib/bregistry.ml" 24 1665 1679 "lib/bregistry.ml" 24 1665 1702
+call(
+  stack
+)
+type(
+  (unit -> unit) -> unit
+)
+"lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  def msg "lib/bregistry.ml" 28 1744 1744 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 25 1703 1713 "lib/bregistry.ml" 25 1703 1724
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  ext_ref Util.format
+)
+"lib/bregistry.ml" 31 1828 1832 "lib/bregistry.ml" 31 1828 1841
+type(
+  string -> Bident.Qid.t
+)
+ident(
+  def parse_uid "lib/bregistry.ml" 46 2273 2273 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 31 1828 1842 "lib/bregistry.ml" 31 1828 1843
+type(
+  string
+)
+ident(
+  def s "lib/bregistry.ml" 32 1848 1850 "lib/bregistry.ml" 44 2264 2271
+)
+"lib/bregistry.ml" 32 1848 1854 "lib/bregistry.ml" 32 1848 1860
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "lib/bregistry.ml" 33 1887 1891 "lib/bregistry.ml" 44 2264 2271
+)
+"lib/bregistry.ml" 32 1848 1863 "lib/bregistry.ml" 32 1848 1881
+type(
+  string -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_string
+)
+"lib/bregistry.ml" 32 1848 1882 "lib/bregistry.ml" 32 1848 1883
+type(
+  string
+)
+ident(
+  int_ref s "lib/bregistry.ml" 31 1828 1842 "lib/bregistry.ml" 31 1828 1843
+)
+"lib/bregistry.ml" 32 1848 1863 "lib/bregistry.ml" 32 1848 1883
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"lib/bregistry.ml" 33 1887 1891 "lib/bregistry.ml" 33 1887 1903
+type(
+  string -> unit
+)
+ident(
+  ext_ref Blexer.setup
+)
+"lib/bregistry.ml" 33 1887 1904 "lib/bregistry.ml" 33 1887 1925
+type(
+  string
+)
+"lib/bregistry.ml" 33 1887 1891 "lib/bregistry.ml" 33 1887 1925
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 34 1927 1935 "lib/bregistry.ml" 34 1927 1936
+type(
+  Bident.Qid.t
+)
+ident(
+  def x "lib/bregistry.ml" 43 2220 2226 "lib/bregistry.ml" 44 2264 2271
+)
+"lib/bregistry.ml" 35 1940 1950 "lib/bregistry.ml" 35 1940 1961
+type(
+  (Lexing.lexbuf -> Bparser.token) -> Lexing.lexbuf -> Bident.Qid.t
+)
+ident(
+  ext_ref Bparser.uid
+)
+"lib/bregistry.ml" 35 1940 1962 "lib/bregistry.ml" 35 1940 1973
+type(
+  Lexing.lexbuf -> Bparser.token
+)
+ident(
+  ext_ref Blexer.main
+)
+"lib/bregistry.ml" 35 1940 1974 "lib/bregistry.ml" 35 1940 1980
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "lib/bregistry.ml" 32 1848 1854 "lib/bregistry.ml" 32 1848 1860
+)
+"lib/bregistry.ml" 35 1940 1950 "lib/bregistry.ml" 35 1940 1980
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 36 1981 1992 "lib/bregistry.ml" 36 1981 1993
+type(
+  exn
+)
+"lib/bregistry.ml" 37 1998 2006 "lib/bregistry.ml" 37 1998 2011
+type(
+  exn -> Bident.Qid.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"lib/bregistry.ml" 39 2044 2062 "lib/bregistry.ml" 39 2044 2064
+type(
+  unit
+)
+"lib/bregistry.ml" 40 2069 2085 "lib/bregistry.ml" 40 2069 2088
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 40 2069 2089 "lib/bregistry.ml" 40 2069 2134
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 41 2136 2155 "lib/bregistry.ml" 41 2136 2171
+type(
+  Info.t -> string
+)
+ident(
+  ext_ref Info.string_of_t
+)
+"lib/bregistry.ml" 41 2136 2173 "lib/bregistry.ml" 41 2136 2184
+type(
+  Lexing.lexbuf -> Info.t
+)
+ident(
+  ext_ref Blexer.info
+)
+"lib/bregistry.ml" 41 2136 2185 "lib/bregistry.ml" 41 2136 2191
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "lib/bregistry.ml" 32 1848 1854 "lib/bregistry.ml" 32 1848 1860
+)
+"lib/bregistry.ml" 41 2136 2172 "lib/bregistry.ml" 41 2136 2192
+call(
+  stack
+)
+type(
+  Info.t
+)
+"lib/bregistry.ml" 41 2136 2154 "lib/bregistry.ml" 41 2136 2193
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 42 2194 2212 "lib/bregistry.ml" 42 2194 2213
+type(
+  string
+)
+ident(
+  int_ref s "lib/bregistry.ml" 31 1828 1842 "lib/bregistry.ml" 31 1828 1843
+)
+"lib/bregistry.ml" 40 2069 2085 "lib/bregistry.ml" 42 2194 2213
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 39 2044 2057 "lib/bregistry.ml" 42 2194 2214
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 38 2013 2023 "lib/bregistry.ml" 42 2194 2215
+type(
+  exn
+)
+"lib/bregistry.ml" 37 1998 2006 "lib/bregistry.ml" 42 2194 2215
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 35 1940 1946 "lib/bregistry.ml" 42 2194 2215
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 43 2220 2226 "lib/bregistry.ml" 43 2220 2239
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Blexer.finish
+)
+"lib/bregistry.ml" 43 2220 2240 "lib/bregistry.ml" 43 2220 2242
+type(
+  unit
+)
+"lib/bregistry.ml" 43 2220 2226 "lib/bregistry.ml" 43 2220 2242
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 44 2264 2270 "lib/bregistry.ml" 44 2264 2271
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bregistry.ml" 34 1927 1935 "lib/bregistry.ml" 34 1927 1936
+)
+"lib/bregistry.ml" 43 2220 2226 "lib/bregistry.ml" 44 2264 2271
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 34 1927 1931 "lib/bregistry.ml" 44 2264 2271
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 33 1887 1891 "lib/bregistry.ml" 44 2264 2271
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 32 1848 1850 "lib/bregistry.ml" 44 2264 2271
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 46 2273 2277 "lib/bregistry.ml" 46 2273 2286
+type(
+  string -> Bident.Qid.t
+)
+ident(
+  def parse_qid "lib/bregistry.ml" 61 2746 2746 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 46 2273 2287 "lib/bregistry.ml" 46 2273 2288
+type(
+  string
+)
+ident(
+  def s "lib/bregistry.ml" 47 2291 2293 "lib/bregistry.ml" 58 2684 2691
+)
+"lib/bregistry.ml" 47 2291 2297 "lib/bregistry.ml" 47 2291 2303
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "lib/bregistry.ml" 48 2330 2334 "lib/bregistry.ml" 58 2684 2691
+)
+"lib/bregistry.ml" 47 2291 2306 "lib/bregistry.ml" 47 2291 2324
+type(
+  string -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_string
+)
+"lib/bregistry.ml" 47 2291 2325 "lib/bregistry.ml" 47 2291 2326
+type(
+  string
+)
+ident(
+  int_ref s "lib/bregistry.ml" 46 2273 2287 "lib/bregistry.ml" 46 2273 2288
+)
+"lib/bregistry.ml" 47 2291 2306 "lib/bregistry.ml" 47 2291 2326
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"lib/bregistry.ml" 48 2330 2334 "lib/bregistry.ml" 48 2330 2346
+type(
+  string -> unit
+)
+ident(
+  ext_ref Blexer.setup
+)
+"lib/bregistry.ml" 48 2330 2347 "lib/bregistry.ml" 48 2330 2378
+type(
+  string
+)
+"lib/bregistry.ml" 48 2330 2334 "lib/bregistry.ml" 48 2330 2378
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 49 2380 2388 "lib/bregistry.ml" 49 2380 2389
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 57 2660 2666 "lib/bregistry.ml" 58 2684 2691
+)
+"lib/bregistry.ml" 50 2392 2402 "lib/bregistry.ml" 50 2392 2413
+type(
+  (Lexing.lexbuf -> Bparser.token) -> Lexing.lexbuf -> Bident.Qid.t
+)
+ident(
+  ext_ref Bparser.qid
+)
+"lib/bregistry.ml" 50 2392 2414 "lib/bregistry.ml" 50 2392 2425
+type(
+  Lexing.lexbuf -> Bparser.token
+)
+ident(
+  ext_ref Blexer.main
+)
+"lib/bregistry.ml" 50 2392 2426 "lib/bregistry.ml" 50 2392 2432
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "lib/bregistry.ml" 47 2291 2297 "lib/bregistry.ml" 47 2291 2303
+)
+"lib/bregistry.ml" 50 2392 2402 "lib/bregistry.ml" 50 2392 2432
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 51 2433 2444 "lib/bregistry.ml" 51 2433 2445
+type(
+  exn
+)
+"lib/bregistry.ml" 51 2433 2449 "lib/bregistry.ml" 51 2433 2454
+type(
+  exn -> Bident.Qid.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"lib/bregistry.ml" 53 2484 2500 "lib/bregistry.ml" 53 2484 2502
+type(
+  unit
+)
+"lib/bregistry.ml" 54 2506 2520 "lib/bregistry.ml" 54 2506 2523
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 54 2506 2524 "lib/bregistry.ml" 54 2506 2580
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 55 2581 2598 "lib/bregistry.ml" 55 2581 2614
+type(
+  Info.t -> string
+)
+ident(
+  ext_ref Info.string_of_t
+)
+"lib/bregistry.ml" 55 2581 2616 "lib/bregistry.ml" 55 2581 2627
+type(
+  Lexing.lexbuf -> Info.t
+)
+ident(
+  ext_ref Blexer.info
+)
+"lib/bregistry.ml" 55 2581 2628 "lib/bregistry.ml" 55 2581 2634
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "lib/bregistry.ml" 47 2291 2297 "lib/bregistry.ml" 47 2291 2303
+)
+"lib/bregistry.ml" 55 2581 2615 "lib/bregistry.ml" 55 2581 2635
+call(
+  stack
+)
+type(
+  Info.t
+)
+"lib/bregistry.ml" 55 2581 2597 "lib/bregistry.ml" 55 2581 2636
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 56 2637 2653 "lib/bregistry.ml" 56 2637 2654
+type(
+  string
+)
+ident(
+  int_ref s "lib/bregistry.ml" 46 2273 2287 "lib/bregistry.ml" 46 2273 2288
+)
+"lib/bregistry.ml" 54 2506 2520 "lib/bregistry.ml" 56 2637 2654
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 53 2484 2495 "lib/bregistry.ml" 56 2637 2655
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 52 2455 2463 "lib/bregistry.ml" 56 2637 2656
+type(
+  exn
+)
+"lib/bregistry.ml" 51 2433 2449 "lib/bregistry.ml" 56 2637 2656
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 50 2392 2398 "lib/bregistry.ml" 56 2637 2656
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 57 2660 2666 "lib/bregistry.ml" 57 2660 2679
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Blexer.finish
+)
+"lib/bregistry.ml" 57 2660 2680 "lib/bregistry.ml" 57 2660 2682
+type(
+  unit
+)
+"lib/bregistry.ml" 57 2660 2666 "lib/bregistry.ml" 57 2660 2682
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 58 2684 2690 "lib/bregistry.ml" 58 2684 2691
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 49 2380 2388 "lib/bregistry.ml" 49 2380 2389
+)
+"lib/bregistry.ml" 57 2660 2666 "lib/bregistry.ml" 58 2684 2691
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 49 2380 2384 "lib/bregistry.ml" 58 2684 2691
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 48 2330 2334 "lib/bregistry.ml" 58 2684 2691
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 47 2291 2293 "lib/bregistry.ml" 58 2684 2691
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 69 2852 2856 "lib/bregistry.ml" 69 2852 2867
+type(
+  'a * 'b -> 'b
+)
+ident(
+  def value_of_rv "lib/bregistry.ml" 71 2879 2879 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 69 2852 2869 "lib/bregistry.ml" 69 2852 2870
+type(
+  'a
+)
+"lib/bregistry.ml" 69 2852 2871 "lib/bregistry.ml" 69 2852 2872
+type(
+  'b
+)
+ident(
+  def v "lib/bregistry.ml" 69 2852 2876 "lib/bregistry.ml" 69 2852 2877
+)
+"lib/bregistry.ml" 69 2852 2868 "lib/bregistry.ml" 69 2852 2873
+type(
+  'a * 'b
+)
+"lib/bregistry.ml" 69 2852 2876 "lib/bregistry.ml" 69 2852 2877
+type(
+  'b
+)
+ident(
+  int_ref v "lib/bregistry.ml" 69 2852 2871 "lib/bregistry.ml" 69 2852 2872
+)
+"lib/bregistry.ml" 71 2879 2883 "lib/bregistry.ml" 71 2879 2892
+type(
+  rs * Bvalue.t -> unit
+)
+ident(
+  def format_rv "lib/bregistry.ml" 80 3101 3101 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 71 2879 2894 "lib/bregistry.ml" 71 2879 2896
+type(
+  rs
+)
+ident(
+  def rs "lib/bregistry.ml" 72 2903 2905 "lib/bregistry.ml" 77 3031 3043
+)
+"lib/bregistry.ml" 71 2879 2897 "lib/bregistry.ml" 71 2879 2898
+type(
+  Bvalue.t
+)
+ident(
+  def v "lib/bregistry.ml" 72 2903 2905 "lib/bregistry.ml" 77 3031 3043
+)
+"lib/bregistry.ml" 71 2879 2893 "lib/bregistry.ml" 71 2879 2899
+type(
+  rs * Bvalue.t
+)
+"lib/bregistry.ml" 72 2903 2905 "lib/bregistry.ml" 72 2903 2908
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 72 2903 2909 "lib/bregistry.ml" 72 2903 2913
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 72 2903 2905 "lib/bregistry.ml" 72 2903 2913
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 73 2915 2917 "lib/bregistry.ml" 73 2915 2930
+type(
+  Bvalue.t -> unit
+)
+ident(
+  ext_ref Bvalue.format
+)
+"lib/bregistry.ml" 73 2915 2931 "lib/bregistry.ml" 73 2915 2932
+type(
+  Bvalue.t
+)
+ident(
+  int_ref v "lib/bregistry.ml" 71 2879 2897 "lib/bregistry.ml" 71 2879 2898
+)
+"lib/bregistry.ml" 73 2915 2917 "lib/bregistry.ml" 73 2915 2932
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 74 2934 2943 "lib/bregistry.ml" 74 2934 2945
+type(
+  rs
+)
+ident(
+  int_ref rs "lib/bregistry.ml" 71 2879 2894 "lib/bregistry.ml" 71 2879 2896
+)
+"lib/bregistry.ml" 75 2951 2962 "lib/bregistry.ml" 75 2951 2963
+ident(
+  def s "lib/bregistry.ml" 75 2951 2972 "lib/bregistry.ml" 75 2951 3004
+)
+"lib/bregistry.ml" 75 2951 2961 "lib/bregistry.ml" 75 2951 2964
+type(
+  Bsyntax.sort
+)
+"lib/bregistry.ml" 75 2951 2957 "lib/bregistry.ml" 75 2951 2964
+type(
+  rs
+)
+"lib/bregistry.ml" 75 2951 2972 "lib/bregistry.ml" 75 2951 2975
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 75 2951 2976 "lib/bregistry.ml" 75 2951 2981
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 75 2951 2972 "lib/bregistry.ml" 75 2951 2981
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 75 2951 2984 "lib/bregistry.ml" 75 2951 3002
+type(
+  Bsyntax.sort -> unit
+)
+ident(
+  ext_ref Bprint.format_sort
+)
+"lib/bregistry.ml" 75 2951 3003 "lib/bregistry.ml" 75 2951 3004
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bregistry.ml" 75 2951 2961 "lib/bregistry.ml" 75 2951 2964
+)
+"lib/bregistry.ml" 75 2951 2984 "lib/bregistry.ml" 75 2951 3004
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 75 2951 2972 "lib/bregistry.ml" 75 2951 3004
+type(
+  unit
+)
+"lib/bregistry.ml" 76 3005 3011 "lib/bregistry.ml" 76 3005 3018
+type(
+  rs
+)
+"lib/bregistry.ml" 76 3005 3026 "lib/bregistry.ml" 76 3005 3028
+type(
+  unit
+)
+"lib/bregistry.ml" 74 2934 2936 "lib/bregistry.ml" 76 3005 3029
+type(
+  unit
+)
+"lib/bregistry.ml" 77 3031 3035 "lib/bregistry.ml" 77 3031 3038
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 77 3031 3039 "lib/bregistry.ml" 77 3031 3043
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 77 3031 3035 "lib/bregistry.ml" 77 3031 3043
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 74 2934 2936 "lib/bregistry.ml" 77 3031 3043
+type(
+  unit
+)
+"lib/bregistry.ml" 73 2915 2917 "lib/bregistry.ml" 77 3031 3043
+type(
+  unit
+)
+"lib/bregistry.ml" 72 2903 2905 "lib/bregistry.ml" 77 3031 3043
+type(
+  unit
+)
+"lib/bregistry.ml" 98 3736 3742 "lib/bregistry.ml" 98 3736 3747
+type(
+  unit -> 'a QM.t * 'b QM.t * vmap
+)
+ident(
+  def empty "lib/bregistry.ml" 100 3801 3803 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 98 3736 3748 "lib/bregistry.ml" 98 3736 3750
+type(
+  unit
+)
+"lib/bregistry.ml" 98 3736 3754 "lib/bregistry.ml" 98 3736 3762
+type(
+  unit -> 'a QM.t
+)
+ident(
+  ext_ref QM.empty
+)
+"lib/bregistry.ml" 98 3736 3763 "lib/bregistry.ml" 98 3736 3765
+type(
+  unit
+)
+"lib/bregistry.ml" 98 3736 3754 "lib/bregistry.ml" 98 3736 3765
+call(
+  stack
+)
+type(
+  'a QM.t
+)
+"lib/bregistry.ml" 98 3736 3767 "lib/bregistry.ml" 98 3736 3775
+type(
+  unit -> 'b QM.t
+)
+ident(
+  ext_ref QM.empty
+)
+"lib/bregistry.ml" 98 3736 3776 "lib/bregistry.ml" 98 3736 3778
+type(
+  unit
+)
+"lib/bregistry.ml" 98 3736 3767 "lib/bregistry.ml" 98 3736 3778
+call(
+  stack
+)
+type(
+  'b QM.t
+)
+"lib/bregistry.ml" 98 3736 3786 "lib/bregistry.ml" 98 3736 3794
+type(
+  unit -> (rv * vmap) QM.t
+)
+ident(
+  ext_ref QM.empty
+)
+"lib/bregistry.ml" 98 3736 3795 "lib/bregistry.ml" 98 3736 3797
+type(
+  unit
+)
+"lib/bregistry.ml" 98 3736 3785 "lib/bregistry.ml" 98 3736 3798
+call(
+  stack
+)
+type(
+  (rv * vmap) QM.t
+)
+"lib/bregistry.ml" 98 3736 3780 "lib/bregistry.ml" 98 3736 3798
+type(
+  vmap
+)
+"lib/bregistry.ml" 98 3736 3753 "lib/bregistry.ml" 98 3736 3799
+type(
+  'a QM.t * 'b QM.t * vmap
+)
+"lib/bregistry.ml" 100 3801 3807 "lib/bregistry.ml" 100 3801 3813
+type(
+  'c * 'd * vmap -> QM.key -> rv option
+)
+ident(
+  def lookup "lib/bregistry.ml" 104 3905 3907 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 100 3801 3815 "lib/bregistry.ml" 100 3801 3816
+type(
+  'c
+)
+"lib/bregistry.ml" 100 3801 3817 "lib/bregistry.ml" 100 3801 3818
+type(
+  'd
+)
+"lib/bregistry.ml" 100 3801 3824 "lib/bregistry.ml" 100 3801 3826
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 100 3801 3828 "lib/bregistry.ml" 102 3885 3903
+)
+"lib/bregistry.ml" 100 3801 3819 "lib/bregistry.ml" 100 3801 3826
+type(
+  vmap
+)
+"lib/bregistry.ml" 100 3801 3814 "lib/bregistry.ml" 100 3801 3827
+type(
+  'c * 'd * vmap
+)
+"lib/bregistry.ml" 100 3801 3828 "lib/bregistry.ml" 100 3801 3829
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 100 3801 3832 "lib/bregistry.ml" 102 3885 3903
+)
+"lib/bregistry.ml" 100 3801 3838 "lib/bregistry.ml" 100 3801 3847
+type(
+  (rv * vmap) QM.t -> QM.key -> (rv * vmap) option
+)
+ident(
+  ext_ref QM.lookup
+)
+"lib/bregistry.ml" 100 3801 3848 "lib/bregistry.ml" 100 3801 3850
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 100 3801 3824 "lib/bregistry.ml" 100 3801 3826
+)
+"lib/bregistry.ml" 100 3801 3851 "lib/bregistry.ml" 100 3801 3852
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 100 3801 3828 "lib/bregistry.ml" 100 3801 3829
+)
+"lib/bregistry.ml" 100 3801 3838 "lib/bregistry.ml" 100 3801 3852
+call(
+  stack
+)
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 101 3858 3870 "lib/bregistry.ml" 101 3858 3871
+type(
+  rv
+)
+ident(
+  def r "lib/bregistry.ml" 101 3858 3878 "lib/bregistry.ml" 101 3858 3884
+)
+"lib/bregistry.ml" 101 3858 3872 "lib/bregistry.ml" 101 3858 3873
+type(
+  vmap
+)
+"lib/bregistry.ml" 101 3858 3869 "lib/bregistry.ml" 101 3858 3874
+type(
+  rv * vmap
+)
+"lib/bregistry.ml" 101 3858 3864 "lib/bregistry.ml" 101 3858 3874
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 101 3858 3883 "lib/bregistry.ml" 101 3858 3884
+type(
+  rv
+)
+ident(
+  int_ref r "lib/bregistry.ml" 101 3858 3870 "lib/bregistry.ml" 101 3858 3871
+)
+"lib/bregistry.ml" 101 3858 3878 "lib/bregistry.ml" 101 3858 3884
+type(
+  rv option
+)
+"lib/bregistry.ml" 102 3885 3891 "lib/bregistry.ml" 102 3885 3895
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 102 3885 3899 "lib/bregistry.ml" 102 3885 3903
+type(
+  rv option
+)
+"lib/bregistry.ml" 100 3801 3832 "lib/bregistry.ml" 102 3885 3903
+type(
+  rv option
+)
+"lib/bregistry.ml" 104 3905 3911 "lib/bregistry.ml" 104 3905 3922
+type(
+  'e * 'f * vmap -> QM.key -> (rv * ('e * 'f * vmap)) option
+)
+ident(
+  def lookup_both "lib/bregistry.ml" 108 4031 4033 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 104 3905 3924 "lib/bregistry.ml" 104 3905 3926
+type(
+  'e
+)
+ident(
+  def tm "lib/bregistry.ml" 104 3905 3940 "lib/bregistry.ml" 106 4011 4029
+)
+"lib/bregistry.ml" 104 3905 3927 "lib/bregistry.ml" 104 3905 3929
+type(
+  'f
+)
+ident(
+  def rm "lib/bregistry.ml" 104 3905 3940 "lib/bregistry.ml" 106 4011 4029
+)
+"lib/bregistry.ml" 104 3905 3936 "lib/bregistry.ml" 104 3905 3938
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 104 3905 3940 "lib/bregistry.ml" 106 4011 4029
+)
+"lib/bregistry.ml" 104 3905 3931 "lib/bregistry.ml" 104 3905 3938
+type(
+  vmap
+)
+"lib/bregistry.ml" 104 3905 3923 "lib/bregistry.ml" 104 3905 3939
+type(
+  'e * 'f * vmap
+)
+"lib/bregistry.ml" 104 3905 3940 "lib/bregistry.ml" 104 3905 3941
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 104 3905 3944 "lib/bregistry.ml" 106 4011 4029
+)
+"lib/bregistry.ml" 104 3905 3950 "lib/bregistry.ml" 104 3905 3959
+type(
+  (rv * vmap) QM.t -> QM.key -> (rv * vmap) option
+)
+ident(
+  ext_ref QM.lookup
+)
+"lib/bregistry.ml" 104 3905 3960 "lib/bregistry.ml" 104 3905 3962
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 104 3905 3936 "lib/bregistry.ml" 104 3905 3938
+)
+"lib/bregistry.ml" 104 3905 3963 "lib/bregistry.ml" 104 3905 3964
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 104 3905 3940 "lib/bregistry.ml" 104 3905 3941
+)
+"lib/bregistry.ml" 104 3905 3950 "lib/bregistry.ml" 104 3905 3964
+call(
+  stack
+)
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 105 3970 3982 "lib/bregistry.ml" 105 3970 3983
+type(
+  rv
+)
+ident(
+  def r "lib/bregistry.ml" 105 3970 3991 "lib/bregistry.ml" 105 3970 4010
+)
+"lib/bregistry.ml" 105 3970 3984 "lib/bregistry.ml" 105 3970 3986
+type(
+  vmap
+)
+ident(
+  def ve "lib/bregistry.ml" 105 3970 3991 "lib/bregistry.ml" 105 3970 4010
+)
+"lib/bregistry.ml" 105 3970 3981 "lib/bregistry.ml" 105 3970 3987
+type(
+  rv * vmap
+)
+"lib/bregistry.ml" 105 3970 3976 "lib/bregistry.ml" 105 3970 3987
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 105 3970 3997 "lib/bregistry.ml" 105 3970 3998
+type(
+  rv
+)
+ident(
+  int_ref r "lib/bregistry.ml" 105 3970 3982 "lib/bregistry.ml" 105 3970 3983
+)
+"lib/bregistry.ml" 105 3970 4000 "lib/bregistry.ml" 105 3970 4002
+type(
+  'e
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 104 3905 3924 "lib/bregistry.ml" 104 3905 3926
+)
+"lib/bregistry.ml" 105 3970 4003 "lib/bregistry.ml" 105 3970 4005
+type(
+  'f
+)
+ident(
+  int_ref rm "lib/bregistry.ml" 104 3905 3927 "lib/bregistry.ml" 104 3905 3929
+)
+"lib/bregistry.ml" 105 3970 4006 "lib/bregistry.ml" 105 3970 4008
+type(
+  vmap
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 105 3970 3984 "lib/bregistry.ml" 105 3970 3986
+)
+"lib/bregistry.ml" 105 3970 3999 "lib/bregistry.ml" 105 3970 4009
+type(
+  'e * 'f * vmap
+)
+"lib/bregistry.ml" 105 3970 3996 "lib/bregistry.ml" 105 3970 4010
+type(
+  rv * ('e * 'f * vmap)
+)
+"lib/bregistry.ml" 105 3970 3991 "lib/bregistry.ml" 105 3970 4010
+type(
+  (rv * ('e * 'f * vmap)) option
+)
+"lib/bregistry.ml" 106 4011 4017 "lib/bregistry.ml" 106 4011 4021
+type(
+  (rv * vmap) option
+)
+"lib/bregistry.ml" 106 4011 4025 "lib/bregistry.ml" 106 4011 4029
+type(
+  (rv * ('e * 'f * vmap)) option
+)
+"lib/bregistry.ml" 104 3905 3944 "lib/bregistry.ml" 106 4011 4029
+type(
+  (rv * ('e * 'f * vmap)) option
+)
+"lib/bregistry.ml" 108 4031 4037 "lib/bregistry.ml" 108 4031 4048
+type(
+  'g QM.t * 'h * 'i -> QM.key -> (QM.key * 'g) option
+)
+ident(
+  def lookup_type "lib/bregistry.ml" 112 4143 4145 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 108 4031 4050 "lib/bregistry.ml" 108 4031 4052
+type(
+  'g QM.t
+)
+ident(
+  def tm "lib/bregistry.ml" 108 4031 4058 "lib/bregistry.ml" 110 4115 4133
+)
+"lib/bregistry.ml" 108 4031 4053 "lib/bregistry.ml" 108 4031 4054
+type(
+  'h
+)
+"lib/bregistry.ml" 108 4031 4055 "lib/bregistry.ml" 108 4031 4056
+type(
+  'i
+)
+"lib/bregistry.ml" 108 4031 4049 "lib/bregistry.ml" 108 4031 4057
+type(
+  'g QM.t * 'h * 'i
+)
+"lib/bregistry.ml" 108 4031 4058 "lib/bregistry.ml" 108 4031 4059
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 108 4031 4062 "lib/bregistry.ml" 110 4115 4133
+)
+"lib/bregistry.ml" 108 4031 4068 "lib/bregistry.ml" 108 4031 4077
+type(
+  'g QM.t -> QM.key -> 'g option
+)
+ident(
+  ext_ref QM.lookup
+)
+"lib/bregistry.ml" 108 4031 4078 "lib/bregistry.ml" 108 4031 4080
+type(
+  'g QM.t
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 108 4031 4050 "lib/bregistry.ml" 108 4031 4052
+)
+"lib/bregistry.ml" 108 4031 4081 "lib/bregistry.ml" 108 4031 4082
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 108 4031 4058 "lib/bregistry.ml" 108 4031 4059
+)
+"lib/bregistry.ml" 108 4031 4068 "lib/bregistry.ml" 108 4031 4082
+call(
+  stack
+)
+type(
+  'g option
+)
+"lib/bregistry.ml" 109 4088 4099 "lib/bregistry.ml" 109 4088 4100
+type(
+  'g
+)
+ident(
+  def r "lib/bregistry.ml" 109 4088 4104 "lib/bregistry.ml" 109 4088 4114
+)
+"lib/bregistry.ml" 109 4088 4094 "lib/bregistry.ml" 109 4088 4100
+type(
+  'g option
+)
+"lib/bregistry.ml" 109 4088 4110 "lib/bregistry.ml" 109 4088 4111
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 108 4031 4058 "lib/bregistry.ml" 108 4031 4059
+)
+"lib/bregistry.ml" 109 4088 4112 "lib/bregistry.ml" 109 4088 4113
+type(
+  'g
+)
+ident(
+  int_ref r "lib/bregistry.ml" 109 4088 4099 "lib/bregistry.ml" 109 4088 4100
+)
+"lib/bregistry.ml" 109 4088 4109 "lib/bregistry.ml" 109 4088 4114
+type(
+  QM.key * 'g
+)
+"lib/bregistry.ml" 109 4088 4104 "lib/bregistry.ml" 109 4088 4114
+type(
+  (QM.key * 'g) option
+)
+"lib/bregistry.ml" 110 4115 4121 "lib/bregistry.ml" 110 4115 4125
+type(
+  'g option
+)
+"lib/bregistry.ml" 110 4115 4129 "lib/bregistry.ml" 110 4115 4133
+type(
+  (QM.key * 'g) option
+)
+"lib/bregistry.ml" 108 4031 4062 "lib/bregistry.ml" 110 4115 4133
+type(
+  (QM.key * 'g) option
+)
+"lib/bregistry.ml" 112 4143 4149 "lib/bregistry.ml" 112 4143 4159
+type(
+  ('j * 'k) QM.t * QM.key QM.t * 'l -> QM.key -> (QM.key * ('j * 'k)) option
+)
+ident(
+  def lookup_con "lib/bregistry.ml" 124 4541 4543 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 112 4143 4161 "lib/bregistry.ml" 112 4143 4163
+type(
+  ('j * 'k) QM.t
+)
+ident(
+  def tm "lib/bregistry.ml" 112 4143 4170 "lib/bregistry.ml" 122 4519 4537
+)
+"lib/bregistry.ml" 112 4143 4164 "lib/bregistry.ml" 112 4143 4166
+type(
+  QM.key QM.t
+)
+ident(
+  def rm "lib/bregistry.ml" 112 4143 4170 "lib/bregistry.ml" 122 4519 4537
+)
+"lib/bregistry.ml" 112 4143 4167 "lib/bregistry.ml" 112 4143 4168
+type(
+  'l
+)
+"lib/bregistry.ml" 112 4143 4160 "lib/bregistry.ml" 112 4143 4169
+type(
+  ('j * 'k) QM.t * QM.key QM.t * 'l
+)
+"lib/bregistry.ml" 112 4143 4170 "lib/bregistry.ml" 112 4143 4171
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 112 4143 4174 "lib/bregistry.ml" 122 4519 4537
+)
+"lib/bregistry.ml" 112 4143 4180 "lib/bregistry.ml" 112 4143 4189
+type(
+  QM.key QM.t -> QM.key -> QM.key option
+)
+ident(
+  ext_ref QM.lookup
+)
+"lib/bregistry.ml" 112 4143 4190 "lib/bregistry.ml" 112 4143 4192
+type(
+  QM.key QM.t
+)
+ident(
+  int_ref rm "lib/bregistry.ml" 112 4143 4164 "lib/bregistry.ml" 112 4143 4166
+)
+"lib/bregistry.ml" 112 4143 4193 "lib/bregistry.ml" 112 4143 4194
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 112 4143 4170 "lib/bregistry.ml" 112 4143 4171
+)
+"lib/bregistry.ml" 112 4143 4180 "lib/bregistry.ml" 112 4143 4194
+call(
+  stack
+)
+type(
+  QM.key option
+)
+"lib/bregistry.ml" 113 4201 4212 "lib/bregistry.ml" 113 4201 4214
+type(
+  QM.key
+)
+ident(
+  def q' "lib/bregistry.ml" 113 4201 4218 "lib/bregistry.ml" 121 4509 4518
+)
+"lib/bregistry.ml" 113 4201 4207 "lib/bregistry.ml" 113 4201 4214
+type(
+  QM.key option
+)
+"lib/bregistry.ml" 114 4225 4239 "lib/bregistry.ml" 114 4225 4248
+type(
+  ('j * 'k) QM.t -> QM.key -> ('j * 'k) option
+)
+ident(
+  ext_ref QM.lookup
+)
+"lib/bregistry.ml" 114 4225 4249 "lib/bregistry.ml" 114 4225 4251
+type(
+  ('j * 'k) QM.t
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 112 4143 4161 "lib/bregistry.ml" 112 4143 4163
+)
+"lib/bregistry.ml" 114 4225 4252 "lib/bregistry.ml" 114 4225 4254
+type(
+  QM.key
+)
+ident(
+  int_ref q' "lib/bregistry.ml" 113 4201 4212 "lib/bregistry.ml" 113 4201 4214
+)
+"lib/bregistry.ml" 114 4225 4239 "lib/bregistry.ml" 114 4225 4254
+call(
+  stack
+)
+type(
+  ('j * 'k) option
+)
+"lib/bregistry.ml" 115 4261 4273 "lib/bregistry.ml" 115 4261 4277
+type(
+  ('j * 'k) option
+)
+"lib/bregistry.ml" 116 4282 4296 "lib/bregistry.ml" 116 4282 4312
+type(
+  Info.t -> (unit -> unit) -> (QM.key * ('j * 'k)) option
+)
+ident(
+  ext_ref Berror.run_error
+)
+"lib/bregistry.ml" 116 4282 4321 "lib/bregistry.ml" 116 4282 4343
+type(
+  string
+)
+"lib/bregistry.ml" 116 4282 4313 "lib/bregistry.ml" 116 4282 4344
+type(
+  Info.t
+)
+"lib/bregistry.ml" 117 4346 4367 "lib/bregistry.ml" 117 4346 4369
+type(
+  unit
+)
+"lib/bregistry.ml" 117 4346 4373 "lib/bregistry.ml" 117 4346 4376
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 117 4346 4377 "lib/bregistry.ml" 117 4346 4398
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 118 4400 4420 "lib/bregistry.ml" 118 4400 4442
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 118 4400 4443 "lib/bregistry.ml" 118 4400 4445
+type(
+  QM.key
+)
+ident(
+  int_ref q' "lib/bregistry.ml" 113 4201 4212 "lib/bregistry.ml" 113 4201 4214
+)
+"lib/bregistry.ml" 118 4400 4419 "lib/bregistry.ml" 118 4400 4446
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 117 4346 4373 "lib/bregistry.ml" 118 4400 4446
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 117 4346 4362 "lib/bregistry.ml" 118 4400 4447
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 116 4282 4296 "lib/bregistry.ml" 118 4400 4447
+call(
+  tail
+)
+type(
+  (QM.key * ('j * 'k)) option
+)
+"lib/bregistry.ml" 119 4448 4466 "lib/bregistry.ml" 119 4448 4468
+type(
+  'j
+)
+ident(
+  def sl "lib/bregistry.ml" 120 4477 4491 "lib/bregistry.ml" 120 4477 4508
+)
+"lib/bregistry.ml" 119 4448 4469 "lib/bregistry.ml" 119 4448 4471
+type(
+  'k
+)
+ident(
+  def cl "lib/bregistry.ml" 120 4477 4491 "lib/bregistry.ml" 120 4477 4508
+)
+"lib/bregistry.ml" 119 4448 4465 "lib/bregistry.ml" 119 4448 4472
+type(
+  'j * 'k
+)
+"lib/bregistry.ml" 119 4448 4460 "lib/bregistry.ml" 119 4448 4472
+type(
+  ('j * 'k) option
+)
+"lib/bregistry.ml" 120 4477 4497 "lib/bregistry.ml" 120 4477 4499
+type(
+  QM.key
+)
+ident(
+  int_ref q' "lib/bregistry.ml" 113 4201 4212 "lib/bregistry.ml" 113 4201 4214
+)
+"lib/bregistry.ml" 120 4477 4501 "lib/bregistry.ml" 120 4477 4503
+type(
+  'j
+)
+ident(
+  int_ref sl "lib/bregistry.ml" 119 4448 4466 "lib/bregistry.ml" 119 4448 4468
+)
+"lib/bregistry.ml" 120 4477 4504 "lib/bregistry.ml" 120 4477 4506
+type(
+  'k
+)
+ident(
+  int_ref cl "lib/bregistry.ml" 119 4448 4469 "lib/bregistry.ml" 119 4448 4471
+)
+"lib/bregistry.ml" 120 4477 4500 "lib/bregistry.ml" 120 4477 4507
+type(
+  'j * 'k
+)
+"lib/bregistry.ml" 120 4477 4496 "lib/bregistry.ml" 120 4477 4508
+type(
+  QM.key * ('j * 'k)
+)
+"lib/bregistry.ml" 120 4477 4491 "lib/bregistry.ml" 120 4477 4508
+type(
+  (QM.key * ('j * 'k)) option
+)
+"lib/bregistry.ml" 113 4201 4218 "lib/bregistry.ml" 121 4509 4518
+type(
+  (QM.key * ('j * 'k)) option
+)
+"lib/bregistry.ml" 122 4519 4525 "lib/bregistry.ml" 122 4519 4529
+type(
+  QM.key option
+)
+"lib/bregistry.ml" 122 4519 4533 "lib/bregistry.ml" 122 4519 4537
+type(
+  (QM.key * ('j * 'k)) option
+)
+"lib/bregistry.ml" 112 4143 4174 "lib/bregistry.ml" 122 4519 4537
+type(
+  (QM.key * ('j * 'k)) option
+)
+"lib/bregistry.ml" 124 4541 4547 "lib/bregistry.ml" 124 4541 4553
+type(
+  'm * 'n * vmap -> QM.key -> rv -> 'm * 'n * vmap
+)
+ident(
+  def update "lib/bregistry.ml" 127 4627 4629 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 124 4541 4555 "lib/bregistry.ml" 124 4541 4557
+type(
+  'm
+)
+ident(
+  def tm "lib/bregistry.ml" 124 4541 4571 "lib/bregistry.ml" 125 4578 4625
+)
+"lib/bregistry.ml" 124 4541 4558 "lib/bregistry.ml" 124 4541 4560
+type(
+  'n
+)
+ident(
+  def rm "lib/bregistry.ml" 124 4541 4571 "lib/bregistry.ml" 125 4578 4625
+)
+"lib/bregistry.ml" 124 4541 4567 "lib/bregistry.ml" 124 4541 4569
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 124 4541 4571 "lib/bregistry.ml" 125 4578 4625
+)
+"lib/bregistry.ml" 124 4541 4562 "lib/bregistry.ml" 124 4541 4569
+type(
+  vmap
+)
+"lib/bregistry.ml" 124 4541 4554 "lib/bregistry.ml" 124 4541 4570
+type(
+  'm * 'n * vmap
+)
+"lib/bregistry.ml" 124 4541 4571 "lib/bregistry.ml" 124 4541 4572
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 124 4541 4573 "lib/bregistry.ml" 125 4578 4625
+)
+"lib/bregistry.ml" 124 4541 4573 "lib/bregistry.ml" 124 4541 4574
+type(
+  rv
+)
+ident(
+  def v "lib/bregistry.ml" 125 4578 4582 "lib/bregistry.ml" 125 4578 4625
+)
+"lib/bregistry.ml" 125 4578 4583 "lib/bregistry.ml" 125 4578 4585
+type(
+  'm
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 124 4541 4555 "lib/bregistry.ml" 124 4541 4557
+)
+"lib/bregistry.ml" 125 4578 4587 "lib/bregistry.ml" 125 4578 4589
+type(
+  'n
+)
+ident(
+  int_ref rm "lib/bregistry.ml" 124 4541 4558 "lib/bregistry.ml" 124 4541 4560
+)
+"lib/bregistry.ml" 125 4578 4597 "lib/bregistry.ml" 125 4578 4606
+type(
+  (rv * vmap) QM.t -> QM.key -> rv * vmap -> (rv * vmap) QM.t
+)
+ident(
+  ext_ref QM.update
+)
+"lib/bregistry.ml" 125 4578 4607 "lib/bregistry.ml" 125 4578 4609
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 124 4541 4567 "lib/bregistry.ml" 124 4541 4569
+)
+"lib/bregistry.ml" 125 4578 4610 "lib/bregistry.ml" 125 4578 4611
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 124 4541 4571 "lib/bregistry.ml" 124 4541 4572
+)
+"lib/bregistry.ml" 125 4578 4613 "lib/bregistry.ml" 125 4578 4614
+type(
+  rv
+)
+ident(
+  int_ref v "lib/bregistry.ml" 124 4541 4573 "lib/bregistry.ml" 124 4541 4574
+)
+"lib/bregistry.ml" 125 4578 4620 "lib/bregistry.ml" 125 4578 4622
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 124 4541 4567 "lib/bregistry.ml" 124 4541 4569
+)
+"lib/bregistry.ml" 125 4578 4615 "lib/bregistry.ml" 125 4578 4622
+type(
+  vmap
+)
+"lib/bregistry.ml" 125 4578 4612 "lib/bregistry.ml" 125 4578 4623
+type(
+  rv * vmap
+)
+"lib/bregistry.ml" 125 4578 4596 "lib/bregistry.ml" 125 4578 4624
+call(
+  stack
+)
+type(
+  (rv * vmap) QM.t
+)
+"lib/bregistry.ml" 125 4578 4591 "lib/bregistry.ml" 125 4578 4624
+type(
+  vmap
+)
+"lib/bregistry.ml" 125 4578 4582 "lib/bregistry.ml" 125 4578 4625
+type(
+  'm * 'n * vmap
+)
+"lib/bregistry.ml" 127 4627 4633 "lib/bregistry.ml" 127 4627 4644
+type(
+  ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap ->
+  'o ->
+  QM.key ->
+  (QM.key * 'p) list -> ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap
+)
+ident(
+  def update_type "lib/bregistry.ml" 135 4845 4847 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 127 4627 4646 "lib/bregistry.ml" 127 4627 4648
+type(
+  ('o * (QM.key * 'p) list) QM.t
+)
+ident(
+  def tm "lib/bregistry.ml" 127 4627 4661 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 127 4627 4649 "lib/bregistry.ml" 127 4627 4651
+type(
+  QM.key QM.t
+)
+ident(
+  def rm "lib/bregistry.ml" 127 4627 4661 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 127 4627 4657 "lib/bregistry.ml" 127 4627 4659
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 127 4627 4661 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 127 4627 4652 "lib/bregistry.ml" 127 4627 4659
+type(
+  vmap
+)
+"lib/bregistry.ml" 127 4627 4645 "lib/bregistry.ml" 127 4627 4660
+type(
+  ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap
+)
+"lib/bregistry.ml" 127 4627 4661 "lib/bregistry.ml" 127 4627 4664
+type(
+  'o
+)
+ident(
+  def svl "lib/bregistry.ml" 127 4627 4665 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 127 4627 4665 "lib/bregistry.ml" 127 4627 4666
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 127 4627 4667 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 127 4627 4667 "lib/bregistry.ml" 127 4627 4669
+type(
+  (QM.key * 'p) list
+)
+ident(
+  def cl "lib/bregistry.ml" 128 4673 4677 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 128 4673 4681 "lib/bregistry.ml" 128 4673 4684
+type(
+  ('o * (QM.key * 'p) list) QM.t
+)
+ident(
+  def tm' "lib/bregistry.ml" 129 4715 4719 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 128 4673 4687 "lib/bregistry.ml" 128 4673 4696
+type(
+  ('o * (QM.key * 'p) list) QM.t ->
+  QM.key -> 'o * (QM.key * 'p) list -> ('o * (QM.key * 'p) list) QM.t
+)
+ident(
+  ext_ref QM.update
+)
+"lib/bregistry.ml" 128 4673 4697 "lib/bregistry.ml" 128 4673 4699
+type(
+  ('o * (QM.key * 'p) list) QM.t
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 127 4627 4646 "lib/bregistry.ml" 127 4627 4648
+)
+"lib/bregistry.ml" 128 4673 4700 "lib/bregistry.ml" 128 4673 4701
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 127 4627 4665 "lib/bregistry.ml" 127 4627 4666
+)
+"lib/bregistry.ml" 128 4673 4703 "lib/bregistry.ml" 128 4673 4706
+type(
+  'o
+)
+ident(
+  int_ref svl "lib/bregistry.ml" 127 4627 4661 "lib/bregistry.ml" 127 4627 4664
+)
+"lib/bregistry.ml" 128 4673 4707 "lib/bregistry.ml" 128 4673 4709
+type(
+  (QM.key * 'p) list
+)
+ident(
+  int_ref cl "lib/bregistry.ml" 127 4627 4667 "lib/bregistry.ml" 127 4627 4669
+)
+"lib/bregistry.ml" 128 4673 4702 "lib/bregistry.ml" 128 4673 4710
+type(
+  'o * (QM.key * 'p) list
+)
+"lib/bregistry.ml" 128 4673 4687 "lib/bregistry.ml" 128 4673 4710
+call(
+  stack
+)
+type(
+  ('o * (QM.key * 'p) list) QM.t
+)
+"lib/bregistry.ml" 129 4715 4723 "lib/bregistry.ml" 129 4715 4726
+type(
+  QM.key QM.t
+)
+ident(
+  def rm' "lib/bregistry.ml" 133 4822 4826 "lib/bregistry.ml" 133 4822 4843
+)
+"lib/bregistry.ml" 130 4730 4736 "lib/bregistry.ml" 130 4730 4754
+type(
+  (QM.key QM.t -> QM.key * 'p -> QM.key QM.t) ->
+  QM.key QM.t -> (QM.key * 'p) list -> QM.key QM.t
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bregistry.ml" 131 4756 4769 "lib/bregistry.ml" 131 4756 4772
+type(
+  QM.key QM.t
+)
+ident(
+  def rmi "lib/bregistry.ml" 131 4756 4773 "lib/bregistry.ml" 131 4756 4802
+)
+"lib/bregistry.ml" 131 4756 4774 "lib/bregistry.ml" 131 4756 4776
+type(
+  QM.key
+)
+ident(
+  def qi "lib/bregistry.ml" 131 4756 4784 "lib/bregistry.ml" 131 4756 4802
+)
+"lib/bregistry.ml" 131 4756 4777 "lib/bregistry.ml" 131 4756 4779
+type(
+  'p
+)
+ident(
+  def so "lib/bregistry.ml" 131 4756 4784 "lib/bregistry.ml" 131 4756 4802
+)
+"lib/bregistry.ml" 131 4756 4773 "lib/bregistry.ml" 131 4756 4780
+type(
+  QM.key * 'p
+)
+"lib/bregistry.ml" 131 4756 4784 "lib/bregistry.ml" 131 4756 4793
+type(
+  QM.key QM.t -> QM.key -> QM.key -> QM.key QM.t
+)
+ident(
+  ext_ref QM.update
+)
+"lib/bregistry.ml" 131 4756 4794 "lib/bregistry.ml" 131 4756 4797
+type(
+  QM.key QM.t
+)
+ident(
+  int_ref rmi "lib/bregistry.ml" 131 4756 4769 "lib/bregistry.ml" 131 4756 4772
+)
+"lib/bregistry.ml" 131 4756 4798 "lib/bregistry.ml" 131 4756 4800
+type(
+  QM.key
+)
+ident(
+  int_ref qi "lib/bregistry.ml" 131 4756 4774 "lib/bregistry.ml" 131 4756 4776
+)
+"lib/bregistry.ml" 131 4756 4801 "lib/bregistry.ml" 131 4756 4802
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 127 4627 4665 "lib/bregistry.ml" 127 4627 4666
+)
+"lib/bregistry.ml" 131 4756 4784 "lib/bregistry.ml" 131 4756 4802
+call(
+  tail
+)
+type(
+  QM.key QM.t
+)
+"lib/bregistry.ml" 131 4756 4764 "lib/bregistry.ml" 131 4756 4803
+type(
+  QM.key QM.t -> QM.key * 'p -> QM.key QM.t
+)
+"lib/bregistry.ml" 132 4804 4812 "lib/bregistry.ml" 132 4804 4814
+type(
+  QM.key QM.t
+)
+ident(
+  int_ref rm "lib/bregistry.ml" 127 4627 4649 "lib/bregistry.ml" 127 4627 4651
+)
+"lib/bregistry.ml" 132 4804 4815 "lib/bregistry.ml" 132 4804 4817
+type(
+  (QM.key * 'p) list
+)
+ident(
+  int_ref cl "lib/bregistry.ml" 127 4627 4667 "lib/bregistry.ml" 127 4627 4669
+)
+"lib/bregistry.ml" 130 4730 4736 "lib/bregistry.ml" 132 4804 4817
+call(
+  stack
+)
+type(
+  QM.key QM.t
+)
+"lib/bregistry.ml" 133 4822 4827 "lib/bregistry.ml" 133 4822 4830
+type(
+  ('o * (QM.key * 'p) list) QM.t
+)
+ident(
+  int_ref tm' "lib/bregistry.ml" 128 4673 4681 "lib/bregistry.ml" 128 4673 4684
+)
+"lib/bregistry.ml" 133 4822 4831 "lib/bregistry.ml" 133 4822 4834
+type(
+  QM.key QM.t
+)
+ident(
+  int_ref rm' "lib/bregistry.ml" 129 4715 4723 "lib/bregistry.ml" 129 4715 4726
+)
+"lib/bregistry.ml" 133 4822 4840 "lib/bregistry.ml" 133 4822 4842
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 127 4627 4657 "lib/bregistry.ml" 127 4627 4659
+)
+"lib/bregistry.ml" 133 4822 4835 "lib/bregistry.ml" 133 4822 4842
+type(
+  vmap
+)
+"lib/bregistry.ml" 133 4822 4826 "lib/bregistry.ml" 133 4822 4843
+type(
+  ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap
+)
+"lib/bregistry.ml" 129 4715 4719 "lib/bregistry.ml" 133 4822 4843
+type(
+  ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap
+)
+"lib/bregistry.ml" 128 4673 4677 "lib/bregistry.ml" 133 4822 4843
+type(
+  ('o * (QM.key * 'p) list) QM.t * QM.key QM.t * vmap
+)
+"lib/bregistry.ml" 135 4845 4851 "lib/bregistry.ml" 135 4845 4855
+type(
+  (QM.key -> rv -> unit) -> 'q * 'r * vmap -> unit
+)
+ident(
+  def iter "lib/bregistry.ml" 138 4923 4925 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 135 4845 4856 "lib/bregistry.ml" 135 4845 4857
+type(
+  QM.key -> rv -> unit
+)
+ident(
+  def f "lib/bregistry.ml" 135 4845 4858 "lib/bregistry.ml" 136 4875 4920
+)
+"lib/bregistry.ml" 135 4845 4859 "lib/bregistry.ml" 135 4845 4860
+type(
+  'q
+)
+"lib/bregistry.ml" 135 4845 4861 "lib/bregistry.ml" 135 4845 4862
+type(
+  'r
+)
+"lib/bregistry.ml" 135 4845 4868 "lib/bregistry.ml" 135 4845 4870
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 136 4875 4879 "lib/bregistry.ml" 136 4875 4920
+)
+"lib/bregistry.ml" 135 4845 4863 "lib/bregistry.ml" 135 4845 4870
+type(
+  vmap
+)
+"lib/bregistry.ml" 135 4845 4858 "lib/bregistry.ml" 135 4845 4871
+type(
+  'q * 'r * vmap
+)
+"lib/bregistry.ml" 136 4875 4879 "lib/bregistry.ml" 136 4875 4886
+type(
+  (QM.key -> rv * vmap -> unit) -> (rv * vmap) QM.t -> unit
+)
+ident(
+  ext_ref QM.iter
+)
+"lib/bregistry.ml" 136 4875 4892 "lib/bregistry.ml" 136 4875 4893
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 136 4875 4894 "lib/bregistry.ml" 136 4875 4916
+)
+"lib/bregistry.ml" 136 4875 4894 "lib/bregistry.ml" 136 4875 4898
+type(
+  rv * vmap
+)
+ident(
+  def rvve "lib/bregistry.ml" 136 4875 4902 "lib/bregistry.ml" 136 4875 4916
+)
+"lib/bregistry.ml" 136 4875 4902 "lib/bregistry.ml" 136 4875 4903
+type(
+  QM.key -> rv -> unit
+)
+ident(
+  int_ref f "lib/bregistry.ml" 135 4845 4856 "lib/bregistry.ml" 135 4845 4857
+)
+"lib/bregistry.ml" 136 4875 4904 "lib/bregistry.ml" 136 4875 4905
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 136 4875 4892 "lib/bregistry.ml" 136 4875 4893
+)
+"lib/bregistry.ml" 136 4875 4907 "lib/bregistry.ml" 136 4875 4910
+type(
+  rv * vmap -> rv
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"lib/bregistry.ml" 136 4875 4911 "lib/bregistry.ml" 136 4875 4915
+type(
+  rv * vmap
+)
+ident(
+  int_ref rvve "lib/bregistry.ml" 136 4875 4894 "lib/bregistry.ml" 136 4875 4898
+)
+"lib/bregistry.ml" 136 4875 4906 "lib/bregistry.ml" 136 4875 4916
+type(
+  rv
+)
+"lib/bregistry.ml" 136 4875 4902 "lib/bregistry.ml" 136 4875 4916
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 136 4875 4887 "lib/bregistry.ml" 136 4875 4917
+type(
+  QM.key -> rv * vmap -> unit
+)
+"lib/bregistry.ml" 136 4875 4918 "lib/bregistry.ml" 136 4875 4920
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 135 4845 4868 "lib/bregistry.ml" 135 4845 4870
+)
+"lib/bregistry.ml" 136 4875 4879 "lib/bregistry.ml" 136 4875 4920
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 138 4923 4929 "lib/bregistry.ml" 138 4923 4938
+type(
+  (QM.key -> 's -> unit) -> 's QM.t * 't * 'u -> unit
+)
+ident(
+  def iter_type "lib/bregistry.ml" 140 4967 4969 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 138 4923 4939 "lib/bregistry.ml" 138 4923 4940
+type(
+  QM.key -> 's -> unit
+)
+ident(
+  def f "lib/bregistry.ml" 138 4923 4941 "lib/bregistry.ml" 138 4923 4964
+)
+"lib/bregistry.ml" 138 4923 4942 "lib/bregistry.ml" 138 4923 4944
+type(
+  's QM.t
+)
+ident(
+  def tm "lib/bregistry.ml" 138 4923 4952 "lib/bregistry.ml" 138 4923 4964
+)
+"lib/bregistry.ml" 138 4923 4945 "lib/bregistry.ml" 138 4923 4946
+type(
+  't
+)
+"lib/bregistry.ml" 138 4923 4947 "lib/bregistry.ml" 138 4923 4948
+type(
+  'u
+)
+"lib/bregistry.ml" 138 4923 4941 "lib/bregistry.ml" 138 4923 4949
+type(
+  's QM.t * 't * 'u
+)
+"lib/bregistry.ml" 138 4923 4952 "lib/bregistry.ml" 138 4923 4959
+type(
+  (QM.key -> 's -> unit) -> 's QM.t -> unit
+)
+ident(
+  ext_ref QM.iter
+)
+"lib/bregistry.ml" 138 4923 4960 "lib/bregistry.ml" 138 4923 4961
+type(
+  QM.key -> 's -> unit
+)
+ident(
+  int_ref f "lib/bregistry.ml" 138 4923 4939 "lib/bregistry.ml" 138 4923 4940
+)
+"lib/bregistry.ml" 138 4923 4962 "lib/bregistry.ml" 138 4923 4964
+type(
+  's QM.t
+)
+ident(
+  int_ref tm "lib/bregistry.ml" 138 4923 4942 "lib/bregistry.ml" 138 4923 4944
+)
+"lib/bregistry.ml" 138 4923 4952 "lib/bregistry.ml" 138 4923 4964
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 140 4967 4973 "lib/bregistry.ml" 140 4967 4977
+type(
+  (QM.key -> rv -> 'v -> 'v) -> 'w * 'x * vmap -> 'v -> 'v
+)
+ident(
+  def fold "lib/bregistry.ml" 141 5002 5056 "lib/bregistry.ml" 143 5059 5062
+)
+"lib/bregistry.ml" 140 4967 4978 "lib/bregistry.ml" 140 4967 4979
+type(
+  QM.key -> rv -> 'v -> 'v
+)
+ident(
+  def f "lib/bregistry.ml" 140 4967 4980 "lib/bregistry.ml" 141 5002 5056
+)
+"lib/bregistry.ml" 140 4967 4981 "lib/bregistry.ml" 140 4967 4982
+type(
+  'w
+)
+"lib/bregistry.ml" 140 4967 4983 "lib/bregistry.ml" 140 4967 4984
+type(
+  'x
+)
+"lib/bregistry.ml" 140 4967 4990 "lib/bregistry.ml" 140 4967 4992
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  def ve "lib/bregistry.ml" 140 4967 4994 "lib/bregistry.ml" 141 5002 5056
+)
+"lib/bregistry.ml" 140 4967 4985 "lib/bregistry.ml" 140 4967 4992
+type(
+  vmap
+)
+"lib/bregistry.ml" 140 4967 4980 "lib/bregistry.ml" 140 4967 4993
+type(
+  'w * 'x * vmap
+)
+"lib/bregistry.ml" 140 4967 4994 "lib/bregistry.ml" 140 4967 4998
+type(
+  'v
+)
+ident(
+  def init "lib/bregistry.ml" 141 5002 5006 "lib/bregistry.ml" 141 5002 5056
+)
+"lib/bregistry.ml" 141 5002 5006 "lib/bregistry.ml" 141 5002 5013
+type(
+  (QM.key -> rv * vmap -> 'v -> 'v) -> (rv * vmap) QM.t -> 'v -> 'v
+)
+ident(
+  ext_ref QM.fold
+)
+"lib/bregistry.ml" 141 5002 5019 "lib/bregistry.ml" 141 5002 5020
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 141 5002 5021 "lib/bregistry.ml" 141 5002 5047
+)
+"lib/bregistry.ml" 141 5002 5021 "lib/bregistry.ml" 141 5002 5025
+type(
+  rv * vmap
+)
+ident(
+  def rvve "lib/bregistry.ml" 141 5002 5026 "lib/bregistry.ml" 141 5002 5047
+)
+"lib/bregistry.ml" 141 5002 5026 "lib/bregistry.ml" 141 5002 5027
+type(
+  'v
+)
+ident(
+  def a "lib/bregistry.ml" 141 5002 5031 "lib/bregistry.ml" 141 5002 5047
+)
+"lib/bregistry.ml" 141 5002 5031 "lib/bregistry.ml" 141 5002 5032
+type(
+  QM.key -> rv -> 'v -> 'v
+)
+ident(
+  int_ref f "lib/bregistry.ml" 140 4967 4978 "lib/bregistry.ml" 140 4967 4979
+)
+"lib/bregistry.ml" 141 5002 5033 "lib/bregistry.ml" 141 5002 5034
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 141 5002 5019 "lib/bregistry.ml" 141 5002 5020
+)
+"lib/bregistry.ml" 141 5002 5036 "lib/bregistry.ml" 141 5002 5039
+type(
+  rv * vmap -> rv
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"lib/bregistry.ml" 141 5002 5040 "lib/bregistry.ml" 141 5002 5044
+type(
+  rv * vmap
+)
+ident(
+  int_ref rvve "lib/bregistry.ml" 141 5002 5021 "lib/bregistry.ml" 141 5002 5025
+)
+"lib/bregistry.ml" 141 5002 5035 "lib/bregistry.ml" 141 5002 5045
+type(
+  rv
+)
+"lib/bregistry.ml" 141 5002 5046 "lib/bregistry.ml" 141 5002 5047
+type(
+  'v
+)
+ident(
+  int_ref a "lib/bregistry.ml" 141 5002 5026 "lib/bregistry.ml" 141 5002 5027
+)
+"lib/bregistry.ml" 141 5002 5031 "lib/bregistry.ml" 141 5002 5047
+call(
+  tail
+)
+type(
+  'v
+)
+"lib/bregistry.ml" 141 5002 5014 "lib/bregistry.ml" 141 5002 5048
+type(
+  QM.key -> rv * vmap -> 'v -> 'v
+)
+"lib/bregistry.ml" 141 5002 5049 "lib/bregistry.ml" 141 5002 5051
+type(
+  (rv * vmap) QM.t
+)
+ident(
+  int_ref ve "lib/bregistry.ml" 140 4967 4990 "lib/bregistry.ml" 140 4967 4992
+)
+"lib/bregistry.ml" 141 5002 5052 "lib/bregistry.ml" 141 5002 5056
+type(
+  'v
+)
+ident(
+  int_ref init "lib/bregistry.ml" 140 4967 4994 "lib/bregistry.ml" 140 4967 4998
+)
+"lib/bregistry.ml" 141 5002 5006 "lib/bregistry.ml" 141 5002 5056
+call(
+  tail
+)
+type(
+  'v
+)
+"lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+type(
+  string list ref
+)
+ident(
+  def loaded "lib/bregistry.ml" 147 5093 5093 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 145 5064 5077 "lib/bregistry.ml" 145 5064 5080
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/bregistry.ml" 145 5064 5082 "lib/bregistry.ml" 145 5064 5090
+type(
+  string
+)
+"lib/bregistry.ml" 145 5064 5081 "lib/bregistry.ml" 145 5064 5091
+type(
+  string list
+)
+"lib/bregistry.ml" 145 5064 5077 "lib/bregistry.ml" 145 5064 5091
+type(
+  string list ref
+)
+"lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+type(
+  REnv.t ref
+)
+ident(
+  def library "lib/bregistry.ml" 150 5157 5157 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 147 5093 5120 "lib/bregistry.ml" 147 5093 5123
+type(
+  REnv.t -> REnv.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/bregistry.ml" 147 5093 5125 "lib/bregistry.ml" 147 5093 5135
+type(
+  unit -> REnv.t
+)
+ident(
+  int_ref REnv.empty "lib/bregistry.ml" 98 3736 3742 "lib/bregistry.ml" 98 3736 3747
+)
+"lib/bregistry.ml" 147 5093 5136 "lib/bregistry.ml" 147 5093 5138
+type(
+  unit
+)
+"lib/bregistry.ml" 147 5093 5124 "lib/bregistry.ml" 147 5093 5139
+call(
+  stack
+)
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 147 5093 5120 "lib/bregistry.ml" 147 5093 5139
+type(
+  REnv.t ref
+)
+type(
+  REnv.t ref
+)
+"lib/bregistry.ml" 150 5157 5161 "lib/bregistry.ml" 150 5157 5168
+type(
+  Bident.Qid.t list
+)
+ident(
+  def pre_ctx "lib/bregistry.ml" 153 5234 5234 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 150 5157 5171 "lib/bregistry.ml" 150 5157 5183
+type(
+  (string -> Bident.Qid.t) -> string list -> Bident.Qid.t list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 150 5157 5184 "lib/bregistry.ml" 150 5157 5193
+type(
+  string -> Bident.Qid.t
+)
+ident(
+  int_ref parse_uid "lib/bregistry.ml" 31 1828 1832 "lib/bregistry.ml" 31 1828 1841
+)
+"lib/bregistry.ml" 150 5157 5196 "lib/bregistry.ml" 150 5157 5202
+type(
+  string
+)
+"lib/bregistry.ml" 150 5157 5205 "lib/bregistry.ml" 150 5157 5214
+type(
+  string
+)
+"lib/bregistry.ml" 150 5157 5194 "lib/bregistry.ml" 150 5157 5216
+type(
+  string list
+)
+"lib/bregistry.ml" 150 5157 5171 "lib/bregistry.ml" 150 5157 5216
+call(
+  stack
+)
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 153 5234 5238 "lib/bregistry.ml" 153 5234 5249
+type(
+  unit -> REnv.t
+)
+ident(
+  def get_library "lib/bregistry.ml" 156 5323 5323 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 153 5234 5250 "lib/bregistry.ml" 153 5234 5252
+type(
+  unit
+)
+"lib/bregistry.ml" 153 5234 5255 "lib/bregistry.ml" 153 5234 5256
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 153 5234 5256 "lib/bregistry.ml" 153 5234 5263
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 153 5234 5255 "lib/bregistry.ml" 153 5234 5263
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 156 5323 5327 "lib/bregistry.ml" 156 5323 5338
+type(
+  REnv.t option ref
+)
+ident(
+  def old_library "lib/bregistry.ml" 157 5350 5350 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 156 5323 5341 "lib/bregistry.ml" 156 5323 5344
+type(
+  REnv.t option -> REnv.t option ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/bregistry.ml" 156 5323 5345 "lib/bregistry.ml" 156 5323 5349
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 156 5323 5341 "lib/bregistry.ml" 156 5323 5349
+type(
+  REnv.t option ref
+)
+"lib/bregistry.ml" 157 5350 5354 "lib/bregistry.ml" 157 5350 5359
+type(
+  unit -> unit
+)
+ident(
+  def reset "lib/bregistry.ml" 167 5589 5589 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 157 5350 5360 "lib/bregistry.ml" 157 5350 5362
+type(
+  unit
+)
+"lib/bregistry.ml" 158 5365 5370 "lib/bregistry.ml" 158 5365 5371
+type(
+  REnv.t option ref -> REnv.t option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 158 5365 5371 "lib/bregistry.ml" 158 5365 5382
+type(
+  REnv.t option ref
+)
+ident(
+  int_ref old_library "lib/bregistry.ml" 156 5323 5327 "lib/bregistry.ml" 156 5323 5338
+)
+"lib/bregistry.ml" 158 5365 5370 "lib/bregistry.ml" 158 5365 5382
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 158 5365 5383 "lib/bregistry.ml" 158 5365 5384
+type(
+  REnv.t option -> REnv.t option -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bregistry.ml" 158 5365 5385 "lib/bregistry.ml" 158 5365 5389
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 158 5365 5370 "lib/bregistry.ml" 158 5365 5389
+type(
+  bool
+)
+"lib/bregistry.ml" 158 5365 5395 "lib/bregistry.ml" 158 5365 5406
+type(
+  REnv.t option ref
+)
+ident(
+  int_ref old_library "lib/bregistry.ml" 156 5323 5327 "lib/bregistry.ml" 156 5323 5338
+)
+"lib/bregistry.ml" 158 5365 5407 "lib/bregistry.ml" 158 5365 5409
+type(
+  REnv.t option ref -> REnv.t option -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 158 5365 5415 "lib/bregistry.ml" 158 5365 5416
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 158 5365 5416 "lib/bregistry.ml" 158 5365 5423
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 158 5365 5415 "lib/bregistry.ml" 158 5365 5423
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 158 5365 5410 "lib/bregistry.ml" 158 5365 5423
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 158 5365 5395 "lib/bregistry.ml" 158 5365 5423
+type(
+  unit
+)
+"lib/bregistry.ml" 158 5365 5367 "lib/bregistry.ml" 158 5365 5423
+type(
+  unit
+)
+"lib/bregistry.ml" 159 5425 5427 "lib/bregistry.ml" 159 5425 5433
+type(
+  string list ref
+)
+ident(
+  int_ref loaded "lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+)
+"lib/bregistry.ml" 159 5425 5434 "lib/bregistry.ml" 159 5425 5436
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 159 5425 5437 "lib/bregistry.ml" 159 5425 5439
+type(
+  string list
+)
+"lib/bregistry.ml" 159 5425 5427 "lib/bregistry.ml" 159 5425 5439
+type(
+  unit
+)
+"lib/bregistry.ml" 160 5441 5443 "lib/bregistry.ml" 160 5441 5450
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 160 5441 5451 "lib/bregistry.ml" 160 5441 5453
+type(
+  REnv.t ref -> REnv.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 161 5455 5465 "lib/bregistry.ml" 161 5455 5466
+type(
+  REnv.t option ref -> REnv.t option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 161 5455 5466 "lib/bregistry.ml" 161 5455 5477
+type(
+  REnv.t option ref
+)
+ident(
+  int_ref old_library "lib/bregistry.ml" 156 5323 5327 "lib/bregistry.ml" 156 5323 5338
+)
+"lib/bregistry.ml" 161 5455 5465 "lib/bregistry.ml" 161 5455 5477
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 162 5484 5497 "lib/bregistry.ml" 162 5484 5498
+type(
+  REnv.t
+)
+ident(
+  def l "lib/bregistry.ml" 162 5484 5502 "lib/bregistry.ml" 162 5484 5503
+)
+"lib/bregistry.ml" 162 5484 5492 "lib/bregistry.ml" 162 5484 5498
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 162 5484 5502 "lib/bregistry.ml" 162 5484 5503
+type(
+  REnv.t
+)
+ident(
+  int_ref l "lib/bregistry.ml" 162 5484 5497 "lib/bregistry.ml" 162 5484 5498
+)
+"lib/bregistry.ml" 163 5504 5512 "lib/bregistry.ml" 163 5504 5516
+type(
+  REnv.t option
+)
+"lib/bregistry.ml" 163 5504 5527 "lib/bregistry.ml" 163 5504 5532
+type(
+  bool
+)
+"lib/bregistry.ml" 163 5504 5520 "lib/bregistry.ml" 163 5504 5532
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 161 5455 5459 "lib/bregistry.ml" 163 5504 5532
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 160 5441 5443 "lib/bregistry.ml" 163 5504 5532
+type(
+  unit
+)
+"lib/bregistry.ml" 159 5425 5427 "lib/bregistry.ml" 163 5504 5532
+type(
+  unit
+)
+"lib/bregistry.ml" 158 5365 5367 "lib/bregistry.ml" 163 5504 5532
+type(
+  unit
+)
+"lib/bregistry.ml" 167 5589 5593 "lib/bregistry.ml" 167 5589 5598
+type(
+  string list Prefs.t
+)
+ident(
+  def paths "lib/bregistry.ml" 169 5620 5620 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 167 5589 5601 "lib/bregistry.ml" 167 5589 5618
+type(
+  string list Prefs.t
+)
+ident(
+  ext_ref Prefs.includePref
+)
+"lib/bregistry.ml" 169 5620 5624 "lib/bregistry.ml" 169 5620 5632
+type(
+  string list
+)
+ident(
+  def boompath "lib/bregistry.ml" 174 5767 5767 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 170 5635 5641 "lib/bregistry.ml" 170 5635 5660
+type(
+  string -> char -> string list
+)
+ident(
+  ext_ref Util.splitIntoWords
+)
+"lib/bregistry.ml" 170 5635 5662 "lib/bregistry.ml" 170 5635 5673
+type(
+  string -> string
+)
+ident(
+  ext_ref Unix.getenv
+)
+"lib/bregistry.ml" 170 5635 5674 "lib/bregistry.ml" 170 5635 5684
+type(
+  string
+)
+"lib/bregistry.ml" 170 5635 5661 "lib/bregistry.ml" 170 5635 5685
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 170 5635 5686 "lib/bregistry.ml" 170 5635 5689
+type(
+  char
+)
+"lib/bregistry.ml" 170 5635 5641 "lib/bregistry.ml" 170 5635 5689
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 171 5690 5697 "lib/bregistry.ml" 171 5690 5706
+type(
+  exn
+)
+"lib/bregistry.ml" 171 5690 5711 "lib/bregistry.ml" 171 5690 5714
+type(
+  string
+)
+"lib/bregistry.ml" 171 5690 5710 "lib/bregistry.ml" 171 5690 5715
+type(
+  string list
+)
+"lib/bregistry.ml" 170 5635 5637 "lib/bregistry.ml" 171 5690 5715
+type(
+  string list
+)
+"lib/bregistry.ml" 174 5767 5771 "lib/bregistry.ml" 174 5767 5788
+type(
+  Bident.Qid.t -> Bident.Id.t option
+)
+ident(
+  def get_module_prefix "lib/bregistry.ml" 179 5868 5868 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 174 5767 5789 "lib/bregistry.ml" 174 5767 5790
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 175 5794 5796 "lib/bregistry.ml" 177 5846 5866
+)
+"lib/bregistry.ml" 175 5794 5802 "lib/bregistry.ml" 175 5794 5820
+type(
+  Bident.Qid.t -> Bident.Id.t list
+)
+ident(
+  ext_ref Bident.Qid.qs_of_t
+)
+"lib/bregistry.ml" 175 5794 5821 "lib/bregistry.ml" 175 5794 5822
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 174 5767 5789 "lib/bregistry.ml" 174 5767 5790
+)
+"lib/bregistry.ml" 175 5794 5802 "lib/bregistry.ml" 175 5794 5822
+call(
+  stack
+)
+type(
+  Bident.Id.t list
+)
+"lib/bregistry.ml" 176 5829 5835 "lib/bregistry.ml" 176 5829 5837
+type(
+  Bident.Id.t list
+)
+"lib/bregistry.ml" 176 5829 5841 "lib/bregistry.ml" 176 5829 5845
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 177 5846 5852 "lib/bregistry.ml" 177 5846 5853
+type(
+  Bident.Id.t
+)
+ident(
+  def n "lib/bregistry.ml" 177 5846 5860 "lib/bregistry.ml" 177 5846 5866
+)
+"lib/bregistry.ml" 177 5846 5855 "lib/bregistry.ml" 177 5846 5856
+type(
+  Bident.Id.t list
+)
+"lib/bregistry.ml" 177 5846 5852 "lib/bregistry.ml" 177 5846 5856
+type(
+  Bident.Id.t list
+)
+"lib/bregistry.ml" 177 5846 5865 "lib/bregistry.ml" 177 5846 5866
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref n "lib/bregistry.ml" 177 5846 5852 "lib/bregistry.ml" 177 5846 5853
+)
+"lib/bregistry.ml" 177 5846 5860 "lib/bregistry.ml" 177 5846 5866
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 175 5794 5796 "lib/bregistry.ml" 177 5846 5866
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 179 5868 5872 "lib/bregistry.ml" 179 5868 5882
+type(
+  string list
+)
+ident(
+  def extensions "lib/bregistry.ml" 181 5901 5901 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 179 5868 5886 "lib/bregistry.ml" 179 5868 5892
+type(
+  string
+)
+"lib/bregistry.ml" 179 5868 5893 "lib/bregistry.ml" 179 5868 5898
+type(
+  string
+)
+"lib/bregistry.ml" 179 5868 5885 "lib/bregistry.ml" 179 5868 5899
+type(
+  string list
+)
+"lib/bregistry.ml" 181 5901 5905 "lib/bregistry.ml" 181 5901 5914
+type(
+  string -> string -> bool
+)
+ident(
+  def find_file "lib/bregistry.ml" 191 6130 6130 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 181 5901 5915 "lib/bregistry.ml" 181 5901 5919
+type(
+  string
+)
+ident(
+  def modl "lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 189 6125 6128
+)
+"lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 181 5901 5924
+type(
+  string
+)
+ident(
+  def path "lib/bregistry.ml" 182 5927 5929 "lib/bregistry.ml" 189 6125 6128
+)
+"lib/bregistry.ml" 182 5927 5932 "lib/bregistry.ml" 182 5927 5947
+type(
+  string -> bool
+)
+ident(
+  ext_ref Sys.file_exists
+)
+"lib/bregistry.ml" 182 5927 5948 "lib/bregistry.ml" 182 5927 5952
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 181 5901 5924
+)
+"lib/bregistry.ml" 182 5927 5932 "lib/bregistry.ml" 182 5927 5952
+type(
+  bool
+)
+"lib/bregistry.ml" 182 5927 5953 "lib/bregistry.ml" 182 5927 5955
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"lib/bregistry.ml" 182 5927 5956 "lib/bregistry.ml" 182 5927 5968
+type(
+  string -> bool
+)
+ident(
+  ext_ref Misc.is_file
+)
+"lib/bregistry.ml" 182 5927 5969 "lib/bregistry.ml" 182 5927 5973
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 181 5901 5924
+)
+"lib/bregistry.ml" 182 5927 5956 "lib/bregistry.ml" 182 5927 5973
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 182 5927 5932 "lib/bregistry.ml" 182 5927 5973
+type(
+  bool
+)
+"lib/bregistry.ml" 184 5983 5987 "lib/bregistry.ml" 184 5983 5994
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 184 5983 6000 "lib/bregistry.ml" 184 5983 6002
+type(
+  unit
+)
+"lib/bregistry.ml" 184 5983 6006 "lib/bregistry.ml" 184 5983 6009
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 184 5983 6010 "lib/bregistry.ml" 184 5983 6030
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 184 5983 6031 "lib/bregistry.ml" 184 5983 6035
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 181 5901 5924
+)
+"lib/bregistry.ml" 184 5983 6036 "lib/bregistry.ml" 184 5983 6040
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 181 5901 5915 "lib/bregistry.ml" 181 5901 5919
+)
+"lib/bregistry.ml" 184 5983 6006 "lib/bregistry.ml" 184 5983 6040
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 184 5983 5995 "lib/bregistry.ml" 184 5983 6041
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 184 5983 5987 "lib/bregistry.ml" 184 5983 6041
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 185 6043 6047 "lib/bregistry.ml" 185 6043 6051
+type(
+  bool
+)
+"lib/bregistry.ml" 183 5974 5981 "lib/bregistry.ml" 186 6052 6055
+type(
+  bool
+)
+"lib/bregistry.ml" 187 6063 6067 "lib/bregistry.ml" 187 6063 6074
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 187 6063 6080 "lib/bregistry.ml" 187 6063 6082
+type(
+  unit
+)
+"lib/bregistry.ml" 187 6063 6086 "lib/bregistry.ml" 187 6063 6089
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 187 6063 6090 "lib/bregistry.ml" 187 6063 6107
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 187 6063 6108 "lib/bregistry.ml" 187 6063 6112
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 181 5901 5920 "lib/bregistry.ml" 181 5901 5924
+)
+"lib/bregistry.ml" 187 6063 6086 "lib/bregistry.ml" 187 6063 6112
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 187 6063 6075 "lib/bregistry.ml" 187 6063 6113
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 187 6063 6067 "lib/bregistry.ml" 187 6063 6113
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 188 6115 6119 "lib/bregistry.ml" 188 6115 6124
+type(
+  bool
+)
+"lib/bregistry.ml" 186 6052 6061 "lib/bregistry.ml" 189 6125 6128
+type(
+  bool
+)
+"lib/bregistry.ml" 182 5927 5929 "lib/bregistry.ml" 189 6125 6128
+type(
+  bool
+)
+"lib/bregistry.ml" 191 6130 6134 "lib/bregistry.ml" 191 6130 6143
+type(
+  string -> string option
+)
+ident(
+  def find_modl "lib/bregistry.ml" 225 7082 7082 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 191 6130 6144 "lib/bregistry.ml" 191 6130 6148
+type(
+  string
+)
+ident(
+  def modl "lib/bregistry.ml" 192 6152 6154 "lib/bregistry.ml" 222 7008 7059
+)
+"lib/bregistry.ml" 192 6152 6162 "lib/bregistry.ml" 192 6152 6166
+type(
+  string list -> string option
+)
+ident(
+  def loop "lib/bregistry.ml" 192 6152 6154 "lib/bregistry.ml" 222 7008 7059
+)
+"lib/bregistry.ml" 192 6152 6167 "lib/bregistry.ml" 192 6152 6171
+type(
+  string list
+)
+ident(
+  def dirs "lib/bregistry.ml" 193 6174 6178 "lib/bregistry.ml" 220 6973 7002
+)
+"lib/bregistry.ml" 193 6174 6184 "lib/bregistry.ml" 193 6174 6188
+type(
+  string list
+)
+ident(
+  int_ref dirs "lib/bregistry.ml" 192 6152 6167 "lib/bregistry.ml" 192 6152 6171
+)
+"lib/bregistry.ml" 194 6194 6200 "lib/bregistry.ml" 194 6194 6202
+type(
+  string list
+)
+"lib/bregistry.ml" 194 6194 6206 "lib/bregistry.ml" 194 6194 6210
+type(
+  string option
+)
+"lib/bregistry.ml" 195 6211 6217 "lib/bregistry.ml" 195 6211 6220
+type(
+  string
+)
+ident(
+  def dir "lib/bregistry.ml" 196 6231 6239 "lib/bregistry.ml" 220 6973 7002
+)
+"lib/bregistry.ml" 195 6211 6222 "lib/bregistry.ml" 195 6211 6227
+type(
+  string list
+)
+ident(
+  def drest "lib/bregistry.ml" 196 6231 6239 "lib/bregistry.ml" 220 6973 7002
+)
+"lib/bregistry.ml" 195 6211 6217 "lib/bregistry.ml" 195 6211 6227
+type(
+  string list
+)
+"lib/bregistry.ml" 196 6231 6243 "lib/bregistry.ml" 196 6231 6251
+type(
+  string -> (unit -> string option) -> string option
+)
+ident(
+  def try_path "lib/bregistry.ml" 214 6791 6799 "lib/bregistry.ml" 220 6973 7002
+)
+"lib/bregistry.ml" 196 6231 6252 "lib/bregistry.ml" 196 6231 6255
+type(
+  string
+)
+ident(
+  def ext "lib/bregistry.ml" 196 6231 6256 "lib/bregistry.ml" 212 6740 6779
+)
+"lib/bregistry.ml" 196 6231 6256 "lib/bregistry.ml" 196 6231 6257
+type(
+  unit -> string option
+)
+ident(
+  def k "lib/bregistry.ml" 197 6260 6270 "lib/bregistry.ml" 212 6740 6779
+)
+"lib/bregistry.ml" 197 6260 6274 "lib/bregistry.ml" 197 6260 6281
+type(
+  string -> string
+)
+ident(
+  def to_path "lib/bregistry.ml" 205 6526 6536 "lib/bregistry.ml" 212 6740 6779
+)
+"lib/bregistry.ml" 197 6260 6282 "lib/bregistry.ml" 197 6260 6290
+type(
+  string
+)
+ident(
+  def basename "lib/bregistry.ml" 198 6293 6305 "lib/bregistry.ml" 203 6495 6512
+)
+"lib/bregistry.ml" 198 6293 6305 "lib/bregistry.ml" 198 6293 6312
+type(
+  (string -> string -> string -> string -> string -> string, unit, string)
+  format -> string -> string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bregistry.ml" 22 1601 1605 "lib/bregistry.ml" 22 1601 1612
+)
+"lib/bregistry.ml" 198 6293 6313 "lib/bregistry.ml" 198 6293 6325
+type(
+  (string -> string -> string -> string -> string -> string, unit, string)
+  format
+)
+"lib/bregistry.ml" 199 6326 6340 "lib/bregistry.ml" 199 6326 6343
+type(
+  string
+)
+ident(
+  int_ref dir "lib/bregistry.ml" 195 6211 6217 "lib/bregistry.ml" 195 6211 6220
+)
+"lib/bregistry.ml" 200 6344 6362 "lib/bregistry.ml" 200 6344 6365
+type(
+  string
+)
+ident(
+  int_ref dir "lib/bregistry.ml" 195 6211 6217 "lib/bregistry.ml" 195 6211 6220
+)
+"lib/bregistry.ml" 200 6344 6367 "lib/bregistry.ml" 200 6344 6380
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"lib/bregistry.ml" 200 6344 6381 "lib/bregistry.ml" 200 6344 6384
+type(
+  string
+)
+ident(
+  int_ref dir "lib/bregistry.ml" 195 6211 6217 "lib/bregistry.ml" 195 6211 6220
+)
+"lib/bregistry.ml" 200 6344 6367 "lib/bregistry.ml" 200 6344 6384
+type(
+  int
+)
+"lib/bregistry.ml" 200 6344 6385 "lib/bregistry.ml" 200 6344 6386
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"lib/bregistry.ml" 200 6344 6387 "lib/bregistry.ml" 200 6344 6388
+type(
+  int
+)
+"lib/bregistry.ml" 200 6344 6367 "lib/bregistry.ml" 200 6344 6388
+type(
+  int
+)
+"lib/bregistry.ml" 200 6344 6362 "lib/bregistry.ml" 200 6344 6389
+type(
+  char
+)
+"lib/bregistry.ml" 200 6344 6390 "lib/bregistry.ml" 200 6344 6391
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bregistry.ml" 200 6344 6392 "lib/bregistry.ml" 200 6344 6395
+type(
+  char
+)
+"lib/bregistry.ml" 200 6344 6362 "lib/bregistry.ml" 200 6344 6395
+type(
+  bool
+)
+"lib/bregistry.ml" 200 6344 6401 "lib/bregistry.ml" 200 6344 6403
+type(
+  string
+)
+"lib/bregistry.ml" 200 6344 6409 "lib/bregistry.ml" 200 6344 6412
+type(
+  string
+)
+"lib/bregistry.ml" 200 6344 6358 "lib/bregistry.ml" 200 6344 6413
+type(
+  string
+)
+"lib/bregistry.ml" 201 6414 6428 "lib/bregistry.ml" 201 6414 6436
+type(
+  string
+)
+ident(
+  int_ref basename "lib/bregistry.ml" 197 6260 6282 "lib/bregistry.ml" 197 6260 6290
+)
+"lib/bregistry.ml" 202 6437 6455 "lib/bregistry.ml" 202 6437 6468
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"lib/bregistry.ml" 202 6437 6469 "lib/bregistry.ml" 202 6437 6472
+type(
+  string
+)
+ident(
+  int_ref ext "lib/bregistry.ml" 196 6231 6252 "lib/bregistry.ml" 196 6231 6255
+)
+"lib/bregistry.ml" 202 6437 6455 "lib/bregistry.ml" 202 6437 6472
+type(
+  int
+)
+"lib/bregistry.ml" 202 6437 6473 "lib/bregistry.ml" 202 6437 6474
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bregistry.ml" 202 6437 6475 "lib/bregistry.ml" 202 6437 6476
+type(
+  int
+)
+"lib/bregistry.ml" 202 6437 6455 "lib/bregistry.ml" 202 6437 6476
+type(
+  bool
+)
+"lib/bregistry.ml" 202 6437 6482 "lib/bregistry.ml" 202 6437 6484
+type(
+  string
+)
+"lib/bregistry.ml" 202 6437 6490 "lib/bregistry.ml" 202 6437 6493
+type(
+  string
+)
+"lib/bregistry.ml" 202 6437 6451 "lib/bregistry.ml" 202 6437 6494
+type(
+  string
+)
+"lib/bregistry.ml" 203 6495 6509 "lib/bregistry.ml" 203 6495 6512
+type(
+  string
+)
+ident(
+  int_ref ext "lib/bregistry.ml" 196 6231 6252 "lib/bregistry.ml" 196 6231 6255
+)
+"lib/bregistry.ml" 198 6293 6305 "lib/bregistry.ml" 203 6495 6512
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bregistry.ml" 205 6526 6540 "lib/bregistry.ml" 205 6526 6548
+type(
+  string -> (unit -> string option) -> string option
+)
+ident(
+  def try_name "lib/bregistry.ml" 211 6694 6704 "lib/bregistry.ml" 212 6740 6779
+)
+"lib/bregistry.ml" 205 6526 6549 "lib/bregistry.ml" 205 6526 6553
+type(
+  string
+)
+ident(
+  def name "lib/bregistry.ml" 205 6526 6554 "lib/bregistry.ml" 209 6659 6680
+)
+"lib/bregistry.ml" 205 6526 6554 "lib/bregistry.ml" 205 6526 6555
+type(
+  unit -> string option
+)
+ident(
+  def k "lib/bregistry.ml" 206 6558 6570 "lib/bregistry.ml" 209 6659 6680
+)
+"lib/bregistry.ml" 206 6558 6574 "lib/bregistry.ml" 206 6558 6578
+type(
+  string
+)
+ident(
+  def path "lib/bregistry.ml" 207 6597 6609 "lib/bregistry.ml" 209 6659 6680
+)
+"lib/bregistry.ml" 206 6558 6581 "lib/bregistry.ml" 206 6558 6588
+type(
+  string -> string
+)
+ident(
+  int_ref to_path "lib/bregistry.ml" 197 6260 6274 "lib/bregistry.ml" 197 6260 6281
+)
+"lib/bregistry.ml" 206 6558 6589 "lib/bregistry.ml" 206 6558 6593
+type(
+  string
+)
+ident(
+  int_ref name "lib/bregistry.ml" 205 6526 6549 "lib/bregistry.ml" 205 6526 6553
+)
+"lib/bregistry.ml" 206 6558 6581 "lib/bregistry.ml" 206 6558 6593
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 207 6597 6612 "lib/bregistry.ml" 207 6597 6621
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref find_file "lib/bregistry.ml" 181 5901 5905 "lib/bregistry.ml" 181 5901 5914
+)
+"lib/bregistry.ml" 207 6597 6622 "lib/bregistry.ml" 207 6597 6626
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 191 6130 6144 "lib/bregistry.ml" 191 6130 6148
+)
+"lib/bregistry.ml" 207 6597 6627 "lib/bregistry.ml" 207 6597 6631
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 206 6558 6574 "lib/bregistry.ml" 206 6558 6578
+)
+"lib/bregistry.ml" 207 6597 6612 "lib/bregistry.ml" 207 6597 6631
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 208 6632 6654 "lib/bregistry.ml" 208 6632 6658
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 206 6558 6574 "lib/bregistry.ml" 206 6558 6578
+)
+"lib/bregistry.ml" 208 6632 6649 "lib/bregistry.ml" 208 6632 6658
+type(
+  string option
+)
+"lib/bregistry.ml" 209 6659 6676 "lib/bregistry.ml" 209 6659 6677
+type(
+  unit -> string option
+)
+ident(
+  int_ref k "lib/bregistry.ml" 205 6526 6554 "lib/bregistry.ml" 205 6526 6555
+)
+"lib/bregistry.ml" 209 6659 6678 "lib/bregistry.ml" 209 6659 6680
+type(
+  unit
+)
+"lib/bregistry.ml" 209 6659 6676 "lib/bregistry.ml" 209 6659 6680
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 207 6597 6609 "lib/bregistry.ml" 209 6659 6680
+type(
+  string option
+)
+"lib/bregistry.ml" 206 6558 6570 "lib/bregistry.ml" 209 6659 6680
+type(
+  string option
+)
+"lib/bregistry.ml" 211 6694 6704 "lib/bregistry.ml" 211 6694 6712
+type(
+  string -> (unit -> string option) -> string option
+)
+ident(
+  int_ref try_name "lib/bregistry.ml" 205 6526 6540 "lib/bregistry.ml" 205 6526 6548
+)
+"lib/bregistry.ml" 211 6694 6714 "lib/bregistry.ml" 211 6694 6733
+type(
+  string -> string
+)
+ident(
+  ext_ref String.uncapitalize
+)
+"lib/bregistry.ml" 211 6694 6734 "lib/bregistry.ml" 211 6694 6738
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 191 6130 6144 "lib/bregistry.ml" 191 6130 6148
+)
+"lib/bregistry.ml" 211 6694 6713 "lib/bregistry.ml" 211 6694 6739
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 212 6740 6757 "lib/bregistry.ml" 212 6740 6759
+type(
+  unit
+)
+"lib/bregistry.ml" 212 6740 6763 "lib/bregistry.ml" 212 6740 6771
+type(
+  string -> (unit -> string option) -> string option
+)
+ident(
+  int_ref try_name "lib/bregistry.ml" 205 6526 6540 "lib/bregistry.ml" 205 6526 6548
+)
+"lib/bregistry.ml" 212 6740 6772 "lib/bregistry.ml" 212 6740 6776
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 191 6130 6144 "lib/bregistry.ml" 191 6130 6148
+)
+"lib/bregistry.ml" 212 6740 6777 "lib/bregistry.ml" 212 6740 6778
+type(
+  unit -> string option
+)
+ident(
+  int_ref k "lib/bregistry.ml" 196 6231 6256 "lib/bregistry.ml" 196 6231 6257
+)
+"lib/bregistry.ml" 212 6740 6763 "lib/bregistry.ml" 212 6740 6778
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 212 6740 6752 "lib/bregistry.ml" 212 6740 6779
+type(
+  unit -> string option
+)
+"lib/bregistry.ml" 211 6694 6704 "lib/bregistry.ml" 212 6740 6779
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 205 6526 6536 "lib/bregistry.ml" 212 6740 6779
+type(
+  string option
+)
+"lib/bregistry.ml" 197 6260 6270 "lib/bregistry.ml" 212 6740 6779
+type(
+  string option
+)
+"lib/bregistry.ml" 214 6791 6807 "lib/bregistry.ml" 214 6791 6817
+type(
+  string list -> string option
+)
+ident(
+  def inner_loop "lib/bregistry.ml" 214 6791 6799 "lib/bregistry.ml" 220 6973 7002
+)
+"lib/bregistry.ml" 214 6791 6818 "lib/bregistry.ml" 214 6791 6822
+type(
+  string list
+)
+ident(
+  def exts "lib/bregistry.ml" 215 6825 6835 "lib/bregistry.ml" 218 6906 6961
+)
+"lib/bregistry.ml" 215 6825 6841 "lib/bregistry.ml" 215 6825 6845
+type(
+  string list
+)
+ident(
+  int_ref exts "lib/bregistry.ml" 214 6791 6818 "lib/bregistry.ml" 214 6791 6822
+)
+"lib/bregistry.ml" 216 6851 6863 "lib/bregistry.ml" 216 6851 6865
+type(
+  string list
+)
+"lib/bregistry.ml" 216 6851 6869 "lib/bregistry.ml" 216 6851 6873
+type(
+  string list -> string option
+)
+ident(
+  int_ref loop "lib/bregistry.ml" 192 6152 6162 "lib/bregistry.ml" 192 6152 6166
+)
+"lib/bregistry.ml" 216 6851 6874 "lib/bregistry.ml" 216 6851 6879
+type(
+  string list
+)
+ident(
+  int_ref drest "lib/bregistry.ml" 195 6211 6222 "lib/bregistry.ml" 195 6211 6227
+)
+"lib/bregistry.ml" 216 6851 6869 "lib/bregistry.ml" 216 6851 6879
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 217 6880 6892 "lib/bregistry.ml" 217 6880 6895
+type(
+  string
+)
+ident(
+  def ext "lib/bregistry.ml" 218 6906 6920 "lib/bregistry.ml" 218 6906 6961
+)
+"lib/bregistry.ml" 217 6880 6897 "lib/bregistry.ml" 217 6880 6902
+type(
+  string list
+)
+ident(
+  def erest "lib/bregistry.ml" 218 6906 6920 "lib/bregistry.ml" 218 6906 6961
+)
+"lib/bregistry.ml" 217 6880 6892 "lib/bregistry.ml" 217 6880 6902
+type(
+  string list
+)
+"lib/bregistry.ml" 218 6906 6920 "lib/bregistry.ml" 218 6906 6928
+type(
+  string -> (unit -> string option) -> string option
+)
+ident(
+  int_ref try_path "lib/bregistry.ml" 196 6231 6243 "lib/bregistry.ml" 196 6231 6251
+)
+"lib/bregistry.ml" 218 6906 6929 "lib/bregistry.ml" 218 6906 6932
+type(
+  string
+)
+ident(
+  int_ref ext "lib/bregistry.ml" 217 6880 6892 "lib/bregistry.ml" 217 6880 6895
+)
+"lib/bregistry.ml" 218 6906 6938 "lib/bregistry.ml" 218 6906 6940
+type(
+  unit
+)
+"lib/bregistry.ml" 218 6906 6944 "lib/bregistry.ml" 218 6906 6954
+type(
+  string list -> string option
+)
+ident(
+  int_ref inner_loop "lib/bregistry.ml" 214 6791 6807 "lib/bregistry.ml" 214 6791 6817
+)
+"lib/bregistry.ml" 218 6906 6955 "lib/bregistry.ml" 218 6906 6960
+type(
+  string list
+)
+ident(
+  int_ref erest "lib/bregistry.ml" 217 6880 6897 "lib/bregistry.ml" 217 6880 6902
+)
+"lib/bregistry.ml" 218 6906 6944 "lib/bregistry.ml" 218 6906 6960
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 218 6906 6933 "lib/bregistry.ml" 218 6906 6961
+type(
+  unit -> string option
+)
+"lib/bregistry.ml" 218 6906 6920 "lib/bregistry.ml" 218 6906 6961
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 215 6825 6835 "lib/bregistry.ml" 218 6906 6961
+type(
+  string option
+)
+"lib/bregistry.ml" 220 6973 6981 "lib/bregistry.ml" 220 6973 6991
+type(
+  string list -> string option
+)
+ident(
+  int_ref inner_loop "lib/bregistry.ml" 214 6791 6807 "lib/bregistry.ml" 214 6791 6817
+)
+"lib/bregistry.ml" 220 6973 6992 "lib/bregistry.ml" 220 6973 7002
+type(
+  string list
+)
+ident(
+  int_ref extensions "lib/bregistry.ml" 179 5868 5872 "lib/bregistry.ml" 179 5868 5882
+)
+"lib/bregistry.ml" 220 6973 6981 "lib/bregistry.ml" 220 6973 7002
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 214 6791 6799 "lib/bregistry.ml" 220 6973 7002
+type(
+  string option
+)
+"lib/bregistry.ml" 196 6231 6239 "lib/bregistry.ml" 220 6973 7002
+type(
+  string option
+)
+"lib/bregistry.ml" 193 6174 6178 "lib/bregistry.ml" 220 6973 7002
+type(
+  string option
+)
+"lib/bregistry.ml" 222 7008 7010 "lib/bregistry.ml" 222 7008 7014
+type(
+  string list -> string option
+)
+ident(
+  int_ref loop "lib/bregistry.ml" 192 6152 6162 "lib/bregistry.ml" 192 6152 6166
+)
+"lib/bregistry.ml" 222 7008 7016 "lib/bregistry.ml" 222 7008 7028
+type(
+  string list -> string list
+)
+ident(
+  ext_ref Safelist.rev
+)
+"lib/bregistry.ml" 222 7008 7030 "lib/bregistry.ml" 222 7008 7040
+type(
+  string list Prefs.t -> string list
+)
+ident(
+  ext_ref Prefs.read
+)
+"lib/bregistry.ml" 222 7008 7041 "lib/bregistry.ml" 222 7008 7046
+type(
+  string list Prefs.t
+)
+ident(
+  int_ref paths "lib/bregistry.ml" 167 5589 5593 "lib/bregistry.ml" 167 5589 5598
+)
+"lib/bregistry.ml" 222 7008 7029 "lib/bregistry.ml" 222 7008 7047
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 222 7008 7016 "lib/bregistry.ml" 222 7008 7047
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 222 7008 7048 "lib/bregistry.ml" 222 7008 7049
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bregistry.ml" 222 7008 7050 "lib/bregistry.ml" 222 7008 7058
+type(
+  string list
+)
+ident(
+  int_ref boompath "lib/bregistry.ml" 169 5620 5624 "lib/bregistry.ml" 169 5620 5632
+)
+"lib/bregistry.ml" 222 7008 7015 "lib/bregistry.ml" 222 7008 7059
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 222 7008 7010 "lib/bregistry.ml" 222 7008 7059
+call(
+  tail
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 192 6152 6154 "lib/bregistry.ml" 222 7008 7059
+type(
+  string option
+)
+"lib/bregistry.ml" 225 7082 7086 "lib/bregistry.ml" 225 7082 7102
+type(
+  (string -> string -> unit) ref
+)
+ident(
+  def interp_file_impl "lib/bregistry.ml" 230 7209 7209 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 226 7106 7108 "lib/bregistry.ml" 226 7106 7111
+type(
+  (string -> string -> unit) -> (string -> string -> unit) ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/bregistry.ml" 226 7106 7117 "lib/bregistry.ml" 226 7106 7118
+type(
+  string
+)
+"lib/bregistry.ml" 226 7106 7119 "lib/bregistry.ml" 226 7106 7120
+type(
+  string
+)
+"lib/bregistry.ml" 227 7125 7134 "lib/bregistry.ml" 227 7125 7137
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 227 7125 7138 "lib/bregistry.ml" 227 7125 7188
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 227 7125 7134 "lib/bregistry.ml" 227 7125 7188
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 228 7191 7200 "lib/bregistry.ml" 228 7191 7204
+type(
+  int -> unit
+)
+ident(
+  ext_ref Pervasives.exit
+)
+"lib/bregistry.ml" 228 7191 7205 "lib/bregistry.ml" 228 7191 7206
+type(
+  int
+)
+"lib/bregistry.ml" 228 7191 7200 "lib/bregistry.ml" 228 7191 7206
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 227 7125 7134 "lib/bregistry.ml" 228 7191 7206
+type(
+  unit
+)
+"lib/bregistry.ml" 226 7106 7112 "lib/bregistry.ml" 228 7191 7207
+type(
+  string -> string -> unit
+)
+"lib/bregistry.ml" 226 7106 7108 "lib/bregistry.ml" 228 7191 7207
+type(
+  (string -> string -> unit) ref
+)
+"lib/bregistry.ml" 230 7209 7213 "lib/bregistry.ml" 230 7209 7231
+type(
+  (string -> string -> string -> unit) ref
+)
+ident(
+  def interp_string_impl "lib/bregistry.ml" 235 7342 7342 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 231 7235 7237 "lib/bregistry.ml" 231 7235 7240
+type(
+  (string -> string -> string -> unit) ->
+  (string -> string -> string -> unit) ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/bregistry.ml" 231 7235 7246 "lib/bregistry.ml" 231 7235 7247
+type(
+  string
+)
+"lib/bregistry.ml" 231 7235 7248 "lib/bregistry.ml" 231 7235 7249
+type(
+  string
+)
+"lib/bregistry.ml" 231 7235 7250 "lib/bregistry.ml" 231 7235 7251
+type(
+  string
+)
+"lib/bregistry.ml" 232 7256 7265 "lib/bregistry.ml" 232 7256 7268
+type(
+  (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 232 7256 7269 "lib/bregistry.ml" 232 7256 7319
+type(
+  (unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 232 7256 7265 "lib/bregistry.ml" 232 7256 7319
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 233 7322 7331 "lib/bregistry.ml" 233 7322 7335
+type(
+  int -> unit
+)
+ident(
+  ext_ref Pervasives.exit
+)
+"lib/bregistry.ml" 233 7322 7336 "lib/bregistry.ml" 233 7322 7337
+type(
+  int
+)
+"lib/bregistry.ml" 233 7322 7331 "lib/bregistry.ml" 233 7322 7337
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 232 7256 7265 "lib/bregistry.ml" 233 7322 7337
+type(
+  unit
+)
+"lib/bregistry.ml" 231 7235 7241 "lib/bregistry.ml" 233 7322 7338
+type(
+  string -> string -> string -> unit
+)
+"lib/bregistry.ml" 231 7235 7237 "lib/bregistry.ml" 233 7322 7338
+type(
+  (string -> string -> string -> unit) ref
+)
+"lib/bregistry.ml" 235 7342 7346 "lib/bregistry.ml" 235 7342 7358
+type(
+  string -> string
+)
+ident(
+  def modl_of_path "lib/bregistry.ml" 242 7525 7525 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 235 7342 7359 "lib/bregistry.ml" 235 7342 7363
+type(
+  string
+)
+ident(
+  def path "lib/bregistry.ml" 236 7366 7368 "lib/bregistry.ml" 240 7466 7521
+)
+"lib/bregistry.ml" 236 7366 7372 "lib/bregistry.ml" 236 7366 7380
+type(
+  string -> string
+)
+ident(
+  def chop_ext "lib/bregistry.ml" 240 7466 7468 "lib/bregistry.ml" 240 7466 7521
+)
+"lib/bregistry.ml" 236 7366 7381 "lib/bregistry.ml" 236 7366 7385
+type(
+  string
+)
+ident(
+  def path "lib/bregistry.ml" 237 7388 7392 "lib/bregistry.ml" 238 7425 7460
+)
+"lib/bregistry.ml" 237 7388 7396 "lib/bregistry.ml" 237 7388 7419
+type(
+  string -> string
+)
+ident(
+  ext_ref Filename.chop_extension
+)
+"lib/bregistry.ml" 237 7388 7420 "lib/bregistry.ml" 237 7388 7424
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 236 7366 7381 "lib/bregistry.ml" 236 7366 7385
+)
+"lib/bregistry.ml" 237 7388 7396 "lib/bregistry.ml" 237 7388 7424
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 238 7425 7451 "lib/bregistry.ml" 238 7425 7452
+type(
+  string
+)
+"lib/bregistry.ml" 238 7425 7434 "lib/bregistry.ml" 238 7425 7452
+type(
+  exn
+)
+"lib/bregistry.ml" 238 7425 7456 "lib/bregistry.ml" 238 7425 7460
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 236 7366 7381 "lib/bregistry.ml" 236 7366 7385
+)
+"lib/bregistry.ml" 237 7388 7392 "lib/bregistry.ml" 238 7425 7460
+type(
+  string
+)
+"lib/bregistry.ml" 240 7466 7468 "lib/bregistry.ml" 240 7466 7485
+type(
+  string -> string
+)
+ident(
+  ext_ref String.capitalize
+)
+"lib/bregistry.ml" 240 7466 7487 "lib/bregistry.ml" 240 7466 7495
+type(
+  string -> string
+)
+ident(
+  int_ref chop_ext "lib/bregistry.ml" 236 7366 7372 "lib/bregistry.ml" 236 7366 7380
+)
+"lib/bregistry.ml" 240 7466 7497 "lib/bregistry.ml" 240 7466 7514
+type(
+  string -> string
+)
+ident(
+  ext_ref Filename.basename
+)
+"lib/bregistry.ml" 240 7466 7515 "lib/bregistry.ml" 240 7466 7519
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 235 7342 7359 "lib/bregistry.ml" 235 7342 7363
+)
+"lib/bregistry.ml" 240 7466 7496 "lib/bregistry.ml" 240 7466 7520
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 240 7466 7486 "lib/bregistry.ml" 240 7466 7521
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 240 7466 7468 "lib/bregistry.ml" 240 7466 7521
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bregistry.ml" 236 7366 7368 "lib/bregistry.ml" 240 7466 7521
+type(
+  string
+)
+"lib/bregistry.ml" 242 7525 7529 "lib/bregistry.ml" 242 7525 7536
+type(
+  (unit -> 'a) -> string -> string -> unit
+)
+ident(
+  def go_load "lib/bregistry.ml" 248 7711 7711 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 242 7525 7537 "lib/bregistry.ml" 242 7525 7541
+type(
+  unit -> 'a
+)
+ident(
+  def comp "lib/bregistry.ml" 242 7525 7542 "lib/bregistry.ml" 246 7656 7709
+)
+"lib/bregistry.ml" 242 7525 7542 "lib/bregistry.ml" 242 7525 7546
+type(
+  string
+)
+ident(
+  def modl "lib/bregistry.ml" 242 7525 7547 "lib/bregistry.ml" 246 7656 7709
+)
+"lib/bregistry.ml" 242 7525 7547 "lib/bregistry.ml" 242 7525 7553
+type(
+  string
+)
+ident(
+  def source "lib/bregistry.ml" 243 7556 7558 "lib/bregistry.ml" 246 7656 7709
+)
+"lib/bregistry.ml" 243 7556 7558 "lib/bregistry.ml" 243 7556 7563
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref debug "lib/bregistry.ml" 23 1630 1634 "lib/bregistry.ml" 23 1630 1639
+)
+"lib/bregistry.ml" 243 7556 7569 "lib/bregistry.ml" 243 7556 7571
+type(
+  unit
+)
+"lib/bregistry.ml" 243 7556 7575 "lib/bregistry.ml" 243 7556 7578
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 243 7556 7579 "lib/bregistry.ml" 243 7556 7606
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 243 7556 7607 "lib/bregistry.ml" 243 7556 7613
+type(
+  string
+)
+ident(
+  int_ref source "lib/bregistry.ml" 242 7525 7547 "lib/bregistry.ml" 242 7525 7553
+)
+"lib/bregistry.ml" 243 7556 7575 "lib/bregistry.ml" 243 7556 7613
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 243 7556 7564 "lib/bregistry.ml" 243 7556 7614
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 243 7556 7558 "lib/bregistry.ml" 243 7556 7614
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 244 7616 7618 "lib/bregistry.ml" 244 7616 7624
+type(
+  string list ref
+)
+ident(
+  int_ref loaded "lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+)
+"lib/bregistry.ml" 244 7616 7625 "lib/bregistry.ml" 244 7616 7627
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 244 7616 7628 "lib/bregistry.ml" 244 7616 7632
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 242 7525 7542 "lib/bregistry.ml" 242 7525 7546
+)
+"lib/bregistry.ml" 244 7616 7635 "lib/bregistry.ml" 244 7616 7636
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 244 7616 7636 "lib/bregistry.ml" 244 7616 7642
+type(
+  string list ref
+)
+ident(
+  int_ref loaded "lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+)
+"lib/bregistry.ml" 244 7616 7634 "lib/bregistry.ml" 244 7616 7643
+type(
+  string list
+)
+"lib/bregistry.ml" 244 7616 7628 "lib/bregistry.ml" 244 7616 7643
+type(
+  string list
+)
+"lib/bregistry.ml" 244 7616 7618 "lib/bregistry.ml" 244 7616 7643
+type(
+  unit
+)
+"lib/bregistry.ml" 245 7645 7647 "lib/bregistry.ml" 245 7645 7651
+type(
+  unit -> 'a
+)
+ident(
+  int_ref comp "lib/bregistry.ml" 242 7525 7537 "lib/bregistry.ml" 242 7525 7541
+)
+"lib/bregistry.ml" 245 7645 7652 "lib/bregistry.ml" 245 7645 7654
+type(
+  unit
+)
+"lib/bregistry.ml" 245 7645 7647 "lib/bregistry.ml" 245 7645 7654
+call(
+  stack
+)
+type(
+  'a
+)
+"lib/bregistry.ml" 246 7656 7658 "lib/bregistry.ml" 246 7656 7663
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref debug "lib/bregistry.ml" 23 1630 1634 "lib/bregistry.ml" 23 1630 1639
+)
+"lib/bregistry.ml" 246 7656 7669 "lib/bregistry.ml" 246 7656 7671
+type(
+  unit
+)
+"lib/bregistry.ml" 246 7656 7675 "lib/bregistry.ml" 246 7656 7678
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 246 7656 7679 "lib/bregistry.ml" 246 7656 7701
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 246 7656 7702 "lib/bregistry.ml" 246 7656 7708
+type(
+  string
+)
+ident(
+  int_ref source "lib/bregistry.ml" 242 7525 7547 "lib/bregistry.ml" 242 7525 7553
+)
+"lib/bregistry.ml" 246 7656 7675 "lib/bregistry.ml" 246 7656 7708
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 246 7656 7664 "lib/bregistry.ml" 246 7656 7709
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 246 7656 7658 "lib/bregistry.ml" 246 7656 7709
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 245 7645 7647 "lib/bregistry.ml" 246 7656 7709
+type(
+  unit
+)
+"lib/bregistry.ml" 244 7616 7618 "lib/bregistry.ml" 246 7656 7709
+type(
+  unit
+)
+"lib/bregistry.ml" 243 7556 7558 "lib/bregistry.ml" 246 7656 7709
+type(
+  unit
+)
+"lib/bregistry.ml" 248 7711 7715 "lib/bregistry.ml" 248 7711 7724
+type(
+  string -> bool
+)
+ident(
+  def load_file "lib/bregistry.ml" 259 7953 7953 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 248 7711 7725 "lib/bregistry.ml" 248 7711 7729
+type(
+  string
+)
+ident(
+  def path "lib/bregistry.ml" 249 7732 7734 "lib/bregistry.ml" 257 7948 7951
+)
+"lib/bregistry.ml" 249 7732 7738 "lib/bregistry.ml" 249 7732 7742
+type(
+  string
+)
+ident(
+  def modl "lib/bregistry.ml" 250 7766 7768 "lib/bregistry.ml" 257 7948 7951
+)
+"lib/bregistry.ml" 249 7732 7745 "lib/bregistry.ml" 249 7732 7757
+type(
+  string -> string
+)
+ident(
+  int_ref modl_of_path "lib/bregistry.ml" 235 7342 7346 "lib/bregistry.ml" 235 7342 7358
+)
+"lib/bregistry.ml" 249 7732 7758 "lib/bregistry.ml" 249 7732 7762
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 248 7711 7725 "lib/bregistry.ml" 248 7711 7729
+)
+"lib/bregistry.ml" 249 7732 7745 "lib/bregistry.ml" 249 7732 7762
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 250 7766 7771 "lib/bregistry.ml" 250 7766 7783
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"lib/bregistry.ml" 250 7766 7784 "lib/bregistry.ml" 250 7766 7788
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 249 7732 7738 "lib/bregistry.ml" 249 7732 7742
+)
+"lib/bregistry.ml" 250 7766 7789 "lib/bregistry.ml" 250 7766 7790
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 250 7766 7790 "lib/bregistry.ml" 250 7766 7796
+type(
+  string list ref
+)
+ident(
+  int_ref loaded "lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+)
+"lib/bregistry.ml" 250 7766 7789 "lib/bregistry.ml" 250 7766 7796
+type(
+  string list
+)
+"lib/bregistry.ml" 250 7766 7771 "lib/bregistry.ml" 250 7766 7796
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 251 7797 7804 "lib/bregistry.ml" 251 7797 7808
+type(
+  bool
+)
+"lib/bregistry.ml" 253 7818 7826 "lib/bregistry.ml" 253 7818 7831
+type(
+  bool
+)
+ident(
+  def exist "lib/bregistry.ml" 254 7857 7861 "lib/bregistry.ml" 256 7938 7947
+)
+"lib/bregistry.ml" 253 7818 7834 "lib/bregistry.ml" 253 7818 7843
+type(
+  string -> string -> bool
+)
+ident(
+  int_ref find_file "lib/bregistry.ml" 181 5901 5905 "lib/bregistry.ml" 181 5901 5914
+)
+"lib/bregistry.ml" 253 7818 7844 "lib/bregistry.ml" 253 7818 7848
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 249 7732 7738 "lib/bregistry.ml" 249 7732 7742
+)
+"lib/bregistry.ml" 253 7818 7849 "lib/bregistry.ml" 253 7818 7853
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 248 7711 7725 "lib/bregistry.ml" 248 7711 7729
+)
+"lib/bregistry.ml" 253 7818 7834 "lib/bregistry.ml" 253 7818 7853
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 254 7857 7864 "lib/bregistry.ml" 254 7857 7869
+type(
+  bool
+)
+ident(
+  int_ref exist "lib/bregistry.ml" 253 7818 7826 "lib/bregistry.ml" 253 7818 7831
+)
+"lib/bregistry.ml" 255 7870 7879 "lib/bregistry.ml" 255 7870 7886
+type(
+  (unit -> unit) -> string -> string -> unit
+)
+ident(
+  int_ref go_load "lib/bregistry.ml" 242 7525 7529 "lib/bregistry.ml" 242 7525 7536
+)
+"lib/bregistry.ml" 255 7870 7892 "lib/bregistry.ml" 255 7870 7894
+type(
+  unit
+)
+"lib/bregistry.ml" 255 7870 7898 "lib/bregistry.ml" 255 7870 7899
+type(
+  (string -> string -> unit) ref -> string -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 255 7870 7899 "lib/bregistry.ml" 255 7870 7915
+type(
+  (string -> string -> unit) ref
+)
+ident(
+  int_ref interp_file_impl "lib/bregistry.ml" 225 7082 7086 "lib/bregistry.ml" 225 7082 7102
+)
+"lib/bregistry.ml" 255 7870 7898 "lib/bregistry.ml" 255 7870 7915
+type(
+  string -> string -> unit
+)
+"lib/bregistry.ml" 255 7870 7916 "lib/bregistry.ml" 255 7870 7920
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 248 7711 7725 "lib/bregistry.ml" 248 7711 7729
+)
+"lib/bregistry.ml" 255 7870 7921 "lib/bregistry.ml" 255 7870 7925
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 249 7732 7738 "lib/bregistry.ml" 249 7732 7742
+)
+"lib/bregistry.ml" 255 7870 7898 "lib/bregistry.ml" 255 7870 7925
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 255 7870 7887 "lib/bregistry.ml" 255 7870 7926
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 255 7870 7927 "lib/bregistry.ml" 255 7870 7931
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 249 7732 7738 "lib/bregistry.ml" 249 7732 7742
+)
+"lib/bregistry.ml" 255 7870 7932 "lib/bregistry.ml" 255 7870 7936
+type(
+  string
+)
+ident(
+  int_ref path "lib/bregistry.ml" 248 7711 7725 "lib/bregistry.ml" 248 7711 7729
+)
+"lib/bregistry.ml" 255 7870 7879 "lib/bregistry.ml" 255 7870 7936
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 254 7857 7861 "lib/bregistry.ml" 255 7870 7936
+type(
+  unit
+)
+"lib/bregistry.ml" 256 7938 7942 "lib/bregistry.ml" 256 7938 7947
+type(
+  bool
+)
+ident(
+  int_ref exist "lib/bregistry.ml" 253 7818 7826 "lib/bregistry.ml" 253 7818 7831
+)
+"lib/bregistry.ml" 254 7857 7861 "lib/bregistry.ml" 256 7938 7947
+type(
+  bool
+)
+"lib/bregistry.ml" 252 7809 7816 "lib/bregistry.ml" 257 7948 7951
+type(
+  bool
+)
+"lib/bregistry.ml" 250 7766 7768 "lib/bregistry.ml" 257 7948 7951
+type(
+  bool
+)
+"lib/bregistry.ml" 249 7732 7734 "lib/bregistry.ml" 257 7948 7951
+type(
+  bool
+)
+"lib/bregistry.ml" 259 7953 7957 "lib/bregistry.ml" 259 7953 7961
+type(
+  string -> bool
+)
+ident(
+  def load "lib/bregistry.ml" 286 8674 8674 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+type(
+  string
+)
+ident(
+  def modl "lib/bregistry.ml" 260 7969 7971 "lib/bregistry.ml" 284 8663 8666
+)
+"lib/bregistry.ml" 260 7969 7974 "lib/bregistry.ml" 260 7969 7986
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"lib/bregistry.ml" 260 7969 7987 "lib/bregistry.ml" 260 7969 7991
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 260 7969 7992 "lib/bregistry.ml" 260 7969 7993
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 260 7969 7993 "lib/bregistry.ml" 260 7969 7999
+type(
+  string list ref
+)
+ident(
+  int_ref loaded "lib/bregistry.ml" 145 5064 5068 "lib/bregistry.ml" 145 5064 5074
+)
+"lib/bregistry.ml" 260 7969 7992 "lib/bregistry.ml" 260 7969 7999
+type(
+  string list
+)
+"lib/bregistry.ml" 260 7969 7974 "lib/bregistry.ml" 260 7969 7999
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 261 8000 8007 "lib/bregistry.ml" 261 8000 8011
+type(
+  bool
+)
+"lib/bregistry.ml" 263 8021 8031 "lib/bregistry.ml" 263 8021 8040
+type(
+  string -> string option
+)
+ident(
+  int_ref find_modl "lib/bregistry.ml" 191 6130 6134 "lib/bregistry.ml" 191 6130 6143
+)
+"lib/bregistry.ml" 263 8021 8041 "lib/bregistry.ml" 263 8021 8045
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 263 8021 8031 "lib/bregistry.ml" 263 8021 8045
+call(
+  stack
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 264 8052 8058 "lib/bregistry.ml" 264 8052 8062
+type(
+  string option
+)
+"lib/bregistry.ml" 266 8108 8120 "lib/bregistry.ml" 266 8108 8129
+type(
+  string -> string option
+)
+ident(
+  def safe_find "lib/bregistry.ml" 270 8227 8235 "lib/bregistry.ml" 279 8545 8561
+)
+"lib/bregistry.ml" 266 8108 8130 "lib/bregistry.ml" 266 8108 8131
+type(
+  string
+)
+ident(
+  def m "lib/bregistry.ml" 267 8134 8144 "lib/bregistry.ml" 268 8183 8215
+)
+"lib/bregistry.ml" 267 8134 8154 "lib/bregistry.ml" 267 8134 8166
+type(
+  (string, string) Hashtbl.t -> string -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"lib/bregistry.ml" 267 8134 8167 "lib/bregistry.ml" 267 8134 8179
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  ext_ref Bakery.items
+)
+"lib/bregistry.ml" 267 8134 8180 "lib/bregistry.ml" 267 8134 8181
+type(
+  string
+)
+ident(
+  int_ref m "lib/bregistry.ml" 266 8108 8130 "lib/bregistry.ml" 266 8108 8131
+)
+"lib/bregistry.ml" 267 8134 8153 "lib/bregistry.ml" 267 8134 8182
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 267 8134 8148 "lib/bregistry.ml" 267 8134 8182
+type(
+  string option
+)
+"lib/bregistry.ml" 268 8183 8198 "lib/bregistry.ml" 268 8183 8207
+type(
+  exn
+)
+"lib/bregistry.ml" 268 8183 8211 "lib/bregistry.ml" 268 8183 8215
+type(
+  string option
+)
+"lib/bregistry.ml" 267 8134 8144 "lib/bregistry.ml" 268 8183 8215
+type(
+  string option
+)
+"lib/bregistry.ml" 270 8227 8239 "lib/bregistry.ml" 270 8227 8240
+type(
+  string
+)
+ident(
+  def i "lib/bregistry.ml" 271 8285 8293 "lib/bregistry.ml" 279 8545 8561
+)
+"lib/bregistry.ml" 270 8227 8243 "lib/bregistry.ml" 270 8227 8250
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bregistry.ml" 22 1601 1605 "lib/bregistry.ml" 22 1601 1612
+)
+"lib/bregistry.ml" 270 8227 8251 "lib/bregistry.ml" 270 8227 8274
+type(
+  (string -> string, unit, string) format
+)
+"lib/bregistry.ml" 270 8227 8275 "lib/bregistry.ml" 270 8227 8279
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 270 8227 8243 "lib/bregistry.ml" 270 8227 8279
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 272 8301 8317 "lib/bregistry.ml" 272 8301 8326
+type(
+  string -> string option
+)
+ident(
+  int_ref safe_find "lib/bregistry.ml" 266 8108 8120 "lib/bregistry.ml" 266 8108 8129
+)
+"lib/bregistry.ml" 272 8301 8327 "lib/bregistry.ml" 272 8301 8331
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 272 8301 8317 "lib/bregistry.ml" 272 8301 8331
+call(
+  stack
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 273 8337 8349 "lib/bregistry.ml" 273 8337 8353
+type(
+  string option
+)
+"lib/bregistry.ml" 273 8337 8357 "lib/bregistry.ml" 273 8337 8366
+type(
+  string -> string option
+)
+ident(
+  int_ref safe_find "lib/bregistry.ml" 266 8108 8120 "lib/bregistry.ml" 266 8108 8129
+)
+"lib/bregistry.ml" 273 8337 8368 "lib/bregistry.ml" 273 8337 8387
+type(
+  string -> string
+)
+ident(
+  ext_ref String.uncapitalize
+)
+"lib/bregistry.ml" 273 8337 8388 "lib/bregistry.ml" 273 8337 8392
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 273 8337 8367 "lib/bregistry.ml" 273 8337 8393
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 273 8337 8357 "lib/bregistry.ml" 273 8337 8393
+call(
+  stack
+)
+type(
+  string option
+)
+"lib/bregistry.ml" 274 8394 8406 "lib/bregistry.ml" 274 8394 8407
+type(
+  string option
+)
+ident(
+  def x "lib/bregistry.ml" 274 8394 8411 "lib/bregistry.ml" 274 8394 8412
+)
+"lib/bregistry.ml" 274 8394 8411 "lib/bregistry.ml" 274 8394 8412
+type(
+  string option
+)
+ident(
+  int_ref x "lib/bregistry.ml" 274 8394 8406 "lib/bregistry.ml" 274 8394 8407
+)
+"lib/bregistry.ml" 271 8285 8299 "lib/bregistry.ml" 275 8413 8422
+type(
+  string option
+)
+"lib/bregistry.ml" 276 8428 8438 "lib/bregistry.ml" 276 8428 8442
+type(
+  string option
+)
+"lib/bregistry.ml" 276 8428 8446 "lib/bregistry.ml" 276 8428 8451
+type(
+  bool
+)
+"lib/bregistry.ml" 277 8452 8467 "lib/bregistry.ml" 277 8452 8470
+type(
+  string
+)
+ident(
+  def str "lib/bregistry.ml" 278 8474 8486 "lib/bregistry.ml" 279 8545 8561
+)
+"lib/bregistry.ml" 277 8452 8462 "lib/bregistry.ml" 277 8452 8470
+type(
+  string option
+)
+"lib/bregistry.ml" 278 8474 8486 "lib/bregistry.ml" 278 8474 8493
+type(
+  (unit -> unit) -> string -> string -> unit
+)
+ident(
+  int_ref go_load "lib/bregistry.ml" 242 7525 7529 "lib/bregistry.ml" 242 7525 7536
+)
+"lib/bregistry.ml" 278 8474 8499 "lib/bregistry.ml" 278 8474 8501
+type(
+  unit
+)
+"lib/bregistry.ml" 278 8474 8505 "lib/bregistry.ml" 278 8474 8506
+type(
+  (string -> string -> string -> unit) ref ->
+  string -> string -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 278 8474 8506 "lib/bregistry.ml" 278 8474 8524
+type(
+  (string -> string -> string -> unit) ref
+)
+ident(
+  int_ref interp_string_impl "lib/bregistry.ml" 230 7209 7213 "lib/bregistry.ml" 230 7209 7231
+)
+"lib/bregistry.ml" 278 8474 8505 "lib/bregistry.ml" 278 8474 8524
+type(
+  string -> string -> string -> unit
+)
+"lib/bregistry.ml" 278 8474 8525 "lib/bregistry.ml" 278 8474 8526
+type(
+  string
+)
+ident(
+  int_ref i "lib/bregistry.ml" 270 8227 8239 "lib/bregistry.ml" 270 8227 8240
+)
+"lib/bregistry.ml" 278 8474 8527 "lib/bregistry.ml" 278 8474 8530
+type(
+  string
+)
+ident(
+  int_ref str "lib/bregistry.ml" 277 8452 8467 "lib/bregistry.ml" 277 8452 8470
+)
+"lib/bregistry.ml" 278 8474 8531 "lib/bregistry.ml" 278 8474 8535
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 278 8474 8505 "lib/bregistry.ml" 278 8474 8535
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 278 8474 8494 "lib/bregistry.ml" 278 8474 8536
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 278 8474 8537 "lib/bregistry.ml" 278 8474 8541
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 278 8474 8542 "lib/bregistry.ml" 278 8474 8543
+type(
+  string
+)
+ident(
+  int_ref i "lib/bregistry.ml" 270 8227 8239 "lib/bregistry.ml" 270 8227 8240
+)
+"lib/bregistry.ml" 278 8474 8486 "lib/bregistry.ml" 278 8474 8543
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 279 8545 8557 "lib/bregistry.ml" 279 8545 8561
+type(
+  bool
+)
+"lib/bregistry.ml" 278 8474 8486 "lib/bregistry.ml" 279 8545 8561
+type(
+  bool
+)
+"lib/bregistry.ml" 271 8285 8293 "lib/bregistry.ml" 279 8545 8561
+type(
+  bool
+)
+"lib/bregistry.ml" 270 8227 8235 "lib/bregistry.ml" 279 8545 8561
+type(
+  bool
+)
+"lib/bregistry.ml" 264 8052 8066 "lib/bregistry.ml" 280 8562 8569
+type(
+  bool
+)
+"lib/bregistry.ml" 281 8570 8581 "lib/bregistry.ml" 281 8570 8583
+type(
+  string
+)
+ident(
+  def fn "lib/bregistry.ml" 282 8587 8595 "lib/bregistry.ml" 283 8650 8662
+)
+"lib/bregistry.ml" 281 8570 8576 "lib/bregistry.ml" 281 8570 8583
+type(
+  string option
+)
+"lib/bregistry.ml" 282 8587 8595 "lib/bregistry.ml" 282 8587 8602
+type(
+  (unit -> unit) -> string -> string -> unit
+)
+ident(
+  int_ref go_load "lib/bregistry.ml" 242 7525 7529 "lib/bregistry.ml" 242 7525 7536
+)
+"lib/bregistry.ml" 282 8587 8608 "lib/bregistry.ml" 282 8587 8610
+type(
+  unit
+)
+"lib/bregistry.ml" 282 8587 8614 "lib/bregistry.ml" 282 8587 8615
+type(
+  (string -> string -> unit) ref -> string -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 282 8587 8615 "lib/bregistry.ml" 282 8587 8631
+type(
+  (string -> string -> unit) ref
+)
+ident(
+  int_ref interp_file_impl "lib/bregistry.ml" 225 7082 7086 "lib/bregistry.ml" 225 7082 7102
+)
+"lib/bregistry.ml" 282 8587 8614 "lib/bregistry.ml" 282 8587 8631
+type(
+  string -> string -> unit
+)
+"lib/bregistry.ml" 282 8587 8632 "lib/bregistry.ml" 282 8587 8634
+type(
+  string
+)
+ident(
+  int_ref fn "lib/bregistry.ml" 281 8570 8581 "lib/bregistry.ml" 281 8570 8583
+)
+"lib/bregistry.ml" 282 8587 8635 "lib/bregistry.ml" 282 8587 8639
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 282 8587 8614 "lib/bregistry.ml" 282 8587 8639
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 282 8587 8603 "lib/bregistry.ml" 282 8587 8640
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 282 8587 8641 "lib/bregistry.ml" 282 8587 8645
+type(
+  string
+)
+ident(
+  int_ref modl "lib/bregistry.ml" 259 7953 7962 "lib/bregistry.ml" 259 7953 7966
+)
+"lib/bregistry.ml" 282 8587 8646 "lib/bregistry.ml" 282 8587 8648
+type(
+  string
+)
+ident(
+  int_ref fn "lib/bregistry.ml" 281 8570 8581 "lib/bregistry.ml" 281 8570 8583
+)
+"lib/bregistry.ml" 282 8587 8595 "lib/bregistry.ml" 282 8587 8648
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 283 8650 8658 "lib/bregistry.ml" 283 8650 8662
+type(
+  bool
+)
+"lib/bregistry.ml" 282 8587 8595 "lib/bregistry.ml" 283 8650 8662
+type(
+  bool
+)
+"lib/bregistry.ml" 262 8012 8019 "lib/bregistry.ml" 284 8663 8666
+type(
+  bool
+)
+"lib/bregistry.ml" 260 7969 7971 "lib/bregistry.ml" 284 8663 8666
+type(
+  bool
+)
+"lib/bregistry.ml" 286 8674 8678 "lib/bregistry.ml" 286 8674 8686
+type(
+  Bident.Qid.t -> unit
+)
+ident(
+  def load_var "lib/bregistry.ml" 291 8850 8850 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 286 8674 8687 "lib/bregistry.ml" 286 8674 8688
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 286 8674 8691 "lib/bregistry.ml" 288 8738 8791
+)
+"lib/bregistry.ml" 286 8674 8697 "lib/bregistry.ml" 286 8674 8714
+type(
+  Bident.Qid.t -> Bident.Id.t option
+)
+ident(
+  int_ref get_module_prefix "lib/bregistry.ml" 174 5767 5771 "lib/bregistry.ml" 174 5767 5788
+)
+"lib/bregistry.ml" 286 8674 8715 "lib/bregistry.ml" 286 8674 8716
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 286 8674 8687 "lib/bregistry.ml" 286 8674 8688
+)
+"lib/bregistry.ml" 286 8674 8697 "lib/bregistry.ml" 286 8674 8716
+call(
+  stack
+)
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 287 8723 8727 "lib/bregistry.ml" 287 8723 8731
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 287 8723 8735 "lib/bregistry.ml" 287 8723 8737
+type(
+  unit
+)
+"lib/bregistry.ml" 288 8738 8747 "lib/bregistry.ml" 288 8738 8748
+type(
+  Bident.Id.t
+)
+ident(
+  def n "lib/bregistry.ml" 288 8738 8752 "lib/bregistry.ml" 288 8738 8791
+)
+"lib/bregistry.ml" 288 8738 8742 "lib/bregistry.ml" 288 8738 8748
+type(
+  Bident.Id.t option
+)
+"lib/bregistry.ml" 288 8738 8752 "lib/bregistry.ml" 288 8738 8758
+type(
+  bool -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"lib/bregistry.ml" 288 8738 8760 "lib/bregistry.ml" 288 8738 8764
+type(
+  string -> bool
+)
+ident(
+  int_ref load "lib/bregistry.ml" 259 7953 7957 "lib/bregistry.ml" 259 7953 7961
+)
+"lib/bregistry.ml" 288 8738 8766 "lib/bregistry.ml" 288 8738 8787
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bregistry.ml" 288 8738 8788 "lib/bregistry.ml" 288 8738 8789
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref n "lib/bregistry.ml" 288 8738 8747 "lib/bregistry.ml" 288 8738 8748
+)
+"lib/bregistry.ml" 288 8738 8765 "lib/bregistry.ml" 288 8738 8790
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 288 8738 8759 "lib/bregistry.ml" 288 8738 8791
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bregistry.ml" 288 8738 8752 "lib/bregistry.ml" 288 8738 8791
+type(
+  unit
+)
+"lib/bregistry.ml" 286 8674 8691 "lib/bregistry.ml" 288 8738 8791
+type(
+  unit
+)
+"lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+type(
+  (Bident.Qid.t * 'a -> 'b) ->
+  (REnv.t -> Bident.Qid.t -> 'a option) ->
+  Bident.Qid.t list -> Bident.Qid.t -> 'b option
+)
+ident(
+  def lookup_library_generic "lib/bregistry.ml" 314 9853 9853 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 291 8850 8877 "lib/bregistry.ml" 291 8850 8883
+type(
+  Bident.Qid.t * 'a -> 'b
+)
+ident(
+  def select "lib/bregistry.ml" 291 8850 8884 "lib/bregistry.ml" 312 9824 9851
+)
+"lib/bregistry.ml" 291 8850 8884 "lib/bregistry.ml" 291 8850 8894
+type(
+  REnv.t -> Bident.Qid.t -> 'a option
+)
+ident(
+  def lookup_fun "lib/bregistry.ml" 291 8850 8895 "lib/bregistry.ml" 312 9824 9851
+)
+"lib/bregistry.ml" 291 8850 8895 "lib/bregistry.ml" 291 8850 8899
+type(
+  Bident.Qid.t list
+)
+ident(
+  def nctx "lib/bregistry.ml" 291 8850 8900 "lib/bregistry.ml" 312 9824 9851
+)
+"lib/bregistry.ml" 291 8850 8900 "lib/bregistry.ml" 291 8850 8901
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 292 8905 8907 "lib/bregistry.ml" 312 9824 9851
+)
+"lib/bregistry.ml" 292 8905 8907 "lib/bregistry.ml" 292 8905 8914
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 292 8905 8920 "lib/bregistry.ml" 292 8905 8922
+type(
+  unit
+)
+"lib/bregistry.ml" 292 8905 8926 "lib/bregistry.ml" 292 8905 8929
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 292 8905 8930 "lib/bregistry.ml" 292 8905 8969
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 293 8971 8983 "lib/bregistry.ml" 293 8971 9005
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 293 8971 9006 "lib/bregistry.ml" 293 8971 9007
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 291 8850 8900 "lib/bregistry.ml" 291 8850 8901
+)
+"lib/bregistry.ml" 293 8971 8982 "lib/bregistry.ml" 293 8971 9008
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 294 9009 9021 "lib/bregistry.ml" 294 9009 9037
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bregistry.ml" 294 9009 9038 "lib/bregistry.ml" 294 9009 9041
+type(
+  string
+)
+"lib/bregistry.ml" 294 9009 9043 "lib/bregistry.ml" 294 9009 9055
+type(
+  (Bident.Qid.t -> string) -> Bident.Qid.t list -> string list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 294 9009 9056 "lib/bregistry.ml" 294 9009 9078
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 294 9009 9079 "lib/bregistry.ml" 294 9009 9083
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 291 8850 8895 "lib/bregistry.ml" 291 8850 8899
+)
+"lib/bregistry.ml" 294 9009 9042 "lib/bregistry.ml" 294 9009 9084
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 294 9009 9020 "lib/bregistry.ml" 294 9009 9085
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 292 8905 8926 "lib/bregistry.ml" 294 9009 9085
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 292 8905 8915 "lib/bregistry.ml" 294 9009 9086
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 292 8905 8907 "lib/bregistry.ml" 294 9009 9086
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 295 9088 9098 "lib/bregistry.ml" 295 9088 9116
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> 'b option
+)
+ident(
+  def lookup_library_aux "lib/bregistry.ml" 295 9088 9090 "lib/bregistry.ml" 312 9824 9851
+)
+"lib/bregistry.ml" 295 9088 9117 "lib/bregistry.ml" 295 9088 9121
+type(
+  Bident.Qid.t list
+)
+ident(
+  def nctx "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 310 9803 9818
+)
+"lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+type(
+  Bident.Qid.t
+)
+ident(
+  def q2 "lib/bregistry.ml" 296 9134 9138 "lib/bregistry.ml" 310 9803 9818
+)
+"lib/bregistry.ml" 296 9134 9138 "lib/bregistry.ml" 296 9134 9145
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 296 9134 9151 "lib/bregistry.ml" 296 9134 9153
+type(
+  unit
+)
+"lib/bregistry.ml" 296 9134 9157 "lib/bregistry.ml" 296 9134 9160
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 296 9134 9161 "lib/bregistry.ml" 296 9134 9196
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 297 9198 9212 "lib/bregistry.ml" 297 9198 9234
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 297 9198 9235 "lib/bregistry.ml" 297 9198 9237
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+)
+"lib/bregistry.ml" 297 9198 9211 "lib/bregistry.ml" 297 9198 9238
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 298 9239 9253 "lib/bregistry.ml" 298 9239 9269
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bregistry.ml" 298 9239 9270 "lib/bregistry.ml" 298 9239 9273
+type(
+  string
+)
+"lib/bregistry.ml" 298 9239 9275 "lib/bregistry.ml" 298 9239 9287
+type(
+  (Bident.Qid.t -> string) -> Bident.Qid.t list -> string list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 298 9239 9288 "lib/bregistry.ml" 298 9239 9310
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 298 9239 9311 "lib/bregistry.ml" 298 9239 9315
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 295 9088 9117 "lib/bregistry.ml" 295 9088 9121
+)
+"lib/bregistry.ml" 298 9239 9274 "lib/bregistry.ml" 298 9239 9316
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 298 9239 9252 "lib/bregistry.ml" 298 9239 9317
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 296 9134 9157 "lib/bregistry.ml" 298 9239 9317
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 296 9134 9146 "lib/bregistry.ml" 298 9239 9318
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 296 9134 9138 "lib/bregistry.ml" 298 9239 9318
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 299 9320 9328 "lib/bregistry.ml" 299 9320 9335
+type(
+  unit -> 'a option
+)
+ident(
+  def try_lib "lib/bregistry.ml" 301 9429 9435 "lib/bregistry.ml" 310 9803 9818
+)
+"lib/bregistry.ml" 299 9320 9336 "lib/bregistry.ml" 299 9320 9338
+type(
+  unit
+)
+"lib/bregistry.ml" 299 9320 9341 "lib/bregistry.ml" 299 9320 9351
+type(
+  REnv.t -> Bident.Qid.t -> 'a option
+)
+ident(
+  int_ref lookup_fun "lib/bregistry.ml" 291 8850 8884 "lib/bregistry.ml" 291 8850 8894
+)
+"lib/bregistry.ml" 299 9320 9352 "lib/bregistry.ml" 299 9320 9353
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 299 9320 9353 "lib/bregistry.ml" 299 9320 9360
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 299 9320 9352 "lib/bregistry.ml" 299 9320 9360
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 299 9320 9361 "lib/bregistry.ml" 299 9320 9363
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+)
+"lib/bregistry.ml" 299 9320 9341 "lib/bregistry.ml" 299 9320 9363
+call(
+  tail
+)
+type(
+  'a option
+)
+"lib/bregistry.ml" 301 9429 9441 "lib/bregistry.ml" 301 9429 9448
+type(
+  unit -> 'a option
+)
+ident(
+  int_ref try_lib "lib/bregistry.ml" 299 9320 9328 "lib/bregistry.ml" 299 9320 9335
+)
+"lib/bregistry.ml" 301 9429 9449 "lib/bregistry.ml" 301 9429 9451
+type(
+  unit
+)
+"lib/bregistry.ml" 301 9429 9441 "lib/bregistry.ml" 301 9429 9451
+call(
+  stack
+)
+type(
+  'a option
+)
+"lib/bregistry.ml" 302 9457 9472 "lib/bregistry.ml" 302 9457 9473
+type(
+  'a
+)
+ident(
+  def r "lib/bregistry.ml" 302 9457 9477 "lib/bregistry.ml" 302 9457 9498
+)
+"lib/bregistry.ml" 302 9457 9467 "lib/bregistry.ml" 302 9457 9473
+type(
+  'a option
+)
+"lib/bregistry.ml" 302 9457 9483 "lib/bregistry.ml" 302 9457 9489
+type(
+  Bident.Qid.t * 'a -> 'b
+)
+ident(
+  int_ref select "lib/bregistry.ml" 291 8850 8877 "lib/bregistry.ml" 291 8850 8883
+)
+"lib/bregistry.ml" 302 9457 9491 "lib/bregistry.ml" 302 9457 9493
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+)
+"lib/bregistry.ml" 302 9457 9495 "lib/bregistry.ml" 302 9457 9496
+type(
+  'a
+)
+ident(
+  int_ref r "lib/bregistry.ml" 302 9457 9472 "lib/bregistry.ml" 302 9457 9473
+)
+"lib/bregistry.ml" 302 9457 9490 "lib/bregistry.ml" 302 9457 9497
+type(
+  Bident.Qid.t * 'a
+)
+"lib/bregistry.ml" 302 9457 9482 "lib/bregistry.ml" 302 9457 9498
+call(
+  stack
+)
+type(
+  'b
+)
+"lib/bregistry.ml" 302 9457 9477 "lib/bregistry.ml" 302 9457 9498
+type(
+  'b option
+)
+"lib/bregistry.ml" 303 9499 9509 "lib/bregistry.ml" 303 9499 9513
+type(
+  'a option
+)
+"lib/bregistry.ml" 304 9518 9542 "lib/bregistry.ml" 304 9518 9550
+type(
+  Bident.Qid.t -> unit
+)
+ident(
+  int_ref load_var "lib/bregistry.ml" 286 8674 8678 "lib/bregistry.ml" 286 8674 8686
+)
+"lib/bregistry.ml" 304 9518 9551 "lib/bregistry.ml" 304 9518 9553
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+)
+"lib/bregistry.ml" 304 9518 9542 "lib/bregistry.ml" 304 9518 9553
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 304 9518 9555 "lib/bregistry.ml" 304 9518 9562
+type(
+  unit -> 'a option
+)
+ident(
+  int_ref try_lib "lib/bregistry.ml" 299 9320 9328 "lib/bregistry.ml" 299 9320 9335
+)
+"lib/bregistry.ml" 304 9518 9563 "lib/bregistry.ml" 304 9518 9565
+type(
+  unit
+)
+"lib/bregistry.ml" 304 9518 9555 "lib/bregistry.ml" 304 9518 9565
+call(
+  stack
+)
+type(
+  'a option
+)
+"lib/bregistry.ml" 304 9518 9542 "lib/bregistry.ml" 304 9518 9565
+type(
+  'a option
+)
+"lib/bregistry.ml" 305 9571 9592 "lib/bregistry.ml" 305 9571 9593
+type(
+  'a
+)
+ident(
+  def r "lib/bregistry.ml" 305 9571 9597 "lib/bregistry.ml" 305 9571 9618
+)
+"lib/bregistry.ml" 305 9571 9587 "lib/bregistry.ml" 305 9571 9593
+type(
+  'a option
+)
+"lib/bregistry.ml" 305 9571 9603 "lib/bregistry.ml" 305 9571 9609
+type(
+  Bident.Qid.t * 'a -> 'b
+)
+ident(
+  int_ref select "lib/bregistry.ml" 291 8850 8877 "lib/bregistry.ml" 291 8850 8883
+)
+"lib/bregistry.ml" 305 9571 9611 "lib/bregistry.ml" 305 9571 9613
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 295 9088 9122 "lib/bregistry.ml" 295 9088 9124
+)
+"lib/bregistry.ml" 305 9571 9615 "lib/bregistry.ml" 305 9571 9616
+type(
+  'a
+)
+ident(
+  int_ref r "lib/bregistry.ml" 305 9571 9592 "lib/bregistry.ml" 305 9571 9593
+)
+"lib/bregistry.ml" 305 9571 9610 "lib/bregistry.ml" 305 9571 9617
+type(
+  Bident.Qid.t * 'a
+)
+"lib/bregistry.ml" 305 9571 9602 "lib/bregistry.ml" 305 9571 9618
+call(
+  stack
+)
+type(
+  'b
+)
+"lib/bregistry.ml" 305 9571 9597 "lib/bregistry.ml" 305 9571 9618
+type(
+  'b option
+)
+"lib/bregistry.ml" 306 9619 9635 "lib/bregistry.ml" 306 9619 9639
+type(
+  'a option
+)
+"lib/bregistry.ml" 306 9619 9649 "lib/bregistry.ml" 306 9619 9653
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 295 9088 9117 "lib/bregistry.ml" 295 9088 9121
+)
+"lib/bregistry.ml" 307 9660 9680 "lib/bregistry.ml" 307 9660 9682
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 307 9660 9692 "lib/bregistry.ml" 307 9660 9696
+type(
+  'b option
+)
+"lib/bregistry.ml" 308 9697 9717 "lib/bregistry.ml" 308 9697 9718
+type(
+  Bident.Qid.t
+)
+ident(
+  def o "lib/bregistry.ml" 309 9730 9752 "lib/bregistry.ml" 309 9730 9801
+)
+"lib/bregistry.ml" 308 9697 9720 "lib/bregistry.ml" 308 9697 9725
+type(
+  Bident.Qid.t list
+)
+ident(
+  def orest "lib/bregistry.ml" 309 9730 9752 "lib/bregistry.ml" 309 9730 9801
+)
+"lib/bregistry.ml" 308 9697 9717 "lib/bregistry.ml" 308 9697 9725
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 309 9730 9752 "lib/bregistry.ml" 309 9730 9770
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> 'b option
+)
+ident(
+  int_ref lookup_library_aux "lib/bregistry.ml" 295 9088 9098 "lib/bregistry.ml" 295 9088 9116
+)
+"lib/bregistry.ml" 309 9730 9771 "lib/bregistry.ml" 309 9730 9776
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref orest "lib/bregistry.ml" 308 9697 9720 "lib/bregistry.ml" 308 9697 9725
+)
+"lib/bregistry.ml" 309 9730 9778 "lib/bregistry.ml" 309 9730 9796
+type(
+  Bident.Qid.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.t_dot_t
+)
+"lib/bregistry.ml" 309 9730 9797 "lib/bregistry.ml" 309 9730 9798
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref o "lib/bregistry.ml" 308 9697 9717 "lib/bregistry.ml" 308 9697 9718
+)
+"lib/bregistry.ml" 309 9730 9799 "lib/bregistry.ml" 309 9730 9800
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 291 8850 8900 "lib/bregistry.ml" 291 8850 8901
+)
+"lib/bregistry.ml" 309 9730 9777 "lib/bregistry.ml" 309 9730 9801
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 309 9730 9752 "lib/bregistry.ml" 309 9730 9801
+call(
+  tail
+)
+type(
+  'b option
+)
+"lib/bregistry.ml" 306 9619 9643 "lib/bregistry.ml" 309 9730 9801
+type(
+  'b option
+)
+"lib/bregistry.ml" 304 9518 9530 "lib/bregistry.ml" 310 9803 9818
+type(
+  'b option
+)
+"lib/bregistry.ml" 301 9429 9435 "lib/bregistry.ml" 310 9803 9818
+type(
+  'b option
+)
+"lib/bregistry.ml" 299 9320 9324 "lib/bregistry.ml" 310 9803 9818
+type(
+  'b option
+)
+"lib/bregistry.ml" 296 9134 9138 "lib/bregistry.ml" 310 9803 9818
+type(
+  'b option
+)
+"lib/bregistry.ml" 312 9824 9826 "lib/bregistry.ml" 312 9824 9844
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> 'b option
+)
+ident(
+  int_ref lookup_library_aux "lib/bregistry.ml" 295 9088 9098 "lib/bregistry.ml" 295 9088 9116
+)
+"lib/bregistry.ml" 312 9824 9845 "lib/bregistry.ml" 312 9824 9849
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 291 8850 8895 "lib/bregistry.ml" 291 8850 8899
+)
+"lib/bregistry.ml" 312 9824 9850 "lib/bregistry.ml" 312 9824 9851
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 291 8850 8900 "lib/bregistry.ml" 291 8850 8901
+)
+"lib/bregistry.ml" 312 9824 9826 "lib/bregistry.ml" 312 9824 9851
+call(
+  tail
+)
+type(
+  'b option
+)
+"lib/bregistry.ml" 295 9088 9090 "lib/bregistry.ml" 312 9824 9851
+type(
+  'b option
+)
+"lib/bregistry.ml" 292 8905 8907 "lib/bregistry.ml" 312 9824 9851
+type(
+  'b option
+)
+"lib/bregistry.ml" 314 9853 9857 "lib/bregistry.ml" 314 9853 9875
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> rv option
+)
+ident(
+  def lookup_library_ctx "lib/bregistry.ml" 318 10016 10016 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 314 9853 9876 "lib/bregistry.ml" 314 9853 9878
+type(
+  Bident.Qid.t list
+)
+ident(
+  def os "lib/bregistry.ml" 314 9853 9879 "lib/bregistry.ml" 316 9969 10014
+)
+"lib/bregistry.ml" 314 9853 9879 "lib/bregistry.ml" 314 9853 9880
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 315 9884 9886 "lib/bregistry.ml" 316 9969 10014
+)
+"lib/bregistry.ml" 315 9884 9886 "lib/bregistry.ml" 315 9884 9893
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 315 9884 9899 "lib/bregistry.ml" 315 9884 9901
+type(
+  unit
+)
+"lib/bregistry.ml" 315 9884 9905 "lib/bregistry.ml" 315 9884 9908
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 315 9884 9909 "lib/bregistry.ml" 315 9884 9939
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 315 9884 9941 "lib/bregistry.ml" 315 9884 9963
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 315 9884 9964 "lib/bregistry.ml" 315 9884 9965
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 314 9853 9879 "lib/bregistry.ml" 314 9853 9880
+)
+"lib/bregistry.ml" 315 9884 9940 "lib/bregistry.ml" 315 9884 9966
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 315 9884 9905 "lib/bregistry.ml" 315 9884 9966
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 315 9884 9894 "lib/bregistry.ml" 315 9884 9967
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 315 9884 9886 "lib/bregistry.ml" 315 9884 9967
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 316 9969 9971 "lib/bregistry.ml" 316 9969 9993
+type(
+  (Bident.Qid.t * rv -> rv) ->
+  (REnv.t -> Bident.Qid.t -> rv option) ->
+  Bident.Qid.t list -> Bident.Qid.t -> rv option
+)
+ident(
+  int_ref lookup_library_generic "lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+)
+"lib/bregistry.ml" 316 9969 9994 "lib/bregistry.ml" 316 9969 9997
+type(
+  Bident.Qid.t * rv -> rv
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"lib/bregistry.ml" 316 9969 9998 "lib/bregistry.ml" 316 9969 10009
+type(
+  REnv.t -> Bident.Qid.t -> rv option
+)
+ident(
+  int_ref REnv.lookup "lib/bregistry.ml" 100 3801 3807 "lib/bregistry.ml" 100 3801 3813
+)
+"lib/bregistry.ml" 316 9969 10010 "lib/bregistry.ml" 316 9969 10012
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref os "lib/bregistry.ml" 314 9853 9876 "lib/bregistry.ml" 314 9853 9878
+)
+"lib/bregistry.ml" 316 9969 10013 "lib/bregistry.ml" 316 9969 10014
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 314 9853 9879 "lib/bregistry.ml" 314 9853 9880
+)
+"lib/bregistry.ml" 316 9969 9971 "lib/bregistry.ml" 316 9969 10014
+call(
+  tail
+)
+type(
+  rv option
+)
+"lib/bregistry.ml" 315 9884 9886 "lib/bregistry.ml" 316 9969 10014
+type(
+  rv option
+)
+"lib/bregistry.ml" 318 10016 10020 "lib/bregistry.ml" 318 10016 10043
+type(
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option
+)
+ident(
+  def lookup_both_library_ctx "lib/bregistry.ml" 322 10194 10194 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 318 10016 10044 "lib/bregistry.ml" 318 10016 10046
+type(
+  Bident.Qid.t list
+)
+ident(
+  def os "lib/bregistry.ml" 318 10016 10047 "lib/bregistry.ml" 320 10142 10192
+)
+"lib/bregistry.ml" 318 10016 10047 "lib/bregistry.ml" 318 10016 10048
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 319 10052 10054 "lib/bregistry.ml" 320 10142 10192
+)
+"lib/bregistry.ml" 319 10052 10054 "lib/bregistry.ml" 319 10052 10061
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 319 10052 10067 "lib/bregistry.ml" 319 10052 10069
+type(
+  unit
+)
+"lib/bregistry.ml" 319 10052 10073 "lib/bregistry.ml" 319 10052 10076
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 319 10052 10077 "lib/bregistry.ml" 319 10052 10112
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 319 10052 10114 "lib/bregistry.ml" 319 10052 10136
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 319 10052 10137 "lib/bregistry.ml" 319 10052 10138
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 318 10016 10047 "lib/bregistry.ml" 318 10016 10048
+)
+"lib/bregistry.ml" 319 10052 10113 "lib/bregistry.ml" 319 10052 10139
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 319 10052 10073 "lib/bregistry.ml" 319 10052 10139
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 319 10052 10062 "lib/bregistry.ml" 319 10052 10140
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 319 10052 10054 "lib/bregistry.ml" 319 10052 10140
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 320 10142 10144 "lib/bregistry.ml" 320 10142 10166
+type(
+  (Bident.Qid.t * (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) ->
+   rv * (REnv.tmap * REnv.rmap * REnv.vmap)) ->
+  (REnv.t ->
+   Bident.Qid.t -> (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option) ->
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option
+)
+ident(
+  int_ref lookup_library_generic "lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+)
+"lib/bregistry.ml" 320 10142 10167 "lib/bregistry.ml" 320 10142 10170
+type(
+  Bident.Qid.t * (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) ->
+  rv * (REnv.tmap * REnv.rmap * REnv.vmap)
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"lib/bregistry.ml" 320 10142 10171 "lib/bregistry.ml" 320 10142 10187
+type(
+  REnv.t -> Bident.Qid.t -> (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option
+)
+ident(
+  int_ref REnv.lookup_both "lib/bregistry.ml" 104 3905 3911 "lib/bregistry.ml" 104 3905 3922
+)
+"lib/bregistry.ml" 320 10142 10188 "lib/bregistry.ml" 320 10142 10190
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref os "lib/bregistry.ml" 318 10016 10044 "lib/bregistry.ml" 318 10016 10046
+)
+"lib/bregistry.ml" 320 10142 10191 "lib/bregistry.ml" 320 10142 10192
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 318 10016 10047 "lib/bregistry.ml" 318 10016 10048
+)
+"lib/bregistry.ml" 320 10142 10144 "lib/bregistry.ml" 320 10142 10192
+call(
+  tail
+)
+type(
+  (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option
+)
+"lib/bregistry.ml" 319 10052 10054 "lib/bregistry.ml" 320 10142 10192
+type(
+  (rv * (REnv.tmap * REnv.rmap * REnv.vmap)) option
+)
+"lib/bregistry.ml" 322 10194 10198 "lib/bregistry.ml" 322 10194 10218
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> (Bident.Qid.t * rv) option
+)
+ident(
+  def lookup_library_ctx_o "lib/bregistry.ml" 326 10370 10370 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 322 10194 10219 "lib/bregistry.ml" 322 10194 10221
+type(
+  Bident.Qid.t list
+)
+ident(
+  def os "lib/bregistry.ml" 322 10194 10222 "lib/bregistry.ml" 324 10314 10368
+)
+"lib/bregistry.ml" 322 10194 10222 "lib/bregistry.ml" 322 10194 10223
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 323 10227 10229 "lib/bregistry.ml" 324 10314 10368
+)
+"lib/bregistry.ml" 323 10227 10229 "lib/bregistry.ml" 323 10227 10236
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 323 10227 10242 "lib/bregistry.ml" 323 10227 10244
+type(
+  unit
+)
+"lib/bregistry.ml" 323 10227 10248 "lib/bregistry.ml" 323 10227 10251
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 323 10227 10252 "lib/bregistry.ml" 323 10227 10284
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 323 10227 10286 "lib/bregistry.ml" 323 10227 10308
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 323 10227 10309 "lib/bregistry.ml" 323 10227 10310
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 322 10194 10222 "lib/bregistry.ml" 322 10194 10223
+)
+"lib/bregistry.ml" 323 10227 10285 "lib/bregistry.ml" 323 10227 10311
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 323 10227 10248 "lib/bregistry.ml" 323 10227 10311
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 323 10227 10237 "lib/bregistry.ml" 323 10227 10312
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 323 10227 10229 "lib/bregistry.ml" 323 10227 10312
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 324 10314 10316 "lib/bregistry.ml" 324 10314 10338
+type(
+  (Bident.Qid.t * rv -> Bident.Qid.t * rv) ->
+  (REnv.t -> Bident.Qid.t -> rv option) ->
+  Bident.Qid.t list -> Bident.Qid.t -> (Bident.Qid.t * rv) option
+)
+ident(
+  int_ref lookup_library_generic "lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+)
+"lib/bregistry.ml" 324 10314 10344 "lib/bregistry.ml" 324 10314 10345
+type(
+  Bident.Qid.t * rv
+)
+ident(
+  def x "lib/bregistry.ml" 324 10314 10349 "lib/bregistry.ml" 324 10314 10350
+)
+"lib/bregistry.ml" 324 10314 10349 "lib/bregistry.ml" 324 10314 10350
+type(
+  Bident.Qid.t * rv
+)
+ident(
+  int_ref x "lib/bregistry.ml" 324 10314 10344 "lib/bregistry.ml" 324 10314 10345
+)
+"lib/bregistry.ml" 324 10314 10339 "lib/bregistry.ml" 324 10314 10351
+type(
+  Bident.Qid.t * rv -> Bident.Qid.t * rv
+)
+"lib/bregistry.ml" 324 10314 10352 "lib/bregistry.ml" 324 10314 10363
+type(
+  REnv.t -> Bident.Qid.t -> rv option
+)
+ident(
+  int_ref REnv.lookup "lib/bregistry.ml" 100 3801 3807 "lib/bregistry.ml" 100 3801 3813
+)
+"lib/bregistry.ml" 324 10314 10364 "lib/bregistry.ml" 324 10314 10366
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref os "lib/bregistry.ml" 322 10194 10219 "lib/bregistry.ml" 322 10194 10221
+)
+"lib/bregistry.ml" 324 10314 10367 "lib/bregistry.ml" 324 10314 10368
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 322 10194 10222 "lib/bregistry.ml" 322 10194 10223
+)
+"lib/bregistry.ml" 324 10314 10316 "lib/bregistry.ml" 324 10314 10368
+call(
+  tail
+)
+type(
+  (Bident.Qid.t * rv) option
+)
+"lib/bregistry.ml" 323 10227 10229 "lib/bregistry.ml" 324 10314 10368
+type(
+  (Bident.Qid.t * rv) option
+)
+"lib/bregistry.ml" 326 10370 10374 "lib/bregistry.ml" 326 10370 10397
+type(
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  def lookup_type_library_ctx "lib/bregistry.ml" 330 10548 10548 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 326 10370 10398 "lib/bregistry.ml" 326 10370 10400
+type(
+  Bident.Qid.t list
+)
+ident(
+  def os "lib/bregistry.ml" 326 10370 10401 "lib/bregistry.ml" 328 10496 10546
+)
+"lib/bregistry.ml" 326 10370 10401 "lib/bregistry.ml" 326 10370 10402
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 327 10406 10408 "lib/bregistry.ml" 328 10496 10546
+)
+"lib/bregistry.ml" 327 10406 10408 "lib/bregistry.ml" 327 10406 10415
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 327 10406 10421 "lib/bregistry.ml" 327 10406 10423
+type(
+  unit
+)
+"lib/bregistry.ml" 327 10406 10427 "lib/bregistry.ml" 327 10406 10430
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 327 10406 10431 "lib/bregistry.ml" 327 10406 10466
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 327 10406 10468 "lib/bregistry.ml" 327 10406 10490
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 327 10406 10491 "lib/bregistry.ml" 327 10406 10492
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 326 10370 10401 "lib/bregistry.ml" 326 10370 10402
+)
+"lib/bregistry.ml" 327 10406 10467 "lib/bregistry.ml" 327 10406 10493
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 327 10406 10427 "lib/bregistry.ml" 327 10406 10493
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 327 10406 10416 "lib/bregistry.ml" 327 10406 10494
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 327 10406 10408 "lib/bregistry.ml" 327 10406 10494
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 328 10496 10498 "lib/bregistry.ml" 328 10496 10520
+type(
+  (Bident.Qid.t * (QM.key * (Bident.Id.t list * tcon list)) ->
+   QM.key * (Bident.Id.t list * tcon list)) ->
+  (REnv.t -> Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option) ->
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref lookup_library_generic "lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+)
+"lib/bregistry.ml" 328 10496 10521 "lib/bregistry.ml" 328 10496 10524
+type(
+  Bident.Qid.t * (QM.key * (Bident.Id.t list * tcon list)) ->
+  QM.key * (Bident.Id.t list * tcon list)
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"lib/bregistry.ml" 328 10496 10525 "lib/bregistry.ml" 328 10496 10541
+type(
+  REnv.t -> Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref REnv.lookup_type "lib/bregistry.ml" 108 4031 4037 "lib/bregistry.ml" 108 4031 4048
+)
+"lib/bregistry.ml" 328 10496 10542 "lib/bregistry.ml" 328 10496 10544
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref os "lib/bregistry.ml" 326 10370 10398 "lib/bregistry.ml" 326 10370 10400
+)
+"lib/bregistry.ml" 328 10496 10545 "lib/bregistry.ml" 328 10496 10546
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 326 10370 10401 "lib/bregistry.ml" 326 10370 10402
+)
+"lib/bregistry.ml" 328 10496 10498 "lib/bregistry.ml" 328 10496 10546
+call(
+  tail
+)
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 327 10406 10408 "lib/bregistry.ml" 328 10496 10546
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 330 10548 10552 "lib/bregistry.ml" 330 10548 10574
+type(
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  def lookup_con_library_ctx "lib/bregistry.ml" 334 10723 10723 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 330 10548 10575 "lib/bregistry.ml" 330 10548 10577
+type(
+  Bident.Qid.t list
+)
+ident(
+  def os "lib/bregistry.ml" 330 10548 10578 "lib/bregistry.ml" 332 10672 10721
+)
+"lib/bregistry.ml" 330 10548 10578 "lib/bregistry.ml" 330 10548 10579
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 331 10583 10585 "lib/bregistry.ml" 332 10672 10721
+)
+"lib/bregistry.ml" 331 10583 10585 "lib/bregistry.ml" 331 10583 10592
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 331 10583 10598 "lib/bregistry.ml" 331 10583 10600
+type(
+  unit
+)
+"lib/bregistry.ml" 331 10583 10604 "lib/bregistry.ml" 331 10583 10607
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 331 10583 10608 "lib/bregistry.ml" 331 10583 10642
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 331 10583 10644 "lib/bregistry.ml" 331 10583 10666
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 331 10583 10667 "lib/bregistry.ml" 331 10583 10668
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 330 10548 10578 "lib/bregistry.ml" 330 10548 10579
+)
+"lib/bregistry.ml" 331 10583 10643 "lib/bregistry.ml" 331 10583 10669
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 331 10583 10604 "lib/bregistry.ml" 331 10583 10669
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 331 10583 10593 "lib/bregistry.ml" 331 10583 10670
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 331 10583 10585 "lib/bregistry.ml" 331 10583 10670
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 332 10672 10674 "lib/bregistry.ml" 332 10672 10696
+type(
+  (Bident.Qid.t * (QM.key * (Bident.Id.t list * tcon list)) ->
+   QM.key * (Bident.Id.t list * tcon list)) ->
+  (REnv.t -> Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option) ->
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref lookup_library_generic "lib/bregistry.ml" 291 8850 8854 "lib/bregistry.ml" 291 8850 8876
+)
+"lib/bregistry.ml" 332 10672 10697 "lib/bregistry.ml" 332 10672 10700
+type(
+  Bident.Qid.t * (QM.key * (Bident.Id.t list * tcon list)) ->
+  QM.key * (Bident.Id.t list * tcon list)
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"lib/bregistry.ml" 332 10672 10701 "lib/bregistry.ml" 332 10672 10716
+type(
+  REnv.t -> Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref REnv.lookup_con "lib/bregistry.ml" 112 4143 4149 "lib/bregistry.ml" 112 4143 4159
+)
+"lib/bregistry.ml" 332 10672 10717 "lib/bregistry.ml" 332 10672 10719
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref os "lib/bregistry.ml" 330 10548 10575 "lib/bregistry.ml" 330 10548 10577
+)
+"lib/bregistry.ml" 332 10672 10720 "lib/bregistry.ml" 332 10672 10721
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 330 10548 10578 "lib/bregistry.ml" 330 10548 10579
+)
+"lib/bregistry.ml" 332 10672 10674 "lib/bregistry.ml" 332 10672 10721
+call(
+  tail
+)
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 331 10583 10585 "lib/bregistry.ml" 332 10672 10721
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 334 10723 10727 "lib/bregistry.ml" 334 10723 10741
+type(
+  Bident.Qid.t -> rv option
+)
+ident(
+  def lookup_library "lib/bregistry.ml" 338 10855 10855 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 334 10723 10742 "lib/bregistry.ml" 334 10723 10743
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 335 10747 10749 "lib/bregistry.ml" 336 10828 10853
+)
+"lib/bregistry.ml" 335 10747 10749 "lib/bregistry.ml" 335 10747 10756
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 335 10747 10762 "lib/bregistry.ml" 335 10747 10764
+type(
+  unit
+)
+"lib/bregistry.ml" 335 10747 10768 "lib/bregistry.ml" 335 10747 10771
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 335 10747 10772 "lib/bregistry.ml" 335 10747 10798
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 335 10747 10800 "lib/bregistry.ml" 335 10747 10822
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 335 10747 10823 "lib/bregistry.ml" 335 10747 10824
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 334 10723 10742 "lib/bregistry.ml" 334 10723 10743
+)
+"lib/bregistry.ml" 335 10747 10799 "lib/bregistry.ml" 335 10747 10825
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 335 10747 10768 "lib/bregistry.ml" 335 10747 10825
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 335 10747 10757 "lib/bregistry.ml" 335 10747 10826
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 335 10747 10749 "lib/bregistry.ml" 335 10747 10826
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 336 10828 10830 "lib/bregistry.ml" 336 10828 10848
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> rv option
+)
+ident(
+  int_ref lookup_library_ctx "lib/bregistry.ml" 314 9853 9857 "lib/bregistry.ml" 314 9853 9875
+)
+"lib/bregistry.ml" 336 10828 10849 "lib/bregistry.ml" 336 10828 10851
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 336 10828 10852 "lib/bregistry.ml" 336 10828 10853
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 334 10723 10742 "lib/bregistry.ml" 334 10723 10743
+)
+"lib/bregistry.ml" 336 10828 10830 "lib/bregistry.ml" 336 10828 10853
+call(
+  tail
+)
+type(
+  rv option
+)
+"lib/bregistry.ml" 335 10747 10749 "lib/bregistry.ml" 336 10828 10853
+type(
+  rv option
+)
+"lib/bregistry.ml" 338 10855 10859 "lib/bregistry.ml" 338 10855 10878
+type(
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  def lookup_type_library "lib/bregistry.ml" 342 11002 11002 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 338 10855 10879 "lib/bregistry.ml" 338 10855 10880
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 339 10884 10886 "lib/bregistry.ml" 340 10970 11000
+)
+"lib/bregistry.ml" 339 10884 10886 "lib/bregistry.ml" 339 10884 10893
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 339 10884 10899 "lib/bregistry.ml" 339 10884 10901
+type(
+  unit
+)
+"lib/bregistry.ml" 339 10884 10905 "lib/bregistry.ml" 339 10884 10908
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 339 10884 10909 "lib/bregistry.ml" 339 10884 10940
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 339 10884 10942 "lib/bregistry.ml" 339 10884 10964
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 339 10884 10965 "lib/bregistry.ml" 339 10884 10966
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 338 10855 10879 "lib/bregistry.ml" 338 10855 10880
+)
+"lib/bregistry.ml" 339 10884 10941 "lib/bregistry.ml" 339 10884 10967
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 339 10884 10905 "lib/bregistry.ml" 339 10884 10967
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 339 10884 10894 "lib/bregistry.ml" 339 10884 10968
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 339 10884 10886 "lib/bregistry.ml" 339 10884 10968
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 340 10970 10972 "lib/bregistry.ml" 340 10970 10995
+type(
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref lookup_type_library_ctx "lib/bregistry.ml" 326 10370 10374 "lib/bregistry.ml" 326 10370 10397
+)
+"lib/bregistry.ml" 340 10970 10996 "lib/bregistry.ml" 340 10970 10998
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 340 10970 10999 "lib/bregistry.ml" 340 10970 11000
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 338 10855 10879 "lib/bregistry.ml" 338 10855 10880
+)
+"lib/bregistry.ml" 340 10970 10972 "lib/bregistry.ml" 340 10970 11000
+call(
+  tail
+)
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 339 10884 10886 "lib/bregistry.ml" 340 10970 11000
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 342 11002 11006 "lib/bregistry.ml" 342 11002 11024
+type(
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  def lookup_con_library "lib/bregistry.ml" 349 11264 11264 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 342 11002 11025 "lib/bregistry.ml" 342 11002 11026
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 343 11030 11032 "lib/bregistry.ml" 344 11115 11144
+)
+"lib/bregistry.ml" 343 11030 11032 "lib/bregistry.ml" 343 11030 11039
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 343 11030 11045 "lib/bregistry.ml" 343 11030 11047
+type(
+  unit
+)
+"lib/bregistry.ml" 343 11030 11051 "lib/bregistry.ml" 343 11030 11054
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 343 11030 11055 "lib/bregistry.ml" 343 11030 11085
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 343 11030 11087 "lib/bregistry.ml" 343 11030 11109
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 343 11030 11110 "lib/bregistry.ml" 343 11030 11111
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 342 11002 11025 "lib/bregistry.ml" 342 11002 11026
+)
+"lib/bregistry.ml" 343 11030 11086 "lib/bregistry.ml" 343 11030 11112
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 343 11030 11051 "lib/bregistry.ml" 343 11030 11112
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 343 11030 11040 "lib/bregistry.ml" 343 11030 11113
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 343 11030 11032 "lib/bregistry.ml" 343 11030 11113
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 344 11115 11117 "lib/bregistry.ml" 344 11115 11139
+type(
+  Bident.Qid.t list ->
+  Bident.Qid.t -> (QM.key * (Bident.Id.t list * tcon list)) option
+)
+ident(
+  int_ref lookup_con_library_ctx "lib/bregistry.ml" 330 10548 10552 "lib/bregistry.ml" 330 10548 10574
+)
+"lib/bregistry.ml" 344 11115 11140 "lib/bregistry.ml" 344 11115 11142
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 344 11115 11143 "lib/bregistry.ml" 344 11115 11144
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 342 11002 11025 "lib/bregistry.ml" 342 11002 11026
+)
+"lib/bregistry.ml" 344 11115 11117 "lib/bregistry.ml" 344 11115 11144
+call(
+  tail
+)
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 343 11030 11032 "lib/bregistry.ml" 344 11115 11144
+type(
+  (QM.key * (Bident.Id.t list * tcon list)) option
+)
+"lib/bregistry.ml" 349 11264 11268 "lib/bregistry.ml" 349 11264 11283
+type(
+  (REnv.t -> Bident.Qid.t -> 'a option) ->
+  Bident.Qid.t list -> Bident.Id.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  def resolve_library "lib/bregistry.ml" 370 12116 12116 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 349 11264 11284 "lib/bregistry.ml" 349 11264 11294
+type(
+  REnv.t -> Bident.Qid.t -> 'a option
+)
+ident(
+  def lookup_fun "lib/bregistry.ml" 349 11264 11295 "lib/bregistry.ml" 366 12003 12031
+)
+"lib/bregistry.ml" 349 11264 11295 "lib/bregistry.ml" 349 11264 11299
+type(
+  Bident.Qid.t list
+)
+ident(
+  def nctx "lib/bregistry.ml" 349 11264 11300 "lib/bregistry.ml" 366 12003 12031
+)
+"lib/bregistry.ml" 349 11264 11300 "lib/bregistry.ml" 349 11264 11301
+type(
+  Bident.Id.t
+)
+ident(
+  def m "lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 366 12003 12031
+)
+"lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 349 11264 11303
+type(
+  Bident.Qid.t
+)
+ident(
+  def q "lib/bregistry.ml" 350 11307 11309 "lib/bregistry.ml" 366 12003 12031
+)
+"lib/bregistry.ml" 350 11307 11309 "lib/bregistry.ml" 350 11307 11316
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 350 11307 11322 "lib/bregistry.ml" 350 11307 11324
+type(
+  unit
+)
+"lib/bregistry.ml" 350 11307 11328 "lib/bregistry.ml" 350 11307 11331
+type(
+  (string -> string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 350 11307 11332 "lib/bregistry.ml" 350 11307 11370
+type(
+  (string -> string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 351 11372 11384 "lib/bregistry.ml" 351 11372 11406
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 351 11372 11407 "lib/bregistry.ml" 351 11372 11408
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 349 11264 11303
+)
+"lib/bregistry.ml" 351 11372 11383 "lib/bregistry.ml" 351 11372 11409
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 352 11410 11422 "lib/bregistry.ml" 352 11410 11438
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bregistry.ml" 352 11410 11439 "lib/bregistry.ml" 352 11410 11442
+type(
+  string
+)
+"lib/bregistry.ml" 352 11410 11444 "lib/bregistry.ml" 352 11410 11456
+type(
+  (Bident.Qid.t -> string) -> Bident.Qid.t list -> string list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 352 11410 11457 "lib/bregistry.ml" 352 11410 11479
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 352 11410 11480 "lib/bregistry.ml" 352 11410 11484
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 349 11264 11295 "lib/bregistry.ml" 349 11264 11299
+)
+"lib/bregistry.ml" 352 11410 11443 "lib/bregistry.ml" 352 11410 11485
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 352 11410 11421 "lib/bregistry.ml" 352 11410 11486
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 353 11487 11492 "lib/bregistry.ml" 353 11487 11513
+type(
+  Bident.Id.t -> string
+)
+ident(
+  ext_ref Bident.Id.string_of_t
+)
+"lib/bregistry.ml" 353 11487 11514 "lib/bregistry.ml" 353 11487 11515
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bregistry.ml" 349 11264 11300 "lib/bregistry.ml" 349 11264 11301
+)
+"lib/bregistry.ml" 353 11487 11491 "lib/bregistry.ml" 353 11487 11516
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 350 11307 11328 "lib/bregistry.ml" 353 11487 11516
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 350 11307 11317 "lib/bregistry.ml" 353 11487 11517
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 350 11307 11309 "lib/bregistry.ml" 353 11487 11517
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 354 11519 11529 "lib/bregistry.ml" 354 11519 11548
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  def resolve_library_aux "lib/bregistry.ml" 354 11519 11521 "lib/bregistry.ml" 366 12003 12031
+)
+"lib/bregistry.ml" 354 11519 11549 "lib/bregistry.ml" 354 11519 11553
+type(
+  Bident.Qid.t list
+)
+ident(
+  def nctx "lib/bregistry.ml" 354 11519 11554 "lib/bregistry.ml" 364 11986 11997
+)
+"lib/bregistry.ml" 354 11519 11554 "lib/bregistry.ml" 354 11519 11556
+type(
+  Bident.Qid.t
+)
+ident(
+  def q2 "lib/bregistry.ml" 355 11566 11570 "lib/bregistry.ml" 364 11986 11997
+)
+"lib/bregistry.ml" 355 11566 11570 "lib/bregistry.ml" 355 11566 11577
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  int_ref verbose "lib/bregistry.ml" 24 1665 1669 "lib/bregistry.ml" 24 1665 1676
+)
+"lib/bregistry.ml" 355 11566 11583 "lib/bregistry.ml" 355 11566 11585
+type(
+  unit
+)
+"lib/bregistry.ml" 355 11566 11589 "lib/bregistry.ml" 355 11566 11592
+type(
+  (string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> unit
+)
+ident(
+  int_ref msg "lib/bregistry.ml" 25 1703 1707 "lib/bregistry.ml" 25 1703 1710
+)
+"lib/bregistry.ml" 355 11566 11593 "lib/bregistry.ml" 355 11566 11627
+type(
+  (string -> string -> unit, Format.formatter, unit) format
+)
+"lib/bregistry.ml" 356 11629 11643 "lib/bregistry.ml" 356 11629 11665
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 356 11629 11666 "lib/bregistry.ml" 356 11629 11668
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 354 11519 11554 "lib/bregistry.ml" 354 11519 11556
+)
+"lib/bregistry.ml" 356 11629 11642 "lib/bregistry.ml" 356 11629 11669
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 357 11670 11684 "lib/bregistry.ml" 357 11670 11700
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bregistry.ml" 357 11670 11701 "lib/bregistry.ml" 357 11670 11704
+type(
+  string
+)
+"lib/bregistry.ml" 357 11670 11706 "lib/bregistry.ml" 357 11670 11718
+type(
+  (Bident.Qid.t -> string) -> Bident.Qid.t list -> string list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 357 11670 11719 "lib/bregistry.ml" 357 11670 11741
+type(
+  Bident.Qid.t -> string
+)
+ident(
+  ext_ref Bident.Qid.string_of_t
+)
+"lib/bregistry.ml" 357 11670 11742 "lib/bregistry.ml" 357 11670 11746
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 354 11519 11549 "lib/bregistry.ml" 354 11519 11553
+)
+"lib/bregistry.ml" 357 11670 11705 "lib/bregistry.ml" 357 11670 11747
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bregistry.ml" 357 11670 11683 "lib/bregistry.ml" 357 11670 11748
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bregistry.ml" 355 11566 11589 "lib/bregistry.ml" 357 11670 11748
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 355 11566 11578 "lib/bregistry.ml" 357 11670 11749
+type(
+  unit -> unit
+)
+"lib/bregistry.ml" 355 11566 11570 "lib/bregistry.ml" 357 11670 11749
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 358 11751 11761 "lib/bregistry.ml" 358 11751 11771
+type(
+  REnv.t -> Bident.Qid.t -> 'a option
+)
+ident(
+  int_ref lookup_fun "lib/bregistry.ml" 349 11264 11284 "lib/bregistry.ml" 349 11264 11294
+)
+"lib/bregistry.ml" 358 11751 11772 "lib/bregistry.ml" 358 11751 11773
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 358 11751 11773 "lib/bregistry.ml" 358 11751 11780
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 358 11751 11772 "lib/bregistry.ml" 358 11751 11780
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 358 11751 11781 "lib/bregistry.ml" 358 11751 11783
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 354 11519 11554 "lib/bregistry.ml" 354 11519 11556
+)
+"lib/bregistry.ml" 358 11751 11761 "lib/bregistry.ml" 358 11751 11783
+call(
+  stack
+)
+type(
+  'a option
+)
+"lib/bregistry.ml" 359 11789 11802 "lib/bregistry.ml" 359 11789 11803
+type(
+  'a
+)
+ident(
+  def r "lib/bregistry.ml" 359 11789 11807 "lib/bregistry.ml" 359 11789 11809
+)
+"lib/bregistry.ml" 359 11789 11797 "lib/bregistry.ml" 359 11789 11803
+type(
+  'a option
+)
+"lib/bregistry.ml" 359 11789 11807 "lib/bregistry.ml" 359 11789 11809
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q2 "lib/bregistry.ml" 354 11519 11554 "lib/bregistry.ml" 354 11519 11556
+)
+"lib/bregistry.ml" 360 11810 11818 "lib/bregistry.ml" 360 11810 11822
+type(
+  'a option
+)
+"lib/bregistry.ml" 360 11810 11838 "lib/bregistry.ml" 360 11810 11842
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 354 11519 11549 "lib/bregistry.ml" 354 11519 11553
+)
+"lib/bregistry.ml" 361 11849 11861 "lib/bregistry.ml" 361 11849 11863
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 361 11849 11873 "lib/bregistry.ml" 361 11849 11890
+type(
+  Bident.Id.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.id_dot
+)
+"lib/bregistry.ml" 361 11849 11891 "lib/bregistry.ml" 361 11849 11892
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bregistry.ml" 349 11264 11300 "lib/bregistry.ml" 349 11264 11301
+)
+"lib/bregistry.ml" 361 11849 11893 "lib/bregistry.ml" 361 11849 11894
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 349 11264 11303
+)
+"lib/bregistry.ml" 361 11849 11873 "lib/bregistry.ml" 361 11849 11894
+call(
+  tail
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 362 11895 11907 "lib/bregistry.ml" 362 11895 11908
+type(
+  Bident.Qid.t
+)
+ident(
+  def o "lib/bregistry.ml" 363 11920 11934 "lib/bregistry.ml" 363 11920 11984
+)
+"lib/bregistry.ml" 362 11895 11910 "lib/bregistry.ml" 362 11895 11915
+type(
+  Bident.Qid.t list
+)
+ident(
+  def orest "lib/bregistry.ml" 363 11920 11934 "lib/bregistry.ml" 363 11920 11984
+)
+"lib/bregistry.ml" 362 11895 11907 "lib/bregistry.ml" 362 11895 11915
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 363 11920 11934 "lib/bregistry.ml" 363 11920 11953
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  int_ref resolve_library_aux "lib/bregistry.ml" 354 11519 11529 "lib/bregistry.ml" 354 11519 11548
+)
+"lib/bregistry.ml" 363 11920 11954 "lib/bregistry.ml" 363 11920 11959
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref orest "lib/bregistry.ml" 362 11895 11910 "lib/bregistry.ml" 362 11895 11915
+)
+"lib/bregistry.ml" 363 11920 11961 "lib/bregistry.ml" 363 11920 11979
+type(
+  Bident.Qid.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.t_dot_t
+)
+"lib/bregistry.ml" 363 11920 11980 "lib/bregistry.ml" 363 11920 11981
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref o "lib/bregistry.ml" 362 11895 11907 "lib/bregistry.ml" 362 11895 11908
+)
+"lib/bregistry.ml" 363 11920 11982 "lib/bregistry.ml" 363 11920 11983
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 349 11264 11303
+)
+"lib/bregistry.ml" 363 11920 11960 "lib/bregistry.ml" 363 11920 11984
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 363 11920 11934 "lib/bregistry.ml" 363 11920 11984
+call(
+  tail
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 360 11810 11826 "lib/bregistry.ml" 364 11986 11997
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 358 11751 11755 "lib/bregistry.ml" 364 11986 11997
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 355 11566 11570 "lib/bregistry.ml" 364 11986 11997
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 366 12003 12005 "lib/bregistry.ml" 366 12003 12024
+type(
+  Bident.Qid.t list -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  int_ref resolve_library_aux "lib/bregistry.ml" 354 11519 11529 "lib/bregistry.ml" 354 11519 11548
+)
+"lib/bregistry.ml" 366 12003 12025 "lib/bregistry.ml" 366 12003 12029
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 349 11264 11295 "lib/bregistry.ml" 349 11264 11299
+)
+"lib/bregistry.ml" 366 12003 12030 "lib/bregistry.ml" 366 12003 12031
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref q "lib/bregistry.ml" 349 11264 11302 "lib/bregistry.ml" 349 11264 11303
+)
+"lib/bregistry.ml" 366 12003 12005 "lib/bregistry.ml" 366 12003 12031
+call(
+  tail
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 354 11519 11521 "lib/bregistry.ml" 366 12003 12031
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 350 11307 11309 "lib/bregistry.ml" 366 12003 12031
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 370 12116 12120 "lib/bregistry.ml" 370 12116 12128
+type(
+  QM.key -> rv -> unit
+)
+ident(
+  def register "lib/bregistry.ml" 373 12179 12179 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 370 12116 12129 "lib/bregistry.ml" 370 12116 12130
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 370 12116 12131 "lib/bregistry.ml" 371 12136 12177
+)
+"lib/bregistry.ml" 370 12116 12131 "lib/bregistry.ml" 370 12116 12132
+type(
+  rv
+)
+ident(
+  def r "lib/bregistry.ml" 371 12136 12138 "lib/bregistry.ml" 371 12136 12177
+)
+"lib/bregistry.ml" 371 12136 12138 "lib/bregistry.ml" 371 12136 12145
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 371 12136 12146 "lib/bregistry.ml" 371 12136 12148
+type(
+  REnv.t ref -> REnv.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 371 12136 12150 "lib/bregistry.ml" 371 12136 12161
+type(
+  REnv.t -> QM.key -> rv -> REnv.t
+)
+ident(
+  int_ref REnv.update "lib/bregistry.ml" 124 4541 4547 "lib/bregistry.ml" 124 4541 4553
+)
+"lib/bregistry.ml" 371 12136 12163 "lib/bregistry.ml" 371 12136 12164
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 371 12136 12164 "lib/bregistry.ml" 371 12136 12171
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 371 12136 12162 "lib/bregistry.ml" 371 12136 12172
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 371 12136 12173 "lib/bregistry.ml" 371 12136 12174
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 370 12116 12129 "lib/bregistry.ml" 370 12116 12130
+)
+"lib/bregistry.ml" 371 12136 12175 "lib/bregistry.ml" 371 12136 12176
+type(
+  rv
+)
+ident(
+  int_ref r "lib/bregistry.ml" 370 12116 12131 "lib/bregistry.ml" 370 12116 12132
+)
+"lib/bregistry.ml" 371 12136 12149 "lib/bregistry.ml" 371 12136 12177
+call(
+  stack
+)
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 371 12136 12138 "lib/bregistry.ml" 371 12136 12177
+type(
+  unit
+)
+"lib/bregistry.ml" 373 12179 12183 "lib/bregistry.ml" 373 12179 12196
+type(
+  QM.key -> Bident.Id.t list * tcon list -> unit
+)
+ident(
+  def register_type "lib/bregistry.ml" 376 12264 12264 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 373 12179 12197 "lib/bregistry.ml" 373 12179 12198
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 373 12179 12199 "lib/bregistry.ml" 374 12211 12262
+)
+"lib/bregistry.ml" 373 12179 12200 "lib/bregistry.ml" 373 12179 12203
+type(
+  Bident.Id.t list
+)
+ident(
+  def svl "lib/bregistry.ml" 374 12211 12213 "lib/bregistry.ml" 374 12211 12262
+)
+"lib/bregistry.ml" 373 12179 12204 "lib/bregistry.ml" 373 12179 12206
+type(
+  tcon list
+)
+ident(
+  def cl "lib/bregistry.ml" 374 12211 12213 "lib/bregistry.ml" 374 12211 12262
+)
+"lib/bregistry.ml" 373 12179 12199 "lib/bregistry.ml" 373 12179 12207
+type(
+  Bident.Id.t list * tcon list
+)
+"lib/bregistry.ml" 374 12211 12213 "lib/bregistry.ml" 374 12211 12220
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 374 12211 12221 "lib/bregistry.ml" 374 12211 12223
+type(
+  REnv.t ref -> REnv.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/bregistry.ml" 374 12211 12225 "lib/bregistry.ml" 374 12211 12241
+type(
+  REnv.t -> Bident.Id.t list -> QM.key -> tcon list -> REnv.t
+)
+ident(
+  int_ref REnv.update_type "lib/bregistry.ml" 127 4627 4633 "lib/bregistry.ml" 127 4627 4644
+)
+"lib/bregistry.ml" 374 12211 12243 "lib/bregistry.ml" 374 12211 12244
+type(
+  REnv.t ref -> REnv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/bregistry.ml" 374 12211 12244 "lib/bregistry.ml" 374 12211 12251
+type(
+  REnv.t ref
+)
+ident(
+  int_ref library "lib/bregistry.ml" 147 5093 5097 "lib/bregistry.ml" 147 5093 5104
+)
+"lib/bregistry.ml" 374 12211 12242 "lib/bregistry.ml" 374 12211 12252
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 374 12211 12253 "lib/bregistry.ml" 374 12211 12256
+type(
+  Bident.Id.t list
+)
+ident(
+  int_ref svl "lib/bregistry.ml" 373 12179 12200 "lib/bregistry.ml" 373 12179 12203
+)
+"lib/bregistry.ml" 374 12211 12257 "lib/bregistry.ml" 374 12211 12258
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 373 12179 12197 "lib/bregistry.ml" 373 12179 12198
+)
+"lib/bregistry.ml" 374 12211 12259 "lib/bregistry.ml" 374 12211 12261
+type(
+  tcon list
+)
+ident(
+  int_ref cl "lib/bregistry.ml" 373 12179 12204 "lib/bregistry.ml" 373 12179 12206
+)
+"lib/bregistry.ml" 374 12211 12224 "lib/bregistry.ml" 374 12211 12262
+call(
+  stack
+)
+type(
+  REnv.t
+)
+"lib/bregistry.ml" 374 12211 12213 "lib/bregistry.ml" 374 12211 12262
+type(
+  unit
+)
+"lib/bregistry.ml" 376 12264 12268 "lib/bregistry.ml" 376 12264 12287
+type(
+  QM.key -> Bsyntax.sort -> Bvalue.t -> unit
+)
+ident(
+  def register_native_qid "lib/bregistry.ml" 380 12352 12352 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 376 12264 12288 "lib/bregistry.ml" 376 12264 12289
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 376 12264 12290 "lib/bregistry.ml" 377 12297 12320
+)
+"lib/bregistry.ml" 376 12264 12290 "lib/bregistry.ml" 376 12264 12291
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bregistry.ml" 376 12264 12292 "lib/bregistry.ml" 377 12297 12320
+)
+"lib/bregistry.ml" 376 12264 12292 "lib/bregistry.ml" 376 12264 12293
+type(
+  Bvalue.t
+)
+ident(
+  def v "lib/bregistry.ml" 377 12297 12299 "lib/bregistry.ml" 377 12297 12320
+)
+"lib/bregistry.ml" 377 12297 12299 "lib/bregistry.ml" 377 12297 12307
+type(
+  QM.key -> rv -> unit
+)
+ident(
+  int_ref register "lib/bregistry.ml" 370 12116 12120 "lib/bregistry.ml" 370 12116 12128
+)
+"lib/bregistry.ml" 377 12297 12308 "lib/bregistry.ml" 377 12297 12309
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 376 12264 12288 "lib/bregistry.ml" 376 12264 12289
+)
+"lib/bregistry.ml" 377 12297 12316 "lib/bregistry.ml" 377 12297 12317
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bregistry.ml" 376 12264 12290 "lib/bregistry.ml" 376 12264 12291
+)
+"lib/bregistry.ml" 377 12297 12311 "lib/bregistry.ml" 377 12297 12317
+type(
+  rs
+)
+"lib/bregistry.ml" 377 12297 12318 "lib/bregistry.ml" 377 12297 12319
+type(
+  Bvalue.t
+)
+ident(
+  int_ref v "lib/bregistry.ml" 376 12264 12292 "lib/bregistry.ml" 376 12264 12293
+)
+"lib/bregistry.ml" 377 12297 12310 "lib/bregistry.ml" 377 12297 12320
+type(
+  rv
+)
+"lib/bregistry.ml" 377 12297 12299 "lib/bregistry.ml" 377 12297 12320
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 380 12352 12356 "lib/bregistry.ml" 380 12352 12371
+type(
+  string -> Bsyntax.sort -> Bvalue.t -> unit
+)
+ident(
+  def register_native "lib/bregistry.ml" 384 12463 12463 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 380 12352 12372 "lib/bregistry.ml" 380 12352 12374
+type(
+  string
+)
+ident(
+  def qs "lib/bregistry.ml" 380 12352 12375 "lib/bregistry.ml" 381 12382 12422
+)
+"lib/bregistry.ml" 380 12352 12375 "lib/bregistry.ml" 380 12352 12376
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bregistry.ml" 380 12352 12377 "lib/bregistry.ml" 381 12382 12422
+)
+"lib/bregistry.ml" 380 12352 12377 "lib/bregistry.ml" 380 12352 12378
+type(
+  Bvalue.t
+)
+ident(
+  def v "lib/bregistry.ml" 381 12382 12384 "lib/bregistry.ml" 381 12382 12422
+)
+"lib/bregistry.ml" 381 12382 12384 "lib/bregistry.ml" 381 12382 12403
+type(
+  QM.key -> Bsyntax.sort -> Bvalue.t -> unit
+)
+ident(
+  int_ref register_native_qid "lib/bregistry.ml" 376 12264 12268 "lib/bregistry.ml" 376 12264 12287
+)
+"lib/bregistry.ml" 381 12382 12405 "lib/bregistry.ml" 381 12382 12414
+type(
+  string -> Bident.Qid.t
+)
+ident(
+  int_ref parse_qid "lib/bregistry.ml" 46 2273 2277 "lib/bregistry.ml" 46 2273 2286
+)
+"lib/bregistry.ml" 381 12382 12415 "lib/bregistry.ml" 381 12382 12417
+type(
+  string
+)
+ident(
+  int_ref qs "lib/bregistry.ml" 380 12352 12372 "lib/bregistry.ml" 380 12352 12374
+)
+"lib/bregistry.ml" 381 12382 12404 "lib/bregistry.ml" 381 12382 12418
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 381 12382 12419 "lib/bregistry.ml" 381 12382 12420
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bregistry.ml" 380 12352 12375 "lib/bregistry.ml" 380 12352 12376
+)
+"lib/bregistry.ml" 381 12382 12421 "lib/bregistry.ml" 381 12382 12422
+type(
+  Bvalue.t
+)
+ident(
+  int_ref v "lib/bregistry.ml" 380 12352 12377 "lib/bregistry.ml" 380 12352 12378
+)
+"lib/bregistry.ml" 381 12382 12384 "lib/bregistry.ml" 381 12382 12422
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 384 12463 12467 "lib/bregistry.ml" 384 12463 12479
+type(
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap -> Bident.Qid.t list -> Bident.Id.t -> unit
+)
+ident(
+  def register_env "lib/bregistry.ml" 396 12920 12956 "lib/bregistry.ml" 1 0 -1
+)
+"lib/bregistry.ml" 384 12463 12480 "lib/bregistry.ml" 384 12463 12482
+type(
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap
+)
+ident(
+  def ev "lib/bregistry.ml" 384 12463 12483 "lib/bregistry.ml" 396 12920 12956
+)
+"lib/bregistry.ml" 384 12463 12483 "lib/bregistry.ml" 384 12463 12487
+type(
+  Bident.Qid.t list
+)
+ident(
+  def nctx "lib/bregistry.ml" 384 12463 12488 "lib/bregistry.ml" 396 12920 12956
+)
+"lib/bregistry.ml" 384 12463 12488 "lib/bregistry.ml" 384 12463 12489
+type(
+  Bident.Id.t
+)
+ident(
+  def m "lib/bregistry.ml" 385 12493 12495 "lib/bregistry.ml" 396 12920 12956
+)
+"lib/bregistry.ml" 385 12493 12499 "lib/bregistry.ml" 385 12493 12509
+type(
+  rs * 'b -> rs * 'b
+)
+ident(
+  def qualify_rv "lib/bregistry.ml" 391 12696 12698 "lib/bregistry.ml" 396 12920 12956
+)
+"lib/bregistry.ml" 385 12493 12511 "lib/bregistry.ml" 385 12493 12513
+type(
+  rs
+)
+ident(
+  def rs "lib/bregistry.ml" 386 12519 12523 "lib/bregistry.ml" 390 12678 12692
+)
+"lib/bregistry.ml" 385 12493 12514 "lib/bregistry.ml" 385 12493 12515
+type(
+  'b
+)
+ident(
+  def v "lib/bregistry.ml" 386 12519 12523 "lib/bregistry.ml" 390 12678 12692
+)
+"lib/bregistry.ml" 385 12493 12510 "lib/bregistry.ml" 385 12493 12516
+type(
+  rs * 'b
+)
+"lib/bregistry.ml" 386 12519 12527 "lib/bregistry.ml" 386 12519 12533
+type(
+  rs
+)
+ident(
+  def new_rs "lib/bregistry.ml" 390 12678 12682 "lib/bregistry.ml" 390 12678 12692
+)
+"lib/bregistry.ml" 386 12519 12542 "lib/bregistry.ml" 386 12519 12544
+type(
+  rs
+)
+ident(
+  int_ref rs "lib/bregistry.ml" 385 12493 12511 "lib/bregistry.ml" 385 12493 12513
+)
+"lib/bregistry.ml" 387 12550 12563 "lib/bregistry.ml" 387 12550 12564
+type(
+  Bsyntax.sort
+)
+ident(
+  def s "lib/bregistry.ml" 388 12569 12579 "lib/bregistry.ml" 388 12569 12647
+)
+"lib/bregistry.ml" 387 12550 12558 "lib/bregistry.ml" 387 12550 12564
+type(
+  rs
+)
+"lib/bregistry.ml" 388 12569 12585 "lib/bregistry.ml" 388 12569 12604
+type(
+  (Bident.Qid.t -> Bident.Qid.t) ->
+  Bident.Qid.t list -> Bsyntax.sort -> Bsyntax.sort
+)
+ident(
+  ext_ref Bsubst.qualify_sort
+)
+"lib/bregistry.ml" 388 12569 12606 "lib/bregistry.ml" 388 12569 12621
+type(
+  (REnv.t -> Bident.Qid.t -> rv option) ->
+  Bident.Qid.t list -> Bident.Id.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  int_ref resolve_library "lib/bregistry.ml" 349 11264 11268 "lib/bregistry.ml" 349 11264 11283
+)
+"lib/bregistry.ml" 388 12569 12622 "lib/bregistry.ml" 388 12569 12633
+type(
+  REnv.t -> Bident.Qid.t -> rv option
+)
+ident(
+  int_ref REnv.lookup "lib/bregistry.ml" 100 3801 3807 "lib/bregistry.ml" 100 3801 3813
+)
+"lib/bregistry.ml" 388 12569 12634 "lib/bregistry.ml" 388 12569 12638
+type(
+  Bident.Qid.t list
+)
+ident(
+  int_ref nctx "lib/bregistry.ml" 384 12463 12483 "lib/bregistry.ml" 384 12463 12487
+)
+"lib/bregistry.ml" 388 12569 12639 "lib/bregistry.ml" 388 12569 12640
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bregistry.ml" 384 12463 12488 "lib/bregistry.ml" 384 12463 12489
+)
+"lib/bregistry.ml" 388 12569 12605 "lib/bregistry.ml" 388 12569 12641
+call(
+  stack
+)
+type(
+  Bident.Qid.t -> Bident.Qid.t
+)
+"lib/bregistry.ml" 388 12569 12642 "lib/bregistry.ml" 388 12569 12644
+type(
+  Bident.Qid.t list
+)
+"lib/bregistry.ml" 388 12569 12645 "lib/bregistry.ml" 388 12569 12646
+type(
+  Bsyntax.sort
+)
+ident(
+  int_ref s "lib/bregistry.ml" 387 12550 12563 "lib/bregistry.ml" 387 12550 12564
+)
+"lib/bregistry.ml" 388 12569 12584 "lib/bregistry.ml" 388 12569 12647
+call(
+  stack
+)
+type(
+  Bsyntax.sort
+)
+"lib/bregistry.ml" 388 12569 12579 "lib/bregistry.ml" 388 12569 12647
+type(
+  rs
+)
+"lib/bregistry.ml" 389 12648 12656 "lib/bregistry.ml" 389 12648 12663
+type(
+  rs
+)
+"lib/bregistry.ml" 389 12648 12667 "lib/bregistry.ml" 389 12648 12674
+type(
+  rs
+)
+"lib/bregistry.ml" 386 12519 12536 "lib/bregistry.ml" 389 12648 12674
+type(
+  rs
+)
+"lib/bregistry.ml" 390 12678 12683 "lib/bregistry.ml" 390 12678 12689
+type(
+  rs
+)
+ident(
+  int_ref new_rs "lib/bregistry.ml" 386 12519 12527 "lib/bregistry.ml" 386 12519 12533
+)
+"lib/bregistry.ml" 390 12678 12690 "lib/bregistry.ml" 390 12678 12691
+type(
+  'b
+)
+ident(
+  int_ref v "lib/bregistry.ml" 385 12493 12514 "lib/bregistry.ml" 385 12493 12515
+)
+"lib/bregistry.ml" 390 12678 12682 "lib/bregistry.ml" 390 12678 12692
+type(
+  rs * 'b
+)
+"lib/bregistry.ml" 386 12519 12523 "lib/bregistry.ml" 390 12678 12692
+type(
+  rs * 'b
+)
+"lib/bregistry.ml" 391 12696 12698 "lib/bregistry.ml" 391 12696 12707
+type(
+  (QM.key -> rv -> unit) ->
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap -> unit
+)
+ident(
+  int_ref REnv.iter "lib/bregistry.ml" 135 4845 4851 "lib/bregistry.ml" 135 4845 4855
+)
+"lib/bregistry.ml" 391 12696 12713 "lib/bregistry.ml" 391 12696 12714
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 391 12696 12715 "lib/bregistry.ml" 391 12696 12767
+)
+"lib/bregistry.ml" 391 12696 12715 "lib/bregistry.ml" 391 12696 12716
+type(
+  rv
+)
+ident(
+  def r "lib/bregistry.ml" 391 12696 12720 "lib/bregistry.ml" 391 12696 12767
+)
+"lib/bregistry.ml" 391 12696 12720 "lib/bregistry.ml" 391 12696 12728
+type(
+  QM.key -> rv -> unit
+)
+ident(
+  int_ref register "lib/bregistry.ml" 370 12116 12120 "lib/bregistry.ml" 370 12116 12128
+)
+"lib/bregistry.ml" 391 12696 12730 "lib/bregistry.ml" 391 12696 12747
+type(
+  Bident.Id.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.id_dot
+)
+"lib/bregistry.ml" 391 12696 12748 "lib/bregistry.ml" 391 12696 12749
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bregistry.ml" 384 12463 12488 "lib/bregistry.ml" 384 12463 12489
+)
+"lib/bregistry.ml" 391 12696 12750 "lib/bregistry.ml" 391 12696 12751
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 391 12696 12713 "lib/bregistry.ml" 391 12696 12714
+)
+"lib/bregistry.ml" 391 12696 12729 "lib/bregistry.ml" 391 12696 12752
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 391 12696 12754 "lib/bregistry.ml" 391 12696 12764
+type(
+  rv -> rv
+)
+ident(
+  int_ref qualify_rv "lib/bregistry.ml" 385 12493 12499 "lib/bregistry.ml" 385 12493 12509
+)
+"lib/bregistry.ml" 391 12696 12765 "lib/bregistry.ml" 391 12696 12766
+type(
+  rv
+)
+ident(
+  int_ref r "lib/bregistry.ml" 391 12696 12715 "lib/bregistry.ml" 391 12696 12716
+)
+"lib/bregistry.ml" 391 12696 12753 "lib/bregistry.ml" 391 12696 12767
+call(
+  stack
+)
+type(
+  rv
+)
+"lib/bregistry.ml" 391 12696 12720 "lib/bregistry.ml" 391 12696 12767
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 391 12696 12708 "lib/bregistry.ml" 391 12696 12768
+type(
+  QM.key -> rv -> unit
+)
+"lib/bregistry.ml" 391 12696 12769 "lib/bregistry.ml" 391 12696 12771
+type(
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap
+)
+ident(
+  int_ref ev "lib/bregistry.ml" 384 12463 12480 "lib/bregistry.ml" 384 12463 12482
+)
+"lib/bregistry.ml" 391 12696 12698 "lib/bregistry.ml" 391 12696 12771
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 392 12775 12777 "lib/bregistry.ml" 392 12775 12791
+type(
+  (QM.key ->
+   Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list -> unit) ->
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap -> unit
+)
+ident(
+  int_ref REnv.iter_type "lib/bregistry.ml" 138 4923 4929 "lib/bregistry.ml" 138 4923 4938
+)
+"lib/bregistry.ml" 393 12793 12802 "lib/bregistry.ml" 393 12793 12803
+type(
+  QM.key
+)
+ident(
+  def q "lib/bregistry.ml" 393 12793 12804 "lib/bregistry.ml" 396 12920 12952
+)
+"lib/bregistry.ml" 393 12793 12804 "lib/bregistry.ml" 393 12793 12806
+type(
+  Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  def ts "lib/bregistry.ml" 394 12811 12818 "lib/bregistry.ml" 396 12920 12952
+)
+"lib/bregistry.ml" 394 12811 12823 "lib/bregistry.ml" 394 12811 12826
+type(
+  Bident.Id.t list
+)
+ident(
+  def svl "lib/bregistry.ml" 395 12840 12847 "lib/bregistry.ml" 396 12920 12952
+)
+"lib/bregistry.ml" 394 12811 12827 "lib/bregistry.ml" 394 12811 12829
+type(
+  (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  def cl "lib/bregistry.ml" 395 12840 12847 "lib/bregistry.ml" 396 12920 12952
+)
+"lib/bregistry.ml" 394 12811 12822 "lib/bregistry.ml" 394 12811 12830
+type(
+  Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list
+)
+"lib/bregistry.ml" 394 12811 12833 "lib/bregistry.ml" 394 12811 12835
+type(
+  Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  int_ref ts "lib/bregistry.ml" 393 12793 12804 "lib/bregistry.ml" 393 12793 12806
+)
+"lib/bregistry.ml" 395 12840 12851 "lib/bregistry.ml" 395 12840 12854
+type(
+  (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  def cl' "lib/bregistry.ml" 396 12920 12927 "lib/bregistry.ml" 396 12920 12952
+)
+"lib/bregistry.ml" 395 12840 12857 "lib/bregistry.ml" 395 12840 12869
+type(
+  (Bident.Qid.t * Bsyntax.sort option -> Bident.Qid.t * Bsyntax.sort option) ->
+  (Bident.Qid.t * Bsyntax.sort option) list ->
+  (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bregistry.ml" 395 12840 12876 "lib/bregistry.ml" 395 12840 12877
+type(
+  Bident.Qid.t
+)
+ident(
+  def x "lib/bregistry.ml" 395 12840 12885 "lib/bregistry.ml" 395 12840 12911
+)
+"lib/bregistry.ml" 395 12840 12878 "lib/bregistry.ml" 395 12840 12880
+type(
+  Bsyntax.sort option
+)
+ident(
+  def so "lib/bregistry.ml" 395 12840 12885 "lib/bregistry.ml" 395 12840 12911
+)
+"lib/bregistry.ml" 395 12840 12875 "lib/bregistry.ml" 395 12840 12881
+type(
+  Bident.Qid.t * Bsyntax.sort option
+)
+"lib/bregistry.ml" 395 12840 12886 "lib/bregistry.ml" 395 12840 12903
+type(
+  Bident.Id.t -> Bident.Qid.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.id_dot
+)
+"lib/bregistry.ml" 395 12840 12904 "lib/bregistry.ml" 395 12840 12905
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref m "lib/bregistry.ml" 384 12463 12488 "lib/bregistry.ml" 384 12463 12489
+)
+"lib/bregistry.ml" 395 12840 12906 "lib/bregistry.ml" 395 12840 12907
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bregistry.ml" 395 12840 12876 "lib/bregistry.ml" 395 12840 12877
+)
+"lib/bregistry.ml" 395 12840 12886 "lib/bregistry.ml" 395 12840 12907
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bregistry.ml" 395 12840 12908 "lib/bregistry.ml" 395 12840 12910
+type(
+  Bsyntax.sort option
+)
+ident(
+  int_ref so "lib/bregistry.ml" 395 12840 12878 "lib/bregistry.ml" 395 12840 12880
+)
+"lib/bregistry.ml" 395 12840 12885 "lib/bregistry.ml" 395 12840 12911
+type(
+  Bident.Qid.t * Bsyntax.sort option
+)
+"lib/bregistry.ml" 395 12840 12870 "lib/bregistry.ml" 395 12840 12912
+type(
+  Bident.Qid.t * Bsyntax.sort option -> Bident.Qid.t * Bsyntax.sort option
+)
+"lib/bregistry.ml" 395 12840 12913 "lib/bregistry.ml" 395 12840 12915
+type(
+  (Bident.Qid.t * Bsyntax.sort option) list
+)
+ident(
+  int_ref cl "lib/bregistry.ml" 394 12811 12827 "lib/bregistry.ml" 394 12811 12829
+)
+"lib/bregistry.ml" 395 12840 12857 "lib/bregistry.ml" 395 12840 12915
+call(
+  stack
+)
+type(
+  (Bident.Qid.t * Bsyntax.sort option) list
+)
+"lib/bregistry.ml" 396 12920 12927 "lib/bregistry.ml" 396 12920 12940
+type(
+  QM.key -> Bident.Id.t list * tcon list -> unit
+)
+ident(
+  int_ref register_type "lib/bregistry.ml" 373 12179 12183 "lib/bregistry.ml" 373 12179 12196
+)
+"lib/bregistry.ml" 396 12920 12941 "lib/bregistry.ml" 396 12920 12942
+type(
+  QM.key
+)
+ident(
+  int_ref q "lib/bregistry.ml" 393 12793 12802 "lib/bregistry.ml" 393 12793 12803
+)
+"lib/bregistry.ml" 396 12920 12944 "lib/bregistry.ml" 396 12920 12947
+type(
+  Bident.Id.t list
+)
+ident(
+  int_ref svl "lib/bregistry.ml" 394 12811 12823 "lib/bregistry.ml" 394 12811 12826
+)
+"lib/bregistry.ml" 396 12920 12948 "lib/bregistry.ml" 396 12920 12951
+type(
+  tcon list
+)
+ident(
+  int_ref cl' "lib/bregistry.ml" 395 12840 12851 "lib/bregistry.ml" 395 12840 12854
+)
+"lib/bregistry.ml" 396 12920 12943 "lib/bregistry.ml" 396 12920 12952
+type(
+  Bident.Id.t list * tcon list
+)
+"lib/bregistry.ml" 396 12920 12927 "lib/bregistry.ml" 396 12920 12952
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 395 12840 12847 "lib/bregistry.ml" 396 12920 12952
+type(
+  unit
+)
+"lib/bregistry.ml" 394 12811 12818 "lib/bregistry.ml" 396 12920 12952
+type(
+  unit
+)
+"lib/bregistry.ml" 393 12793 12797 "lib/bregistry.ml" 396 12920 12953
+type(
+  QM.key ->
+  Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list -> unit
+)
+"lib/bregistry.ml" 396 12920 12954 "lib/bregistry.ml" 396 12920 12956
+type(
+  (Bident.Id.t list * (Bident.Qid.t * Bsyntax.sort option) list) QM.t * 'a *
+  REnv.vmap
+)
+ident(
+  int_ref ev "lib/bregistry.ml" 384 12463 12480 "lib/bregistry.ml" 384 12463 12482
+)
+"lib/bregistry.ml" 392 12775 12777 "lib/bregistry.ml" 396 12920 12956
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bregistry.ml" 391 12696 12698 "lib/bregistry.ml" 396 12920 12956
+type(
+  unit
+)
+"lib/bregistry.ml" 385 12493 12495 "lib/bregistry.ml" 396 12920 12956
+type(
+  unit
+)

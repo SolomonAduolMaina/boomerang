@@ -1,0 +1,3922 @@
+"ubase/trace.ml" 9 281 285 "ubase/trace.ml" 9 281 297
+type(
+  trace_printer_choices ref
+)
+ident(
+  def traceprinter "ubase/trace.ml" 11 339 339 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 9 281 300 "ubase/trace.ml" 9 281 303
+type(
+  trace_printer_choices -> trace_printer_choices ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 9 281 305 "ubase/trace.ml" 9 281 312
+type(
+  trace_printer_choices
+)
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 9 281 300 "ubase/trace.ml" 9 281 337
+type(
+  trace_printer_choices ref
+)
+"ubase/trace.ml" 11 339 343 "ubase/trace.ml" 11 339 351
+type(
+  trace_printer_choices -> unit
+)
+ident(
+  def redirect "ubase/trace.ml" 16 480 480 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 11 339 352 "ubase/trace.ml" 11 339 353
+type(
+  trace_printer_choices
+)
+ident(
+  def x "ubase/trace.ml" 11 339 356 "ubase/trace.ml" 11 339 375
+)
+"ubase/trace.ml" 11 339 357 "ubase/trace.ml" 11 339 369
+type(
+  trace_printer_choices ref
+)
+ident(
+  int_ref traceprinter "ubase/trace.ml" 9 281 285 "ubase/trace.ml" 9 281 297
+)
+"ubase/trace.ml" 11 339 370 "ubase/trace.ml" 11 339 372
+type(
+  trace_printer_choices ref -> trace_printer_choices -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 11 339 373 "ubase/trace.ml" 11 339 374
+type(
+  trace_printer_choices
+)
+ident(
+  int_ref x "ubase/trace.ml" 11 339 352 "ubase/trace.ml" 11 339 353
+)
+"ubase/trace.ml" 11 339 356 "ubase/trace.ml" 11 339 375
+type(
+  unit
+)
+"ubase/trace.ml" 16 480 484 "ubase/trace.ml" 16 480 493
+type(
+  string list Prefs.t
+)
+ident(
+  def debugmods "ubase/trace.ml" 17 512 512 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 16 480 496 "ubase/trace.ml" 16 480 511
+type(
+  string list Prefs.t
+)
+ident(
+  ext_ref Prefs.debugPref
+)
+"ubase/trace.ml" 17 512 516 "ubase/trace.ml" 17 512 526
+type(
+  bool Prefs.t
+)
+ident(
+  def debugtimes "ubase/trace.ml" 19 551 551 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 17 512 529 "ubase/trace.ml" 17 512 549
+type(
+  bool Prefs.t
+)
+ident(
+  ext_ref Prefs.debugtimesPref
+)
+"ubase/trace.ml" 19 551 555 "ubase/trace.ml" 19 551 570
+type(
+  bool ref
+)
+ident(
+  def runningasserver "ubase/trace.ml" 21 584 584 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 19 551 573 "ubase/trace.ml" 19 551 576
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 19 551 577 "ubase/trace.ml" 19 551 582
+type(
+  bool
+)
+"ubase/trace.ml" 19 551 573 "ubase/trace.ml" 19 551 582
+type(
+  bool ref
+)
+"ubase/trace.ml" 21 584 588 "ubase/trace.ml" 21 584 597
+type(
+  unit -> bool
+)
+ident(
+  def debugging "ubase/trace.ml" 23 632 632 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 21 584 597 "ubase/trace.ml" 21 584 599
+type(
+  unit
+)
+"ubase/trace.ml" 21 584 603 "ubase/trace.ml" 21 584 613
+type(
+  string list Prefs.t -> string list
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 21 584 614 "ubase/trace.ml" 21 584 623
+type(
+  string list Prefs.t
+)
+ident(
+  int_ref debugmods "ubase/trace.ml" 16 480 484 "ubase/trace.ml" 16 480 493
+)
+"ubase/trace.ml" 21 584 602 "ubase/trace.ml" 21 584 624
+call(
+  stack
+)
+type(
+  string list
+)
+"ubase/trace.ml" 21 584 625 "ubase/trace.ml" 21 584 627
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 21 584 628 "ubase/trace.ml" 21 584 630
+type(
+  string list
+)
+"ubase/trace.ml" 21 584 602 "ubase/trace.ml" 21 584 630
+type(
+  bool
+)
+"ubase/trace.ml" 23 632 636 "ubase/trace.ml" 23 632 643
+type(
+  string -> bool
+)
+ident(
+  def enabled "ubase/trace.ml" 41 1401 1401 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 23 632 644 "ubase/trace.ml" 23 632 651
+type(
+  string
+)
+ident(
+  def modname "ubase/trace.ml" 24 654 656 "ubase/trace.ml" 39 1391 1395
+)
+"ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+type(
+  string list
+)
+ident(
+  def m "ubase/trace.ml" 25 688 690 "ubase/trace.ml" 39 1391 1395
+)
+"ubase/trace.ml" 24 654 664 "ubase/trace.ml" 24 654 674
+type(
+  string list Prefs.t -> string list
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 24 654 675 "ubase/trace.ml" 24 654 684
+type(
+  string list Prefs.t
+)
+ident(
+  int_ref debugmods "ubase/trace.ml" 16 480 484 "ubase/trace.ml" 16 480 493
+)
+"ubase/trace.ml" 24 654 664 "ubase/trace.ml" 24 654 684
+call(
+  stack
+)
+type(
+  string list
+)
+"ubase/trace.ml" 25 688 694 "ubase/trace.ml" 25 688 696
+type(
+  bool
+)
+ident(
+  def en "ubase/trace.ml" 39 1391 1393 "ubase/trace.ml" 39 1391 1395
+)
+"ubase/trace.ml" 26 700 704 "ubase/trace.ml" 26 700 705
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 26 700 706 "ubase/trace.ml" 26 700 708
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 26 700 709 "ubase/trace.ml" 26 700 711
+type(
+  string list
+)
+"ubase/trace.ml" 26 700 704 "ubase/trace.ml" 26 700 711
+type(
+  bool
+)
+"ubase/trace.ml" 26 700 712 "ubase/trace.ml" 26 700 714
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/trace.ml" 27 770 790 "ubase/trace.ml" 27 770 797
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 23 632 644 "ubase/trace.ml" 23 632 651
+)
+"ubase/trace.ml" 27 770 798 "ubase/trace.ml" 27 770 799
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/trace.ml" 27 770 800 "ubase/trace.ml" 27 770 802
+type(
+  string
+)
+"ubase/trace.ml" 27 770 789 "ubase/trace.ml" 27 770 803
+type(
+  bool
+)
+"ubase/trace.ml" 28 804 820 "ubase/trace.ml" 28 804 822
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 29 865 885 "ubase/trace.ml" 29 865 897
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"ubase/trace.ml" 29 865 898 "ubase/trace.ml" 29 865 907
+type(
+  string
+)
+"ubase/trace.ml" 29 865 908 "ubase/trace.ml" 29 865 909
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 29 865 884 "ubase/trace.ml" 29 865 910
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 30 911 927 "ubase/trace.ml" 30 911 929
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 31 959 979 "ubase/trace.ml" 31 959 991
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"ubase/trace.ml" 31 959 992 "ubase/trace.ml" 31 959 998
+type(
+  string
+)
+"ubase/trace.ml" 31 959 999 "ubase/trace.ml" 31 959 1000
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 31 959 978 "ubase/trace.ml" 31 959 1001
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 32 1002 1018 "ubase/trace.ml" 32 1002 1020
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 33 1073 1093 "ubase/trace.ml" 33 1073 1105
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"ubase/trace.ml" 33 1073 1106 "ubase/trace.ml" 33 1073 1111
+type(
+  string
+)
+"ubase/trace.ml" 33 1073 1112 "ubase/trace.ml" 33 1073 1113
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 33 1073 1093 "ubase/trace.ml" 33 1073 1113
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 33 1073 1114 "ubase/trace.ml" 33 1073 1116
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/trace.ml" 33 1073 1117 "ubase/trace.ml" 33 1073 1120
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 33 1073 1122 "ubase/trace.ml" 33 1073 1135
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Util.endswith
+)
+"ubase/trace.ml" 33 1073 1136 "ubase/trace.ml" 33 1073 1143
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 23 632 644 "ubase/trace.ml" 23 632 651
+)
+"ubase/trace.ml" 33 1073 1144 "ubase/trace.ml" 33 1073 1147
+type(
+  string
+)
+"ubase/trace.ml" 33 1073 1121 "ubase/trace.ml" 33 1073 1148
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 33 1073 1117 "ubase/trace.ml" 33 1073 1148
+type(
+  bool
+)
+"ubase/trace.ml" 33 1073 1092 "ubase/trace.ml" 33 1073 1149
+type(
+  bool
+)
+"ubase/trace.ml" 34 1150 1166 "ubase/trace.ml" 34 1150 1168
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 35 1223 1243 "ubase/trace.ml" 35 1223 1255
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"ubase/trace.ml" 35 1223 1256 "ubase/trace.ml" 35 1223 1263
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 23 632 644 "ubase/trace.ml" 23 632 651
+)
+"ubase/trace.ml" 35 1223 1264 "ubase/trace.ml" 35 1223 1265
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 35 1223 1242 "ubase/trace.ml" 35 1223 1266
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 36 1267 1283 "ubase/trace.ml" 36 1267 1285
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 37 1319 1339 "ubase/trace.ml" 37 1319 1351
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref Safelist.mem
+)
+"ubase/trace.ml" 37 1319 1353 "ubase/trace.ml" 37 1319 1360
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 23 632 644 "ubase/trace.ml" 23 632 651
+)
+"ubase/trace.ml" 37 1319 1361 "ubase/trace.ml" 37 1319 1362
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 37 1319 1363 "ubase/trace.ml" 37 1319 1366
+type(
+  string
+)
+"ubase/trace.ml" 37 1319 1352 "ubase/trace.ml" 37 1319 1367
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 37 1319 1368 "ubase/trace.ml" 37 1319 1369
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 24 654 660 "ubase/trace.ml" 24 654 661
+)
+"ubase/trace.ml" 37 1319 1338 "ubase/trace.ml" 37 1319 1370
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 35 1223 1242 "ubase/trace.ml" 37 1319 1370
+type(
+  bool
+)
+"ubase/trace.ml" 33 1073 1092 "ubase/trace.ml" 37 1319 1370
+type(
+  bool
+)
+"ubase/trace.ml" 31 959 978 "ubase/trace.ml" 37 1319 1370
+type(
+  bool
+)
+"ubase/trace.ml" 29 865 884 "ubase/trace.ml" 37 1319 1370
+type(
+  bool
+)
+"ubase/trace.ml" 26 700 715 "ubase/trace.ml" 38 1371 1387
+type(
+  bool
+)
+"ubase/trace.ml" 26 700 704 "ubase/trace.ml" 38 1371 1387
+type(
+  bool
+)
+"ubase/trace.ml" 39 1391 1393 "ubase/trace.ml" 39 1391 1395
+type(
+  bool
+)
+ident(
+  int_ref en "ubase/trace.ml" 25 688 694 "ubase/trace.ml" 25 688 696
+)
+"ubase/trace.ml" 25 688 690 "ubase/trace.ml" 39 1391 1395
+type(
+  bool
+)
+"ubase/trace.ml" 24 654 656 "ubase/trace.ml" 39 1391 1395
+type(
+  bool
+)
+"ubase/trace.ml" 41 1401 1405 "ubase/trace.ml" 41 1401 1411
+type(
+  string -> bool -> unit
+)
+ident(
+  def enable "ubase/trace.ml" 46 1562 1562 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 41 1401 1412 "ubase/trace.ml" 41 1401 1419
+type(
+  string
+)
+ident(
+  def modname "ubase/trace.ml" 41 1401 1420 "ubase/trace.ml" 44 1536 1560
+)
+"ubase/trace.ml" 41 1401 1420 "ubase/trace.ml" 41 1401 1425
+type(
+  bool
+)
+ident(
+  def onoff "ubase/trace.ml" 42 1428 1430 "ubase/trace.ml" 44 1536 1560
+)
+"ubase/trace.ml" 42 1428 1434 "ubase/trace.ml" 42 1428 1435
+type(
+  string list
+)
+ident(
+  def m "ubase/trace.ml" 43 1462 1464 "ubase/trace.ml" 44 1536 1560
+)
+"ubase/trace.ml" 42 1428 1438 "ubase/trace.ml" 42 1428 1448
+type(
+  string list Prefs.t -> string list
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 42 1428 1449 "ubase/trace.ml" 42 1428 1458
+type(
+  string list Prefs.t
+)
+ident(
+  int_ref debugmods "ubase/trace.ml" 16 480 484 "ubase/trace.ml" 16 480 493
+)
+"ubase/trace.ml" 42 1428 1438 "ubase/trace.ml" 42 1428 1458
+call(
+  stack
+)
+type(
+  string list
+)
+"ubase/trace.ml" 43 1462 1468 "ubase/trace.ml" 43 1462 1470
+type(
+  string list
+)
+ident(
+  def m' "ubase/trace.ml" 44 1536 1538 "ubase/trace.ml" 44 1536 1560
+)
+"ubase/trace.ml" 43 1462 1476 "ubase/trace.ml" 43 1462 1481
+type(
+  bool
+)
+ident(
+  int_ref onoff "ubase/trace.ml" 41 1401 1420 "ubase/trace.ml" 41 1401 1425
+)
+"ubase/trace.ml" 43 1462 1488 "ubase/trace.ml" 43 1462 1495
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 41 1401 1412 "ubase/trace.ml" 41 1401 1419
+)
+"ubase/trace.ml" 43 1462 1497 "ubase/trace.ml" 43 1462 1498
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 42 1428 1434 "ubase/trace.ml" 42 1428 1435
+)
+"ubase/trace.ml" 43 1462 1487 "ubase/trace.ml" 43 1462 1499
+type(
+  string list
+)
+"ubase/trace.ml" 43 1462 1506 "ubase/trace.ml" 43 1462 1521
+type(
+  string -> string list -> string list
+)
+ident(
+  ext_ref Safelist.remove
+)
+"ubase/trace.ml" 43 1462 1522 "ubase/trace.ml" 43 1462 1529
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 41 1401 1412 "ubase/trace.ml" 41 1401 1419
+)
+"ubase/trace.ml" 43 1462 1530 "ubase/trace.ml" 43 1462 1531
+type(
+  string list
+)
+ident(
+  int_ref m "ubase/trace.ml" 42 1428 1434 "ubase/trace.ml" 42 1428 1435
+)
+"ubase/trace.ml" 43 1462 1505 "ubase/trace.ml" 43 1462 1532
+call(
+  stack
+)
+type(
+  string list
+)
+"ubase/trace.ml" 43 1462 1473 "ubase/trace.ml" 43 1462 1532
+type(
+  string list
+)
+"ubase/trace.ml" 44 1536 1538 "ubase/trace.ml" 44 1536 1547
+type(
+  string list Prefs.t -> string list -> unit
+)
+ident(
+  ext_ref Prefs.set
+)
+"ubase/trace.ml" 44 1536 1548 "ubase/trace.ml" 44 1536 1557
+type(
+  string list Prefs.t
+)
+ident(
+  int_ref debugmods "ubase/trace.ml" 16 480 484 "ubase/trace.ml" 16 480 493
+)
+"ubase/trace.ml" 44 1536 1558 "ubase/trace.ml" 44 1536 1560
+type(
+  string list
+)
+ident(
+  int_ref m' "ubase/trace.ml" 43 1462 1468 "ubase/trace.ml" 43 1462 1470
+)
+"ubase/trace.ml" 44 1536 1538 "ubase/trace.ml" 44 1536 1560
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 43 1462 1464 "ubase/trace.ml" 44 1536 1560
+type(
+  unit
+)
+"ubase/trace.ml" 42 1428 1430 "ubase/trace.ml" 44 1536 1560
+type(
+  unit
+)
+"ubase/trace.ml" 46 1562 1566 "ubase/trace.ml" 46 1562 1571
+type(
+  string -> (unit -> 'a) -> unit
+)
+ident(
+  def debug "ubase/trace.ml" 69 2489 2489 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+type(
+  string
+)
+ident(
+  def modname "ubase/trace.ml" 46 1562 1580 "ubase/trace.ml" 64 2280 2285
+)
+"ubase/trace.ml" 46 1562 1580 "ubase/trace.ml" 46 1562 1585
+type(
+  unit -> 'a
+)
+ident(
+  def thunk "ubase/trace.ml" 47 1588 1590 "ubase/trace.ml" 64 2280 2285
+)
+"ubase/trace.ml" 47 1588 1593 "ubase/trace.ml" 47 1588 1600
+type(
+  string -> bool
+)
+ident(
+  int_ref enabled "ubase/trace.ml" 23 632 636 "ubase/trace.ml" 23 632 643
+)
+"ubase/trace.ml" 47 1588 1601 "ubase/trace.ml" 47 1588 1608
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 47 1588 1593 "ubase/trace.ml" 47 1588 1608
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 49 1679 1683 "ubase/trace.ml" 63 2263 2279
+)
+"ubase/trace.ml" 48 1620 1635 "ubase/trace.ml" 48 1620 1636
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 48 1620 1636 "ubase/trace.ml" 48 1620 1651
+type(
+  bool ref
+)
+ident(
+  int_ref runningasserver "ubase/trace.ml" 19 551 555 "ubase/trace.ml" 19 551 570
+)
+"ubase/trace.ml" 48 1620 1635 "ubase/trace.ml" 48 1620 1651
+type(
+  bool
+)
+"ubase/trace.ml" 48 1620 1657 "ubase/trace.ml" 48 1620 1667
+type(
+  string
+)
+"ubase/trace.ml" 48 1620 1673 "ubase/trace.ml" 48 1620 1675
+type(
+  string
+)
+"ubase/trace.ml" 48 1620 1632 "ubase/trace.ml" 48 1620 1675
+type(
+  string
+)
+"ubase/trace.ml" 49 1679 1687 "ubase/trace.ml" 49 1679 1691
+type(
+  string
+)
+ident(
+  def time "ubase/trace.ml" 55 1892 1896 "ubase/trace.ml" 63 2263 2279
+)
+"ubase/trace.ml" 50 1694 1703 "ubase/trace.ml" 50 1694 1713
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 50 1694 1714 "ubase/trace.ml" 50 1694 1724
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref debugtimes "ubase/trace.ml" 17 512 516 "ubase/trace.ml" 17 512 526
+)
+"ubase/trace.ml" 50 1694 1703 "ubase/trace.ml" 50 1694 1724
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 51 1730 1742 "ubase/trace.ml" 51 1730 1744
+type(
+  Unix.tm
+)
+ident(
+  def tm "ubase/trace.ml" 52 1779 1787 "ubase/trace.ml" 53 1819 1874
+)
+"ubase/trace.ml" 51 1730 1747 "ubase/trace.ml" 51 1730 1761
+type(
+  float -> Unix.tm
+)
+ident(
+  ext_ref Util.localtime
+)
+"ubase/trace.ml" 51 1730 1763 "ubase/trace.ml" 51 1730 1772
+type(
+  unit -> float
+)
+ident(
+  ext_ref Util.time
+)
+"ubase/trace.ml" 51 1730 1772 "ubase/trace.ml" 51 1730 1774
+type(
+  unit
+)
+"ubase/trace.ml" 51 1730 1762 "ubase/trace.ml" 51 1730 1775
+call(
+  stack
+)
+type(
+  float
+)
+"ubase/trace.ml" 51 1730 1747 "ubase/trace.ml" 51 1730 1775
+call(
+  stack
+)
+type(
+  Unix.tm
+)
+"ubase/trace.ml" 52 1779 1787 "ubase/trace.ml" 52 1779 1801
+type(
+  (int -> int -> int -> string, unit, string) format ->
+  int -> int -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"ubase/trace.ml" 52 1779 1802 "ubase/trace.ml" 52 1779 1818
+type(
+  (int -> int -> int -> string, unit, string) format
+)
+"ubase/trace.ml" 53 1819 1829 "ubase/trace.ml" 53 1819 1831
+type(
+  Unix.tm
+)
+ident(
+  int_ref tm "ubase/trace.ml" 51 1730 1742 "ubase/trace.ml" 51 1730 1744
+)
+"ubase/trace.ml" 53 1819 1829 "ubase/trace.ml" 53 1819 1844
+type(
+  int
+)
+"ubase/trace.ml" 53 1819 1845 "ubase/trace.ml" 53 1819 1847
+type(
+  Unix.tm
+)
+ident(
+  int_ref tm "ubase/trace.ml" 51 1730 1742 "ubase/trace.ml" 51 1730 1744
+)
+"ubase/trace.ml" 53 1819 1845 "ubase/trace.ml" 53 1819 1859
+type(
+  int
+)
+"ubase/trace.ml" 53 1819 1860 "ubase/trace.ml" 53 1819 1862
+type(
+  Unix.tm
+)
+ident(
+  int_ref tm "ubase/trace.ml" 51 1730 1742 "ubase/trace.ml" 51 1730 1744
+)
+"ubase/trace.ml" 53 1819 1860 "ubase/trace.ml" 53 1819 1874
+type(
+  int
+)
+"ubase/trace.ml" 52 1779 1787 "ubase/trace.ml" 53 1819 1874
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 51 1730 1738 "ubase/trace.ml" 53 1819 1874
+type(
+  string
+)
+"ubase/trace.ml" 54 1875 1886 "ubase/trace.ml" 54 1875 1888
+type(
+  string
+)
+"ubase/trace.ml" 50 1694 1700 "ubase/trace.ml" 54 1875 1888
+type(
+  string
+)
+"ubase/trace.ml" 55 1892 1899 "ubase/trace.ml" 55 1892 1903
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 49 1679 1687 "ubase/trace.ml" 49 1679 1691
+)
+"ubase/trace.ml" 55 1892 1903 "ubase/trace.ml" 55 1892 1905
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 55 1892 1905 "ubase/trace.ml" 55 1892 1907
+type(
+  string
+)
+"ubase/trace.ml" 55 1892 1899 "ubase/trace.ml" 55 1892 1907
+type(
+  bool
+)
+"ubase/trace.ml" 55 1892 1908 "ubase/trace.ml" 55 1892 1910
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 55 1892 1911 "ubase/trace.ml" 55 1892 1912
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+)
+"ubase/trace.ml" 55 1892 1912 "ubase/trace.ml" 55 1892 1914
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 55 1892 1914 "ubase/trace.ml" 55 1892 1916
+type(
+  string
+)
+"ubase/trace.ml" 55 1892 1911 "ubase/trace.ml" 55 1892 1916
+type(
+  bool
+)
+"ubase/trace.ml" 55 1892 1917 "ubase/trace.ml" 55 1892 1919
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 55 1892 1920 "ubase/trace.ml" 55 1892 1927
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 55 1892 1927 "ubase/trace.ml" 55 1892 1929
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 55 1892 1929 "ubase/trace.ml" 55 1892 1931
+type(
+  string
+)
+"ubase/trace.ml" 55 1892 1920 "ubase/trace.ml" 55 1892 1931
+type(
+  bool
+)
+"ubase/trace.ml" 55 1892 1911 "ubase/trace.ml" 55 1892 1931
+type(
+  bool
+)
+"ubase/trace.ml" 55 1892 1899 "ubase/trace.ml" 55 1892 1931
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1953 "ubase/trace.ml" 56 1943 1957
+type(
+  string
+)
+ident(
+  def time "ubase/trace.ml" 57 2021 2027 "ubase/trace.ml" 60 2173 2238
+)
+"ubase/trace.ml" 56 1943 1963 "ubase/trace.ml" 56 1943 1967
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 49 1679 1687 "ubase/trace.ml" 49 1679 1691
+)
+"ubase/trace.ml" 56 1943 1967 "ubase/trace.ml" 56 1943 1968
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/trace.ml" 56 1943 1968 "ubase/trace.ml" 56 1943 1970
+type(
+  string
+)
+"ubase/trace.ml" 56 1943 1963 "ubase/trace.ml" 56 1943 1970
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1971 "ubase/trace.ml" 56 1943 1973
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"ubase/trace.ml" 56 1943 1975 "ubase/trace.ml" 56 1943 1976
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+)
+"ubase/trace.ml" 56 1943 1976 "ubase/trace.ml" 56 1943 1977
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/trace.ml" 56 1943 1977 "ubase/trace.ml" 56 1943 1979
+type(
+  string
+)
+"ubase/trace.ml" 56 1943 1975 "ubase/trace.ml" 56 1943 1979
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1979 "ubase/trace.ml" 56 1943 1981
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/trace.ml" 56 1943 1981 "ubase/trace.ml" 56 1943 1988
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 56 1943 1988 "ubase/trace.ml" 56 1943 1989
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/trace.ml" 56 1943 1989 "ubase/trace.ml" 56 1943 1991
+type(
+  string
+)
+"ubase/trace.ml" 56 1943 1981 "ubase/trace.ml" 56 1943 1991
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1974 "ubase/trace.ml" 56 1943 1992
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1963 "ubase/trace.ml" 56 1943 1992
+type(
+  bool
+)
+"ubase/trace.ml" 56 1943 1998 "ubase/trace.ml" 56 1943 2002
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 49 1679 1687 "ubase/trace.ml" 49 1679 1691
+)
+"ubase/trace.ml" 56 1943 2008 "ubase/trace.ml" 56 1943 2012
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 49 1679 1687 "ubase/trace.ml" 49 1679 1691
+)
+"ubase/trace.ml" 56 1943 2012 "ubase/trace.ml" 56 1943 2013
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 56 1943 2013 "ubase/trace.ml" 56 1943 2017
+type(
+  string
+)
+"ubase/trace.ml" 56 1943 2008 "ubase/trace.ml" 56 1943 2017
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 56 1943 1960 "ubase/trace.ml" 56 1943 2017
+type(
+  string
+)
+"ubase/trace.ml" 57 2021 2033 "ubase/trace.ml" 57 2021 2034
+type(
+  trace_printer_choices ref -> trace_printer_choices
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 57 2021 2034 "ubase/trace.ml" 57 2021 2046
+type(
+  trace_printer_choices ref
+)
+ident(
+  int_ref traceprinter "ubase/trace.ml" 9 281 285 "ubase/trace.ml" 9 281 297
+)
+"ubase/trace.ml" 57 2021 2033 "ubase/trace.ml" 57 2021 2046
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 58 2052 2060 "ubase/trace.ml" 58 2052 2067
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 58 2052 2071 "ubase/trace.ml" 58 2052 2084
+type(
+  (string -> string -> string -> unit, out_channel, unit) format ->
+  string -> string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"ubase/trace.ml" 58 2052 2085 "ubase/trace.ml" 58 2052 2096
+type(
+  (string -> string -> string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 58 2052 2097 "ubase/trace.ml" 58 2052 2101
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 56 1943 1953 "ubase/trace.ml" 56 1943 1957
+)
+"ubase/trace.ml" 58 2052 2102 "ubase/trace.ml" 58 2052 2103
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+)
+"ubase/trace.ml" 58 2052 2104 "ubase/trace.ml" 58 2052 2111
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 58 2052 2071 "ubase/trace.ml" 58 2052 2111
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 59 2112 2120 "ubase/trace.ml" 59 2112 2127
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 59 2112 2131 "ubase/trace.ml" 59 2112 2145
+type(
+  (string -> string -> string -> unit, out_channel, unit) format ->
+  string -> string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"ubase/trace.ml" 59 2112 2146 "ubase/trace.ml" 59 2112 2157
+type(
+  (string -> string -> string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 59 2112 2158 "ubase/trace.ml" 59 2112 2162
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 56 1943 1953 "ubase/trace.ml" 56 1943 1957
+)
+"ubase/trace.ml" 59 2112 2163 "ubase/trace.ml" 59 2112 2164
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+)
+"ubase/trace.ml" 59 2112 2165 "ubase/trace.ml" 59 2112 2172
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 59 2112 2131 "ubase/trace.ml" 59 2112 2172
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 60 2173 2181 "ubase/trace.ml" 60 2173 2194
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 60 2173 2198 "ubase/trace.ml" 60 2173 2211
+type(
+  (string -> string -> string -> unit, Format.formatter, unit) format ->
+  string -> string -> string -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"ubase/trace.ml" 60 2173 2212 "ubase/trace.ml" 60 2173 2223
+type(
+  (string -> string -> string -> unit, Format.formatter, unit) format
+)
+"ubase/trace.ml" 60 2173 2224 "ubase/trace.ml" 60 2173 2228
+type(
+  string
+)
+ident(
+  int_ref time "ubase/trace.ml" 56 1943 1953 "ubase/trace.ml" 56 1943 1957
+)
+"ubase/trace.ml" 60 2173 2229 "ubase/trace.ml" 60 2173 2230
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 48 1620 1628 "ubase/trace.ml" 48 1620 1629
+)
+"ubase/trace.ml" 60 2173 2231 "ubase/trace.ml" 60 2173 2238
+type(
+  string
+)
+ident(
+  int_ref modname "ubase/trace.ml" 46 1562 1572 "ubase/trace.ml" 46 1562 1579
+)
+"ubase/trace.ml" 60 2173 2198 "ubase/trace.ml" 60 2173 2238
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 57 2021 2027 "ubase/trace.ml" 60 2173 2238
+type(
+  unit
+)
+"ubase/trace.ml" 55 1892 1937 "ubase/trace.ml" 61 2239 2248
+type(
+  unit
+)
+"ubase/trace.ml" 55 1892 1896 "ubase/trace.ml" 61 2239 2248
+type(
+  unit
+)
+"ubase/trace.ml" 62 2250 2254 "ubase/trace.ml" 62 2250 2259
+type(
+  unit -> 'a
+)
+ident(
+  int_ref thunk "ubase/trace.ml" 46 1562 1580 "ubase/trace.ml" 46 1562 1585
+)
+"ubase/trace.ml" 62 2250 2259 "ubase/trace.ml" 62 2250 2261
+type(
+  unit
+)
+"ubase/trace.ml" 62 2250 2254 "ubase/trace.ml" 62 2250 2261
+call(
+  stack
+)
+type(
+  'a
+)
+"ubase/trace.ml" 63 2263 2267 "ubase/trace.ml" 63 2263 2272
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.flush
+)
+"ubase/trace.ml" 63 2263 2273 "ubase/trace.ml" 63 2263 2279
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stderr
+)
+"ubase/trace.ml" 63 2263 2267 "ubase/trace.ml" 63 2263 2279
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 62 2250 2254 "ubase/trace.ml" 63 2263 2279
+type(
+  unit
+)
+"ubase/trace.ml" 55 1892 1896 "ubase/trace.ml" 63 2263 2279
+type(
+  unit
+)
+"ubase/trace.ml" 49 1679 1683 "ubase/trace.ml" 63 2263 2279
+type(
+  unit
+)
+"ubase/trace.ml" 47 1588 1614 "ubase/trace.ml" 64 2280 2285
+type(
+  unit
+)
+"ubase/trace.ml" 47 1588 1590 "ubase/trace.ml" 64 2280 2285
+type(
+  unit
+)
+"ubase/trace.ml" 69 2489 2497 "ubase/trace.ml" 69 2489 2514
+type(
+  (string -> (unit -> unit) -> unit) option ref
+)
+ident(
+  ext_ref Util.debugPrinter
+)
+"ubase/trace.ml" 69 2489 2515 "ubase/trace.ml" 69 2489 2517
+type(
+  (string -> (unit -> unit) -> unit) option ref ->
+  (string -> (unit -> unit) -> unit) option -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 69 2489 2522 "ubase/trace.ml" 69 2489 2529
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  int_ref debug "ubase/trace.ml" 46 1562 1566 "ubase/trace.ml" 46 1562 1571
+)
+"ubase/trace.ml" 69 2489 2518 "ubase/trace.ml" 69 2489 2529
+type(
+  (string -> (unit -> unit) -> unit) option
+)
+"ubase/trace.ml" 69 2489 2497 "ubase/trace.ml" 69 2489 2529
+type(
+  unit
+)
+"ubase/trace.ml" 75 2624 2628 "ubase/trace.ml" 75 2624 2635
+type(
+  bool Prefs.t
+)
+ident(
+  def logging "ubase/trace.ml" 76 2652 2652 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 75 2624 2638 "ubase/trace.ml" 75 2624 2651
+type(
+  bool Prefs.t
+)
+ident(
+  ext_ref Prefs.logPref
+)
+"ubase/trace.ml" 76 2652 2656 "ubase/trace.ml" 76 2652 2663
+type(
+  string Prefs.t
+)
+ident(
+  def logfile "ubase/trace.ml" 78 2685 2685 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 76 2652 2666 "ubase/trace.ml" 76 2652 2683
+type(
+  string Prefs.t
+)
+ident(
+  ext_ref Prefs.logfilePref
+)
+"ubase/trace.ml" 78 2685 2689 "ubase/trace.ml" 78 2685 2694
+type(
+  (out_channel * string) option ref
+)
+ident(
+  def logch "ubase/trace.ml" 80 2707 2707 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 78 2685 2697 "ubase/trace.ml" 78 2685 2700
+type(
+  (out_channel * string) option -> (out_channel * string) option ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 78 2685 2701 "ubase/trace.ml" 78 2685 2705
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 78 2685 2697 "ubase/trace.ml" 78 2685 2705
+type(
+  (out_channel * string) option ref
+)
+"ubase/trace.ml" 80 2707 2715 "ubase/trace.ml" 80 2707 2723
+type(
+  unit -> out_channel
+)
+ident(
+  def getLogch "ubase/trace.ml" 80 2707 2707 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 80 2707 2723 "ubase/trace.ml" 80 2707 2725
+type(
+  unit
+)
+"ubase/trace.ml" 81 2728 2730 "ubase/trace.ml" 81 2728 2759
+type(
+  string -> (unit -> out_channel) -> out_channel
+)
+ident(
+  ext_ref Util.convertUnixErrorsToFatal
+)
+"ubase/trace.ml" 81 2728 2760 "ubase/trace.ml" 81 2728 2770
+type(
+  string
+)
+"ubase/trace.ml" 81 2728 2775 "ubase/trace.ml" 81 2728 2777
+type(
+  unit
+)
+"ubase/trace.ml" 82 2781 2789 "ubase/trace.ml" 82 2781 2790
+type(
+  (out_channel * string) option ref -> (out_channel * string) option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 82 2781 2790 "ubase/trace.ml" 82 2781 2795
+type(
+  (out_channel * string) option ref
+)
+ident(
+  int_ref logch "ubase/trace.ml" 78 2685 2689 "ubase/trace.ml" 78 2685 2694
+)
+"ubase/trace.ml" 82 2781 2789 "ubase/trace.ml" 82 2781 2795
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 83 2801 2805 "ubase/trace.ml" 83 2801 2809
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 84 2813 2823 "ubase/trace.ml" 84 2813 2827
+type(
+  string
+)
+ident(
+  def file "ubase/trace.ml" 85 2852 2858 "ubase/trace.ml" 88 2973 2981
+)
+"ubase/trace.ml" 84 2813 2830 "ubase/trace.ml" 84 2813 2840
+type(
+  string Prefs.t -> string
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 84 2813 2841 "ubase/trace.ml" 84 2813 2848
+type(
+  string Prefs.t
+)
+ident(
+  int_ref logfile "ubase/trace.ml" 76 2652 2656 "ubase/trace.ml" 76 2652 2663
+)
+"ubase/trace.ml" 84 2813 2830 "ubase/trace.ml" 84 2813 2848
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 85 2852 2862 "ubase/trace.ml" 85 2852 2864
+type(
+  out_channel
+)
+ident(
+  def ch "ubase/trace.ml" 87 2941 2947 "ubase/trace.ml" 88 2973 2981
+)
+"ubase/trace.ml" 86 2867 2875 "ubase/trace.ml" 86 2867 2887
+type(
+  open_flag list -> int -> string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out_gen
+)
+"ubase/trace.ml" 86 2867 2889 "ubase/trace.ml" 86 2867 2900
+type(
+  open_flag
+)
+"ubase/trace.ml" 86 2867 2902 "ubase/trace.ml" 86 2867 2913
+type(
+  open_flag
+)
+"ubase/trace.ml" 86 2867 2915 "ubase/trace.ml" 86 2867 2925
+type(
+  open_flag
+)
+"ubase/trace.ml" 86 2867 2888 "ubase/trace.ml" 86 2867 2926
+type(
+  open_flag list
+)
+"ubase/trace.ml" 86 2867 2927 "ubase/trace.ml" 86 2867 2932
+type(
+  int
+)
+"ubase/trace.ml" 86 2867 2933 "ubase/trace.ml" 86 2867 2937
+type(
+  string
+)
+ident(
+  int_ref file "ubase/trace.ml" 84 2813 2823 "ubase/trace.ml" 84 2813 2827
+)
+"ubase/trace.ml" 86 2867 2875 "ubase/trace.ml" 86 2867 2937
+call(
+  stack
+)
+type(
+  out_channel
+)
+"ubase/trace.ml" 87 2941 2947 "ubase/trace.ml" 87 2941 2952
+type(
+  (out_channel * string) option ref
+)
+ident(
+  int_ref logch "ubase/trace.ml" 78 2685 2689 "ubase/trace.ml" 78 2685 2694
+)
+"ubase/trace.ml" 87 2941 2953 "ubase/trace.ml" 87 2941 2955
+type(
+  (out_channel * string) option ref -> (out_channel * string) option -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 87 2941 2962 "ubase/trace.ml" 87 2941 2964
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 85 2852 2862 "ubase/trace.ml" 85 2852 2864
+)
+"ubase/trace.ml" 87 2941 2966 "ubase/trace.ml" 87 2941 2970
+type(
+  string
+)
+ident(
+  int_ref file "ubase/trace.ml" 84 2813 2823 "ubase/trace.ml" 84 2813 2827
+)
+"ubase/trace.ml" 87 2941 2961 "ubase/trace.ml" 87 2941 2971
+type(
+  out_channel * string
+)
+"ubase/trace.ml" 87 2941 2956 "ubase/trace.ml" 87 2941 2971
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 87 2941 2947 "ubase/trace.ml" 87 2941 2971
+type(
+  unit
+)
+"ubase/trace.ml" 88 2973 2979 "ubase/trace.ml" 88 2973 2981
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 85 2852 2862 "ubase/trace.ml" 85 2852 2864
+)
+"ubase/trace.ml" 87 2941 2947 "ubase/trace.ml" 88 2973 2981
+type(
+  out_channel
+)
+"ubase/trace.ml" 85 2852 2858 "ubase/trace.ml" 88 2973 2981
+type(
+  out_channel
+)
+"ubase/trace.ml" 84 2813 2819 "ubase/trace.ml" 88 2973 2981
+type(
+  out_channel
+)
+"ubase/trace.ml" 89 2982 2991 "ubase/trace.ml" 89 2982 2993
+type(
+  out_channel
+)
+ident(
+  def ch "ubase/trace.ml" 90 3004 3010 "ubase/trace.ml" 93 3115 3124
+)
+"ubase/trace.ml" 89 2982 2995 "ubase/trace.ml" 89 2982 2999
+type(
+  string
+)
+ident(
+  def file "ubase/trace.ml" 90 3004 3010 "ubase/trace.ml" 93 3115 3124
+)
+"ubase/trace.ml" 89 2982 2990 "ubase/trace.ml" 89 2982 3000
+type(
+  out_channel * string
+)
+"ubase/trace.ml" 89 2982 2986 "ubase/trace.ml" 89 2982 3000
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 90 3004 3013 "ubase/trace.ml" 90 3004 3023
+type(
+  string Prefs.t -> string
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 90 3004 3024 "ubase/trace.ml" 90 3004 3031
+type(
+  string Prefs.t
+)
+ident(
+  int_ref logfile "ubase/trace.ml" 76 2652 2656 "ubase/trace.ml" 76 2652 2663
+)
+"ubase/trace.ml" 90 3004 3013 "ubase/trace.ml" 90 3004 3031
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 90 3004 3032 "ubase/trace.ml" 90 3004 3033
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"ubase/trace.ml" 90 3004 3034 "ubase/trace.ml" 90 3004 3038
+type(
+  string
+)
+ident(
+  int_ref file "ubase/trace.ml" 89 2982 2995 "ubase/trace.ml" 89 2982 2999
+)
+"ubase/trace.ml" 90 3004 3013 "ubase/trace.ml" 90 3004 3038
+type(
+  bool
+)
+"ubase/trace.ml" 90 3004 3044 "ubase/trace.ml" 90 3004 3046
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 89 2982 2991 "ubase/trace.ml" 89 2982 2993
+)
+"ubase/trace.ml" 91 3058 3066 "ubase/trace.ml" 91 3058 3075
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"ubase/trace.ml" 91 3058 3076 "ubase/trace.ml" 91 3058 3078
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 89 2982 2991 "ubase/trace.ml" 89 2982 2993
+)
+"ubase/trace.ml" 91 3058 3066 "ubase/trace.ml" 91 3058 3078
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 92 3080 3088 "ubase/trace.ml" 92 3080 3093
+type(
+  (out_channel * string) option ref
+)
+ident(
+  int_ref logch "ubase/trace.ml" 78 2685 2689 "ubase/trace.ml" 78 2685 2694
+)
+"ubase/trace.ml" 92 3080 3094 "ubase/trace.ml" 92 3080 3096
+type(
+  (out_channel * string) option ref -> (out_channel * string) option -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 92 3080 3097 "ubase/trace.ml" 92 3080 3101
+type(
+  (out_channel * string) option
+)
+"ubase/trace.ml" 92 3080 3088 "ubase/trace.ml" 92 3080 3101
+type(
+  unit
+)
+"ubase/trace.ml" 92 3080 3103 "ubase/trace.ml" 92 3080 3111
+type(
+  unit -> out_channel
+)
+ident(
+  int_ref getLogch "ubase/trace.ml" 80 2707 2715 "ubase/trace.ml" 80 2707 2723
+)
+"ubase/trace.ml" 92 3080 3112 "ubase/trace.ml" 92 3080 3114
+type(
+  unit
+)
+"ubase/trace.ml" 92 3080 3103 "ubase/trace.ml" 92 3080 3114
+call(
+  tail
+)
+type(
+  out_channel
+)
+"ubase/trace.ml" 92 3080 3088 "ubase/trace.ml" 92 3080 3114
+type(
+  out_channel
+)
+"ubase/trace.ml" 90 3004 3052 "ubase/trace.ml" 93 3115 3124
+type(
+  out_channel
+)
+"ubase/trace.ml" 90 3004 3010 "ubase/trace.ml" 93 3115 3124
+type(
+  out_channel
+)
+"ubase/trace.ml" 82 2781 2783 "ubase/trace.ml" 93 3115 3124
+type(
+  out_channel
+)
+"ubase/trace.ml" 81 2728 2771 "ubase/trace.ml" 93 3115 3125
+type(
+  unit -> out_channel
+)
+"ubase/trace.ml" 81 2728 2730 "ubase/trace.ml" 93 3115 3125
+call(
+  tail
+)
+type(
+  out_channel
+)
+"ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+type(
+  bool ref
+)
+ident(
+  def sendLogMsgsToStderr "ubase/trace.ml" 97 3163 3163 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 95 3127 3153 "ubase/trace.ml" 95 3127 3156
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 95 3127 3157 "ubase/trace.ml" 95 3127 3161
+type(
+  bool
+)
+"ubase/trace.ml" 95 3127 3153 "ubase/trace.ml" 95 3127 3161
+type(
+  bool ref
+)
+"ubase/trace.ml" 97 3163 3167 "ubase/trace.ml" 97 3163 3175
+type(
+  string -> unit
+)
+ident(
+  def writeLog "ubase/trace.ml" 117 3781 3781 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 98 3180 3182 "ubase/trace.ml" 112 3655 3660
+)
+"ubase/trace.ml" 98 3180 3185 "ubase/trace.ml" 98 3180 3186
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 98 3180 3186 "ubase/trace.ml" 98 3180 3205
+type(
+  bool ref
+)
+ident(
+  int_ref sendLogMsgsToStderr "ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+)
+"ubase/trace.ml" 98 3180 3185 "ubase/trace.ml" 98 3180 3205
+type(
+  bool
+)
+"ubase/trace.ml" 99 3217 3229 "ubase/trace.ml" 99 3217 3230
+type(
+  trace_printer_choices ref -> trace_printer_choices
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 99 3217 3230 "ubase/trace.ml" 99 3217 3242
+type(
+  trace_printer_choices ref
+)
+ident(
+  int_ref traceprinter "ubase/trace.ml" 9 281 285 "ubase/trace.ml" 9 281 297
+)
+"ubase/trace.ml" 99 3217 3229 "ubase/trace.ml" 99 3217 3242
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 100 3248 3256 "ubase/trace.ml" 100 3248 3263
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 100 3248 3267 "ubase/trace.ml" 100 3248 3280
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"ubase/trace.ml" 100 3248 3281 "ubase/trace.ml" 100 3248 3285
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 100 3248 3286 "ubase/trace.ml" 100 3248 3287
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 100 3248 3267 "ubase/trace.ml" 100 3248 3287
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 101 3288 3296 "ubase/trace.ml" 101 3288 3303
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 101 3288 3307 "ubase/trace.ml" 101 3288 3315
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.msg
+)
+"ubase/trace.ml" 101 3288 3316 "ubase/trace.ml" 101 3288 3320
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 101 3288 3321 "ubase/trace.ml" 101 3288 3322
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 101 3288 3307 "ubase/trace.ml" 101 3288 3322
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 102 3323 3331 "ubase/trace.ml" 102 3323 3344
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 102 3323 3348 "ubase/trace.ml" 102 3323 3361
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"ubase/trace.ml" 102 3323 3362 "ubase/trace.ml" 102 3323 3367
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"ubase/trace.ml" 102 3323 3368 "ubase/trace.ml" 102 3323 3369
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 102 3323 3348 "ubase/trace.ml" 102 3323 3369
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 98 3180 3211 "ubase/trace.ml" 103 3370 3375
+type(
+  unit
+)
+"ubase/trace.ml" 103 3370 3381 "ubase/trace.ml" 103 3370 3386
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  int_ref debug "ubase/trace.ml" 46 1562 1566 "ubase/trace.ml" 46 1562 1571
+)
+"ubase/trace.ml" 103 3370 3387 "ubase/trace.ml" 103 3370 3389
+type(
+  string
+)
+"ubase/trace.ml" 103 3370 3394 "ubase/trace.ml" 103 3370 3396
+type(
+  unit
+)
+"ubase/trace.ml" 104 3401 3413 "ubase/trace.ml" 104 3401 3414
+type(
+  trace_printer_choices ref -> trace_printer_choices
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 104 3401 3414 "ubase/trace.ml" 104 3401 3426
+type(
+  trace_printer_choices ref
+)
+ident(
+  int_ref traceprinter "ubase/trace.ml" 9 281 285 "ubase/trace.ml" 9 281 297
+)
+"ubase/trace.ml" 104 3401 3413 "ubase/trace.ml" 104 3401 3426
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 105 3432 3440 "ubase/trace.ml" 105 3432 3447
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 105 3432 3451 "ubase/trace.ml" 105 3432 3464
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"ubase/trace.ml" 105 3432 3465 "ubase/trace.ml" 105 3432 3469
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 105 3432 3470 "ubase/trace.ml" 105 3432 3471
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 105 3432 3451 "ubase/trace.ml" 105 3432 3471
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 106 3472 3480 "ubase/trace.ml" 106 3472 3487
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 106 3472 3491 "ubase/trace.ml" 106 3472 3499
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.msg
+)
+"ubase/trace.ml" 106 3472 3500 "ubase/trace.ml" 106 3472 3504
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 106 3472 3505 "ubase/trace.ml" 106 3472 3506
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 106 3472 3491 "ubase/trace.ml" 106 3472 3506
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 107 3507 3515 "ubase/trace.ml" 107 3507 3528
+type(
+  trace_printer_choices
+)
+"ubase/trace.ml" 107 3507 3532 "ubase/trace.ml" 107 3507 3545
+type(
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"ubase/trace.ml" 107 3507 3546 "ubase/trace.ml" 107 3507 3551
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"ubase/trace.ml" 107 3507 3552 "ubase/trace.ml" 107 3507 3553
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 107 3507 3532 "ubase/trace.ml" 107 3507 3553
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 104 3401 3407 "ubase/trace.ml" 107 3507 3553
+type(
+  unit
+)
+"ubase/trace.ml" 103 3370 3390 "ubase/trace.ml" 107 3507 3554
+type(
+  unit -> unit
+)
+"ubase/trace.ml" 103 3370 3381 "ubase/trace.ml" 107 3507 3554
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 98 3180 3182 "ubase/trace.ml" 107 3507 3554
+type(
+  unit
+)
+"ubase/trace.ml" 108 3556 3561 "ubase/trace.ml" 108 3556 3571
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 108 3556 3572 "ubase/trace.ml" 108 3556 3579
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref logging "ubase/trace.ml" 75 2624 2628 "ubase/trace.ml" 75 2624 2635
+)
+"ubase/trace.ml" 108 3556 3561 "ubase/trace.ml" 108 3556 3579
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 109 3591 3599 "ubase/trace.ml" 109 3591 3601
+type(
+  out_channel
+)
+ident(
+  def ch "ubase/trace.ml" 110 3618 3622 "ubase/trace.ml" 111 3642 3654
+)
+"ubase/trace.ml" 109 3591 3604 "ubase/trace.ml" 109 3591 3612
+type(
+  unit -> out_channel
+)
+ident(
+  int_ref getLogch "ubase/trace.ml" 80 2707 2715 "ubase/trace.ml" 80 2707 2723
+)
+"ubase/trace.ml" 109 3591 3612 "ubase/trace.ml" 109 3591 3614
+type(
+  unit
+)
+"ubase/trace.ml" 109 3591 3604 "ubase/trace.ml" 109 3591 3614
+call(
+  stack
+)
+type(
+  out_channel
+)
+"ubase/trace.ml" 110 3618 3622 "ubase/trace.ml" 110 3618 3635
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"ubase/trace.ml" 110 3618 3636 "ubase/trace.ml" 110 3618 3638
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 109 3591 3599 "ubase/trace.ml" 109 3591 3601
+)
+"ubase/trace.ml" 110 3618 3639 "ubase/trace.ml" 110 3618 3640
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 97 3163 3176 "ubase/trace.ml" 97 3163 3177
+)
+"ubase/trace.ml" 110 3618 3622 "ubase/trace.ml" 110 3618 3640
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 111 3642 3646 "ubase/trace.ml" 111 3642 3651
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.flush
+)
+"ubase/trace.ml" 111 3642 3652 "ubase/trace.ml" 111 3642 3654
+type(
+  out_channel
+)
+ident(
+  int_ref ch "ubase/trace.ml" 109 3591 3599 "ubase/trace.ml" 109 3591 3601
+)
+"ubase/trace.ml" 111 3642 3646 "ubase/trace.ml" 111 3642 3654
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 110 3618 3622 "ubase/trace.ml" 111 3642 3654
+type(
+  unit
+)
+"ubase/trace.ml" 108 3556 3585 "ubase/trace.ml" 112 3655 3660
+type(
+  unit
+)
+"ubase/trace.ml" 108 3556 3558 "ubase/trace.ml" 112 3655 3660
+type(
+  unit
+)
+"ubase/trace.ml" 98 3180 3182 "ubase/trace.ml" 112 3655 3660
+type(
+  unit
+)
+"ubase/trace.ml" 117 3781 3785 "ubase/trace.ml" 117 3781 3790
+type(
+  bool Prefs.t
+)
+ident(
+  def terse "ubase/trace.ml" 119 3810 3810 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 117 3781 3793 "ubase/trace.ml" 117 3781 3808
+type(
+  bool Prefs.t
+)
+ident(
+  ext_ref Prefs.tersePref
+)
+"ubase/trace.ml" 122 3892 3896 "ubase/trace.ml" 122 3892 3919
+type(
+  string -> unit
+)
+ident(
+  def defaultMessageDisplayer "ubase/trace.ml" 129 4105 4105 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 122 3892 3920 "ubase/trace.ml" 122 3892 3921
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 123 3924 3926 "ubase/trace.ml" 127 4097 4102
+)
+"ubase/trace.ml" 123 3924 3929 "ubase/trace.ml" 123 3924 3932
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 123 3924 3934 "ubase/trace.ml" 123 3924 3944
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 123 3924 3945 "ubase/trace.ml" 123 3924 3950
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref terse "ubase/trace.ml" 117 3781 3785 "ubase/trace.ml" 117 3781 3790
+)
+"ubase/trace.ml" 123 3924 3933 "ubase/trace.ml" 123 3924 3951
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 123 3924 3929 "ubase/trace.ml" 123 3924 3951
+type(
+  bool
+)
+"ubase/trace.ml" 124 3963 3971 "ubase/trace.ml" 124 3963 3975
+type(
+  unit -> unit
+)
+ident(
+  def show "ubase/trace.ml" 125 4015 4019 "ubase/trace.ml" 126 4052 4096
+)
+"ubase/trace.ml" 124 3963 3975 "ubase/trace.ml" 124 3963 3977
+type(
+  unit
+)
+"ubase/trace.ml" 124 3963 3983 "ubase/trace.ml" 124 3963 3984
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 122 3892 3920 "ubase/trace.ml" 122 3892 3921
+)
+"ubase/trace.ml" 124 3963 3984 "ubase/trace.ml" 124 3963 3986
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"ubase/trace.ml" 124 3963 3986 "ubase/trace.ml" 124 3963 3988
+type(
+  string
+)
+"ubase/trace.ml" 124 3963 3983 "ubase/trace.ml" 124 3963 3988
+type(
+  bool
+)
+"ubase/trace.ml" 124 3963 3994 "ubase/trace.ml" 124 3963 4002
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Util.msg
+)
+"ubase/trace.ml" 124 3963 4003 "ubase/trace.ml" 124 3963 4009
+type(
+  (string -> unit, out_channel, unit) format
+)
+"ubase/trace.ml" 124 3963 4010 "ubase/trace.ml" 124 3963 4011
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 122 3892 3920 "ubase/trace.ml" 122 3892 3921
+)
+"ubase/trace.ml" 124 3963 3994 "ubase/trace.ml" 124 3963 4011
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 124 3963 3980 "ubase/trace.ml" 124 3963 4011
+type(
+  unit
+)
+"ubase/trace.ml" 125 4015 4022 "ubase/trace.ml" 125 4015 4029
+type(
+  string -> bool
+)
+ident(
+  int_ref enabled "ubase/trace.ml" 23 632 636 "ubase/trace.ml" 23 632 643
+)
+"ubase/trace.ml" 125 4015 4030 "ubase/trace.ml" 125 4015 4032
+type(
+  string
+)
+"ubase/trace.ml" 125 4015 4022 "ubase/trace.ml" 125 4015 4032
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 125 4015 4038 "ubase/trace.ml" 125 4015 4043
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  int_ref debug "ubase/trace.ml" 46 1562 1566 "ubase/trace.ml" 46 1562 1571
+)
+"ubase/trace.ml" 125 4015 4044 "ubase/trace.ml" 125 4015 4046
+type(
+  string
+)
+"ubase/trace.ml" 125 4015 4047 "ubase/trace.ml" 125 4015 4051
+type(
+  unit -> unit
+)
+ident(
+  int_ref show "ubase/trace.ml" 124 3963 3971 "ubase/trace.ml" 124 3963 3975
+)
+"ubase/trace.ml" 125 4015 4038 "ubase/trace.ml" 125 4015 4051
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 126 4052 4064 "ubase/trace.ml" 126 4052 4067
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 126 4052 4068 "ubase/trace.ml" 126 4052 4069
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 126 4052 4069 "ubase/trace.ml" 126 4052 4084
+type(
+  bool ref
+)
+ident(
+  int_ref runningasserver "ubase/trace.ml" 19 551 555 "ubase/trace.ml" 19 551 570
+)
+"ubase/trace.ml" 126 4052 4068 "ubase/trace.ml" 126 4052 4084
+type(
+  bool
+)
+"ubase/trace.ml" 126 4052 4064 "ubase/trace.ml" 126 4052 4084
+type(
+  bool
+)
+"ubase/trace.ml" 126 4052 4090 "ubase/trace.ml" 126 4052 4094
+type(
+  unit -> unit
+)
+ident(
+  int_ref show "ubase/trace.ml" 124 3963 3971 "ubase/trace.ml" 124 3963 3975
+)
+"ubase/trace.ml" 126 4052 4094 "ubase/trace.ml" 126 4052 4096
+type(
+  unit
+)
+"ubase/trace.ml" 126 4052 4090 "ubase/trace.ml" 126 4052 4096
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 126 4052 4061 "ubase/trace.ml" 126 4052 4096
+type(
+  unit
+)
+"ubase/trace.ml" 125 4015 4019 "ubase/trace.ml" 126 4052 4096
+type(
+  unit
+)
+"ubase/trace.ml" 123 3924 3957 "ubase/trace.ml" 127 4097 4102
+type(
+  unit
+)
+"ubase/trace.ml" 123 3924 3926 "ubase/trace.ml" 127 4097 4102
+type(
+  unit
+)
+"ubase/trace.ml" 129 4105 4109 "ubase/trace.ml" 129 4105 4125
+type(
+  (string -> unit) ref
+)
+ident(
+  def messageDisplayer "ubase/trace.ml" 131 4157 4157 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 129 4105 4128 "ubase/trace.ml" 129 4105 4131
+type(
+  (string -> unit) -> (string -> unit) ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 129 4105 4132 "ubase/trace.ml" 129 4105 4155
+type(
+  string -> unit
+)
+ident(
+  int_ref defaultMessageDisplayer "ubase/trace.ml" 122 3892 3896 "ubase/trace.ml" 122 3892 3919
+)
+"ubase/trace.ml" 129 4105 4128 "ubase/trace.ml" 129 4105 4155
+type(
+  (string -> unit) ref
+)
+"ubase/trace.ml" 131 4157 4161 "ubase/trace.ml" 131 4157 4183
+type(
+  string -> string -> string
+)
+ident(
+  def defaultStatusFormatter "ubase/trace.ml" 133 4207 4207 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 131 4157 4184 "ubase/trace.ml" 131 4157 4186
+type(
+  string
+)
+ident(
+  def s1 "ubase/trace.ml" 131 4157 4187 "ubase/trace.ml" 131 4157 4205
+)
+"ubase/trace.ml" 131 4157 4187 "ubase/trace.ml" 131 4157 4189
+type(
+  string
+)
+ident(
+  def s2 "ubase/trace.ml" 131 4157 4192 "ubase/trace.ml" 131 4157 4205
+)
+"ubase/trace.ml" 131 4157 4192 "ubase/trace.ml" 131 4157 4194
+type(
+  string
+)
+ident(
+  int_ref s1 "ubase/trace.ml" 131 4157 4184 "ubase/trace.ml" 131 4157 4186
+)
+"ubase/trace.ml" 131 4157 4195 "ubase/trace.ml" 131 4157 4196
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 131 4157 4197 "ubase/trace.ml" 131 4157 4200
+type(
+  string
+)
+"ubase/trace.ml" 131 4157 4201 "ubase/trace.ml" 131 4157 4202
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 131 4157 4203 "ubase/trace.ml" 131 4157 4205
+type(
+  string
+)
+ident(
+  int_ref s2 "ubase/trace.ml" 131 4157 4187 "ubase/trace.ml" 131 4157 4189
+)
+"ubase/trace.ml" 131 4157 4197 "ubase/trace.ml" 131 4157 4205
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 131 4157 4192 "ubase/trace.ml" 131 4157 4205
+call(
+  tail
+)
+type(
+  string
+)
+"ubase/trace.ml" 133 4207 4211 "ubase/trace.ml" 133 4207 4226
+type(
+  (string -> string -> string) ref
+)
+ident(
+  def statusFormatter "ubase/trace.ml" 135 4257 4257 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 133 4207 4229 "ubase/trace.ml" 133 4207 4232
+type(
+  (string -> string -> string) -> (string -> string -> string) ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 133 4207 4233 "ubase/trace.ml" 133 4207 4255
+type(
+  string -> string -> string
+)
+ident(
+  int_ref defaultStatusFormatter "ubase/trace.ml" 131 4157 4161 "ubase/trace.ml" 131 4157 4183
+)
+"ubase/trace.ml" 133 4207 4229 "ubase/trace.ml" 133 4207 4255
+type(
+  (string -> string -> string) ref
+)
+"ubase/trace.ml" 135 4257 4261 "ubase/trace.ml" 135 4257 4275
+type(
+  string ref
+)
+ident(
+  def statusMsgMajor "ubase/trace.ml" 136 4285 4285 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 135 4257 4278 "ubase/trace.ml" 135 4257 4281
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 135 4257 4282 "ubase/trace.ml" 135 4257 4284
+type(
+  string
+)
+"ubase/trace.ml" 135 4257 4278 "ubase/trace.ml" 135 4257 4284
+type(
+  string ref
+)
+"ubase/trace.ml" 136 4285 4289 "ubase/trace.ml" 136 4285 4303
+type(
+  string ref
+)
+ident(
+  def statusMsgMinor "ubase/trace.ml" 138 4314 4314 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 136 4285 4306 "ubase/trace.ml" 136 4285 4309
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 136 4285 4310 "ubase/trace.ml" 136 4285 4312
+type(
+  string
+)
+"ubase/trace.ml" 136 4285 4306 "ubase/trace.ml" 136 4285 4312
+type(
+  string ref
+)
+"ubase/trace.ml" 138 4314 4318 "ubase/trace.ml" 138 4314 4339
+type(
+  msgtype * string -> unit
+)
+ident(
+  def displayMessageLocally "ubase/trace.ml" 148 4671 4671 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 138 4314 4341 "ubase/trace.ml" 138 4314 4343
+type(
+  msgtype
+)
+ident(
+  def mt "ubase/trace.ml" 139 4350 4352 "ubase/trace.ml" 146 4648 4669
+)
+"ubase/trace.ml" 138 4314 4344 "ubase/trace.ml" 138 4314 4345
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 139 4350 4352 "ubase/trace.ml" 146 4648 4669
+)
+"ubase/trace.ml" 138 4314 4340 "ubase/trace.ml" 138 4314 4346
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 139 4350 4356 "ubase/trace.ml" 139 4350 4363
+type(
+  string -> unit
+)
+ident(
+  def display "ubase/trace.ml" 140 4387 4389 "ubase/trace.ml" 146 4648 4669
+)
+"ubase/trace.ml" 139 4350 4366 "ubase/trace.ml" 139 4350 4367
+type(
+  (string -> unit) ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 139 4350 4367 "ubase/trace.ml" 139 4350 4383
+type(
+  (string -> unit) ref
+)
+ident(
+  int_ref messageDisplayer "ubase/trace.ml" 129 4105 4109 "ubase/trace.ml" 129 4105 4125
+)
+"ubase/trace.ml" 139 4350 4366 "ubase/trace.ml" 139 4350 4383
+type(
+  string -> unit
+)
+"ubase/trace.ml" 140 4387 4393 "ubase/trace.ml" 140 4387 4406
+type(
+  unit -> unit
+)
+ident(
+  def displayStatus "ubase/trace.ml" 142 4477 4479 "ubase/trace.ml" 146 4648 4669
+)
+"ubase/trace.ml" 140 4387 4406 "ubase/trace.ml" 140 4387 4408
+type(
+  unit
+)
+"ubase/trace.ml" 141 4411 4415 "ubase/trace.ml" 141 4411 4422
+type(
+  string -> unit
+)
+ident(
+  int_ref display "ubase/trace.ml" 139 4350 4356 "ubase/trace.ml" 139 4350 4363
+)
+"ubase/trace.ml" 141 4411 4424 "ubase/trace.ml" 141 4411 4425
+type(
+  (string -> string -> string) ref -> string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 141 4411 4425 "ubase/trace.ml" 141 4411 4440
+type(
+  (string -> string -> string) ref
+)
+ident(
+  int_ref statusFormatter "ubase/trace.ml" 133 4207 4211 "ubase/trace.ml" 133 4207 4226
+)
+"ubase/trace.ml" 141 4411 4424 "ubase/trace.ml" 141 4411 4440
+type(
+  string -> string -> string
+)
+"ubase/trace.ml" 141 4411 4441 "ubase/trace.ml" 141 4411 4442
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 141 4411 4442 "ubase/trace.ml" 141 4411 4456
+type(
+  string ref
+)
+ident(
+  int_ref statusMsgMajor "ubase/trace.ml" 135 4257 4261 "ubase/trace.ml" 135 4257 4275
+)
+"ubase/trace.ml" 141 4411 4441 "ubase/trace.ml" 141 4411 4456
+type(
+  string
+)
+"ubase/trace.ml" 141 4411 4457 "ubase/trace.ml" 141 4411 4458
+type(
+  string ref -> string
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 141 4411 4458 "ubase/trace.ml" 141 4411 4472
+type(
+  string ref
+)
+ident(
+  int_ref statusMsgMinor "ubase/trace.ml" 136 4285 4289 "ubase/trace.ml" 136 4285 4303
+)
+"ubase/trace.ml" 141 4411 4457 "ubase/trace.ml" 141 4411 4472
+type(
+  string
+)
+"ubase/trace.ml" 141 4411 4423 "ubase/trace.ml" 141 4411 4473
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 141 4411 4415 "ubase/trace.ml" 141 4411 4473
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 142 4477 4485 "ubase/trace.ml" 142 4477 4487
+type(
+  msgtype
+)
+ident(
+  int_ref mt "ubase/trace.ml" 138 4314 4341 "ubase/trace.ml" 138 4314 4343
+)
+"ubase/trace.ml" 143 4493 4497 "ubase/trace.ml" 143 4493 4500
+type(
+  msgtype
+)
+"ubase/trace.ml" 143 4493 4504 "ubase/trace.ml" 143 4493 4511
+type(
+  string -> unit
+)
+ident(
+  int_ref display "ubase/trace.ml" 139 4350 4356 "ubase/trace.ml" 139 4350 4363
+)
+"ubase/trace.ml" 143 4493 4512 "ubase/trace.ml" 143 4493 4513
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 138 4314 4344 "ubase/trace.ml" 138 4314 4345
+)
+"ubase/trace.ml" 143 4493 4504 "ubase/trace.ml" 143 4493 4513
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4518 "ubase/trace.ml" 144 4514 4529
+type(
+  msgtype
+)
+"ubase/trace.ml" 144 4514 4533 "ubase/trace.ml" 144 4514 4547
+type(
+  string ref
+)
+ident(
+  int_ref statusMsgMajor "ubase/trace.ml" 135 4257 4261 "ubase/trace.ml" 135 4257 4275
+)
+"ubase/trace.ml" 144 4514 4548 "ubase/trace.ml" 144 4514 4550
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 144 4514 4551 "ubase/trace.ml" 144 4514 4552
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 138 4314 4344 "ubase/trace.ml" 138 4314 4345
+)
+"ubase/trace.ml" 144 4514 4533 "ubase/trace.ml" 144 4514 4552
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4554 "ubase/trace.ml" 144 4514 4568
+type(
+  string ref
+)
+ident(
+  int_ref statusMsgMinor "ubase/trace.ml" 136 4285 4289 "ubase/trace.ml" 136 4285 4303
+)
+"ubase/trace.ml" 144 4514 4569 "ubase/trace.ml" 144 4514 4571
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 144 4514 4572 "ubase/trace.ml" 144 4514 4574
+type(
+  string
+)
+"ubase/trace.ml" 144 4514 4554 "ubase/trace.ml" 144 4514 4574
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4576 "ubase/trace.ml" 144 4514 4589
+type(
+  unit -> unit
+)
+ident(
+  int_ref displayStatus "ubase/trace.ml" 140 4387 4393 "ubase/trace.ml" 140 4387 4406
+)
+"ubase/trace.ml" 144 4514 4589 "ubase/trace.ml" 144 4514 4591
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4576 "ubase/trace.ml" 144 4514 4591
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4554 "ubase/trace.ml" 144 4514 4591
+type(
+  unit
+)
+"ubase/trace.ml" 144 4514 4533 "ubase/trace.ml" 144 4514 4591
+type(
+  unit
+)
+"ubase/trace.ml" 145 4592 4596 "ubase/trace.ml" 145 4592 4607
+type(
+  msgtype
+)
+"ubase/trace.ml" 145 4592 4611 "ubase/trace.ml" 145 4592 4625
+type(
+  string ref
+)
+ident(
+  int_ref statusMsgMinor "ubase/trace.ml" 136 4285 4289 "ubase/trace.ml" 136 4285 4303
+)
+"ubase/trace.ml" 145 4592 4626 "ubase/trace.ml" 145 4592 4628
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 145 4592 4629 "ubase/trace.ml" 145 4592 4630
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 138 4314 4344 "ubase/trace.ml" 138 4314 4345
+)
+"ubase/trace.ml" 145 4592 4611 "ubase/trace.ml" 145 4592 4630
+type(
+  unit
+)
+"ubase/trace.ml" 145 4592 4632 "ubase/trace.ml" 145 4592 4645
+type(
+  unit -> unit
+)
+ident(
+  int_ref displayStatus "ubase/trace.ml" 140 4387 4393 "ubase/trace.ml" 140 4387 4406
+)
+"ubase/trace.ml" 145 4592 4645 "ubase/trace.ml" 145 4592 4647
+type(
+  unit
+)
+"ubase/trace.ml" 145 4592 4632 "ubase/trace.ml" 145 4592 4647
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 145 4592 4611 "ubase/trace.ml" 145 4592 4647
+type(
+  unit
+)
+"ubase/trace.ml" 146 4648 4652 "ubase/trace.ml" 146 4648 4655
+type(
+  msgtype
+)
+"ubase/trace.ml" 146 4648 4659 "ubase/trace.ml" 146 4648 4667
+type(
+  string -> unit
+)
+ident(
+  int_ref writeLog "ubase/trace.ml" 97 3163 3167 "ubase/trace.ml" 97 3163 3175
+)
+"ubase/trace.ml" 146 4648 4668 "ubase/trace.ml" 146 4648 4669
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 138 4314 4344 "ubase/trace.ml" 138 4314 4345
+)
+"ubase/trace.ml" 146 4648 4659 "ubase/trace.ml" 146 4648 4669
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 142 4477 4479 "ubase/trace.ml" 146 4648 4669
+type(
+  unit
+)
+"ubase/trace.ml" 140 4387 4389 "ubase/trace.ml" 146 4648 4669
+type(
+  unit
+)
+"ubase/trace.ml" 139 4350 4352 "ubase/trace.ml" 146 4648 4669
+type(
+  unit
+)
+"ubase/trace.ml" 148 4671 4675 "ubase/trace.ml" 148 4671 4691
+type(
+  (msgtype * string -> unit) option ref
+)
+ident(
+  def messageForwarder "ubase/trace.ml" 150 4704 4704 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 148 4671 4694 "ubase/trace.ml" 148 4671 4697
+type(
+  (msgtype * string -> unit) option -> (msgtype * string -> unit) option ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"ubase/trace.ml" 148 4671 4698 "ubase/trace.ml" 148 4671 4702
+type(
+  (msgtype * string -> unit) option
+)
+"ubase/trace.ml" 148 4671 4694 "ubase/trace.ml" 148 4671 4702
+type(
+  (msgtype * string -> unit) option ref
+)
+"ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+type(
+  msgtype * string -> unit
+)
+ident(
+  def displayMessage "ubase/trace.ml" 158 4961 4961 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 150 4704 4723 "ubase/trace.ml" 150 4704 4724
+type(
+  msgtype * string
+)
+ident(
+  def m "ubase/trace.ml" 151 4727 4729 "ubase/trace.ml" 153 4794 4812
+)
+"ubase/trace.ml" 151 4727 4735 "ubase/trace.ml" 151 4727 4736
+type(
+  (msgtype * string -> unit) option ref -> (msgtype * string -> unit) option
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 151 4727 4736 "ubase/trace.ml" 151 4727 4752
+type(
+  (msgtype * string -> unit) option ref
+)
+ident(
+  int_ref messageForwarder "ubase/trace.ml" 148 4671 4675 "ubase/trace.ml" 148 4671 4691
+)
+"ubase/trace.ml" 151 4727 4735 "ubase/trace.ml" 151 4727 4752
+type(
+  (msgtype * string -> unit) option
+)
+"ubase/trace.ml" 152 4758 4762 "ubase/trace.ml" 152 4758 4766
+type(
+  (msgtype * string -> unit) option
+)
+"ubase/trace.ml" 152 4758 4770 "ubase/trace.ml" 152 4758 4791
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessageLocally "ubase/trace.ml" 138 4314 4318 "ubase/trace.ml" 138 4314 4339
+)
+"ubase/trace.ml" 152 4758 4792 "ubase/trace.ml" 152 4758 4793
+type(
+  msgtype * string
+)
+ident(
+  int_ref m "ubase/trace.ml" 150 4704 4723 "ubase/trace.ml" 150 4704 4724
+)
+"ubase/trace.ml" 152 4758 4770 "ubase/trace.ml" 152 4758 4793
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 153 4794 4803 "ubase/trace.ml" 153 4794 4804
+ident(
+  def f "ubase/trace.ml" 153 4794 4809 "ubase/trace.ml" 153 4794 4812
+)
+"ubase/trace.ml" 153 4794 4802 "ubase/trace.ml" 153 4794 4805
+type(
+  msgtype * string -> unit
+)
+"ubase/trace.ml" 153 4794 4798 "ubase/trace.ml" 153 4794 4805
+type(
+  (msgtype * string -> unit) option
+)
+"ubase/trace.ml" 153 4794 4809 "ubase/trace.ml" 153 4794 4810
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref f "ubase/trace.ml" 153 4794 4802 "ubase/trace.ml" 153 4794 4805
+)
+"ubase/trace.ml" 153 4794 4811 "ubase/trace.ml" 153 4794 4812
+type(
+  msgtype * string
+)
+ident(
+  int_ref m "ubase/trace.ml" 150 4704 4723 "ubase/trace.ml" 150 4704 4724
+)
+"ubase/trace.ml" 153 4794 4809 "ubase/trace.ml" 153 4794 4812
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 151 4727 4729 "ubase/trace.ml" 153 4794 4812
+type(
+  unit
+)
+"ubase/trace.ml" 158 4961 4965 "ubase/trace.ml" 158 4961 4972
+type(
+  string -> unit
+)
+ident(
+  def message "ubase/trace.ml" 160 5002 5002 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 158 4961 4973 "ubase/trace.ml" 158 4961 4974
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 158 4961 4977 "ubase/trace.ml" 158 4961 5000
+)
+"ubase/trace.ml" 158 4961 4977 "ubase/trace.ml" 158 4961 4991
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 158 4961 4993 "ubase/trace.ml" 158 4961 4996
+type(
+  msgtype
+)
+"ubase/trace.ml" 158 4961 4998 "ubase/trace.ml" 158 4961 4999
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 158 4961 4973 "ubase/trace.ml" 158 4961 4974
+)
+"ubase/trace.ml" 158 4961 4992 "ubase/trace.ml" 158 4961 5000
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 158 4961 4977 "ubase/trace.ml" 158 4961 5000
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 160 5002 5006 "ubase/trace.ml" 160 5002 5012
+type(
+  string -> unit
+)
+ident(
+  def status "ubase/trace.ml" 163 5052 5052 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 160 5002 5013 "ubase/trace.ml" 160 5002 5014
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 161 5017 5019 "ubase/trace.ml" 161 5017 5050
+)
+"ubase/trace.ml" 161 5017 5019 "ubase/trace.ml" 161 5017 5033
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 161 5017 5035 "ubase/trace.ml" 161 5017 5046
+type(
+  msgtype
+)
+"ubase/trace.ml" 161 5017 5048 "ubase/trace.ml" 161 5017 5049
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 160 5002 5013 "ubase/trace.ml" 160 5002 5014
+)
+"ubase/trace.ml" 161 5017 5034 "ubase/trace.ml" 161 5017 5050
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 161 5017 5019 "ubase/trace.ml" 161 5017 5050
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 163 5052 5056 "ubase/trace.ml" 163 5052 5067
+type(
+  string -> unit
+)
+ident(
+  def statusMinor "ubase/trace.ml" 165 5127 5127 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 163 5052 5068 "ubase/trace.ml" 163 5052 5069
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 163 5052 5072 "ubase/trace.ml" 163 5052 5103
+)
+"ubase/trace.ml" 163 5052 5072 "ubase/trace.ml" 163 5052 5086
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 163 5052 5088 "ubase/trace.ml" 163 5052 5099
+type(
+  msgtype
+)
+"ubase/trace.ml" 163 5052 5101 "ubase/trace.ml" 163 5052 5102
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 163 5052 5068 "ubase/trace.ml" 163 5052 5069
+)
+"ubase/trace.ml" 163 5052 5087 "ubase/trace.ml" 163 5052 5103
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 163 5052 5072 "ubase/trace.ml" 163 5052 5103
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 165 5127 5131 "ubase/trace.ml" 165 5127 5143
+type(
+  string -> unit
+)
+ident(
+  def statusDetail "ubase/trace.ml" 169 5266 5266 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 165 5127 5144 "ubase/trace.ml" 165 5127 5145
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 166 5148 5150 "ubase/trace.ml" 167 5230 5264
+)
+"ubase/trace.ml" 166 5148 5154 "ubase/trace.ml" 166 5148 5156
+type(
+  string
+)
+ident(
+  def ss "ubase/trace.ml" 167 5230 5232 "ubase/trace.ml" 167 5230 5264
+)
+"ubase/trace.ml" 166 5148 5162 "ubase/trace.ml" 166 5148 5165
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 166 5148 5166 "ubase/trace.ml" 166 5148 5167
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 166 5148 5167 "ubase/trace.ml" 166 5148 5182
+type(
+  bool ref
+)
+ident(
+  int_ref runningasserver "ubase/trace.ml" 19 551 555 "ubase/trace.ml" 19 551 570
+)
+"ubase/trace.ml" 166 5148 5166 "ubase/trace.ml" 166 5148 5182
+type(
+  bool
+)
+"ubase/trace.ml" 166 5148 5162 "ubase/trace.ml" 166 5148 5182
+type(
+  bool
+)
+"ubase/trace.ml" 166 5148 5188 "ubase/trace.ml" 166 5148 5189
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 165 5127 5144 "ubase/trace.ml" 165 5127 5145
+)
+"ubase/trace.ml" 166 5148 5196 "ubase/trace.ml" 166 5148 5206
+type(
+  int -> string -> string
+)
+ident(
+  ext_ref Util.padto
+)
+"ubase/trace.ml" 166 5148 5207 "ubase/trace.ml" 166 5148 5209
+type(
+  int
+)
+"ubase/trace.ml" 166 5148 5210 "ubase/trace.ml" 166 5148 5211
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 165 5127 5144 "ubase/trace.ml" 165 5127 5145
+)
+"ubase/trace.ml" 166 5148 5195 "ubase/trace.ml" 166 5148 5212
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 166 5148 5213 "ubase/trace.ml" 166 5148 5214
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 166 5148 5215 "ubase/trace.ml" 166 5148 5226
+type(
+  string
+)
+"ubase/trace.ml" 166 5148 5195 "ubase/trace.ml" 166 5148 5226
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 166 5148 5159 "ubase/trace.ml" 166 5148 5226
+type(
+  string
+)
+"ubase/trace.ml" 167 5230 5232 "ubase/trace.ml" 167 5230 5246
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 167 5230 5248 "ubase/trace.ml" 167 5230 5259
+type(
+  msgtype
+)
+"ubase/trace.ml" 167 5230 5261 "ubase/trace.ml" 167 5230 5263
+type(
+  string
+)
+ident(
+  int_ref ss "ubase/trace.ml" 166 5148 5154 "ubase/trace.ml" 166 5148 5156
+)
+"ubase/trace.ml" 167 5230 5247 "ubase/trace.ml" 167 5230 5264
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 167 5230 5232 "ubase/trace.ml" 167 5230 5264
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 166 5148 5150 "ubase/trace.ml" 167 5230 5264
+type(
+  unit
+)
+"ubase/trace.ml" 169 5266 5270 "ubase/trace.ml" 169 5266 5273
+type(
+  string -> unit
+)
+ident(
+  def log "ubase/trace.ml" 171 5303 5303 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 169 5266 5274 "ubase/trace.ml" 169 5266 5275
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 169 5266 5278 "ubase/trace.ml" 169 5266 5301
+)
+"ubase/trace.ml" 169 5266 5278 "ubase/trace.ml" 169 5266 5292
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 169 5266 5294 "ubase/trace.ml" 169 5266 5297
+type(
+  msgtype
+)
+"ubase/trace.ml" 169 5266 5299 "ubase/trace.ml" 169 5266 5300
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 169 5266 5274 "ubase/trace.ml" 169 5266 5275
+)
+"ubase/trace.ml" 169 5266 5293 "ubase/trace.ml" 169 5266 5301
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 169 5266 5278 "ubase/trace.ml" 169 5266 5301
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 171 5303 5307 "ubase/trace.ml" 171 5303 5317
+type(
+  string -> unit
+)
+ident(
+  def logverbose "ubase/trace.ml" 180 5586 5586 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 171 5303 5318 "ubase/trace.ml" 171 5303 5319
+type(
+  string
+)
+ident(
+  def s "ubase/trace.ml" 172 5322 5324 "ubase/trace.ml" 175 5459 5488
+)
+"ubase/trace.ml" 172 5322 5328 "ubase/trace.ml" 172 5322 5332
+type(
+  bool
+)
+ident(
+  def temp "ubase/trace.ml" 173 5359 5361 "ubase/trace.ml" 175 5459 5488
+)
+"ubase/trace.ml" 172 5322 5335 "ubase/trace.ml" 172 5322 5336
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 172 5322 5336 "ubase/trace.ml" 172 5322 5355
+type(
+  bool ref
+)
+ident(
+  int_ref sendLogMsgsToStderr "ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+)
+"ubase/trace.ml" 172 5322 5335 "ubase/trace.ml" 172 5322 5355
+type(
+  bool
+)
+"ubase/trace.ml" 173 5359 5361 "ubase/trace.ml" 173 5359 5380
+type(
+  bool ref
+)
+ident(
+  int_ref sendLogMsgsToStderr "ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+)
+"ubase/trace.ml" 173 5359 5381 "ubase/trace.ml" 173 5359 5383
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 173 5359 5384 "ubase/trace.ml" 173 5359 5385
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 173 5359 5385 "ubase/trace.ml" 173 5359 5404
+type(
+  bool ref
+)
+ident(
+  int_ref sendLogMsgsToStderr "ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+)
+"ubase/trace.ml" 173 5359 5384 "ubase/trace.ml" 173 5359 5404
+type(
+  bool
+)
+"ubase/trace.ml" 173 5359 5405 "ubase/trace.ml" 173 5359 5407
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"ubase/trace.ml" 173 5359 5408 "ubase/trace.ml" 173 5359 5411
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 173 5359 5413 "ubase/trace.ml" 173 5359 5423
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 173 5359 5424 "ubase/trace.ml" 173 5359 5429
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref terse "ubase/trace.ml" 117 3781 3785 "ubase/trace.ml" 117 3781 3790
+)
+"ubase/trace.ml" 173 5359 5412 "ubase/trace.ml" 173 5359 5430
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 173 5359 5408 "ubase/trace.ml" 173 5359 5430
+type(
+  bool
+)
+"ubase/trace.ml" 173 5359 5384 "ubase/trace.ml" 173 5359 5430
+type(
+  bool
+)
+"ubase/trace.ml" 173 5359 5361 "ubase/trace.ml" 173 5359 5430
+type(
+  unit
+)
+"ubase/trace.ml" 174 5432 5434 "ubase/trace.ml" 174 5432 5448
+type(
+  msgtype * string -> unit
+)
+ident(
+  int_ref displayMessage "ubase/trace.ml" 150 4704 4708 "ubase/trace.ml" 150 4704 4722
+)
+"ubase/trace.ml" 174 5432 5450 "ubase/trace.ml" 174 5432 5453
+type(
+  msgtype
+)
+"ubase/trace.ml" 174 5432 5455 "ubase/trace.ml" 174 5432 5456
+type(
+  string
+)
+ident(
+  int_ref s "ubase/trace.ml" 171 5303 5318 "ubase/trace.ml" 171 5303 5319
+)
+"ubase/trace.ml" 174 5432 5449 "ubase/trace.ml" 174 5432 5457
+type(
+  msgtype * string
+)
+"ubase/trace.ml" 174 5432 5434 "ubase/trace.ml" 174 5432 5457
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 175 5459 5461 "ubase/trace.ml" 175 5459 5480
+type(
+  bool ref
+)
+ident(
+  int_ref sendLogMsgsToStderr "ubase/trace.ml" 95 3127 3131 "ubase/trace.ml" 95 3127 3150
+)
+"ubase/trace.ml" 175 5459 5481 "ubase/trace.ml" 175 5459 5483
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"ubase/trace.ml" 175 5459 5484 "ubase/trace.ml" 175 5459 5488
+type(
+  bool
+)
+ident(
+  int_ref temp "ubase/trace.ml" 172 5322 5328 "ubase/trace.ml" 172 5322 5332
+)
+"ubase/trace.ml" 175 5459 5461 "ubase/trace.ml" 175 5459 5488
+type(
+  unit
+)
+"ubase/trace.ml" 174 5432 5434 "ubase/trace.ml" 175 5459 5488
+type(
+  unit
+)
+"ubase/trace.ml" 173 5359 5361 "ubase/trace.ml" 175 5459 5488
+type(
+  unit
+)
+"ubase/trace.ml" 172 5322 5324 "ubase/trace.ml" 175 5459 5488
+type(
+  unit
+)
+"ubase/trace.ml" 180 5586 5590 "ubase/trace.ml" 180 5586 5601
+type(
+  bool Prefs.t
+)
+ident(
+  def printTimers "ubase/trace.ml" 182 5626 5626 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 180 5586 5604 "ubase/trace.ml" 180 5586 5620
+type(
+  bool Prefs.t
+)
+ident(
+  ext_ref Prefs.timersPref
+)
+"ubase/trace.ml" 184 5655 5659 "ubase/trace.ml" 184 5655 5666
+type(
+  unit -> float
+)
+ident(
+  def gettime "ubase/trace.ml" 186 5693 5693 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 184 5655 5667 "ubase/trace.ml" 184 5655 5669
+type(
+  unit
+)
+"ubase/trace.ml" 184 5655 5672 "ubase/trace.ml" 184 5655 5689
+type(
+  unit -> float
+)
+ident(
+  ext_ref Unix.gettimeofday
+)
+"ubase/trace.ml" 184 5655 5689 "ubase/trace.ml" 184 5655 5691
+type(
+  unit
+)
+"ubase/trace.ml" 184 5655 5672 "ubase/trace.ml" 184 5655 5691
+call(
+  tail
+)
+type(
+  float
+)
+"ubase/trace.ml" 186 5693 5697 "ubase/trace.ml" 186 5693 5707
+type(
+  string -> string * float
+)
+ident(
+  def startTimer "ubase/trace.ml" 192 5820 5820 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 186 5693 5708 "ubase/trace.ml" 186 5693 5712
+type(
+  string
+)
+ident(
+  def desc "ubase/trace.ml" 187 5715 5717 "ubase/trace.ml" 190 5804 5818
+)
+"ubase/trace.ml" 187 5715 5720 "ubase/trace.ml" 187 5715 5730
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 187 5715 5730 "ubase/trace.ml" 187 5715 5743
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref printTimers "ubase/trace.ml" 180 5586 5590 "ubase/trace.ml" 180 5586 5601
+)
+"ubase/trace.ml" 187 5715 5720 "ubase/trace.ml" 187 5715 5743
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 188 5749 5754 "ubase/trace.ml" 188 5749 5761
+type(
+  string -> unit
+)
+ident(
+  int_ref message "ubase/trace.ml" 158 4961 4965 "ubase/trace.ml" 158 4961 4972
+)
+"ubase/trace.ml" 188 5749 5763 "ubase/trace.ml" 188 5749 5767
+type(
+  string
+)
+ident(
+  int_ref desc "ubase/trace.ml" 186 5693 5708 "ubase/trace.ml" 186 5693 5712
+)
+"ubase/trace.ml" 188 5749 5768 "ubase/trace.ml" 188 5749 5769
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"ubase/trace.ml" 188 5749 5770 "ubase/trace.ml" 188 5749 5775
+type(
+  string
+)
+"ubase/trace.ml" 188 5749 5762 "ubase/trace.ml" 188 5749 5776
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 188 5749 5754 "ubase/trace.ml" 188 5749 5776
+call(
+  stack
+)
+type(
+  unit
+)
+"ubase/trace.ml" 188 5749 5779 "ubase/trace.ml" 188 5749 5783
+type(
+  string
+)
+ident(
+  int_ref desc "ubase/trace.ml" 186 5693 5708 "ubase/trace.ml" 186 5693 5712
+)
+"ubase/trace.ml" 188 5749 5785 "ubase/trace.ml" 188 5749 5792
+type(
+  unit -> float
+)
+ident(
+  int_ref gettime "ubase/trace.ml" 184 5655 5659 "ubase/trace.ml" 184 5655 5666
+)
+"ubase/trace.ml" 188 5749 5792 "ubase/trace.ml" 188 5749 5794
+type(
+  unit
+)
+"ubase/trace.ml" 188 5749 5785 "ubase/trace.ml" 188 5749 5794
+call(
+  stack
+)
+type(
+  float
+)
+"ubase/trace.ml" 188 5749 5778 "ubase/trace.ml" 188 5749 5795
+type(
+  string * float
+)
+"ubase/trace.ml" 188 5749 5753 "ubase/trace.ml" 188 5749 5796
+type(
+  string * float
+)
+"ubase/trace.ml" 190 5804 5809 "ubase/trace.ml" 190 5804 5813
+type(
+  string
+)
+ident(
+  int_ref desc "ubase/trace.ml" 186 5693 5708 "ubase/trace.ml" 186 5693 5712
+)
+"ubase/trace.ml" 190 5804 5814 "ubase/trace.ml" 190 5804 5817
+type(
+  float
+)
+"ubase/trace.ml" 190 5804 5808 "ubase/trace.ml" 190 5804 5818
+type(
+  string * float
+)
+"ubase/trace.ml" 187 5715 5717 "ubase/trace.ml" 190 5804 5818
+type(
+  string * float
+)
+"ubase/trace.ml" 192 5820 5824 "ubase/trace.ml" 192 5820 5841
+type(
+  'a -> 'a * float
+)
+ident(
+  def startTimerQuietly "ubase/trace.ml" 198 5928 5928 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 192 5820 5842 "ubase/trace.ml" 192 5820 5846
+type(
+  'a
+)
+ident(
+  def desc "ubase/trace.ml" 193 5849 5851 "ubase/trace.ml" 196 5912 5926
+)
+"ubase/trace.ml" 193 5849 5854 "ubase/trace.ml" 193 5849 5864
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 193 5849 5864 "ubase/trace.ml" 193 5849 5877
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref printTimers "ubase/trace.ml" 180 5586 5590 "ubase/trace.ml" 180 5586 5601
+)
+"ubase/trace.ml" 193 5849 5854 "ubase/trace.ml" 193 5849 5877
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 194 5883 5888 "ubase/trace.ml" 194 5883 5892
+type(
+  'a
+)
+ident(
+  int_ref desc "ubase/trace.ml" 192 5820 5842 "ubase/trace.ml" 192 5820 5846
+)
+"ubase/trace.ml" 194 5883 5894 "ubase/trace.ml" 194 5883 5901
+type(
+  unit -> float
+)
+ident(
+  int_ref gettime "ubase/trace.ml" 184 5655 5659 "ubase/trace.ml" 184 5655 5666
+)
+"ubase/trace.ml" 194 5883 5901 "ubase/trace.ml" 194 5883 5903
+type(
+  unit
+)
+"ubase/trace.ml" 194 5883 5894 "ubase/trace.ml" 194 5883 5903
+call(
+  stack
+)
+type(
+  float
+)
+"ubase/trace.ml" 194 5883 5887 "ubase/trace.ml" 194 5883 5904
+type(
+  'a * float
+)
+"ubase/trace.ml" 196 5912 5917 "ubase/trace.ml" 196 5912 5921
+type(
+  'a
+)
+ident(
+  int_ref desc "ubase/trace.ml" 192 5820 5842 "ubase/trace.ml" 192 5820 5846
+)
+"ubase/trace.ml" 196 5912 5922 "ubase/trace.ml" 196 5912 5925
+type(
+  float
+)
+"ubase/trace.ml" 196 5912 5916 "ubase/trace.ml" 196 5912 5926
+type(
+  'a * float
+)
+"ubase/trace.ml" 193 5849 5851 "ubase/trace.ml" 196 5912 5926
+type(
+  'a * float
+)
+"ubase/trace.ml" 198 5928 5932 "ubase/trace.ml" 198 5928 5941
+type(
+  string * float -> unit
+)
+ident(
+  def showTimer "ubase/trace.ml" 204 6167 6233 "ubase/trace.ml" 1 0 -1
+)
+"ubase/trace.ml" 198 5928 5943 "ubase/trace.ml" 198 5928 5947
+type(
+  string
+)
+ident(
+  def desc "ubase/trace.ml" 201 6072 6074 "ubase/trace.ml" 204 6167 6233
+)
+"ubase/trace.ml" 198 5928 5949 "ubase/trace.ml" 198 5928 5951
+type(
+  float
+)
+ident(
+  def t1 "ubase/trace.ml" 201 6072 6074 "ubase/trace.ml" 204 6167 6233
+)
+"ubase/trace.ml" 198 5928 5942 "ubase/trace.ml" 198 5928 5952
+type(
+  string * float
+)
+"ubase/trace.ml" 201 6072 6077 "ubase/trace.ml" 201 6072 6080
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"ubase/trace.ml" 201 6072 6081 "ubase/trace.ml" 201 6072 6082
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"ubase/trace.ml" 201 6072 6082 "ubase/trace.ml" 201 6072 6097
+type(
+  bool ref
+)
+ident(
+  int_ref runningasserver "ubase/trace.ml" 19 551 555 "ubase/trace.ml" 19 551 570
+)
+"ubase/trace.ml" 201 6072 6081 "ubase/trace.ml" 201 6072 6097
+type(
+  bool
+)
+"ubase/trace.ml" 201 6072 6077 "ubase/trace.ml" 201 6072 6097
+type(
+  bool
+)
+"ubase/trace.ml" 202 6103 6110 "ubase/trace.ml" 202 6103 6120
+type(
+  bool Prefs.t -> bool
+)
+ident(
+  ext_ref Prefs.read
+)
+"ubase/trace.ml" 202 6103 6120 "ubase/trace.ml" 202 6103 6133
+type(
+  bool Prefs.t
+)
+ident(
+  int_ref printTimers "ubase/trace.ml" 180 5586 5590 "ubase/trace.ml" 180 5586 5601
+)
+"ubase/trace.ml" 202 6103 6110 "ubase/trace.ml" 202 6103 6133
+call(
+  stack
+)
+type(
+  bool
+)
+"ubase/trace.ml" 203 6139 6149 "ubase/trace.ml" 203 6139 6151
+type(
+  float
+)
+ident(
+  def t2 "ubase/trace.ml" 204 6167 6173 "ubase/trace.ml" 204 6167 6233
+)
+"ubase/trace.ml" 203 6139 6154 "ubase/trace.ml" 203 6139 6161
+type(
+  unit -> float
+)
+ident(
+  int_ref gettime "ubase/trace.ml" 184 5655 5659 "ubase/trace.ml" 184 5655 5666
+)
+"ubase/trace.ml" 203 6139 6161 "ubase/trace.ml" 203 6139 6163
+type(
+  unit
+)
+"ubase/trace.ml" 203 6139 6154 "ubase/trace.ml" 203 6139 6163
+call(
+  stack
+)
+type(
+  float
+)
+"ubase/trace.ml" 204 6167 6173 "ubase/trace.ml" 204 6167 6180
+type(
+  string -> unit
+)
+ident(
+  int_ref message "ubase/trace.ml" 158 4961 4965 "ubase/trace.ml" 158 4961 4972
+)
+"ubase/trace.ml" 204 6167 6182 "ubase/trace.ml" 204 6167 6196
+type(
+  (string -> float -> string, unit, string) format ->
+  string -> float -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"ubase/trace.ml" 204 6167 6197 "ubase/trace.ml" 204 6167 6216
+type(
+  (string -> float -> string, unit, string) format
+)
+"ubase/trace.ml" 204 6167 6217 "ubase/trace.ml" 204 6167 6221
+type(
+  string
+)
+ident(
+  int_ref desc "ubase/trace.ml" 198 5928 5943 "ubase/trace.ml" 198 5928 5947
+)
+"ubase/trace.ml" 204 6167 6223 "ubase/trace.ml" 204 6167 6225
+type(
+  float
+)
+ident(
+  int_ref t2 "ubase/trace.ml" 203 6139 6149 "ubase/trace.ml" 203 6139 6151
+)
+"ubase/trace.ml" 204 6167 6226 "ubase/trace.ml" 204 6167 6228
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( -. )
+)
+"ubase/trace.ml" 204 6167 6229 "ubase/trace.ml" 204 6167 6231
+type(
+  float
+)
+ident(
+  int_ref t1 "ubase/trace.ml" 198 5928 5949 "ubase/trace.ml" 198 5928 5951
+)
+"ubase/trace.ml" 204 6167 6222 "ubase/trace.ml" 204 6167 6232
+type(
+  float
+)
+"ubase/trace.ml" 204 6167 6181 "ubase/trace.ml" 204 6167 6233
+call(
+  stack
+)
+type(
+  string
+)
+"ubase/trace.ml" 204 6167 6173 "ubase/trace.ml" 204 6167 6233
+call(
+  tail
+)
+type(
+  unit
+)
+"ubase/trace.ml" 203 6139 6145 "ubase/trace.ml" 204 6167 6233
+type(
+  unit
+)
+"ubase/trace.ml" 202 6103 6107 "ubase/trace.ml" 204 6167 6233
+type(
+  unit
+)
+"ubase/trace.ml" 201 6072 6074 "ubase/trace.ml" 204 6167 6233
+type(
+  unit
+)

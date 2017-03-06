@@ -1,0 +1,159 @@
+"hbase/name.ml" 15 465 475 "hbase/name.ml" 15 465 482
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "hbase/name.ml" 16 493 499 "hbase/name.ml" 17 519 526
+)
+"hbase/name.ml" 15 465 485 "hbase/name.ml" 15 465 492
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"hbase/name.ml" 16 493 503 "hbase/name.ml" 16 493 512
+type(
+  'b -> 'b
+)
+ident(
+  def to_string "hbase/name.ml" 16 493 518 "hbase/name.ml" 17 519 526
+)
+"hbase/name.ml" 16 493 513 "hbase/name.ml" 16 493 514
+type(
+  'b
+)
+ident(
+  def n "hbase/name.ml" 16 493 517 "hbase/name.ml" 16 493 518
+)
+"hbase/name.ml" 16 493 517 "hbase/name.ml" 16 493 518
+type(
+  'b
+)
+ident(
+  int_ref n "hbase/name.ml" 16 493 513 "hbase/name.ml" 16 493 514
+)
+"hbase/name.ml" 12 418 420 "hbase/name.ml" 17 519 527
+call(
+  stack
+)
+"hbase/name.ml" 26 652 660 "hbase/name.ml" 26 652 665
+type(
+  'a -> 'a -> bool
+)
+ident(
+  def equal "hbase/name.ml" 27 673 677 "hbase/name.ml" 28 723 728
+)
+"hbase/name.ml" 26 652 668 "hbase/name.ml" 26 652 672
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"hbase/name.ml" 27 673 681 "hbase/name.ml" 27 673 685
+type(
+  'b -> int
+)
+ident(
+  def hash "hbase/name.ml" 27 673 722 "hbase/name.ml" 28 723 728
+)
+"hbase/name.ml" 27 673 686 "hbase/name.ml" 27 673 687
+type(
+  'b
+)
+ident(
+  def o "hbase/name.ml" 27 673 690 "hbase/name.ml" 27 673 722
+)
+"hbase/name.ml" 27 673 690 "hbase/name.ml" 27 673 702
+type(
+  int -> int
+)
+ident(
+  ext_ref Hashtbl.hash
+)
+"hbase/name.ml" 27 673 704 "hbase/name.ml" 27 673 713
+type(
+  'b -> int
+)
+ident(
+  ext_ref Obj.magic
+)
+"hbase/name.ml" 27 673 714 "hbase/name.ml" 27 673 715
+type(
+  'b
+)
+ident(
+  int_ref o "hbase/name.ml" 27 673 686 "hbase/name.ml" 27 673 687
+)
+"hbase/name.ml" 27 673 704 "hbase/name.ml" 27 673 715
+type(
+  int
+)
+type(
+  int
+)
+"hbase/name.ml" 27 673 690 "hbase/name.ml" 27 673 722
+call(
+  tail
+)
+type(
+  int
+)
+"hbase/name.ml" 23 597 611 "hbase/name.ml" 28 723 729
+call(
+  stack
+)
+"hbase/name.ml" 33 795 805 "hbase/name.ml" 33 795 810
+type(
+  'a -> 'a -> bool
+)
+ident(
+  def equal "hbase/name.ml" 34 818 824 "hbase/name.ml" 35 857 864
+)
+"hbase/name.ml" 33 795 813 "hbase/name.ml" 33 795 817
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"hbase/name.ml" 34 818 828 "hbase/name.ml" 34 818 832
+type(
+  'b -> int
+)
+ident(
+  def hash "hbase/name.ml" 34 818 856 "hbase/name.ml" 35 857 864
+)
+"hbase/name.ml" 34 818 833 "hbase/name.ml" 34 818 834
+type(
+  'b
+)
+ident(
+  def s "hbase/name.ml" 34 818 837 "hbase/name.ml" 34 818 856
+)
+"hbase/name.ml" 34 818 838 "hbase/name.ml" 34 818 847
+type(
+  'b -> int
+)
+ident(
+  ext_ref Obj.magic
+)
+"hbase/name.ml" 34 818 848 "hbase/name.ml" 34 818 849
+type(
+  'b
+)
+ident(
+  int_ref s "hbase/name.ml" 34 818 833 "hbase/name.ml" 34 818 834
+)
+"hbase/name.ml" 34 818 838 "hbase/name.ml" 34 818 849
+type(
+  int
+)
+type(
+  int
+)
+"hbase/name.ml" 30 731 748 "hbase/name.ml" 35 857 865
+call(
+  stack
+)

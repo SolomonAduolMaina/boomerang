@@ -1,0 +1,4243 @@
+"lib/bsyntax.ml" 23 1640 1644 "lib/bsyntax.ml" 23 1640 1647
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def @ "lib/bsyntax.ml" 24 1667 1667 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 23 1640 1650 "lib/bsyntax.ml" 23 1640 1665
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  ext_ref Safelist.append
+)
+"lib/bsyntax.ml" 24 1667 1671 "lib/bsyntax.ml" 24 1667 1678
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  def sprintf "lib/bsyntax.ml" 25 1696 1696 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 24 1667 1681 "lib/bsyntax.ml" 24 1667 1695
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bsyntax.ml" 25 1696 1700 "lib/bsyntax.ml" 25 1696 1703
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  def msg "lib/bsyntax.ml" 27 1719 1719 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 25 1696 1706 "lib/bsyntax.ml" 25 1696 1717
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  ext_ref Util.format
+)
+"lib/bsyntax.ml" 35 1797 1801 "lib/bsyntax.ml" 35 1797 1816
+type(
+  prefs -> string
+)
+ident(
+  def string_of_prefs "lib/bsyntax.ml" 43 1984 1984 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 35 1797 1817 "lib/bsyntax.ml" 35 1797 1818
+type(
+  prefs
+)
+ident(
+  def p "lib/bsyntax.ml" 36 1821 1823 "lib/bsyntax.ml" 40 1901 1933
+)
+"lib/bsyntax.ml" 36 1821 1829 "lib/bsyntax.ml" 36 1821 1830
+type(
+  prefs
+)
+ident(
+  int_ref p "lib/bsyntax.ml" 35 1797 1817 "lib/bsyntax.ml" 35 1797 1818
+)
+"lib/bsyntax.ml" 37 1836 1840 "lib/bsyntax.ml" 37 1836 1846
+type(
+  prefs
+)
+"lib/bsyntax.ml" 37 1836 1850 "lib/bsyntax.ml" 37 1836 1856
+type(
+  string
+)
+"lib/bsyntax.ml" 38 1857 1861 "lib/bsyntax.ml" 38 1857 1866
+type(
+  prefs
+)
+"lib/bsyntax.ml" 38 1857 1870 "lib/bsyntax.ml" 38 1857 1875
+type(
+  string
+)
+"lib/bsyntax.ml" 39 1876 1880 "lib/bsyntax.ml" 39 1876 1888
+type(
+  prefs
+)
+"lib/bsyntax.ml" 39 1876 1892 "lib/bsyntax.ml" 39 1876 1900
+type(
+  string
+)
+"lib/bsyntax.ml" 40 1901 1905 "lib/bsyntax.ml" 40 1901 1917
+type(
+  prefs
+)
+"lib/bsyntax.ml" 40 1901 1921 "lib/bsyntax.ml" 40 1901 1933
+type(
+  string
+)
+"lib/bsyntax.ml" 36 1821 1823 "lib/bsyntax.ml" 40 1901 1933
+type(
+  string
+)
+"lib/bsyntax.ml" 164 5457 5461 "lib/bsyntax.ml" 164 5457 5465
+type(
+  sort -> sort -> sort
+)
+ident(
+  def ^> "lib/bsyntax.ml" 165 5499 5499 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 164 5457 5466 "lib/bsyntax.ml" 164 5457 5468
+type(
+  sort
+)
+ident(
+  def s1 "lib/bsyntax.ml" 164 5457 5469 "lib/bsyntax.ml" 164 5457 5498
+)
+"lib/bsyntax.ml" 164 5457 5469 "lib/bsyntax.ml" 164 5457 5471
+type(
+  sort
+)
+ident(
+  def s2 "lib/bsyntax.ml" 164 5457 5474 "lib/bsyntax.ml" 164 5457 5498
+)
+"lib/bsyntax.ml" 164 5457 5484 "lib/bsyntax.ml" 164 5457 5491
+type(
+  Bident.Id.t
+)
+ident(
+  ext_ref Bident.Id.wild
+)
+"lib/bsyntax.ml" 164 5457 5492 "lib/bsyntax.ml" 164 5457 5494
+type(
+  sort
+)
+ident(
+  int_ref s1 "lib/bsyntax.ml" 164 5457 5466 "lib/bsyntax.ml" 164 5457 5468
+)
+"lib/bsyntax.ml" 164 5457 5495 "lib/bsyntax.ml" 164 5457 5497
+type(
+  sort
+)
+ident(
+  int_ref s2 "lib/bsyntax.ml" 164 5457 5469 "lib/bsyntax.ml" 164 5457 5471
+)
+"lib/bsyntax.ml" 164 5457 5474 "lib/bsyntax.ml" 164 5457 5498
+type(
+  sort
+)
+"lib/bsyntax.ml" 165 5499 5503 "lib/bsyntax.ml" 165 5499 5507
+type(
+  sort -> sort -> sort
+)
+ident(
+  def ^* "lib/bsyntax.ml" 168 5570 5570 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 165 5499 5508 "lib/bsyntax.ml" 165 5499 5510
+type(
+  sort
+)
+ident(
+  def s1 "lib/bsyntax.ml" 165 5499 5511 "lib/bsyntax.ml" 165 5499 5531
+)
+"lib/bsyntax.ml" 165 5499 5511 "lib/bsyntax.ml" 165 5499 5513
+type(
+  sort
+)
+ident(
+  def s2 "lib/bsyntax.ml" 165 5499 5516 "lib/bsyntax.ml" 165 5499 5531
+)
+"lib/bsyntax.ml" 165 5499 5525 "lib/bsyntax.ml" 165 5499 5527
+type(
+  sort
+)
+ident(
+  int_ref s1 "lib/bsyntax.ml" 165 5499 5508 "lib/bsyntax.ml" 165 5499 5510
+)
+"lib/bsyntax.ml" 165 5499 5528 "lib/bsyntax.ml" 165 5499 5530
+type(
+  sort
+)
+ident(
+  int_ref s2 "lib/bsyntax.ml" 165 5499 5511 "lib/bsyntax.ml" 165 5499 5513
+)
+"lib/bsyntax.ml" 165 5499 5516 "lib/bsyntax.ml" 165 5499 5531
+type(
+  sort
+)
+"lib/bsyntax.ml" 168 5570 5574 "lib/bsyntax.ml" 168 5570 5587
+type(
+  param -> sort
+)
+ident(
+  def sort_of_param "lib/bsyntax.ml" 171 5630 5630 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 168 5570 5588 "lib/bsyntax.ml" 168 5570 5590
+type(
+  param
+)
+ident(
+  def p0 "lib/bsyntax.ml" 168 5570 5593 "lib/bsyntax.ml" 169 5607 5628
+)
+"lib/bsyntax.ml" 168 5570 5599 "lib/bsyntax.ml" 168 5570 5601
+type(
+  param
+)
+ident(
+  int_ref p0 "lib/bsyntax.ml" 168 5570 5588 "lib/bsyntax.ml" 168 5570 5590
+)
+"lib/bsyntax.ml" 169 5607 5617 "lib/bsyntax.ml" 169 5607 5618
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 169 5607 5619 "lib/bsyntax.ml" 169 5607 5620
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 169 5607 5621 "lib/bsyntax.ml" 169 5607 5622
+type(
+  sort
+)
+ident(
+  def s "lib/bsyntax.ml" 169 5607 5627 "lib/bsyntax.ml" 169 5607 5628
+)
+"lib/bsyntax.ml" 169 5607 5611 "lib/bsyntax.ml" 169 5607 5623
+type(
+  param
+)
+"lib/bsyntax.ml" 169 5607 5627 "lib/bsyntax.ml" 169 5607 5628
+type(
+  sort
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 169 5607 5621 "lib/bsyntax.ml" 169 5607 5622
+)
+"lib/bsyntax.ml" 168 5570 5593 "lib/bsyntax.ml" 169 5607 5628
+type(
+  sort
+)
+"lib/bsyntax.ml" 171 5630 5634 "lib/bsyntax.ml" 171 5630 5645
+type(
+  param -> Bident.Id.t
+)
+ident(
+  def id_of_param "lib/bsyntax.ml" 174 5688 5688 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 171 5630 5646 "lib/bsyntax.ml" 171 5630 5648
+type(
+  param
+)
+ident(
+  def p0 "lib/bsyntax.ml" 171 5630 5651 "lib/bsyntax.ml" 172 5665 5686
+)
+"lib/bsyntax.ml" 171 5630 5657 "lib/bsyntax.ml" 171 5630 5659
+type(
+  param
+)
+ident(
+  int_ref p0 "lib/bsyntax.ml" 171 5630 5646 "lib/bsyntax.ml" 171 5630 5648
+)
+"lib/bsyntax.ml" 172 5665 5675 "lib/bsyntax.ml" 172 5665 5676
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 172 5665 5677 "lib/bsyntax.ml" 172 5665 5678
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bsyntax.ml" 172 5665 5685 "lib/bsyntax.ml" 172 5665 5686
+)
+"lib/bsyntax.ml" 172 5665 5679 "lib/bsyntax.ml" 172 5665 5680
+type(
+  sort
+)
+"lib/bsyntax.ml" 172 5665 5669 "lib/bsyntax.ml" 172 5665 5681
+type(
+  param
+)
+"lib/bsyntax.ml" 172 5665 5685 "lib/bsyntax.ml" 172 5665 5686
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 172 5665 5677 "lib/bsyntax.ml" 172 5665 5678
+)
+"lib/bsyntax.ml" 171 5630 5651 "lib/bsyntax.ml" 172 5665 5686
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 174 5688 5692 "lib/bsyntax.ml" 174 5688 5706
+type(
+  binding -> pat
+)
+ident(
+  def pat_of_binding "lib/bsyntax.ml" 177 5751 5751 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 174 5688 5707 "lib/bsyntax.ml" 174 5688 5709
+type(
+  binding
+)
+ident(
+  def b0 "lib/bsyntax.ml" 174 5688 5712 "lib/bsyntax.ml" 175 5727 5749
+)
+"lib/bsyntax.ml" 174 5688 5718 "lib/bsyntax.ml" 174 5688 5720
+type(
+  binding
+)
+ident(
+  int_ref b0 "lib/bsyntax.ml" 174 5688 5707 "lib/bsyntax.ml" 174 5688 5709
+)
+"lib/bsyntax.ml" 175 5727 5736 "lib/bsyntax.ml" 175 5727 5737
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 175 5727 5738 "lib/bsyntax.ml" 175 5727 5739
+type(
+  pat
+)
+ident(
+  def p "lib/bsyntax.ml" 175 5727 5748 "lib/bsyntax.ml" 175 5727 5749
+)
+"lib/bsyntax.ml" 175 5727 5740 "lib/bsyntax.ml" 175 5727 5741
+type(
+  sort option
+)
+"lib/bsyntax.ml" 175 5727 5742 "lib/bsyntax.ml" 175 5727 5743
+type(
+  exp
+)
+"lib/bsyntax.ml" 175 5727 5731 "lib/bsyntax.ml" 175 5727 5744
+type(
+  binding
+)
+"lib/bsyntax.ml" 175 5727 5748 "lib/bsyntax.ml" 175 5727 5749
+type(
+  pat
+)
+ident(
+  int_ref p "lib/bsyntax.ml" 175 5727 5738 "lib/bsyntax.ml" 175 5727 5739
+)
+"lib/bsyntax.ml" 174 5688 5712 "lib/bsyntax.ml" 175 5727 5749
+type(
+  pat
+)
+"lib/bsyntax.ml" 177 5751 5755 "lib/bsyntax.ml" 177 5751 5769
+type(
+  binding -> exp
+)
+ident(
+  def exp_of_binding "lib/bsyntax.ml" 180 5814 5814 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 177 5751 5770 "lib/bsyntax.ml" 177 5751 5772
+type(
+  binding
+)
+ident(
+  def b0 "lib/bsyntax.ml" 177 5751 5775 "lib/bsyntax.ml" 178 5790 5812
+)
+"lib/bsyntax.ml" 177 5751 5781 "lib/bsyntax.ml" 177 5751 5783
+type(
+  binding
+)
+ident(
+  int_ref b0 "lib/bsyntax.ml" 177 5751 5770 "lib/bsyntax.ml" 177 5751 5772
+)
+"lib/bsyntax.ml" 178 5790 5799 "lib/bsyntax.ml" 178 5790 5800
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 178 5790 5801 "lib/bsyntax.ml" 178 5790 5802
+type(
+  pat
+)
+"lib/bsyntax.ml" 178 5790 5803 "lib/bsyntax.ml" 178 5790 5804
+type(
+  sort option
+)
+"lib/bsyntax.ml" 178 5790 5805 "lib/bsyntax.ml" 178 5790 5806
+type(
+  exp
+)
+ident(
+  def e "lib/bsyntax.ml" 178 5790 5811 "lib/bsyntax.ml" 178 5790 5812
+)
+"lib/bsyntax.ml" 178 5790 5794 "lib/bsyntax.ml" 178 5790 5807
+type(
+  binding
+)
+"lib/bsyntax.ml" 178 5790 5811 "lib/bsyntax.ml" 178 5790 5812
+type(
+  exp
+)
+ident(
+  int_ref e "lib/bsyntax.ml" 178 5790 5805 "lib/bsyntax.ml" 178 5790 5806
+)
+"lib/bsyntax.ml" 177 5751 5775 "lib/bsyntax.ml" 178 5790 5812
+type(
+  exp
+)
+"lib/bsyntax.ml" 180 5814 5822 "lib/bsyntax.ml" 180 5814 5833
+type(
+  exp -> Info.t
+)
+ident(
+  def info_of_exp "lib/bsyntax.ml" 180 5814 5814 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 180 5814 5834 "lib/bsyntax.ml" 180 5814 5835
+type(
+  exp
+)
+ident(
+  def e "lib/bsyntax.ml" 180 5814 5838 "lib/bsyntax.ml" 197 6338 6367
+)
+"lib/bsyntax.ml" 180 5814 5844 "lib/bsyntax.ml" 180 5814 5845
+type(
+  exp
+)
+ident(
+  int_ref e "lib/bsyntax.ml" 180 5814 5834 "lib/bsyntax.ml" 180 5814 5835
+)
+"lib/bsyntax.ml" 181 5852 5866 "lib/bsyntax.ml" 181 5852 5867
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 181 5852 5880 "lib/bsyntax.ml" 181 5852 5881
+)
+"lib/bsyntax.ml" 181 5852 5868 "lib/bsyntax.ml" 181 5852 5869
+type(
+  exp
+)
+"lib/bsyntax.ml" 181 5852 5870 "lib/bsyntax.ml" 181 5852 5871
+type(
+  exp
+)
+"lib/bsyntax.ml" 181 5852 5856 "lib/bsyntax.ml" 181 5852 5872
+type(
+  exp
+)
+"lib/bsyntax.ml" 181 5852 5880 "lib/bsyntax.ml" 181 5852 5881
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 181 5852 5866 "lib/bsyntax.ml" 181 5852 5867
+)
+"lib/bsyntax.ml" 182 5882 5896 "lib/bsyntax.ml" 182 5882 5897
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 182 5882 5910 "lib/bsyntax.ml" 182 5882 5911
+)
+"lib/bsyntax.ml" 182 5882 5898 "lib/bsyntax.ml" 182 5882 5899
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 182 5882 5886 "lib/bsyntax.ml" 182 5882 5900
+type(
+  exp
+)
+"lib/bsyntax.ml" 182 5882 5910 "lib/bsyntax.ml" 182 5882 5911
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 182 5882 5896 "lib/bsyntax.ml" 182 5882 5897
+)
+"lib/bsyntax.ml" 183 5912 5926 "lib/bsyntax.ml" 183 5912 5927
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 183 5912 5940 "lib/bsyntax.ml" 183 5912 5941
+)
+"lib/bsyntax.ml" 183 5912 5928 "lib/bsyntax.ml" 183 5912 5929
+type(
+  op
+)
+"lib/bsyntax.ml" 183 5912 5930 "lib/bsyntax.ml" 183 5912 5931
+type(
+  exp list
+)
+"lib/bsyntax.ml" 183 5912 5916 "lib/bsyntax.ml" 183 5912 5932
+type(
+  exp
+)
+"lib/bsyntax.ml" 183 5912 5940 "lib/bsyntax.ml" 183 5912 5941
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 183 5912 5926 "lib/bsyntax.ml" 183 5912 5927
+)
+"lib/bsyntax.ml" 184 5942 5956 "lib/bsyntax.ml" 184 5942 5957
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 184 5942 5970 "lib/bsyntax.ml" 184 5942 5971
+)
+"lib/bsyntax.ml" 184 5942 5958 "lib/bsyntax.ml" 184 5942 5959
+type(
+  param
+)
+"lib/bsyntax.ml" 184 5942 5960 "lib/bsyntax.ml" 184 5942 5961
+type(
+  sort option
+)
+"lib/bsyntax.ml" 184 5942 5962 "lib/bsyntax.ml" 184 5942 5963
+type(
+  exp
+)
+"lib/bsyntax.ml" 184 5942 5946 "lib/bsyntax.ml" 184 5942 5964
+type(
+  exp
+)
+"lib/bsyntax.ml" 184 5942 5970 "lib/bsyntax.ml" 184 5942 5971
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 184 5942 5956 "lib/bsyntax.ml" 184 5942 5957
+)
+"lib/bsyntax.ml" 185 5972 5986 "lib/bsyntax.ml" 185 5972 5987
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 185 5972 6000 "lib/bsyntax.ml" 185 5972 6001
+)
+"lib/bsyntax.ml" 185 5972 5988 "lib/bsyntax.ml" 185 5972 5989
+type(
+  binding
+)
+"lib/bsyntax.ml" 185 5972 5990 "lib/bsyntax.ml" 185 5972 5991
+type(
+  exp
+)
+"lib/bsyntax.ml" 185 5972 5976 "lib/bsyntax.ml" 185 5972 5992
+type(
+  exp
+)
+"lib/bsyntax.ml" 185 5972 6000 "lib/bsyntax.ml" 185 5972 6001
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 185 5972 5986 "lib/bsyntax.ml" 185 5972 5987
+)
+"lib/bsyntax.ml" 186 6003 6017 "lib/bsyntax.ml" 186 6003 6018
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 186 6003 6031 "lib/bsyntax.ml" 186 6003 6032
+)
+"lib/bsyntax.ml" 186 6003 6019 "lib/bsyntax.ml" 186 6003 6020
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 186 6003 6021 "lib/bsyntax.ml" 186 6003 6022
+type(
+  exp
+)
+"lib/bsyntax.ml" 186 6003 6007 "lib/bsyntax.ml" 186 6003 6023
+type(
+  exp
+)
+"lib/bsyntax.ml" 186 6003 6031 "lib/bsyntax.ml" 186 6003 6032
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 186 6003 6017 "lib/bsyntax.ml" 186 6003 6018
+)
+"lib/bsyntax.ml" 187 6033 6047 "lib/bsyntax.ml" 187 6033 6048
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 187 6033 6061 "lib/bsyntax.ml" 187 6033 6062
+)
+"lib/bsyntax.ml" 187 6033 6049 "lib/bsyntax.ml" 187 6033 6050
+type(
+  exp
+)
+"lib/bsyntax.ml" 187 6033 6051 "lib/bsyntax.ml" 187 6033 6052
+type(
+  sort
+)
+"lib/bsyntax.ml" 187 6033 6037 "lib/bsyntax.ml" 187 6033 6053
+type(
+  exp
+)
+"lib/bsyntax.ml" 187 6033 6061 "lib/bsyntax.ml" 187 6033 6062
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 187 6033 6047 "lib/bsyntax.ml" 187 6033 6048
+)
+"lib/bsyntax.ml" 188 6063 6077 "lib/bsyntax.ml" 188 6063 6078
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 188 6063 6091 "lib/bsyntax.ml" 188 6063 6092
+)
+"lib/bsyntax.ml" 188 6063 6079 "lib/bsyntax.ml" 188 6063 6080
+type(
+  exp
+)
+"lib/bsyntax.ml" 188 6063 6081 "lib/bsyntax.ml" 188 6063 6082
+type(
+  exp
+)
+"lib/bsyntax.ml" 188 6063 6067 "lib/bsyntax.ml" 188 6063 6083
+type(
+  exp
+)
+"lib/bsyntax.ml" 188 6063 6091 "lib/bsyntax.ml" 188 6063 6092
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 188 6063 6077 "lib/bsyntax.ml" 188 6063 6078
+)
+"lib/bsyntax.ml" 189 6093 6107 "lib/bsyntax.ml" 189 6093 6108
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 189 6093 6121 "lib/bsyntax.ml" 189 6093 6122
+)
+"lib/bsyntax.ml" 189 6093 6109 "lib/bsyntax.ml" 189 6093 6110
+type(
+  exp
+)
+"lib/bsyntax.ml" 189 6093 6111 "lib/bsyntax.ml" 189 6093 6112
+type(
+  (pat * exp) list
+)
+"lib/bsyntax.ml" 189 6093 6113 "lib/bsyntax.ml" 189 6093 6114
+type(
+  sort option
+)
+"lib/bsyntax.ml" 189 6093 6097 "lib/bsyntax.ml" 189 6093 6115
+type(
+  exp
+)
+"lib/bsyntax.ml" 189 6093 6121 "lib/bsyntax.ml" 189 6093 6122
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 189 6093 6107 "lib/bsyntax.ml" 189 6093 6108
+)
+"lib/bsyntax.ml" 190 6123 6137 "lib/bsyntax.ml" 190 6123 6138
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 190 6123 6151 "lib/bsyntax.ml" 190 6123 6152
+)
+"lib/bsyntax.ml" 190 6123 6139 "lib/bsyntax.ml" 190 6123 6140
+type(
+  sort
+)
+"lib/bsyntax.ml" 190 6123 6141 "lib/bsyntax.ml" 190 6123 6142
+type(
+  sort
+)
+"lib/bsyntax.ml" 190 6123 6143 "lib/bsyntax.ml" 190 6123 6144
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 190 6123 6145 "lib/bsyntax.ml" 190 6123 6146
+type(
+  exp
+)
+"lib/bsyntax.ml" 190 6123 6127 "lib/bsyntax.ml" 190 6123 6147
+type(
+  exp
+)
+"lib/bsyntax.ml" 190 6123 6151 "lib/bsyntax.ml" 190 6123 6152
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 190 6123 6137 "lib/bsyntax.ml" 190 6123 6138
+)
+"lib/bsyntax.ml" 191 6153 6167 "lib/bsyntax.ml" 191 6153 6168
+ident(
+  def i "lib/bsyntax.ml" 191 6153 6181 "lib/bsyntax.ml" 191 6153 6182
+)
+"lib/bsyntax.ml" 191 6153 6166 "lib/bsyntax.ml" 191 6153 6169
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 191 6153 6157 "lib/bsyntax.ml" 191 6153 6169
+type(
+  exp
+)
+"lib/bsyntax.ml" 191 6153 6181 "lib/bsyntax.ml" 191 6153 6182
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 191 6153 6166 "lib/bsyntax.ml" 191 6153 6169
+)
+"lib/bsyntax.ml" 192 6183 6197 "lib/bsyntax.ml" 192 6183 6198
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 192 6183 6211 "lib/bsyntax.ml" 192 6183 6212
+)
+"lib/bsyntax.ml" 192 6183 6199 "lib/bsyntax.ml" 192 6183 6200
+type(
+  exp option
+)
+"lib/bsyntax.ml" 192 6183 6187 "lib/bsyntax.ml" 192 6183 6201
+type(
+  exp
+)
+"lib/bsyntax.ml" 192 6183 6211 "lib/bsyntax.ml" 192 6183 6212
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 192 6183 6197 "lib/bsyntax.ml" 192 6183 6198
+)
+"lib/bsyntax.ml" 193 6213 6227 "lib/bsyntax.ml" 193 6213 6228
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 193 6213 6241 "lib/bsyntax.ml" 193 6213 6242
+)
+"lib/bsyntax.ml" 193 6213 6229 "lib/bsyntax.ml" 193 6213 6230
+type(
+  int
+)
+"lib/bsyntax.ml" 193 6213 6217 "lib/bsyntax.ml" 193 6213 6231
+type(
+  exp
+)
+"lib/bsyntax.ml" 193 6213 6241 "lib/bsyntax.ml" 193 6213 6242
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 193 6213 6227 "lib/bsyntax.ml" 193 6213 6228
+)
+"lib/bsyntax.ml" 194 6247 6261 "lib/bsyntax.ml" 194 6247 6262
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 194 6247 6275 "lib/bsyntax.ml" 194 6247 6276
+)
+"lib/bsyntax.ml" 194 6247 6263 "lib/bsyntax.ml" 194 6247 6264
+type(
+  char
+)
+"lib/bsyntax.ml" 194 6247 6251 "lib/bsyntax.ml" 194 6247 6265
+type(
+  exp
+)
+"lib/bsyntax.ml" 194 6247 6275 "lib/bsyntax.ml" 194 6247 6276
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 194 6247 6261 "lib/bsyntax.ml" 194 6247 6262
+)
+"lib/bsyntax.ml" 195 6278 6292 "lib/bsyntax.ml" 195 6278 6293
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 195 6278 6306 "lib/bsyntax.ml" 195 6278 6307
+)
+"lib/bsyntax.ml" 195 6278 6294 "lib/bsyntax.ml" 195 6278 6295
+type(
+  string
+)
+"lib/bsyntax.ml" 195 6278 6282 "lib/bsyntax.ml" 195 6278 6296
+type(
+  exp
+)
+"lib/bsyntax.ml" 195 6278 6306 "lib/bsyntax.ml" 195 6278 6307
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 195 6278 6292 "lib/bsyntax.ml" 195 6278 6293
+)
+"lib/bsyntax.ml" 196 6308 6322 "lib/bsyntax.ml" 196 6308 6323
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 196 6308 6336 "lib/bsyntax.ml" 196 6308 6337
+)
+"lib/bsyntax.ml" 196 6308 6324 "lib/bsyntax.ml" 196 6308 6325
+type(
+  bool
+)
+"lib/bsyntax.ml" 196 6308 6326 "lib/bsyntax.ml" 196 6308 6327
+type(
+  (char * char) list
+)
+"lib/bsyntax.ml" 196 6308 6312 "lib/bsyntax.ml" 196 6308 6328
+type(
+  exp
+)
+"lib/bsyntax.ml" 196 6308 6336 "lib/bsyntax.ml" 196 6308 6337
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 196 6308 6322 "lib/bsyntax.ml" 196 6308 6323
+)
+"lib/bsyntax.ml" 197 6338 6352 "lib/bsyntax.ml" 197 6338 6353
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 197 6338 6366 "lib/bsyntax.ml" 197 6338 6367
+)
+"lib/bsyntax.ml" 197 6338 6354 "lib/bsyntax.ml" 197 6338 6355
+type(
+  prod list
+)
+"lib/bsyntax.ml" 197 6338 6342 "lib/bsyntax.ml" 197 6338 6356
+type(
+  exp
+)
+"lib/bsyntax.ml" 197 6338 6366 "lib/bsyntax.ml" 197 6338 6367
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 197 6338 6352 "lib/bsyntax.ml" 197 6338 6353
+)
+"lib/bsyntax.ml" 180 5814 5838 "lib/bsyntax.ml" 197 6338 6367
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 199 6369 6373 "lib/bsyntax.ml" 199 6369 6385
+type(
+  rule -> Info.t
+)
+ident(
+  def info_of_rule "lib/bsyntax.ml" 202 6421 6421 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 200 6397 6406 "lib/bsyntax.ml" 200 6397 6407
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 200 6397 6418 "lib/bsyntax.ml" 200 6397 6419
+)
+"lib/bsyntax.ml" 200 6397 6408 "lib/bsyntax.ml" 200 6397 6409
+type(
+  exp list
+)
+"lib/bsyntax.ml" 200 6397 6410 "lib/bsyntax.ml" 200 6397 6411
+type(
+  exp list
+)
+"lib/bsyntax.ml" 200 6397 6412 "lib/bsyntax.ml" 200 6397 6413
+type(
+  (Bident.Id.t * exp) list
+)
+"lib/bsyntax.ml" 200 6397 6401 "lib/bsyntax.ml" 200 6397 6414
+type(
+  rule
+)
+"lib/bsyntax.ml" 200 6397 6418 "lib/bsyntax.ml" 200 6397 6419
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 200 6397 6406 "lib/bsyntax.ml" 200 6397 6407
+)
+"lib/bsyntax.ml" 199 6369 6388 "lib/bsyntax.ml" 200 6397 6419
+type(
+  rule -> Info.t
+)
+"lib/bsyntax.ml" 202 6421 6425 "lib/bsyntax.ml" 202 6421 6440
+type(
+  rule -> Bident.Qid.Set.t
+)
+ident(
+  def qlabels_of_rule "lib/bsyntax.ml" 208 6586 6586 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 203 6452 6461 "lib/bsyntax.ml" 203 6452 6462
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 203 6452 6463 "lib/bsyntax.ml" 203 6452 6464
+type(
+  exp list
+)
+"lib/bsyntax.ml" 203 6452 6465 "lib/bsyntax.ml" 203 6452 6466
+type(
+  exp list
+)
+"lib/bsyntax.ml" 203 6452 6467 "lib/bsyntax.ml" 203 6452 6469
+type(
+  (Bident.Id.t * exp) list
+)
+ident(
+  def bs "lib/bsyntax.ml" 204 6474 6480 "lib/bsyntax.ml" 206 6560 6584
+)
+"lib/bsyntax.ml" 203 6452 6456 "lib/bsyntax.ml" 203 6452 6470
+type(
+  rule
+)
+"lib/bsyntax.ml" 204 6474 6480 "lib/bsyntax.ml" 204 6474 6498
+type(
+  (Bident.Qid.Set.t -> Bident.Id.t * exp -> Bident.Qid.Set.t) ->
+  Bident.Qid.Set.t -> (Bident.Id.t * exp) list -> Bident.Qid.Set.t
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bsyntax.ml" 205 6499 6512 "lib/bsyntax.ml" 205 6499 6515
+type(
+  Bident.Qid.Set.t
+)
+ident(
+  def acc "lib/bsyntax.ml" 205 6499 6516 "lib/bsyntax.ml" 205 6499 6558
+)
+"lib/bsyntax.ml" 205 6499 6517 "lib/bsyntax.ml" 205 6499 6519
+type(
+  Bident.Id.t
+)
+ident(
+  def li "lib/bsyntax.ml" 205 6499 6526 "lib/bsyntax.ml" 205 6499 6558
+)
+"lib/bsyntax.ml" 205 6499 6520 "lib/bsyntax.ml" 205 6499 6521
+type(
+  exp
+)
+"lib/bsyntax.ml" 205 6499 6516 "lib/bsyntax.ml" 205 6499 6522
+type(
+  Bident.Id.t * exp
+)
+"lib/bsyntax.ml" 205 6499 6526 "lib/bsyntax.ml" 205 6499 6537
+type(
+  Bident.Qid.Set.elt -> Bident.Qid.Set.t -> Bident.Qid.Set.t
+)
+ident(
+  ext_ref Bident.Qid.Set.add
+)
+"lib/bsyntax.ml" 205 6499 6539 "lib/bsyntax.ml" 205 6499 6550
+type(
+  Bident.Id.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.t_of_id
+)
+"lib/bsyntax.ml" 205 6499 6551 "lib/bsyntax.ml" 205 6499 6553
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref li "lib/bsyntax.ml" 205 6499 6517 "lib/bsyntax.ml" 205 6499 6519
+)
+"lib/bsyntax.ml" 205 6499 6538 "lib/bsyntax.ml" 205 6499 6554
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 205 6499 6555 "lib/bsyntax.ml" 205 6499 6558
+type(
+  Bident.Qid.Set.t
+)
+ident(
+  int_ref acc "lib/bsyntax.ml" 205 6499 6512 "lib/bsyntax.ml" 205 6499 6515
+)
+"lib/bsyntax.ml" 205 6499 6526 "lib/bsyntax.ml" 205 6499 6558
+call(
+  tail
+)
+type(
+  Bident.Qid.Set.t
+)
+"lib/bsyntax.ml" 205 6499 6507 "lib/bsyntax.ml" 205 6499 6559
+type(
+  Bident.Qid.Set.t -> Bident.Id.t * exp -> Bident.Qid.Set.t
+)
+"lib/bsyntax.ml" 206 6560 6568 "lib/bsyntax.ml" 206 6560 6581
+type(
+  Bident.Qid.Set.t
+)
+ident(
+  ext_ref Bident.Qid.Set.empty
+)
+"lib/bsyntax.ml" 206 6560 6582 "lib/bsyntax.ml" 206 6560 6584
+type(
+  (Bident.Id.t * exp) list
+)
+ident(
+  int_ref bs "lib/bsyntax.ml" 203 6452 6467 "lib/bsyntax.ml" 203 6452 6469
+)
+"lib/bsyntax.ml" 204 6474 6480 "lib/bsyntax.ml" 206 6560 6584
+call(
+  tail
+)
+type(
+  Bident.Qid.Set.t
+)
+"lib/bsyntax.ml" 202 6421 6443 "lib/bsyntax.ml" 206 6560 6584
+type(
+  rule -> Bident.Qid.Set.t
+)
+"lib/bsyntax.ml" 208 6586 6590 "lib/bsyntax.ml" 208 6586 6604
+type(
+  rule -> Bident.Id.Set.t
+)
+ident(
+  def labels_of_rule "lib/bsyntax.ml" 214 6734 6734 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 209 6616 6625 "lib/bsyntax.ml" 209 6616 6626
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 209 6616 6627 "lib/bsyntax.ml" 209 6616 6628
+type(
+  exp list
+)
+"lib/bsyntax.ml" 209 6616 6629 "lib/bsyntax.ml" 209 6616 6630
+type(
+  exp list
+)
+"lib/bsyntax.ml" 209 6616 6631 "lib/bsyntax.ml" 209 6616 6633
+type(
+  (Bident.Id.t * exp) list
+)
+ident(
+  def bs "lib/bsyntax.ml" 210 6638 6644 "lib/bsyntax.ml" 212 6709 6732
+)
+"lib/bsyntax.ml" 209 6616 6620 "lib/bsyntax.ml" 209 6616 6634
+type(
+  rule
+)
+"lib/bsyntax.ml" 210 6638 6644 "lib/bsyntax.ml" 210 6638 6662
+type(
+  (Bident.Id.Set.t -> Bident.Id.Set.elt * exp -> Bident.Id.Set.t) ->
+  Bident.Id.Set.t -> (Bident.Id.Set.elt * exp) list -> Bident.Id.Set.t
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bsyntax.ml" 211 6663 6676 "lib/bsyntax.ml" 211 6663 6679
+type(
+  Bident.Id.Set.t
+)
+ident(
+  def acc "lib/bsyntax.ml" 211 6663 6680 "lib/bsyntax.ml" 211 6663 6707
+)
+"lib/bsyntax.ml" 211 6663 6681 "lib/bsyntax.ml" 211 6663 6683
+type(
+  Bident.Id.Set.elt
+)
+ident(
+  def li "lib/bsyntax.ml" 211 6663 6690 "lib/bsyntax.ml" 211 6663 6707
+)
+"lib/bsyntax.ml" 211 6663 6684 "lib/bsyntax.ml" 211 6663 6685
+type(
+  exp
+)
+"lib/bsyntax.ml" 211 6663 6680 "lib/bsyntax.ml" 211 6663 6686
+type(
+  Bident.Id.Set.elt * exp
+)
+"lib/bsyntax.ml" 211 6663 6690 "lib/bsyntax.ml" 211 6663 6700
+type(
+  Bident.Id.Set.elt -> Bident.Id.Set.t -> Bident.Id.Set.t
+)
+ident(
+  ext_ref Bident.Id.Set.add
+)
+"lib/bsyntax.ml" 211 6663 6701 "lib/bsyntax.ml" 211 6663 6703
+type(
+  Bident.Id.Set.elt
+)
+ident(
+  int_ref li "lib/bsyntax.ml" 211 6663 6681 "lib/bsyntax.ml" 211 6663 6683
+)
+"lib/bsyntax.ml" 211 6663 6704 "lib/bsyntax.ml" 211 6663 6707
+type(
+  Bident.Id.Set.t
+)
+ident(
+  int_ref acc "lib/bsyntax.ml" 211 6663 6676 "lib/bsyntax.ml" 211 6663 6679
+)
+"lib/bsyntax.ml" 211 6663 6690 "lib/bsyntax.ml" 211 6663 6707
+call(
+  tail
+)
+type(
+  Bident.Id.Set.t
+)
+"lib/bsyntax.ml" 211 6663 6671 "lib/bsyntax.ml" 211 6663 6708
+type(
+  Bident.Id.Set.t -> Bident.Id.Set.elt * exp -> Bident.Id.Set.t
+)
+"lib/bsyntax.ml" 212 6709 6717 "lib/bsyntax.ml" 212 6709 6729
+type(
+  Bident.Id.Set.t
+)
+ident(
+  ext_ref Bident.Id.Set.empty
+)
+"lib/bsyntax.ml" 212 6709 6730 "lib/bsyntax.ml" 212 6709 6732
+type(
+  (Bident.Id.Set.elt * exp) list
+)
+ident(
+  int_ref bs "lib/bsyntax.ml" 209 6616 6631 "lib/bsyntax.ml" 209 6616 6633
+)
+"lib/bsyntax.ml" 210 6638 6644 "lib/bsyntax.ml" 212 6709 6732
+call(
+  tail
+)
+type(
+  Bident.Id.Set.t
+)
+"lib/bsyntax.ml" 208 6586 6607 "lib/bsyntax.ml" 212 6709 6732
+type(
+  rule -> Bident.Id.Set.t
+)
+"lib/bsyntax.ml" 214 6734 6738 "lib/bsyntax.ml" 214 6734 6750
+type(
+  prod -> Info.t
+)
+ident(
+  def info_of_prod "lib/bsyntax.ml" 217 6784 6784 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 215 6762 6771 "lib/bsyntax.ml" 215 6762 6772
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 215 6762 6781 "lib/bsyntax.ml" 215 6762 6782
+)
+"lib/bsyntax.ml" 215 6762 6773 "lib/bsyntax.ml" 215 6762 6774
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 215 6762 6775 "lib/bsyntax.ml" 215 6762 6776
+type(
+  rule list
+)
+"lib/bsyntax.ml" 215 6762 6766 "lib/bsyntax.ml" 215 6762 6777
+type(
+  prod
+)
+"lib/bsyntax.ml" 215 6762 6781 "lib/bsyntax.ml" 215 6762 6782
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 215 6762 6771 "lib/bsyntax.ml" 215 6762 6772
+)
+"lib/bsyntax.ml" 214 6734 6753 "lib/bsyntax.ml" 215 6762 6782
+type(
+  prod -> Info.t
+)
+"lib/bsyntax.ml" 217 6784 6788 "lib/bsyntax.ml" 217 6784 6799
+type(
+  pat -> Info.t
+)
+ident(
+  def info_of_pat "lib/bsyntax.ml" 228 7011 7011 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 218 6811 6821 "lib/bsyntax.ml" 218 6811 6822
+ident(
+  def i "lib/bsyntax.ml" 218 6811 6831 "lib/bsyntax.ml" 218 6811 6832
+)
+"lib/bsyntax.ml" 218 6811 6820 "lib/bsyntax.ml" 218 6811 6823
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 218 6811 6815 "lib/bsyntax.ml" 218 6811 6823
+type(
+  pat
+)
+"lib/bsyntax.ml" 218 6811 6831 "lib/bsyntax.ml" 218 6811 6832
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 218 6811 6820 "lib/bsyntax.ml" 218 6811 6823
+)
+"lib/bsyntax.ml" 219 6833 6843 "lib/bsyntax.ml" 219 6833 6844
+ident(
+  def i "lib/bsyntax.ml" 219 6833 6853 "lib/bsyntax.ml" 219 6833 6854
+)
+"lib/bsyntax.ml" 219 6833 6842 "lib/bsyntax.ml" 219 6833 6845
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 219 6833 6837 "lib/bsyntax.ml" 219 6833 6845
+type(
+  pat
+)
+"lib/bsyntax.ml" 219 6833 6853 "lib/bsyntax.ml" 219 6833 6854
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 219 6833 6842 "lib/bsyntax.ml" 219 6833 6845
+)
+"lib/bsyntax.ml" 220 6855 6865 "lib/bsyntax.ml" 220 6855 6866
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 220 6855 6875 "lib/bsyntax.ml" 220 6855 6876
+)
+"lib/bsyntax.ml" 220 6855 6867 "lib/bsyntax.ml" 220 6855 6868
+type(
+  bool
+)
+"lib/bsyntax.ml" 220 6855 6859 "lib/bsyntax.ml" 220 6855 6869
+type(
+  pat
+)
+"lib/bsyntax.ml" 220 6855 6875 "lib/bsyntax.ml" 220 6855 6876
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 220 6855 6865 "lib/bsyntax.ml" 220 6855 6866
+)
+"lib/bsyntax.ml" 221 6877 6887 "lib/bsyntax.ml" 221 6877 6888
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 221 6877 6897 "lib/bsyntax.ml" 221 6877 6898
+)
+"lib/bsyntax.ml" 221 6877 6889 "lib/bsyntax.ml" 221 6877 6890
+type(
+  pat
+)
+"lib/bsyntax.ml" 221 6877 6881 "lib/bsyntax.ml" 221 6877 6891
+type(
+  pat
+)
+"lib/bsyntax.ml" 221 6877 6897 "lib/bsyntax.ml" 221 6877 6898
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 221 6877 6887 "lib/bsyntax.ml" 221 6877 6888
+)
+"lib/bsyntax.ml" 222 6899 6909 "lib/bsyntax.ml" 222 6899 6910
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 222 6899 6919 "lib/bsyntax.ml" 222 6899 6920
+)
+"lib/bsyntax.ml" 222 6899 6911 "lib/bsyntax.ml" 222 6899 6912
+type(
+  int
+)
+"lib/bsyntax.ml" 222 6899 6903 "lib/bsyntax.ml" 222 6899 6913
+type(
+  pat
+)
+"lib/bsyntax.ml" 222 6899 6919 "lib/bsyntax.ml" 222 6899 6920
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 222 6899 6909 "lib/bsyntax.ml" 222 6899 6910
+)
+"lib/bsyntax.ml" 223 6921 6931 "lib/bsyntax.ml" 223 6921 6932
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 223 6921 6941 "lib/bsyntax.ml" 223 6921 6942
+)
+"lib/bsyntax.ml" 223 6921 6933 "lib/bsyntax.ml" 223 6921 6934
+type(
+  string
+)
+"lib/bsyntax.ml" 223 6921 6925 "lib/bsyntax.ml" 223 6921 6935
+type(
+  pat
+)
+"lib/bsyntax.ml" 223 6921 6941 "lib/bsyntax.ml" 223 6921 6942
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 223 6921 6931 "lib/bsyntax.ml" 223 6921 6932
+)
+"lib/bsyntax.ml" 224 6943 6953 "lib/bsyntax.ml" 224 6943 6954
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 224 6943 6963 "lib/bsyntax.ml" 224 6943 6964
+)
+"lib/bsyntax.ml" 224 6943 6955 "lib/bsyntax.ml" 224 6943 6956
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 224 6943 6957 "lib/bsyntax.ml" 224 6943 6958
+type(
+  sort option
+)
+"lib/bsyntax.ml" 224 6943 6947 "lib/bsyntax.ml" 224 6943 6959
+type(
+  pat
+)
+"lib/bsyntax.ml" 224 6943 6963 "lib/bsyntax.ml" 224 6943 6964
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 224 6943 6953 "lib/bsyntax.ml" 224 6943 6954
+)
+"lib/bsyntax.ml" 225 6966 6976 "lib/bsyntax.ml" 225 6966 6977
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 225 6966 6986 "lib/bsyntax.ml" 225 6966 6987
+)
+"lib/bsyntax.ml" 225 6966 6978 "lib/bsyntax.ml" 225 6966 6979
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 225 6966 6980 "lib/bsyntax.ml" 225 6966 6981
+type(
+  pat option
+)
+"lib/bsyntax.ml" 225 6966 6970 "lib/bsyntax.ml" 225 6966 6982
+type(
+  pat
+)
+"lib/bsyntax.ml" 225 6966 6986 "lib/bsyntax.ml" 225 6966 6987
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 225 6966 6976 "lib/bsyntax.ml" 225 6966 6977
+)
+"lib/bsyntax.ml" 226 6988 6998 "lib/bsyntax.ml" 226 6988 6999
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 226 6988 7008 "lib/bsyntax.ml" 226 6988 7009
+)
+"lib/bsyntax.ml" 226 6988 7000 "lib/bsyntax.ml" 226 6988 7001
+type(
+  pat
+)
+"lib/bsyntax.ml" 226 6988 7002 "lib/bsyntax.ml" 226 6988 7003
+type(
+  pat
+)
+"lib/bsyntax.ml" 226 6988 6992 "lib/bsyntax.ml" 226 6988 7004
+type(
+  pat
+)
+"lib/bsyntax.ml" 226 6988 7008 "lib/bsyntax.ml" 226 6988 7009
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 226 6988 6998 "lib/bsyntax.ml" 226 6988 6999
+)
+"lib/bsyntax.ml" 217 6784 6802 "lib/bsyntax.ml" 226 6988 7009
+type(
+  pat -> Info.t
+)
+"lib/bsyntax.ml" 228 7011 7015 "lib/bsyntax.ml" 228 7011 7029
+type(
+  modl -> Info.t
+)
+ident(
+  def info_of_module "lib/bsyntax.ml" 231 7064 7064 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 229 7041 7049 "lib/bsyntax.ml" 229 7041 7050
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 229 7041 7061 "lib/bsyntax.ml" 229 7041 7062
+)
+"lib/bsyntax.ml" 229 7041 7051 "lib/bsyntax.ml" 229 7041 7052
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 229 7041 7053 "lib/bsyntax.ml" 229 7041 7054
+type(
+  Bident.Qid.t list
+)
+"lib/bsyntax.ml" 229 7041 7055 "lib/bsyntax.ml" 229 7041 7056
+type(
+  decl list
+)
+"lib/bsyntax.ml" 229 7041 7045 "lib/bsyntax.ml" 229 7041 7057
+type(
+  modl
+)
+"lib/bsyntax.ml" 229 7041 7061 "lib/bsyntax.ml" 229 7041 7062
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 229 7041 7049 "lib/bsyntax.ml" 229 7041 7050
+)
+"lib/bsyntax.ml" 228 7011 7032 "lib/bsyntax.ml" 229 7041 7062
+type(
+  modl -> Info.t
+)
+"lib/bsyntax.ml" 231 7064 7068 "lib/bsyntax.ml" 231 7064 7080
+type(
+  modl -> Bident.Id.t
+)
+ident(
+  def id_of_module "lib/bsyntax.ml" 234 7115 7115 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 232 7092 7100 "lib/bsyntax.ml" 232 7092 7101
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 232 7092 7102 "lib/bsyntax.ml" 232 7092 7103
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bsyntax.ml" 232 7092 7112 "lib/bsyntax.ml" 232 7092 7113
+)
+"lib/bsyntax.ml" 232 7092 7104 "lib/bsyntax.ml" 232 7092 7105
+type(
+  Bident.Qid.t list
+)
+"lib/bsyntax.ml" 232 7092 7106 "lib/bsyntax.ml" 232 7092 7107
+type(
+  decl list
+)
+"lib/bsyntax.ml" 232 7092 7096 "lib/bsyntax.ml" 232 7092 7108
+type(
+  modl
+)
+"lib/bsyntax.ml" 232 7092 7112 "lib/bsyntax.ml" 232 7092 7113
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 232 7092 7102 "lib/bsyntax.ml" 232 7092 7103
+)
+"lib/bsyntax.ml" 231 7064 7083 "lib/bsyntax.ml" 232 7092 7113
+type(
+  modl -> Bident.Id.t
+)
+"lib/bsyntax.ml" 234 7115 7119 "lib/bsyntax.ml" 234 7115 7128
+type(
+  Bident.Id.t list -> sort list
+)
+ident(
+  def sl_of_svl "lib/bsyntax.ml" 237 7179 7179 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 234 7115 7129 "lib/bsyntax.ml" 234 7115 7132
+type(
+  Bident.Id.t list
+)
+ident(
+  def svl "lib/bsyntax.ml" 235 7136 7138 "lib/bsyntax.ml" 235 7136 7176
+)
+"lib/bsyntax.ml" 235 7136 7138 "lib/bsyntax.ml" 235 7136 7150
+type(
+  (Bident.Id.t -> sort) -> Bident.Id.t list -> sort list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bsyntax.ml" 235 7136 7156 "lib/bsyntax.ml" 235 7136 7159
+type(
+  Bident.Id.t
+)
+ident(
+  def svi "lib/bsyntax.ml" 235 7136 7163 "lib/bsyntax.ml" 235 7136 7171
+)
+"lib/bsyntax.ml" 235 7136 7168 "lib/bsyntax.ml" 235 7136 7171
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref svi "lib/bsyntax.ml" 235 7136 7156 "lib/bsyntax.ml" 235 7136 7159
+)
+"lib/bsyntax.ml" 235 7136 7163 "lib/bsyntax.ml" 235 7136 7171
+type(
+  sort
+)
+"lib/bsyntax.ml" 235 7136 7151 "lib/bsyntax.ml" 235 7136 7172
+type(
+  Bident.Id.t -> sort
+)
+"lib/bsyntax.ml" 235 7136 7173 "lib/bsyntax.ml" 235 7136 7176
+type(
+  Bident.Id.t list
+)
+ident(
+  int_ref svl "lib/bsyntax.ml" 234 7115 7129 "lib/bsyntax.ml" 234 7115 7132
+)
+"lib/bsyntax.ml" 235 7136 7138 "lib/bsyntax.ml" 235 7136 7176
+call(
+  tail
+)
+type(
+  sort list
+)
+"lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+type(
+  sort -> bool
+)
+ident(
+  def is_refined "lib/bsyntax.ml" 237 7179 7179 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 238 7209 7218
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7221 "lib/bsyntax.ml" 238 7209 7226
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 238 7209 7226
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7229 "lib/bsyntax.ml" 238 7209 7237
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 238 7209 7237
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7240 "lib/bsyntax.ml" 238 7209 7245
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 238 7209 7245
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7248 "lib/bsyntax.ml" 238 7209 7255
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 238 7209 7255
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7261 "lib/bsyntax.ml" 239 7257 7268
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7268
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7271 "lib/bsyntax.ml" 239 7257 7279
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7279
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7282 "lib/bsyntax.ml" 239 7257 7292
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7292
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7295 "lib/bsyntax.ml" 239 7257 7305
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7305
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7308 "lib/bsyntax.ml" 239 7257 7313
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7313
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7316 "lib/bsyntax.ml" 239 7257 7326
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7326
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7336 "lib/bsyntax.ml" 239 7257 7337
+type(
+  prefs
+)
+"lib/bsyntax.ml" 239 7257 7329 "lib/bsyntax.ml" 239 7257 7337
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7337
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7345 "lib/bsyntax.ml" 239 7257 7346
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 239 7257 7340 "lib/bsyntax.ml" 239 7257 7346
+type(
+  sort
+)
+"lib/bsyntax.ml" 238 7209 7213 "lib/bsyntax.ml" 239 7257 7346
+type(
+  sort
+)
+"lib/bsyntax.ml" 239 7257 7351 "lib/bsyntax.ml" 239 7257 7356
+type(
+  bool
+)
+"lib/bsyntax.ml" 240 7357 7371 "lib/bsyntax.ml" 240 7357 7373
+type(
+  sort
+)
+ident(
+  def s1 "lib/bsyntax.ml" 240 7357 7382 "lib/bsyntax.ml" 240 7357 7412
+)
+"lib/bsyntax.ml" 240 7357 7375 "lib/bsyntax.ml" 240 7357 7377
+type(
+  sort
+)
+ident(
+  def s2 "lib/bsyntax.ml" 240 7357 7382 "lib/bsyntax.ml" 240 7357 7412
+)
+"lib/bsyntax.ml" 240 7357 7361 "lib/bsyntax.ml" 240 7357 7378
+type(
+  sort
+)
+"lib/bsyntax.ml" 240 7357 7382 "lib/bsyntax.ml" 240 7357 7392
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 240 7357 7393 "lib/bsyntax.ml" 240 7357 7395
+type(
+  sort
+)
+ident(
+  int_ref s1 "lib/bsyntax.ml" 240 7357 7371 "lib/bsyntax.ml" 240 7357 7373
+)
+"lib/bsyntax.ml" 240 7357 7382 "lib/bsyntax.ml" 240 7357 7395
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 240 7357 7396 "lib/bsyntax.ml" 240 7357 7398
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"lib/bsyntax.ml" 240 7357 7399 "lib/bsyntax.ml" 240 7357 7409
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 240 7357 7410 "lib/bsyntax.ml" 240 7357 7412
+type(
+  sort
+)
+ident(
+  int_ref s2 "lib/bsyntax.ml" 240 7357 7375 "lib/bsyntax.ml" 240 7357 7377
+)
+"lib/bsyntax.ml" 240 7357 7399 "lib/bsyntax.ml" 240 7357 7412
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 240 7357 7382 "lib/bsyntax.ml" 240 7357 7412
+type(
+  bool
+)
+"lib/bsyntax.ml" 241 7413 7424 "lib/bsyntax.ml" 241 7413 7426
+type(
+  sort list
+)
+ident(
+  def sl "lib/bsyntax.ml" 241 7413 7434 "lib/bsyntax.ml" 241 7413 7463
+)
+"lib/bsyntax.ml" 241 7413 7428 "lib/bsyntax.ml" 241 7413 7429
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 241 7413 7417 "lib/bsyntax.ml" 241 7413 7430
+type(
+  sort
+)
+"lib/bsyntax.ml" 241 7413 7434 "lib/bsyntax.ml" 241 7413 7449
+type(
+  (sort -> bool) -> sort list -> bool
+)
+ident(
+  ext_ref Safelist.exists
+)
+"lib/bsyntax.ml" 241 7413 7450 "lib/bsyntax.ml" 241 7413 7460
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 241 7413 7461 "lib/bsyntax.ml" 241 7413 7463
+type(
+  sort list
+)
+ident(
+  int_ref sl "lib/bsyntax.ml" 241 7413 7424 "lib/bsyntax.ml" 241 7413 7426
+)
+"lib/bsyntax.ml" 241 7413 7434 "lib/bsyntax.ml" 241 7413 7463
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 242 7464 7478 "lib/bsyntax.ml" 242 7464 7479
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 242 7464 7481 "lib/bsyntax.ml" 242 7464 7483
+type(
+  sort
+)
+ident(
+  def s1 "lib/bsyntax.ml" 242 7464 7492 "lib/bsyntax.ml" 242 7464 7522
+)
+"lib/bsyntax.ml" 242 7464 7485 "lib/bsyntax.ml" 242 7464 7487
+type(
+  sort
+)
+ident(
+  def s2 "lib/bsyntax.ml" 242 7464 7492 "lib/bsyntax.ml" 242 7464 7522
+)
+"lib/bsyntax.ml" 242 7464 7468 "lib/bsyntax.ml" 242 7464 7488
+type(
+  sort
+)
+"lib/bsyntax.ml" 242 7464 7492 "lib/bsyntax.ml" 242 7464 7502
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 242 7464 7503 "lib/bsyntax.ml" 242 7464 7505
+type(
+  sort
+)
+ident(
+  int_ref s1 "lib/bsyntax.ml" 242 7464 7481 "lib/bsyntax.ml" 242 7464 7483
+)
+"lib/bsyntax.ml" 242 7464 7492 "lib/bsyntax.ml" 242 7464 7505
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 242 7464 7506 "lib/bsyntax.ml" 242 7464 7508
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"lib/bsyntax.ml" 242 7464 7509 "lib/bsyntax.ml" 242 7464 7519
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 242 7464 7520 "lib/bsyntax.ml" 242 7464 7522
+type(
+  sort
+)
+ident(
+  int_ref s2 "lib/bsyntax.ml" 242 7464 7485 "lib/bsyntax.ml" 242 7464 7487
+)
+"lib/bsyntax.ml" 242 7464 7509 "lib/bsyntax.ml" 242 7464 7522
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 242 7464 7492 "lib/bsyntax.ml" 242 7464 7522
+type(
+  bool
+)
+"lib/bsyntax.ml" 243 7523 7535 "lib/bsyntax.ml" 243 7523 7536
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 243 7523 7538 "lib/bsyntax.ml" 243 7523 7539
+type(
+  sort
+)
+ident(
+  def s "lib/bsyntax.ml" 243 7523 7544 "lib/bsyntax.ml" 243 7523 7556
+)
+"lib/bsyntax.ml" 243 7523 7527 "lib/bsyntax.ml" 243 7523 7540
+type(
+  sort
+)
+"lib/bsyntax.ml" 243 7523 7544 "lib/bsyntax.ml" 243 7523 7554
+type(
+  sort -> bool
+)
+ident(
+  int_ref is_refined "lib/bsyntax.ml" 237 7179 7187 "lib/bsyntax.ml" 237 7179 7197
+)
+"lib/bsyntax.ml" 243 7523 7555 "lib/bsyntax.ml" 243 7523 7556
+type(
+  sort
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 243 7523 7538 "lib/bsyntax.ml" 243 7523 7539
+)
+"lib/bsyntax.ml" 243 7523 7544 "lib/bsyntax.ml" 243 7523 7556
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bsyntax.ml" 244 7557 7569 "lib/bsyntax.ml" 244 7557 7570
+type(
+  exp
+)
+type(
+  sort
+)
+type(
+  bool
+)
+type(
+  Bident.Id.t
+)
+"lib/bsyntax.ml" 244 7557 7561 "lib/bsyntax.ml" 244 7557 7570
+type(
+  sort
+)
+"lib/bsyntax.ml" 244 7557 7574 "lib/bsyntax.ml" 244 7557 7578
+type(
+  bool
+)
+"lib/bsyntax.ml" 237 7179 7200 "lib/bsyntax.ml" 244 7557 7578
+type(
+  sort -> bool
+)
+"lib/bsyntax.ml" 246 7580 7584 "lib/bsyntax.ml" 246 7580 7591
+type(
+  Info.t -> exp
+)
+ident(
+  def mk_unit "lib/bsyntax.ml" 249 7609 7609 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 246 7580 7592 "lib/bsyntax.ml" 246 7580 7593
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 247 7597 7599 "lib/bsyntax.ml" 247 7597 7607
+)
+"lib/bsyntax.ml" 247 7597 7604 "lib/bsyntax.ml" 247 7597 7607
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 246 7580 7592 "lib/bsyntax.ml" 246 7580 7593
+)
+"lib/bsyntax.ml" 247 7597 7599 "lib/bsyntax.ml" 247 7597 7607
+type(
+  exp
+)
+"lib/bsyntax.ml" 249 7609 7613 "lib/bsyntax.ml" 249 7609 7619
+type(
+  Info.t -> int -> exp
+)
+ident(
+  def mk_int "lib/bsyntax.ml" 252 7644 7644 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 249 7609 7620 "lib/bsyntax.ml" 249 7609 7621
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 249 7609 7622 "lib/bsyntax.ml" 250 7627 7642
+)
+"lib/bsyntax.ml" 249 7609 7622 "lib/bsyntax.ml" 249 7609 7623
+type(
+  int
+)
+ident(
+  def n "lib/bsyntax.ml" 250 7627 7629 "lib/bsyntax.ml" 250 7627 7642
+)
+"lib/bsyntax.ml" 250 7627 7638 "lib/bsyntax.ml" 250 7627 7639
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 249 7609 7620 "lib/bsyntax.ml" 249 7609 7621
+)
+"lib/bsyntax.ml" 250 7627 7640 "lib/bsyntax.ml" 250 7627 7641
+type(
+  int
+)
+ident(
+  int_ref n "lib/bsyntax.ml" 249 7609 7622 "lib/bsyntax.ml" 249 7609 7623
+)
+"lib/bsyntax.ml" 250 7627 7629 "lib/bsyntax.ml" 250 7627 7642
+type(
+  exp
+)
+"lib/bsyntax.ml" 252 7644 7648 "lib/bsyntax.ml" 252 7644 7657
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_string "lib/bsyntax.ml" 255 7681 7681 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 252 7644 7658 "lib/bsyntax.ml" 252 7644 7659
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 252 7644 7660 "lib/bsyntax.ml" 253 7665 7679
+)
+"lib/bsyntax.ml" 252 7644 7660 "lib/bsyntax.ml" 252 7644 7661
+type(
+  string
+)
+ident(
+  def s "lib/bsyntax.ml" 253 7665 7667 "lib/bsyntax.ml" 253 7665 7679
+)
+"lib/bsyntax.ml" 253 7665 7675 "lib/bsyntax.ml" 253 7665 7676
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 252 7644 7658 "lib/bsyntax.ml" 252 7644 7659
+)
+"lib/bsyntax.ml" 253 7665 7677 "lib/bsyntax.ml" 253 7665 7678
+type(
+  string
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 252 7644 7660 "lib/bsyntax.ml" 252 7644 7661
+)
+"lib/bsyntax.ml" 253 7665 7667 "lib/bsyntax.ml" 253 7665 7679
+type(
+  exp
+)
+"lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_app "lib/bsyntax.ml" 258 7720 7720 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 255 7681 7692 "lib/bsyntax.ml" 255 7681 7693
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 255 7681 7694 "lib/bsyntax.ml" 256 7703 7718
+)
+"lib/bsyntax.ml" 255 7681 7694 "lib/bsyntax.ml" 255 7681 7696
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 255 7681 7697 "lib/bsyntax.ml" 256 7703 7718
+)
+"lib/bsyntax.ml" 255 7681 7697 "lib/bsyntax.ml" 255 7681 7699
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 256 7703 7705 "lib/bsyntax.ml" 256 7703 7718
+)
+"lib/bsyntax.ml" 256 7703 7710 "lib/bsyntax.ml" 256 7703 7711
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 255 7681 7692 "lib/bsyntax.ml" 255 7681 7693
+)
+"lib/bsyntax.ml" 256 7703 7712 "lib/bsyntax.ml" 256 7703 7714
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 255 7681 7694 "lib/bsyntax.ml" 255 7681 7696
+)
+"lib/bsyntax.ml" 256 7703 7715 "lib/bsyntax.ml" 256 7703 7717
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 255 7681 7697 "lib/bsyntax.ml" 255 7681 7699
+)
+"lib/bsyntax.ml" 256 7703 7705 "lib/bsyntax.ml" 256 7703 7718
+type(
+  exp
+)
+"lib/bsyntax.ml" 258 7720 7724 "lib/bsyntax.ml" 258 7720 7731
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  def mk_app3 "lib/bsyntax.ml" 261 7778 7778 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 258 7720 7732 "lib/bsyntax.ml" 258 7720 7733
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 258 7720 7734 "lib/bsyntax.ml" 259 7746 7776
+)
+"lib/bsyntax.ml" 258 7720 7734 "lib/bsyntax.ml" 258 7720 7736
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 258 7720 7737 "lib/bsyntax.ml" 259 7746 7776
+)
+"lib/bsyntax.ml" 258 7720 7737 "lib/bsyntax.ml" 258 7720 7739
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 258 7720 7740 "lib/bsyntax.ml" 259 7746 7776
+)
+"lib/bsyntax.ml" 258 7720 7740 "lib/bsyntax.ml" 258 7720 7742
+type(
+  exp
+)
+ident(
+  def e3 "lib/bsyntax.ml" 259 7746 7748 "lib/bsyntax.ml" 259 7746 7776
+)
+"lib/bsyntax.ml" 259 7746 7748 "lib/bsyntax.ml" 259 7746 7754
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+)
+"lib/bsyntax.ml" 259 7746 7755 "lib/bsyntax.ml" 259 7746 7756
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 258 7720 7732 "lib/bsyntax.ml" 258 7720 7733
+)
+"lib/bsyntax.ml" 259 7746 7758 "lib/bsyntax.ml" 259 7746 7764
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+)
+"lib/bsyntax.ml" 259 7746 7765 "lib/bsyntax.ml" 259 7746 7766
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 258 7720 7732 "lib/bsyntax.ml" 258 7720 7733
+)
+"lib/bsyntax.ml" 259 7746 7767 "lib/bsyntax.ml" 259 7746 7769
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 258 7720 7734 "lib/bsyntax.ml" 258 7720 7736
+)
+"lib/bsyntax.ml" 259 7746 7770 "lib/bsyntax.ml" 259 7746 7772
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 258 7720 7737 "lib/bsyntax.ml" 258 7720 7739
+)
+"lib/bsyntax.ml" 259 7746 7757 "lib/bsyntax.ml" 259 7746 7773
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 259 7746 7774 "lib/bsyntax.ml" 259 7746 7776
+type(
+  exp
+)
+ident(
+  int_ref e3 "lib/bsyntax.ml" 258 7720 7740 "lib/bsyntax.ml" 258 7720 7742
+)
+"lib/bsyntax.ml" 259 7746 7748 "lib/bsyntax.ml" 259 7746 7776
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 261 7778 7782 "lib/bsyntax.ml" 261 7778 7789
+type(
+  Info.t -> exp -> exp -> exp -> exp -> exp
+)
+ident(
+  def mk_app4 "lib/bsyntax.ml" 264 7852 7852 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 261 7778 7790 "lib/bsyntax.ml" 261 7778 7791
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 261 7778 7792 "lib/bsyntax.ml" 262 7806 7850
+)
+"lib/bsyntax.ml" 261 7778 7792 "lib/bsyntax.ml" 261 7778 7794
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 261 7778 7795 "lib/bsyntax.ml" 262 7806 7850
+)
+"lib/bsyntax.ml" 261 7778 7795 "lib/bsyntax.ml" 261 7778 7797
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 261 7778 7798 "lib/bsyntax.ml" 262 7806 7850
+)
+"lib/bsyntax.ml" 261 7778 7798 "lib/bsyntax.ml" 261 7778 7800
+type(
+  exp
+)
+ident(
+  def e3 "lib/bsyntax.ml" 261 7778 7801 "lib/bsyntax.ml" 262 7806 7850
+)
+"lib/bsyntax.ml" 261 7778 7801 "lib/bsyntax.ml" 261 7778 7803
+type(
+  exp
+)
+ident(
+  def e4 "lib/bsyntax.ml" 262 7806 7808 "lib/bsyntax.ml" 262 7806 7850
+)
+"lib/bsyntax.ml" 262 7806 7808 "lib/bsyntax.ml" 262 7806 7814
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+)
+"lib/bsyntax.ml" 262 7806 7815 "lib/bsyntax.ml" 262 7806 7816
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 261 7778 7790 "lib/bsyntax.ml" 261 7778 7791
+)
+"lib/bsyntax.ml" 262 7806 7818 "lib/bsyntax.ml" 262 7806 7824
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+)
+"lib/bsyntax.ml" 262 7806 7825 "lib/bsyntax.ml" 262 7806 7826
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 261 7778 7790 "lib/bsyntax.ml" 261 7778 7791
+)
+"lib/bsyntax.ml" 262 7806 7827 "lib/bsyntax.ml" 262 7806 7829
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 261 7778 7792 "lib/bsyntax.ml" 261 7778 7794
+)
+"lib/bsyntax.ml" 262 7806 7830 "lib/bsyntax.ml" 262 7806 7832
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 261 7778 7795 "lib/bsyntax.ml" 261 7778 7797
+)
+"lib/bsyntax.ml" 262 7806 7817 "lib/bsyntax.ml" 262 7806 7833
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 262 7806 7835 "lib/bsyntax.ml" 262 7806 7841
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 255 7681 7685 "lib/bsyntax.ml" 255 7681 7691
+)
+"lib/bsyntax.ml" 262 7806 7842 "lib/bsyntax.ml" 262 7806 7843
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 261 7778 7790 "lib/bsyntax.ml" 261 7778 7791
+)
+"lib/bsyntax.ml" 262 7806 7844 "lib/bsyntax.ml" 262 7806 7846
+type(
+  exp
+)
+ident(
+  int_ref e3 "lib/bsyntax.ml" 261 7778 7798 "lib/bsyntax.ml" 261 7778 7800
+)
+"lib/bsyntax.ml" 262 7806 7847 "lib/bsyntax.ml" 262 7806 7849
+type(
+  exp
+)
+ident(
+  int_ref e4 "lib/bsyntax.ml" 261 7778 7801 "lib/bsyntax.ml" 261 7778 7803
+)
+"lib/bsyntax.ml" 262 7806 7834 "lib/bsyntax.ml" 262 7806 7850
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 262 7806 7808 "lib/bsyntax.ml" 262 7806 7850
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 264 7852 7856 "lib/bsyntax.ml" 264 7852 7864
+type(
+  Info.t -> exp -> sort -> exp
+)
+ident(
+  def mk_tyapp "lib/bsyntax.ml" 267 7895 7895 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 264 7852 7865 "lib/bsyntax.ml" 264 7852 7866
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 264 7852 7867 "lib/bsyntax.ml" 265 7876 7893
+)
+"lib/bsyntax.ml" 264 7852 7867 "lib/bsyntax.ml" 264 7852 7869
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 264 7852 7870 "lib/bsyntax.ml" 265 7876 7893
+)
+"lib/bsyntax.ml" 264 7852 7870 "lib/bsyntax.ml" 264 7852 7872
+type(
+  sort
+)
+ident(
+  def s2 "lib/bsyntax.ml" 265 7876 7878 "lib/bsyntax.ml" 265 7876 7893
+)
+"lib/bsyntax.ml" 265 7876 7885 "lib/bsyntax.ml" 265 7876 7886
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 264 7852 7865 "lib/bsyntax.ml" 264 7852 7866
+)
+"lib/bsyntax.ml" 265 7876 7887 "lib/bsyntax.ml" 265 7876 7889
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 264 7852 7867 "lib/bsyntax.ml" 264 7852 7869
+)
+"lib/bsyntax.ml" 265 7876 7890 "lib/bsyntax.ml" 265 7876 7892
+type(
+  sort
+)
+ident(
+  int_ref s2 "lib/bsyntax.ml" 264 7852 7870 "lib/bsyntax.ml" 264 7852 7872
+)
+"lib/bsyntax.ml" 265 7876 7878 "lib/bsyntax.ml" 265 7876 7893
+type(
+  exp
+)
+"lib/bsyntax.ml" 267 7895 7899 "lib/bsyntax.ml" 267 7895 7905
+type(
+  Info.t -> Bident.Id.t -> sort -> exp -> exp -> exp
+)
+ident(
+  def mk_let "lib/bsyntax.ml" 271 7985 7985 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 267 7895 7906 "lib/bsyntax.ml" 267 7895 7907
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 267 7895 7908 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 267 7895 7908 "lib/bsyntax.ml" 267 7895 7909
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bsyntax.ml" 267 7895 7910 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 267 7895 7910 "lib/bsyntax.ml" 267 7895 7912
+type(
+  sort
+)
+ident(
+  def s1 "lib/bsyntax.ml" 267 7895 7913 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 267 7895 7913 "lib/bsyntax.ml" 267 7895 7915
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 267 7895 7916 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 267 7895 7916 "lib/bsyntax.ml" 267 7895 7918
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 268 7921 7923 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 268 7921 7927 "lib/bsyntax.ml" 268 7921 7928
+type(
+  binding
+)
+ident(
+  def b "lib/bsyntax.ml" 269 7969 7971 "lib/bsyntax.ml" 269 7969 7983
+)
+"lib/bsyntax.ml" 268 7921 7936 "lib/bsyntax.ml" 268 7921 7937
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 267 7895 7906 "lib/bsyntax.ml" 267 7895 7907
+)
+"lib/bsyntax.ml" 268 7921 7943 "lib/bsyntax.ml" 268 7921 7944
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 267 7895 7906 "lib/bsyntax.ml" 267 7895 7907
+)
+"lib/bsyntax.ml" 268 7921 7945 "lib/bsyntax.ml" 268 7921 7946
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 267 7895 7908 "lib/bsyntax.ml" 267 7895 7909
+)
+"lib/bsyntax.ml" 268 7921 7952 "lib/bsyntax.ml" 268 7921 7954
+type(
+  sort
+)
+ident(
+  int_ref s1 "lib/bsyntax.ml" 267 7895 7910 "lib/bsyntax.ml" 267 7895 7912
+)
+"lib/bsyntax.ml" 268 7921 7947 "lib/bsyntax.ml" 268 7921 7954
+type(
+  sort option
+)
+"lib/bsyntax.ml" 268 7921 7938 "lib/bsyntax.ml" 268 7921 7955
+type(
+  pat
+)
+"lib/bsyntax.ml" 268 7921 7956 "lib/bsyntax.ml" 268 7921 7960
+type(
+  sort option
+)
+"lib/bsyntax.ml" 268 7921 7961 "lib/bsyntax.ml" 268 7921 7963
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 267 7895 7913 "lib/bsyntax.ml" 267 7895 7915
+)
+"lib/bsyntax.ml" 268 7921 7931 "lib/bsyntax.ml" 268 7921 7964
+type(
+  binding
+)
+"lib/bsyntax.ml" 269 7969 7976 "lib/bsyntax.ml" 269 7969 7977
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 267 7895 7906 "lib/bsyntax.ml" 267 7895 7907
+)
+"lib/bsyntax.ml" 269 7969 7978 "lib/bsyntax.ml" 269 7969 7979
+type(
+  binding
+)
+ident(
+  int_ref b "lib/bsyntax.ml" 268 7921 7927 "lib/bsyntax.ml" 268 7921 7928
+)
+"lib/bsyntax.ml" 269 7969 7980 "lib/bsyntax.ml" 269 7969 7982
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 267 7895 7916 "lib/bsyntax.ml" 267 7895 7918
+)
+"lib/bsyntax.ml" 269 7969 7971 "lib/bsyntax.ml" 269 7969 7983
+type(
+  exp
+)
+"lib/bsyntax.ml" 268 7921 7923 "lib/bsyntax.ml" 269 7969 7983
+type(
+  exp
+)
+"lib/bsyntax.ml" 271 7985 7989 "lib/bsyntax.ml" 271 7985 7995
+type(
+  Info.t -> Bident.Id.t -> sort -> exp -> exp
+)
+ident(
+  def mk_fun "lib/bsyntax.ml" 275 8056 8056 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 271 7985 7996 "lib/bsyntax.ml" 271 7985 7997
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 271 7985 7998 "lib/bsyntax.ml" 273 8035 8054
+)
+"lib/bsyntax.ml" 271 7985 7998 "lib/bsyntax.ml" 271 7985 7999
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bsyntax.ml" 271 7985 8000 "lib/bsyntax.ml" 273 8035 8054
+)
+"lib/bsyntax.ml" 271 7985 8000 "lib/bsyntax.ml" 271 7985 8001
+type(
+  sort
+)
+ident(
+  def s "lib/bsyntax.ml" 271 7985 8002 "lib/bsyntax.ml" 273 8035 8054
+)
+"lib/bsyntax.ml" 271 7985 8002 "lib/bsyntax.ml" 271 7985 8004
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 272 8007 8009 "lib/bsyntax.ml" 273 8035 8054
+)
+"lib/bsyntax.ml" 272 8007 8013 "lib/bsyntax.ml" 272 8007 8014
+type(
+  param
+)
+ident(
+  def p "lib/bsyntax.ml" 273 8035 8037 "lib/bsyntax.ml" 273 8035 8054
+)
+"lib/bsyntax.ml" 272 8007 8023 "lib/bsyntax.ml" 272 8007 8024
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 271 7985 7996 "lib/bsyntax.ml" 271 7985 7997
+)
+"lib/bsyntax.ml" 272 8007 8025 "lib/bsyntax.ml" 272 8007 8026
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 271 7985 7998 "lib/bsyntax.ml" 271 7985 7999
+)
+"lib/bsyntax.ml" 272 8007 8027 "lib/bsyntax.ml" 272 8007 8028
+type(
+  sort
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 271 7985 8000 "lib/bsyntax.ml" 271 7985 8001
+)
+"lib/bsyntax.ml" 272 8007 8017 "lib/bsyntax.ml" 272 8007 8029
+type(
+  param
+)
+"lib/bsyntax.ml" 273 8035 8042 "lib/bsyntax.ml" 273 8035 8043
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 271 7985 7996 "lib/bsyntax.ml" 271 7985 7997
+)
+"lib/bsyntax.ml" 273 8035 8044 "lib/bsyntax.ml" 273 8035 8045
+type(
+  param
+)
+ident(
+  int_ref p "lib/bsyntax.ml" 272 8007 8013 "lib/bsyntax.ml" 272 8007 8014
+)
+"lib/bsyntax.ml" 273 8035 8046 "lib/bsyntax.ml" 273 8035 8050
+type(
+  sort option
+)
+"lib/bsyntax.ml" 273 8035 8051 "lib/bsyntax.ml" 273 8035 8053
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 271 7985 8002 "lib/bsyntax.ml" 271 7985 8004
+)
+"lib/bsyntax.ml" 273 8035 8037 "lib/bsyntax.ml" 273 8035 8054
+type(
+  exp
+)
+"lib/bsyntax.ml" 272 8007 8009 "lib/bsyntax.ml" 273 8035 8054
+type(
+  exp
+)
+"lib/bsyntax.ml" 275 8056 8060 "lib/bsyntax.ml" 275 8056 8065
+type(
+  Info.t -> exp -> exp -> exp -> sort -> exp
+)
+ident(
+  def mk_if "lib/bsyntax.ml" 279 8160 8160 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 275 8056 8066 "lib/bsyntax.ml" 275 8056 8067
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 275 8056 8068 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 275 8056 8068 "lib/bsyntax.ml" 275 8056 8070
+type(
+  exp
+)
+ident(
+  def e0 "lib/bsyntax.ml" 275 8056 8071 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 275 8056 8071 "lib/bsyntax.ml" 275 8056 8073
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 275 8056 8074 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 275 8056 8074 "lib/bsyntax.ml" 275 8056 8076
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 275 8056 8077 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 275 8056 8077 "lib/bsyntax.ml" 275 8056 8078
+type(
+  sort
+)
+ident(
+  def s "lib/bsyntax.ml" 276 8081 8083 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 276 8081 8087 "lib/bsyntax.ml" 276 8081 8089
+type(
+  (pat * exp) list
+)
+ident(
+  def bs "lib/bsyntax.ml" 277 8135 8137 "lib/bsyntax.ml" 277 8135 8158
+)
+"lib/bsyntax.ml" 276 8081 8099 "lib/bsyntax.ml" 276 8081 8100
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 275 8056 8066 "lib/bsyntax.ml" 275 8056 8067
+)
+"lib/bsyntax.ml" 276 8081 8101 "lib/bsyntax.ml" 276 8081 8105
+type(
+  bool
+)
+"lib/bsyntax.ml" 276 8081 8094 "lib/bsyntax.ml" 276 8081 8106
+type(
+  pat
+)
+"lib/bsyntax.ml" 276 8081 8107 "lib/bsyntax.ml" 276 8081 8109
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 275 8056 8071 "lib/bsyntax.ml" 275 8056 8073
+)
+"lib/bsyntax.ml" 276 8081 8093 "lib/bsyntax.ml" 276 8081 8110
+type(
+  pat * exp
+)
+"lib/bsyntax.ml" 276 8081 8117 "lib/bsyntax.ml" 276 8081 8118
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 275 8056 8066 "lib/bsyntax.ml" 275 8056 8067
+)
+"lib/bsyntax.ml" 276 8081 8119 "lib/bsyntax.ml" 276 8081 8124
+type(
+  bool
+)
+"lib/bsyntax.ml" 276 8081 8112 "lib/bsyntax.ml" 276 8081 8125
+type(
+  pat
+)
+"lib/bsyntax.ml" 276 8081 8126 "lib/bsyntax.ml" 276 8081 8128
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 275 8056 8074 "lib/bsyntax.ml" 275 8056 8076
+)
+"lib/bsyntax.ml" 276 8081 8111 "lib/bsyntax.ml" 276 8081 8129
+type(
+  pat * exp
+)
+"lib/bsyntax.ml" 276 8081 8092 "lib/bsyntax.ml" 276 8081 8130
+type(
+  (pat * exp) list
+)
+"lib/bsyntax.ml" 277 8135 8143 "lib/bsyntax.ml" 277 8135 8144
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 275 8056 8066 "lib/bsyntax.ml" 275 8056 8067
+)
+"lib/bsyntax.ml" 277 8135 8145 "lib/bsyntax.ml" 277 8135 8147
+type(
+  exp
+)
+ident(
+  int_ref e0 "lib/bsyntax.ml" 275 8056 8068 "lib/bsyntax.ml" 275 8056 8070
+)
+"lib/bsyntax.ml" 277 8135 8148 "lib/bsyntax.ml" 277 8135 8150
+type(
+  (pat * exp) list
+)
+ident(
+  int_ref bs "lib/bsyntax.ml" 276 8081 8087 "lib/bsyntax.ml" 276 8081 8089
+)
+"lib/bsyntax.ml" 277 8135 8156 "lib/bsyntax.ml" 277 8135 8157
+type(
+  sort
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 275 8056 8077 "lib/bsyntax.ml" 275 8056 8078
+)
+"lib/bsyntax.ml" 277 8135 8151 "lib/bsyntax.ml" 277 8135 8157
+type(
+  sort option
+)
+"lib/bsyntax.ml" 277 8135 8137 "lib/bsyntax.ml" 277 8135 8158
+type(
+  exp
+)
+"lib/bsyntax.ml" 276 8081 8083 "lib/bsyntax.ml" 277 8135 8158
+type(
+  exp
+)
+"lib/bsyntax.ml" 279 8160 8164 "lib/bsyntax.ml" 279 8160 8185
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_native_prelude_var "lib/bsyntax.ml" 282 8232 8232 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 279 8160 8186 "lib/bsyntax.ml" 279 8160 8187
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 279 8160 8188 "lib/bsyntax.ml" 280 8193 8230
+)
+"lib/bsyntax.ml" 279 8160 8188 "lib/bsyntax.ml" 279 8160 8189
+type(
+  string
+)
+ident(
+  def s "lib/bsyntax.ml" 280 8193 8195 "lib/bsyntax.ml" 280 8193 8230
+)
+"lib/bsyntax.ml" 280 8193 8200 "lib/bsyntax.ml" 280 8193 8201
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 279 8160 8186 "lib/bsyntax.ml" 279 8160 8187
+)
+"lib/bsyntax.ml" 280 8193 8202 "lib/bsyntax.ml" 280 8193 8225
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_native_prelude_t
+)
+"lib/bsyntax.ml" 280 8193 8226 "lib/bsyntax.ml" 280 8193 8227
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 279 8160 8186 "lib/bsyntax.ml" 279 8160 8187
+)
+"lib/bsyntax.ml" 280 8193 8228 "lib/bsyntax.ml" 280 8193 8229
+type(
+  string
+)
+ident(
+  int_ref s "lib/bsyntax.ml" 279 8160 8188 "lib/bsyntax.ml" 279 8160 8189
+)
+"lib/bsyntax.ml" 280 8193 8202 "lib/bsyntax.ml" 280 8193 8229
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 280 8193 8195 "lib/bsyntax.ml" 280 8193 8230
+type(
+  exp
+)
+"lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  def mk_qid_var "lib/bsyntax.ml" 285 8279 8279 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 282 8232 8247 "lib/bsyntax.ml" 282 8232 8248
+type(
+  Bident.Qid.t
+)
+ident(
+  def x "lib/bsyntax.ml" 283 8252 8254 "lib/bsyntax.ml" 283 8252 8277
+)
+"lib/bsyntax.ml" 283 8252 8259 "lib/bsyntax.ml" 283 8252 8272
+type(
+  Bident.Qid.t -> Info.t
+)
+ident(
+  ext_ref Bident.Qid.info_of_t
+)
+"lib/bsyntax.ml" 283 8252 8273 "lib/bsyntax.ml" 283 8252 8274
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 282 8232 8247 "lib/bsyntax.ml" 282 8232 8248
+)
+"lib/bsyntax.ml" 283 8252 8259 "lib/bsyntax.ml" 283 8252 8274
+call(
+  stack
+)
+type(
+  Info.t
+)
+"lib/bsyntax.ml" 283 8252 8275 "lib/bsyntax.ml" 283 8252 8276
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 282 8232 8247 "lib/bsyntax.ml" 282 8232 8248
+)
+"lib/bsyntax.ml" 283 8252 8254 "lib/bsyntax.ml" 283 8252 8277
+type(
+  exp
+)
+"lib/bsyntax.ml" 285 8279 8283 "lib/bsyntax.ml" 285 8279 8304
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_native_prelude_var "lib/bsyntax.ml" 288 8356 8356 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 285 8279 8305 "lib/bsyntax.ml" 285 8279 8306
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 285 8279 8307 "lib/bsyntax.ml" 286 8312 8354
+)
+"lib/bsyntax.ml" 285 8279 8307 "lib/bsyntax.ml" 285 8279 8308
+type(
+  string
+)
+ident(
+  def x "lib/bsyntax.ml" 286 8312 8314 "lib/bsyntax.ml" 286 8312 8354
+)
+"lib/bsyntax.ml" 286 8312 8314 "lib/bsyntax.ml" 286 8312 8324
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 286 8312 8326 "lib/bsyntax.ml" 286 8312 8349
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_native_prelude_t
+)
+"lib/bsyntax.ml" 286 8312 8350 "lib/bsyntax.ml" 286 8312 8351
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 285 8279 8305 "lib/bsyntax.ml" 285 8279 8306
+)
+"lib/bsyntax.ml" 286 8312 8352 "lib/bsyntax.ml" 286 8312 8353
+type(
+  string
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 285 8279 8307 "lib/bsyntax.ml" 285 8279 8308
+)
+"lib/bsyntax.ml" 286 8312 8325 "lib/bsyntax.ml" 286 8312 8354
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 286 8312 8314 "lib/bsyntax.ml" 286 8312 8354
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 288 8356 8360 "lib/bsyntax.ml" 288 8356 8374
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_prelude_var "lib/bsyntax.ml" 291 8418 8418 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 288 8356 8375 "lib/bsyntax.ml" 288 8356 8376
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 288 8356 8377 "lib/bsyntax.ml" 289 8381 8416
+)
+"lib/bsyntax.ml" 288 8356 8377 "lib/bsyntax.ml" 288 8356 8378
+type(
+  string
+)
+ident(
+  def x "lib/bsyntax.ml" 289 8381 8383 "lib/bsyntax.ml" 289 8381 8416
+)
+"lib/bsyntax.ml" 289 8381 8383 "lib/bsyntax.ml" 289 8381 8393
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 289 8381 8395 "lib/bsyntax.ml" 289 8381 8411
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_prelude_t
+)
+"lib/bsyntax.ml" 289 8381 8412 "lib/bsyntax.ml" 289 8381 8413
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 288 8356 8375 "lib/bsyntax.ml" 288 8356 8376
+)
+"lib/bsyntax.ml" 289 8381 8414 "lib/bsyntax.ml" 289 8381 8415
+type(
+  string
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 288 8356 8377 "lib/bsyntax.ml" 288 8356 8378
+)
+"lib/bsyntax.ml" 289 8381 8394 "lib/bsyntax.ml" 289 8381 8416
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 289 8381 8383 "lib/bsyntax.ml" 289 8381 8416
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 291 8418 8422 "lib/bsyntax.ml" 291 8418 8433
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_core_var "lib/bsyntax.ml" 294 8475 8475 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 291 8418 8434 "lib/bsyntax.ml" 291 8418 8435
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 291 8418 8436 "lib/bsyntax.ml" 292 8441 8473
+)
+"lib/bsyntax.ml" 291 8418 8436 "lib/bsyntax.ml" 291 8418 8437
+type(
+  string
+)
+ident(
+  def x "lib/bsyntax.ml" 292 8441 8443 "lib/bsyntax.ml" 292 8441 8473
+)
+"lib/bsyntax.ml" 292 8441 8443 "lib/bsyntax.ml" 292 8441 8453
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 292 8441 8455 "lib/bsyntax.ml" 292 8441 8468
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_core_t
+)
+"lib/bsyntax.ml" 292 8441 8469 "lib/bsyntax.ml" 292 8441 8470
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 291 8418 8434 "lib/bsyntax.ml" 291 8418 8435
+)
+"lib/bsyntax.ml" 292 8441 8471 "lib/bsyntax.ml" 292 8441 8472
+type(
+  string
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 291 8418 8436 "lib/bsyntax.ml" 291 8418 8437
+)
+"lib/bsyntax.ml" 292 8441 8454 "lib/bsyntax.ml" 292 8441 8473
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 292 8441 8443 "lib/bsyntax.ml" 292 8441 8473
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 294 8475 8479 "lib/bsyntax.ml" 294 8475 8490
+type(
+  Info.t -> string -> exp
+)
+ident(
+  def mk_list_var "lib/bsyntax.ml" 297 8531 8531 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 294 8475 8491 "lib/bsyntax.ml" 294 8475 8492
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 294 8475 8493 "lib/bsyntax.ml" 295 8497 8529
+)
+"lib/bsyntax.ml" 294 8475 8493 "lib/bsyntax.ml" 294 8475 8494
+type(
+  string
+)
+ident(
+  def x "lib/bsyntax.ml" 295 8497 8499 "lib/bsyntax.ml" 295 8497 8529
+)
+"lib/bsyntax.ml" 295 8497 8499 "lib/bsyntax.ml" 295 8497 8509
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 295 8497 8511 "lib/bsyntax.ml" 295 8497 8524
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_list_t
+)
+"lib/bsyntax.ml" 295 8497 8525 "lib/bsyntax.ml" 295 8497 8526
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 294 8475 8491 "lib/bsyntax.ml" 294 8475 8492
+)
+"lib/bsyntax.ml" 295 8497 8527 "lib/bsyntax.ml" 295 8497 8528
+type(
+  string
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 294 8475 8493 "lib/bsyntax.ml" 294 8475 8494
+)
+"lib/bsyntax.ml" 295 8497 8510 "lib/bsyntax.ml" 295 8497 8529
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 295 8497 8499 "lib/bsyntax.ml" 295 8497 8529
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 297 8531 8535 "lib/bsyntax.ml" 297 8531 8541
+type(
+  Bident.Id.t -> exp
+)
+ident(
+  def mk_var "lib/bsyntax.ml" 300 8577 8577 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 297 8531 8542 "lib/bsyntax.ml" 297 8531 8543
+type(
+  Bident.Id.t
+)
+ident(
+  def x "lib/bsyntax.ml" 298 8547 8549 "lib/bsyntax.ml" 298 8547 8575
+)
+"lib/bsyntax.ml" 298 8547 8549 "lib/bsyntax.ml" 298 8547 8559
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 298 8547 8561 "lib/bsyntax.ml" 298 8547 8572
+type(
+  Bident.Id.t -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.t_of_id
+)
+"lib/bsyntax.ml" 298 8547 8573 "lib/bsyntax.ml" 298 8547 8574
+type(
+  Bident.Id.t
+)
+ident(
+  int_ref x "lib/bsyntax.ml" 297 8531 8542 "lib/bsyntax.ml" 297 8531 8543
+)
+"lib/bsyntax.ml" 298 8547 8560 "lib/bsyntax.ml" 298 8547 8575
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 298 8547 8549 "lib/bsyntax.ml" 298 8547 8575
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  def mk_over "lib/bsyntax.ml" 303 8618 8618 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 300 8577 8589 "lib/bsyntax.ml" 300 8577 8590
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 300 8577 8591 "lib/bsyntax.ml" 301 8600 8616
+)
+"lib/bsyntax.ml" 300 8577 8591 "lib/bsyntax.ml" 300 8577 8593
+type(
+  op
+)
+ident(
+  def op "lib/bsyntax.ml" 300 8577 8594 "lib/bsyntax.ml" 301 8600 8616
+)
+"lib/bsyntax.ml" 300 8577 8594 "lib/bsyntax.ml" 300 8577 8596
+type(
+  exp list
+)
+ident(
+  def el "lib/bsyntax.ml" 301 8600 8602 "lib/bsyntax.ml" 301 8600 8616
+)
+"lib/bsyntax.ml" 301 8600 8608 "lib/bsyntax.ml" 301 8600 8609
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 300 8577 8589 "lib/bsyntax.ml" 300 8577 8590
+)
+"lib/bsyntax.ml" 301 8600 8610 "lib/bsyntax.ml" 301 8600 8612
+type(
+  op
+)
+ident(
+  int_ref op "lib/bsyntax.ml" 300 8577 8591 "lib/bsyntax.ml" 300 8577 8593
+)
+"lib/bsyntax.ml" 301 8600 8613 "lib/bsyntax.ml" 301 8600 8615
+type(
+  exp list
+)
+ident(
+  int_ref el "lib/bsyntax.ml" 300 8577 8594 "lib/bsyntax.ml" 300 8577 8596
+)
+"lib/bsyntax.ml" 301 8600 8602 "lib/bsyntax.ml" 301 8600 8616
+type(
+  exp
+)
+"lib/bsyntax.ml" 303 8618 8622 "lib/bsyntax.ml" 303 8618 8628
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_app "lib/bsyntax.ml" 306 8657 8657 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 303 8618 8629 "lib/bsyntax.ml" 303 8618 8630
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 303 8618 8631 "lib/bsyntax.ml" 304 8640 8655
+)
+"lib/bsyntax.ml" 303 8618 8631 "lib/bsyntax.ml" 303 8618 8633
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 303 8618 8634 "lib/bsyntax.ml" 304 8640 8655
+)
+"lib/bsyntax.ml" 303 8618 8634 "lib/bsyntax.ml" 303 8618 8636
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 304 8640 8642 "lib/bsyntax.ml" 304 8640 8655
+)
+"lib/bsyntax.ml" 304 8640 8647 "lib/bsyntax.ml" 304 8640 8648
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 303 8618 8629 "lib/bsyntax.ml" 303 8618 8630
+)
+"lib/bsyntax.ml" 304 8640 8649 "lib/bsyntax.ml" 304 8640 8651
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 303 8618 8631 "lib/bsyntax.ml" 303 8618 8633
+)
+"lib/bsyntax.ml" 304 8640 8652 "lib/bsyntax.ml" 304 8640 8654
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 303 8618 8634 "lib/bsyntax.ml" 303 8618 8636
+)
+"lib/bsyntax.ml" 304 8640 8642 "lib/bsyntax.ml" 304 8640 8655
+type(
+  exp
+)
+"lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  def mk_bin_op "lib/bsyntax.ml" 309 8715 8715 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 306 8657 8671 "lib/bsyntax.ml" 306 8657 8672
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 306 8657 8673 "lib/bsyntax.ml" 307 8684 8713
+)
+"lib/bsyntax.ml" 306 8657 8673 "lib/bsyntax.ml" 306 8657 8674
+type(
+  exp
+)
+ident(
+  def o "lib/bsyntax.ml" 306 8657 8675 "lib/bsyntax.ml" 307 8684 8713
+)
+"lib/bsyntax.ml" 306 8657 8675 "lib/bsyntax.ml" 306 8657 8677
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 306 8657 8678 "lib/bsyntax.ml" 307 8684 8713
+)
+"lib/bsyntax.ml" 306 8657 8678 "lib/bsyntax.ml" 306 8657 8680
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 307 8684 8686 "lib/bsyntax.ml" 307 8684 8713
+)
+"lib/bsyntax.ml" 307 8684 8686 "lib/bsyntax.ml" 307 8684 8692
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 303 8618 8622 "lib/bsyntax.ml" 303 8618 8628
+)
+"lib/bsyntax.ml" 307 8684 8693 "lib/bsyntax.ml" 307 8684 8694
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 306 8657 8671 "lib/bsyntax.ml" 306 8657 8672
+)
+"lib/bsyntax.ml" 307 8684 8696 "lib/bsyntax.ml" 307 8684 8702
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 303 8618 8622 "lib/bsyntax.ml" 303 8618 8628
+)
+"lib/bsyntax.ml" 307 8684 8703 "lib/bsyntax.ml" 307 8684 8704
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 306 8657 8671 "lib/bsyntax.ml" 306 8657 8672
+)
+"lib/bsyntax.ml" 307 8684 8705 "lib/bsyntax.ml" 307 8684 8706
+type(
+  exp
+)
+ident(
+  int_ref o "lib/bsyntax.ml" 306 8657 8673 "lib/bsyntax.ml" 306 8657 8674
+)
+"lib/bsyntax.ml" 307 8684 8707 "lib/bsyntax.ml" 307 8684 8709
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 306 8657 8675 "lib/bsyntax.ml" 306 8657 8677
+)
+"lib/bsyntax.ml" 307 8684 8695 "lib/bsyntax.ml" 307 8684 8710
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 307 8684 8711 "lib/bsyntax.ml" 307 8684 8713
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 306 8657 8678 "lib/bsyntax.ml" 306 8657 8680
+)
+"lib/bsyntax.ml" 307 8684 8686 "lib/bsyntax.ml" 307 8684 8713
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 309 8715 8719 "lib/bsyntax.ml" 309 8715 8729
+type(
+  Info.t -> exp -> exp -> exp -> exp -> exp
+)
+ident(
+  def mk_tern_op "lib/bsyntax.ml" 312 8783 8783 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 309 8715 8730 "lib/bsyntax.ml" 309 8715 8731
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 309 8715 8732 "lib/bsyntax.ml" 310 8746 8781
+)
+"lib/bsyntax.ml" 309 8715 8732 "lib/bsyntax.ml" 309 8715 8733
+type(
+  exp
+)
+ident(
+  def o "lib/bsyntax.ml" 309 8715 8734 "lib/bsyntax.ml" 310 8746 8781
+)
+"lib/bsyntax.ml" 309 8715 8734 "lib/bsyntax.ml" 309 8715 8736
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 309 8715 8737 "lib/bsyntax.ml" 310 8746 8781
+)
+"lib/bsyntax.ml" 309 8715 8737 "lib/bsyntax.ml" 309 8715 8739
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 309 8715 8740 "lib/bsyntax.ml" 310 8746 8781
+)
+"lib/bsyntax.ml" 309 8715 8740 "lib/bsyntax.ml" 309 8715 8742
+type(
+  exp
+)
+ident(
+  def e3 "lib/bsyntax.ml" 310 8746 8748 "lib/bsyntax.ml" 310 8746 8781
+)
+"lib/bsyntax.ml" 310 8746 8748 "lib/bsyntax.ml" 310 8746 8754
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 303 8618 8622 "lib/bsyntax.ml" 303 8618 8628
+)
+"lib/bsyntax.ml" 310 8746 8755 "lib/bsyntax.ml" 310 8746 8756
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 309 8715 8730 "lib/bsyntax.ml" 309 8715 8731
+)
+"lib/bsyntax.ml" 310 8746 8758 "lib/bsyntax.ml" 310 8746 8767
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_bin_op "lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+)
+"lib/bsyntax.ml" 310 8746 8768 "lib/bsyntax.ml" 310 8746 8769
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 309 8715 8730 "lib/bsyntax.ml" 309 8715 8731
+)
+"lib/bsyntax.ml" 310 8746 8770 "lib/bsyntax.ml" 310 8746 8771
+type(
+  exp
+)
+ident(
+  int_ref o "lib/bsyntax.ml" 309 8715 8732 "lib/bsyntax.ml" 309 8715 8733
+)
+"lib/bsyntax.ml" 310 8746 8772 "lib/bsyntax.ml" 310 8746 8774
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 309 8715 8734 "lib/bsyntax.ml" 309 8715 8736
+)
+"lib/bsyntax.ml" 310 8746 8775 "lib/bsyntax.ml" 310 8746 8777
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 309 8715 8737 "lib/bsyntax.ml" 309 8715 8739
+)
+"lib/bsyntax.ml" 310 8746 8757 "lib/bsyntax.ml" 310 8746 8778
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 310 8746 8779 "lib/bsyntax.ml" 310 8746 8781
+type(
+  exp
+)
+ident(
+  int_ref e3 "lib/bsyntax.ml" 309 8715 8740 "lib/bsyntax.ml" 309 8715 8742
+)
+"lib/bsyntax.ml" 310 8746 8748 "lib/bsyntax.ml" 310 8746 8781
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 312 8783 8787 "lib/bsyntax.ml" 312 8783 8793
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_cat "lib/bsyntax.ml" 315 8831 8831 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 312 8783 8794 "lib/bsyntax.ml" 312 8783 8795
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 312 8783 8796 "lib/bsyntax.ml" 313 8805 8829
+)
+"lib/bsyntax.ml" 312 8783 8796 "lib/bsyntax.ml" 312 8783 8798
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 312 8783 8799 "lib/bsyntax.ml" 313 8805 8829
+)
+"lib/bsyntax.ml" 312 8783 8799 "lib/bsyntax.ml" 312 8783 8801
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 313 8805 8807 "lib/bsyntax.ml" 313 8805 8829
+)
+"lib/bsyntax.ml" 313 8805 8807 "lib/bsyntax.ml" 313 8805 8814
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  int_ref mk_over "lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+)
+"lib/bsyntax.ml" 313 8805 8815 "lib/bsyntax.ml" 313 8805 8816
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 312 8783 8794 "lib/bsyntax.ml" 312 8783 8795
+)
+"lib/bsyntax.ml" 313 8805 8817 "lib/bsyntax.ml" 313 8805 8821
+type(
+  op
+)
+"lib/bsyntax.ml" 313 8805 8823 "lib/bsyntax.ml" 313 8805 8825
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 312 8783 8796 "lib/bsyntax.ml" 312 8783 8798
+)
+"lib/bsyntax.ml" 313 8805 8826 "lib/bsyntax.ml" 313 8805 8828
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 312 8783 8799 "lib/bsyntax.ml" 312 8783 8801
+)
+"lib/bsyntax.ml" 313 8805 8822 "lib/bsyntax.ml" 313 8805 8829
+type(
+  exp list
+)
+"lib/bsyntax.ml" 313 8805 8807 "lib/bsyntax.ml" 313 8805 8829
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 315 8831 8835 "lib/bsyntax.ml" 315 8831 8842
+type(
+  Info.t -> int -> int -> exp -> exp
+)
+ident(
+  def mk_iter "lib/bsyntax.ml" 318 8894 8894 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 315 8831 8843 "lib/bsyntax.ml" 315 8831 8844
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 315 8831 8845 "lib/bsyntax.ml" 316 8859 8892
+)
+"lib/bsyntax.ml" 315 8831 8845 "lib/bsyntax.ml" 315 8831 8848
+type(
+  int
+)
+ident(
+  def min "lib/bsyntax.ml" 315 8831 8849 "lib/bsyntax.ml" 316 8859 8892
+)
+"lib/bsyntax.ml" 315 8831 8849 "lib/bsyntax.ml" 315 8831 8852
+type(
+  int
+)
+ident(
+  def max "lib/bsyntax.ml" 315 8831 8853 "lib/bsyntax.ml" 316 8859 8892
+)
+"lib/bsyntax.ml" 315 8831 8853 "lib/bsyntax.ml" 315 8831 8855
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 316 8859 8861 "lib/bsyntax.ml" 316 8859 8892
+)
+"lib/bsyntax.ml" 316 8859 8861 "lib/bsyntax.ml" 316 8859 8868
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  int_ref mk_over "lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+)
+"lib/bsyntax.ml" 316 8859 8869 "lib/bsyntax.ml" 316 8859 8870
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 315 8831 8843 "lib/bsyntax.ml" 315 8831 8844
+)
+"lib/bsyntax.ml" 316 8859 8878 "lib/bsyntax.ml" 316 8859 8881
+type(
+  int
+)
+ident(
+  int_ref min "lib/bsyntax.ml" 315 8831 8845 "lib/bsyntax.ml" 315 8831 8848
+)
+"lib/bsyntax.ml" 316 8859 8882 "lib/bsyntax.ml" 316 8859 8885
+type(
+  int
+)
+ident(
+  int_ref max "lib/bsyntax.ml" 315 8831 8849 "lib/bsyntax.ml" 315 8831 8852
+)
+"lib/bsyntax.ml" 316 8859 8871 "lib/bsyntax.ml" 316 8859 8887
+type(
+  op
+)
+"lib/bsyntax.ml" 316 8859 8889 "lib/bsyntax.ml" 316 8859 8891
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 315 8831 8853 "lib/bsyntax.ml" 315 8831 8855
+)
+"lib/bsyntax.ml" 316 8859 8888 "lib/bsyntax.ml" 316 8859 8892
+type(
+  exp list
+)
+"lib/bsyntax.ml" 316 8859 8861 "lib/bsyntax.ml" 316 8859 8892
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 318 8894 8898 "lib/bsyntax.ml" 318 8894 8906
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_acond "lib/bsyntax.ml" 321 8944 8944 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 318 8894 8907 "lib/bsyntax.ml" 318 8894 8908
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 318 8894 8909 "lib/bsyntax.ml" 319 8918 8942
+)
+"lib/bsyntax.ml" 318 8894 8909 "lib/bsyntax.ml" 318 8894 8911
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 318 8894 8912 "lib/bsyntax.ml" 319 8918 8942
+)
+"lib/bsyntax.ml" 318 8894 8912 "lib/bsyntax.ml" 318 8894 8914
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 319 8918 8920 "lib/bsyntax.ml" 319 8918 8942
+)
+"lib/bsyntax.ml" 319 8918 8920 "lib/bsyntax.ml" 319 8918 8927
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  int_ref mk_over "lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+)
+"lib/bsyntax.ml" 319 8918 8928 "lib/bsyntax.ml" 319 8918 8929
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 318 8894 8907 "lib/bsyntax.ml" 318 8894 8908
+)
+"lib/bsyntax.ml" 319 8918 8930 "lib/bsyntax.ml" 319 8918 8934
+type(
+  op
+)
+"lib/bsyntax.ml" 319 8918 8936 "lib/bsyntax.ml" 319 8918 8938
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 318 8894 8909 "lib/bsyntax.ml" 318 8894 8911
+)
+"lib/bsyntax.ml" 319 8918 8939 "lib/bsyntax.ml" 319 8918 8941
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 318 8894 8912 "lib/bsyntax.ml" 318 8894 8914
+)
+"lib/bsyntax.ml" 319 8918 8935 "lib/bsyntax.ml" 319 8918 8942
+type(
+  exp list
+)
+"lib/bsyntax.ml" 319 8918 8920 "lib/bsyntax.ml" 319 8918 8942
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 321 8944 8948 "lib/bsyntax.ml" 321 8944 8955
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_cond "lib/bsyntax.ml" 324 8993 8993 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 321 8944 8956 "lib/bsyntax.ml" 321 8944 8957
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 321 8944 8958 "lib/bsyntax.ml" 322 8967 8991
+)
+"lib/bsyntax.ml" 321 8944 8958 "lib/bsyntax.ml" 321 8944 8960
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 321 8944 8961 "lib/bsyntax.ml" 322 8967 8991
+)
+"lib/bsyntax.ml" 321 8944 8961 "lib/bsyntax.ml" 321 8944 8963
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 322 8967 8969 "lib/bsyntax.ml" 322 8967 8991
+)
+"lib/bsyntax.ml" 322 8967 8969 "lib/bsyntax.ml" 322 8967 8976
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  int_ref mk_over "lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+)
+"lib/bsyntax.ml" 322 8967 8977 "lib/bsyntax.ml" 322 8967 8978
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 321 8944 8956 "lib/bsyntax.ml" 321 8944 8957
+)
+"lib/bsyntax.ml" 322 8967 8979 "lib/bsyntax.ml" 322 8967 8983
+type(
+  op
+)
+"lib/bsyntax.ml" 322 8967 8985 "lib/bsyntax.ml" 322 8967 8987
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 321 8944 8958 "lib/bsyntax.ml" 321 8944 8960
+)
+"lib/bsyntax.ml" 322 8967 8988 "lib/bsyntax.ml" 322 8967 8990
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 321 8944 8961 "lib/bsyntax.ml" 321 8944 8963
+)
+"lib/bsyntax.ml" 322 8967 8984 "lib/bsyntax.ml" 322 8967 8991
+type(
+  exp list
+)
+"lib/bsyntax.ml" 322 8967 8969 "lib/bsyntax.ml" 322 8967 8991
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 324 8993 8997 "lib/bsyntax.ml" 324 8993 9004
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_swap "lib/bsyntax.ml" 327 9044 9044 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 324 8993 9005 "lib/bsyntax.ml" 324 8993 9006
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 324 8993 9007 "lib/bsyntax.ml" 325 9016 9042
+)
+"lib/bsyntax.ml" 324 8993 9007 "lib/bsyntax.ml" 324 8993 9009
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 324 8993 9010 "lib/bsyntax.ml" 325 9016 9042
+)
+"lib/bsyntax.ml" 324 8993 9010 "lib/bsyntax.ml" 324 8993 9012
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 325 9016 9018 "lib/bsyntax.ml" 325 9016 9042
+)
+"lib/bsyntax.ml" 325 9016 9018 "lib/bsyntax.ml" 325 9016 9025
+type(
+  Info.t -> op -> exp list -> exp
+)
+ident(
+  int_ref mk_over "lib/bsyntax.ml" 300 8577 8581 "lib/bsyntax.ml" 300 8577 8588
+)
+"lib/bsyntax.ml" 325 9016 9026 "lib/bsyntax.ml" 325 9016 9027
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 324 8993 9005 "lib/bsyntax.ml" 324 8993 9006
+)
+"lib/bsyntax.ml" 325 9016 9028 "lib/bsyntax.ml" 325 9016 9034
+type(
+  op
+)
+"lib/bsyntax.ml" 325 9016 9036 "lib/bsyntax.ml" 325 9016 9038
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 324 8993 9007 "lib/bsyntax.ml" 324 8993 9009
+)
+"lib/bsyntax.ml" 325 9016 9039 "lib/bsyntax.ml" 325 9016 9041
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 324 8993 9010 "lib/bsyntax.ml" 324 8993 9012
+)
+"lib/bsyntax.ml" 325 9016 9035 "lib/bsyntax.ml" 325 9016 9042
+type(
+  exp list
+)
+"lib/bsyntax.ml" 325 9016 9018 "lib/bsyntax.ml" 325 9016 9042
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 327 9044 9048 "lib/bsyntax.ml" 327 9044 9055
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_diff "lib/bsyntax.ml" 330 9111 9111 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 327 9044 9056 "lib/bsyntax.ml" 327 9044 9057
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 327 9044 9058 "lib/bsyntax.ml" 328 9067 9109
+)
+"lib/bsyntax.ml" 327 9044 9058 "lib/bsyntax.ml" 327 9044 9060
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 327 9044 9061 "lib/bsyntax.ml" 328 9067 9109
+)
+"lib/bsyntax.ml" 327 9044 9061 "lib/bsyntax.ml" 327 9044 9063
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 328 9067 9069 "lib/bsyntax.ml" 328 9067 9109
+)
+"lib/bsyntax.ml" 328 9067 9069 "lib/bsyntax.ml" 328 9067 9078
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_bin_op "lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+)
+"lib/bsyntax.ml" 328 9067 9079 "lib/bsyntax.ml" 328 9067 9080
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 327 9044 9056 "lib/bsyntax.ml" 327 9044 9057
+)
+"lib/bsyntax.ml" 328 9067 9082 "lib/bsyntax.ml" 328 9067 9093
+type(
+  Info.t -> string -> exp
+)
+ident(
+  int_ref mk_core_var "lib/bsyntax.ml" 291 8418 8422 "lib/bsyntax.ml" 291 8418 8433
+)
+"lib/bsyntax.ml" 328 9067 9094 "lib/bsyntax.ml" 328 9067 9095
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 327 9044 9056 "lib/bsyntax.ml" 327 9044 9057
+)
+"lib/bsyntax.ml" 328 9067 9096 "lib/bsyntax.ml" 328 9067 9102
+type(
+  string
+)
+"lib/bsyntax.ml" 328 9067 9081 "lib/bsyntax.ml" 328 9067 9103
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 328 9067 9104 "lib/bsyntax.ml" 328 9067 9106
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 327 9044 9058 "lib/bsyntax.ml" 327 9044 9060
+)
+"lib/bsyntax.ml" 328 9067 9107 "lib/bsyntax.ml" 328 9067 9109
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 327 9044 9061 "lib/bsyntax.ml" 327 9044 9063
+)
+"lib/bsyntax.ml" 328 9067 9069 "lib/bsyntax.ml" 328 9067 9109
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 330 9111 9115 "lib/bsyntax.ml" 330 9111 9123
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_inter "lib/bsyntax.ml" 333 9180 9180 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 330 9111 9124 "lib/bsyntax.ml" 330 9111 9125
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 330 9111 9126 "lib/bsyntax.ml" 331 9135 9178
+)
+"lib/bsyntax.ml" 330 9111 9126 "lib/bsyntax.ml" 330 9111 9128
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 330 9111 9129 "lib/bsyntax.ml" 331 9135 9178
+)
+"lib/bsyntax.ml" 330 9111 9129 "lib/bsyntax.ml" 330 9111 9131
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 331 9135 9137 "lib/bsyntax.ml" 331 9135 9178
+)
+"lib/bsyntax.ml" 331 9135 9137 "lib/bsyntax.ml" 331 9135 9146
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_bin_op "lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+)
+"lib/bsyntax.ml" 331 9135 9147 "lib/bsyntax.ml" 331 9135 9148
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 330 9111 9124 "lib/bsyntax.ml" 330 9111 9125
+)
+"lib/bsyntax.ml" 331 9135 9150 "lib/bsyntax.ml" 331 9135 9161
+type(
+  Info.t -> string -> exp
+)
+ident(
+  int_ref mk_core_var "lib/bsyntax.ml" 291 8418 8422 "lib/bsyntax.ml" 291 8418 8433
+)
+"lib/bsyntax.ml" 331 9135 9162 "lib/bsyntax.ml" 331 9135 9163
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 330 9111 9124 "lib/bsyntax.ml" 330 9111 9125
+)
+"lib/bsyntax.ml" 331 9135 9164 "lib/bsyntax.ml" 331 9135 9171
+type(
+  string
+)
+"lib/bsyntax.ml" 331 9135 9149 "lib/bsyntax.ml" 331 9135 9172
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 331 9135 9173 "lib/bsyntax.ml" 331 9135 9175
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 330 9111 9126 "lib/bsyntax.ml" 330 9111 9128
+)
+"lib/bsyntax.ml" 331 9135 9176 "lib/bsyntax.ml" 331 9135 9178
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 330 9111 9129 "lib/bsyntax.ml" 330 9111 9131
+)
+"lib/bsyntax.ml" 331 9135 9137 "lib/bsyntax.ml" 331 9135 9178
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 333 9180 9184 "lib/bsyntax.ml" 333 9180 9194
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_compose "lib/bsyntax.ml" 336 9253 9253 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 333 9180 9195 "lib/bsyntax.ml" 333 9180 9196
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 333 9180 9197 "lib/bsyntax.ml" 334 9206 9251
+)
+"lib/bsyntax.ml" 333 9180 9197 "lib/bsyntax.ml" 333 9180 9199
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 333 9180 9200 "lib/bsyntax.ml" 334 9206 9251
+)
+"lib/bsyntax.ml" 333 9180 9200 "lib/bsyntax.ml" 333 9180 9202
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 334 9206 9208 "lib/bsyntax.ml" 334 9206 9251
+)
+"lib/bsyntax.ml" 334 9206 9208 "lib/bsyntax.ml" 334 9206 9217
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_bin_op "lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+)
+"lib/bsyntax.ml" 334 9206 9218 "lib/bsyntax.ml" 334 9206 9219
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 333 9180 9195 "lib/bsyntax.ml" 333 9180 9196
+)
+"lib/bsyntax.ml" 334 9206 9221 "lib/bsyntax.ml" 334 9206 9232
+type(
+  Info.t -> string -> exp
+)
+ident(
+  int_ref mk_core_var "lib/bsyntax.ml" 291 8418 8422 "lib/bsyntax.ml" 291 8418 8433
+)
+"lib/bsyntax.ml" 334 9206 9233 "lib/bsyntax.ml" 334 9206 9234
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 333 9180 9195 "lib/bsyntax.ml" 333 9180 9196
+)
+"lib/bsyntax.ml" 334 9206 9235 "lib/bsyntax.ml" 334 9206 9244
+type(
+  string
+)
+"lib/bsyntax.ml" 334 9206 9220 "lib/bsyntax.ml" 334 9206 9245
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 334 9206 9246 "lib/bsyntax.ml" 334 9206 9248
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 333 9180 9197 "lib/bsyntax.ml" 333 9180 9199
+)
+"lib/bsyntax.ml" 334 9206 9249 "lib/bsyntax.ml" 334 9206 9251
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 333 9180 9200 "lib/bsyntax.ml" 333 9180 9202
+)
+"lib/bsyntax.ml" 334 9206 9208 "lib/bsyntax.ml" 334 9206 9251
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 336 9253 9257 "lib/bsyntax.ml" 336 9253 9263
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  def mk_set "lib/bsyntax.ml" 339 9333 9333 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 336 9253 9264 "lib/bsyntax.ml" 336 9253 9265
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 336 9253 9266 "lib/bsyntax.ml" 337 9275 9331
+)
+"lib/bsyntax.ml" 336 9253 9266 "lib/bsyntax.ml" 336 9253 9268
+type(
+  exp
+)
+ident(
+  def e1 "lib/bsyntax.ml" 336 9253 9269 "lib/bsyntax.ml" 337 9275 9331
+)
+"lib/bsyntax.ml" 336 9253 9269 "lib/bsyntax.ml" 336 9253 9271
+type(
+  exp
+)
+ident(
+  def e2 "lib/bsyntax.ml" 337 9275 9277 "lib/bsyntax.ml" 337 9275 9331
+)
+"lib/bsyntax.ml" 337 9275 9277 "lib/bsyntax.ml" 337 9275 9286
+type(
+  Info.t -> exp -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_bin_op "lib/bsyntax.ml" 306 8657 8661 "lib/bsyntax.ml" 306 8657 8670
+)
+"lib/bsyntax.ml" 337 9275 9287 "lib/bsyntax.ml" 337 9275 9288
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 336 9253 9264 "lib/bsyntax.ml" 336 9253 9265
+)
+"lib/bsyntax.ml" 337 9275 9290 "lib/bsyntax.ml" 337 9275 9300
+type(
+  Bident.Qid.t -> exp
+)
+ident(
+  int_ref mk_qid_var "lib/bsyntax.ml" 282 8232 8236 "lib/bsyntax.ml" 282 8232 8246
+)
+"lib/bsyntax.ml" 337 9275 9302 "lib/bsyntax.ml" 337 9275 9315
+type(
+  Info.t -> string -> Bident.Qid.t
+)
+ident(
+  ext_ref Bident.Qid.mk_core_t
+)
+"lib/bsyntax.ml" 337 9275 9316 "lib/bsyntax.ml" 337 9275 9317
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 336 9253 9264 "lib/bsyntax.ml" 336 9253 9265
+)
+"lib/bsyntax.ml" 337 9275 9318 "lib/bsyntax.ml" 337 9275 9323
+type(
+  string
+)
+"lib/bsyntax.ml" 337 9275 9301 "lib/bsyntax.ml" 337 9275 9324
+call(
+  stack
+)
+type(
+  Bident.Qid.t
+)
+"lib/bsyntax.ml" 337 9275 9289 "lib/bsyntax.ml" 337 9275 9325
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 337 9275 9326 "lib/bsyntax.ml" 337 9275 9328
+type(
+  exp
+)
+ident(
+  int_ref e1 "lib/bsyntax.ml" 336 9253 9266 "lib/bsyntax.ml" 336 9253 9268
+)
+"lib/bsyntax.ml" 337 9275 9329 "lib/bsyntax.ml" 337 9275 9331
+type(
+  exp
+)
+ident(
+  int_ref e2 "lib/bsyntax.ml" 336 9253 9269 "lib/bsyntax.ml" 336 9253 9271
+)
+"lib/bsyntax.ml" 337 9275 9277 "lib/bsyntax.ml" 337 9275 9331
+call(
+  tail
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 339 9333 9337 "lib/bsyntax.ml" 339 9333 9342
+type(
+  Info.t -> exp -> exp
+)
+ident(
+  def mk_rx "lib/bsyntax.ml" 340 9350 9384 "lib/bsyntax.ml" 1 0 -1
+)
+"lib/bsyntax.ml" 339 9333 9343 "lib/bsyntax.ml" 339 9333 9344
+type(
+  Info.t
+)
+ident(
+  def i "lib/bsyntax.ml" 339 9333 9345 "lib/bsyntax.ml" 340 9350 9384
+)
+"lib/bsyntax.ml" 339 9333 9345 "lib/bsyntax.ml" 339 9333 9346
+type(
+  exp
+)
+ident(
+  def e "lib/bsyntax.ml" 340 9350 9352 "lib/bsyntax.ml" 340 9350 9384
+)
+"lib/bsyntax.ml" 340 9350 9352 "lib/bsyntax.ml" 340 9350 9358
+type(
+  Info.t -> exp -> exp -> exp
+)
+ident(
+  int_ref mk_app "lib/bsyntax.ml" 303 8618 8622 "lib/bsyntax.ml" 303 8618 8628
+)
+"lib/bsyntax.ml" 340 9350 9359 "lib/bsyntax.ml" 340 9350 9360
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 339 9333 9343 "lib/bsyntax.ml" 339 9333 9344
+)
+"lib/bsyntax.ml" 340 9350 9362 "lib/bsyntax.ml" 340 9350 9373
+type(
+  Info.t -> string -> exp
+)
+ident(
+  int_ref mk_core_var "lib/bsyntax.ml" 291 8418 8422 "lib/bsyntax.ml" 291 8418 8433
+)
+"lib/bsyntax.ml" 340 9350 9374 "lib/bsyntax.ml" 340 9350 9375
+type(
+  Info.t
+)
+ident(
+  int_ref i "lib/bsyntax.ml" 339 9333 9343 "lib/bsyntax.ml" 339 9333 9344
+)
+"lib/bsyntax.ml" 340 9350 9376 "lib/bsyntax.ml" 340 9350 9381
+type(
+  string
+)
+"lib/bsyntax.ml" 340 9350 9361 "lib/bsyntax.ml" 340 9350 9382
+call(
+  stack
+)
+type(
+  exp
+)
+"lib/bsyntax.ml" 340 9350 9383 "lib/bsyntax.ml" 340 9350 9384
+type(
+  exp
+)
+ident(
+  int_ref e "lib/bsyntax.ml" 339 9333 9345 "lib/bsyntax.ml" 339 9333 9346
+)
+"lib/bsyntax.ml" 340 9350 9352 "lib/bsyntax.ml" 340 9350 9384
+call(
+  tail
+)
+type(
+  exp
+)

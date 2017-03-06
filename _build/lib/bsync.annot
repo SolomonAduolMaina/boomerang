@@ -1,0 +1,6741 @@
+"lib/bsync.ml" 23 1597 1601 "lib/bsync.ml" 23 1597 1604
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  def msg "lib/bsync.ml" 24 1619 1619 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 23 1597 1607 "lib/bsync.ml" 23 1597 1618
+type(
+  ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  ext_ref Util.format
+)
+"lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  def sprintf "lib/bsync.ml" 26 1650 1650 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 24 1619 1633 "lib/bsync.ml" 24 1619 1647
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bsync.ml" 29 1718 1726 "lib/bsync.ml" 29 1718 1731
+type(
+  'a * 'b -> 'a * 'c -> bool
+)
+ident(
+  def equal "lib/bsync.ml" 29 1718 1755 "lib/bsync.ml" 30 1756 1761
+)
+"lib/bsync.ml" 29 1718 1733 "lib/bsync.ml" 29 1718 1735
+type(
+  'a
+)
+ident(
+  def k1 "lib/bsync.ml" 29 1718 1739 "lib/bsync.ml" 29 1718 1755
+)
+"lib/bsync.ml" 29 1718 1736 "lib/bsync.ml" 29 1718 1737
+type(
+  'b
+)
+"lib/bsync.ml" 29 1718 1732 "lib/bsync.ml" 29 1718 1738
+type(
+  'a * 'b
+)
+"lib/bsync.ml" 29 1718 1740 "lib/bsync.ml" 29 1718 1742
+type(
+  'a
+)
+ident(
+  def k2 "lib/bsync.ml" 29 1718 1748 "lib/bsync.ml" 29 1718 1755
+)
+"lib/bsync.ml" 29 1718 1743 "lib/bsync.ml" 29 1718 1744
+type(
+  'c
+)
+"lib/bsync.ml" 29 1718 1739 "lib/bsync.ml" 29 1718 1745
+type(
+  'a * 'c
+)
+"lib/bsync.ml" 29 1718 1748 "lib/bsync.ml" 29 1718 1750
+type(
+  'a
+)
+ident(
+  int_ref k1 "lib/bsync.ml" 29 1718 1733 "lib/bsync.ml" 29 1718 1735
+)
+"lib/bsync.ml" 29 1718 1751 "lib/bsync.ml" 29 1718 1752
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 29 1718 1753 "lib/bsync.ml" 29 1718 1755
+type(
+  'a
+)
+ident(
+  int_ref k2 "lib/bsync.ml" 29 1718 1740 "lib/bsync.ml" 29 1718 1742
+)
+"lib/bsync.ml" 29 1718 1748 "lib/bsync.ml" 29 1718 1755
+type(
+  bool
+)
+"lib/bsync.ml" 26 1650 1665 "lib/bsync.ml" 30 1756 1762
+call(
+  stack
+)
+"lib/bsync.ml" 32 1766 1770 "lib/bsync.ml" 32 1766 1775
+type(
+  (unit -> unit) -> unit
+)
+ident(
+  def debug "lib/bsync.ml" 33 1808 1808 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 32 1766 1776 "lib/bsync.ml" 32 1766 1779
+type(
+  unit -> unit
+)
+ident(
+  def thk "lib/bsync.ml" 32 1766 1782 "lib/bsync.ml" 32 1766 1805
+)
+"lib/bsync.ml" 32 1766 1782 "lib/bsync.ml" 32 1766 1793
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Trace.debug
+)
+"lib/bsync.ml" 32 1766 1794 "lib/bsync.ml" 32 1766 1801
+type(
+  string
+)
+"lib/bsync.ml" 32 1766 1802 "lib/bsync.ml" 32 1766 1805
+type(
+  unit -> unit
+)
+ident(
+  int_ref thk "lib/bsync.ml" 32 1766 1776 "lib/bsync.ml" 32 1766 1779
+)
+"lib/bsync.ml" 32 1766 1782 "lib/bsync.ml" 32 1766 1805
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 33 1808 1812 "lib/bsync.ml" 33 1808 1818
+type(
+  (unit -> 'a) -> 'a
+)
+ident(
+  def report "lib/bsync.ml" 35 1833 1833 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 33 1808 1819 "lib/bsync.ml" 33 1808 1822
+type(
+  unit -> 'a
+)
+ident(
+  def thk "lib/bsync.ml" 33 1808 1825 "lib/bsync.ml" 33 1808 1831
+)
+"lib/bsync.ml" 33 1808 1825 "lib/bsync.ml" 33 1808 1828
+type(
+  unit -> 'a
+)
+ident(
+  int_ref thk "lib/bsync.ml" 33 1808 1819 "lib/bsync.ml" 33 1808 1822
+)
+"lib/bsync.ml" 33 1808 1829 "lib/bsync.ml" 33 1808 1831
+type(
+  unit
+)
+"lib/bsync.ml" 33 1808 1825 "lib/bsync.ml" 33 1808 1831
+call(
+  tail
+)
+type(
+  'a
+)
+"lib/bsync.ml" 39 1887 1891 "lib/bsync.ml" 39 1887 1905
+type(
+  dir -> string * string
+)
+ident(
+  def strings_of_dir "lib/bsync.ml" 44 2046 2046 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 40 1917 1921 "lib/bsync.ml" 40 1917 1922
+type(
+  dir
+)
+"lib/bsync.ml" 40 1917 1927 "lib/bsync.ml" 40 1917 1954
+type(
+  string
+)
+"lib/bsync.ml" 40 1917 1956 "lib/bsync.ml" 40 1917 1959
+type(
+  string
+)
+"lib/bsync.ml" 40 1917 1927 "lib/bsync.ml" 40 1917 1959
+type(
+  string * string
+)
+"lib/bsync.ml" 41 1960 1964 "lib/bsync.ml" 41 1960 1965
+type(
+  dir
+)
+"lib/bsync.ml" 41 1960 1969 "lib/bsync.ml" 41 1960 1996
+type(
+  string
+)
+"lib/bsync.ml" 41 1960 1998 "lib/bsync.ml" 41 1960 2001
+type(
+  string
+)
+"lib/bsync.ml" 41 1960 1969 "lib/bsync.ml" 41 1960 2001
+type(
+  string * string
+)
+"lib/bsync.ml" 42 2002 2006 "lib/bsync.ml" 42 2002 2010
+type(
+  dir
+)
+"lib/bsync.ml" 42 2002 2015 "lib/bsync.ml" 42 2002 2033
+type(
+  string
+)
+"lib/bsync.ml" 42 2002 2035 "lib/bsync.ml" 42 2002 2041
+type(
+  string
+)
+"lib/bsync.ml" 42 2002 2015 "lib/bsync.ml" 42 2002 2041
+type(
+  string * string
+)
+"lib/bsync.ml" 39 1887 1908 "lib/bsync.ml" 42 2002 2041
+type(
+  dir -> string * string
+)
+"lib/bsync.ml" 46 2096 2100 "lib/bsync.ml" 46 2096 2118
+type(
+  path_elt -> string
+)
+ident(
+  def string_of_path_elt "lib/bsync.ml" 49 2234 2234 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 47 2130 2138 "lib/bsync.ml" 47 2130 2139
+type(
+  Erx.tag
+)
+ident(
+  def t "lib/bsync.ml" 47 2130 2143 "lib/bsync.ml" 47 2130 2199
+)
+"lib/bsync.ml" 47 2130 2134 "lib/bsync.ml" 47 2130 2139
+type(
+  path_elt
+)
+"lib/bsync.ml" 47 2130 2146 "lib/bsync.ml" 47 2130 2147
+type(
+  Erx.tag
+)
+ident(
+  int_ref t "lib/bsync.ml" 47 2130 2138 "lib/bsync.ml" 47 2130 2139
+)
+"lib/bsync.ml" 47 2130 2148 "lib/bsync.ml" 47 2130 2150
+type(
+  Erx.tag -> Erx.tag -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"lib/bsync.ml" 47 2130 2151 "lib/bsync.ml" 47 2130 2153
+type(
+  Erx.tag
+)
+"lib/bsync.ml" 47 2130 2146 "lib/bsync.ml" 47 2130 2153
+type(
+  bool
+)
+"lib/bsync.ml" 47 2130 2159 "lib/bsync.ml" 47 2130 2162
+type(
+  string
+)
+"lib/bsync.ml" 47 2130 2163 "lib/bsync.ml" 47 2130 2164
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/bsync.ml" 47 2130 2166 "lib/bsync.ml" 47 2130 2176
+type(
+  Erx.tag -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 47 2130 2177 "lib/bsync.ml" 47 2130 2178
+type(
+  Erx.tag
+)
+ident(
+  int_ref t "lib/bsync.ml" 47 2130 2138 "lib/bsync.ml" 47 2130 2139
+)
+"lib/bsync.ml" 47 2130 2165 "lib/bsync.ml" 47 2130 2179
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 47 2130 2159 "lib/bsync.ml" 47 2130 2179
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 47 2130 2186 "lib/bsync.ml" 47 2130 2196
+type(
+  Erx.tag -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 47 2130 2197 "lib/bsync.ml" 47 2130 2198
+type(
+  Erx.tag
+)
+ident(
+  int_ref t "lib/bsync.ml" 47 2130 2138 "lib/bsync.ml" 47 2130 2139
+)
+"lib/bsync.ml" 47 2130 2185 "lib/bsync.ml" 47 2130 2199
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 47 2130 2143 "lib/bsync.ml" 47 2130 2199
+type(
+  string
+)
+"lib/bsync.ml" 48 2200 2208 "lib/bsync.ml" 48 2200 2209
+type(
+  Erx.key
+)
+ident(
+  def k "lib/bsync.ml" 48 2200 2213 "lib/bsync.ml" 48 2200 2233
+)
+"lib/bsync.ml" 48 2200 2204 "lib/bsync.ml" 48 2200 2209
+type(
+  path_elt
+)
+"lib/bsync.ml" 48 2200 2213 "lib/bsync.ml" 48 2200 2216
+type(
+  string
+)
+"lib/bsync.ml" 48 2200 2217 "lib/bsync.ml" 48 2200 2218
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/bsync.ml" 48 2200 2220 "lib/bsync.ml" 48 2200 2230
+type(
+  Erx.key -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 48 2200 2231 "lib/bsync.ml" 48 2200 2232
+type(
+  Erx.key
+)
+ident(
+  int_ref k "lib/bsync.ml" 48 2200 2208 "lib/bsync.ml" 48 2200 2209
+)
+"lib/bsync.ml" 48 2200 2219 "lib/bsync.ml" 48 2200 2233
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 48 2200 2213 "lib/bsync.ml" 48 2200 2233
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 46 2096 2121 "lib/bsync.ml" 48 2200 2233
+type(
+  path_elt -> string
+)
+"lib/bsync.ml" 49 2234 2238 "lib/bsync.ml" 49 2234 2242
+type(
+  'a list
+)
+ident(
+  def root "lib/bsync.ml" 51 2249 2249 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 49 2234 2245 "lib/bsync.ml" 49 2234 2247
+type(
+  'a list
+)
+"lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+type(
+  path_elt list -> string
+)
+ident(
+  def string_of_path "lib/bsync.ml" 55 2371 2371 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 51 2249 2268 "lib/bsync.ml" 51 2249 2269
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 52 2273 2275 "lib/bsync.ml" 53 2295 2369
+)
+"lib/bsync.ml" 52 2273 2278 "lib/bsync.ml" 52 2273 2279
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 51 2249 2268 "lib/bsync.ml" 51 2249 2269
+)
+"lib/bsync.ml" 52 2273 2280 "lib/bsync.ml" 52 2273 2281
+type(
+  path_elt list -> path_elt list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 52 2273 2282 "lib/bsync.ml" 52 2273 2284
+type(
+  path_elt list
+)
+"lib/bsync.ml" 52 2273 2278 "lib/bsync.ml" 52 2273 2284
+type(
+  bool
+)
+"lib/bsync.ml" 52 2273 2290 "lib/bsync.ml" 52 2273 2293
+type(
+  string
+)
+"lib/bsync.ml" 53 2295 2302 "lib/bsync.ml" 53 2295 2320
+type(
+  (string -> path_elt -> string) -> string -> path_elt list -> string
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bsync.ml" 53 2295 2326 "lib/bsync.ml" 53 2295 2329
+type(
+  string
+)
+ident(
+  def acc "lib/bsync.ml" 53 2295 2330 "lib/bsync.ml" 53 2295 2363
+)
+"lib/bsync.ml" 53 2295 2330 "lib/bsync.ml" 53 2295 2332
+type(
+  path_elt
+)
+ident(
+  def pi "lib/bsync.ml" 53 2295 2336 "lib/bsync.ml" 53 2295 2363
+)
+"lib/bsync.ml" 53 2295 2336 "lib/bsync.ml" 53 2295 2354
+type(
+  path_elt -> string
+)
+ident(
+  int_ref string_of_path_elt "lib/bsync.ml" 46 2096 2100 "lib/bsync.ml" 46 2096 2118
+)
+"lib/bsync.ml" 53 2295 2355 "lib/bsync.ml" 53 2295 2357
+type(
+  path_elt
+)
+ident(
+  int_ref pi "lib/bsync.ml" 53 2295 2330 "lib/bsync.ml" 53 2295 2332
+)
+"lib/bsync.ml" 53 2295 2336 "lib/bsync.ml" 53 2295 2357
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 53 2295 2358 "lib/bsync.ml" 53 2295 2359
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/bsync.ml" 53 2295 2360 "lib/bsync.ml" 53 2295 2363
+type(
+  string
+)
+ident(
+  int_ref acc "lib/bsync.ml" 53 2295 2326 "lib/bsync.ml" 53 2295 2329
+)
+"lib/bsync.ml" 53 2295 2336 "lib/bsync.ml" 53 2295 2363
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 53 2295 2321 "lib/bsync.ml" 53 2295 2364
+type(
+  string -> path_elt -> string
+)
+"lib/bsync.ml" 53 2295 2365 "lib/bsync.ml" 53 2295 2367
+type(
+  string
+)
+"lib/bsync.ml" 53 2295 2368 "lib/bsync.ml" 53 2295 2369
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 51 2249 2268 "lib/bsync.ml" 51 2249 2269
+)
+"lib/bsync.ml" 53 2295 2302 "lib/bsync.ml" 53 2295 2369
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 52 2273 2275 "lib/bsync.ml" 53 2295 2369
+type(
+  string
+)
+"lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+type(
+  (string * 'a) list -> string
+)
+ident(
+  def keys_string "lib/bsync.ml" 56 2461 2461 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 55 2371 2387 "lib/bsync.ml" 55 2371 2389
+type(
+  (string * 'a) list
+)
+ident(
+  def kl "lib/bsync.ml" 55 2371 2392 "lib/bsync.ml" 55 2371 2460
+)
+"lib/bsync.ml" 55 2371 2392 "lib/bsync.ml" 55 2371 2408
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bsync.ml" 55 2371 2409 "lib/bsync.ml" 55 2371 2412
+type(
+  string
+)
+"lib/bsync.ml" 55 2371 2414 "lib/bsync.ml" 55 2371 2426
+type(
+  (string * 'a -> string) -> (string * 'a) list -> string list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bsync.ml" 55 2371 2433 "lib/bsync.ml" 55 2371 2435
+type(
+  string
+)
+ident(
+  def ki "lib/bsync.ml" 55 2371 2442 "lib/bsync.ml" 55 2371 2455
+)
+"lib/bsync.ml" 55 2371 2436 "lib/bsync.ml" 55 2371 2437
+type(
+  'a
+)
+"lib/bsync.ml" 55 2371 2432 "lib/bsync.ml" 55 2371 2438
+type(
+  string * 'a
+)
+"lib/bsync.ml" 55 2371 2442 "lib/bsync.ml" 55 2371 2452
+type(
+  string -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 55 2371 2453 "lib/bsync.ml" 55 2371 2455
+type(
+  string
+)
+ident(
+  int_ref ki "lib/bsync.ml" 55 2371 2433 "lib/bsync.ml" 55 2371 2435
+)
+"lib/bsync.ml" 55 2371 2442 "lib/bsync.ml" 55 2371 2455
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 55 2371 2427 "lib/bsync.ml" 55 2371 2456
+type(
+  string * 'a -> string
+)
+"lib/bsync.ml" 55 2371 2457 "lib/bsync.ml" 55 2371 2459
+type(
+  (string * 'a) list
+)
+ident(
+  int_ref kl "lib/bsync.ml" 55 2371 2387 "lib/bsync.ml" 55 2371 2389
+)
+"lib/bsync.ml" 55 2371 2413 "lib/bsync.ml" 55 2371 2460
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bsync.ml" 55 2371 2392 "lib/bsync.ml" 55 2371 2460
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 56 2461 2465 "lib/bsync.ml" 56 2461 2476
+type(
+  Erx.skeleton -> string
+)
+ident(
+  def skel_string "lib/bsync.ml" 57 2508 2508 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 56 2461 2477 "lib/bsync.ml" 56 2461 2479
+type(
+  Erx.skeleton
+)
+ident(
+  def sk "lib/bsync.ml" 56 2461 2482 "lib/bsync.ml" 56 2461 2507
+)
+"lib/bsync.ml" 56 2461 2482 "lib/bsync.ml" 56 2461 2504
+type(
+  Erx.skeleton -> string
+)
+ident(
+  ext_ref Erx.string_of_skeleton
+)
+"lib/bsync.ml" 56 2461 2505 "lib/bsync.ml" 56 2461 2507
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref sk "lib/bsync.ml" 56 2461 2477 "lib/bsync.ml" 56 2461 2479
+)
+"lib/bsync.ml" 56 2461 2482 "lib/bsync.ml" 56 2461 2507
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 57 2508 2512 "lib/bsync.ml" 57 2508 2523
+type(
+  Erx.TagSet.t -> string
+)
+ident(
+  def tags_string "lib/bsync.ml" 59 2610 2610 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 57 2508 2524 "lib/bsync.ml" 57 2508 2526
+type(
+  Erx.TagSet.t
+)
+ident(
+  def ts "lib/bsync.ml" 57 2508 2529 "lib/bsync.ml" 57 2508 2608
+)
+"lib/bsync.ml" 57 2508 2529 "lib/bsync.ml" 57 2508 2545
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref Misc.concat_list
+)
+"lib/bsync.ml" 57 2508 2546 "lib/bsync.ml" 57 2508 2549
+type(
+  string
+)
+"lib/bsync.ml" 57 2508 2551 "lib/bsync.ml" 57 2508 2566
+type(
+  (Erx.TagSet.elt -> string list -> string list) ->
+  Erx.TagSet.t -> string list -> string list
+)
+ident(
+  ext_ref Erx.TagSet.fold
+)
+"lib/bsync.ml" 57 2508 2572 "lib/bsync.ml" 57 2508 2574
+type(
+  Erx.TagSet.elt
+)
+ident(
+  def ti "lib/bsync.ml" 57 2508 2575 "lib/bsync.ml" 57 2508 2600
+)
+"lib/bsync.ml" 57 2508 2575 "lib/bsync.ml" 57 2508 2578
+type(
+  string list
+)
+ident(
+  def acc "lib/bsync.ml" 57 2508 2582 "lib/bsync.ml" 57 2508 2600
+)
+"lib/bsync.ml" 57 2508 2582 "lib/bsync.ml" 57 2508 2592
+type(
+  Erx.TagSet.elt -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 57 2508 2593 "lib/bsync.ml" 57 2508 2595
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref ti "lib/bsync.ml" 57 2508 2572 "lib/bsync.ml" 57 2508 2574
+)
+"lib/bsync.ml" 57 2508 2582 "lib/bsync.ml" 57 2508 2595
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 57 2508 2597 "lib/bsync.ml" 57 2508 2600
+type(
+  string list
+)
+ident(
+  int_ref acc "lib/bsync.ml" 57 2508 2575 "lib/bsync.ml" 57 2508 2578
+)
+"lib/bsync.ml" 57 2508 2582 "lib/bsync.ml" 57 2508 2600
+type(
+  string list
+)
+"lib/bsync.ml" 57 2508 2567 "lib/bsync.ml" 57 2508 2601
+type(
+  Erx.TagSet.elt -> string list -> string list
+)
+"lib/bsync.ml" 57 2508 2602 "lib/bsync.ml" 57 2508 2604
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref ts "lib/bsync.ml" 57 2508 2524 "lib/bsync.ml" 57 2508 2526
+)
+"lib/bsync.ml" 57 2508 2605 "lib/bsync.ml" 57 2508 2607
+type(
+  string list
+)
+"lib/bsync.ml" 57 2508 2550 "lib/bsync.ml" 57 2508 2608
+call(
+  stack
+)
+type(
+  string list
+)
+"lib/bsync.ml" 57 2508 2529 "lib/bsync.ml" 57 2508 2608
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bsync.ml" 59 2610 2614 "lib/bsync.ml" 59 2610 2627
+type(
+  dir -> string
+)
+ident(
+  def string_of_dir "lib/bsync.ml" 64 2704 2704 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 60 2639 2643 "lib/bsync.ml" 60 2639 2644
+type(
+  dir
+)
+"lib/bsync.ml" 60 2639 2652 "lib/bsync.ml" 60 2639 2659
+type(
+  string
+)
+"lib/bsync.ml" 61 2660 2664 "lib/bsync.ml" 61 2660 2665
+type(
+  dir
+)
+"lib/bsync.ml" 61 2660 2673 "lib/bsync.ml" 61 2660 2680
+type(
+  string
+)
+"lib/bsync.ml" 62 2681 2685 "lib/bsync.ml" 62 2681 2689
+type(
+  dir
+)
+"lib/bsync.ml" 62 2681 2694 "lib/bsync.ml" 62 2681 2701
+type(
+  string
+)
+"lib/bsync.ml" 59 2610 2630 "lib/bsync.ml" 62 2681 2701
+type(
+  dir -> string
+)
+"lib/bsync.ml" 64 2704 2708 "lib/bsync.ml" 64 2704 2721
+type(
+  act -> string
+)
+ident(
+  def string_of_act "lib/bsync.ml" 69 2800 2800 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 65 2733 2737 "lib/bsync.ml" 65 2733 2742
+type(
+  act
+)
+"lib/bsync.ml" 65 2733 2748 "lib/bsync.ml" 65 2733 2757
+type(
+  string
+)
+"lib/bsync.ml" 66 2758 2762 "lib/bsync.ml" 66 2758 2769
+type(
+  act
+)
+"lib/bsync.ml" 66 2758 2773 "lib/bsync.ml" 66 2758 2782
+type(
+  string
+)
+"lib/bsync.ml" 64 2704 2724 "lib/bsync.ml" 66 2758 2782
+type(
+  act -> string
+)
+"lib/bsync.ml" 69 2800 2804 "lib/bsync.ml" 69 2800 2825
+type(
+  Buffer.t -> Erx.spine -> Erx.spine -> Erx.spine -> path_elt list -> unit
+)
+ident(
+  def report_spine_conflict "lib/bsync.ml" 74 3038 3038 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 69 2800 2826 "lib/bsync.ml" 69 2800 2829
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 69 2800 2830 "lib/bsync.ml" 72 2932 3036
+)
+"lib/bsync.ml" 69 2800 2830 "lib/bsync.ml" 69 2800 2833
+type(
+  Erx.spine
+)
+ident(
+  def spo "lib/bsync.ml" 69 2800 2834 "lib/bsync.ml" 72 2932 3036
+)
+"lib/bsync.ml" 69 2800 2834 "lib/bsync.ml" 69 2800 2837
+type(
+  Erx.spine
+)
+ident(
+  def spa "lib/bsync.ml" 69 2800 2838 "lib/bsync.ml" 72 2932 3036
+)
+"lib/bsync.ml" 69 2800 2838 "lib/bsync.ml" 69 2800 2841
+type(
+  Erx.spine
+)
+ident(
+  def spb "lib/bsync.ml" 69 2800 2842 "lib/bsync.ml" 72 2932 3036
+)
+"lib/bsync.ml" 69 2800 2842 "lib/bsync.ml" 69 2800 2843
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 70 2847 2849 "lib/bsync.ml" 72 2932 3036
+)
+"lib/bsync.ml" 70 2847 2849 "lib/bsync.ml" 70 2847 2866
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 70 2847 2867 "lib/bsync.ml" 70 2847 2870
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 69 2800 2826 "lib/bsync.ml" 69 2800 2829
+)
+"lib/bsync.ml" 71 2872 2877 "lib/bsync.ml" 71 2872 2884
+type(
+  (string -> string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 71 2872 2885 "lib/bsync.ml" 71 2872 2930
+type(
+  (string -> string -> string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 72 2932 2940 "lib/bsync.ml" 72 2932 2959
+type(
+  Erx.spine -> string
+)
+ident(
+  ext_ref Erx.string_of_spine
+)
+"lib/bsync.ml" 72 2932 2960 "lib/bsync.ml" 72 2932 2963
+type(
+  Erx.spine
+)
+ident(
+  int_ref spo "lib/bsync.ml" 69 2800 2830 "lib/bsync.ml" 69 2800 2833
+)
+"lib/bsync.ml" 72 2932 2939 "lib/bsync.ml" 72 2932 2964
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 72 2932 2966 "lib/bsync.ml" 72 2932 2985
+type(
+  Erx.spine -> string
+)
+ident(
+  ext_ref Erx.string_of_spine
+)
+"lib/bsync.ml" 72 2932 2986 "lib/bsync.ml" 72 2932 2989
+type(
+  Erx.spine
+)
+ident(
+  int_ref spa "lib/bsync.ml" 69 2800 2834 "lib/bsync.ml" 69 2800 2837
+)
+"lib/bsync.ml" 72 2932 2965 "lib/bsync.ml" 72 2932 2990
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 72 2932 2992 "lib/bsync.ml" 72 2932 3011
+type(
+  Erx.spine -> string
+)
+ident(
+  ext_ref Erx.string_of_spine
+)
+"lib/bsync.ml" 72 2932 3012 "lib/bsync.ml" 72 2932 3015
+type(
+  Erx.spine
+)
+ident(
+  int_ref spb "lib/bsync.ml" 69 2800 2838 "lib/bsync.ml" 69 2800 2841
+)
+"lib/bsync.ml" 72 2932 2991 "lib/bsync.ml" 72 2932 3016
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 72 2932 3018 "lib/bsync.ml" 72 2932 3032
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 72 2932 3033 "lib/bsync.ml" 72 2932 3034
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 69 2800 2842 "lib/bsync.ml" 69 2800 2843
+)
+"lib/bsync.ml" 72 2932 3017 "lib/bsync.ml" 72 2932 3035
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 71 2872 2876 "lib/bsync.ml" 72 2932 3036
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 70 2847 2849 "lib/bsync.ml" 72 2932 3036
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 74 3038 3042 "lib/bsync.ml" 74 3038 3060
+type(
+  Buffer.t -> dir -> act -> Erx.TagSet.t -> path_elt list -> unit
+)
+ident(
+  def report_tags_action "lib/bsync.ml" 81 3259 3259 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 74 3038 3061 "lib/bsync.ml" 74 3038 3064
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 74 3038 3065 "lib/bsync.ml" 79 3251 3257
+)
+"lib/bsync.ml" 74 3038 3065 "lib/bsync.ml" 74 3038 3066
+type(
+  dir
+)
+ident(
+  def r "lib/bsync.ml" 74 3038 3067 "lib/bsync.ml" 79 3251 3257
+)
+"lib/bsync.ml" 74 3038 3067 "lib/bsync.ml" 74 3038 3068
+type(
+  act
+)
+ident(
+  def a "lib/bsync.ml" 74 3038 3069 "lib/bsync.ml" 79 3251 3257
+)
+"lib/bsync.ml" 74 3038 3069 "lib/bsync.ml" 74 3038 3071
+type(
+  Erx.TagSet.t
+)
+ident(
+  def ts "lib/bsync.ml" 74 3038 3072 "lib/bsync.ml" 79 3251 3257
+)
+"lib/bsync.ml" 74 3038 3072 "lib/bsync.ml" 74 3038 3073
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 75 3077 3079 "lib/bsync.ml" 79 3251 3257
+)
+"lib/bsync.ml" 75 3077 3079 "lib/bsync.ml" 75 3077 3094
+type(
+  (Erx.TagSet.elt -> unit) -> Erx.TagSet.t -> unit
+)
+ident(
+  ext_ref Erx.TagSet.iter
+)
+"lib/bsync.ml" 76 3096 3105 "lib/bsync.ml" 76 3096 3107
+type(
+  Erx.TagSet.elt
+)
+ident(
+  def ti "lib/bsync.ml" 76 3096 3111 "lib/bsync.ml" 78 3173 3248
+)
+"lib/bsync.ml" 76 3096 3111 "lib/bsync.ml" 76 3096 3128
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 76 3096 3129 "lib/bsync.ml" 76 3096 3132
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 74 3038 3061 "lib/bsync.ml" 74 3038 3064
+)
+"lib/bsync.ml" 77 3134 3142 "lib/bsync.ml" 77 3134 3149
+type(
+  (string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 77 3134 3150 "lib/bsync.ml" 77 3134 3171
+type(
+  (string -> string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 78 3173 3184 "lib/bsync.ml" 78 3173 3197
+type(
+  dir -> string
+)
+ident(
+  int_ref string_of_dir "lib/bsync.ml" 59 2610 2614 "lib/bsync.ml" 59 2610 2627
+)
+"lib/bsync.ml" 78 3173 3198 "lib/bsync.ml" 78 3173 3199
+type(
+  dir
+)
+ident(
+  int_ref r "lib/bsync.ml" 74 3038 3065 "lib/bsync.ml" 74 3038 3066
+)
+"lib/bsync.ml" 78 3173 3183 "lib/bsync.ml" 78 3173 3200
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 78 3173 3202 "lib/bsync.ml" 78 3173 3215
+type(
+  act -> string
+)
+ident(
+  int_ref string_of_act "lib/bsync.ml" 64 2704 2708 "lib/bsync.ml" 64 2704 2721
+)
+"lib/bsync.ml" 78 3173 3216 "lib/bsync.ml" 78 3173 3217
+type(
+  act
+)
+ident(
+  int_ref a "lib/bsync.ml" 74 3038 3067 "lib/bsync.ml" 74 3038 3068
+)
+"lib/bsync.ml" 78 3173 3201 "lib/bsync.ml" 78 3173 3218
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 78 3173 3220 "lib/bsync.ml" 78 3173 3234
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 78 3173 3240 "lib/bsync.ml" 78 3173 3242
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref ti "lib/bsync.ml" 76 3096 3105 "lib/bsync.ml" 76 3096 3107
+)
+"lib/bsync.ml" 78 3173 3236 "lib/bsync.ml" 78 3173 3242
+type(
+  path_elt
+)
+"lib/bsync.ml" 78 3173 3244 "lib/bsync.ml" 78 3173 3245
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 74 3038 3072 "lib/bsync.ml" 74 3038 3073
+)
+"lib/bsync.ml" 78 3173 3235 "lib/bsync.ml" 78 3173 3246
+type(
+  path_elt list
+)
+"lib/bsync.ml" 78 3173 3219 "lib/bsync.ml" 78 3173 3247
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 77 3134 3141 "lib/bsync.ml" 78 3173 3248
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 76 3096 3111 "lib/bsync.ml" 78 3173 3248
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 76 3096 3100 "lib/bsync.ml" 78 3173 3249
+type(
+  Erx.TagSet.elt -> unit
+)
+"lib/bsync.ml" 79 3251 3255 "lib/bsync.ml" 79 3251 3257
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref ts "lib/bsync.ml" 74 3038 3069 "lib/bsync.ml" 74 3038 3071
+)
+"lib/bsync.ml" 75 3077 3079 "lib/bsync.ml" 79 3251 3257
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 81 3259 3263 "lib/bsync.ml" 81 3259 3282
+type(
+  Buffer.t ->
+  string ->
+  string ->
+  Erx.TagSet.t -> Erx.TagSet.t -> Erx.TagSet.t -> path_elt list -> unit
+)
+ident(
+  def report_tags_del_mod "lib/bsync.ml" 86 3506 3506 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 81 3259 3283 "lib/bsync.ml" 81 3259 3286
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 81 3259 3287 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3287 "lib/bsync.ml" 81 3259 3288
+type(
+  string
+)
+ident(
+  def r "lib/bsync.ml" 81 3259 3289 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3289 "lib/bsync.ml" 81 3259 3291
+type(
+  string
+)
+ident(
+  def rb "lib/bsync.ml" 81 3259 3292 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3292 "lib/bsync.ml" 81 3259 3295
+type(
+  Erx.TagSet.t
+)
+ident(
+  def tso "lib/bsync.ml" 81 3259 3296 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3296 "lib/bsync.ml" 81 3259 3299
+type(
+  Erx.TagSet.t
+)
+ident(
+  def tsr "lib/bsync.ml" 81 3259 3300 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3300 "lib/bsync.ml" 81 3259 3304
+type(
+  Erx.TagSet.t
+)
+ident(
+  def tsrb "lib/bsync.ml" 81 3259 3305 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 81 3259 3305 "lib/bsync.ml" 81 3259 3306
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 82 3310 3312 "lib/bsync.ml" 84 3418 3504
+)
+"lib/bsync.ml" 82 3310 3312 "lib/bsync.ml" 82 3310 3329
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 82 3310 3330 "lib/bsync.ml" 82 3310 3333
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 81 3259 3283 "lib/bsync.ml" 81 3259 3286
+)
+"lib/bsync.ml" 83 3335 3340 "lib/bsync.ml" 83 3335 3347
+type(
+  (string -> string -> string -> string -> string -> string -> string, 
+   unit, string)
+  format ->
+  string -> string -> string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 83 3335 3348 "lib/bsync.ml" 83 3335 3417
+type(
+  (string -> string -> string -> string -> string -> string -> string, 
+   unit, string)
+  format
+)
+"lib/bsync.ml" 84 3418 3425 "lib/bsync.ml" 84 3418 3426
+type(
+  string
+)
+ident(
+  int_ref r "lib/bsync.ml" 81 3259 3287 "lib/bsync.ml" 81 3259 3288
+)
+"lib/bsync.ml" 84 3418 3427 "lib/bsync.ml" 84 3418 3429
+type(
+  string
+)
+ident(
+  int_ref rb "lib/bsync.ml" 81 3259 3289 "lib/bsync.ml" 81 3259 3291
+)
+"lib/bsync.ml" 84 3418 3431 "lib/bsync.ml" 84 3418 3442
+type(
+  Erx.TagSet.t -> string
+)
+ident(
+  int_ref tags_string "lib/bsync.ml" 57 2508 2512 "lib/bsync.ml" 57 2508 2523
+)
+"lib/bsync.ml" 84 3418 3443 "lib/bsync.ml" 84 3418 3446
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref tso "lib/bsync.ml" 81 3259 3292 "lib/bsync.ml" 81 3259 3295
+)
+"lib/bsync.ml" 84 3418 3430 "lib/bsync.ml" 84 3418 3447
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 84 3418 3449 "lib/bsync.ml" 84 3418 3460
+type(
+  Erx.TagSet.t -> string
+)
+ident(
+  int_ref tags_string "lib/bsync.ml" 57 2508 2512 "lib/bsync.ml" 57 2508 2523
+)
+"lib/bsync.ml" 84 3418 3461 "lib/bsync.ml" 84 3418 3464
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref tsr "lib/bsync.ml" 81 3259 3296 "lib/bsync.ml" 81 3259 3299
+)
+"lib/bsync.ml" 84 3418 3448 "lib/bsync.ml" 84 3418 3465
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 84 3418 3467 "lib/bsync.ml" 84 3418 3478
+type(
+  Erx.TagSet.t -> string
+)
+ident(
+  int_ref tags_string "lib/bsync.ml" 57 2508 2512 "lib/bsync.ml" 57 2508 2523
+)
+"lib/bsync.ml" 84 3418 3479 "lib/bsync.ml" 84 3418 3483
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref tsrb "lib/bsync.ml" 81 3259 3300 "lib/bsync.ml" 81 3259 3304
+)
+"lib/bsync.ml" 84 3418 3466 "lib/bsync.ml" 84 3418 3484
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 84 3418 3486 "lib/bsync.ml" 84 3418 3500
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 84 3418 3501 "lib/bsync.ml" 84 3418 3502
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 81 3259 3305 "lib/bsync.ml" 81 3259 3306
+)
+"lib/bsync.ml" 84 3418 3485 "lib/bsync.ml" 84 3418 3503
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 83 3335 3339 "lib/bsync.ml" 84 3418 3504
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 82 3310 3312 "lib/bsync.ml" 84 3418 3504
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+type(
+  Buffer.t -> dir -> act -> (Erx.key * 'a) list -> path_elt list -> unit
+)
+ident(
+  def report_keys_action "lib/bsync.ml" 94 3738 3738 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 86 3506 3529 "lib/bsync.ml" 86 3506 3532
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 86 3506 3533 "lib/bsync.ml" 92 3730 3736
+)
+"lib/bsync.ml" 86 3506 3533 "lib/bsync.ml" 86 3506 3534
+type(
+  dir
+)
+ident(
+  def r "lib/bsync.ml" 86 3506 3535 "lib/bsync.ml" 92 3730 3736
+)
+"lib/bsync.ml" 86 3506 3535 "lib/bsync.ml" 86 3506 3536
+type(
+  act
+)
+ident(
+  def a "lib/bsync.ml" 86 3506 3537 "lib/bsync.ml" 92 3730 3736
+)
+"lib/bsync.ml" 86 3506 3537 "lib/bsync.ml" 86 3506 3539
+type(
+  (Erx.key * 'a) list
+)
+ident(
+  def kl "lib/bsync.ml" 86 3506 3540 "lib/bsync.ml" 92 3730 3736
+)
+"lib/bsync.ml" 86 3506 3540 "lib/bsync.ml" 86 3506 3541
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 87 3545 3547 "lib/bsync.ml" 92 3730 3736
+)
+"lib/bsync.ml" 87 3545 3547 "lib/bsync.ml" 87 3545 3560
+type(
+  (Erx.key * 'a -> unit) -> (Erx.key * 'a) list -> unit
+)
+ident(
+  ext_ref Safelist.iter
+)
+"lib/bsync.ml" 88 3561 3571 "lib/bsync.ml" 88 3561 3573
+type(
+  Erx.key
+)
+ident(
+  def ki "lib/bsync.ml" 89 3581 3588 "lib/bsync.ml" 91 3651 3728
+)
+"lib/bsync.ml" 88 3561 3574 "lib/bsync.ml" 88 3561 3575
+type(
+  'a
+)
+"lib/bsync.ml" 88 3561 3570 "lib/bsync.ml" 88 3561 3576
+type(
+  Erx.key * 'a
+)
+"lib/bsync.ml" 89 3581 3588 "lib/bsync.ml" 89 3581 3605
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 89 3581 3606 "lib/bsync.ml" 89 3581 3609
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 86 3506 3529 "lib/bsync.ml" 86 3506 3532
+)
+"lib/bsync.ml" 90 3610 3620 "lib/bsync.ml" 90 3610 3627
+type(
+  (string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 90 3610 3628 "lib/bsync.ml" 90 3610 3649
+type(
+  (string -> string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 91 3651 3664 "lib/bsync.ml" 91 3651 3677
+type(
+  dir -> string
+)
+ident(
+  int_ref string_of_dir "lib/bsync.ml" 59 2610 2614 "lib/bsync.ml" 59 2610 2627
+)
+"lib/bsync.ml" 91 3651 3678 "lib/bsync.ml" 91 3651 3679
+type(
+  dir
+)
+ident(
+  int_ref r "lib/bsync.ml" 86 3506 3533 "lib/bsync.ml" 86 3506 3534
+)
+"lib/bsync.ml" 91 3651 3663 "lib/bsync.ml" 91 3651 3680
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 91 3651 3682 "lib/bsync.ml" 91 3651 3695
+type(
+  act -> string
+)
+ident(
+  int_ref string_of_act "lib/bsync.ml" 64 2704 2708 "lib/bsync.ml" 64 2704 2721
+)
+"lib/bsync.ml" 91 3651 3696 "lib/bsync.ml" 91 3651 3697
+type(
+  act
+)
+ident(
+  int_ref a "lib/bsync.ml" 86 3506 3535 "lib/bsync.ml" 86 3506 3536
+)
+"lib/bsync.ml" 91 3651 3681 "lib/bsync.ml" 91 3651 3698
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 91 3651 3700 "lib/bsync.ml" 91 3651 3714
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 91 3651 3720 "lib/bsync.ml" 91 3651 3722
+type(
+  Erx.key
+)
+ident(
+  int_ref ki "lib/bsync.ml" 88 3561 3571 "lib/bsync.ml" 88 3561 3573
+)
+"lib/bsync.ml" 91 3651 3716 "lib/bsync.ml" 91 3651 3722
+type(
+  path_elt
+)
+"lib/bsync.ml" 91 3651 3724 "lib/bsync.ml" 91 3651 3725
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 86 3506 3540 "lib/bsync.ml" 86 3506 3541
+)
+"lib/bsync.ml" 91 3651 3715 "lib/bsync.ml" 91 3651 3726
+type(
+  path_elt list
+)
+"lib/bsync.ml" 91 3651 3699 "lib/bsync.ml" 91 3651 3727
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 90 3610 3619 "lib/bsync.ml" 91 3651 3728
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 89 3581 3588 "lib/bsync.ml" 91 3651 3728
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 88 3561 3565 "lib/bsync.ml" 91 3651 3729
+type(
+  Erx.key * 'a -> unit
+)
+"lib/bsync.ml" 92 3730 3734 "lib/bsync.ml" 92 3730 3736
+type(
+  (Erx.key * 'a) list
+)
+ident(
+  int_ref kl "lib/bsync.ml" 86 3506 3537 "lib/bsync.ml" 86 3506 3539
+)
+"lib/bsync.ml" 87 3545 3547 "lib/bsync.ml" 92 3730 3736
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 94 3738 3742 "lib/bsync.ml" 94 3738 3761
+type(
+  Buffer.t ->
+  string ->
+  string ->
+  (string * 'a) list ->
+  (string * 'b) list -> (string * 'c) list -> path_elt list -> unit
+)
+ident(
+  def report_keys_del_mod "lib/bsync.ml" 99 3984 3984 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 94 3738 3762 "lib/bsync.ml" 94 3738 3765
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 94 3738 3766 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3766 "lib/bsync.ml" 94 3738 3767
+type(
+  string
+)
+ident(
+  def r "lib/bsync.ml" 94 3738 3768 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3768 "lib/bsync.ml" 94 3738 3770
+type(
+  string
+)
+ident(
+  def rb "lib/bsync.ml" 94 3738 3771 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3771 "lib/bsync.ml" 94 3738 3774
+type(
+  (string * 'a) list
+)
+ident(
+  def okl "lib/bsync.ml" 94 3738 3775 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3775 "lib/bsync.ml" 94 3738 3778
+type(
+  (string * 'b) list
+)
+ident(
+  def rkl "lib/bsync.ml" 94 3738 3779 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3779 "lib/bsync.ml" 94 3738 3783
+type(
+  (string * 'c) list
+)
+ident(
+  def rbkl "lib/bsync.ml" 94 3738 3784 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 94 3738 3784 "lib/bsync.ml" 94 3738 3785
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 95 3789 3791 "lib/bsync.ml" 97 3896 3982
+)
+"lib/bsync.ml" 95 3789 3791 "lib/bsync.ml" 95 3789 3808
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 95 3789 3809 "lib/bsync.ml" 95 3789 3812
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 94 3738 3762 "lib/bsync.ml" 94 3738 3765
+)
+"lib/bsync.ml" 96 3813 3818 "lib/bsync.ml" 96 3813 3825
+type(
+  (string -> string -> string -> string -> string -> string -> string, 
+   unit, string)
+  format ->
+  string -> string -> string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 96 3813 3826 "lib/bsync.ml" 96 3813 3895
+type(
+  (string -> string -> string -> string -> string -> string -> string, 
+   unit, string)
+  format
+)
+"lib/bsync.ml" 97 3896 3903 "lib/bsync.ml" 97 3896 3904
+type(
+  string
+)
+ident(
+  int_ref r "lib/bsync.ml" 94 3738 3766 "lib/bsync.ml" 94 3738 3767
+)
+"lib/bsync.ml" 97 3896 3905 "lib/bsync.ml" 97 3896 3907
+type(
+  string
+)
+ident(
+  int_ref rb "lib/bsync.ml" 94 3738 3768 "lib/bsync.ml" 94 3738 3770
+)
+"lib/bsync.ml" 97 3896 3909 "lib/bsync.ml" 97 3896 3920
+type(
+  (string * 'a) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 97 3896 3921 "lib/bsync.ml" 97 3896 3924
+type(
+  (string * 'a) list
+)
+ident(
+  int_ref okl "lib/bsync.ml" 94 3738 3771 "lib/bsync.ml" 94 3738 3774
+)
+"lib/bsync.ml" 97 3896 3908 "lib/bsync.ml" 97 3896 3925
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 97 3896 3927 "lib/bsync.ml" 97 3896 3938
+type(
+  (string * 'b) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 97 3896 3939 "lib/bsync.ml" 97 3896 3942
+type(
+  (string * 'b) list
+)
+ident(
+  int_ref rkl "lib/bsync.ml" 94 3738 3775 "lib/bsync.ml" 94 3738 3778
+)
+"lib/bsync.ml" 97 3896 3926 "lib/bsync.ml" 97 3896 3943
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 97 3896 3945 "lib/bsync.ml" 97 3896 3956
+type(
+  (string * 'c) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 97 3896 3957 "lib/bsync.ml" 97 3896 3961
+type(
+  (string * 'c) list
+)
+ident(
+  int_ref rbkl "lib/bsync.ml" 94 3738 3779 "lib/bsync.ml" 94 3738 3783
+)
+"lib/bsync.ml" 97 3896 3944 "lib/bsync.ml" 97 3896 3962
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 97 3896 3964 "lib/bsync.ml" 97 3896 3978
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 97 3896 3979 "lib/bsync.ml" 97 3896 3980
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 94 3738 3784 "lib/bsync.ml" 94 3738 3785
+)
+"lib/bsync.ml" 97 3896 3963 "lib/bsync.ml" 97 3896 3981
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 96 3813 3817 "lib/bsync.ml" 97 3896 3982
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 95 3789 3791 "lib/bsync.ml" 97 3896 3982
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 99 3984 3988 "lib/bsync.ml" 99 3984 4008
+type(
+  Buffer.t ->
+  (string * 'a) list ->
+  (string * 'b) list -> (string * 'c) list -> path_elt list -> unit
+)
+ident(
+  def report_keys_conflict "lib/bsync.ml" 104 4195 4195 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 99 3984 4009 "lib/bsync.ml" 99 3984 4012
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 99 3984 4013 "lib/bsync.ml" 102 4113 4193
+)
+"lib/bsync.ml" 99 3984 4013 "lib/bsync.ml" 99 3984 4016
+type(
+  (string * 'a) list
+)
+ident(
+  def okl "lib/bsync.ml" 99 3984 4017 "lib/bsync.ml" 102 4113 4193
+)
+"lib/bsync.ml" 99 3984 4017 "lib/bsync.ml" 99 3984 4020
+type(
+  (string * 'b) list
+)
+ident(
+  def akl "lib/bsync.ml" 99 3984 4021 "lib/bsync.ml" 102 4113 4193
+)
+"lib/bsync.ml" 99 3984 4021 "lib/bsync.ml" 99 3984 4024
+type(
+  (string * 'c) list
+)
+ident(
+  def bkl "lib/bsync.ml" 99 3984 4025 "lib/bsync.ml" 102 4113 4193
+)
+"lib/bsync.ml" 99 3984 4025 "lib/bsync.ml" 99 3984 4026
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 100 4030 4032 "lib/bsync.ml" 102 4113 4193
+)
+"lib/bsync.ml" 100 4030 4032 "lib/bsync.ml" 100 4030 4049
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 100 4030 4050 "lib/bsync.ml" 100 4030 4053
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 99 3984 4009 "lib/bsync.ml" 99 3984 4012
+)
+"lib/bsync.ml" 101 4055 4060 "lib/bsync.ml" 101 4055 4067
+type(
+  (string -> string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 101 4055 4068 "lib/bsync.ml" 101 4055 4112
+type(
+  (string -> string -> string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 102 4113 4121 "lib/bsync.ml" 102 4113 4132
+type(
+  (string * 'a) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 102 4113 4133 "lib/bsync.ml" 102 4113 4136
+type(
+  (string * 'a) list
+)
+ident(
+  int_ref okl "lib/bsync.ml" 99 3984 4013 "lib/bsync.ml" 99 3984 4016
+)
+"lib/bsync.ml" 102 4113 4120 "lib/bsync.ml" 102 4113 4137
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 102 4113 4139 "lib/bsync.ml" 102 4113 4150
+type(
+  (string * 'b) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 102 4113 4151 "lib/bsync.ml" 102 4113 4154
+type(
+  (string * 'b) list
+)
+ident(
+  int_ref akl "lib/bsync.ml" 99 3984 4017 "lib/bsync.ml" 99 3984 4020
+)
+"lib/bsync.ml" 102 4113 4138 "lib/bsync.ml" 102 4113 4155
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 102 4113 4157 "lib/bsync.ml" 102 4113 4168
+type(
+  (string * 'c) list -> string
+)
+ident(
+  int_ref keys_string "lib/bsync.ml" 55 2371 2375 "lib/bsync.ml" 55 2371 2386
+)
+"lib/bsync.ml" 102 4113 4169 "lib/bsync.ml" 102 4113 4172
+type(
+  (string * 'c) list
+)
+ident(
+  int_ref bkl "lib/bsync.ml" 99 3984 4021 "lib/bsync.ml" 99 3984 4024
+)
+"lib/bsync.ml" 102 4113 4156 "lib/bsync.ml" 102 4113 4173
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 102 4113 4175 "lib/bsync.ml" 102 4113 4189
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 102 4113 4190 "lib/bsync.ml" 102 4113 4191
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 99 3984 4025 "lib/bsync.ml" 99 3984 4026
+)
+"lib/bsync.ml" 102 4113 4174 "lib/bsync.ml" 102 4113 4192
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 101 4055 4059 "lib/bsync.ml" 102 4113 4193
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 100 4030 4032 "lib/bsync.ml" 102 4113 4193
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 104 4195 4199 "lib/bsync.ml" 104 4195 4221
+type(
+  Buffer.t ->
+  Erx.skeleton -> Erx.skeleton -> Erx.skeleton -> path_elt list -> unit
+)
+ident(
+  def report_schema_conflict "lib/bsync.ml" 109 4420 4420 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 104 4195 4222 "lib/bsync.ml" 104 4195 4225
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 104 4195 4226 "lib/bsync.ml" 107 4338 4418
+)
+"lib/bsync.ml" 104 4195 4226 "lib/bsync.ml" 104 4195 4229
+type(
+  Erx.skeleton
+)
+ident(
+  def okl "lib/bsync.ml" 104 4195 4230 "lib/bsync.ml" 107 4338 4418
+)
+"lib/bsync.ml" 104 4195 4230 "lib/bsync.ml" 104 4195 4233
+type(
+  Erx.skeleton
+)
+ident(
+  def akl "lib/bsync.ml" 104 4195 4234 "lib/bsync.ml" 107 4338 4418
+)
+"lib/bsync.ml" 104 4195 4234 "lib/bsync.ml" 104 4195 4237
+type(
+  Erx.skeleton
+)
+ident(
+  def bkl "lib/bsync.ml" 104 4195 4238 "lib/bsync.ml" 107 4338 4418
+)
+"lib/bsync.ml" 104 4195 4238 "lib/bsync.ml" 104 4195 4239
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 105 4243 4245 "lib/bsync.ml" 107 4338 4418
+)
+"lib/bsync.ml" 105 4243 4245 "lib/bsync.ml" 105 4243 4262
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 105 4243 4263 "lib/bsync.ml" 105 4243 4266
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 104 4195 4222 "lib/bsync.ml" 104 4195 4225
+)
+"lib/bsync.ml" 106 4268 4273 "lib/bsync.ml" 106 4268 4280
+type(
+  (string -> string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 106 4268 4281 "lib/bsync.ml" 106 4268 4337
+type(
+  (string -> string -> string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 107 4338 4346 "lib/bsync.ml" 107 4338 4357
+type(
+  Erx.skeleton -> string
+)
+ident(
+  int_ref skel_string "lib/bsync.ml" 56 2461 2465 "lib/bsync.ml" 56 2461 2476
+)
+"lib/bsync.ml" 107 4338 4358 "lib/bsync.ml" 107 4338 4361
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref okl "lib/bsync.ml" 104 4195 4226 "lib/bsync.ml" 104 4195 4229
+)
+"lib/bsync.ml" 107 4338 4345 "lib/bsync.ml" 107 4338 4362
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 107 4338 4364 "lib/bsync.ml" 107 4338 4375
+type(
+  Erx.skeleton -> string
+)
+ident(
+  int_ref skel_string "lib/bsync.ml" 56 2461 2465 "lib/bsync.ml" 56 2461 2476
+)
+"lib/bsync.ml" 107 4338 4376 "lib/bsync.ml" 107 4338 4379
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref akl "lib/bsync.ml" 104 4195 4230 "lib/bsync.ml" 104 4195 4233
+)
+"lib/bsync.ml" 107 4338 4363 "lib/bsync.ml" 107 4338 4380
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 107 4338 4382 "lib/bsync.ml" 107 4338 4393
+type(
+  Erx.skeleton -> string
+)
+ident(
+  int_ref skel_string "lib/bsync.ml" 56 2461 2465 "lib/bsync.ml" 56 2461 2476
+)
+"lib/bsync.ml" 107 4338 4394 "lib/bsync.ml" 107 4338 4397
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref bkl "lib/bsync.ml" 104 4195 4234 "lib/bsync.ml" 104 4195 4237
+)
+"lib/bsync.ml" 107 4338 4381 "lib/bsync.ml" 107 4338 4398
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 107 4338 4400 "lib/bsync.ml" 107 4338 4414
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 107 4338 4415 "lib/bsync.ml" 107 4338 4416
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 104 4195 4238 "lib/bsync.ml" 104 4195 4239
+)
+"lib/bsync.ml" 107 4338 4399 "lib/bsync.ml" 107 4338 4417
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 106 4268 4272 "lib/bsync.ml" 107 4338 4418
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 105 4243 4245 "lib/bsync.ml" 107 4338 4418
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/bsync.ml" 109 4420 4424 "lib/bsync.ml" 109 4420 4435
+type(
+  'a -> 'a -> 'a -> ('a * dir) option
+)
+ident(
+  def atomic_sync "lib/bsync.ml" 115 4543 4543 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 109 4420 4436 "lib/bsync.ml" 109 4420 4437
+type(
+  'a
+)
+ident(
+  def o "lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 113 4530 4541
+)
+"lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 109 4420 4439
+type(
+  'a
+)
+ident(
+  def a "lib/bsync.ml" 109 4420 4440 "lib/bsync.ml" 113 4530 4541
+)
+"lib/bsync.ml" 109 4420 4440 "lib/bsync.ml" 109 4420 4441
+type(
+  'a
+)
+ident(
+  def b "lib/bsync.ml" 110 4445 4447 "lib/bsync.ml" 113 4530 4541
+)
+"lib/bsync.ml" 110 4445 4450 "lib/bsync.ml" 110 4445 4451
+type(
+  'a
+)
+ident(
+  int_ref a "lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 109 4420 4439
+)
+"lib/bsync.ml" 110 4445 4451 "lib/bsync.ml" 110 4445 4452
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 110 4445 4452 "lib/bsync.ml" 110 4445 4453
+type(
+  'a
+)
+ident(
+  int_ref b "lib/bsync.ml" 109 4420 4440 "lib/bsync.ml" 109 4420 4441
+)
+"lib/bsync.ml" 110 4445 4450 "lib/bsync.ml" 110 4445 4453
+type(
+  bool
+)
+"lib/bsync.ml" 110 4445 4464 "lib/bsync.ml" 110 4445 4465
+type(
+  'a
+)
+ident(
+  int_ref a "lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 109 4420 4439
+)
+"lib/bsync.ml" 110 4445 4466 "lib/bsync.ml" 110 4445 4470
+type(
+  dir
+)
+"lib/bsync.ml" 110 4445 4463 "lib/bsync.ml" 110 4445 4471
+type(
+  'a * dir
+)
+"lib/bsync.ml" 110 4445 4459 "lib/bsync.ml" 110 4445 4471
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 111 4472 4482 "lib/bsync.ml" 111 4472 4483
+type(
+  'a
+)
+ident(
+  int_ref o "lib/bsync.ml" 109 4420 4436 "lib/bsync.ml" 109 4420 4437
+)
+"lib/bsync.ml" 111 4472 4483 "lib/bsync.ml" 111 4472 4484
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 111 4472 4484 "lib/bsync.ml" 111 4472 4485
+type(
+  'a
+)
+ident(
+  int_ref b "lib/bsync.ml" 109 4420 4440 "lib/bsync.ml" 109 4420 4441
+)
+"lib/bsync.ml" 111 4472 4482 "lib/bsync.ml" 111 4472 4485
+type(
+  bool
+)
+"lib/bsync.ml" 111 4472 4496 "lib/bsync.ml" 111 4472 4497
+type(
+  'a
+)
+ident(
+  int_ref a "lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 109 4420 4439
+)
+"lib/bsync.ml" 111 4472 4498 "lib/bsync.ml" 111 4472 4499
+type(
+  dir
+)
+"lib/bsync.ml" 111 4472 4495 "lib/bsync.ml" 111 4472 4500
+type(
+  'a * dir
+)
+"lib/bsync.ml" 111 4472 4491 "lib/bsync.ml" 111 4472 4500
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 112 4501 4511 "lib/bsync.ml" 112 4501 4512
+type(
+  'a
+)
+ident(
+  int_ref o "lib/bsync.ml" 109 4420 4436 "lib/bsync.ml" 109 4420 4437
+)
+"lib/bsync.ml" 112 4501 4512 "lib/bsync.ml" 112 4501 4513
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 112 4501 4513 "lib/bsync.ml" 112 4501 4514
+type(
+  'a
+)
+ident(
+  int_ref a "lib/bsync.ml" 109 4420 4438 "lib/bsync.ml" 109 4420 4439
+)
+"lib/bsync.ml" 112 4501 4511 "lib/bsync.ml" 112 4501 4514
+type(
+  bool
+)
+"lib/bsync.ml" 112 4501 4525 "lib/bsync.ml" 112 4501 4526
+type(
+  'a
+)
+ident(
+  int_ref b "lib/bsync.ml" 109 4420 4440 "lib/bsync.ml" 109 4420 4441
+)
+"lib/bsync.ml" 112 4501 4527 "lib/bsync.ml" 112 4501 4528
+type(
+  dir
+)
+"lib/bsync.ml" 112 4501 4524 "lib/bsync.ml" 112 4501 4529
+type(
+  'a * dir
+)
+"lib/bsync.ml" 112 4501 4520 "lib/bsync.ml" 112 4501 4529
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 113 4530 4537 "lib/bsync.ml" 113 4530 4541
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 112 4501 4508 "lib/bsync.ml" 113 4530 4541
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 111 4472 4479 "lib/bsync.ml" 113 4530 4541
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 110 4445 4447 "lib/bsync.ml" 113 4530 4541
+type(
+  ('a * dir) option
+)
+"lib/bsync.ml" 115 4543 4547 "lib/bsync.ml" 115 4543 4552
+type(
+  Buffer.t ->
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string * string
+)
+ident(
+  def isync "lib/bsync.ml" 239 11605 11605 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+type(
+  Buffer.t
+)
+ident(
+  def buf "lib/bsync.ml" 115 4543 4557 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 115 4543 4557 "lib/bsync.ml" 115 4543 4558
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 115 4543 4559 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 115 4543 4559 "lib/bsync.ml" 115 4543 4561
+type(
+  Erx.t
+)
+ident(
+  def ty "lib/bsync.ml" 115 4543 4562 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 115 4543 4562 "lib/bsync.ml" 115 4543 4563
+type(
+  string
+)
+ident(
+  def o "lib/bsync.ml" 115 4543 4564 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 115 4543 4564 "lib/bsync.ml" 115 4543 4565
+type(
+  string
+)
+ident(
+  def a "lib/bsync.ml" 115 4543 4566 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 115 4543 4566 "lib/bsync.ml" 115 4543 4567
+type(
+  string
+)
+ident(
+  def b "lib/bsync.ml" 116 4571 4573 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 116 4571 4581 "lib/bsync.ml" 116 4571 4590
+type(
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string
+)
+ident(
+  def isync_aux "lib/bsync.ml" 116 4571 4573 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+type(
+  path_elt list
+)
+ident(
+  def p "lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 116 4571 4595
+type(
+  Erx.t
+)
+ident(
+  def ty "lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 116 4571 4597
+type(
+  string
+)
+ident(
+  def o "lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 116 4571 4599
+type(
+  string
+)
+ident(
+  def a "lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 116 4571 4601
+type(
+  string
+)
+ident(
+  def b "lib/bsync.ml" 117 4605 4609 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 117 4605 4614 "lib/bsync.ml" 117 4605 4617
+type(
+  Erx.spine
+)
+ident(
+  def spo "lib/bsync.ml" 118 4651 4655 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 117 4605 4618 "lib/bsync.ml" 117 4605 4621
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmo "lib/bsync.ml" 118 4651 4655 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 117 4605 4613 "lib/bsync.ml" 117 4605 4622
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 117 4605 4626 "lib/bsync.ml" 117 4605 4629
+ident(
+  def sko "lib/bsync.ml" 118 4651 4655 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 117 4605 4613 "lib/bsync.ml" 117 4605 4629
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 117 4605 4632 "lib/bsync.ml" 117 4605 4641
+type(
+  Erx.t -> string -> Erx.skeleton
+)
+ident(
+  ext_ref Erx.parse
+)
+"lib/bsync.ml" 117 4605 4642 "lib/bsync.ml" 117 4605 4644
+type(
+  Erx.t
+)
+ident(
+  int_ref ty "lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 116 4571 4595
+)
+"lib/bsync.ml" 117 4605 4645 "lib/bsync.ml" 117 4605 4646
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 116 4571 4597
+)
+"lib/bsync.ml" 117 4605 4632 "lib/bsync.ml" 117 4605 4646
+call(
+  stack
+)
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 118 4651 4660 "lib/bsync.ml" 118 4651 4663
+type(
+  Erx.spine
+)
+ident(
+  def spa "lib/bsync.ml" 119 4696 4700 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 118 4651 4664 "lib/bsync.ml" 118 4651 4667
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tma "lib/bsync.ml" 119 4696 4700 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 118 4651 4659 "lib/bsync.ml" 118 4651 4668
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 118 4651 4672 "lib/bsync.ml" 118 4651 4675
+ident(
+  def ska "lib/bsync.ml" 119 4696 4700 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 118 4651 4659 "lib/bsync.ml" 118 4651 4675
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 118 4651 4678 "lib/bsync.ml" 118 4651 4687
+type(
+  Erx.t -> string -> Erx.skeleton
+)
+ident(
+  ext_ref Erx.parse
+)
+"lib/bsync.ml" 118 4651 4688 "lib/bsync.ml" 118 4651 4690
+type(
+  Erx.t
+)
+ident(
+  int_ref ty "lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 116 4571 4595
+)
+"lib/bsync.ml" 118 4651 4691 "lib/bsync.ml" 118 4651 4692
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 116 4571 4599
+)
+"lib/bsync.ml" 118 4651 4678 "lib/bsync.ml" 118 4651 4692
+call(
+  stack
+)
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 119 4696 4705 "lib/bsync.ml" 119 4696 4708
+type(
+  Erx.spine
+)
+ident(
+  def spb "lib/bsync.ml" 120 4742 4746 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 119 4696 4709 "lib/bsync.ml" 119 4696 4712
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmb "lib/bsync.ml" 120 4742 4746 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 119 4696 4704 "lib/bsync.ml" 119 4696 4713
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 119 4696 4717 "lib/bsync.ml" 119 4696 4720
+ident(
+  def skb "lib/bsync.ml" 120 4742 4746 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 119 4696 4704 "lib/bsync.ml" 119 4696 4720
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 119 4696 4723 "lib/bsync.ml" 119 4696 4732
+type(
+  Erx.t -> string -> Erx.skeleton
+)
+ident(
+  ext_ref Erx.parse
+)
+"lib/bsync.ml" 119 4696 4733 "lib/bsync.ml" 119 4696 4735
+type(
+  Erx.t
+)
+ident(
+  int_ref ty "lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 116 4571 4595
+)
+"lib/bsync.ml" 119 4696 4736 "lib/bsync.ml" 119 4696 4737
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 116 4571 4601
+)
+"lib/bsync.ml" 119 4696 4723 "lib/bsync.ml" 119 4696 4737
+call(
+  stack
+)
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 120 4742 4750 "lib/bsync.ml" 120 4742 4752
+type(
+  string
+)
+ident(
+  def o' "lib/bsync.ml" 235 11511 11515 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 120 4742 4753 "lib/bsync.ml" 120 4742 4755
+type(
+  string
+)
+ident(
+  def a' "lib/bsync.ml" 235 11511 11515 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 120 4742 4756 "lib/bsync.ml" 120 4742 4758
+type(
+  string
+)
+ident(
+  def b' "lib/bsync.ml" 235 11511 11515 "lib/bsync.ml" 235 11511 11525
+)
+"lib/bsync.ml" 120 4742 4750 "lib/bsync.ml" 120 4742 4758
+type(
+  string * string * string
+)
+"lib/bsync.ml" 121 4762 4780 "lib/bsync.ml" 121 4762 4791
+type(
+  Erx.spine -> Erx.spine -> Erx.spine -> (Erx.spine * dir) option
+)
+ident(
+  int_ref atomic_sync "lib/bsync.ml" 109 4420 4424 "lib/bsync.ml" 109 4420 4435
+)
+"lib/bsync.ml" 121 4762 4792 "lib/bsync.ml" 121 4762 4795
+type(
+  Erx.spine
+)
+ident(
+  int_ref spo "lib/bsync.ml" 117 4605 4614 "lib/bsync.ml" 117 4605 4617
+)
+"lib/bsync.ml" 121 4762 4796 "lib/bsync.ml" 121 4762 4799
+type(
+  Erx.spine
+)
+ident(
+  int_ref spa "lib/bsync.ml" 118 4651 4660 "lib/bsync.ml" 118 4651 4663
+)
+"lib/bsync.ml" 121 4762 4800 "lib/bsync.ml" 121 4762 4803
+type(
+  Erx.spine
+)
+ident(
+  int_ref spb "lib/bsync.ml" 119 4696 4705 "lib/bsync.ml" 119 4696 4708
+)
+"lib/bsync.ml" 121 4762 4780 "lib/bsync.ml" 121 4762 4803
+call(
+  stack
+)
+type(
+  (Erx.spine * dir) option
+)
+"lib/bsync.ml" 122 4809 4819 "lib/bsync.ml" 122 4809 4823
+type(
+  (Erx.spine * dir) option
+)
+"lib/bsync.ml" 123 4828 4840 "lib/bsync.ml" 123 4828 4861
+type(
+  Buffer.t -> Erx.spine -> Erx.spine -> Erx.spine -> path_elt list -> unit
+)
+ident(
+  int_ref report_spine_conflict "lib/bsync.ml" 69 2800 2804 "lib/bsync.ml" 69 2800 2825
+)
+"lib/bsync.ml" 123 4828 4862 "lib/bsync.ml" 123 4828 4865
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 123 4828 4866 "lib/bsync.ml" 123 4828 4869
+type(
+  Erx.spine
+)
+ident(
+  int_ref spo "lib/bsync.ml" 117 4605 4614 "lib/bsync.ml" 117 4605 4617
+)
+"lib/bsync.ml" 123 4828 4870 "lib/bsync.ml" 123 4828 4873
+type(
+  Erx.spine
+)
+ident(
+  int_ref spa "lib/bsync.ml" 118 4651 4660 "lib/bsync.ml" 118 4651 4663
+)
+"lib/bsync.ml" 123 4828 4874 "lib/bsync.ml" 123 4828 4877
+type(
+  Erx.spine
+)
+ident(
+  int_ref spb "lib/bsync.ml" 119 4696 4705 "lib/bsync.ml" 119 4696 4708
+)
+"lib/bsync.ml" 123 4828 4878 "lib/bsync.ml" 123 4828 4879
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 123 4828 4840 "lib/bsync.ml" 123 4828 4879
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 124 4881 4894 "lib/bsync.ml" 124 4881 4895
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 116 4571 4597
+)
+"lib/bsync.ml" 124 4881 4896 "lib/bsync.ml" 124 4881 4897
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 116 4571 4599
+)
+"lib/bsync.ml" 124 4881 4898 "lib/bsync.ml" 124 4881 4899
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 116 4571 4601
+)
+"lib/bsync.ml" 124 4881 4893 "lib/bsync.ml" 124 4881 4900
+type(
+  string * string * string
+)
+"lib/bsync.ml" 123 4828 4840 "lib/bsync.ml" 124 4881 4900
+type(
+  string * string * string
+)
+"lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+type(
+  Erx.spine
+)
+ident(
+  def s "lib/bsync.ml" 125 4901 4926 "lib/bsync.ml" 233 11484 11495
+)
+"lib/bsync.ml" 125 4901 4918 "lib/bsync.ml" 125 4901 4921
+type(
+  dir
+)
+ident(
+  def dir "lib/bsync.ml" 125 4901 4926 "lib/bsync.ml" 233 11484 11495
+)
+"lib/bsync.ml" 125 4901 4915 "lib/bsync.ml" 125 4901 4922
+type(
+  Erx.spine * dir
+)
+"lib/bsync.ml" 125 4901 4911 "lib/bsync.ml" 125 4901 4922
+type(
+  (Erx.spine * dir) option
+)
+"lib/bsync.ml" 126 4932 4948 "lib/bsync.ml" 126 4932 4954
+type(
+  Erx.TagSet.t
+)
+ident(
+  def s_tags "lib/bsync.ml" 127 4977 4989 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 126 4932 4957 "lib/bsync.ml" 126 4932 4971
+type(
+  Erx.spine -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.spine_tags
+)
+"lib/bsync.ml" 126 4932 4972 "lib/bsync.ml" 126 4932 4973
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 126 4932 4957 "lib/bsync.ml" 126 4932 4973
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 127 4977 4993 "lib/bsync.ml" 127 4977 4999
+type(
+  Erx.TagSet.t
+)
+ident(
+  def o_tags "lib/bsync.ml" 128 5025 5037 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 127 4977 5002 "lib/bsync.ml" 127 4977 5016
+type(
+  Erx.spine -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.spine_tags
+)
+"lib/bsync.ml" 127 4977 5017 "lib/bsync.ml" 127 4977 5020
+type(
+  Erx.spine
+)
+ident(
+  int_ref spo "lib/bsync.ml" 117 4605 4614 "lib/bsync.ml" 117 4605 4617
+)
+"lib/bsync.ml" 127 4977 5002 "lib/bsync.ml" 127 4977 5020
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 128 5025 5041 "lib/bsync.ml" 128 5025 5047
+type(
+  Erx.TagSet.t
+)
+ident(
+  def a_tags "lib/bsync.ml" 129 5073 5085 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 128 5025 5050 "lib/bsync.ml" 128 5025 5064
+type(
+  Erx.spine -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.spine_tags
+)
+"lib/bsync.ml" 128 5025 5065 "lib/bsync.ml" 128 5025 5068
+type(
+  Erx.spine
+)
+ident(
+  int_ref spa "lib/bsync.ml" 118 4651 4660 "lib/bsync.ml" 118 4651 4663
+)
+"lib/bsync.ml" 128 5025 5050 "lib/bsync.ml" 128 5025 5068
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 129 5073 5089 "lib/bsync.ml" 129 5073 5095
+type(
+  Erx.TagSet.t
+)
+ident(
+  def b_tags "lib/bsync.ml" 130 5121 5133 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 129 5073 5098 "lib/bsync.ml" 129 5073 5112
+type(
+  Erx.spine -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.spine_tags
+)
+"lib/bsync.ml" 129 5073 5113 "lib/bsync.ml" 129 5073 5116
+type(
+  Erx.spine
+)
+ident(
+  int_ref spb "lib/bsync.ml" 119 4696 4705 "lib/bsync.ml" 119 4696 4708
+)
+"lib/bsync.ml" 129 5073 5098 "lib/bsync.ml" 129 5073 5116
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 130 5121 5137 "lib/bsync.ml" 130 5121 5138
+type(
+  string
+)
+ident(
+  def r "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5139 "lib/bsync.ml" 130 5121 5145
+type(
+  Erx.TagSet.t
+)
+ident(
+  def r_tags "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5146 "lib/bsync.ml" 130 5121 5149
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmr "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5150 "lib/bsync.ml" 130 5121 5152
+type(
+  string
+)
+ident(
+  def rb "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5153 "lib/bsync.ml" 130 5121 5160
+type(
+  Erx.TagSet.t
+)
+ident(
+  def rb_tags "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5161 "lib/bsync.ml" 130 5121 5165
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmrb "lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 130 5121 5137 "lib/bsync.ml" 130 5121 5165
+type(
+  string * Erx.TagSet.t * Erx.box_content Erx.TagMap.t * string *
+  Erx.TagSet.t * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 131 5169 5186 "lib/bsync.ml" 131 5169 5189
+type(
+  dir
+)
+ident(
+  int_ref dir "lib/bsync.ml" 125 4901 4918 "lib/bsync.ml" 125 4901 4921
+)
+"lib/bsync.ml" 131 5169 5190 "lib/bsync.ml" 131 5169 5191
+type(
+  dir -> dir -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 131 5169 5192 "lib/bsync.ml" 131 5169 5193
+type(
+  dir
+)
+"lib/bsync.ml" 131 5169 5186 "lib/bsync.ml" 131 5169 5193
+type(
+  bool
+)
+"lib/bsync.ml" 131 5169 5199 "lib/bsync.ml" 131 5169 5202
+type(
+  string
+)
+"lib/bsync.ml" 131 5169 5203 "lib/bsync.ml" 131 5169 5209
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref a_tags "lib/bsync.ml" 128 5025 5041 "lib/bsync.ml" 128 5025 5047
+)
+"lib/bsync.ml" 131 5169 5210 "lib/bsync.ml" 131 5169 5213
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tma "lib/bsync.ml" 118 4651 4664 "lib/bsync.ml" 118 4651 4667
+)
+"lib/bsync.ml" 131 5169 5214 "lib/bsync.ml" 131 5169 5217
+type(
+  string
+)
+"lib/bsync.ml" 131 5169 5218 "lib/bsync.ml" 131 5169 5224
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref b_tags "lib/bsync.ml" 129 5073 5089 "lib/bsync.ml" 129 5073 5095
+)
+"lib/bsync.ml" 131 5169 5225 "lib/bsync.ml" 131 5169 5228
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmb "lib/bsync.ml" 119 4696 4709 "lib/bsync.ml" 119 4696 4712
+)
+"lib/bsync.ml" 131 5169 5199 "lib/bsync.ml" 131 5169 5228
+type(
+  string * Erx.TagSet.t * Erx.box_content Erx.TagMap.t * string *
+  Erx.TagSet.t * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 132 5229 5248 "lib/bsync.ml" 132 5229 5251
+type(
+  string
+)
+"lib/bsync.ml" 132 5229 5252 "lib/bsync.ml" 132 5229 5258
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref b_tags "lib/bsync.ml" 129 5073 5089 "lib/bsync.ml" 129 5073 5095
+)
+"lib/bsync.ml" 132 5229 5259 "lib/bsync.ml" 132 5229 5262
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmb "lib/bsync.ml" 119 4696 4709 "lib/bsync.ml" 119 4696 4712
+)
+"lib/bsync.ml" 132 5229 5263 "lib/bsync.ml" 132 5229 5266
+type(
+  string
+)
+"lib/bsync.ml" 132 5229 5267 "lib/bsync.ml" 132 5229 5273
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref a_tags "lib/bsync.ml" 128 5025 5041 "lib/bsync.ml" 128 5025 5047
+)
+"lib/bsync.ml" 132 5229 5274 "lib/bsync.ml" 132 5229 5277
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tma "lib/bsync.ml" 118 4651 4664 "lib/bsync.ml" 118 4651 4667
+)
+"lib/bsync.ml" 132 5229 5248 "lib/bsync.ml" 132 5229 5277
+type(
+  string * Erx.TagSet.t * Erx.box_content Erx.TagMap.t * string *
+  Erx.TagSet.t * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 131 5169 5183 "lib/bsync.ml" 132 5229 5277
+type(
+  string * Erx.TagSet.t * Erx.box_content Erx.TagMap.t * string *
+  Erx.TagSet.t * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 134 5333 5349 "lib/bsync.ml" 134 5333 5357
+type(
+  Erx.TagSet.t
+)
+ident(
+  def del_tags "lib/bsync.ml" 135 5396 5408 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 134 5333 5360 "lib/bsync.ml" 134 5333 5375
+type(
+  Erx.TagSet.t -> Erx.TagSet.t -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.TagSet.diff
+)
+"lib/bsync.ml" 134 5333 5376 "lib/bsync.ml" 134 5333 5383
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref rb_tags "lib/bsync.ml" 130 5121 5153 "lib/bsync.ml" 130 5121 5160
+)
+"lib/bsync.ml" 134 5333 5384 "lib/bsync.ml" 134 5333 5390
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref s_tags "lib/bsync.ml" 126 4932 4948 "lib/bsync.ml" 126 4932 4954
+)
+"lib/bsync.ml" 134 5333 5360 "lib/bsync.ml" 134 5333 5390
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 135 5396 5412 "lib/bsync.ml" 135 5396 5420
+type(
+  Erx.TagSet.t
+)
+ident(
+  def add_tags "lib/bsync.ml" 136 5457 5469 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 135 5396 5423 "lib/bsync.ml" 135 5396 5438
+type(
+  Erx.TagSet.t -> Erx.TagSet.t -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.TagSet.diff
+)
+"lib/bsync.ml" 135 5396 5439 "lib/bsync.ml" 135 5396 5445
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref r_tags "lib/bsync.ml" 130 5121 5139 "lib/bsync.ml" 130 5121 5145
+)
+"lib/bsync.ml" 135 5396 5446 "lib/bsync.ml" 135 5396 5452
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref s_tags "lib/bsync.ml" 126 4932 4948 "lib/bsync.ml" 126 4932 4954
+)
+"lib/bsync.ml" 135 5396 5423 "lib/bsync.ml" 135 5396 5452
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 136 5457 5473 "lib/bsync.ml" 136 5457 5481
+type(
+  Erx.TagSet.t
+)
+ident(
+  def mod_tags "lib/bsync.ml" 140 5639 5651 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 137 5485 5499 "lib/bsync.ml" 137 5485 5516
+type(
+  (Erx.TagSet.elt -> bool) -> Erx.TagSet.t -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.TagSet.filter
+)
+"lib/bsync.ml" 138 5518 5539 "lib/bsync.ml" 138 5518 5541
+type(
+  Erx.TagSet.elt
+)
+ident(
+  def ti "lib/bsync.ml" 138 5518 5545 "lib/bsync.ml" 138 5518 5610
+)
+"lib/bsync.ml" 138 5518 5545 "lib/bsync.ml" 138 5518 5565
+type(
+  Erx.TagMap.key_t ->
+  Erx.box_content Erx.TagMap.t -> Erx.box_content -> Erx.box_content
+)
+ident(
+  ext_ref Erx.TagMap.safe_find
+)
+"lib/bsync.ml" 138 5518 5566 "lib/bsync.ml" 138 5518 5568
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref ti "lib/bsync.ml" 138 5518 5539 "lib/bsync.ml" 138 5518 5541
+)
+"lib/bsync.ml" 138 5518 5569 "lib/bsync.ml" 138 5518 5573
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmrb "lib/bsync.ml" 130 5121 5161 "lib/bsync.ml" 130 5121 5165
+)
+"lib/bsync.ml" 138 5518 5574 "lib/bsync.ml" 138 5518 5576
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 138 5518 5545 "lib/bsync.ml" 138 5518 5576
+call(
+  stack
+)
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 138 5518 5577 "lib/bsync.ml" 138 5518 5579
+type(
+  Erx.box_content -> Erx.box_content -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"lib/bsync.ml" 138 5518 5580 "lib/bsync.ml" 138 5518 5600
+type(
+  Erx.TagMap.key_t ->
+  Erx.box_content Erx.TagMap.t -> Erx.box_content -> Erx.box_content
+)
+ident(
+  ext_ref Erx.TagMap.safe_find
+)
+"lib/bsync.ml" 138 5518 5601 "lib/bsync.ml" 138 5518 5603
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref ti "lib/bsync.ml" 138 5518 5539 "lib/bsync.ml" 138 5518 5541
+)
+"lib/bsync.ml" 138 5518 5604 "lib/bsync.ml" 138 5518 5607
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmo "lib/bsync.ml" 117 4605 4618 "lib/bsync.ml" 117 4605 4621
+)
+"lib/bsync.ml" 138 5518 5608 "lib/bsync.ml" 138 5518 5610
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 138 5518 5580 "lib/bsync.ml" 138 5518 5610
+call(
+  stack
+)
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 138 5518 5545 "lib/bsync.ml" 138 5518 5610
+type(
+  bool
+)
+"lib/bsync.ml" 138 5518 5534 "lib/bsync.ml" 138 5518 5611
+type(
+  Erx.TagSet.elt -> bool
+)
+"lib/bsync.ml" 139 5612 5628 "lib/bsync.ml" 139 5612 5635
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref rb_tags "lib/bsync.ml" 130 5121 5153 "lib/bsync.ml" 130 5121 5160
+)
+"lib/bsync.ml" 137 5485 5499 "lib/bsync.ml" 139 5612 5635
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 140 5639 5655 "lib/bsync.ml" 140 5639 5667
+type(
+  Erx.TagSet.t
+)
+ident(
+  def del_mod_tags "lib/bsync.ml" 142 5764 5778 "lib/bsync.ml" 232 11447 11464
+)
+"lib/bsync.ml" 140 5639 5670 "lib/bsync.ml" 140 5639 5686
+type(
+  Erx.TagSet.t -> Erx.TagSet.t -> Erx.TagSet.t
+)
+ident(
+  ext_ref Erx.TagSet.inter
+)
+"lib/bsync.ml" 140 5639 5687 "lib/bsync.ml" 140 5639 5695
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref del_tags "lib/bsync.ml" 134 5333 5349 "lib/bsync.ml" 134 5333 5357
+)
+"lib/bsync.ml" 140 5639 5696 "lib/bsync.ml" 140 5639 5704
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref mod_tags "lib/bsync.ml" 136 5457 5473 "lib/bsync.ml" 136 5457 5481
+)
+"lib/bsync.ml" 140 5639 5670 "lib/bsync.ml" 140 5639 5704
+call(
+  stack
+)
+type(
+  Erx.TagSet.t
+)
+"lib/bsync.ml" 142 5764 5781 "lib/bsync.ml" 142 5764 5784
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"lib/bsync.ml" 142 5764 5786 "lib/bsync.ml" 142 5764 5805
+type(
+  Erx.TagSet.t -> bool
+)
+ident(
+  ext_ref Erx.TagSet.is_empty
+)
+"lib/bsync.ml" 142 5764 5806 "lib/bsync.ml" 142 5764 5818
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref del_mod_tags "lib/bsync.ml" 140 5639 5655 "lib/bsync.ml" 140 5639 5667
+)
+"lib/bsync.ml" 142 5764 5785 "lib/bsync.ml" 142 5764 5819
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsync.ml" 142 5764 5781 "lib/bsync.ml" 142 5764 5819
+type(
+  bool
+)
+"lib/bsync.ml" 144 5849 5867 "lib/bsync.ml" 144 5849 5886
+type(
+  Buffer.t ->
+  string ->
+  string ->
+  Erx.TagSet.t -> Erx.TagSet.t -> Erx.TagSet.t -> path_elt list -> unit
+)
+ident(
+  int_ref report_tags_del_mod "lib/bsync.ml" 81 3259 3263 "lib/bsync.ml" 81 3259 3282
+)
+"lib/bsync.ml" 144 5849 5887 "lib/bsync.ml" 144 5849 5890
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 144 5849 5891 "lib/bsync.ml" 144 5849 5892
+type(
+  string
+)
+ident(
+  int_ref r "lib/bsync.ml" 130 5121 5137 "lib/bsync.ml" 130 5121 5138
+)
+"lib/bsync.ml" 144 5849 5893 "lib/bsync.ml" 144 5849 5895
+type(
+  string
+)
+ident(
+  int_ref rb "lib/bsync.ml" 130 5121 5150 "lib/bsync.ml" 130 5121 5152
+)
+"lib/bsync.ml" 144 5849 5896 "lib/bsync.ml" 144 5849 5902
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref o_tags "lib/bsync.ml" 127 4977 4993 "lib/bsync.ml" 127 4977 4999
+)
+"lib/bsync.ml" 144 5849 5903 "lib/bsync.ml" 144 5849 5909
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref r_tags "lib/bsync.ml" 130 5121 5139 "lib/bsync.ml" 130 5121 5145
+)
+"lib/bsync.ml" 144 5849 5910 "lib/bsync.ml" 144 5849 5917
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref rb_tags "lib/bsync.ml" 130 5121 5153 "lib/bsync.ml" 130 5121 5160
+)
+"lib/bsync.ml" 144 5849 5918 "lib/bsync.ml" 144 5849 5919
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 144 5849 5867 "lib/bsync.ml" 144 5849 5919
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 145 5921 5940 "lib/bsync.ml" 145 5921 5941
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 116 4571 4597
+)
+"lib/bsync.ml" 145 5921 5942 "lib/bsync.ml" 145 5921 5943
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 116 4571 4599
+)
+"lib/bsync.ml" 145 5921 5944 "lib/bsync.ml" 145 5921 5945
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 116 4571 4601
+)
+"lib/bsync.ml" 145 5921 5939 "lib/bsync.ml" 145 5921 5946
+type(
+  string * string * string
+)
+"lib/bsync.ml" 143 5826 5842 "lib/bsync.ml" 146 5947 5966
+type(
+  string * string * string
+)
+"lib/bsync.ml" 149 6024 6042 "lib/bsync.ml" 149 6024 6060
+type(
+  Buffer.t -> dir -> act -> Erx.TagSet.t -> path_elt list -> unit
+)
+ident(
+  int_ref report_tags_action "lib/bsync.ml" 74 3038 3042 "lib/bsync.ml" 74 3038 3060
+)
+"lib/bsync.ml" 149 6024 6061 "lib/bsync.ml" 149 6024 6064
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 149 6024 6065 "lib/bsync.ml" 149 6024 6068
+type(
+  dir
+)
+ident(
+  int_ref dir "lib/bsync.ml" 125 4901 4918 "lib/bsync.ml" 125 4901 4921
+)
+"lib/bsync.ml" 149 6024 6069 "lib/bsync.ml" 149 6024 6076
+type(
+  act
+)
+"lib/bsync.ml" 149 6024 6077 "lib/bsync.ml" 149 6024 6085
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref del_tags "lib/bsync.ml" 134 5333 5349 "lib/bsync.ml" 134 5333 5357
+)
+"lib/bsync.ml" 149 6024 6086 "lib/bsync.ml" 149 6024 6087
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 149 6024 6042 "lib/bsync.ml" 149 6024 6087
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 150 6089 6107 "lib/bsync.ml" 150 6089 6125
+type(
+  Buffer.t -> dir -> act -> Erx.TagSet.t -> path_elt list -> unit
+)
+ident(
+  int_ref report_tags_action "lib/bsync.ml" 74 3038 3042 "lib/bsync.ml" 74 3038 3060
+)
+"lib/bsync.ml" 150 6089 6126 "lib/bsync.ml" 150 6089 6129
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 150 6089 6130 "lib/bsync.ml" 150 6089 6133
+type(
+  dir
+)
+ident(
+  int_ref dir "lib/bsync.ml" 125 4901 4918 "lib/bsync.ml" 125 4901 4921
+)
+"lib/bsync.ml" 150 6089 6134 "lib/bsync.ml" 150 6089 6139
+type(
+  act
+)
+"lib/bsync.ml" 150 6089 6140 "lib/bsync.ml" 150 6089 6148
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref add_tags "lib/bsync.ml" 135 5396 5412 "lib/bsync.ml" 135 5396 5420
+)
+"lib/bsync.ml" 150 6089 6149 "lib/bsync.ml" 150 6089 6150
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 150 6089 6107 "lib/bsync.ml" 150 6089 6150
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 151 6152 6174 "lib/bsync.ml" 151 6152 6177
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmo "lib/bsync.ml" 220 10948 10966 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 151 6152 6178 "lib/bsync.ml" 151 6152 6181
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tma "lib/bsync.ml" 220 10948 10966 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 151 6152 6182 "lib/bsync.ml" 151 6152 6185
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmb "lib/bsync.ml" 220 10948 10966 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 151 6152 6174 "lib/bsync.ml" 151 6152 6185
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 152 6188 6206 "lib/bsync.ml" 152 6188 6221
+type(
+  (Erx.TagSet.elt ->
+   Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+   Erx.box_content Erx.TagMap.t ->
+   Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+   Erx.box_content Erx.TagMap.t) ->
+  Erx.TagSet.t ->
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t ->
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagSet.fold
+)
+"lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+type(
+  Erx.TagSet.elt
+)
+ident(
+  def t "lib/bsync.ml" 153 6222 6249 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 153 6222 6250 "lib/bsync.ml" 153 6222 6253
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmo "lib/bsync.ml" 154 6266 6289 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 153 6222 6254 "lib/bsync.ml" 153 6222 6257
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tma "lib/bsync.ml" 154 6266 6289 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 153 6222 6258 "lib/bsync.ml" 153 6222 6261
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  def tmb "lib/bsync.ml" 154 6266 6289 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 153 6222 6249 "lib/bsync.ml" 153 6222 6262
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+type(
+  path_elt list
+)
+ident(
+  def pt "lib/bsync.ml" 155 6311 6334 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 154 6266 6302 "lib/bsync.ml" 154 6266 6303
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 154 6266 6298 "lib/bsync.ml" 154 6266 6303
+type(
+  path_elt
+)
+"lib/bsync.ml" 154 6266 6305 "lib/bsync.ml" 154 6266 6306
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 154 6266 6298 "lib/bsync.ml" 154 6266 6306
+type(
+  path_elt list
+)
+"lib/bsync.ml" 155 6311 6338 "lib/bsync.ml" 155 6311 6340
+type(
+  Erx.box_content
+)
+ident(
+  def ot "lib/bsync.ml" 156 6369 6392 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 155 6311 6343 "lib/bsync.ml" 155 6311 6358
+type(
+  Erx.skeleton -> Erx.tag -> Erx.box_content
+)
+ident(
+  ext_ref Erx.box_content
+)
+"lib/bsync.ml" 155 6311 6359 "lib/bsync.ml" 155 6311 6362
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref sko "lib/bsync.ml" 117 4605 4613 "lib/bsync.ml" 117 4605 4629
+)
+"lib/bsync.ml" 155 6311 6363 "lib/bsync.ml" 155 6311 6364
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 155 6311 6343 "lib/bsync.ml" 155 6311 6364
+call(
+  stack
+)
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 156 6369 6396 "lib/bsync.ml" 156 6369 6398
+type(
+  Erx.box_content
+)
+ident(
+  def at "lib/bsync.ml" 157 6427 6450 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 156 6369 6401 "lib/bsync.ml" 156 6369 6416
+type(
+  Erx.skeleton -> Erx.tag -> Erx.box_content
+)
+ident(
+  ext_ref Erx.box_content
+)
+"lib/bsync.ml" 156 6369 6417 "lib/bsync.ml" 156 6369 6420
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref ska "lib/bsync.ml" 118 4651 4659 "lib/bsync.ml" 118 4651 4675
+)
+"lib/bsync.ml" 156 6369 6421 "lib/bsync.ml" 156 6369 6422
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 156 6369 6401 "lib/bsync.ml" 156 6369 6422
+call(
+  stack
+)
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 157 6427 6454 "lib/bsync.ml" 157 6427 6456
+type(
+  Erx.box_content
+)
+ident(
+  def bt "lib/bsync.ml" 158 6485 6508 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 157 6427 6459 "lib/bsync.ml" 157 6427 6474
+type(
+  Erx.skeleton -> Erx.tag -> Erx.box_content
+)
+ident(
+  ext_ref Erx.box_content
+)
+"lib/bsync.ml" 157 6427 6475 "lib/bsync.ml" 157 6427 6478
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref skb "lib/bsync.ml" 119 4696 4704 "lib/bsync.ml" 119 4696 4720
+)
+"lib/bsync.ml" 157 6427 6479 "lib/bsync.ml" 157 6427 6480
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 157 6427 6459 "lib/bsync.ml" 157 6427 6480
+call(
+  stack
+)
+type(
+  Erx.box_content
+)
+"lib/bsync.ml" 158 6485 6512 "lib/bsync.ml" 158 6485 6518
+type(
+  Diff3.chunk list
+)
+ident(
+  def chunks "lib/bsync.ml" 159 6545 6568 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 158 6485 6521 "lib/bsync.ml" 158 6485 6532
+type(
+  Diff3.seq -> Diff3.seq -> Diff3.seq -> Diff3.chunk list
+)
+ident(
+  ext_ref Diff3.parse
+)
+"lib/bsync.ml" 158 6485 6533 "lib/bsync.ml" 158 6485 6535
+type(
+  Erx.box_content
+)
+ident(
+  int_ref ot "lib/bsync.ml" 155 6311 6338 "lib/bsync.ml" 155 6311 6340
+)
+"lib/bsync.ml" 158 6485 6536 "lib/bsync.ml" 158 6485 6538
+type(
+  Erx.box_content
+)
+ident(
+  int_ref at "lib/bsync.ml" 156 6369 6396 "lib/bsync.ml" 156 6369 6398
+)
+"lib/bsync.ml" 158 6485 6539 "lib/bsync.ml" 158 6485 6541
+type(
+  Erx.box_content
+)
+ident(
+  int_ref bt "lib/bsync.ml" 157 6427 6454 "lib/bsync.ml" 157 6427 6456
+)
+"lib/bsync.ml" 158 6485 6521 "lib/bsync.ml" 158 6485 6541
+call(
+  stack
+)
+type(
+  Diff3.chunk list
+)
+"lib/bsync.ml" 159 6545 6572 "lib/bsync.ml" 159 6545 6575
+type(
+  Diff3.elt list
+)
+ident(
+  def ot' "lib/bsync.ml" 216 10706 10731 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 159 6545 6576 "lib/bsync.ml" 159 6545 6579
+type(
+  Diff3.elt list
+)
+ident(
+  def at' "lib/bsync.ml" 216 10706 10731 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 159 6545 6580 "lib/bsync.ml" 159 6545 6583
+type(
+  Diff3.elt list
+)
+ident(
+  def bt' "lib/bsync.ml" 216 10706 10731 "lib/bsync.ml" 218 10810 10861
+)
+"lib/bsync.ml" 159 6545 6572 "lib/bsync.ml" 159 6545 6583
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 160 6586 6611 "lib/bsync.ml" 160 6586 6629
+type(
+  (Diff3.elt list * Diff3.elt list * Diff3.elt list ->
+   Diff3.chunk -> Diff3.elt list * Diff3.elt list * Diff3.elt list) ->
+  Diff3.elt list * Diff3.elt list * Diff3.elt list ->
+  Diff3.chunk list -> Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+type(
+  Diff3.elt list
+)
+ident(
+  def ot' "lib/bsync.ml" 161 6630 6676 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+type(
+  Diff3.elt list
+)
+ident(
+  def at' "lib/bsync.ml" 161 6630 6676 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+type(
+  Diff3.elt list
+)
+ident(
+  def bt' "lib/bsync.ml" 161 6630 6676 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 161 6630 6662 "lib/bsync.ml" 161 6630 6675
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 161 6630 6676 "lib/bsync.ml" 161 6630 6681
+type(
+  Diff3.chunk
+)
+ident(
+  def chunk "lib/bsync.ml" 162 6685 6715 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 162 6685 6721 "lib/bsync.ml" 162 6685 6726
+type(
+  Diff3.chunk
+)
+ident(
+  int_ref chunk "lib/bsync.ml" 161 6630 6676 "lib/bsync.ml" 161 6630 6681
+)
+"lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+type(
+  string
+)
+ident(
+  def k "lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 163 6732 6782 "lib/bsync.ml" 163 6732 6784
+type(
+  string
+)
+ident(
+  def oi "lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 163 6732 6779 "lib/bsync.ml" 163 6732 6785
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 163 6732 6787 "lib/bsync.ml" 163 6732 6788
+type(
+  string
+)
+"lib/bsync.ml" 163 6732 6789 "lib/bsync.ml" 163 6732 6791
+type(
+  string
+)
+ident(
+  def ai "lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 163 6732 6786 "lib/bsync.ml" 163 6732 6792
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 163 6732 6794 "lib/bsync.ml" 163 6732 6795
+type(
+  string
+)
+"lib/bsync.ml" 163 6732 6796 "lib/bsync.ml" 163 6732 6798
+type(
+  string
+)
+ident(
+  def bi "lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 163 6732 6793 "lib/bsync.ml" 163 6732 6799
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 163 6732 6766 "lib/bsync.ml" 163 6732 6800
+type(
+  Diff3.chunk
+)
+"lib/bsync.ml" 164 6805 6844 "lib/bsync.ml" 164 6805 6849
+type(
+  bool
+)
+"lib/bsync.ml" 164 6805 6855 "lib/bsync.ml" 164 6805 6872
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"lib/bsync.ml" 164 6805 6873 "lib/bsync.ml" 164 6805 6876
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 164 6805 6878 "lib/bsync.ml" 164 6805 6885
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 164 6805 6886 "lib/bsync.ml" 164 6805 6907
+type(
+  (string -> string -> string, unit, string) format
+)
+"lib/bsync.ml" 164 6805 6909 "lib/bsync.ml" 164 6805 6919
+type(
+  string -> string
+)
+ident(
+  ext_ref Misc.whack
+)
+"lib/bsync.ml" 164 6805 6920 "lib/bsync.ml" 164 6805 6921
+type(
+  string
+)
+ident(
+  int_ref k "lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+)
+"lib/bsync.ml" 164 6805 6908 "lib/bsync.ml" 164 6805 6922
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 164 6805 6924 "lib/bsync.ml" 164 6805 6938
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 164 6805 6939 "lib/bsync.ml" 164 6805 6941
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 164 6805 6923 "lib/bsync.ml" 164 6805 6942
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 164 6805 6877 "lib/bsync.ml" 164 6805 6943
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 164 6805 6855 "lib/bsync.ml" 164 6805 6943
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 164 6805 6943
+type(
+  unit
+)
+"lib/bsync.ml" 165 6981 7021 "lib/bsync.ml" 165 6981 7025
+type(
+  Erx.t
+)
+ident(
+  def ty_t "lib/bsync.ml" 168 7179 7215 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 165 6981 7034 "lib/bsync.ml" 165 6981 7046
+type(
+  Erx.t -> Erx.tag -> Erx.t option
+)
+ident(
+  ext_ref Erx.box_type
+)
+"lib/bsync.ml" 165 6981 7047 "lib/bsync.ml" 165 6981 7049
+type(
+  Erx.t
+)
+ident(
+  int_ref ty "lib/bsync.ml" 116 4571 4593 "lib/bsync.ml" 116 4571 4595
+)
+"lib/bsync.ml" 165 6981 7050 "lib/bsync.ml" 165 6981 7051
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 165 6981 7034 "lib/bsync.ml" 165 6981 7051
+call(
+  stack
+)
+type(
+  Erx.t option
+)
+"lib/bsync.ml" 166 7058 7098 "lib/bsync.ml" 166 7058 7102
+type(
+  Erx.t option
+)
+"lib/bsync.ml" 166 7058 7113 "lib/bsync.ml" 166 7058 7118
+type(
+  bool
+)
+"lib/bsync.ml" 166 7058 7106 "lib/bsync.ml" 166 7058 7118
+type(
+  Erx.t
+)
+"lib/bsync.ml" 167 7119 7164 "lib/bsync.ml" 167 7119 7167
+type(
+  Erx.t
+)
+ident(
+  def ty' "lib/bsync.ml" 167 7119 7171 "lib/bsync.ml" 167 7119 7174
+)
+"lib/bsync.ml" 167 7119 7159 "lib/bsync.ml" 167 7119 7167
+type(
+  Erx.t option
+)
+"lib/bsync.ml" 167 7119 7171 "lib/bsync.ml" 167 7119 7174
+type(
+  Erx.t
+)
+ident(
+  int_ref ty' "lib/bsync.ml" 167 7119 7164 "lib/bsync.ml" 167 7119 7167
+)
+"lib/bsync.ml" 165 6981 7028 "lib/bsync.ml" 167 7119 7174
+type(
+  Erx.t
+)
+"lib/bsync.ml" 168 7179 7219 "lib/bsync.ml" 168 7179 7222
+type(
+  string
+)
+ident(
+  def oi' "lib/bsync.ml" 169 7272 7310 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 168 7179 7223 "lib/bsync.ml" 168 7179 7226
+type(
+  string
+)
+ident(
+  def ai' "lib/bsync.ml" 169 7272 7310 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 168 7179 7227 "lib/bsync.ml" 168 7179 7230
+type(
+  string
+)
+ident(
+  def bi' "lib/bsync.ml" 169 7272 7310 "lib/bsync.ml" 169 7272 7347
+)
+"lib/bsync.ml" 168 7179 7219 "lib/bsync.ml" 168 7179 7230
+type(
+  string * string * string
+)
+"lib/bsync.ml" 168 7179 7233 "lib/bsync.ml" 168 7179 7242
+type(
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string
+)
+ident(
+  int_ref isync_aux "lib/bsync.ml" 116 4571 4581 "lib/bsync.ml" 116 4571 4590
+)
+"lib/bsync.ml" 168 7179 7248 "lib/bsync.ml" 168 7179 7249
+type(
+  Erx.key
+)
+ident(
+  int_ref k "lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+)
+"lib/bsync.ml" 168 7179 7244 "lib/bsync.ml" 168 7179 7249
+type(
+  path_elt
+)
+"lib/bsync.ml" 168 7179 7251 "lib/bsync.ml" 168 7179 7253
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 168 7179 7243 "lib/bsync.ml" 168 7179 7254
+type(
+  path_elt list
+)
+"lib/bsync.ml" 168 7179 7255 "lib/bsync.ml" 168 7179 7259
+type(
+  Erx.t
+)
+ident(
+  int_ref ty_t "lib/bsync.ml" 165 6981 7021 "lib/bsync.ml" 165 6981 7025
+)
+"lib/bsync.ml" 168 7179 7260 "lib/bsync.ml" 168 7179 7262
+type(
+  string
+)
+ident(
+  int_ref oi "lib/bsync.ml" 163 6732 6782 "lib/bsync.ml" 163 6732 6784
+)
+"lib/bsync.ml" 168 7179 7263 "lib/bsync.ml" 168 7179 7265
+type(
+  string
+)
+ident(
+  int_ref ai "lib/bsync.ml" 163 6732 6789 "lib/bsync.ml" 163 6732 6791
+)
+"lib/bsync.ml" 168 7179 7266 "lib/bsync.ml" 168 7179 7268
+type(
+  string
+)
+ident(
+  int_ref bi "lib/bsync.ml" 163 6732 6796 "lib/bsync.ml" 163 6732 6798
+)
+"lib/bsync.ml" 168 7179 7233 "lib/bsync.ml" 168 7179 7268
+call(
+  stack
+)
+type(
+  string * string * string
+)
+"lib/bsync.ml" 169 7272 7311 "lib/bsync.ml" 169 7272 7314
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 169 7272 7314 "lib/bsync.ml" 169 7272 7315
+type(
+  Diff3.elt list -> Diff3.elt list -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 169 7272 7316 "lib/bsync.ml" 169 7272 7317
+type(
+  Erx.key
+)
+ident(
+  int_ref k "lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+)
+"lib/bsync.ml" 169 7272 7318 "lib/bsync.ml" 169 7272 7321
+type(
+  string
+)
+ident(
+  int_ref oi' "lib/bsync.ml" 168 7179 7219 "lib/bsync.ml" 168 7179 7222
+)
+"lib/bsync.ml" 169 7272 7316 "lib/bsync.ml" 169 7272 7321
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 169 7272 7315 "lib/bsync.ml" 169 7272 7322
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7311 "lib/bsync.ml" 169 7272 7322
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7323 "lib/bsync.ml" 169 7272 7326
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 169 7272 7326 "lib/bsync.ml" 169 7272 7327
+type(
+  Diff3.elt list -> Diff3.elt list -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 169 7272 7328 "lib/bsync.ml" 169 7272 7329
+type(
+  Erx.key
+)
+ident(
+  int_ref k "lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+)
+"lib/bsync.ml" 169 7272 7330 "lib/bsync.ml" 169 7272 7333
+type(
+  string
+)
+ident(
+  int_ref ai' "lib/bsync.ml" 168 7179 7223 "lib/bsync.ml" 168 7179 7226
+)
+"lib/bsync.ml" 169 7272 7328 "lib/bsync.ml" 169 7272 7333
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 169 7272 7327 "lib/bsync.ml" 169 7272 7334
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7323 "lib/bsync.ml" 169 7272 7334
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7335 "lib/bsync.ml" 169 7272 7338
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 169 7272 7338 "lib/bsync.ml" 169 7272 7339
+type(
+  Diff3.elt list -> Diff3.elt list -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 169 7272 7340 "lib/bsync.ml" 169 7272 7341
+type(
+  Erx.key
+)
+ident(
+  int_ref k "lib/bsync.ml" 163 6732 6780 "lib/bsync.ml" 163 6732 6781
+)
+"lib/bsync.ml" 169 7272 7342 "lib/bsync.ml" 169 7272 7345
+type(
+  string
+)
+ident(
+  int_ref bi' "lib/bsync.ml" 168 7179 7227 "lib/bsync.ml" 168 7179 7230
+)
+"lib/bsync.ml" 169 7272 7340 "lib/bsync.ml" 169 7272 7345
+type(
+  Diff3.elt
+)
+"lib/bsync.ml" 169 7272 7339 "lib/bsync.ml" 169 7272 7346
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7335 "lib/bsync.ml" 169 7272 7346
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 169 7272 7310 "lib/bsync.ml" 169 7272 7347
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 168 7179 7215 "lib/bsync.ml" 169 7272 7347
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 165 6981 7017 "lib/bsync.ml" 169 7272 7347
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 164 6805 6841 "lib/bsync.ml" 169 7272 7347
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 170 7348 7396 "lib/bsync.ml" 170 7348 7399
+type(
+  Diff3.seq
+)
+ident(
+  def oti "lib/bsync.ml" 174 7745 7781 "lib/bsync.ml" 184 8418 8459
+)
+"lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+type(
+  Diff3.seq
+)
+ident(
+  def ati "lib/bsync.ml" 174 7745 7781 "lib/bsync.ml" 184 8418 8459
+)
+"lib/bsync.ml" 170 7348 7404 "lib/bsync.ml" 170 7348 7407
+type(
+  Diff3.seq
+)
+ident(
+  def bti "lib/bsync.ml" 174 7745 7781 "lib/bsync.ml" 184 8418 8459
+)
+"lib/bsync.ml" 170 7348 7382 "lib/bsync.ml" 170 7348 7408
+type(
+  Diff3.chunk
+)
+"lib/bsync.ml" 174 7745 7784 "lib/bsync.ml" 174 7745 7787
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 170 7348 7396 "lib/bsync.ml" 170 7348 7399
+)
+"lib/bsync.ml" 174 7745 7788 "lib/bsync.ml" 174 7745 7789
+type(
+  Diff3.seq -> Diff3.seq -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 174 7745 7790 "lib/bsync.ml" 174 7745 7793
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 170 7348 7404 "lib/bsync.ml" 170 7348 7407
+)
+"lib/bsync.ml" 174 7745 7784 "lib/bsync.ml" 174 7745 7793
+type(
+  bool
+)
+"lib/bsync.ml" 176 7844 7884 "lib/bsync.ml" 176 7844 7902
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 176 7844 7903 "lib/bsync.ml" 176 7844 7906
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 176 7844 7907 "lib/bsync.ml" 176 7844 7908
+type(
+  dir
+)
+"lib/bsync.ml" 176 7844 7909 "lib/bsync.ml" 176 7844 7916
+type(
+  act
+)
+"lib/bsync.ml" 176 7844 7917 "lib/bsync.ml" 176 7844 7920
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 170 7348 7396 "lib/bsync.ml" 170 7348 7399
+)
+"lib/bsync.ml" 176 7844 7921 "lib/bsync.ml" 176 7844 7923
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 176 7844 7884 "lib/bsync.ml" 176 7844 7923
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 177 7925 7965 "lib/bsync.ml" 177 7925 7983
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 177 7925 7984 "lib/bsync.ml" 177 7925 7987
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 177 7925 7988 "lib/bsync.ml" 177 7925 7989
+type(
+  dir
+)
+"lib/bsync.ml" 177 7925 7990 "lib/bsync.ml" 177 7925 7995
+type(
+  act
+)
+"lib/bsync.ml" 177 7925 7996 "lib/bsync.ml" 177 7925 7999
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 177 7925 8000 "lib/bsync.ml" 177 7925 8002
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 177 7925 7965 "lib/bsync.ml" 177 7925 8002
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 178 8004 8045 "lib/bsync.ml" 178 8004 8048
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 178 8004 8048 "lib/bsync.ml" 178 8004 8049
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 178 8004 8049 "lib/bsync.ml" 178 8004 8052
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 178 8004 8045 "lib/bsync.ml" 178 8004 8052
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 178 8004 8053 "lib/bsync.ml" 178 8004 8056
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 178 8004 8056 "lib/bsync.ml" 178 8004 8057
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 178 8004 8057 "lib/bsync.ml" 178 8004 8060
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 178 8004 8053 "lib/bsync.ml" 178 8004 8060
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 178 8004 8061 "lib/bsync.ml" 178 8004 8064
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 178 8004 8064 "lib/bsync.ml" 178 8004 8065
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 178 8004 8065 "lib/bsync.ml" 178 8004 8068
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 178 8004 8061 "lib/bsync.ml" 178 8004 8068
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 178 8004 8044 "lib/bsync.ml" 178 8004 8069
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 177 7925 7965 "lib/bsync.ml" 178 8004 8069
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 175 7800 7838 "lib/bsync.ml" 179 8070 8111
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 182 8267 8307 "lib/bsync.ml" 182 8267 8326
+type(
+  Buffer.t ->
+  string ->
+  string -> Diff3.seq -> Diff3.seq -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_del_mod "lib/bsync.ml" 94 3738 3742 "lib/bsync.ml" 94 3738 3761
+)
+"lib/bsync.ml" 182 8267 8327 "lib/bsync.ml" 182 8267 8330
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 182 8267 8331 "lib/bsync.ml" 182 8267 8332
+type(
+  string
+)
+ident(
+  int_ref r "lib/bsync.ml" 130 5121 5137 "lib/bsync.ml" 130 5121 5138
+)
+"lib/bsync.ml" 182 8267 8333 "lib/bsync.ml" 182 8267 8335
+type(
+  string
+)
+ident(
+  int_ref rb "lib/bsync.ml" 130 5121 5150 "lib/bsync.ml" 130 5121 5152
+)
+"lib/bsync.ml" 182 8267 8336 "lib/bsync.ml" 182 8267 8339
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 170 7348 7396 "lib/bsync.ml" 170 7348 7399
+)
+"lib/bsync.ml" 182 8267 8340 "lib/bsync.ml" 182 8267 8343
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 182 8267 8344 "lib/bsync.ml" 182 8267 8347
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 170 7348 7404 "lib/bsync.ml" 170 7348 7407
+)
+"lib/bsync.ml" 182 8267 8348 "lib/bsync.ml" 182 8267 8350
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 182 8267 8307 "lib/bsync.ml" 182 8267 8350
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 183 8352 8393 "lib/bsync.ml" 183 8352 8396
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 183 8352 8396 "lib/bsync.ml" 183 8352 8397
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 183 8352 8397 "lib/bsync.ml" 183 8352 8400
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 170 7348 7396 "lib/bsync.ml" 170 7348 7399
+)
+"lib/bsync.ml" 183 8352 8393 "lib/bsync.ml" 183 8352 8400
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 183 8352 8401 "lib/bsync.ml" 183 8352 8404
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 183 8352 8404 "lib/bsync.ml" 183 8352 8405
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 183 8352 8405 "lib/bsync.ml" 183 8352 8408
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 170 7348 7400 "lib/bsync.ml" 170 7348 7403
+)
+"lib/bsync.ml" 183 8352 8401 "lib/bsync.ml" 183 8352 8408
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 183 8352 8409 "lib/bsync.ml" 183 8352 8412
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 183 8352 8412 "lib/bsync.ml" 183 8352 8413
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 183 8352 8413 "lib/bsync.ml" 183 8352 8416
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 170 7348 7404 "lib/bsync.ml" 170 7348 7407
+)
+"lib/bsync.ml" 183 8352 8409 "lib/bsync.ml" 183 8352 8416
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 183 8352 8392 "lib/bsync.ml" 183 8352 8417
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 181 8182 8220 "lib/bsync.ml" 184 8418 8459
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 174 7745 7781 "lib/bsync.ml" 184 8418 8459
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 185 8460 8508 "lib/bsync.ml" 185 8460 8511
+type(
+  Diff3.seq
+)
+ident(
+  def oti "lib/bsync.ml" 189 8857 8893 "lib/bsync.ml" 199 9530 9571
+)
+"lib/bsync.ml" 185 8460 8512 "lib/bsync.ml" 185 8460 8515
+type(
+  Diff3.seq
+)
+ident(
+  def ati "lib/bsync.ml" 189 8857 8893 "lib/bsync.ml" 199 9530 9571
+)
+"lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+type(
+  Diff3.seq
+)
+ident(
+  def bti "lib/bsync.ml" 189 8857 8893 "lib/bsync.ml" 199 9530 9571
+)
+"lib/bsync.ml" 185 8460 8494 "lib/bsync.ml" 185 8460 8520
+type(
+  Diff3.chunk
+)
+"lib/bsync.ml" 189 8857 8896 "lib/bsync.ml" 189 8857 8899
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 185 8460 8508 "lib/bsync.ml" 185 8460 8511
+)
+"lib/bsync.ml" 189 8857 8900 "lib/bsync.ml" 189 8857 8901
+type(
+  Diff3.seq -> Diff3.seq -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 189 8857 8902 "lib/bsync.ml" 189 8857 8905
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 185 8460 8512 "lib/bsync.ml" 185 8460 8515
+)
+"lib/bsync.ml" 189 8857 8896 "lib/bsync.ml" 189 8857 8905
+type(
+  bool
+)
+"lib/bsync.ml" 191 8956 8996 "lib/bsync.ml" 191 8956 9014
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 191 8956 9015 "lib/bsync.ml" 191 8956 9018
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 191 8956 9019 "lib/bsync.ml" 191 8956 9020
+type(
+  dir
+)
+"lib/bsync.ml" 191 8956 9021 "lib/bsync.ml" 191 8956 9028
+type(
+  act
+)
+"lib/bsync.ml" 191 8956 9029 "lib/bsync.ml" 191 8956 9032
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 185 8460 8508 "lib/bsync.ml" 185 8460 8511
+)
+"lib/bsync.ml" 191 8956 9033 "lib/bsync.ml" 191 8956 9035
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 191 8956 8996 "lib/bsync.ml" 191 8956 9035
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 192 9037 9077 "lib/bsync.ml" 192 9037 9095
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 192 9037 9096 "lib/bsync.ml" 192 9037 9099
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 192 9037 9100 "lib/bsync.ml" 192 9037 9101
+type(
+  dir
+)
+"lib/bsync.ml" 192 9037 9102 "lib/bsync.ml" 192 9037 9107
+type(
+  act
+)
+"lib/bsync.ml" 192 9037 9108 "lib/bsync.ml" 192 9037 9111
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 192 9037 9112 "lib/bsync.ml" 192 9037 9114
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 192 9037 9077 "lib/bsync.ml" 192 9037 9114
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 193 9116 9157 "lib/bsync.ml" 193 9116 9160
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 193 9116 9160 "lib/bsync.ml" 193 9116 9161
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 193 9116 9161 "lib/bsync.ml" 193 9116 9164
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 193 9116 9157 "lib/bsync.ml" 193 9116 9164
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 193 9116 9165 "lib/bsync.ml" 193 9116 9168
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 193 9116 9168 "lib/bsync.ml" 193 9116 9169
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 193 9116 9169 "lib/bsync.ml" 193 9116 9172
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 193 9116 9165 "lib/bsync.ml" 193 9116 9172
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 193 9116 9173 "lib/bsync.ml" 193 9116 9176
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 193 9116 9176 "lib/bsync.ml" 193 9116 9177
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 193 9116 9177 "lib/bsync.ml" 193 9116 9180
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 193 9116 9173 "lib/bsync.ml" 193 9116 9180
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 193 9116 9156 "lib/bsync.ml" 193 9116 9181
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 192 9037 9077 "lib/bsync.ml" 193 9116 9181
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 190 8912 8950 "lib/bsync.ml" 194 9182 9223
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 197 9379 9419 "lib/bsync.ml" 197 9379 9438
+type(
+  Buffer.t ->
+  string ->
+  string -> Diff3.seq -> Diff3.seq -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_del_mod "lib/bsync.ml" 94 3738 3742 "lib/bsync.ml" 94 3738 3761
+)
+"lib/bsync.ml" 197 9379 9439 "lib/bsync.ml" 197 9379 9442
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 197 9379 9443 "lib/bsync.ml" 197 9379 9444
+type(
+  string
+)
+ident(
+  int_ref r "lib/bsync.ml" 130 5121 5137 "lib/bsync.ml" 130 5121 5138
+)
+"lib/bsync.ml" 197 9379 9445 "lib/bsync.ml" 197 9379 9447
+type(
+  string
+)
+ident(
+  int_ref rb "lib/bsync.ml" 130 5121 5150 "lib/bsync.ml" 130 5121 5152
+)
+"lib/bsync.ml" 197 9379 9448 "lib/bsync.ml" 197 9379 9451
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 185 8460 8508 "lib/bsync.ml" 185 8460 8511
+)
+"lib/bsync.ml" 197 9379 9452 "lib/bsync.ml" 197 9379 9455
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 185 8460 8512 "lib/bsync.ml" 185 8460 8515
+)
+"lib/bsync.ml" 197 9379 9456 "lib/bsync.ml" 197 9379 9459
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 197 9379 9460 "lib/bsync.ml" 197 9379 9462
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 197 9379 9419 "lib/bsync.ml" 197 9379 9462
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 198 9464 9505 "lib/bsync.ml" 198 9464 9508
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 198 9464 9508 "lib/bsync.ml" 198 9464 9509
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 198 9464 9509 "lib/bsync.ml" 198 9464 9512
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 185 8460 8508 "lib/bsync.ml" 185 8460 8511
+)
+"lib/bsync.ml" 198 9464 9505 "lib/bsync.ml" 198 9464 9512
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 198 9464 9513 "lib/bsync.ml" 198 9464 9516
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 198 9464 9516 "lib/bsync.ml" 198 9464 9517
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 198 9464 9517 "lib/bsync.ml" 198 9464 9520
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 185 8460 8512 "lib/bsync.ml" 185 8460 8515
+)
+"lib/bsync.ml" 198 9464 9513 "lib/bsync.ml" 198 9464 9520
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 198 9464 9521 "lib/bsync.ml" 198 9464 9524
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 198 9464 9524 "lib/bsync.ml" 198 9464 9525
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 198 9464 9525 "lib/bsync.ml" 198 9464 9528
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 185 8460 8516 "lib/bsync.ml" 185 8460 8519
+)
+"lib/bsync.ml" 198 9464 9521 "lib/bsync.ml" 198 9464 9528
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 198 9464 9504 "lib/bsync.ml" 198 9464 9529
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 196 9294 9332 "lib/bsync.ml" 199 9530 9571
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 189 8857 8893 "lib/bsync.ml" 199 9530 9571
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 200 9572 9621 "lib/bsync.ml" 200 9572 9624
+type(
+  Diff3.seq
+)
+ident(
+  def oti "lib/bsync.ml" 204 9971 10007 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+type(
+  Diff3.seq
+)
+ident(
+  def ati "lib/bsync.ml" 204 9971 10007 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 200 9572 9629 "lib/bsync.ml" 200 9572 9632
+type(
+  Diff3.seq
+)
+ident(
+  def bti "lib/bsync.ml" 204 9971 10007 "lib/bsync.ml" 214 10615 10656
+)
+"lib/bsync.ml" 200 9572 9606 "lib/bsync.ml" 200 9572 9633
+type(
+  Diff3.chunk
+)
+"lib/bsync.ml" 204 9971 10010 "lib/bsync.ml" 204 9971 10013
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 204 9971 10013 "lib/bsync.ml" 204 9971 10014
+type(
+  Diff3.seq -> Diff3.seq -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bsync.ml" 204 9971 10014 "lib/bsync.ml" 204 9971 10017
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 200 9572 9629 "lib/bsync.ml" 200 9572 9632
+)
+"lib/bsync.ml" 204 9971 10010 "lib/bsync.ml" 204 9971 10017
+type(
+  bool
+)
+"lib/bsync.ml" 206 10109 10149 "lib/bsync.ml" 206 10109 10167
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 206 10109 10168 "lib/bsync.ml" 206 10109 10171
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 206 10109 10172 "lib/bsync.ml" 206 10109 10176
+type(
+  dir
+)
+"lib/bsync.ml" 206 10109 10177 "lib/bsync.ml" 206 10109 10184
+type(
+  act
+)
+"lib/bsync.ml" 206 10109 10185 "lib/bsync.ml" 206 10109 10188
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 200 9572 9621 "lib/bsync.ml" 200 9572 9624
+)
+"lib/bsync.ml" 206 10109 10189 "lib/bsync.ml" 206 10109 10191
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 206 10109 10149 "lib/bsync.ml" 206 10109 10191
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 207 10193 10233 "lib/bsync.ml" 207 10193 10251
+type(
+  Buffer.t -> dir -> act -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_action "lib/bsync.ml" 86 3506 3510 "lib/bsync.ml" 86 3506 3528
+)
+"lib/bsync.ml" 207 10193 10252 "lib/bsync.ml" 207 10193 10255
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 207 10193 10256 "lib/bsync.ml" 207 10193 10260
+type(
+  dir
+)
+"lib/bsync.ml" 207 10193 10261 "lib/bsync.ml" 207 10193 10266
+type(
+  act
+)
+"lib/bsync.ml" 207 10193 10267 "lib/bsync.ml" 207 10193 10270
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 207 10193 10271 "lib/bsync.ml" 207 10193 10273
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 207 10193 10233 "lib/bsync.ml" 207 10193 10273
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 208 10275 10316 "lib/bsync.ml" 208 10275 10319
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 208 10275 10319 "lib/bsync.ml" 208 10275 10320
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 208 10275 10320 "lib/bsync.ml" 208 10275 10323
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 208 10275 10316 "lib/bsync.ml" 208 10275 10323
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 208 10275 10324 "lib/bsync.ml" 208 10275 10327
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 208 10275 10327 "lib/bsync.ml" 208 10275 10328
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 208 10275 10328 "lib/bsync.ml" 208 10275 10331
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 208 10275 10324 "lib/bsync.ml" 208 10275 10331
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 208 10275 10332 "lib/bsync.ml" 208 10275 10335
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 208 10275 10335 "lib/bsync.ml" 208 10275 10336
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 208 10275 10336 "lib/bsync.ml" 208 10275 10339
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 208 10275 10332 "lib/bsync.ml" 208 10275 10339
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 208 10275 10315 "lib/bsync.ml" 208 10275 10340
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 207 10193 10233 "lib/bsync.ml" 208 10275 10340
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 205 10024 10062 "lib/bsync.ml" 209 10341 10382
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 212 10468 10508 "lib/bsync.ml" 212 10468 10528
+type(
+  Buffer.t -> Diff3.seq -> Diff3.seq -> Diff3.seq -> path_elt list -> unit
+)
+ident(
+  int_ref report_keys_conflict "lib/bsync.ml" 99 3984 3988 "lib/bsync.ml" 99 3984 4008
+)
+"lib/bsync.ml" 212 10468 10529 "lib/bsync.ml" 212 10468 10532
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 212 10468 10533 "lib/bsync.ml" 212 10468 10536
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 200 9572 9621 "lib/bsync.ml" 200 9572 9624
+)
+"lib/bsync.ml" 212 10468 10537 "lib/bsync.ml" 212 10468 10540
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 212 10468 10541 "lib/bsync.ml" 212 10468 10544
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 200 9572 9629 "lib/bsync.ml" 200 9572 9632
+)
+"lib/bsync.ml" 212 10468 10545 "lib/bsync.ml" 212 10468 10547
+type(
+  path_elt list
+)
+ident(
+  int_ref pt "lib/bsync.ml" 154 6266 6293 "lib/bsync.ml" 154 6266 6295
+)
+"lib/bsync.ml" 212 10468 10508 "lib/bsync.ml" 212 10468 10547
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 213 10549 10590 "lib/bsync.ml" 213 10549 10593
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 161 6630 6663 "lib/bsync.ml" 161 6630 6666
+)
+"lib/bsync.ml" 213 10549 10593 "lib/bsync.ml" 213 10549 10594
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 213 10549 10594 "lib/bsync.ml" 213 10549 10597
+type(
+  Diff3.seq
+)
+ident(
+  int_ref oti "lib/bsync.ml" 200 9572 9621 "lib/bsync.ml" 200 9572 9624
+)
+"lib/bsync.ml" 213 10549 10590 "lib/bsync.ml" 213 10549 10597
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 213 10549 10598 "lib/bsync.ml" 213 10549 10601
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref at' "lib/bsync.ml" 161 6630 6667 "lib/bsync.ml" 161 6630 6670
+)
+"lib/bsync.ml" 213 10549 10601 "lib/bsync.ml" 213 10549 10602
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 213 10549 10602 "lib/bsync.ml" 213 10549 10605
+type(
+  Diff3.seq
+)
+ident(
+  int_ref ati "lib/bsync.ml" 200 9572 9625 "lib/bsync.ml" 200 9572 9628
+)
+"lib/bsync.ml" 213 10549 10598 "lib/bsync.ml" 213 10549 10605
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 213 10549 10606 "lib/bsync.ml" 213 10549 10609
+type(
+  Diff3.elt list
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 161 6630 6671 "lib/bsync.ml" 161 6630 6674
+)
+"lib/bsync.ml" 213 10549 10609 "lib/bsync.ml" 213 10549 10610
+type(
+  Diff3.elt list -> Diff3.seq -> Diff3.elt list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bsync.ml" 213 10549 10610 "lib/bsync.ml" 213 10549 10613
+type(
+  Diff3.seq
+)
+ident(
+  int_ref bti "lib/bsync.ml" 200 9572 9629 "lib/bsync.ml" 200 9572 9632
+)
+"lib/bsync.ml" 213 10549 10606 "lib/bsync.ml" 213 10549 10613
+call(
+  stack
+)
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 213 10549 10589 "lib/bsync.ml" 213 10549 10614
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 211 10424 10462 "lib/bsync.ml" 214 10615 10656
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 204 9971 10007 "lib/bsync.ml" 214 10615 10656
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 162 6685 6715 "lib/bsync.ml" 214 10615 10656
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 161 6630 6657 "lib/bsync.ml" 214 10615 10657
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list ->
+  Diff3.chunk -> Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 215 10658 10686 "lib/bsync.ml" 215 10658 10688
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 215 10658 10689 "lib/bsync.ml" 215 10658 10691
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 215 10658 10692 "lib/bsync.ml" 215 10658 10694
+type(
+  Diff3.elt list
+)
+"lib/bsync.ml" 215 10658 10685 "lib/bsync.ml" 215 10658 10695
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 215 10658 10696 "lib/bsync.ml" 215 10658 10702
+type(
+  Diff3.chunk list
+)
+ident(
+  int_ref chunks "lib/bsync.ml" 158 6485 6512 "lib/bsync.ml" 158 6485 6518
+)
+"lib/bsync.ml" 160 6586 6611 "lib/bsync.ml" 215 10658 10702
+call(
+  stack
+)
+type(
+  Diff3.elt list * Diff3.elt list * Diff3.elt list
+)
+"lib/bsync.ml" 216 10706 10732 "lib/bsync.ml" 216 10706 10746
+type(
+  Erx.TagMap.key_t ->
+  Erx.box_content ->
+  Erx.box_content Erx.TagMap.t -> Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.add
+)
+"lib/bsync.ml" 216 10706 10747 "lib/bsync.ml" 216 10706 10748
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 216 10706 10749 "lib/bsync.ml" 216 10706 10752
+type(
+  Erx.box_content
+)
+ident(
+  int_ref ot' "lib/bsync.ml" 159 6545 6572 "lib/bsync.ml" 159 6545 6575
+)
+"lib/bsync.ml" 216 10706 10753 "lib/bsync.ml" 216 10706 10756
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmo "lib/bsync.ml" 153 6222 6250 "lib/bsync.ml" 153 6222 6253
+)
+"lib/bsync.ml" 216 10706 10732 "lib/bsync.ml" 216 10706 10756
+call(
+  stack
+)
+type(
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 217 10758 10784 "lib/bsync.ml" 217 10758 10798
+type(
+  Erx.TagMap.key_t ->
+  Erx.box_content ->
+  Erx.box_content Erx.TagMap.t -> Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.add
+)
+"lib/bsync.ml" 217 10758 10799 "lib/bsync.ml" 217 10758 10800
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 217 10758 10801 "lib/bsync.ml" 217 10758 10804
+type(
+  Erx.box_content
+)
+ident(
+  int_ref at' "lib/bsync.ml" 159 6545 6576 "lib/bsync.ml" 159 6545 6579
+)
+"lib/bsync.ml" 217 10758 10805 "lib/bsync.ml" 217 10758 10808
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tma "lib/bsync.ml" 153 6222 6254 "lib/bsync.ml" 153 6222 6257
+)
+"lib/bsync.ml" 217 10758 10784 "lib/bsync.ml" 217 10758 10808
+call(
+  stack
+)
+type(
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 218 10810 10836 "lib/bsync.ml" 218 10810 10850
+type(
+  Erx.TagMap.key_t ->
+  Erx.box_content ->
+  Erx.box_content Erx.TagMap.t -> Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.add
+)
+"lib/bsync.ml" 218 10810 10851 "lib/bsync.ml" 218 10810 10852
+type(
+  Erx.TagSet.elt
+)
+ident(
+  int_ref t "lib/bsync.ml" 153 6222 6247 "lib/bsync.ml" 153 6222 6248
+)
+"lib/bsync.ml" 218 10810 10853 "lib/bsync.ml" 218 10810 10856
+type(
+  Erx.box_content
+)
+ident(
+  int_ref bt' "lib/bsync.ml" 159 6545 6580 "lib/bsync.ml" 159 6545 6583
+)
+"lib/bsync.ml" 218 10810 10857 "lib/bsync.ml" 218 10810 10860
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmb "lib/bsync.ml" 153 6222 6258 "lib/bsync.ml" 153 6222 6261
+)
+"lib/bsync.ml" 218 10810 10836 "lib/bsync.ml" 218 10810 10860
+call(
+  stack
+)
+type(
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 216 10706 10731 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 159 6545 6568 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 158 6485 6508 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 157 6427 6450 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 156 6369 6392 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 155 6311 6334 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 154 6266 6289 "lib/bsync.ml" 218 10810 10861
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 153 6222 6242 "lib/bsync.ml" 218 10810 10862
+type(
+  Erx.TagSet.elt ->
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t ->
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 219 10863 10883 "lib/bsync.ml" 219 10863 10891
+type(
+  Erx.TagSet.t
+)
+ident(
+  int_ref s_tags "lib/bsync.ml" 126 4932 4948 "lib/bsync.ml" 126 4932 4954
+)
+"lib/bsync.ml" 219 10863 10893 "lib/bsync.ml" 219 10863 10909
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.empty
+)
+"lib/bsync.ml" 219 10863 10910 "lib/bsync.ml" 219 10863 10926
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.empty
+)
+"lib/bsync.ml" 219 10863 10927 "lib/bsync.ml" 219 10863 10943
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  ext_ref Erx.TagMap.empty
+)
+"lib/bsync.ml" 219 10863 10892 "lib/bsync.ml" 219 10863 10944
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 152 6188 6206 "lib/bsync.ml" 219 10863 10944
+call(
+  stack
+)
+type(
+  Erx.box_content Erx.TagMap.t * Erx.box_content Erx.TagMap.t *
+  Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 220 10948 10970 "lib/bsync.ml" 220 10948 10974
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+ident(
+  def sko' "lib/bsync.ml" 221 10989 11007 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 220 10948 10978 "lib/bsync.ml" 220 10948 10979
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 220 10948 10980 "lib/bsync.ml" 220 10948 10983
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmo "lib/bsync.ml" 151 6152 6174 "lib/bsync.ml" 151 6152 6177
+)
+"lib/bsync.ml" 220 10948 10977 "lib/bsync.ml" 220 10948 10984
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 221 10989 11011 "lib/bsync.ml" 221 10989 11015
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+ident(
+  def ska' "lib/bsync.ml" 222 11030 11048 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 221 10989 11019 "lib/bsync.ml" 221 10989 11020
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 221 10989 11021 "lib/bsync.ml" 221 10989 11024
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tma "lib/bsync.ml" 151 6152 6178 "lib/bsync.ml" 151 6152 6181
+)
+"lib/bsync.ml" 221 10989 11018 "lib/bsync.ml" 221 10989 11025
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 222 11030 11052 "lib/bsync.ml" 222 11030 11056
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+ident(
+  def skb' "lib/bsync.ml" 223 11071 11089 "lib/bsync.ml" 231 11423 11446
+)
+"lib/bsync.ml" 222 11030 11060 "lib/bsync.ml" 222 11030 11061
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 222 11030 11062 "lib/bsync.ml" 222 11030 11065
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmb "lib/bsync.ml" 151 6152 6182 "lib/bsync.ml" 151 6152 6185
+)
+"lib/bsync.ml" 222 11030 11059 "lib/bsync.ml" 222 11030 11066
+type(
+  Erx.spine * Erx.box_content Erx.TagMap.t
+)
+"lib/bsync.ml" 223 11071 11092 "lib/bsync.ml" 223 11071 11101
+type(
+  Erx.skeleton -> bool
+)
+ident(
+  ext_ref Erx.valid
+)
+"lib/bsync.ml" 223 11071 11102 "lib/bsync.ml" 223 11071 11106
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref sko' "lib/bsync.ml" 220 10948 10970 "lib/bsync.ml" 220 10948 10974
+)
+"lib/bsync.ml" 223 11071 11092 "lib/bsync.ml" 223 11071 11106
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsync.ml" 223 11071 11107 "lib/bsync.ml" 223 11071 11109
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"lib/bsync.ml" 223 11071 11110 "lib/bsync.ml" 223 11071 11119
+type(
+  Erx.skeleton -> bool
+)
+ident(
+  ext_ref Erx.valid
+)
+"lib/bsync.ml" 223 11071 11120 "lib/bsync.ml" 223 11071 11124
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref ska' "lib/bsync.ml" 221 10989 11011 "lib/bsync.ml" 221 10989 11015
+)
+"lib/bsync.ml" 223 11071 11110 "lib/bsync.ml" 223 11071 11124
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsync.ml" 223 11071 11125 "lib/bsync.ml" 223 11071 11127
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"lib/bsync.ml" 223 11071 11128 "lib/bsync.ml" 223 11071 11137
+type(
+  Erx.skeleton -> bool
+)
+ident(
+  ext_ref Erx.valid
+)
+"lib/bsync.ml" 223 11071 11138 "lib/bsync.ml" 223 11071 11142
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref skb' "lib/bsync.ml" 222 11030 11052 "lib/bsync.ml" 222 11030 11056
+)
+"lib/bsync.ml" 223 11071 11128 "lib/bsync.ml" 223 11071 11142
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/bsync.ml" 223 11071 11110 "lib/bsync.ml" 223 11071 11142
+type(
+  bool
+)
+"lib/bsync.ml" 223 11071 11092 "lib/bsync.ml" 223 11071 11142
+type(
+  bool
+)
+"lib/bsync.ml" 224 11149 11170 "lib/bsync.ml" 224 11149 11181
+type(
+  Erx.skeleton -> string
+)
+ident(
+  ext_ref Erx.unparse
+)
+"lib/bsync.ml" 224 11149 11183 "lib/bsync.ml" 224 11149 11184
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 224 11149 11185 "lib/bsync.ml" 224 11149 11188
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmo "lib/bsync.ml" 151 6152 6174 "lib/bsync.ml" 151 6152 6177
+)
+"lib/bsync.ml" 224 11149 11182 "lib/bsync.ml" 224 11149 11189
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 224 11149 11170 "lib/bsync.ml" 224 11149 11189
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 225 11191 11212 "lib/bsync.ml" 225 11191 11223
+type(
+  Erx.skeleton -> string
+)
+ident(
+  ext_ref Erx.unparse
+)
+"lib/bsync.ml" 225 11191 11225 "lib/bsync.ml" 225 11191 11226
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 225 11191 11227 "lib/bsync.ml" 225 11191 11230
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tma "lib/bsync.ml" 151 6152 6178 "lib/bsync.ml" 151 6152 6181
+)
+"lib/bsync.ml" 225 11191 11224 "lib/bsync.ml" 225 11191 11231
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 225 11191 11212 "lib/bsync.ml" 225 11191 11231
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 226 11233 11254 "lib/bsync.ml" 226 11233 11265
+type(
+  Erx.skeleton -> string
+)
+ident(
+  ext_ref Erx.unparse
+)
+"lib/bsync.ml" 226 11233 11267 "lib/bsync.ml" 226 11233 11268
+type(
+  Erx.spine
+)
+ident(
+  int_ref s "lib/bsync.ml" 125 4901 4916 "lib/bsync.ml" 125 4901 4917
+)
+"lib/bsync.ml" 226 11233 11269 "lib/bsync.ml" 226 11233 11272
+type(
+  Erx.box_content Erx.TagMap.t
+)
+ident(
+  int_ref tmb "lib/bsync.ml" 151 6152 6182 "lib/bsync.ml" 151 6152 6185
+)
+"lib/bsync.ml" 226 11233 11266 "lib/bsync.ml" 226 11233 11273
+type(
+  Erx.skeleton
+)
+"lib/bsync.ml" 226 11233 11254 "lib/bsync.ml" 226 11233 11273
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 224 11149 11169 "lib/bsync.ml" 226 11233 11274
+type(
+  string * string * string
+)
+"lib/bsync.ml" 229 11326 11348 "lib/bsync.ml" 229 11326 11370
+type(
+  Buffer.t ->
+  Erx.skeleton -> Erx.skeleton -> Erx.skeleton -> path_elt list -> unit
+)
+ident(
+  int_ref report_schema_conflict "lib/bsync.ml" 104 4195 4199 "lib/bsync.ml" 104 4195 4221
+)
+"lib/bsync.ml" 229 11326 11371 "lib/bsync.ml" 229 11326 11374
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 229 11326 11375 "lib/bsync.ml" 229 11326 11379
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref sko' "lib/bsync.ml" 220 10948 10970 "lib/bsync.ml" 220 10948 10974
+)
+"lib/bsync.ml" 229 11326 11380 "lib/bsync.ml" 229 11326 11384
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref ska' "lib/bsync.ml" 221 10989 11011 "lib/bsync.ml" 221 10989 11015
+)
+"lib/bsync.ml" 229 11326 11385 "lib/bsync.ml" 229 11326 11389
+type(
+  Erx.skeleton
+)
+ident(
+  int_ref skb' "lib/bsync.ml" 222 11030 11052 "lib/bsync.ml" 222 11030 11056
+)
+"lib/bsync.ml" 229 11326 11390 "lib/bsync.ml" 229 11326 11391
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 116 4571 4591 "lib/bsync.ml" 116 4571 4592
+)
+"lib/bsync.ml" 229 11326 11348 "lib/bsync.ml" 229 11326 11391
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/bsync.ml" 230 11393 11416 "lib/bsync.ml" 230 11393 11417
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 116 4571 4596 "lib/bsync.ml" 116 4571 4597
+)
+"lib/bsync.ml" 230 11393 11418 "lib/bsync.ml" 230 11393 11419
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 116 4571 4598 "lib/bsync.ml" 116 4571 4599
+)
+"lib/bsync.ml" 230 11393 11420 "lib/bsync.ml" 230 11393 11421
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 116 4571 4600 "lib/bsync.ml" 116 4571 4601
+)
+"lib/bsync.ml" 230 11393 11415 "lib/bsync.ml" 230 11393 11422
+type(
+  string * string * string
+)
+"lib/bsync.ml" 228 11299 11319 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 223 11071 11089 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 222 11030 11048 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 221 10989 11007 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 220 10948 10966 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 151 6152 6170 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 150 6089 6107 "lib/bsync.ml" 231 11423 11446
+type(
+  string * string * string
+)
+"lib/bsync.ml" 148 5986 6002 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 142 5764 5778 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 140 5639 5651 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 136 5457 5469 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 135 5396 5408 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 134 5333 5345 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 130 5121 5133 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 129 5073 5085 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 128 5025 5037 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 127 4977 4989 "lib/bsync.ml" 232 11447 11464
+type(
+  string * string * string
+)
+"lib/bsync.ml" 125 4901 4926 "lib/bsync.ml" 233 11484 11495
+type(
+  string * string * string
+)
+"lib/bsync.ml" 121 4762 4768 "lib/bsync.ml" 234 11497 11506
+type(
+  string * string * string
+)
+"lib/bsync.ml" 235 11511 11516 "lib/bsync.ml" 235 11511 11518
+type(
+  string
+)
+ident(
+  int_ref o' "lib/bsync.ml" 120 4742 4750 "lib/bsync.ml" 120 4742 4752
+)
+"lib/bsync.ml" 235 11511 11519 "lib/bsync.ml" 235 11511 11521
+type(
+  string
+)
+ident(
+  int_ref a' "lib/bsync.ml" 120 4742 4753 "lib/bsync.ml" 120 4742 4755
+)
+"lib/bsync.ml" 235 11511 11522 "lib/bsync.ml" 235 11511 11524
+type(
+  string
+)
+ident(
+  int_ref b' "lib/bsync.ml" 120 4742 4756 "lib/bsync.ml" 120 4742 4758
+)
+"lib/bsync.ml" 235 11511 11515 "lib/bsync.ml" 235 11511 11525
+type(
+  string * string * string
+)
+"lib/bsync.ml" 120 4742 4746 "lib/bsync.ml" 235 11511 11525
+type(
+  string * string * string
+)
+"lib/bsync.ml" 119 4696 4700 "lib/bsync.ml" 235 11511 11525
+type(
+  string * string * string
+)
+"lib/bsync.ml" 118 4651 4655 "lib/bsync.ml" 235 11511 11525
+type(
+  string * string * string
+)
+"lib/bsync.ml" 117 4605 4609 "lib/bsync.ml" 235 11511 11525
+type(
+  string * string * string
+)
+"lib/bsync.ml" 236 11529 11535 "lib/bsync.ml" 236 11529 11537
+type(
+  string
+)
+ident(
+  def o' "lib/bsync.ml" 237 11571 11573 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 236 11529 11538 "lib/bsync.ml" 236 11529 11540
+type(
+  string
+)
+ident(
+  def a' "lib/bsync.ml" 237 11571 11573 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 236 11529 11541 "lib/bsync.ml" 236 11529 11543
+type(
+  string
+)
+ident(
+  def b' "lib/bsync.ml" 237 11571 11573 "lib/bsync.ml" 237 11571 11603
+)
+"lib/bsync.ml" 236 11529 11535 "lib/bsync.ml" 236 11529 11543
+type(
+  string * string * string
+)
+"lib/bsync.ml" 236 11529 11546 "lib/bsync.ml" 236 11529 11555
+type(
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string
+)
+ident(
+  int_ref isync_aux "lib/bsync.ml" 116 4571 4581 "lib/bsync.ml" 116 4571 4590
+)
+"lib/bsync.ml" 236 11529 11556 "lib/bsync.ml" 236 11529 11557
+type(
+  path_elt list
+)
+ident(
+  int_ref p "lib/bsync.ml" 115 4543 4557 "lib/bsync.ml" 115 4543 4558
+)
+"lib/bsync.ml" 236 11529 11558 "lib/bsync.ml" 236 11529 11560
+type(
+  Erx.t
+)
+ident(
+  int_ref ty "lib/bsync.ml" 115 4543 4559 "lib/bsync.ml" 115 4543 4561
+)
+"lib/bsync.ml" 236 11529 11561 "lib/bsync.ml" 236 11529 11562
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 115 4543 4562 "lib/bsync.ml" 115 4543 4563
+)
+"lib/bsync.ml" 236 11529 11563 "lib/bsync.ml" 236 11529 11564
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 115 4543 4564 "lib/bsync.ml" 115 4543 4565
+)
+"lib/bsync.ml" 236 11529 11565 "lib/bsync.ml" 236 11529 11566
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 115 4543 4566 "lib/bsync.ml" 115 4543 4567
+)
+"lib/bsync.ml" 236 11529 11546 "lib/bsync.ml" 236 11529 11566
+call(
+  stack
+)
+type(
+  string * string * string
+)
+"lib/bsync.ml" 237 11571 11574 "lib/bsync.ml" 237 11571 11589
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"lib/bsync.ml" 237 11571 11590 "lib/bsync.ml" 237 11571 11593
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "lib/bsync.ml" 115 4543 4553 "lib/bsync.ml" 115 4543 4556
+)
+"lib/bsync.ml" 237 11571 11574 "lib/bsync.ml" 237 11571 11593
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 237 11571 11594 "lib/bsync.ml" 237 11571 11596
+type(
+  string
+)
+ident(
+  int_ref o' "lib/bsync.ml" 236 11529 11535 "lib/bsync.ml" 236 11529 11537
+)
+"lib/bsync.ml" 237 11571 11597 "lib/bsync.ml" 237 11571 11599
+type(
+  string
+)
+ident(
+  int_ref a' "lib/bsync.ml" 236 11529 11538 "lib/bsync.ml" 236 11529 11540
+)
+"lib/bsync.ml" 237 11571 11600 "lib/bsync.ml" 237 11571 11602
+type(
+  string
+)
+ident(
+  int_ref b' "lib/bsync.ml" 236 11529 11541 "lib/bsync.ml" 236 11529 11543
+)
+"lib/bsync.ml" 237 11571 11573 "lib/bsync.ml" 237 11571 11603
+type(
+  string * string * string * string
+)
+"lib/bsync.ml" 236 11529 11531 "lib/bsync.ml" 237 11571 11603
+type(
+  string * string * string * string
+)
+"lib/bsync.ml" 116 4571 4573 "lib/bsync.ml" 237 11571 11603
+type(
+  string * string * string * string
+)
+"lib/bsync.ml" 239 11605 11609 "lib/bsync.ml" 239 11605 11617
+type(
+  Erx.t ->
+  string option ->
+  string option ->
+  string option -> string * string option * string option * string option
+)
+ident(
+  def sync_opt "lib/bsync.ml" 253 12039 12039 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 239 11605 11618 "lib/bsync.ml" 239 11605 11619
+type(
+  Erx.t
+)
+ident(
+  def t "lib/bsync.ml" 239 11605 11620 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 239 11605 11620 "lib/bsync.ml" 239 11605 11622
+type(
+  string option
+)
+ident(
+  def oo "lib/bsync.ml" 239 11605 11623 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 239 11605 11623 "lib/bsync.ml" 239 11605 11625
+type(
+  string option
+)
+ident(
+  def ao "lib/bsync.ml" 239 11605 11626 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 239 11605 11626 "lib/bsync.ml" 239 11605 11628
+type(
+  string option
+)
+ident(
+  def bo "lib/bsync.ml" 239 11605 11631 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 239 11605 11637 "lib/bsync.ml" 239 11605 11639
+type(
+  string option
+)
+ident(
+  int_ref oo "lib/bsync.ml" 239 11605 11620 "lib/bsync.ml" 239 11605 11622
+)
+"lib/bsync.ml" 239 11605 11640 "lib/bsync.ml" 239 11605 11642
+type(
+  string option
+)
+ident(
+  int_ref ao "lib/bsync.ml" 239 11605 11623 "lib/bsync.ml" 239 11605 11625
+)
+"lib/bsync.ml" 239 11605 11643 "lib/bsync.ml" 239 11605 11645
+type(
+  string option
+)
+ident(
+  int_ref bo "lib/bsync.ml" 239 11605 11626 "lib/bsync.ml" 239 11605 11628
+)
+"lib/bsync.ml" 239 11605 11637 "lib/bsync.ml" 239 11605 11645
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 240 11651 11655 "lib/bsync.ml" 240 11651 11659
+type(
+  string option
+)
+"lib/bsync.ml" 240 11651 11660 "lib/bsync.ml" 240 11651 11661
+type(
+  string option
+)
+"lib/bsync.ml" 240 11651 11662 "lib/bsync.ml" 240 11651 11663
+type(
+  string option
+)
+"lib/bsync.ml" 240 11651 11655 "lib/bsync.ml" 240 11651 11663
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 241 11664 11668 "lib/bsync.ml" 241 11664 11669
+type(
+  string option
+)
+"lib/bsync.ml" 241 11664 11670 "lib/bsync.ml" 241 11664 11674
+type(
+  string option
+)
+"lib/bsync.ml" 241 11664 11675 "lib/bsync.ml" 241 11664 11676
+type(
+  string option
+)
+"lib/bsync.ml" 241 11664 11668 "lib/bsync.ml" 241 11664 11676
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 240 11651 11655 "lib/bsync.ml" 241 11664 11676
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 242 11677 11681 "lib/bsync.ml" 242 11677 11682
+type(
+  string option
+)
+"lib/bsync.ml" 242 11677 11683 "lib/bsync.ml" 242 11677 11684
+type(
+  string option
+)
+"lib/bsync.ml" 242 11677 11685 "lib/bsync.ml" 242 11677 11689
+type(
+  string option
+)
+"lib/bsync.ml" 242 11677 11681 "lib/bsync.ml" 242 11677 11689
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 240 11651 11655 "lib/bsync.ml" 242 11677 11689
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 243 11693 11711 "lib/bsync.ml" 243 11693 11722
+type(
+  string option ->
+  string option -> string option -> (string option * dir) option
+)
+ident(
+  int_ref atomic_sync "lib/bsync.ml" 109 4420 4424 "lib/bsync.ml" 109 4420 4435
+)
+"lib/bsync.ml" 243 11693 11723 "lib/bsync.ml" 243 11693 11725
+type(
+  string option
+)
+ident(
+  int_ref oo "lib/bsync.ml" 239 11605 11620 "lib/bsync.ml" 239 11605 11622
+)
+"lib/bsync.ml" 243 11693 11726 "lib/bsync.ml" 243 11693 11728
+type(
+  string option
+)
+ident(
+  int_ref ao "lib/bsync.ml" 239 11605 11623 "lib/bsync.ml" 239 11605 11625
+)
+"lib/bsync.ml" 243 11693 11729 "lib/bsync.ml" 243 11693 11731
+type(
+  string option
+)
+ident(
+  int_ref bo "lib/bsync.ml" 239 11605 11626 "lib/bsync.ml" 239 11605 11628
+)
+"lib/bsync.ml" 243 11693 11711 "lib/bsync.ml" 243 11693 11731
+call(
+  stack
+)
+type(
+  (string option * dir) option
+)
+"lib/bsync.ml" 244 11737 11747 "lib/bsync.ml" 244 11737 11751
+type(
+  (string option * dir) option
+)
+"lib/bsync.ml" 245 11762 11775 "lib/bsync.ml" 245 11762 11782
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  int_ref sprintf "lib/bsync.ml" 24 1619 1623 "lib/bsync.ml" 24 1619 1630
+)
+"lib/bsync.ml" 245 11762 11783 "lib/bsync.ml" 245 11762 11804
+type(
+  (string -> string, unit, string) format
+)
+"lib/bsync.ml" 245 11762 11806 "lib/bsync.ml" 245 11762 11820
+type(
+  path_elt list -> string
+)
+ident(
+  int_ref string_of_path "lib/bsync.ml" 51 2249 2253 "lib/bsync.ml" 51 2249 2267
+)
+"lib/bsync.ml" 245 11762 11821 "lib/bsync.ml" 245 11762 11825
+type(
+  path_elt list
+)
+ident(
+  int_ref root "lib/bsync.ml" 49 2234 2238 "lib/bsync.ml" 49 2234 2242
+)
+"lib/bsync.ml" 245 11762 11805 "lib/bsync.ml" 245 11762 11826
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 245 11762 11775 "lib/bsync.ml" 245 11762 11826
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bsync.ml" 245 11762 11827 "lib/bsync.ml" 245 11762 11829
+type(
+  string option
+)
+ident(
+  int_ref oo "lib/bsync.ml" 239 11605 11620 "lib/bsync.ml" 239 11605 11622
+)
+"lib/bsync.ml" 245 11762 11830 "lib/bsync.ml" 245 11762 11832
+type(
+  string option
+)
+ident(
+  int_ref ao "lib/bsync.ml" 239 11605 11623 "lib/bsync.ml" 239 11605 11625
+)
+"lib/bsync.ml" 245 11762 11833 "lib/bsync.ml" 245 11762 11835
+type(
+  string option
+)
+ident(
+  int_ref bo "lib/bsync.ml" 239 11605 11626 "lib/bsync.ml" 239 11605 11628
+)
+"lib/bsync.ml" 245 11762 11774 "lib/bsync.ml" 245 11762 11836
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 246 11837 11853 "lib/bsync.ml" 246 11837 11854
+type(
+  string option
+)
+ident(
+  def r "lib/bsync.ml" 247 11862 11874 "lib/bsync.ml" 247 11862 11884
+)
+"lib/bsync.ml" 246 11837 11855 "lib/bsync.ml" 246 11837 11856
+type(
+  dir
+)
+ident(
+  def d "lib/bsync.ml" 247 11862 11874 "lib/bsync.ml" 247 11862 11884
+)
+"lib/bsync.ml" 246 11837 11852 "lib/bsync.ml" 246 11837 11857
+type(
+  string option * dir
+)
+"lib/bsync.ml" 246 11837 11847 "lib/bsync.ml" 246 11837 11857
+type(
+  (string option * dir) option
+)
+"lib/bsync.ml" 247 11862 11875 "lib/bsync.ml" 247 11862 11877
+type(
+  string
+)
+"lib/bsync.ml" 247 11862 11878 "lib/bsync.ml" 247 11862 11879
+type(
+  string option
+)
+ident(
+  int_ref r "lib/bsync.ml" 246 11837 11853 "lib/bsync.ml" 246 11837 11854
+)
+"lib/bsync.ml" 247 11862 11880 "lib/bsync.ml" 247 11862 11881
+type(
+  string option
+)
+ident(
+  int_ref r "lib/bsync.ml" 246 11837 11853 "lib/bsync.ml" 246 11837 11854
+)
+"lib/bsync.ml" 247 11862 11882 "lib/bsync.ml" 247 11862 11883
+type(
+  string option
+)
+ident(
+  int_ref r "lib/bsync.ml" 246 11837 11853 "lib/bsync.ml" 246 11837 11854
+)
+"lib/bsync.ml" 247 11862 11874 "lib/bsync.ml" 247 11862 11884
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 243 11693 11699 "lib/bsync.ml" 248 11885 11894
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 249 11895 11904 "lib/bsync.ml" 249 11895 11905
+type(
+  string
+)
+ident(
+  def o "lib/bsync.ml" 250 11923 11929 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 249 11895 11899 "lib/bsync.ml" 249 11895 11905
+type(
+  string option
+)
+"lib/bsync.ml" 249 11895 11911 "lib/bsync.ml" 249 11895 11912
+type(
+  string
+)
+ident(
+  def a "lib/bsync.ml" 250 11923 11929 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 249 11895 11906 "lib/bsync.ml" 249 11895 11912
+type(
+  string option
+)
+"lib/bsync.ml" 249 11895 11918 "lib/bsync.ml" 249 11895 11919
+type(
+  string
+)
+ident(
+  def b "lib/bsync.ml" 250 11923 11929 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 249 11895 11913 "lib/bsync.ml" 249 11895 11919
+type(
+  string option
+)
+"lib/bsync.ml" 249 11895 11899 "lib/bsync.ml" 249 11895 11919
+type(
+  string option * string option * string option
+)
+"lib/bsync.ml" 250 11923 11933 "lib/bsync.ml" 250 11923 11937
+type(
+  string
+)
+ident(
+  def acts "lib/bsync.ml" 251 11991 11997 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 250 11923 11938 "lib/bsync.ml" 250 11923 11940
+type(
+  string
+)
+ident(
+  def o' "lib/bsync.ml" 251 11991 11997 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 250 11923 11941 "lib/bsync.ml" 250 11923 11943
+type(
+  string
+)
+ident(
+  def a' "lib/bsync.ml" 251 11991 11997 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 250 11923 11944 "lib/bsync.ml" 250 11923 11946
+type(
+  string
+)
+ident(
+  def b' "lib/bsync.ml" 251 11991 11997 "lib/bsync.ml" 251 11991 12027
+)
+"lib/bsync.ml" 250 11923 11933 "lib/bsync.ml" 250 11923 11946
+type(
+  string * string * string * string
+)
+"lib/bsync.ml" 250 11923 11949 "lib/bsync.ml" 250 11923 11954
+type(
+  Buffer.t ->
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string * string
+)
+ident(
+  int_ref isync "lib/bsync.ml" 115 4543 4547 "lib/bsync.ml" 115 4543 4552
+)
+"lib/bsync.ml" 250 11923 11956 "lib/bsync.ml" 250 11923 11969
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"lib/bsync.ml" 250 11923 11970 "lib/bsync.ml" 250 11923 11973
+type(
+  int
+)
+"lib/bsync.ml" 250 11923 11955 "lib/bsync.ml" 250 11923 11974
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"lib/bsync.ml" 250 11923 11975 "lib/bsync.ml" 250 11923 11979
+type(
+  path_elt list
+)
+ident(
+  int_ref root "lib/bsync.ml" 49 2234 2238 "lib/bsync.ml" 49 2234 2242
+)
+"lib/bsync.ml" 250 11923 11980 "lib/bsync.ml" 250 11923 11981
+type(
+  Erx.t
+)
+ident(
+  int_ref t "lib/bsync.ml" 239 11605 11618 "lib/bsync.ml" 239 11605 11619
+)
+"lib/bsync.ml" 250 11923 11982 "lib/bsync.ml" 250 11923 11983
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 249 11895 11904 "lib/bsync.ml" 249 11895 11905
+)
+"lib/bsync.ml" 250 11923 11984 "lib/bsync.ml" 250 11923 11985
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 249 11895 11911 "lib/bsync.ml" 249 11895 11912
+)
+"lib/bsync.ml" 250 11923 11986 "lib/bsync.ml" 250 11923 11987
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 249 11895 11918 "lib/bsync.ml" 249 11895 11919
+)
+"lib/bsync.ml" 250 11923 11949 "lib/bsync.ml" 250 11923 11987
+call(
+  stack
+)
+type(
+  string * string * string * string
+)
+"lib/bsync.ml" 251 11991 11998 "lib/bsync.ml" 251 11991 12002
+type(
+  string
+)
+ident(
+  int_ref acts "lib/bsync.ml" 250 11923 11933 "lib/bsync.ml" 250 11923 11937
+)
+"lib/bsync.ml" 251 11991 12008 "lib/bsync.ml" 251 11991 12010
+type(
+  string
+)
+ident(
+  int_ref o' "lib/bsync.ml" 250 11923 11938 "lib/bsync.ml" 250 11923 11940
+)
+"lib/bsync.ml" 251 11991 12003 "lib/bsync.ml" 251 11991 12010
+type(
+  string option
+)
+"lib/bsync.ml" 251 11991 12016 "lib/bsync.ml" 251 11991 12018
+type(
+  string
+)
+ident(
+  int_ref a' "lib/bsync.ml" 250 11923 11941 "lib/bsync.ml" 250 11923 11943
+)
+"lib/bsync.ml" 251 11991 12011 "lib/bsync.ml" 251 11991 12018
+type(
+  string option
+)
+"lib/bsync.ml" 251 11991 12024 "lib/bsync.ml" 251 11991 12026
+type(
+  string
+)
+ident(
+  int_ref b' "lib/bsync.ml" 250 11923 11944 "lib/bsync.ml" 250 11923 11946
+)
+"lib/bsync.ml" 251 11991 12019 "lib/bsync.ml" 251 11991 12026
+type(
+  string option
+)
+"lib/bsync.ml" 251 11991 11997 "lib/bsync.ml" 251 11991 12027
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 250 11923 11929 "lib/bsync.ml" 251 11991 12027
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 239 11605 11631 "lib/bsync.ml" 251 11991 12027
+type(
+  string * string option * string option * string option
+)
+"lib/bsync.ml" 253 12039 12043 "lib/bsync.ml" 253 12039 12047
+type(
+  Erx.t -> string -> string -> string -> string * string * string * string
+)
+ident(
+  def sync "lib/bsync.ml" 253 12039 12096 "lib/bsync.ml" 1 0 -1
+)
+"lib/bsync.ml" 253 12039 12048 "lib/bsync.ml" 253 12039 12049
+type(
+  Erx.t
+)
+ident(
+  def t "lib/bsync.ml" 253 12039 12050 "lib/bsync.ml" 253 12039 12096
+)
+"lib/bsync.ml" 253 12039 12050 "lib/bsync.ml" 253 12039 12051
+type(
+  string
+)
+ident(
+  def o "lib/bsync.ml" 253 12039 12052 "lib/bsync.ml" 253 12039 12096
+)
+"lib/bsync.ml" 253 12039 12052 "lib/bsync.ml" 253 12039 12053
+type(
+  string
+)
+ident(
+  def a "lib/bsync.ml" 253 12039 12054 "lib/bsync.ml" 253 12039 12096
+)
+"lib/bsync.ml" 253 12039 12054 "lib/bsync.ml" 253 12039 12055
+type(
+  string
+)
+ident(
+  def b "lib/bsync.ml" 253 12039 12058 "lib/bsync.ml" 253 12039 12096
+)
+"lib/bsync.ml" 253 12039 12058 "lib/bsync.ml" 253 12039 12063
+type(
+  Buffer.t ->
+  path_elt list ->
+  Erx.t -> string -> string -> string -> string * string * string * string
+)
+ident(
+  int_ref isync "lib/bsync.ml" 115 4543 4547 "lib/bsync.ml" 115 4543 4552
+)
+"lib/bsync.ml" 253 12039 12065 "lib/bsync.ml" 253 12039 12078
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"lib/bsync.ml" 253 12039 12079 "lib/bsync.ml" 253 12039 12082
+type(
+  int
+)
+"lib/bsync.ml" 253 12039 12064 "lib/bsync.ml" 253 12039 12083
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"lib/bsync.ml" 253 12039 12084 "lib/bsync.ml" 253 12039 12088
+type(
+  path_elt list
+)
+ident(
+  int_ref root "lib/bsync.ml" 49 2234 2238 "lib/bsync.ml" 49 2234 2242
+)
+"lib/bsync.ml" 253 12039 12089 "lib/bsync.ml" 253 12039 12090
+type(
+  Erx.t
+)
+ident(
+  int_ref t "lib/bsync.ml" 253 12039 12048 "lib/bsync.ml" 253 12039 12049
+)
+"lib/bsync.ml" 253 12039 12091 "lib/bsync.ml" 253 12039 12092
+type(
+  string
+)
+ident(
+  int_ref o "lib/bsync.ml" 253 12039 12050 "lib/bsync.ml" 253 12039 12051
+)
+"lib/bsync.ml" 253 12039 12093 "lib/bsync.ml" 253 12039 12094
+type(
+  string
+)
+ident(
+  int_ref a "lib/bsync.ml" 253 12039 12052 "lib/bsync.ml" 253 12039 12053
+)
+"lib/bsync.ml" 253 12039 12095 "lib/bsync.ml" 253 12039 12096
+type(
+  string
+)
+ident(
+  int_ref b "lib/bsync.ml" 253 12039 12054 "lib/bsync.ml" 253 12039 12055
+)
+"lib/bsync.ml" 253 12039 12058 "lib/bsync.ml" 253 12039 12096
+call(
+  tail
+)
+type(
+  string * string * string * string
+)

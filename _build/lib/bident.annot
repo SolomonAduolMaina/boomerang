@@ -1,0 +1,2315 @@
+"lib/bident.ml" 21 1480 1484 "lib/bident.ml" 21 1480 1491
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  def sprintf "lib/bident.ml" 24 1542 1542 "lib/bident.ml" 1 0 -1
+)
+"lib/bident.ml" 21 1480 1494 "lib/bident.ml" 21 1480 1508
+type(
+  ('a, unit, string) format -> 'a
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bident.ml" 28 1663 1669 "lib/bident.ml" 28 1663 1671
+type(
+  'a -> 'b -> 'a * 'b
+)
+ident(
+  def mk "lib/bident.ml" 30 1702 1704 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 28 1663 1672 "lib/bident.ml" 28 1663 1673
+type(
+  'a
+)
+ident(
+  def i "lib/bident.ml" 28 1663 1674 "lib/bident.ml" 28 1663 1683
+)
+"lib/bident.ml" 28 1663 1674 "lib/bident.ml" 28 1663 1675
+type(
+  'b
+)
+ident(
+  def s "lib/bident.ml" 28 1663 1678 "lib/bident.ml" 28 1663 1683
+)
+"lib/bident.ml" 28 1663 1679 "lib/bident.ml" 28 1663 1680
+type(
+  'a
+)
+ident(
+  int_ref i "lib/bident.ml" 28 1663 1672 "lib/bident.ml" 28 1663 1673
+)
+"lib/bident.ml" 28 1663 1681 "lib/bident.ml" 28 1663 1682
+type(
+  'b
+)
+ident(
+  int_ref s "lib/bident.ml" 28 1663 1674 "lib/bident.ml" 28 1663 1675
+)
+"lib/bident.ml" 28 1663 1678 "lib/bident.ml" 28 1663 1683
+type(
+  'a * 'b
+)
+"lib/bident.ml" 30 1702 1708 "lib/bident.ml" 30 1702 1717
+type(
+  'c * 'd -> 'c
+)
+ident(
+  def info_of_t "lib/bident.ml" 31 1728 1730 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 30 1702 1719 "lib/bident.ml" 30 1702 1720
+type(
+  'c
+)
+ident(
+  def i "lib/bident.ml" 30 1702 1726 "lib/bident.ml" 30 1702 1727
+)
+"lib/bident.ml" 30 1702 1721 "lib/bident.ml" 30 1702 1722
+type(
+  'd
+)
+"lib/bident.ml" 30 1702 1718 "lib/bident.ml" 30 1702 1723
+type(
+  'c * 'd
+)
+"lib/bident.ml" 30 1702 1726 "lib/bident.ml" 30 1702 1727
+type(
+  'c
+)
+ident(
+  int_ref i "lib/bident.ml" 30 1702 1719 "lib/bident.ml" 30 1702 1720
+)
+"lib/bident.ml" 31 1728 1734 "lib/bident.ml" 31 1728 1745
+type(
+  'e * 'f -> 'f
+)
+ident(
+  def string_of_t "lib/bident.ml" 33 1776 1778 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 31 1728 1747 "lib/bident.ml" 31 1728 1748
+type(
+  'e
+)
+"lib/bident.ml" 31 1728 1749 "lib/bident.ml" 31 1728 1750
+type(
+  'f
+)
+ident(
+  def s "lib/bident.ml" 31 1728 1754 "lib/bident.ml" 31 1728 1755
+)
+"lib/bident.ml" 31 1728 1746 "lib/bident.ml" 31 1728 1751
+type(
+  'e * 'f
+)
+"lib/bident.ml" 31 1728 1754 "lib/bident.ml" 31 1728 1755
+type(
+  'f
+)
+ident(
+  int_ref s "lib/bident.ml" 31 1728 1749 "lib/bident.ml" 31 1728 1750
+)
+"lib/bident.ml" 33 1776 1782 "lib/bident.ml" 33 1776 1789
+type(
+  t -> t -> int
+)
+ident(
+  def compare "lib/bident.ml" 34 1828 1830 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 33 1776 1792 "lib/bident.ml" 33 1776 1793
+type(
+  Info.t
+)
+"lib/bident.ml" 33 1776 1794 "lib/bident.ml" 33 1776 1796
+type(
+  string
+)
+ident(
+  def x1 "lib/bident.ml" 33 1776 1801 "lib/bident.ml" 33 1776 1827
+)
+"lib/bident.ml" 33 1776 1791 "lib/bident.ml" 33 1776 1797
+type(
+  t
+)
+"lib/bident.ml" 33 1776 1803 "lib/bident.ml" 33 1776 1804
+type(
+  Info.t
+)
+"lib/bident.ml" 33 1776 1805 "lib/bident.ml" 33 1776 1807
+type(
+  string
+)
+ident(
+  def x2 "lib/bident.ml" 33 1776 1814 "lib/bident.ml" 33 1776 1827
+)
+"lib/bident.ml" 33 1776 1802 "lib/bident.ml" 33 1776 1808
+type(
+  t
+)
+"lib/bident.ml" 33 1776 1814 "lib/bident.ml" 33 1776 1821
+type(
+  string -> string -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"lib/bident.ml" 33 1776 1822 "lib/bident.ml" 33 1776 1824
+type(
+  string
+)
+ident(
+  int_ref x1 "lib/bident.ml" 33 1776 1794 "lib/bident.ml" 33 1776 1796
+)
+"lib/bident.ml" 33 1776 1825 "lib/bident.ml" 33 1776 1827
+type(
+  string
+)
+ident(
+  int_ref x2 "lib/bident.ml" 33 1776 1805 "lib/bident.ml" 33 1776 1807
+)
+"lib/bident.ml" 33 1776 1814 "lib/bident.ml" 33 1776 1827
+type(
+  int
+)
+"lib/bident.ml" 34 1828 1834 "lib/bident.ml" 34 1828 1839
+type(
+  t -> t -> bool
+)
+ident(
+  def equal "lib/bident.ml" 36 1890 1892 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 34 1828 1842 "lib/bident.ml" 34 1828 1843
+type(
+  Info.t
+)
+"lib/bident.ml" 34 1828 1844 "lib/bident.ml" 34 1828 1846
+type(
+  string
+)
+ident(
+  def x1 "lib/bident.ml" 34 1828 1851 "lib/bident.ml" 34 1828 1871
+)
+"lib/bident.ml" 34 1828 1841 "lib/bident.ml" 34 1828 1847
+type(
+  t
+)
+"lib/bident.ml" 34 1828 1853 "lib/bident.ml" 34 1828 1854
+type(
+  Info.t
+)
+"lib/bident.ml" 34 1828 1855 "lib/bident.ml" 34 1828 1857
+type(
+  string
+)
+ident(
+  def x2 "lib/bident.ml" 34 1828 1864 "lib/bident.ml" 34 1828 1871
+)
+"lib/bident.ml" 34 1828 1852 "lib/bident.ml" 34 1828 1858
+type(
+  t
+)
+"lib/bident.ml" 34 1828 1864 "lib/bident.ml" 34 1828 1866
+type(
+  string
+)
+ident(
+  int_ref x1 "lib/bident.ml" 34 1828 1844 "lib/bident.ml" 34 1828 1846
+)
+"lib/bident.ml" 34 1828 1867 "lib/bident.ml" 34 1828 1868
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bident.ml" 34 1828 1869 "lib/bident.ml" 34 1828 1871
+type(
+  string
+)
+ident(
+  int_ref x2 "lib/bident.ml" 34 1828 1855 "lib/bident.ml" 34 1828 1857
+)
+"lib/bident.ml" 34 1828 1864 "lib/bident.ml" 34 1828 1871
+type(
+  bool
+)
+"lib/bident.ml" 36 1890 1896 "lib/bident.ml" 36 1890 1901
+type(
+  'g * string -> 'g * string
+)
+ident(
+  def prime "lib/bident.ml" 38 1940 1942 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 36 1890 1903 "lib/bident.ml" 36 1890 1904
+type(
+  'g
+)
+ident(
+  def i "lib/bident.ml" 36 1890 1910 "lib/bident.ml" 36 1890 1921
+)
+"lib/bident.ml" 36 1890 1905 "lib/bident.ml" 36 1890 1906
+type(
+  string
+)
+ident(
+  def x "lib/bident.ml" 36 1890 1910 "lib/bident.ml" 36 1890 1921
+)
+"lib/bident.ml" 36 1890 1902 "lib/bident.ml" 36 1890 1907
+type(
+  'g * string
+)
+"lib/bident.ml" 36 1890 1911 "lib/bident.ml" 36 1890 1912
+type(
+  'g
+)
+ident(
+  int_ref i "lib/bident.ml" 36 1890 1903 "lib/bident.ml" 36 1890 1904
+)
+"lib/bident.ml" 36 1890 1913 "lib/bident.ml" 36 1890 1914
+type(
+  string
+)
+ident(
+  int_ref x "lib/bident.ml" 36 1890 1905 "lib/bident.ml" 36 1890 1906
+)
+"lib/bident.ml" 36 1890 1915 "lib/bident.ml" 36 1890 1916
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/bident.ml" 36 1890 1917 "lib/bident.ml" 36 1890 1920
+type(
+  string
+)
+"lib/bident.ml" 36 1890 1913 "lib/bident.ml" 36 1890 1920
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bident.ml" 36 1890 1910 "lib/bident.ml" 36 1890 1921
+type(
+  'g * string
+)
+"lib/bident.ml" 38 1940 1946 "lib/bident.ml" 38 1940 1950
+type(
+  Info.t * string
+)
+ident(
+  def wild "lib/bident.ml" 39 1971 1973 "lib/bident.ml" 49 2203 2206
+)
+"lib/bident.ml" 38 1940 1961 "lib/bident.ml" 38 1940 1964
+type(
+  string
+)
+"lib/bident.ml" 38 1940 1954 "lib/bident.ml" 38 1940 1964
+type(
+  Info.t
+)
+"lib/bident.ml" 38 1940 1966 "lib/bident.ml" 38 1940 1969
+type(
+  string
+)
+"lib/bident.ml" 38 1940 1953 "lib/bident.ml" 38 1940 1970
+type(
+  Info.t * string
+)
+"lib/bident.ml" 43 2050 2058 "lib/bident.ml" 43 2050 2065
+type(
+  t -> t -> int
+)
+ident(
+  def compare "lib/bident.ml" 43 2050 2075 "lib/bident.ml" 44 2076 2081
+)
+"lib/bident.ml" 43 2050 2068 "lib/bident.ml" 43 2050 2075
+type(
+  t -> t -> int
+)
+ident(
+  int_ref compare "lib/bident.ml" 33 1776 1782 "lib/bident.ml" 33 1776 1789
+)
+"lib/bident.ml" 46 2109 2124 "lib/bident.ml" 46 2109 2136
+call(
+  stack
+)
+"lib/bident.ml" 48 2175 2190 "lib/bident.ml" 48 2175 2202
+call(
+  stack
+)
+"lib/bident.ml" 56 2389 2395 "lib/bident.ml" 56 2389 2397
+type(
+  'a -> 'b -> 'a * 'b
+)
+ident(
+  def mk "lib/bident.ml" 57 2412 2414 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 56 2389 2398 "lib/bident.ml" 56 2389 2400
+type(
+  'a
+)
+ident(
+  def qs "lib/bident.ml" 56 2389 2401 "lib/bident.ml" 56 2389 2411
+)
+"lib/bident.ml" 56 2389 2401 "lib/bident.ml" 56 2389 2402
+type(
+  'b
+)
+ident(
+  def x "lib/bident.ml" 56 2389 2405 "lib/bident.ml" 56 2389 2411
+)
+"lib/bident.ml" 56 2389 2406 "lib/bident.ml" 56 2389 2408
+type(
+  'a
+)
+ident(
+  int_ref qs "lib/bident.ml" 56 2389 2398 "lib/bident.ml" 56 2389 2400
+)
+"lib/bident.ml" 56 2389 2409 "lib/bident.ml" 56 2389 2410
+type(
+  'b
+)
+ident(
+  int_ref x "lib/bident.ml" 56 2389 2401 "lib/bident.ml" 56 2389 2402
+)
+"lib/bident.ml" 56 2389 2405 "lib/bident.ml" 56 2389 2411
+type(
+  'a * 'b
+)
+"lib/bident.ml" 57 2412 2418 "lib/bident.ml" 57 2412 2425
+type(
+  'c -> 'd list * 'c
+)
+ident(
+  def t_of_id "lib/bident.ml" 59 2456 2458 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 57 2412 2426 "lib/bident.ml" 57 2412 2427
+type(
+  'c
+)
+ident(
+  def x "lib/bident.ml" 57 2412 2430 "lib/bident.ml" 57 2412 2437
+)
+"lib/bident.ml" 57 2412 2430 "lib/bident.ml" 57 2412 2432
+type(
+  'd list -> 'c -> 'd list * 'c
+)
+ident(
+  int_ref mk "lib/bident.ml" 56 2389 2395 "lib/bident.ml" 56 2389 2397
+)
+"lib/bident.ml" 57 2412 2433 "lib/bident.ml" 57 2412 2435
+type(
+  'd list
+)
+"lib/bident.ml" 57 2412 2436 "lib/bident.ml" 57 2412 2437
+type(
+  'c
+)
+ident(
+  int_ref x "lib/bident.ml" 57 2412 2426 "lib/bident.ml" 57 2412 2427
+)
+"lib/bident.ml" 57 2412 2430 "lib/bident.ml" 57 2412 2437
+call(
+  tail
+)
+type(
+  'd list * 'c
+)
+"lib/bident.ml" 59 2456 2462 "lib/bident.ml" 59 2456 2471
+type(
+  (Info.t * 'e) list * (Info.t * 'f) -> Info.t
+)
+ident(
+  def info_of_t "lib/bident.ml" 62 2589 2591 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 59 2456 2472 "lib/bident.ml" 59 2456 2473
+type(
+  (Info.t * 'e) list * (Info.t * 'f)
+)
+ident(
+  def q "lib/bident.ml" 59 2456 2476 "lib/bident.ml" 61 2520 2588
+)
+"lib/bident.ml" 59 2456 2482 "lib/bident.ml" 59 2456 2483
+type(
+  (Info.t * 'e) list * (Info.t * 'f)
+)
+ident(
+  int_ref q "lib/bident.ml" 59 2456 2472 "lib/bident.ml" 59 2456 2473
+)
+"lib/bident.ml" 60 2489 2496 "lib/bident.ml" 60 2489 2498
+type(
+  (Info.t * 'e) list
+)
+"lib/bident.ml" 60 2489 2499 "lib/bident.ml" 60 2489 2500
+type(
+  Info.t * 'f
+)
+ident(
+  def x "lib/bident.ml" 60 2489 2505 "lib/bident.ml" 60 2489 2519
+)
+"lib/bident.ml" 60 2489 2495 "lib/bident.ml" 60 2489 2501
+type(
+  (Info.t * 'e) list * (Info.t * 'f)
+)
+"lib/bident.ml" 60 2489 2505 "lib/bident.ml" 60 2489 2517
+type(
+  Info.t * 'f -> Info.t
+)
+ident(
+  int_ref Id.info_of_t "lib/bident.ml" 30 1702 1708 "lib/bident.ml" 30 1702 1717
+)
+"lib/bident.ml" 60 2489 2518 "lib/bident.ml" 60 2489 2519
+type(
+  Info.t * 'f
+)
+ident(
+  int_ref x "lib/bident.ml" 60 2489 2499 "lib/bident.ml" 60 2489 2500
+)
+"lib/bident.ml" 60 2489 2505 "lib/bident.ml" 60 2489 2519
+call(
+  tail
+)
+type(
+  Info.t
+)
+"lib/bident.ml" 61 2520 2527 "lib/bident.ml" 61 2520 2529
+type(
+  Info.t * 'e
+)
+ident(
+  def x1 "lib/bident.ml" 61 2520 2539 "lib/bident.ml" 61 2520 2588
+)
+"lib/bident.ml" 61 2520 2531 "lib/bident.ml" 61 2520 2532
+type(
+  (Info.t * 'e) list
+)
+"lib/bident.ml" 61 2520 2527 "lib/bident.ml" 61 2520 2532
+type(
+  (Info.t * 'e) list
+)
+"lib/bident.ml" 61 2520 2533 "lib/bident.ml" 61 2520 2534
+type(
+  Info.t * 'f
+)
+ident(
+  def x "lib/bident.ml" 61 2520 2539 "lib/bident.ml" 61 2520 2588
+)
+"lib/bident.ml" 61 2520 2526 "lib/bident.ml" 61 2520 2535
+type(
+  (Info.t * 'e) list * (Info.t * 'f)
+)
+"lib/bident.ml" 61 2520 2539 "lib/bident.ml" 61 2520 2553
+type(
+  Info.t -> Info.t -> Info.t
+)
+ident(
+  ext_ref Info.merge_inc
+)
+"lib/bident.ml" 61 2520 2555 "lib/bident.ml" 61 2520 2567
+type(
+  Info.t * 'e -> Info.t
+)
+ident(
+  int_ref Id.info_of_t "lib/bident.ml" 30 1702 1708 "lib/bident.ml" 30 1702 1717
+)
+"lib/bident.ml" 61 2520 2568 "lib/bident.ml" 61 2520 2570
+type(
+  Info.t * 'e
+)
+ident(
+  int_ref x1 "lib/bident.ml" 61 2520 2527 "lib/bident.ml" 61 2520 2529
+)
+"lib/bident.ml" 61 2520 2554 "lib/bident.ml" 61 2520 2571
+call(
+  stack
+)
+type(
+  Info.t
+)
+"lib/bident.ml" 61 2520 2573 "lib/bident.ml" 61 2520 2585
+type(
+  Info.t * 'f -> Info.t
+)
+ident(
+  int_ref Id.info_of_t "lib/bident.ml" 30 1702 1708 "lib/bident.ml" 30 1702 1717
+)
+"lib/bident.ml" 61 2520 2586 "lib/bident.ml" 61 2520 2587
+type(
+  Info.t * 'f
+)
+ident(
+  int_ref x "lib/bident.ml" 61 2520 2533 "lib/bident.ml" 61 2520 2534
+)
+"lib/bident.ml" 61 2520 2572 "lib/bident.ml" 61 2520 2588
+call(
+  stack
+)
+type(
+  Info.t
+)
+"lib/bident.ml" 61 2520 2539 "lib/bident.ml" 61 2520 2588
+call(
+  tail
+)
+type(
+  Info.t
+)
+"lib/bident.ml" 59 2456 2476 "lib/bident.ml" 61 2520 2588
+type(
+  Info.t
+)
+"lib/bident.ml" 62 2589 2595 "lib/bident.ml" 62 2589 2602
+type(
+  'g * 'h -> 'g
+)
+ident(
+  def qs_of_t "lib/bident.ml" 63 2615 2617 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 62 2589 2604 "lib/bident.ml" 62 2589 2606
+type(
+  'g
+)
+ident(
+  def qs "lib/bident.ml" 62 2589 2612 "lib/bident.ml" 62 2589 2614
+)
+"lib/bident.ml" 62 2589 2607 "lib/bident.ml" 62 2589 2608
+type(
+  'h
+)
+"lib/bident.ml" 62 2589 2603 "lib/bident.ml" 62 2589 2609
+type(
+  'g * 'h
+)
+"lib/bident.ml" 62 2589 2612 "lib/bident.ml" 62 2589 2614
+type(
+  'g
+)
+ident(
+  int_ref qs "lib/bident.ml" 62 2589 2604 "lib/bident.ml" 62 2589 2606
+)
+"lib/bident.ml" 63 2615 2621 "lib/bident.ml" 63 2615 2628
+type(
+  'i * 'j -> 'j
+)
+ident(
+  def id_of_t "lib/bident.ml" 64 2656 2658 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 63 2615 2630 "lib/bident.ml" 63 2615 2631
+type(
+  'i
+)
+"lib/bident.ml" 63 2615 2632 "lib/bident.ml" 63 2615 2633
+type(
+  'j
+)
+ident(
+  def x "lib/bident.ml" 63 2615 2637 "lib/bident.ml" 63 2615 2638
+)
+"lib/bident.ml" 63 2615 2629 "lib/bident.ml" 63 2615 2634
+type(
+  'i * 'j
+)
+"lib/bident.ml" 63 2615 2637 "lib/bident.ml" 63 2615 2638
+type(
+  'j
+)
+ident(
+  int_ref x "lib/bident.ml" 63 2615 2632 "lib/bident.ml" 63 2615 2633
+)
+"lib/bident.ml" 64 2656 2662 "lib/bident.ml" 64 2656 2673
+type(
+  ('k * string) list * ('l * string) -> string
+)
+ident(
+  def string_of_t "lib/bident.ml" 72 2884 2886 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 64 2656 2675 "lib/bident.ml" 64 2656 2677
+type(
+  ('k * string) list
+)
+ident(
+  def qs "lib/bident.ml" 65 2684 2688 "lib/bident.ml" 70 2839 2863
+)
+"lib/bident.ml" 64 2656 2678 "lib/bident.ml" 64 2656 2679
+type(
+  'l * string
+)
+ident(
+  def x "lib/bident.ml" 65 2684 2688 "lib/bident.ml" 70 2839 2863
+)
+"lib/bident.ml" 64 2656 2674 "lib/bident.ml" 64 2656 2680
+type(
+  ('k * string) list * ('l * string)
+)
+"lib/bident.ml" 65 2684 2688 "lib/bident.ml" 65 2684 2702
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bident.ml" 65 2684 2703 "lib/bident.ml" 65 2684 2709
+type(
+  (string -> string -> string, unit, string) format
+)
+"lib/bident.ml" 66 2710 2717 "lib/bident.ml" 66 2710 2735
+type(
+  (string -> 'k * string -> string) -> string -> ('k * string) list -> string
+)
+ident(
+  ext_ref Safelist.fold_left
+)
+"lib/bident.ml" 67 2737 2751 "lib/bident.ml" 67 2737 2754
+type(
+  string
+)
+ident(
+  def acc "lib/bident.ml" 67 2737 2755 "lib/bident.ml" 67 2737 2807
+)
+"lib/bident.ml" 67 2737 2755 "lib/bident.ml" 67 2737 2757
+type(
+  'k * string
+)
+ident(
+  def qi "lib/bident.ml" 67 2737 2761 "lib/bident.ml" 67 2737 2807
+)
+"lib/bident.ml" 67 2737 2761 "lib/bident.ml" 67 2737 2775
+type(
+  (string -> string -> string, unit, string) format ->
+  string -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"lib/bident.ml" 67 2737 2776 "lib/bident.ml" 67 2737 2783
+type(
+  (string -> string -> string, unit, string) format
+)
+"lib/bident.ml" 67 2737 2784 "lib/bident.ml" 67 2737 2787
+type(
+  string
+)
+ident(
+  int_ref acc "lib/bident.ml" 67 2737 2751 "lib/bident.ml" 67 2737 2754
+)
+"lib/bident.ml" 67 2737 2789 "lib/bident.ml" 67 2737 2803
+type(
+  'k * string -> string
+)
+ident(
+  int_ref Id.string_of_t "lib/bident.ml" 31 1728 1734 "lib/bident.ml" 31 1728 1745
+)
+"lib/bident.ml" 67 2737 2804 "lib/bident.ml" 67 2737 2806
+type(
+  'k * string
+)
+ident(
+  int_ref qi "lib/bident.ml" 67 2737 2755 "lib/bident.ml" 67 2737 2757
+)
+"lib/bident.ml" 67 2737 2788 "lib/bident.ml" 67 2737 2807
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bident.ml" 67 2737 2761 "lib/bident.ml" 67 2737 2807
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bident.ml" 67 2737 2746 "lib/bident.ml" 67 2737 2808
+type(
+  string -> 'k * string -> string
+)
+"lib/bident.ml" 68 2810 2819 "lib/bident.ml" 68 2810 2821
+type(
+  string
+)
+"lib/bident.ml" 69 2822 2831 "lib/bident.ml" 69 2822 2833
+type(
+  ('k * string) list
+)
+ident(
+  int_ref qs "lib/bident.ml" 64 2656 2675 "lib/bident.ml" 64 2656 2677
+)
+"lib/bident.ml" 66 2710 2716 "lib/bident.ml" 69 2822 2834
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bident.ml" 70 2839 2846 "lib/bident.ml" 70 2839 2860
+type(
+  'l * string -> string
+)
+ident(
+  int_ref Id.string_of_t "lib/bident.ml" 31 1728 1734 "lib/bident.ml" 31 1728 1745
+)
+"lib/bident.ml" 70 2839 2861 "lib/bident.ml" 70 2839 2862
+type(
+  'l * string
+)
+ident(
+  int_ref x "lib/bident.ml" 64 2656 2678 "lib/bident.ml" 64 2656 2679
+)
+"lib/bident.ml" 70 2839 2845 "lib/bident.ml" 70 2839 2863
+call(
+  stack
+)
+type(
+  string
+)
+"lib/bident.ml" 65 2684 2688 "lib/bident.ml" 70 2839 2863
+call(
+  tail
+)
+type(
+  string
+)
+"lib/bident.ml" 72 2884 2890 "lib/bident.ml" 72 2884 2897
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  def compare "lib/bident.ml" 82 3229 3231 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 72 2884 2899 "lib/bident.ml" 72 2884 2902
+type(
+  Id.t list
+)
+ident(
+  def qs1 "lib/bident.ml" 72 2884 2907 "lib/bident.ml" 81 3191 3228
+)
+"lib/bident.ml" 72 2884 2903 "lib/bident.ml" 72 2884 2905
+type(
+  Id.t
+)
+ident(
+  def x1 "lib/bident.ml" 72 2884 2907 "lib/bident.ml" 81 3191 3228
+)
+"lib/bident.ml" 72 2884 2898 "lib/bident.ml" 72 2884 2906
+type(
+  Id.t list * Id.t
+)
+"lib/bident.ml" 72 2884 2908 "lib/bident.ml" 72 2884 2911
+type(
+  Id.t list
+)
+ident(
+  def qs2 "lib/bident.ml" 73 2919 2923 "lib/bident.ml" 81 3191 3228
+)
+"lib/bident.ml" 72 2884 2912 "lib/bident.ml" 72 2884 2914
+type(
+  Id.t
+)
+ident(
+  def x2 "lib/bident.ml" 73 2919 2923 "lib/bident.ml" 81 3191 3228
+)
+"lib/bident.ml" 72 2884 2907 "lib/bident.ml" 72 2884 2915
+type(
+  Id.t list * Id.t
+)
+"lib/bident.ml" 73 2919 2931 "lib/bident.ml" 73 2919 2942
+type(
+  Id.t list -> Id.t list -> int
+)
+ident(
+  def ids_compare "lib/bident.ml" 73 2919 2923 "lib/bident.ml" 81 3191 3228
+)
+"lib/bident.ml" 73 2919 2943 "lib/bident.ml" 73 2919 2946
+type(
+  Id.t list
+)
+ident(
+  def xs1 "lib/bident.ml" 73 2919 2947 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 73 2919 2947 "lib/bident.ml" 73 2919 2950
+type(
+  Id.t list
+)
+ident(
+  def xs2 "lib/bident.ml" 73 2919 2953 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 73 2919 2959 "lib/bident.ml" 73 2919 2962
+type(
+  Id.t list
+)
+ident(
+  int_ref xs1 "lib/bident.ml" 73 2919 2943 "lib/bident.ml" 73 2919 2946
+)
+"lib/bident.ml" 73 2919 2963 "lib/bident.ml" 73 2919 2966
+type(
+  Id.t list
+)
+ident(
+  int_ref xs2 "lib/bident.ml" 73 2919 2947 "lib/bident.ml" 73 2919 2950
+)
+"lib/bident.ml" 73 2919 2959 "lib/bident.ml" 73 2919 2966
+type(
+  Id.t list * Id.t list
+)
+"lib/bident.ml" 74 2972 2980 "lib/bident.ml" 74 2972 2982
+type(
+  Id.t list
+)
+"lib/bident.ml" 74 2972 2983 "lib/bident.ml" 74 2972 2985
+type(
+  Id.t list
+)
+"lib/bident.ml" 74 2972 2980 "lib/bident.ml" 74 2972 2985
+type(
+  Id.t list * Id.t list
+)
+"lib/bident.ml" 74 2972 2989 "lib/bident.ml" 74 2972 2990
+type(
+  int
+)
+"lib/bident.ml" 75 2991 2999 "lib/bident.ml" 75 2991 3000
+type(
+  Id.t list
+)
+"lib/bident.ml" 75 2991 3001 "lib/bident.ml" 75 2991 3003
+type(
+  Id.t list
+)
+"lib/bident.ml" 75 2991 2999 "lib/bident.ml" 75 2991 3003
+type(
+  Id.t list * Id.t list
+)
+"lib/bident.ml" 75 2991 3008 "lib/bident.ml" 75 2991 3009
+type(
+  int
+)
+"lib/bident.ml" 76 3010 3018 "lib/bident.ml" 76 3010 3020
+type(
+  Id.t list
+)
+"lib/bident.ml" 76 3010 3021 "lib/bident.ml" 76 3010 3022
+type(
+  Id.t list
+)
+"lib/bident.ml" 76 3010 3018 "lib/bident.ml" 76 3010 3022
+type(
+  Id.t list * Id.t list
+)
+"lib/bident.ml" 76 3010 3027 "lib/bident.ml" 76 3010 3029
+type(
+  int
+)
+"lib/bident.ml" 77 3030 3039 "lib/bident.ml" 77 3030 3041
+type(
+  Id.t
+)
+ident(
+  def x1 "lib/bident.ml" 78 3060 3070 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 77 3030 3043 "lib/bident.ml" 77 3030 3045
+type(
+  Id.t list
+)
+ident(
+  def t1 "lib/bident.ml" 78 3060 3070 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 77 3030 3038 "lib/bident.ml" 77 3030 3046
+type(
+  Id.t list
+)
+"lib/bident.ml" 77 3030 3048 "lib/bident.ml" 77 3030 3050
+type(
+  Id.t
+)
+ident(
+  def x2 "lib/bident.ml" 78 3060 3070 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 77 3030 3052 "lib/bident.ml" 77 3030 3054
+type(
+  Id.t list
+)
+ident(
+  def t2 "lib/bident.ml" 78 3060 3070 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 77 3030 3047 "lib/bident.ml" 77 3030 3055
+type(
+  Id.t list
+)
+"lib/bident.ml" 77 3030 3038 "lib/bident.ml" 77 3030 3055
+type(
+  Id.t list * Id.t list
+)
+"lib/bident.ml" 78 3060 3074 "lib/bident.ml" 78 3060 3084
+type(
+  int
+)
+ident(
+  def hd_compare "lib/bident.ml" 79 3107 3117 "lib/bident.ml" 80 3155 3187
+)
+"lib/bident.ml" 78 3060 3087 "lib/bident.ml" 78 3060 3097
+type(
+  Id.t -> Id.t -> int
+)
+ident(
+  int_ref Id.compare "lib/bident.ml" 33 1776 1782 "lib/bident.ml" 33 1776 1789
+)
+"lib/bident.ml" 78 3060 3098 "lib/bident.ml" 78 3060 3100
+type(
+  Id.t
+)
+ident(
+  int_ref x1 "lib/bident.ml" 77 3030 3039 "lib/bident.ml" 77 3030 3041
+)
+"lib/bident.ml" 78 3060 3101 "lib/bident.ml" 78 3060 3103
+type(
+  Id.t
+)
+ident(
+  int_ref x2 "lib/bident.ml" 77 3030 3048 "lib/bident.ml" 77 3030 3050
+)
+"lib/bident.ml" 78 3060 3087 "lib/bident.ml" 78 3060 3103
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bident.ml" 79 3107 3121 "lib/bident.ml" 79 3107 3131
+type(
+  int
+)
+ident(
+  int_ref hd_compare "lib/bident.ml" 78 3060 3074 "lib/bident.ml" 78 3060 3084
+)
+"lib/bident.ml" 79 3107 3132 "lib/bident.ml" 79 3107 3134
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"lib/bident.ml" 79 3107 3135 "lib/bident.ml" 79 3107 3136
+type(
+  int
+)
+"lib/bident.ml" 79 3107 3120 "lib/bident.ml" 79 3107 3137
+type(
+  bool
+)
+"lib/bident.ml" 79 3107 3143 "lib/bident.ml" 79 3107 3153
+type(
+  int
+)
+ident(
+  int_ref hd_compare "lib/bident.ml" 78 3060 3074 "lib/bident.ml" 78 3060 3084
+)
+"lib/bident.ml" 80 3155 3170 "lib/bident.ml" 80 3155 3181
+type(
+  Id.t list -> Id.t list -> int
+)
+ident(
+  int_ref ids_compare "lib/bident.ml" 73 2919 2931 "lib/bident.ml" 73 2919 2942
+)
+"lib/bident.ml" 80 3155 3182 "lib/bident.ml" 80 3155 3184
+type(
+  Id.t list
+)
+ident(
+  int_ref t1 "lib/bident.ml" 77 3030 3043 "lib/bident.ml" 77 3030 3045
+)
+"lib/bident.ml" 80 3155 3185 "lib/bident.ml" 80 3155 3187
+type(
+  Id.t list
+)
+ident(
+  int_ref t2 "lib/bident.ml" 77 3030 3052 "lib/bident.ml" 77 3030 3054
+)
+"lib/bident.ml" 80 3155 3170 "lib/bident.ml" 80 3155 3187
+call(
+  tail
+)
+type(
+  int
+)
+"lib/bident.ml" 79 3107 3117 "lib/bident.ml" 80 3155 3187
+type(
+  int
+)
+"lib/bident.ml" 78 3060 3070 "lib/bident.ml" 80 3155 3187
+type(
+  int
+)
+"lib/bident.ml" 73 2919 2953 "lib/bident.ml" 80 3155 3187
+type(
+  int
+)
+"lib/bident.ml" 81 3191 3195 "lib/bident.ml" 81 3191 3206
+type(
+  Id.t list -> Id.t list -> int
+)
+ident(
+  int_ref ids_compare "lib/bident.ml" 73 2919 2931 "lib/bident.ml" 73 2919 2942
+)
+"lib/bident.ml" 81 3191 3208 "lib/bident.ml" 81 3191 3211
+type(
+  Id.t list
+)
+ident(
+  int_ref qs1 "lib/bident.ml" 72 2884 2899 "lib/bident.ml" 72 2884 2902
+)
+"lib/bident.ml" 81 3191 3211 "lib/bident.ml" 81 3191 3212
+type(
+  Id.t list -> Id.t list -> Id.t list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bident.ml" 81 3191 3213 "lib/bident.ml" 81 3191 3215
+type(
+  Id.t
+)
+ident(
+  int_ref x1 "lib/bident.ml" 72 2884 2903 "lib/bident.ml" 72 2884 2905
+)
+"lib/bident.ml" 81 3191 3212 "lib/bident.ml" 81 3191 3216
+type(
+  Id.t list
+)
+"lib/bident.ml" 81 3191 3207 "lib/bident.ml" 81 3191 3217
+call(
+  stack
+)
+type(
+  Id.t list
+)
+"lib/bident.ml" 81 3191 3219 "lib/bident.ml" 81 3191 3222
+type(
+  Id.t list
+)
+ident(
+  int_ref qs2 "lib/bident.ml" 72 2884 2908 "lib/bident.ml" 72 2884 2911
+)
+"lib/bident.ml" 81 3191 3222 "lib/bident.ml" 81 3191 3223
+type(
+  Id.t list -> Id.t list -> Id.t list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bident.ml" 81 3191 3224 "lib/bident.ml" 81 3191 3226
+type(
+  Id.t
+)
+ident(
+  int_ref x2 "lib/bident.ml" 72 2884 2912 "lib/bident.ml" 72 2884 2914
+)
+"lib/bident.ml" 81 3191 3223 "lib/bident.ml" 81 3191 3227
+type(
+  Id.t list
+)
+"lib/bident.ml" 81 3191 3218 "lib/bident.ml" 81 3191 3228
+call(
+  stack
+)
+type(
+  Id.t list
+)
+"lib/bident.ml" 81 3191 3195 "lib/bident.ml" 81 3191 3228
+call(
+  tail
+)
+type(
+  int
+)
+"lib/bident.ml" 73 2919 2923 "lib/bident.ml" 81 3191 3228
+type(
+  int
+)
+"lib/bident.ml" 82 3229 3235 "lib/bident.ml" 82 3229 3240
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> bool
+)
+ident(
+  def equal "lib/bident.ml" 84 3287 3289 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 82 3229 3241 "lib/bident.ml" 82 3229 3243
+type(
+  Id.t list * Id.t
+)
+ident(
+  def q1 "lib/bident.ml" 82 3229 3244 "lib/bident.ml" 82 3229 3268
+)
+"lib/bident.ml" 82 3229 3244 "lib/bident.ml" 82 3229 3246
+type(
+  Id.t list * Id.t
+)
+ident(
+  def q2 "lib/bident.ml" 82 3229 3249 "lib/bident.ml" 82 3229 3268
+)
+"lib/bident.ml" 82 3229 3250 "lib/bident.ml" 82 3229 3257
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  int_ref compare "lib/bident.ml" 72 2884 2890 "lib/bident.ml" 72 2884 2897
+)
+"lib/bident.ml" 82 3229 3258 "lib/bident.ml" 82 3229 3260
+type(
+  Id.t list * Id.t
+)
+ident(
+  int_ref q1 "lib/bident.ml" 82 3229 3241 "lib/bident.ml" 82 3229 3243
+)
+"lib/bident.ml" 82 3229 3261 "lib/bident.ml" 82 3229 3263
+type(
+  Id.t list * Id.t
+)
+ident(
+  int_ref q2 "lib/bident.ml" 82 3229 3244 "lib/bident.ml" 82 3229 3246
+)
+"lib/bident.ml" 82 3229 3250 "lib/bident.ml" 82 3229 3263
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bident.ml" 82 3229 3264 "lib/bident.ml" 82 3229 3265
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"lib/bident.ml" 82 3229 3266 "lib/bident.ml" 82 3229 3267
+type(
+  int
+)
+"lib/bident.ml" 82 3229 3249 "lib/bident.ml" 82 3229 3268
+type(
+  bool
+)
+"lib/bident.ml" 84 3287 3293 "lib/bident.ml" 84 3287 3298
+type(
+  'm * ('n * string) -> 'm * ('n * string)
+)
+ident(
+  def prime "lib/bident.ml" 86 3349 3351 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 84 3287 3300 "lib/bident.ml" 84 3287 3302
+type(
+  'm
+)
+ident(
+  def qs "lib/bident.ml" 84 3287 3308 "lib/bident.ml" 84 3287 3323
+)
+"lib/bident.ml" 84 3287 3303 "lib/bident.ml" 84 3287 3304
+type(
+  'n * string
+)
+ident(
+  def x "lib/bident.ml" 84 3287 3308 "lib/bident.ml" 84 3287 3323
+)
+"lib/bident.ml" 84 3287 3299 "lib/bident.ml" 84 3287 3305
+type(
+  'm * ('n * string)
+)
+"lib/bident.ml" 84 3287 3309 "lib/bident.ml" 84 3287 3311
+type(
+  'm
+)
+ident(
+  int_ref qs "lib/bident.ml" 84 3287 3300 "lib/bident.ml" 84 3287 3302
+)
+"lib/bident.ml" 84 3287 3312 "lib/bident.ml" 84 3287 3320
+type(
+  'n * string -> 'n * string
+)
+ident(
+  int_ref Id.prime "lib/bident.ml" 36 1890 1896 "lib/bident.ml" 36 1890 1901
+)
+"lib/bident.ml" 84 3287 3321 "lib/bident.ml" 84 3287 3322
+type(
+  'n * string
+)
+ident(
+  int_ref x "lib/bident.ml" 84 3287 3303 "lib/bident.ml" 84 3287 3304
+)
+"lib/bident.ml" 84 3287 3312 "lib/bident.ml" 84 3287 3322
+call(
+  stack
+)
+type(
+  'n * string
+)
+"lib/bident.ml" 84 3287 3308 "lib/bident.ml" 84 3287 3323
+type(
+  'm * ('n * string)
+)
+"lib/bident.ml" 86 3349 3355 "lib/bident.ml" 86 3349 3361
+type(
+  'o -> 'o list * 'p -> 'o list * 'p
+)
+ident(
+  def id_dot "lib/bident.ml" 87 3389 3391 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 86 3349 3362 "lib/bident.ml" 86 3349 3364
+type(
+  'o
+)
+ident(
+  def x1 "lib/bident.ml" 86 3349 3365 "lib/bident.ml" 86 3349 3388
+)
+"lib/bident.ml" 86 3349 3366 "lib/bident.ml" 86 3349 3369
+type(
+  'o list
+)
+ident(
+  def qs2 "lib/bident.ml" 86 3349 3376 "lib/bident.ml" 86 3349 3388
+)
+"lib/bident.ml" 86 3349 3370 "lib/bident.ml" 86 3349 3372
+type(
+  'p
+)
+ident(
+  def x2 "lib/bident.ml" 86 3349 3376 "lib/bident.ml" 86 3349 3388
+)
+"lib/bident.ml" 86 3349 3365 "lib/bident.ml" 86 3349 3373
+type(
+  'o list * 'p
+)
+"lib/bident.ml" 86 3349 3377 "lib/bident.ml" 86 3349 3379
+type(
+  'o
+)
+ident(
+  int_ref x1 "lib/bident.ml" 86 3349 3362 "lib/bident.ml" 86 3349 3364
+)
+"lib/bident.ml" 86 3349 3381 "lib/bident.ml" 86 3349 3384
+type(
+  'o list
+)
+ident(
+  int_ref qs2 "lib/bident.ml" 86 3349 3366 "lib/bident.ml" 86 3349 3369
+)
+"lib/bident.ml" 86 3349 3377 "lib/bident.ml" 86 3349 3384
+type(
+  'o list
+)
+"lib/bident.ml" 86 3349 3385 "lib/bident.ml" 86 3349 3387
+type(
+  'p
+)
+ident(
+  int_ref x2 "lib/bident.ml" 86 3349 3370 "lib/bident.ml" 86 3349 3372
+)
+"lib/bident.ml" 86 3349 3376 "lib/bident.ml" 86 3349 3388
+type(
+  'o list * 'p
+)
+"lib/bident.ml" 87 3389 3395 "lib/bident.ml" 87 3389 3403
+type(
+  'q list * 'q -> 'r -> 'q list * 'r
+)
+ident(
+  def t_dot_id "lib/bident.ml" 88 3432 3434 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 87 3389 3405 "lib/bident.ml" 87 3389 3408
+type(
+  'q list
+)
+ident(
+  def qs1 "lib/bident.ml" 87 3389 3413 "lib/bident.ml" 87 3389 3431
+)
+"lib/bident.ml" 87 3389 3409 "lib/bident.ml" 87 3389 3411
+type(
+  'q
+)
+ident(
+  def x1 "lib/bident.ml" 87 3389 3413 "lib/bident.ml" 87 3389 3431
+)
+"lib/bident.ml" 87 3389 3404 "lib/bident.ml" 87 3389 3412
+type(
+  'q list * 'q
+)
+"lib/bident.ml" 87 3389 3413 "lib/bident.ml" 87 3389 3415
+type(
+  'r
+)
+ident(
+  def x2 "lib/bident.ml" 87 3389 3418 "lib/bident.ml" 87 3389 3431
+)
+"lib/bident.ml" 87 3389 3419 "lib/bident.ml" 87 3389 3422
+type(
+  'q list
+)
+ident(
+  int_ref qs1 "lib/bident.ml" 87 3389 3405 "lib/bident.ml" 87 3389 3408
+)
+"lib/bident.ml" 87 3389 3422 "lib/bident.ml" 87 3389 3423
+type(
+  'q list -> 'q list -> 'q list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bident.ml" 87 3389 3424 "lib/bident.ml" 87 3389 3426
+type(
+  'q
+)
+ident(
+  int_ref x1 "lib/bident.ml" 87 3389 3409 "lib/bident.ml" 87 3389 3411
+)
+"lib/bident.ml" 87 3389 3423 "lib/bident.ml" 87 3389 3427
+type(
+  'q list
+)
+"lib/bident.ml" 87 3389 3419 "lib/bident.ml" 87 3389 3427
+call(
+  stack
+)
+type(
+  'q list
+)
+"lib/bident.ml" 87 3389 3428 "lib/bident.ml" 87 3389 3430
+type(
+  'r
+)
+ident(
+  int_ref x2 "lib/bident.ml" 87 3389 3413 "lib/bident.ml" 87 3389 3415
+)
+"lib/bident.ml" 87 3389 3418 "lib/bident.ml" 87 3389 3431
+type(
+  'q list * 'r
+)
+"lib/bident.ml" 88 3432 3438 "lib/bident.ml" 88 3432 3446
+type(
+  's list * 't -> 's list * 's
+)
+ident(
+  def parent_t "lib/bident.ml" 98 3624 3626 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 88 3432 3448 "lib/bident.ml" 88 3432 3450
+type(
+  's list
+)
+ident(
+  def qs "lib/bident.ml" 89 3457 3461 "lib/bident.ml" 97 3615 3623
+)
+"lib/bident.ml" 88 3432 3452 "lib/bident.ml" 88 3432 3453
+type(
+  't
+)
+"lib/bident.ml" 88 3432 3447 "lib/bident.ml" 88 3432 3454
+type(
+  's list * 't
+)
+"lib/bident.ml" 89 3457 3469 "lib/bident.ml" 89 3457 3470
+type(
+  'u list -> 'u list * 'u
+)
+ident(
+  def f "lib/bident.ml" 89 3457 3461 "lib/bident.ml" 97 3615 3623
+)
+"lib/bident.ml" 89 3457 3471 "lib/bident.ml" 89 3457 3473
+type(
+  'u list
+)
+ident(
+  def qs "lib/bident.ml" 90 3476 3482 "lib/bident.ml" 95 3589 3607
+)
+"lib/bident.ml" 90 3476 3488 "lib/bident.ml" 90 3476 3490
+type(
+  'u list
+)
+ident(
+  int_ref qs "lib/bident.ml" 89 3457 3471 "lib/bident.ml" 89 3457 3473
+)
+"lib/bident.ml" 91 3496 3504 "lib/bident.ml" 91 3496 3506
+type(
+  'u list
+)
+"lib/bident.ml" 91 3496 3517 "lib/bident.ml" 91 3496 3522
+type(
+  bool
+)
+"lib/bident.ml" 91 3496 3510 "lib/bident.ml" 91 3496 3522
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 92 3523 3532 "lib/bident.ml" 92 3523 3533
+type(
+  'u
+)
+ident(
+  def q "lib/bident.ml" 92 3523 3538 "lib/bident.ml" 92 3523 3543
+)
+"lib/bident.ml" 92 3523 3531 "lib/bident.ml" 92 3523 3534
+type(
+  'u list
+)
+"lib/bident.ml" 92 3523 3538 "lib/bident.ml" 92 3523 3540
+type(
+  'u list
+)
+"lib/bident.ml" 92 3523 3542 "lib/bident.ml" 92 3523 3543
+type(
+  'u
+)
+ident(
+  int_ref q "lib/bident.ml" 92 3523 3532 "lib/bident.ml" 92 3523 3533
+)
+"lib/bident.ml" 92 3523 3538 "lib/bident.ml" 92 3523 3543
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 93 3544 3552 "lib/bident.ml" 93 3544 3553
+type(
+  'u
+)
+ident(
+  def h "lib/bident.ml" 94 3560 3570 "lib/bident.ml" 95 3589 3607
+)
+"lib/bident.ml" 93 3544 3555 "lib/bident.ml" 93 3544 3556
+type(
+  'u list
+)
+ident(
+  def t "lib/bident.ml" 94 3560 3570 "lib/bident.ml" 95 3589 3607
+)
+"lib/bident.ml" 93 3544 3552 "lib/bident.ml" 93 3544 3556
+type(
+  'u list
+)
+"lib/bident.ml" 94 3560 3574 "lib/bident.ml" 94 3560 3576
+type(
+  'u list
+)
+ident(
+  def qs "lib/bident.ml" 95 3589 3599 "lib/bident.ml" 95 3589 3607
+)
+"lib/bident.ml" 94 3560 3578 "lib/bident.ml" 94 3560 3579
+type(
+  'u
+)
+ident(
+  def x "lib/bident.ml" 95 3589 3599 "lib/bident.ml" 95 3589 3607
+)
+"lib/bident.ml" 94 3560 3574 "lib/bident.ml" 94 3560 3579
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 94 3560 3582 "lib/bident.ml" 94 3560 3583
+type(
+  'u list -> 'u list * 'u
+)
+ident(
+  int_ref f "lib/bident.ml" 89 3457 3469 "lib/bident.ml" 89 3457 3470
+)
+"lib/bident.ml" 94 3560 3584 "lib/bident.ml" 94 3560 3585
+type(
+  'u list
+)
+ident(
+  int_ref t "lib/bident.ml" 93 3544 3555 "lib/bident.ml" 93 3544 3556
+)
+"lib/bident.ml" 94 3560 3582 "lib/bident.ml" 94 3560 3585
+call(
+  stack
+)
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 95 3589 3599 "lib/bident.ml" 95 3589 3600
+type(
+  'u
+)
+ident(
+  int_ref h "lib/bident.ml" 93 3544 3552 "lib/bident.ml" 93 3544 3553
+)
+"lib/bident.ml" 95 3589 3602 "lib/bident.ml" 95 3589 3604
+type(
+  'u list
+)
+ident(
+  int_ref qs "lib/bident.ml" 94 3560 3574 "lib/bident.ml" 94 3560 3576
+)
+"lib/bident.ml" 95 3589 3599 "lib/bident.ml" 95 3589 3604
+type(
+  'u list
+)
+"lib/bident.ml" 95 3589 3606 "lib/bident.ml" 95 3589 3607
+type(
+  'u
+)
+ident(
+  int_ref x "lib/bident.ml" 94 3560 3578 "lib/bident.ml" 94 3560 3579
+)
+"lib/bident.ml" 95 3589 3599 "lib/bident.ml" 95 3589 3607
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 94 3560 3570 "lib/bident.ml" 95 3589 3607
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 90 3476 3482 "lib/bident.ml" 95 3589 3607
+type(
+  'u list * 'u
+)
+"lib/bident.ml" 97 3615 3619 "lib/bident.ml" 97 3615 3620
+type(
+  's list -> 's list * 's
+)
+ident(
+  int_ref f "lib/bident.ml" 89 3457 3469 "lib/bident.ml" 89 3457 3470
+)
+"lib/bident.ml" 97 3615 3621 "lib/bident.ml" 97 3615 3623
+type(
+  's list
+)
+ident(
+  int_ref qs "lib/bident.ml" 88 3432 3448 "lib/bident.ml" 88 3432 3450
+)
+"lib/bident.ml" 97 3615 3619 "lib/bident.ml" 97 3615 3623
+call(
+  tail
+)
+type(
+  's list * 's
+)
+"lib/bident.ml" 89 3457 3461 "lib/bident.ml" 97 3615 3623
+type(
+  's list * 's
+)
+"lib/bident.ml" 98 3624 3630 "lib/bident.ml" 98 3624 3637
+type(
+  'v list * 'v -> 'v list * 'w -> 'v list * 'w
+)
+ident(
+  def t_dot_t "lib/bident.ml" 99 3675 3677 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 98 3624 3639 "lib/bident.ml" 98 3624 3642
+type(
+  'v list
+)
+ident(
+  def qs1 "lib/bident.ml" 98 3624 3647 "lib/bident.ml" 98 3624 3674
+)
+"lib/bident.ml" 98 3624 3643 "lib/bident.ml" 98 3624 3645
+type(
+  'v
+)
+ident(
+  def x1 "lib/bident.ml" 98 3624 3647 "lib/bident.ml" 98 3624 3674
+)
+"lib/bident.ml" 98 3624 3638 "lib/bident.ml" 98 3624 3646
+type(
+  'v list * 'v
+)
+"lib/bident.ml" 98 3624 3648 "lib/bident.ml" 98 3624 3651
+type(
+  'v list
+)
+ident(
+  def qs2 "lib/bident.ml" 98 3624 3658 "lib/bident.ml" 98 3624 3674
+)
+"lib/bident.ml" 98 3624 3652 "lib/bident.ml" 98 3624 3654
+type(
+  'w
+)
+ident(
+  def x2 "lib/bident.ml" 98 3624 3658 "lib/bident.ml" 98 3624 3674
+)
+"lib/bident.ml" 98 3624 3647 "lib/bident.ml" 98 3624 3655
+type(
+  'v list * 'w
+)
+"lib/bident.ml" 98 3624 3659 "lib/bident.ml" 98 3624 3662
+type(
+  'v list
+)
+ident(
+  int_ref qs1 "lib/bident.ml" 98 3624 3639 "lib/bident.ml" 98 3624 3642
+)
+"lib/bident.ml" 98 3624 3662 "lib/bident.ml" 98 3624 3663
+type(
+  'v list -> 'v list -> 'v list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bident.ml" 98 3624 3663 "lib/bident.ml" 98 3624 3665
+type(
+  'v
+)
+ident(
+  int_ref x1 "lib/bident.ml" 98 3624 3643 "lib/bident.ml" 98 3624 3645
+)
+"lib/bident.ml" 98 3624 3667 "lib/bident.ml" 98 3624 3670
+type(
+  'v list
+)
+ident(
+  int_ref qs2 "lib/bident.ml" 98 3624 3648 "lib/bident.ml" 98 3624 3651
+)
+"lib/bident.ml" 98 3624 3663 "lib/bident.ml" 98 3624 3670
+type(
+  'v list
+)
+"lib/bident.ml" 98 3624 3659 "lib/bident.ml" 98 3624 3670
+call(
+  stack
+)
+type(
+  'v list
+)
+"lib/bident.ml" 98 3624 3671 "lib/bident.ml" 98 3624 3673
+type(
+  'w
+)
+ident(
+  int_ref x2 "lib/bident.ml" 98 3624 3652 "lib/bident.ml" 98 3624 3654
+)
+"lib/bident.ml" 98 3624 3658 "lib/bident.ml" 98 3624 3674
+type(
+  'v list * 'w
+)
+"lib/bident.ml" 99 3675 3681 "lib/bident.ml" 99 3675 3690
+type(
+  Id.t list * Id.t -> Id.t list -> bool
+)
+ident(
+  def id_prefix "lib/bident.ml" 107 3975 3977 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 99 3675 3691 "lib/bident.ml" 99 3675 3693
+type(
+  Id.t list * Id.t
+)
+ident(
+  def q1 "lib/bident.ml" 99 3675 3694 "lib/bident.ml" 105 3883 3956
+)
+"lib/bident.ml" 99 3675 3694 "lib/bident.ml" 99 3675 3697
+type(
+  Id.t list
+)
+ident(
+  def il2 "lib/bident.ml" 100 3701 3705 "lib/bident.ml" 105 3883 3956
+)
+"lib/bident.ml" 100 3701 3710 "lib/bident.ml" 100 3701 3713
+type(
+  Id.t list
+)
+ident(
+  def is1 "lib/bident.ml" 101 3727 3731 "lib/bident.ml" 105 3883 3956
+)
+"lib/bident.ml" 100 3701 3714 "lib/bident.ml" 100 3701 3716
+type(
+  Id.t
+)
+ident(
+  def i1 "lib/bident.ml" 101 3727 3731 "lib/bident.ml" 105 3883 3956
+)
+"lib/bident.ml" 100 3701 3709 "lib/bident.ml" 100 3701 3717
+type(
+  Id.t list * Id.t
+)
+"lib/bident.ml" 100 3701 3720 "lib/bident.ml" 100 3701 3722
+type(
+  Id.t list * Id.t
+)
+ident(
+  int_ref q1 "lib/bident.ml" 99 3675 3691 "lib/bident.ml" 99 3675 3693
+)
+"lib/bident.ml" 101 3727 3735 "lib/bident.ml" 101 3727 3738
+type(
+  Id.t list
+)
+ident(
+  def il1 "lib/bident.ml" 102 3755 3761 "lib/bident.ml" 105 3883 3956
+)
+"lib/bident.ml" 101 3727 3741 "lib/bident.ml" 101 3727 3744
+type(
+  Id.t list
+)
+ident(
+  int_ref is1 "lib/bident.ml" 100 3701 3710 "lib/bident.ml" 100 3701 3713
+)
+"lib/bident.ml" 101 3727 3745 "lib/bident.ml" 101 3727 3746
+type(
+  Id.t list -> Id.t list -> Id.t list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"lib/bident.ml" 101 3727 3748 "lib/bident.ml" 101 3727 3750
+type(
+  Id.t
+)
+ident(
+  int_ref i1 "lib/bident.ml" 100 3701 3714 "lib/bident.ml" 100 3701 3716
+)
+"lib/bident.ml" 101 3727 3747 "lib/bident.ml" 101 3727 3751
+type(
+  Id.t list
+)
+"lib/bident.ml" 101 3727 3741 "lib/bident.ml" 101 3727 3751
+call(
+  stack
+)
+type(
+  Id.t list
+)
+"lib/bident.ml" 102 3755 3763 "lib/bident.ml" 102 3755 3778
+type(
+  Id.t list -> int
+)
+ident(
+  ext_ref Safelist.length
+)
+"lib/bident.ml" 102 3755 3779 "lib/bident.ml" 102 3755 3782
+type(
+  Id.t list
+)
+ident(
+  int_ref il1 "lib/bident.ml" 101 3727 3735 "lib/bident.ml" 101 3727 3738
+)
+"lib/bident.ml" 102 3755 3762 "lib/bident.ml" 102 3755 3783
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bident.ml" 102 3755 3784 "lib/bident.ml" 102 3755 3786
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"lib/bident.ml" 102 3755 3788 "lib/bident.ml" 102 3755 3803
+type(
+  Id.t list -> int
+)
+ident(
+  ext_ref Safelist.length
+)
+"lib/bident.ml" 102 3755 3804 "lib/bident.ml" 102 3755 3807
+type(
+  Id.t list
+)
+ident(
+  int_ref il2 "lib/bident.ml" 99 3675 3694 "lib/bident.ml" 99 3675 3697
+)
+"lib/bident.ml" 102 3755 3787 "lib/bident.ml" 102 3755 3808
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bident.ml" 102 3755 3761 "lib/bident.ml" 102 3755 3809
+type(
+  bool
+)
+"lib/bident.ml" 103 3811 3817 "lib/bident.ml" 103 3811 3819
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"lib/bident.ml" 103 3811 3821 "lib/bident.ml" 103 3811 3837
+type(
+  (Id.t * Id.t -> bool) -> (Id.t * Id.t) list -> bool
+)
+ident(
+  ext_ref Safelist.for_all
+)
+"lib/bident.ml" 104 3839 3857 "lib/bident.ml" 104 3839 3859
+type(
+  Id.t
+)
+ident(
+  def i1 "lib/bident.ml" 104 3839 3867 "lib/bident.ml" 104 3839 3881
+)
+"lib/bident.ml" 104 3839 3860 "lib/bident.ml" 104 3839 3862
+type(
+  Id.t
+)
+ident(
+  def i2 "lib/bident.ml" 104 3839 3867 "lib/bident.ml" 104 3839 3881
+)
+"lib/bident.ml" 104 3839 3856 "lib/bident.ml" 104 3839 3863
+type(
+  Id.t * Id.t
+)
+"lib/bident.ml" 104 3839 3867 "lib/bident.ml" 104 3839 3875
+type(
+  Id.t -> Id.t -> bool
+)
+ident(
+  int_ref Id.equal "lib/bident.ml" 34 1828 1834 "lib/bident.ml" 34 1828 1839
+)
+"lib/bident.ml" 104 3839 3876 "lib/bident.ml" 104 3839 3878
+type(
+  Id.t
+)
+ident(
+  int_ref i1 "lib/bident.ml" 104 3839 3857 "lib/bident.ml" 104 3839 3859
+)
+"lib/bident.ml" 104 3839 3879 "lib/bident.ml" 104 3839 3881
+type(
+  Id.t
+)
+ident(
+  int_ref i2 "lib/bident.ml" 104 3839 3860 "lib/bident.ml" 104 3839 3862
+)
+"lib/bident.ml" 104 3839 3867 "lib/bident.ml" 104 3839 3881
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bident.ml" 104 3839 3851 "lib/bident.ml" 104 3839 3882
+type(
+  Id.t * Id.t -> bool
+)
+"lib/bident.ml" 105 3883 3896 "lib/bident.ml" 105 3883 3912
+type(
+  Id.t list -> Id.t list -> (Id.t * Id.t) list
+)
+ident(
+  ext_ref Safelist.combine
+)
+"lib/bident.ml" 105 3883 3913 "lib/bident.ml" 105 3883 3916
+type(
+  Id.t list
+)
+ident(
+  int_ref il1 "lib/bident.ml" 101 3727 3735 "lib/bident.ml" 101 3727 3738
+)
+"lib/bident.ml" 105 3883 3918 "lib/bident.ml" 105 3883 3927
+type(
+  int -> Id.t list -> Id.t list
+)
+ident(
+  ext_ref Misc.take
+)
+"lib/bident.ml" 105 3883 3929 "lib/bident.ml" 105 3883 3944
+type(
+  Id.t list -> int
+)
+ident(
+  ext_ref Safelist.length
+)
+"lib/bident.ml" 105 3883 3945 "lib/bident.ml" 105 3883 3948
+type(
+  Id.t list
+)
+ident(
+  int_ref il1 "lib/bident.ml" 101 3727 3735 "lib/bident.ml" 101 3727 3738
+)
+"lib/bident.ml" 105 3883 3928 "lib/bident.ml" 105 3883 3949
+call(
+  stack
+)
+type(
+  int
+)
+"lib/bident.ml" 105 3883 3950 "lib/bident.ml" 105 3883 3953
+type(
+  Id.t list
+)
+ident(
+  int_ref il2 "lib/bident.ml" 99 3675 3694 "lib/bident.ml" 99 3675 3697
+)
+"lib/bident.ml" 105 3883 3917 "lib/bident.ml" 105 3883 3954
+call(
+  stack
+)
+type(
+  Id.t list
+)
+"lib/bident.ml" 105 3883 3895 "lib/bident.ml" 105 3883 3955
+call(
+  stack
+)
+type(
+  (Id.t * Id.t) list
+)
+"lib/bident.ml" 103 3811 3820 "lib/bident.ml" 105 3883 3956
+call(
+  tail
+)
+type(
+  bool
+)
+"lib/bident.ml" 102 3755 3761 "lib/bident.ml" 105 3883 3956
+type(
+  bool
+)
+"lib/bident.ml" 101 3727 3731 "lib/bident.ml" 105 3883 3956
+type(
+  bool
+)
+"lib/bident.ml" 100 3701 3705 "lib/bident.ml" 105 3883 3956
+type(
+  bool
+)
+"lib/bident.ml" 107 3975 3981 "lib/bident.ml" 107 3975 3989
+type(
+  'x -> 'y list -> 'z -> ('x * 'y) list * ('x * 'z)
+)
+ident(
+  def mk_mod_t "lib/bident.ml" 110 4063 4065 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 107 3975 3990 "lib/bident.ml" 107 3975 3991
+type(
+  'x
+)
+ident(
+  def i "lib/bident.ml" 107 3975 3992 "lib/bident.ml" 109 4043 4062
+)
+"lib/bident.ml" 107 3975 3992 "lib/bident.ml" 107 3975 3994
+type(
+  'y list
+)
+ident(
+  def ml "lib/bident.ml" 107 3975 3995 "lib/bident.ml" 109 4043 4062
+)
+"lib/bident.ml" 107 3975 3995 "lib/bident.ml" 107 3975 3996
+type(
+  'z
+)
+ident(
+  def x "lib/bident.ml" 108 4000 4004 "lib/bident.ml" 109 4043 4062
+)
+"lib/bident.ml" 108 4000 4008 "lib/bident.ml" 108 4000 4010
+type(
+  ('x * 'y) list
+)
+ident(
+  def qs "lib/bident.ml" 109 4043 4047 "lib/bident.ml" 109 4043 4062
+)
+"lib/bident.ml" 108 4000 4013 "lib/bident.ml" 108 4000 4025
+type(
+  ('y -> 'x * 'y) -> 'y list -> ('x * 'y) list
+)
+ident(
+  ext_ref Safelist.map
+)
+"lib/bident.ml" 108 4000 4027 "lib/bident.ml" 108 4000 4032
+type(
+  'x -> 'y -> 'x * 'y
+)
+ident(
+  int_ref Id.mk "lib/bident.ml" 28 1663 1669 "lib/bident.ml" 28 1663 1671
+)
+"lib/bident.ml" 108 4000 4033 "lib/bident.ml" 108 4000 4034
+type(
+  'x
+)
+ident(
+  int_ref i "lib/bident.ml" 107 3975 3990 "lib/bident.ml" 107 3975 3991
+)
+"lib/bident.ml" 108 4000 4026 "lib/bident.ml" 108 4000 4035
+call(
+  stack
+)
+type(
+  'y -> 'x * 'y
+)
+"lib/bident.ml" 108 4000 4036 "lib/bident.ml" 108 4000 4038
+type(
+  'y list
+)
+ident(
+  int_ref ml "lib/bident.ml" 107 3975 3992 "lib/bident.ml" 107 3975 3994
+)
+"lib/bident.ml" 108 4000 4013 "lib/bident.ml" 108 4000 4038
+call(
+  stack
+)
+type(
+  ('x * 'y) list
+)
+"lib/bident.ml" 109 4043 4048 "lib/bident.ml" 109 4043 4050
+type(
+  ('x * 'y) list
+)
+ident(
+  int_ref qs "lib/bident.ml" 108 4000 4008 "lib/bident.ml" 108 4000 4010
+)
+"lib/bident.ml" 109 4043 4052 "lib/bident.ml" 109 4043 4057
+type(
+  'x -> 'z -> 'x * 'z
+)
+ident(
+  int_ref Id.mk "lib/bident.ml" 28 1663 1669 "lib/bident.ml" 28 1663 1671
+)
+"lib/bident.ml" 109 4043 4058 "lib/bident.ml" 109 4043 4059
+type(
+  'x
+)
+ident(
+  int_ref i "lib/bident.ml" 107 3975 3990 "lib/bident.ml" 107 3975 3991
+)
+"lib/bident.ml" 109 4043 4060 "lib/bident.ml" 109 4043 4061
+type(
+  'z
+)
+ident(
+  int_ref x "lib/bident.ml" 107 3975 3995 "lib/bident.ml" 107 3975 3996
+)
+"lib/bident.ml" 109 4043 4052 "lib/bident.ml" 109 4043 4061
+call(
+  stack
+)
+type(
+  'x * 'z
+)
+"lib/bident.ml" 109 4043 4047 "lib/bident.ml" 109 4043 4062
+type(
+  ('x * 'y) list * ('x * 'z)
+)
+"lib/bident.ml" 108 4000 4004 "lib/bident.ml" 109 4043 4062
+type(
+  ('x * 'y) list * ('x * 'z)
+)
+"lib/bident.ml" 110 4063 4069 "lib/bident.ml" 110 4063 4088
+type(
+  'a1 -> 'b1 -> ('a1 * string) list * ('a1 * 'b1)
+)
+ident(
+  def mk_native_prelude_t "lib/bident.ml" 111 4127 4129 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 110 4063 4089 "lib/bident.ml" 110 4063 4090
+type(
+  'a1
+)
+ident(
+  def i "lib/bident.ml" 110 4063 4093 "lib/bident.ml" 110 4063 4125
+)
+"lib/bident.ml" 110 4063 4093 "lib/bident.ml" 110 4063 4101
+type(
+  'a1 -> string list -> 'b1 -> ('a1 * string) list * ('a1 * 'b1)
+)
+ident(
+  int_ref mk_mod_t "lib/bident.ml" 107 3975 3981 "lib/bident.ml" 107 3975 3989
+)
+"lib/bident.ml" 110 4063 4102 "lib/bident.ml" 110 4063 4103
+type(
+  'a1
+)
+ident(
+  int_ref i "lib/bident.ml" 110 4063 4089 "lib/bident.ml" 110 4063 4090
+)
+"lib/bident.ml" 110 4063 4105 "lib/bident.ml" 110 4063 4113
+type(
+  string
+)
+"lib/bident.ml" 110 4063 4115 "lib/bident.ml" 110 4063 4124
+type(
+  string
+)
+"lib/bident.ml" 110 4063 4104 "lib/bident.ml" 110 4063 4125
+type(
+  string list
+)
+"lib/bident.ml" 110 4063 4093 "lib/bident.ml" 110 4063 4125
+call(
+  tail
+)
+type(
+  'b1 -> ('a1 * string) list * ('a1 * 'b1)
+)
+"lib/bident.ml" 111 4127 4133 "lib/bident.ml" 111 4127 4145
+type(
+  'c1 -> 'd1 -> ('c1 * string) list * ('c1 * 'd1)
+)
+ident(
+  def mk_prelude_t "lib/bident.ml" 112 4173 4175 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 111 4127 4146 "lib/bident.ml" 111 4127 4147
+type(
+  'c1
+)
+ident(
+  def i "lib/bident.ml" 111 4127 4150 "lib/bident.ml" 111 4127 4172
+)
+"lib/bident.ml" 111 4127 4150 "lib/bident.ml" 111 4127 4158
+type(
+  'c1 -> string list -> 'd1 -> ('c1 * string) list * ('c1 * 'd1)
+)
+ident(
+  int_ref mk_mod_t "lib/bident.ml" 107 3975 3981 "lib/bident.ml" 107 3975 3989
+)
+"lib/bident.ml" 111 4127 4159 "lib/bident.ml" 111 4127 4160
+type(
+  'c1
+)
+ident(
+  int_ref i "lib/bident.ml" 111 4127 4146 "lib/bident.ml" 111 4127 4147
+)
+"lib/bident.ml" 111 4127 4162 "lib/bident.ml" 111 4127 4171
+type(
+  string
+)
+"lib/bident.ml" 111 4127 4161 "lib/bident.ml" 111 4127 4172
+type(
+  string list
+)
+"lib/bident.ml" 111 4127 4150 "lib/bident.ml" 111 4127 4172
+call(
+  tail
+)
+type(
+  'd1 -> ('c1 * string) list * ('c1 * 'd1)
+)
+"lib/bident.ml" 112 4173 4179 "lib/bident.ml" 112 4173 4188
+type(
+  'e1 -> 'f1 -> ('e1 * string) list * ('e1 * 'f1)
+)
+ident(
+  def mk_core_t "lib/bident.ml" 113 4213 4215 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 112 4173 4189 "lib/bident.ml" 112 4173 4190
+type(
+  'e1
+)
+ident(
+  def i "lib/bident.ml" 112 4173 4193 "lib/bident.ml" 112 4173 4212
+)
+"lib/bident.ml" 112 4173 4193 "lib/bident.ml" 112 4173 4201
+type(
+  'e1 -> string list -> 'f1 -> ('e1 * string) list * ('e1 * 'f1)
+)
+ident(
+  int_ref mk_mod_t "lib/bident.ml" 107 3975 3981 "lib/bident.ml" 107 3975 3989
+)
+"lib/bident.ml" 112 4173 4202 "lib/bident.ml" 112 4173 4203
+type(
+  'e1
+)
+ident(
+  int_ref i "lib/bident.ml" 112 4173 4189 "lib/bident.ml" 112 4173 4190
+)
+"lib/bident.ml" 112 4173 4205 "lib/bident.ml" 112 4173 4211
+type(
+  string
+)
+"lib/bident.ml" 112 4173 4204 "lib/bident.ml" 112 4173 4212
+type(
+  string list
+)
+"lib/bident.ml" 112 4173 4193 "lib/bident.ml" 112 4173 4212
+call(
+  tail
+)
+type(
+  'f1 -> ('e1 * string) list * ('e1 * 'f1)
+)
+"lib/bident.ml" 113 4213 4219 "lib/bident.ml" 113 4213 4228
+type(
+  'g1 -> 'h1 -> ('g1 * string) list * ('g1 * 'h1)
+)
+ident(
+  def mk_list_t "lib/bident.ml" 115 4309 4311 "lib/bident.ml" 131 4692 4695
+)
+"lib/bident.ml" 113 4213 4229 "lib/bident.ml" 113 4213 4230
+type(
+  'g1
+)
+ident(
+  def i "lib/bident.ml" 113 4213 4233 "lib/bident.ml" 113 4213 4252
+)
+"lib/bident.ml" 113 4213 4233 "lib/bident.ml" 113 4213 4241
+type(
+  'g1 -> string list -> 'h1 -> ('g1 * string) list * ('g1 * 'h1)
+)
+ident(
+  int_ref mk_mod_t "lib/bident.ml" 107 3975 3981 "lib/bident.ml" 107 3975 3989
+)
+"lib/bident.ml" 113 4213 4242 "lib/bident.ml" 113 4213 4243
+type(
+  'g1
+)
+ident(
+  int_ref i "lib/bident.ml" 113 4213 4229 "lib/bident.ml" 113 4213 4230
+)
+"lib/bident.ml" 113 4213 4245 "lib/bident.ml" 113 4213 4251
+type(
+  string
+)
+"lib/bident.ml" 113 4213 4244 "lib/bident.ml" 113 4213 4252
+type(
+  string list
+)
+"lib/bident.ml" 113 4213 4233 "lib/bident.ml" 113 4213 4252
+call(
+  tail
+)
+type(
+  'h1 -> ('g1 * string) list * ('g1 * 'h1)
+)
+"lib/bident.ml" 119 4385 4395 "lib/bident.ml" 119 4385 4402
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  def compare "lib/bident.ml" 120 4413 4419 "lib/bident.ml" 121 4447 4454
+)
+"lib/bident.ml" 119 4385 4405 "lib/bident.ml" 119 4385 4412
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  int_ref compare "lib/bident.ml" 72 2884 2890 "lib/bident.ml" 72 2884 2897
+)
+"lib/bident.ml" 120 4413 4423 "lib/bident.ml" 120 4413 4432
+type(
+  ('i1 * string) list * ('j1 * string) -> string
+)
+ident(
+  def to_string "lib/bident.ml" 120 4413 4446 "lib/bident.ml" 121 4447 4454
+)
+"lib/bident.ml" 120 4413 4435 "lib/bident.ml" 120 4413 4446
+type(
+  ('i1 * string) list * ('j1 * string) -> string
+)
+ident(
+  int_ref string_of_t "lib/bident.ml" 64 2656 2662 "lib/bident.ml" 64 2656 2673
+)
+"lib/bident.ml" 116 4327 4342 "lib/bident.ml" 121 4447 4455
+call(
+  stack
+)
+"lib/bident.ml" 125 4518 4526 "lib/bident.ml" 125 4518 4533
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  def compare "lib/bident.ml" 125 4518 4543 "lib/bident.ml" 126 4544 4549
+)
+"lib/bident.ml" 125 4518 4536 "lib/bident.ml" 125 4518 4543
+type(
+  Id.t list * Id.t -> Id.t list * Id.t -> int
+)
+ident(
+  int_ref compare "lib/bident.ml" 72 2884 2890 "lib/bident.ml" 72 2884 2897
+)
+"lib/bident.ml" 128 4588 4603 "lib/bident.ml" 128 4588 4615
+call(
+  stack
+)
+"lib/bident.ml" 130 4664 4679 "lib/bident.ml" 130 4664 4691
+call(
+  stack
+)
