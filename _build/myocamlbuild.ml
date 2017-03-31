@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 903520da147510a2a03e1f9e07e718e3) *)
+(* DO NOT EDIT (digest: 7c5e7ad9c62d871645f41cf22efaff87) *)
 module OASISGettext = struct
 (* # 22 "src/oasis/OASISGettext.ml" *)
 
@@ -609,6 +609,7 @@ let package_default =
   {
      MyOCamlbuildBase.lib_ocaml =
        [
+          ("lenssynth", ["lenssynth"], []);
           ("ubase", ["ubase"], []);
           ("hbase", ["hbase"], []);
           ("boomerang", ["lib"], []);
@@ -618,7 +619,7 @@ let package_default =
      flags = [];
      includes =
        [
-          ("lib", ["hbase"; "ubase"]);
+          ("lib", ["hbase"; "lenssynth"; "ubase"]);
           ("lenses", ["hbase"; "lib"]);
           ("hbase", ["ubase"]);
           ("boomerang", ["lenses"; "lib"; "ubase"])
@@ -630,6 +631,6 @@ let conf = {MyOCamlbuildFindlib.no_automatic_syntax = false}
 
 let dispatch_default = MyOCamlbuildBase.dispatch_default conf package_default;;
 
-# 634 "myocamlbuild.ml"
+# 635 "myocamlbuild.ml"
 (* OASIS_STOP *)
 Ocamlbuild_plugin.dispatch dispatch_default;;

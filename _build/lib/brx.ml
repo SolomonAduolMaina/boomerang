@@ -158,8 +158,8 @@ module rec M : sig
     | Inter of t list
     | Diff of t * t
   and t = 
-      { uid                        : int;
-        desc                       : d;
+      { desc                       : d;
+				uid                        : int;
         hash                       : int;
         final                      : bool;
 (*         size                       : int; *)
@@ -179,8 +179,8 @@ end = struct
     | Inter of t list
     | Diff of t * t
   and t = 
-      { uid                        : int;
-        desc                       : d;
+      { desc                       : d;
+				uid                        : int;
         hash                       : int;
         final                      : bool;
 (*         size                       : int; *)

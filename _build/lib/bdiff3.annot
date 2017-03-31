@@ -1386,7 +1386,7 @@ type(
   bool -> bool -> bool
 )
 ident(
-  ext_ref Pervasives.( or )
+  ext_ref Pervasives.( || )
 )
 "lib/bdiff3.ml" 86 3625 3644 "lib/bdiff3.ml" 86 3625 3645
 type(

@@ -1,4 +1,4 @@
-# 117 "blexer.srcl"
+# 21 "blexer.srcl"
  
 open Bparser
 
@@ -621,207 +621,207 @@ let rec main lexbuf =
 and __ocaml_lex_main_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 242 "blexer.srcl"
+# 146 "blexer.srcl"
                      ( main lexbuf )
 # 627 "lib/blexer.ml"
 
   | 1 ->
-# 243 "blexer.srcl"
+# 147 "blexer.srcl"
                      ( error lexbuf "this is not the end of a comment" )
 # 632 "lib/blexer.ml"
 
   | 2 ->
-# 244 "blexer.srcl"
+# 148 "blexer.srcl"
                      ( LPAREN(info lexbuf) )
 # 637 "lib/blexer.ml"
 
   | 3 ->
-# 245 "blexer.srcl"
+# 149 "blexer.srcl"
                      ( RPAREN(info lexbuf) )
 # 642 "lib/blexer.ml"
 
   | 4 ->
-# 246 "blexer.srcl"
+# 150 "blexer.srcl"
                      ( SEMI(info lexbuf) )
 # 647 "lib/blexer.ml"
 
   | 5 ->
-# 247 "blexer.srcl"
+# 151 "blexer.srcl"
                      ( GET(info lexbuf) )
 # 652 "lib/blexer.ml"
 
   | 6 ->
-# 248 "blexer.srcl"
+# 152 "blexer.srcl"
                      ( PUT(info lexbuf) )
 # 657 "lib/blexer.ml"
 
   | 7 ->
-# 249 "blexer.srcl"
+# 153 "blexer.srcl"
                      ( CREATE(info lexbuf) )
 # 662 "lib/blexer.ml"
 
   | 8 ->
-# 250 "blexer.srcl"
+# 154 "blexer.srcl"
                      ( CANONIZE(info lexbuf) )
 # 667 "lib/blexer.ml"
 
   | 9 ->
-# 251 "blexer.srcl"
+# 155 "blexer.srcl"
                      ( CHOOSE(info lexbuf) )
 # 672 "lib/blexer.ml"
 
   | 10 ->
-# 252 "blexer.srcl"
+# 156 "blexer.srcl"
                      ( STYPE(info lexbuf) )
 # 677 "lib/blexer.ml"
 
   | 11 ->
-# 253 "blexer.srcl"
+# 157 "blexer.srcl"
                      ( STYPE(info lexbuf) )
 # 682 "lib/blexer.ml"
 
   | 12 ->
-# 254 "blexer.srcl"
+# 158 "blexer.srcl"
                      ( ASTYPE(info lexbuf) )
 # 687 "lib/blexer.ml"
 
   | 13 ->
-# 255 "blexer.srcl"
+# 159 "blexer.srcl"
                      ( VTYPE(info lexbuf) )
 # 692 "lib/blexer.ml"
 
   | 14 ->
-# 256 "blexer.srcl"
+# 160 "blexer.srcl"
                      ( VTYPE(info lexbuf) )
 # 697 "lib/blexer.ml"
 
   | 15 ->
-# 257 "blexer.srcl"
+# 161 "blexer.srcl"
                      ( AVTYPE(info lexbuf) )
 # 702 "lib/blexer.ml"
 
   | 16 ->
-# 258 "blexer.srcl"
+# 162 "blexer.srcl"
                      ( BIJ(info lexbuf) )
 # 707 "lib/blexer.ml"
 
   | 17 ->
-# 259 "blexer.srcl"
+# 163 "blexer.srcl"
                      ( DOT(info lexbuf) )
 # 712 "lib/blexer.ml"
 
   | 18 ->
-# 260 "blexer.srcl"
+# 164 "blexer.srcl"
                      ( AMPERSAND(info lexbuf) )
 # 717 "lib/blexer.ml"
 
   | 19 ->
-# 261 "blexer.srcl"
+# 165 "blexer.srcl"
                      ( STAR(info lexbuf) )
 # 722 "lib/blexer.ml"
 
   | 20 ->
-# 262 "blexer.srcl"
+# 166 "blexer.srcl"
                      ( MINUS(info lexbuf) )
 # 727 "lib/blexer.ml"
 
   | 21 ->
-# 263 "blexer.srcl"
+# 167 "blexer.srcl"
                      ( UNDERLINE(info lexbuf) )
 # 732 "lib/blexer.ml"
 
   | 22 ->
-# 264 "blexer.srcl"
+# 168 "blexer.srcl"
                      ( DOLLAR(info lexbuf) )
 # 737 "lib/blexer.ml"
 
   | 23 ->
-# 265 "blexer.srcl"
+# 169 "blexer.srcl"
                      ( PLUS(info lexbuf) )
 # 742 "lib/blexer.ml"
 
   | 24 ->
-# 266 "blexer.srcl"
+# 170 "blexer.srcl"
                      ( BANG(info lexbuf) )
 # 747 "lib/blexer.ml"
 
   | 25 ->
-# 267 "blexer.srcl"
+# 171 "blexer.srcl"
                      ( ARROW(info lexbuf) )
 # 752 "lib/blexer.ml"
 
   | 26 ->
-# 268 "blexer.srcl"
+# 172 "blexer.srcl"
                      ( EQARROW(info lexbuf) )
 # 757 "lib/blexer.ml"
 
   | 27 ->
-# 269 "blexer.srcl"
+# 173 "blexer.srcl"
                      ( DEQARROW(info lexbuf) )
 # 762 "lib/blexer.ml"
 
   | 28 ->
-# 270 "blexer.srcl"
+# 174 "blexer.srcl"
                      ( DARROW(info lexbuf) )
 # 767 "lib/blexer.ml"
 
   | 29 ->
-# 271 "blexer.srcl"
+# 175 "blexer.srcl"
                      ( BARBAR(info lexbuf) )
 # 772 "lib/blexer.ml"
 
   | 30 ->
-# 272 "blexer.srcl"
+# 176 "blexer.srcl"
                      ( BAR(info lexbuf) )
 # 777 "lib/blexer.ml"
 
   | 31 ->
-# 273 "blexer.srcl"
+# 177 "blexer.srcl"
                      ( EQUAL(info lexbuf) )
 # 782 "lib/blexer.ml"
 
   | 32 ->
-# 274 "blexer.srcl"
+# 178 "blexer.srcl"
                      ( LBRACE(info lexbuf) )
 # 787 "lib/blexer.ml"
 
   | 33 ->
-# 275 "blexer.srcl"
+# 179 "blexer.srcl"
                      ( RBRACE(info lexbuf) )
 # 792 "lib/blexer.ml"
 
   | 34 ->
-# 276 "blexer.srcl"
+# 180 "blexer.srcl"
                      ( HASH(info lexbuf) )
 # 797 "lib/blexer.ml"
 
   | 35 ->
-# 277 "blexer.srcl"
+# 181 "blexer.srcl"
                      ( LLIST(info lexbuf) )
 # 802 "lib/blexer.ml"
 
   | 36 ->
-# 278 "blexer.srcl"
+# 182 "blexer.srcl"
                      ( RBRACK(info lexbuf) )
 # 807 "lib/blexer.ml"
 
   | 37 ->
-# 279 "blexer.srcl"
+# 183 "blexer.srcl"
                      ( CSET(info lexbuf, cset lexbuf) )
 # 812 "lib/blexer.ml"
 
   | 38 ->
-# 280 "blexer.srcl"
+# 184 "blexer.srcl"
                      ( NSET(info lexbuf, cset lexbuf) )
 # 817 "lib/blexer.ml"
 
   | 39 ->
-# 281 "blexer.srcl"
+# 185 "blexer.srcl"
                      ( LANGLE(info lexbuf) )
 # 822 "lib/blexer.ml"
 
   | 40 ->
-# 282 "blexer.srcl"
+# 186 "blexer.srcl"
                      ( let i1 = info lexbuf in 
                        let i2,s = bare "" lexbuf in 
                        let i = Info.merge_inc i1 i2 in 
@@ -829,47 +829,47 @@ and __ocaml_lex_main_rec lexbuf __ocaml_lex_state =
 # 830 "lib/blexer.ml"
 
   | 41 ->
-# 286 "blexer.srcl"
+# 190 "blexer.srcl"
                      ( RANGLE(info lexbuf) )
 # 835 "lib/blexer.ml"
 
   | 42 ->
-# 287 "blexer.srcl"
+# 191 "blexer.srcl"
                      ( COMMA(info lexbuf) )
 # 840 "lib/blexer.ml"
 
   | 43 ->
-# 288 "blexer.srcl"
+# 192 "blexer.srcl"
                      ( COLONCOLON(info lexbuf) )
 # 845 "lib/blexer.ml"
 
   | 44 ->
-# 289 "blexer.srcl"
+# 193 "blexer.srcl"
                      ( COLON(info lexbuf) )
 # 850 "lib/blexer.ml"
 
   | 45 ->
-# 290 "blexer.srcl"
+# 194 "blexer.srcl"
                      ( HAT(info lexbuf) )
 # 855 "lib/blexer.ml"
 
   | 46 ->
-# 291 "blexer.srcl"
+# 195 "blexer.srcl"
                      ( TILDE(info lexbuf) )
 # 860 "lib/blexer.ml"
 
   | 47 ->
-# 292 "blexer.srcl"
+# 196 "blexer.srcl"
                      ( BACKSLASH(info lexbuf) )
 # 865 "lib/blexer.ml"
 
   | 48 ->
-# 293 "blexer.srcl"
+# 197 "blexer.srcl"
                      ( QMARK(info lexbuf) )
 # 870 "lib/blexer.ml"
 
   | 49 ->
-# 294 "blexer.srcl"
+# 198 "blexer.srcl"
                      ( let i1 = info lexbuf in 
                        let i2,s = string "" lexbuf in 
                        let i = Info.merge_inc i1 i2 in 
@@ -878,29 +878,29 @@ and __ocaml_lex_main_rec lexbuf __ocaml_lex_state =
 
   | 50 ->
 let
-# 299 "blexer.srcl"
+# 203 "blexer.srcl"
                   c
 # 884 "lib/blexer.ml"
 = Lexing.sub_lexeme_char lexbuf (lexbuf.Lexing.lex_start_pos + 1) in
-# 299 "blexer.srcl"
+# 203 "blexer.srcl"
                          ( 
     CHARACTER(info lexbuf,c) 
   )
 # 890 "lib/blexer.ml"
 
   | 51 ->
-# 303 "blexer.srcl"
+# 207 "blexer.srcl"
         ( let c = escape [("'","'")] lexbuf in 
           character c lexbuf )
 # 896 "lib/blexer.ml"
 
   | 52 ->
 let
-# 306 "blexer.srcl"
+# 210 "blexer.srcl"
                                        ident
 # 902 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf (lexbuf.Lexing.lex_start_pos + 1) lexbuf.Lexing.lex_curr_pos in
-# 306 "blexer.srcl"
+# 210 "blexer.srcl"
                                               ( 
     TYVARIDENT(info lexbuf, ident)
   )
@@ -908,11 +908,11 @@ let
 
   | 53 ->
 let
-# 309 "blexer.srcl"
+# 213 "blexer.srcl"
                                  ident
 # 914 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos lexbuf.Lexing.lex_curr_pos in
-# 309 "blexer.srcl"
+# 213 "blexer.srcl"
                                        ( 
       try let kw = Hashtbl.find keywords ident in
           kw (info lexbuf)
@@ -925,11 +925,11 @@ let
 
   | 54 ->
 let
-# 317 "blexer.srcl"
+# 221 "blexer.srcl"
                                                  qident
 # 931 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos lexbuf.Lexing.lex_curr_pos in
-# 317 "blexer.srcl"
+# 221 "blexer.srcl"
                                                         (
     QUALIDENT(info lexbuf,qident)
   )
@@ -937,41 +937,41 @@ let
 
   | 55 ->
 let
-# 320 "blexer.srcl"
+# 224 "blexer.srcl"
                integ
 # 943 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos lexbuf.Lexing.lex_curr_pos in
-# 320 "blexer.srcl"
+# 224 "blexer.srcl"
                      ( INTEGER(info lexbuf, int_of_string integ) )
 # 947 "lib/blexer.ml"
 
   | 56 ->
 let
-# 321 "blexer.srcl"
+# 225 "blexer.srcl"
                                flot
 # 953 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos lexbuf.Lexing.lex_curr_pos in
-# 322 "blexer.srcl"
+# 226 "blexer.srcl"
                      ( FLOAT(info lexbuf, float_of_string flot) )
 # 957 "lib/blexer.ml"
 
   | 57 ->
-# 323 "blexer.srcl"
+# 227 "blexer.srcl"
                      ( newline lexbuf; main lexbuf )
 # 962 "lib/blexer.ml"
 
   | 58 ->
-# 324 "blexer.srcl"
+# 228 "blexer.srcl"
                      ( EOF(info lexbuf) )
 # 967 "lib/blexer.ml"
 
   | 59 ->
-# 325 "blexer.srcl"
+# 229 "blexer.srcl"
                      ( comment lexbuf; main lexbuf )
 # 972 "lib/blexer.ml"
 
   | 60 ->
-# 326 "blexer.srcl"
+# 230 "blexer.srcl"
                      ( error lexbuf "unknown token" )
 # 977 "lib/blexer.ml"
 
@@ -983,27 +983,27 @@ and cset lexbuf =
 and __ocaml_lex_cset_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 329 "blexer.srcl"
+# 233 "blexer.srcl"
                      ( "\\\\" ^ cset lexbuf )
 # 989 "lib/blexer.ml"
 
   | 1 ->
-# 330 "blexer.srcl"
+# 234 "blexer.srcl"
                      ( "]" ^ cset lexbuf )
 # 994 "lib/blexer.ml"
 
   | 2 ->
-# 331 "blexer.srcl"
+# 235 "blexer.srcl"
                      ( "" )
 # 999 "lib/blexer.ml"
 
   | 3 ->
-# 332 "blexer.srcl"
+# 236 "blexer.srcl"
                      ( newline lexbuf; "\n" ^ cset lexbuf )
 # 1004 "lib/blexer.ml"
 
   | 4 ->
-# 333 "blexer.srcl"
+# 237 "blexer.srcl"
                      ( let s = lexeme lexbuf in s ^ cset lexbuf )
 # 1009 "lib/blexer.ml"
 
@@ -1015,29 +1015,29 @@ and rx_string acc lexbuf =
 and __ocaml_lex_rx_string_rec acc lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 336 "blexer.srcl"
+# 240 "blexer.srcl"
                 ( let s = escape [("/","/");("'","'")] lexbuf in 
                   rx_string (acc ^ s) lexbuf )
 # 1022 "lib/blexer.ml"
 
   | 1 ->
-# 338 "blexer.srcl"
+# 242 "blexer.srcl"
                 ( (info lexbuf,acc) )
 # 1027 "lib/blexer.ml"
 
   | 2 ->
-# 340 "blexer.srcl"
+# 244 "blexer.srcl"
                 ( newline lexbuf;
                   rx_string (acc ^ "\n") lexbuf )
 # 1033 "lib/blexer.ml"
 
   | 3 ->
-# 342 "blexer.srcl"
+# 246 "blexer.srcl"
                 ( error lexbuf "unmatched '/'" )
 # 1038 "lib/blexer.ml"
 
   | 4 ->
-# 343 "blexer.srcl"
+# 247 "blexer.srcl"
                 ( rx_string (acc ^ lexeme lexbuf) lexbuf )
 # 1043 "lib/blexer.ml"
 
@@ -1049,29 +1049,29 @@ and string acc lexbuf =
 and __ocaml_lex_string_rec acc lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 346 "blexer.srcl"
+# 250 "blexer.srcl"
                 ( let s = escape [("\"","\"");("'","'")] lexbuf in 
                   string (acc ^ s) lexbuf )
 # 1056 "lib/blexer.ml"
 
   | 1 ->
-# 348 "blexer.srcl"
+# 252 "blexer.srcl"
                 ( (info lexbuf,acc) )
 # 1061 "lib/blexer.ml"
 
   | 2 ->
-# 350 "blexer.srcl"
+# 254 "blexer.srcl"
                 ( newline lexbuf; 
                   string (acc ^ "\n") lexbuf)
 # 1067 "lib/blexer.ml"
 
   | 3 ->
-# 352 "blexer.srcl"
+# 256 "blexer.srcl"
                 ( error lexbuf "unmatched '\"'")
 # 1072 "lib/blexer.ml"
 
   | 4 ->
-# 353 "blexer.srcl"
+# 257 "blexer.srcl"
                 ( string (acc ^ lexeme lexbuf) lexbuf )
 # 1077 "lib/blexer.ml"
 
@@ -1083,13 +1083,13 @@ and character acc lexbuf =
 and __ocaml_lex_character_rec acc lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 356 "blexer.srcl"
+# 260 "blexer.srcl"
                 ( if String.length acc <> 1 then error lexbuf "unmatched '''"
                   else CHARACTER(info lexbuf,acc.[0]) )
 # 1090 "lib/blexer.ml"
 
   | 1 ->
-# 359 "blexer.srcl"
+# 263 "blexer.srcl"
                 ( error lexbuf "unmatched '''" )
 # 1095 "lib/blexer.ml"
 
@@ -1101,7 +1101,7 @@ and bare acc lexbuf =
 and __ocaml_lex_bare_rec acc lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 362 "blexer.srcl"
+# 266 "blexer.srcl"
                    ( newline lexbuf; 
                      let s = lexeme lexbuf in 
                      let n = String.length s - 1 in 
@@ -1109,17 +1109,17 @@ and __ocaml_lex_bare_rec acc lexbuf __ocaml_lex_state =
 # 1110 "lib/blexer.ml"
 
   | 1 ->
-# 366 "blexer.srcl"
+# 270 "blexer.srcl"
                    ( (info lexbuf,acc) )
 # 1115 "lib/blexer.ml"
 
   | 2 ->
-# 367 "blexer.srcl"
+# 271 "blexer.srcl"
                    ( error lexbuf "unmatched '<<'" )
 # 1120 "lib/blexer.ml"
 
   | 3 ->
-# 368 "blexer.srcl"
+# 272 "blexer.srcl"
                    ( bare_raw (acc ^ lexeme lexbuf) lexbuf )
 # 1125 "lib/blexer.ml"
 
@@ -1131,7 +1131,7 @@ and bare_indent_spaces acc n expected lexbuf =
 and __ocaml_lex_bare_indent_spaces_rec acc n expected lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 371 "blexer.srcl"
+# 275 "blexer.srcl"
                      ( if expected=0 then 
                          bare_indent (acc ^ lexeme lexbuf) n lexbuf
                        else 
@@ -1139,19 +1139,19 @@ and __ocaml_lex_bare_indent_spaces_rec acc n expected lexbuf __ocaml_lex_state =
 # 1140 "lib/blexer.ml"
 
   | 1 ->
-# 376 "blexer.srcl"
+# 280 "blexer.srcl"
                         ( newline lexbuf;
                           (info lexbuf,acc) )
 # 1146 "lib/blexer.ml"
 
   | 2 ->
-# 378 "blexer.srcl"
+# 282 "blexer.srcl"
                      ( newline lexbuf; 
                        bare_indent_spaces (acc ^ lexeme lexbuf) n n lexbuf )
 # 1152 "lib/blexer.ml"
 
   | 3 ->
-# 380 "blexer.srcl"
+# 284 "blexer.srcl"
                      ( if expected=0 then 
                          bare_indent (acc ^ lexeme lexbuf) n lexbuf 
                        else
@@ -1166,24 +1166,24 @@ and bare_indent acc n lexbuf =
 and __ocaml_lex_bare_indent_rec acc n lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 386 "blexer.srcl"
+# 290 "blexer.srcl"
                         ( newline lexbuf; 
                           (info lexbuf,acc) )
 # 1173 "lib/blexer.ml"
 
   | 1 ->
-# 388 "blexer.srcl"
+# 292 "blexer.srcl"
                      ( newline lexbuf; 
                        bare_indent_spaces (acc ^ lexeme lexbuf) n n lexbuf )
 # 1179 "lib/blexer.ml"
 
   | 2 ->
-# 390 "blexer.srcl"
+# 294 "blexer.srcl"
                      ( error lexbuf "unmatched '>>'" )
 # 1184 "lib/blexer.ml"
 
   | 3 ->
-# 391 "blexer.srcl"
+# 295 "blexer.srcl"
                      ( bare_indent (acc ^ lexeme lexbuf) n lexbuf )
 # 1189 "lib/blexer.ml"
 
@@ -1195,23 +1195,23 @@ and bare_raw acc lexbuf =
 and __ocaml_lex_bare_raw_rec acc lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 394 "blexer.srcl"
+# 298 "blexer.srcl"
                 ( (info lexbuf,acc) )
 # 1201 "lib/blexer.ml"
 
   | 1 ->
-# 395 "blexer.srcl"
+# 299 "blexer.srcl"
                 ( newline lexbuf; 
                   bare_raw (acc ^ lexeme lexbuf) lexbuf )
 # 1207 "lib/blexer.ml"
 
   | 2 ->
-# 397 "blexer.srcl"
+# 301 "blexer.srcl"
                 ( error lexbuf "unmatched '<<'" )
 # 1212 "lib/blexer.ml"
 
   | 3 ->
-# 398 "blexer.srcl"
+# 302 "blexer.srcl"
                 ( bare_raw (acc ^ lexeme lexbuf) lexbuf )
 # 1217 "lib/blexer.ml"
 
@@ -1223,42 +1223,42 @@ and escape el lexbuf =
 and __ocaml_lex_escape_rec el lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 401 "blexer.srcl"
+# 305 "blexer.srcl"
                 ( "\\" )
 # 1229 "lib/blexer.ml"
 
   | 1 ->
-# 402 "blexer.srcl"
+# 306 "blexer.srcl"
                 ( "\008" )
 # 1234 "lib/blexer.ml"
 
   | 2 ->
-# 403 "blexer.srcl"
+# 307 "blexer.srcl"
                 ( "\010" )
 # 1239 "lib/blexer.ml"
 
   | 3 ->
-# 404 "blexer.srcl"
+# 308 "blexer.srcl"
                 ( "\013" )
 # 1244 "lib/blexer.ml"
 
   | 4 ->
-# 405 "blexer.srcl"
+# 309 "blexer.srcl"
                 ( "\009" )
 # 1249 "lib/blexer.ml"
 
   | 5 ->
 let
-# 406 "blexer.srcl"
+# 310 "blexer.srcl"
                     h1
 # 1255 "lib/blexer.ml"
 = Lexing.sub_lexeme_char lexbuf (lexbuf.Lexing.lex_start_pos + 2)
 and
-# 406 "blexer.srcl"
+# 310 "blexer.srcl"
                                      h2
 # 1260 "lib/blexer.ml"
 = Lexing.sub_lexeme_char lexbuf (lexbuf.Lexing.lex_start_pos + 3) in
-# 407 "blexer.srcl"
+# 311 "blexer.srcl"
                 ( let int_of_hex = function
                     | '0' -> 0 | '1' -> 1 | '2' -> 2 | '3' -> 3 | '4' -> 4
                     | '5' -> 5 | '6' -> 6 | '7' -> 7 | '8' -> 8 | '9' -> 9
@@ -1271,16 +1271,16 @@ and
 
   | 6 ->
 let
-# 416 "blexer.srcl"
+# 320 "blexer.srcl"
                                 c
 # 1277 "lib/blexer.ml"
 = Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos (lexbuf.Lexing.lex_start_pos + 3) in
-# 417 "blexer.srcl"
+# 321 "blexer.srcl"
                 ( String.make 1 (Char.chr (int_of_string c)) )
 # 1281 "lib/blexer.ml"
 
   | 7 ->
-# 418 "blexer.srcl"
+# 322 "blexer.srcl"
                 ( try Safelist.assoc (lexeme lexbuf) el 
                   with Not_found -> 
                     error lexbuf "in escape sequence" )
@@ -1294,27 +1294,27 @@ and comment lexbuf =
 and __ocaml_lex_comment_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 423 "blexer.srcl"
+# 327 "blexer.srcl"
                    ( comment lexbuf; comment lexbuf )
 # 1300 "lib/blexer.ml"
 
   | 1 ->
-# 424 "blexer.srcl"
+# 328 "blexer.srcl"
                    ( () )
 # 1305 "lib/blexer.ml"
 
   | 2 ->
-# 425 "blexer.srcl"
+# 329 "blexer.srcl"
                    ( newline lexbuf; comment lexbuf )
 # 1310 "lib/blexer.ml"
 
   | 3 ->
-# 426 "blexer.srcl"
+# 330 "blexer.srcl"
                    ( error lexbuf "unmatched '(*'" )
 # 1315 "lib/blexer.ml"
 
   | 4 ->
-# 427 "blexer.srcl"
+# 331 "blexer.srcl"
                    ( comment lexbuf )
 # 1320 "lib/blexer.ml"
 

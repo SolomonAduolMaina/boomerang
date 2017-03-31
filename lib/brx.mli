@@ -19,10 +19,40 @@
 (* Boomerang RegExp engine                                                    *)
 (* $Id: brx.mli 4643 2009-09-03 18:34:32Z cretin $ *)
 (******************************************************************************)
-type t
+
+type charmap
+
+module CharSet :
+sig
+	type t = (int * int) list
+end
+
+module rec M : sig
+	type d =
+		| CSet of CharSet.t
+		| Seq of t * t
+		| Alt of t list
+		| Rep of t * int * int option
+		| Inter of t list
+		| Diff of t * t
+	and t = {
+		desc : d;
+		uid : int;
+		hash : int;
+		final : bool;
+		ascii : bool;
+		mutable maps : charmap option;
+		mutable known_singleton : bool;
+		mutable derivative : int -> t;
+		mutable reverse : t option;
+		mutable representative : (int list option) option;
+		mutable splittable : Q.t }
+end and Q : Set.S with type elt = M.t
+
+type t = M.t
 
 (* constants *)
-val epsilon : t 
+val epsilon : t
 val empty : t
 val ascii_set : t
 
@@ -41,15 +71,14 @@ val mk_inter : t -> t -> t
 val mk_reverse : t -> t
 val mk_expand : t -> int -> t -> t
 
-(* pretty printing *)
-(* ranks *)
-type r = 
-  | Urnk (* union *)
-  | Drnk (* diff *)
-  | Irnk (* inter *)
-  | Crnk (* concat *)
-  | Srnk (* star *)
-  | Arnk (* atomic *)
+(* pretty printing ranks *)
+type r =
+	| Urnk (* union *)
+	| Drnk (* diff *)
+	| Irnk (* inter *)
+	| Crnk (* concat *)
+	| Srnk (* star *)
+	| Arnk (* atomic *)
 val rank : t -> r
 val lpar : r -> r -> bool
 val rpar : r -> r -> bool
@@ -76,9 +105,9 @@ val match_string_reverse_positions : t -> string -> Int.Set.t
 (* ambiguity *)
 val derivative : t -> string -> t
 val mk_reverse : t -> t
-val splittable_cex : t -> t -> ((string * string * string * string),t) Misc.alternative
+val splittable_cex : t -> t -> ((string * string * string * string), t) Misc.alternative
 val splittable : t -> t -> bool
-val iterable_cex : t -> ((string * string * string * string),t) Misc.alternative
+val iterable_cex : t -> ((string * string * string * string), t) Misc.alternative
 val iterable : t -> bool
 
 (* splitting *)

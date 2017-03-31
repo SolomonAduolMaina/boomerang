@@ -3800,7 +3800,7 @@ ident(
 )
 "lib/barx.ml" 191 6408 6418 "lib/barx.ml" 191 6408 6434
 type(
-  Rx.t -> Bstring.t -> bool
+  Brx.t -> Bstring.t -> bool
 )
 ident(
   ext_ref Bstring.match_rx
@@ -4095,8 +4095,8 @@ type(
 )
 "lib/barx.ml" 204 6794 6802 "lib/barx.ml" 204 6794 6819
 type(
-  Rx.t ->
-  Rx.t ->
+  Brx.t ->
+  Brx.t ->
   (Bstring.attmp -> Bstring.attmp) ->
   (Bstring.attmp -> Bstring.attmp) -> Bstring.attmp -> Bstring.attmp
 )
@@ -4242,7 +4242,7 @@ ident(
 )
 "lib/barx.ml" 206 6892 6903 "lib/barx.ml" 206 6892 6919
 type(
-  Rx.t -> Bstring.t -> bool
+  Brx.t -> Bstring.t -> bool
 )
 ident(
   ext_ref Bstring.match_rx
@@ -4348,7 +4348,7 @@ type(
 )
 "lib/barx.ml" 212 7078 7086 "lib/barx.ml" 212 7078 7101
 type(
-  Rx.t -> (Bstring.attmp -> Bstring.attmp) -> Bstring.attmp -> Bstring.attmp
+  Brx.t -> (Bstring.attmp -> Bstring.attmp) -> Bstring.attmp -> Bstring.attmp
 )
 ident(
   ext_ref Bstring.do_star

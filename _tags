@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 48bf21e8ba4cb8aa6ba649a2464438ea)
+# DO NOT EDIT (digest: 3e7bc0a015b93d31a524dc1ddfc96c67)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -14,39 +14,50 @@ true: annot, bin_annot
 ".git": not_hygienic
 "_darcs": -traverse
 "_darcs": not_hygienic
+# Library lenssynth
+"lenssynth/lenssynth.cmxs": use_lenssynth
+<lenssynth/*.ml{,i,y}>: package(core)
 # Library ubase
 "ubase/ubase.cmxs": use_ubase
 # Library hbase
 "hbase/hbase.cmxs": use_hbase
 # Library boomerang
 "lib/boomerang.cmxs": use_boomerang
+<lib/*.ml{,i,y}>: package(core)
 <lib/*.ml{,i,y}>: package(str)
 <lib/*.ml{,i,y}>: package(threads)
 <lib/*.ml{,i,y}>: package(unix)
 <lib/*.ml{,i,y}>: use_hbase
+<lib/*.ml{,i,y}>: use_lenssynth
 <lib/*.ml{,i,y}>: use_ubase
 # Library lenses
 "lenses/lenses.cmxs": use_lenses
+<lenses/*.ml{,i,y}>: package(core)
 <lenses/*.ml{,i,y}>: package(str)
 <lenses/*.ml{,i,y}>: package(threads)
 <lenses/*.ml{,i,y}>: package(unix)
 <lenses/*.ml{,i,y}>: use_boomerang
 <lenses/*.ml{,i,y}>: use_hbase
+<lenses/*.ml{,i,y}>: use_lenssynth
 <lenses/*.ml{,i,y}>: use_ubase
 # Executable boomerang
+"boomerang/boomerang.native": package(core)
 "boomerang/boomerang.native": package(str)
 "boomerang/boomerang.native": package(threads)
 "boomerang/boomerang.native": package(unix)
 "boomerang/boomerang.native": use_boomerang
 "boomerang/boomerang.native": use_hbase
 "boomerang/boomerang.native": use_lenses
+"boomerang/boomerang.native": use_lenssynth
 "boomerang/boomerang.native": use_ubase
+<boomerang/*.ml{,i,y}>: package(core)
 <boomerang/*.ml{,i,y}>: package(str)
 <boomerang/*.ml{,i,y}>: package(threads)
 <boomerang/*.ml{,i,y}>: package(unix)
 <boomerang/*.ml{,i,y}>: use_boomerang
 <boomerang/*.ml{,i,y}>: use_hbase
 <boomerang/*.ml{,i,y}>: use_lenses
+<boomerang/*.ml{,i,y}>: use_lenssynth
 <boomerang/*.ml{,i,y}>: use_ubase
 # Executable baker
 "hbase/baker.native": package(unix)

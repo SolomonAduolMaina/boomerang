@@ -217,47 +217,6 @@ let add_atom ai (i,xs,bs) = match ai with
 
 %%
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-/* --------- MODULES ---------- */
-
-
-
-
-
-
-
-    
-
 modl: 
   | MODULE UIDENT EQUAL opens decls EOF
       { Mod(m $1 $6,$2,$4,$5) }
@@ -268,66 +227,6 @@ opens:
   | { [] }
 
 /* --------- DECLARATIONS ---------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 decls:      
   | MODULE UIDENT EQUAL decls END decls 
       { let i = m $1 $5 in 
@@ -376,7 +275,6 @@ decls:
       
   | { [] }
 
-
 /* --------- TEST RESULTS --------- */      
 test_res_exp:
   | QMARK
@@ -393,17 +291,7 @@ test_res_sort:
   | sort      
       { TestSortEqual(None,$1) }
 
-
 /* --------- EXPRESSIONS ---------- */      
-
-
-
-
-
-
-
-
-    
 exp:
   | LET id param_list COLON sort EQUAL exp IN exp 
       { let i = me2 $1 $9 in 
@@ -432,12 +320,6 @@ exp:
   | funexp
       { $1 }
 
-
-
-
-
-    
-
 /* anonymous functions and application operator */
 funexp:
   | FUN param_list ARROW exp
@@ -456,14 +338,6 @@ funexp:
       { $1 }
 
 /* case expressions */
-
-
-
-
-
-
-    
-
 cexp:
   | MATCH composeexp WITH branch_list
        { let i4,pl = $4 in 
@@ -476,15 +350,7 @@ cexp:
   | composeexp
       { $1 }
 
-
 /* compose expressions */
-
-
-
-
-
-    
-
 composeexp:
   | composeexp SEMI commaexp
       { mk_compose (me $1 $3) $1 $3 }
@@ -492,25 +358,14 @@ composeexp:
   | commaexp
       { $1 }
 
-/* comma expression */
-
-
-
-
-    
+/* comma expression */    
 commaexp:
   | commaexp COMMA barexp
       { EPair(me $1 $3, $1, $3) }
   | barexp
       { $1 }
 
-/* bar expressions */
-
-
-
-
-
-    
+/* bar expressions */   
 barexp:
   | obarexp 
       { mk_tree OBar (Safelist.rev $1) }
@@ -521,54 +376,24 @@ barexp:
   | equalexp
       { $1 }
 
-
-
-
-
-    
 obarexp: 
   | obarexp BAR equalexp
       { $3 :: $1 }
   | equalexp BAR equalexp
       { [$3; $1 ] }
-
-
-
-
-
-    
+   
 dbarexp:
   | dbarexp BARBAR equalexp
       { $3 :: $1 }
   | equalexp BARBAR equalexp 
       { [$3; $1] }
-
-
-
-
-
-    
+   
 equalexp:
   | appexp EQUAL appexp
       { mk_over (me $1 $3) OEqual [$1; $3] }
   | infixexp
       { $1 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
+   
 infixexp:
   | dotexp
       { $1 }
@@ -594,14 +419,7 @@ infixexp:
       { $1 }
   | appexp
       { $1 }
-
-
-
-
-
-
-
-    
+  
 dotexp:
   | dotexp DOT appexp
       { mk_over (me $1 $3) ODot [$1; $3] }
@@ -615,45 +433,25 @@ dotexp:
       { mk_over (me $1 $3) ODot [$1; $3] }
   | appexp DOT rewriteexp
       { mk_over (me $1 $3) ODot [$1; $3] }
-
-
-
-
-
-          
+       
 tildeexp:
   | tildeexp TILDE appexp
       { mk_over (me $1 $3) OTilde [$1; $3] }
   | appexp TILDE appexp
       { mk_over (me $1 $3) OTilde [$1; $3] }
-
-
-
-
-
-    
+   
 ampexp:
   | ampexp AMPERSAND appexp 
       { mk_over (me $1 $3) OAmp [$1; $3] }
   | appexp AMPERSAND appexp 
       { mk_over (me $1 $3) OAmp [$1; $3] }
-
-
-
-
-
-    
+   
 ampampexp:
   | appexp AMPERSAND AMPERSAND ampampexp
       { mk_over (me $1 $4) OAmpAmp [$1; $4] }
   | appexp AMPERSAND AMPERSAND appexp
       { mk_over (me $1 $4) OAmpAmp [$1; $4] }
-
-
-
-
-
-    
+ 
 rewriteexp:
   | appexp DARROW appexp 
       { mk_over (me $1 $3) ODarrow [$1; $3] }
@@ -661,14 +459,6 @@ rewriteexp:
   | appexp DEQARROW appexp
       { mk_over (me $1 $3) ODeqarrow [$1; $3] }
 
-
-
-
-
-
-
-
-    
 lenscomponentexp: 
   | appexp GET appexp
       { let i = me $1 $3 in 
@@ -709,11 +499,6 @@ geqexp:
       { mk_over (me $1 $3) OGeq [$1; $3] }
 
 /* application expressions */
-
-
-
-
-    
 appexp:
   | appexp repexp                         
       { mk_app (me $1 $2) $1 $2 }
@@ -721,12 +506,7 @@ appexp:
   | repexp
       { $1 }
       
-/* repeated expressions */
-
-
-
-
-    
+/* repeated expressions */    
 repexp:
   | tyexp rep                            
       { let i2,(min,max) = $2 in 
@@ -735,13 +515,7 @@ repexp:
 
   | tyexp                                
       { $1 }
-
-
-
-
-
-
-    
+   
 tyexp:
   | tyexp LBRACE sort RBRACE
       { let i = me1 $1 $4 in 
@@ -752,31 +526,6 @@ tyexp:
 
 
 /* atomic expressions */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 aexp:
   | LPAREN exp RPAREN
       { $2 }
@@ -845,14 +594,6 @@ aexp:
       { let i = me1 $1 $2 in 
         mk_app i (mk_core_var i "bij") $1 }
 
-
-
-
-
-
-
-    
-
 matchexp:
   | LANGLE exp RANGLE
       { let i = $1 in
@@ -861,16 +602,7 @@ matchexp:
   | LANGLE appexp COLON exp RANGLE
       { mk_over (m $1 $5) OMatch [$2; $4] }
 
-/* --------- BRANCHES ---------- */
-
-
-
-
-
-
-
-
-    
+/* --------- BRANCHES ---------- */ 
 branch: 
   | pat ARROW equalexp 
       { let i = m (info_of_pat $1) (info_of_exp $3) in 
@@ -896,17 +628,7 @@ branch_list2:
         let (i2,l) = $3 i1 in 
         (fun _ -> (m $1 i2, (p,e)::l)) }
 
-/* --------- REPETITIONS ---------- */
-
-
-
-
-
-
-
-
-
-    
+/* --------- REPETITIONS ---------- */    
 rep: 
   | STAR
       { ($1, (0,-1)) }
@@ -926,14 +648,7 @@ rep:
   | LBRACE INTEGER COMMA INTEGER RBRACE
       { let i = m $1 $5 in let _,n2 = $2 in let _,n4 = $4 in (i, (n2, n4)) }
 
-/* --------- LISTS ------------ */
-
-
-
-
-
-
-    
+/* --------- LISTS ------------ */ 
 list:
   | RBRACK 
       { $1, (fun i s -> ETyApp(i,mk_list_var i "Nil",s)) }
@@ -955,26 +670,6 @@ list:
 
 
 /* --------- GRAMMARS ----------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 atom:
   | aexp
       { Misc.Left $1 }
@@ -1032,22 +727,6 @@ productions:
     { $1 :: $3 }
 
 /* --------- IDENTIFIERS ---------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 id:
   | LIDENT
       { $1 }
@@ -1070,24 +749,6 @@ qvar:
       { let (i,qs) = $1 in parse_qid i qs }
 
 /* --------- PARAMETERS ---------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 param_list:
   | param param_list2
       { $1 :: $2 }
@@ -1177,15 +838,7 @@ param:
       { let i = m $1 $2 in
         Misc.Left (Param(i,(i,"(unit)"),SUnit)) } 
 
-/* --------- SORTS ---------- */
-
-
-
-
-
-
-
-    
+/* --------- SORTS ---------- */   
 sort:
   | FORALL TYVARIDENT EQARROW sort 
       { SForall($2,$4) }
@@ -1193,13 +846,7 @@ sort:
   | arrowsort
       { $1 }
 
-/* arrow sorts */
-
-
-
-
-
-    
+/* arrow sorts */   
 arrowsort: 
   | productsort ARROW arrowsort 
       { SFunction(Id.wild,$1,$3) } 
@@ -1210,12 +857,7 @@ arrowsort:
   | productsort
       { $1 }
 
-/* product sorts */
-
-
-
-
-    
+/* product sorts */   
 productsort:
   | productsort STAR datatypesort
       { SProduct($1,$3) }
@@ -1223,12 +865,7 @@ productsort:
   | datatypesort
       { $1 }
 
-/* data type sorts */
-
-
-
-
-    
+/* data type sorts */    
 datatypesort:
   | bsort qvar
       { SData([$1],$2) }
@@ -1238,20 +875,6 @@ datatypesort:
 
   | bsort 
       { $1 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 bsort:
   | LPAREN sort RPAREN
@@ -1326,23 +949,7 @@ bsort:
   | asort 
       { $1 }
 
-/* atomic sorts */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+/* atomic sorts */   
 asort:
   | qvar
       { SData([], $1) }
@@ -1395,14 +1002,6 @@ asort:
   | tyvar
       { SVar $1 }  
 
-
-
-
-
-
-
-    
-
 tyvar:
   | TYVARIDENT
       { $1 }
@@ -1432,14 +1031,6 @@ sort_list:
       { $1 :: $3 }
 
 /* data type sorts */
-
-
-
-
-
-
-    
-
 dtsort:
   | UIDENT
       { ($1,None) }
@@ -1458,25 +1049,7 @@ dtsort_list2:
   | BAR dtsort dtsort_list2
       { $2 :: $3 }
 
-/* --------- PATTERNS ---------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+/* --------- PATTERNS ---------- */   
 lcpat:
   | listpat { $1 }
   | conpat { $1 }
@@ -1514,19 +1087,7 @@ conpat:
         PVnt(i,parse_qid i qs,Some $2) }
 
   | apat { $1 }
-
-
-
-
-
-
-
-
-
-
-
-
-    
+   
 apat:
   | aapat
       { $1 }
@@ -1567,15 +1128,7 @@ aapat:
   | LIDENT
       { let i, _ = $1 in
         PVar (i, $1, None) }
-
-
-
-
-
-
-
-
-    
+  
 listpat:
   | CSET
       { let i, cset = $1 in

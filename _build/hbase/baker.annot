@@ -154,28 +154,28 @@ type(
   string -> string list -> unit
 )
 ident(
-  def go "hbase/baker.ml" 49 1878 1878 "hbase/baker.ml" 1 0 -1
+  def go "hbase/baker.ml" 49 1877 1877 "hbase/baker.ml" 1 0 -1
 )
 "hbase/baker.ml" 14 569 576 "hbase/baker.ml" 14 569 582
 type(
   string
 )
 ident(
-  def suffix "hbase/baker.ml" 14 569 583 "hbase/baker.ml" 47 1855 1865
+  def suffix "hbase/baker.ml" 14 569 583 "hbase/baker.ml" 47 1854 1864
 )
 "hbase/baker.ml" 14 569 583 "hbase/baker.ml" 14 569 584
 type(
   string list
 )
 ident(
-  def l "hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1855 1865
+  def l "hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1854 1864
 )
 "hbase/baker.ml" 15 588 598 "hbase/baker.ml" 15 588 602
 type(
   string list -> unit
 )
 ident(
-  def loop "hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1855 1865
+  def loop "hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1854 1864
 )
 "hbase/baker.ml" 16 614 620 "hbase/baker.ml" 16 614 622
 type(
@@ -190,14 +190,14 @@ type(
   string
 )
 ident(
-  def f "hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1839 1850
+  def f "hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1838 1849
 )
 "hbase/baker.ml" 17 629 638 "hbase/baker.ml" 17 629 642
 type(
   string list
 )
 ident(
-  def rest "hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1839 1850
+  def rest "hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1838 1849
 )
 "hbase/baker.ml" 17 629 635 "hbase/baker.ml" 17 629 642
 type(
@@ -265,7 +265,7 @@ type(
   in_channel
 )
 ident(
-  def fc "hbase/baker.ml" 24 864 884 "hbase/baker.ml" 31 1212 1256
+  def fc "hbase/baker.ml" 24 864 884 "hbase/baker.ml" 31 1211 1255
 )
 "hbase/baker.ml" 23 822 851 "hbase/baker.ml" 23 822 858
 type(
@@ -293,7 +293,7 @@ type(
   int
 )
 ident(
-  def len "hbase/baker.ml" 25 919 939 "hbase/baker.ml" 31 1212 1256
+  def len "hbase/baker.ml" 25 919 939 "hbase/baker.ml" 31 1211 1255
 )
 "hbase/baker.ml" 24 864 894 "hbase/baker.ml" 24 864 911
 type(
@@ -321,273 +321,273 @@ type(
   bytes
 )
 ident(
-  def buf "hbase/baker.ml" 26 970 992 "hbase/baker.ml" 31 1212 1256
+  def buf "hbase/baker.ml" 26 969 991 "hbase/baker.ml" 31 1211 1255
 )
-"hbase/baker.ml" 25 919 949 "hbase/baker.ml" 25 919 962
+"hbase/baker.ml" 25 919 949 "hbase/baker.ml" 25 919 961
 type(
   int -> bytes
 )
 ident(
-  ext_ref String.create
+  ext_ref Bytes.create
 )
-"hbase/baker.ml" 25 919 963 "hbase/baker.ml" 25 919 966
+"hbase/baker.ml" 25 919 962 "hbase/baker.ml" 25 919 965
 type(
   int
 )
 ident(
   int_ref len "hbase/baker.ml" 24 864 888 "hbase/baker.ml" 24 864 891
 )
-"hbase/baker.ml" 25 919 949 "hbase/baker.ml" 25 919 966
+"hbase/baker.ml" 25 919 949 "hbase/baker.ml" 25 919 965
 type(
   bytes
 )
-"hbase/baker.ml" 26 970 992 "hbase/baker.ml" 26 970 1004
+"hbase/baker.ml" 26 969 991 "hbase/baker.ml" 26 969 1003
 type(
   in_channel -> bytes -> int -> int -> unit
 )
 ident(
   ext_ref Pervasives.really_input
 )
-"hbase/baker.ml" 26 970 1005 "hbase/baker.ml" 26 970 1007
+"hbase/baker.ml" 26 969 1004 "hbase/baker.ml" 26 969 1006
 type(
   in_channel
 )
 ident(
   int_ref fc "hbase/baker.ml" 23 822 846 "hbase/baker.ml" 23 822 848
 )
-"hbase/baker.ml" 26 970 1008 "hbase/baker.ml" 26 970 1011
+"hbase/baker.ml" 26 969 1007 "hbase/baker.ml" 26 969 1010
 type(
   bytes
 )
 ident(
   int_ref buf "hbase/baker.ml" 25 919 943 "hbase/baker.ml" 25 919 946
 )
-"hbase/baker.ml" 26 970 1012 "hbase/baker.ml" 26 970 1013
+"hbase/baker.ml" 26 969 1011 "hbase/baker.ml" 26 969 1012
 type(
   int
 )
-"hbase/baker.ml" 26 970 1014 "hbase/baker.ml" 26 970 1017
+"hbase/baker.ml" 26 969 1013 "hbase/baker.ml" 26 969 1016
 type(
   int
 )
 ident(
   int_ref len "hbase/baker.ml" 24 864 888 "hbase/baker.ml" 24 864 891
 )
-"hbase/baker.ml" 26 970 992 "hbase/baker.ml" 26 970 1017
+"hbase/baker.ml" 26 969 991 "hbase/baker.ml" 26 969 1016
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 27 1019 1041 "hbase/baker.ml" 27 1019 1049
+"hbase/baker.ml" 27 1018 1040 "hbase/baker.ml" 27 1018 1048
 type(
   in_channel -> unit
 )
 ident(
   ext_ref Pervasives.close_in
 )
-"hbase/baker.ml" 27 1019 1050 "hbase/baker.ml" 27 1019 1052
+"hbase/baker.ml" 27 1018 1049 "hbase/baker.ml" 27 1018 1051
 type(
   in_channel
 )
 ident(
   int_ref fc "hbase/baker.ml" 23 822 846 "hbase/baker.ml" 23 822 848
 )
-"hbase/baker.ml" 27 1019 1041 "hbase/baker.ml" 27 1019 1052
+"hbase/baker.ml" 27 1018 1040 "hbase/baker.ml" 27 1018 1051
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 28 1071 1093 "hbase/baker.ml" 28 1071 1108
+"hbase/baker.ml" 28 1070 1092 "hbase/baker.ml" 28 1070 1107
 type(
   (string, string) Hashtbl.t -> string -> string -> unit
 )
 ident(
   ext_ref Hashtbl.replace
 )
-"hbase/baker.ml" 29 1110 1134 "hbase/baker.ml" 29 1110 1138
+"hbase/baker.ml" 29 1109 1133 "hbase/baker.ml" 29 1109 1137
 type(
   (string, string) Hashtbl.t
 )
 ident(
   int_ref srcs "hbase/baker.ml" 10 411 415 "hbase/baker.ml" 10 411 419
 )
-"hbase/baker.ml" 30 1140 1165 "hbase/baker.ml" 30 1140 1188
+"hbase/baker.ml" 30 1139 1164 "hbase/baker.ml" 30 1139 1187
 type(
   string -> string
 )
 ident(
   ext_ref Filename.chop_extension
 )
-"hbase/baker.ml" 30 1140 1190 "hbase/baker.ml" 30 1140 1207
+"hbase/baker.ml" 30 1139 1189 "hbase/baker.ml" 30 1139 1206
 type(
   string -> string
 )
 ident(
   ext_ref Filename.basename
 )
-"hbase/baker.ml" 30 1140 1208 "hbase/baker.ml" 30 1140 1209
+"hbase/baker.ml" 30 1139 1207 "hbase/baker.ml" 30 1139 1208
 type(
   string
 )
 ident(
   int_ref f "hbase/baker.ml" 17 629 635 "hbase/baker.ml" 17 629 636
 )
-"hbase/baker.ml" 30 1140 1189 "hbase/baker.ml" 30 1140 1210
+"hbase/baker.ml" 30 1139 1188 "hbase/baker.ml" 30 1139 1209
 call(
   stack
 )
 type(
   string
 )
-"hbase/baker.ml" 30 1140 1164 "hbase/baker.ml" 30 1140 1211
+"hbase/baker.ml" 30 1139 1163 "hbase/baker.ml" 30 1139 1210
 call(
   stack
 )
 type(
   string
 )
-"hbase/baker.ml" 31 1212 1237 "hbase/baker.ml" 31 1212 1251
+"hbase/baker.ml" 31 1211 1236 "hbase/baker.ml" 31 1211 1250
 type(
   bytes -> string
 )
 ident(
   ext_ref String.escaped
 )
-"hbase/baker.ml" 31 1212 1252 "hbase/baker.ml" 31 1212 1255
+"hbase/baker.ml" 31 1211 1251 "hbase/baker.ml" 31 1211 1254
 type(
   bytes
 )
 ident(
   int_ref buf "hbase/baker.ml" 25 919 943 "hbase/baker.ml" 25 919 946
 )
-"hbase/baker.ml" 31 1212 1236 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 31 1211 1235 "hbase/baker.ml" 31 1211 1255
 call(
   stack
 )
 type(
   string
 )
-"hbase/baker.ml" 28 1071 1093 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 28 1070 1092 "hbase/baker.ml" 31 1211 1255
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 27 1019 1041 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 27 1018 1040 "hbase/baker.ml" 31 1211 1255
 type(
   unit
 )
-"hbase/baker.ml" 26 970 992 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 26 969 991 "hbase/baker.ml" 31 1211 1255
 type(
   unit
 )
-"hbase/baker.ml" 25 919 939 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 25 919 939 "hbase/baker.ml" 31 1211 1255
 type(
   unit
 )
-"hbase/baker.ml" 24 864 884 "hbase/baker.ml" 31 1212 1256
+"hbase/baker.ml" 24 864 884 "hbase/baker.ml" 31 1211 1255
 type(
   unit
 )
-"hbase/baker.ml" 22 798 816 "hbase/baker.ml" 32 1257 1278
+"hbase/baker.ml" 22 798 816 "hbase/baker.ml" 32 1256 1277
 type(
   unit
 )
-"hbase/baker.ml" 21 740 756 "hbase/baker.ml" 32 1257 1278
+"hbase/baker.ml" 21 740 756 "hbase/baker.ml" 32 1256 1277
 type(
   unit
 )
-"hbase/baker.ml" 33 1280 1296 "hbase/baker.ml" 33 1280 1300
+"hbase/baker.ml" 33 1279 1295 "hbase/baker.ml" 33 1279 1299
 type(
   string list -> unit
 )
 ident(
   int_ref loop "hbase/baker.ml" 15 588 598 "hbase/baker.ml" 15 588 602
 )
-"hbase/baker.ml" 33 1280 1301 "hbase/baker.ml" 33 1280 1305
+"hbase/baker.ml" 33 1279 1300 "hbase/baker.ml" 33 1279 1304
 type(
   string list
 )
 ident(
   int_ref rest "hbase/baker.ml" 17 629 638 "hbase/baker.ml" 17 629 642
 )
-"hbase/baker.ml" 33 1280 1296 "hbase/baker.ml" 33 1280 1305
+"hbase/baker.ml" 33 1279 1295 "hbase/baker.ml" 33 1279 1304
 call(
   tail
 )
 type(
   unit
 )
-"hbase/baker.ml" 21 740 756 "hbase/baker.ml" 33 1280 1305
+"hbase/baker.ml" 21 740 756 "hbase/baker.ml" 33 1279 1304
 type(
   unit
 )
-"hbase/baker.ml" 34 1306 1320 "hbase/baker.ml" 34 1306 1330
+"hbase/baker.ml" 34 1305 1319 "hbase/baker.ml" 34 1305 1329
 type(
   Unix.file_kind
 )
-"hbase/baker.ml" 35 1335 1359 "hbase/baker.ml" 35 1335 1366
+"hbase/baker.ml" 35 1334 1358 "hbase/baker.ml" 35 1334 1365
 type(
   Unix.dir_handle -> string list -> string list
 )
 ident(
-  def dirloop "hbase/baker.ml" 35 1335 1351 "hbase/baker.ml" 44 1774 1809
+  def dirloop "hbase/baker.ml" 35 1334 1350 "hbase/baker.ml" 44 1773 1808
 )
-"hbase/baker.ml" 35 1335 1367 "hbase/baker.ml" 35 1335 1369
+"hbase/baker.ml" 35 1334 1366 "hbase/baker.ml" 35 1334 1368
 type(
   Unix.dir_handle
 )
 ident(
-  def dh "hbase/baker.ml" 35 1335 1370 "hbase/baker.ml" 40 1579 1619
+  def dh "hbase/baker.ml" 35 1334 1369 "hbase/baker.ml" 40 1578 1618
 )
-"hbase/baker.ml" 35 1335 1370 "hbase/baker.ml" 35 1335 1372
+"hbase/baker.ml" 35 1334 1369 "hbase/baker.ml" 35 1334 1371
 type(
   string list
 )
 ident(
-  def fs "hbase/baker.ml" 36 1376 1394 "hbase/baker.ml" 40 1579 1619
+  def fs "hbase/baker.ml" 36 1375 1393 "hbase/baker.ml" 40 1578 1618
 )
-"hbase/baker.ml" 37 1399 1423 "hbase/baker.ml" 37 1399 1425
+"hbase/baker.ml" 37 1398 1422 "hbase/baker.ml" 37 1398 1424
 type(
   string
 )
 ident(
-  def dc "hbase/baker.ml" 38 1447 1467 "hbase/baker.ml" 39 1500 1578
+  def dc "hbase/baker.ml" 38 1446 1466 "hbase/baker.ml" 39 1499 1577
 )
-"hbase/baker.ml" 37 1399 1428 "hbase/baker.ml" 37 1399 1440
+"hbase/baker.ml" 37 1398 1427 "hbase/baker.ml" 37 1398 1439
 type(
   Unix.dir_handle -> string
 )
 ident(
   ext_ref Unix.readdir
 )
-"hbase/baker.ml" 37 1399 1441 "hbase/baker.ml" 37 1399 1443
+"hbase/baker.ml" 37 1398 1440 "hbase/baker.ml" 37 1398 1442
 type(
   Unix.dir_handle
 )
 ident(
-  int_ref dh "hbase/baker.ml" 35 1335 1367 "hbase/baker.ml" 35 1335 1369
+  int_ref dh "hbase/baker.ml" 35 1334 1366 "hbase/baker.ml" 35 1334 1368
 )
-"hbase/baker.ml" 37 1399 1428 "hbase/baker.ml" 37 1399 1443
+"hbase/baker.ml" 37 1398 1427 "hbase/baker.ml" 37 1398 1442
 call(
   stack
 )
 type(
   string
 )
-"hbase/baker.ml" 38 1447 1471 "hbase/baker.ml" 38 1447 1473
+"hbase/baker.ml" 38 1446 1470 "hbase/baker.ml" 38 1446 1472
 type(
   string
 )
 ident(
-  def dn "hbase/baker.ml" 39 1500 1522 "hbase/baker.ml" 39 1500 1578
+  def dn "hbase/baker.ml" 39 1499 1521 "hbase/baker.ml" 39 1499 1577
 )
-"hbase/baker.ml" 38 1447 1476 "hbase/baker.ml" 38 1447 1483
+"hbase/baker.ml" 38 1446 1475 "hbase/baker.ml" 38 1446 1482
 type(
   (string -> string -> string, unit, string) format ->
   string -> string -> string
@@ -595,607 +595,607 @@ type(
 ident(
   int_ref sprintf "hbase/baker.ml" 9 382 386 "hbase/baker.ml" 9 382 393
 )
-"hbase/baker.ml" 38 1447 1484 "hbase/baker.ml" 38 1447 1491
+"hbase/baker.ml" 38 1446 1483 "hbase/baker.ml" 38 1446 1490
 type(
   (string -> string -> string, unit, string) format
 )
-"hbase/baker.ml" 38 1447 1492 "hbase/baker.ml" 38 1447 1493
+"hbase/baker.ml" 38 1446 1491 "hbase/baker.ml" 38 1446 1492
 type(
   string
 )
 ident(
   int_ref f "hbase/baker.ml" 17 629 635 "hbase/baker.ml" 17 629 636
 )
-"hbase/baker.ml" 38 1447 1494 "hbase/baker.ml" 38 1447 1496
+"hbase/baker.ml" 38 1446 1493 "hbase/baker.ml" 38 1446 1495
 type(
   string
 )
 ident(
-  int_ref dc "hbase/baker.ml" 37 1399 1423 "hbase/baker.ml" 37 1399 1425
+  int_ref dc "hbase/baker.ml" 37 1398 1422 "hbase/baker.ml" 37 1398 1424
 )
-"hbase/baker.ml" 38 1447 1476 "hbase/baker.ml" 38 1447 1496
+"hbase/baker.ml" 38 1446 1475 "hbase/baker.ml" 38 1446 1495
 call(
   stack
 )
 type(
   string
 )
-"hbase/baker.ml" 39 1500 1522 "hbase/baker.ml" 39 1500 1529
+"hbase/baker.ml" 39 1499 1521 "hbase/baker.ml" 39 1499 1528
 type(
   Unix.dir_handle -> string list -> string list
 )
 ident(
-  int_ref dirloop "hbase/baker.ml" 35 1335 1359 "hbase/baker.ml" 35 1335 1366
+  int_ref dirloop "hbase/baker.ml" 35 1334 1358 "hbase/baker.ml" 35 1334 1365
 )
-"hbase/baker.ml" 39 1500 1530 "hbase/baker.ml" 39 1500 1532
+"hbase/baker.ml" 39 1499 1529 "hbase/baker.ml" 39 1499 1531
 type(
   Unix.dir_handle
 )
 ident(
-  int_ref dh "hbase/baker.ml" 35 1335 1367 "hbase/baker.ml" 35 1335 1369
+  int_ref dh "hbase/baker.ml" 35 1334 1366 "hbase/baker.ml" 35 1334 1368
 )
-"hbase/baker.ml" 39 1500 1537 "hbase/baker.ml" 39 1500 1539
+"hbase/baker.ml" 39 1499 1536 "hbase/baker.ml" 39 1499 1538
 type(
   string
 )
 ident(
-  int_ref dc "hbase/baker.ml" 37 1399 1423 "hbase/baker.ml" 37 1399 1425
+  int_ref dc "hbase/baker.ml" 37 1398 1422 "hbase/baker.ml" 37 1398 1424
 )
-"hbase/baker.ml" 39 1500 1540 "hbase/baker.ml" 39 1500 1541
+"hbase/baker.ml" 39 1499 1539 "hbase/baker.ml" 39 1499 1540
 type(
   string -> string -> bool
 )
 ident(
   ext_ref Pervasives.( = )
 )
-"hbase/baker.ml" 39 1500 1542 "hbase/baker.ml" 39 1500 1545
+"hbase/baker.ml" 39 1499 1541 "hbase/baker.ml" 39 1499 1544
 type(
   string
 )
-"hbase/baker.ml" 39 1500 1537 "hbase/baker.ml" 39 1500 1545
+"hbase/baker.ml" 39 1499 1536 "hbase/baker.ml" 39 1499 1544
 type(
   bool
 )
-"hbase/baker.ml" 39 1500 1546 "hbase/baker.ml" 39 1500 1548
+"hbase/baker.ml" 39 1499 1545 "hbase/baker.ml" 39 1499 1547
 type(
   bool -> bool -> bool
 )
 ident(
-  ext_ref Pervasives.( or )
+  ext_ref Pervasives.( || )
 )
-"hbase/baker.ml" 39 1500 1549 "hbase/baker.ml" 39 1500 1551
+"hbase/baker.ml" 39 1499 1548 "hbase/baker.ml" 39 1499 1550
 type(
   string
 )
 ident(
-  int_ref dc "hbase/baker.ml" 37 1399 1423 "hbase/baker.ml" 37 1399 1425
+  int_ref dc "hbase/baker.ml" 37 1398 1422 "hbase/baker.ml" 37 1398 1424
 )
-"hbase/baker.ml" 39 1500 1552 "hbase/baker.ml" 39 1500 1553
+"hbase/baker.ml" 39 1499 1551 "hbase/baker.ml" 39 1499 1552
 type(
   string -> string -> bool
 )
 ident(
   ext_ref Pervasives.( = )
 )
-"hbase/baker.ml" 39 1500 1553 "hbase/baker.ml" 39 1500 1557
+"hbase/baker.ml" 39 1499 1552 "hbase/baker.ml" 39 1499 1556
 type(
   string
 )
-"hbase/baker.ml" 39 1500 1549 "hbase/baker.ml" 39 1500 1557
+"hbase/baker.ml" 39 1499 1548 "hbase/baker.ml" 39 1499 1556
 type(
   bool
 )
-"hbase/baker.ml" 39 1500 1537 "hbase/baker.ml" 39 1500 1557
+"hbase/baker.ml" 39 1499 1536 "hbase/baker.ml" 39 1499 1556
 type(
   bool
 )
-"hbase/baker.ml" 39 1500 1563 "hbase/baker.ml" 39 1500 1565
+"hbase/baker.ml" 39 1499 1562 "hbase/baker.ml" 39 1499 1564
 type(
   string list
 )
 ident(
-  int_ref fs "hbase/baker.ml" 35 1335 1370 "hbase/baker.ml" 35 1335 1372
+  int_ref fs "hbase/baker.ml" 35 1334 1369 "hbase/baker.ml" 35 1334 1371
 )
-"hbase/baker.ml" 39 1500 1571 "hbase/baker.ml" 39 1500 1573
+"hbase/baker.ml" 39 1499 1570 "hbase/baker.ml" 39 1499 1572
 type(
   string
 )
 ident(
-  int_ref dn "hbase/baker.ml" 38 1447 1471 "hbase/baker.ml" 38 1447 1473
+  int_ref dn "hbase/baker.ml" 38 1446 1470 "hbase/baker.ml" 38 1446 1472
 )
-"hbase/baker.ml" 39 1500 1575 "hbase/baker.ml" 39 1500 1577
+"hbase/baker.ml" 39 1499 1574 "hbase/baker.ml" 39 1499 1576
 type(
   string list
 )
 ident(
-  int_ref fs "hbase/baker.ml" 35 1335 1370 "hbase/baker.ml" 35 1335 1372
+  int_ref fs "hbase/baker.ml" 35 1334 1369 "hbase/baker.ml" 35 1334 1371
 )
-"hbase/baker.ml" 39 1500 1571 "hbase/baker.ml" 39 1500 1577
+"hbase/baker.ml" 39 1499 1570 "hbase/baker.ml" 39 1499 1576
 type(
   string list
 )
-"hbase/baker.ml" 39 1500 1533 "hbase/baker.ml" 39 1500 1578
+"hbase/baker.ml" 39 1499 1532 "hbase/baker.ml" 39 1499 1577
 type(
   string list
 )
-"hbase/baker.ml" 39 1500 1522 "hbase/baker.ml" 39 1500 1578
+"hbase/baker.ml" 39 1499 1521 "hbase/baker.ml" 39 1499 1577
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 38 1447 1467 "hbase/baker.ml" 39 1500 1578
+"hbase/baker.ml" 38 1446 1466 "hbase/baker.ml" 39 1499 1577
 type(
   string list
 )
-"hbase/baker.ml" 37 1399 1419 "hbase/baker.ml" 39 1500 1578
+"hbase/baker.ml" 37 1398 1418 "hbase/baker.ml" 39 1499 1577
 type(
   string list
 )
-"hbase/baker.ml" 40 1579 1602 "hbase/baker.ml" 40 1579 1613
+"hbase/baker.ml" 40 1578 1601 "hbase/baker.ml" 40 1578 1612
 type(
   exn
 )
-"hbase/baker.ml" 40 1579 1617 "hbase/baker.ml" 40 1579 1619
+"hbase/baker.ml" 40 1578 1616 "hbase/baker.ml" 40 1578 1618
 type(
   string list
 )
 ident(
-  int_ref fs "hbase/baker.ml" 35 1335 1370 "hbase/baker.ml" 35 1335 1372
+  int_ref fs "hbase/baker.ml" 35 1334 1369 "hbase/baker.ml" 35 1334 1371
 )
-"hbase/baker.ml" 36 1376 1394 "hbase/baker.ml" 40 1579 1619
+"hbase/baker.ml" 36 1375 1393 "hbase/baker.ml" 40 1578 1618
 type(
   string list
 )
-"hbase/baker.ml" 41 1624 1644 "hbase/baker.ml" 41 1624 1646
+"hbase/baker.ml" 41 1623 1643 "hbase/baker.ml" 41 1623 1645
 type(
   Unix.dir_handle
 )
 ident(
-  def dh "hbase/baker.ml" 42 1667 1683 "hbase/baker.ml" 44 1774 1809
+  def dh "hbase/baker.ml" 42 1666 1682 "hbase/baker.ml" 44 1773 1808
 )
-"hbase/baker.ml" 41 1624 1649 "hbase/baker.ml" 41 1624 1661
+"hbase/baker.ml" 41 1623 1648 "hbase/baker.ml" 41 1623 1660
 type(
   string -> Unix.dir_handle
 )
 ident(
   ext_ref Unix.opendir
 )
-"hbase/baker.ml" 41 1624 1662 "hbase/baker.ml" 41 1624 1663
+"hbase/baker.ml" 41 1623 1661 "hbase/baker.ml" 41 1623 1662
 type(
   string
 )
 ident(
   int_ref f "hbase/baker.ml" 17 629 635 "hbase/baker.ml" 17 629 636
 )
-"hbase/baker.ml" 41 1624 1649 "hbase/baker.ml" 41 1624 1663
+"hbase/baker.ml" 41 1623 1648 "hbase/baker.ml" 41 1623 1662
 call(
   stack
 )
 type(
   Unix.dir_handle
 )
-"hbase/baker.ml" 42 1667 1687 "hbase/baker.ml" 42 1667 1690
+"hbase/baker.ml" 42 1666 1686 "hbase/baker.ml" 42 1666 1689
 type(
   string list
 )
 ident(
-  def dcs "hbase/baker.ml" 43 1730 1746 "hbase/baker.ml" 44 1774 1809
+  def dcs "hbase/baker.ml" 43 1729 1745 "hbase/baker.ml" 44 1773 1808
 )
-"hbase/baker.ml" 42 1667 1693 "hbase/baker.ml" 42 1667 1702
+"hbase/baker.ml" 42 1666 1692 "hbase/baker.ml" 42 1666 1701
 type(
   (string -> string -> int) -> string list -> string list
 )
 ident(
   ext_ref List.sort
 )
-"hbase/baker.ml" 42 1667 1703 "hbase/baker.ml" 42 1667 1710
+"hbase/baker.ml" 42 1666 1702 "hbase/baker.ml" 42 1666 1709
 type(
   string -> string -> int
 )
 ident(
   ext_ref Pervasives.compare
 )
-"hbase/baker.ml" 42 1667 1712 "hbase/baker.ml" 42 1667 1719
+"hbase/baker.ml" 42 1666 1711 "hbase/baker.ml" 42 1666 1718
 type(
   Unix.dir_handle -> string list -> string list
 )
 ident(
-  int_ref dirloop "hbase/baker.ml" 35 1335 1359 "hbase/baker.ml" 35 1335 1366
+  int_ref dirloop "hbase/baker.ml" 35 1334 1358 "hbase/baker.ml" 35 1334 1365
 )
-"hbase/baker.ml" 42 1667 1720 "hbase/baker.ml" 42 1667 1722
+"hbase/baker.ml" 42 1666 1719 "hbase/baker.ml" 42 1666 1721
 type(
   Unix.dir_handle
 )
 ident(
-  int_ref dh "hbase/baker.ml" 41 1624 1644 "hbase/baker.ml" 41 1624 1646
+  int_ref dh "hbase/baker.ml" 41 1623 1643 "hbase/baker.ml" 41 1623 1645
 )
-"hbase/baker.ml" 42 1667 1723 "hbase/baker.ml" 42 1667 1725
+"hbase/baker.ml" 42 1666 1722 "hbase/baker.ml" 42 1666 1724
 type(
   string list
 )
-"hbase/baker.ml" 42 1667 1711 "hbase/baker.ml" 42 1667 1726
+"hbase/baker.ml" 42 1666 1710 "hbase/baker.ml" 42 1666 1725
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 42 1667 1693 "hbase/baker.ml" 42 1667 1726
+"hbase/baker.ml" 42 1666 1692 "hbase/baker.ml" 42 1666 1725
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 43 1730 1750 "hbase/baker.ml" 43 1730 1751
+"hbase/baker.ml" 43 1729 1749 "hbase/baker.ml" 43 1729 1750
 type(
   unit
 )
-"hbase/baker.ml" 43 1730 1754 "hbase/baker.ml" 43 1730 1767
+"hbase/baker.ml" 43 1729 1753 "hbase/baker.ml" 43 1729 1766
 type(
   Unix.dir_handle -> unit
 )
 ident(
   ext_ref Unix.closedir
 )
-"hbase/baker.ml" 43 1730 1768 "hbase/baker.ml" 43 1730 1770
+"hbase/baker.ml" 43 1729 1767 "hbase/baker.ml" 43 1729 1769
 type(
   Unix.dir_handle
 )
 ident(
-  int_ref dh "hbase/baker.ml" 41 1624 1644 "hbase/baker.ml" 41 1624 1646
+  int_ref dh "hbase/baker.ml" 41 1623 1643 "hbase/baker.ml" 41 1623 1645
 )
-"hbase/baker.ml" 43 1730 1754 "hbase/baker.ml" 43 1730 1770
+"hbase/baker.ml" 43 1729 1753 "hbase/baker.ml" 43 1729 1769
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 44 1774 1792 "hbase/baker.ml" 44 1774 1796
+"hbase/baker.ml" 44 1773 1791 "hbase/baker.ml" 44 1773 1795
 type(
   string list -> unit
 )
 ident(
   int_ref loop "hbase/baker.ml" 15 588 598 "hbase/baker.ml" 15 588 602
 )
-"hbase/baker.ml" 44 1774 1798 "hbase/baker.ml" 44 1774 1802
+"hbase/baker.ml" 44 1773 1797 "hbase/baker.ml" 44 1773 1801
 type(
   string list
 )
 ident(
   int_ref rest "hbase/baker.ml" 17 629 638 "hbase/baker.ml" 17 629 642
 )
-"hbase/baker.ml" 44 1774 1803 "hbase/baker.ml" 44 1774 1804
+"hbase/baker.ml" 44 1773 1802 "hbase/baker.ml" 44 1773 1803
 type(
   string list -> string list -> string list
 )
 ident(
   ext_ref Pervasives.( @ )
 )
-"hbase/baker.ml" 44 1774 1805 "hbase/baker.ml" 44 1774 1808
+"hbase/baker.ml" 44 1773 1804 "hbase/baker.ml" 44 1773 1807
 type(
   string list
 )
 ident(
-  int_ref dcs "hbase/baker.ml" 42 1667 1687 "hbase/baker.ml" 42 1667 1690
+  int_ref dcs "hbase/baker.ml" 42 1666 1686 "hbase/baker.ml" 42 1666 1689
 )
-"hbase/baker.ml" 44 1774 1797 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 44 1773 1796 "hbase/baker.ml" 44 1773 1808
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 44 1774 1792 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 44 1773 1791 "hbase/baker.ml" 44 1773 1808
 call(
   tail
 )
 type(
   unit
 )
-"hbase/baker.ml" 43 1730 1746 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 43 1729 1745 "hbase/baker.ml" 44 1773 1808
 type(
   unit
 )
-"hbase/baker.ml" 42 1667 1683 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 42 1666 1682 "hbase/baker.ml" 44 1773 1808
 type(
   unit
 )
-"hbase/baker.ml" 41 1624 1640 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 41 1623 1639 "hbase/baker.ml" 44 1773 1808
 type(
   unit
 )
-"hbase/baker.ml" 35 1335 1351 "hbase/baker.ml" 44 1774 1809
+"hbase/baker.ml" 35 1334 1350 "hbase/baker.ml" 44 1773 1808
 type(
   unit
 )
-"hbase/baker.ml" 45 1810 1824 "hbase/baker.ml" 45 1810 1825
+"hbase/baker.ml" 45 1809 1823 "hbase/baker.ml" 45 1809 1824
 type(
   Unix.file_kind
 )
-"hbase/baker.ml" 45 1810 1829 "hbase/baker.ml" 45 1810 1833
+"hbase/baker.ml" 45 1809 1828 "hbase/baker.ml" 45 1809 1832
 type(
   string list -> unit
 )
 ident(
   int_ref loop "hbase/baker.ml" 15 588 598 "hbase/baker.ml" 15 588 602
 )
-"hbase/baker.ml" 45 1810 1834 "hbase/baker.ml" 45 1810 1838
+"hbase/baker.ml" 45 1809 1833 "hbase/baker.ml" 45 1809 1837
 type(
   string list
 )
 ident(
   int_ref rest "hbase/baker.ml" 17 629 638 "hbase/baker.ml" 17 629 642
 )
-"hbase/baker.ml" 45 1810 1829 "hbase/baker.ml" 45 1810 1838
+"hbase/baker.ml" 45 1809 1828 "hbase/baker.ml" 45 1809 1837
 call(
   tail
 )
 type(
   unit
 )
-"hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1839 1850
+"hbase/baker.ml" 18 647 655 "hbase/baker.ml" 46 1838 1849
 type(
   unit
 )
-"hbase/baker.ml" 15 588 605 "hbase/baker.ml" 46 1839 1850
+"hbase/baker.ml" 15 588 605 "hbase/baker.ml" 46 1838 1849
 type(
   string list -> unit
 )
-"hbase/baker.ml" 47 1855 1859 "hbase/baker.ml" 47 1855 1863
+"hbase/baker.ml" 47 1854 1858 "hbase/baker.ml" 47 1854 1862
 type(
   string list -> unit
 )
 ident(
   int_ref loop "hbase/baker.ml" 15 588 598 "hbase/baker.ml" 15 588 602
 )
-"hbase/baker.ml" 47 1855 1864 "hbase/baker.ml" 47 1855 1865
+"hbase/baker.ml" 47 1854 1863 "hbase/baker.ml" 47 1854 1864
 type(
   string list
 )
 ident(
   int_ref l "hbase/baker.ml" 14 569 583 "hbase/baker.ml" 14 569 584
 )
-"hbase/baker.ml" 47 1855 1859 "hbase/baker.ml" 47 1855 1865
+"hbase/baker.ml" 47 1854 1858 "hbase/baker.ml" 47 1854 1864
 call(
   tail
 )
 type(
   unit
 )
-"hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1855 1865
+"hbase/baker.ml" 15 588 590 "hbase/baker.ml" 47 1854 1864
 type(
   unit
 )
-"hbase/baker.ml" 50 1887 1893 "hbase/baker.ml" 50 1887 1899
+"hbase/baker.ml" 50 1886 1892 "hbase/baker.ml" 50 1886 1898
 type(
   string
 )
 ident(
-  def suffix "hbase/baker.ml" 55 2068 2072 "hbase/baker.ml" 61 2307 2317
+  def suffix "hbase/baker.ml" 55 2067 2071 "hbase/baker.ml" 61 2306 2316
 )
-"hbase/baker.ml" 50 1887 1900 "hbase/baker.ml" 50 1887 1904
+"hbase/baker.ml" 50 1886 1899 "hbase/baker.ml" 50 1886 1903
 type(
   string list
 )
 ident(
-  def args "hbase/baker.ml" 55 2068 2072 "hbase/baker.ml" 61 2307 2317
+  def args "hbase/baker.ml" 55 2067 2071 "hbase/baker.ml" 61 2306 2316
 )
-"hbase/baker.ml" 50 1887 1893 "hbase/baker.ml" 50 1887 1904
+"hbase/baker.ml" 50 1886 1892 "hbase/baker.ml" 50 1886 1903
 type(
   string * string list
 )
-"hbase/baker.ml" 50 1887 1913 "hbase/baker.ml" 50 1887 1920
+"hbase/baker.ml" 50 1886 1912 "hbase/baker.ml" 50 1886 1919
 type(
   string list -> string list
 )
 ident(
   ext_ref List.tl
 )
-"hbase/baker.ml" 50 1887 1922 "hbase/baker.ml" 50 1887 1935
+"hbase/baker.ml" 50 1886 1921 "hbase/baker.ml" 50 1886 1934
 type(
   string array -> string list
 )
 ident(
   ext_ref Array.to_list
 )
-"hbase/baker.ml" 50 1887 1936 "hbase/baker.ml" 50 1887 1944
+"hbase/baker.ml" 50 1886 1935 "hbase/baker.ml" 50 1886 1943
 type(
   string array
 )
 ident(
   ext_ref Sys.argv
 )
-"hbase/baker.ml" 50 1887 1921 "hbase/baker.ml" 50 1887 1945
+"hbase/baker.ml" 50 1886 1920 "hbase/baker.ml" 50 1886 1944
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 50 1887 1913 "hbase/baker.ml" 50 1887 1945
+"hbase/baker.ml" 50 1886 1912 "hbase/baker.ml" 50 1886 1944
 call(
   stack
 )
 type(
   string list
 )
-"hbase/baker.ml" 51 1952 1958 "hbase/baker.ml" 51 1952 1959
+"hbase/baker.ml" 51 1951 1957 "hbase/baker.ml" 51 1951 1958
 type(
   string
 )
 ident(
-  def h "hbase/baker.ml" 51 1952 1966 "hbase/baker.ml" 51 1952 1969
+  def h "hbase/baker.ml" 51 1951 1965 "hbase/baker.ml" 51 1951 1968
 )
-"hbase/baker.ml" 51 1952 1961 "hbase/baker.ml" 51 1952 1962
+"hbase/baker.ml" 51 1951 1960 "hbase/baker.ml" 51 1951 1961
 type(
   string list
 )
 ident(
-  def t "hbase/baker.ml" 51 1952 1966 "hbase/baker.ml" 51 1952 1969
+  def t "hbase/baker.ml" 51 1951 1965 "hbase/baker.ml" 51 1951 1968
 )
-"hbase/baker.ml" 51 1952 1958 "hbase/baker.ml" 51 1952 1962
+"hbase/baker.ml" 51 1951 1957 "hbase/baker.ml" 51 1951 1961
 type(
   string list
 )
-"hbase/baker.ml" 51 1952 1966 "hbase/baker.ml" 51 1952 1967
+"hbase/baker.ml" 51 1951 1965 "hbase/baker.ml" 51 1951 1966
 type(
   string
 )
 ident(
-  int_ref h "hbase/baker.ml" 51 1952 1958 "hbase/baker.ml" 51 1952 1959
+  int_ref h "hbase/baker.ml" 51 1951 1957 "hbase/baker.ml" 51 1951 1958
 )
-"hbase/baker.ml" 51 1952 1968 "hbase/baker.ml" 51 1952 1969
+"hbase/baker.ml" 51 1951 1967 "hbase/baker.ml" 51 1951 1968
 type(
   string list
 )
 ident(
-  int_ref t "hbase/baker.ml" 51 1952 1961 "hbase/baker.ml" 51 1952 1962
+  int_ref t "hbase/baker.ml" 51 1951 1960 "hbase/baker.ml" 51 1951 1961
 )
-"hbase/baker.ml" 51 1952 1966 "hbase/baker.ml" 51 1952 1969
+"hbase/baker.ml" 51 1951 1965 "hbase/baker.ml" 51 1951 1968
 type(
   string * string list
 )
-"hbase/baker.ml" 52 1970 1976 "hbase/baker.ml" 52 1970 1977
+"hbase/baker.ml" 52 1969 1975 "hbase/baker.ml" 52 1969 1976
 type(
   string list
 )
-"hbase/baker.ml" 53 1982 1990 "hbase/baker.ml" 53 1982 2003
+"hbase/baker.ml" 53 1981 1989 "hbase/baker.ml" 53 1981 2002
 type(
   (unit, out_channel, unit) format -> unit
 )
 ident(
   ext_ref Printf.printf
 )
-"hbase/baker.ml" 53 1982 2004 "hbase/baker.ml" 53 1982 2047
+"hbase/baker.ml" 53 1981 2003 "hbase/baker.ml" 53 1981 2046
 type(
   (unit, out_channel, unit) format
 )
-"hbase/baker.ml" 53 1982 1990 "hbase/baker.ml" 53 1982 2047
+"hbase/baker.ml" 53 1981 1989 "hbase/baker.ml" 53 1981 2046
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 54 2049 2057 "hbase/baker.ml" 54 2049 2061
+"hbase/baker.ml" 54 2048 2056 "hbase/baker.ml" 54 2048 2060
 type(
   int -> string * string list
 )
 ident(
   ext_ref Pervasives.exit
 )
-"hbase/baker.ml" 54 2049 2062 "hbase/baker.ml" 54 2049 2063
+"hbase/baker.ml" 54 2048 2061 "hbase/baker.ml" 54 2048 2062
 type(
   int
 )
-"hbase/baker.ml" 54 2049 2057 "hbase/baker.ml" 54 2049 2063
+"hbase/baker.ml" 54 2048 2056 "hbase/baker.ml" 54 2048 2062
 call(
   stack
 )
 type(
   string * string list
 )
-"hbase/baker.ml" 53 1982 1990 "hbase/baker.ml" 54 2049 2063
+"hbase/baker.ml" 53 1981 1989 "hbase/baker.ml" 54 2048 2062
 type(
   string * string list
 )
-"hbase/baker.ml" 50 1887 1907 "hbase/baker.ml" 54 2049 2063
+"hbase/baker.ml" 50 1886 1906 "hbase/baker.ml" 54 2048 2062
 type(
   string * string list
 )
-"hbase/baker.ml" 55 2068 2072 "hbase/baker.ml" 55 2068 2074
+"hbase/baker.ml" 55 2067 2071 "hbase/baker.ml" 55 2067 2073
 type(
   string -> string list -> unit
 )
 ident(
   int_ref go "hbase/baker.ml" 14 569 573 "hbase/baker.ml" 14 569 575
 )
-"hbase/baker.ml" 55 2068 2075 "hbase/baker.ml" 55 2068 2081
+"hbase/baker.ml" 55 2067 2074 "hbase/baker.ml" 55 2067 2080
 type(
   string
 )
 ident(
-  int_ref suffix "hbase/baker.ml" 50 1887 1893 "hbase/baker.ml" 50 1887 1899
+  int_ref suffix "hbase/baker.ml" 50 1886 1892 "hbase/baker.ml" 50 1886 1898
 )
-"hbase/baker.ml" 55 2068 2082 "hbase/baker.ml" 55 2068 2086
+"hbase/baker.ml" 55 2067 2081 "hbase/baker.ml" 55 2067 2085
 type(
   string list
 )
 ident(
-  int_ref args "hbase/baker.ml" 50 1887 1900 "hbase/baker.ml" 50 1887 1904
+  int_ref args "hbase/baker.ml" 50 1886 1899 "hbase/baker.ml" 50 1886 1903
 )
-"hbase/baker.ml" 55 2068 2072 "hbase/baker.ml" 55 2068 2086
+"hbase/baker.ml" 55 2067 2071 "hbase/baker.ml" 55 2067 2085
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 56 2088 2092 "hbase/baker.ml" 56 2088 2105
+"hbase/baker.ml" 56 2087 2091 "hbase/baker.ml" 56 2087 2104
 type(
   (int -> unit, out_channel, unit) format -> int -> unit
 )
 ident(
   ext_ref Printf.printf
 )
-"hbase/baker.ml" 57 2107 2113 "hbase/baker.ml" 57 2107 2174
+"hbase/baker.ml" 57 2106 2112 "hbase/baker.ml" 57 2106 2173
 type(
   (int -> unit, out_channel, unit) format
 )
-"hbase/baker.ml" 58 2176 2183 "hbase/baker.ml" 58 2176 2197
+"hbase/baker.ml" 58 2175 2182 "hbase/baker.ml" 58 2175 2196
 type(
   (string, string) Hashtbl.t -> int
 )
 ident(
   ext_ref Hashtbl.length
 )
-"hbase/baker.ml" 58 2176 2198 "hbase/baker.ml" 58 2176 2202
+"hbase/baker.ml" 58 2175 2197 "hbase/baker.ml" 58 2175 2201
 type(
   (string, string) Hashtbl.t
 )
 ident(
   int_ref srcs "hbase/baker.ml" 10 411 415 "hbase/baker.ml" 10 411 419
 )
-"hbase/baker.ml" 58 2176 2182 "hbase/baker.ml" 58 2176 2203
+"hbase/baker.ml" 58 2175 2181 "hbase/baker.ml" 58 2175 2202
 call(
   stack
 )
 type(
   int
 )
-"hbase/baker.ml" 56 2088 2092 "hbase/baker.ml" 58 2176 2203
+"hbase/baker.ml" 56 2087 2091 "hbase/baker.ml" 58 2175 2202
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 59 2205 2209 "hbase/baker.ml" 59 2205 2221
+"hbase/baker.ml" 59 2204 2208 "hbase/baker.ml" 59 2204 2220
 type(
   (string -> string -> unit) -> (string, string) Hashtbl.t -> unit
 )
 ident(
   ext_ref Hashtbl.iter
 )
-"hbase/baker.ml" 60 2223 2234 "hbase/baker.ml" 60 2223 2235
+"hbase/baker.ml" 60 2222 2233 "hbase/baker.ml" 60 2222 2234
 type(
   string
 )
 ident(
-  def s "hbase/baker.ml" 60 2223 2236 "hbase/baker.ml" 60 2223 2304
+  def s "hbase/baker.ml" 60 2222 2235 "hbase/baker.ml" 60 2222 2303
 )
-"hbase/baker.ml" 60 2223 2236 "hbase/baker.ml" 60 2223 2237
+"hbase/baker.ml" 60 2222 2235 "hbase/baker.ml" 60 2222 2236
 type(
   string
 )
 ident(
-  def c "hbase/baker.ml" 60 2223 2241 "hbase/baker.ml" 60 2223 2304
+  def c "hbase/baker.ml" 60 2222 2240 "hbase/baker.ml" 60 2222 2303
 )
-"hbase/baker.ml" 60 2223 2241 "hbase/baker.ml" 60 2223 2254
+"hbase/baker.ml" 60 2222 2240 "hbase/baker.ml" 60 2222 2253
 type(
   (string -> string -> unit, out_channel, unit) format ->
   string -> string -> unit
@@ -1203,58 +1203,58 @@ type(
 ident(
   ext_ref Printf.printf
 )
-"hbase/baker.ml" 60 2223 2255 "hbase/baker.ml" 60 2223 2300
+"hbase/baker.ml" 60 2222 2254 "hbase/baker.ml" 60 2222 2299
 type(
   (string -> string -> unit, out_channel, unit) format
 )
-"hbase/baker.ml" 60 2223 2301 "hbase/baker.ml" 60 2223 2302
+"hbase/baker.ml" 60 2222 2300 "hbase/baker.ml" 60 2222 2301
 type(
   string
 )
 ident(
-  int_ref s "hbase/baker.ml" 60 2223 2234 "hbase/baker.ml" 60 2223 2235
+  int_ref s "hbase/baker.ml" 60 2222 2233 "hbase/baker.ml" 60 2222 2234
 )
-"hbase/baker.ml" 60 2223 2303 "hbase/baker.ml" 60 2223 2304
+"hbase/baker.ml" 60 2222 2302 "hbase/baker.ml" 60 2222 2303
 type(
   string
 )
 ident(
-  int_ref c "hbase/baker.ml" 60 2223 2236 "hbase/baker.ml" 60 2223 2237
+  int_ref c "hbase/baker.ml" 60 2222 2235 "hbase/baker.ml" 60 2222 2236
 )
-"hbase/baker.ml" 60 2223 2241 "hbase/baker.ml" 60 2223 2304
+"hbase/baker.ml" 60 2222 2240 "hbase/baker.ml" 60 2222 2303
 call(
   tail
 )
 type(
   unit
 )
-"hbase/baker.ml" 60 2223 2229 "hbase/baker.ml" 60 2223 2305
+"hbase/baker.ml" 60 2222 2228 "hbase/baker.ml" 60 2222 2304
 type(
   string -> string -> unit
 )
-"hbase/baker.ml" 61 2307 2313 "hbase/baker.ml" 61 2307 2317
+"hbase/baker.ml" 61 2306 2312 "hbase/baker.ml" 61 2306 2316
 type(
   (string, string) Hashtbl.t
 )
 ident(
   int_ref srcs "hbase/baker.ml" 10 411 415 "hbase/baker.ml" 10 411 419
 )
-"hbase/baker.ml" 59 2205 2209 "hbase/baker.ml" 61 2307 2317
+"hbase/baker.ml" 59 2204 2208 "hbase/baker.ml" 61 2306 2316
 call(
   stack
 )
 type(
   unit
 )
-"hbase/baker.ml" 56 2088 2092 "hbase/baker.ml" 61 2307 2317
+"hbase/baker.ml" 56 2087 2091 "hbase/baker.ml" 61 2306 2316
 type(
   unit
 )
-"hbase/baker.ml" 55 2068 2072 "hbase/baker.ml" 61 2307 2317
+"hbase/baker.ml" 55 2067 2071 "hbase/baker.ml" 61 2306 2316
 type(
   unit
 )
-"hbase/baker.ml" 50 1887 1889 "hbase/baker.ml" 61 2307 2317
+"hbase/baker.ml" 50 1886 1888 "hbase/baker.ml" 61 2306 2316
 type(
   unit
 )

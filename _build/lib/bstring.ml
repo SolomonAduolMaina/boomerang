@@ -59,7 +59,7 @@ type chunkmap = ((int * int) * cat) TmImA.t
 let empty = ("", 0, 0)
 
 let of_string s =
-  String.copy s, 0, String.length s
+  Bytes.copy s, 0, String.length s
 
 let to_attmp s :attmp =
   [[]], s
@@ -241,7 +241,7 @@ let rev_s s =
     if x >= n
     then t
     else (
-      String.set t x s.[y];
+      Bytes.set t x s.[y];
       loop (succ x) (pred y)
     )
   in
