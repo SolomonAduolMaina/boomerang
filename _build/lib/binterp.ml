@@ -746,7 +746,9 @@ module Bridge = struct
 		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
 			match v with
 			| V.Par(_, V.Rx (_, r) , V.Str (_, s)) ->
-					V.Can (info, BL.Canonizer.normalize info r (Brx.mk_string s) (fun _ -> s))
+					if not (BS.match_rx r (BS.of_string s)) then
+						failwith (s ^ " must be a member of " ^ (Brx.string_of_t r)) else
+						V.Can (info, BL.Canonizer.normalize info r (Brx.mk_string s) (fun _ -> s))
 			| _ -> failwith "Wrong Arguments for project" in
 		let so = SProduct(SRegexp, SString) in
 		(G.Sort (SFunction ((Id.mk info "project"), so, SCanonizer)), V.Fun (info, g))
@@ -824,8 +826,8 @@ let interp_module m0 = match m0 with
 			let new_cev = CEnv.push_ctx new_cev Bridge.synth_can in
 			let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
 			let new_cev, _ = interp_mod_aux wqo new_cev [m] ds in
-			(*let trying id (_, v) _ : unit = print_string (Bridge.vtoString id v) in
-			let _ = CEnv.fold trying new_cev () in*)
+			(* let trying id (_, v) _ : unit = print_string (Bridge.vtoString id v) in *)
+			(* let _ = CEnv.fold trying new_cev () in                                  *)
 			G.register_env (CEnv.get_ev new_cev) nctx' m;
 			Trace.debug "parallel"
 				(fun () ->

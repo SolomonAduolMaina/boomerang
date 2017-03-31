@@ -12951,7 +12951,7 @@ type(
   Info.t
 )
 ident(
-  def info "lib/binterp.ml" 538 18241 18242 "lib/binterp.ml" 800 29741 29744
+  def info "lib/binterp.ml" 538 18241 18242 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 537 18201 18221 "lib/binterp.ml" 537 18201 18223
 type(
@@ -12990,7 +12990,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def synth "lib/binterp.ml" 539 18297 18298 "lib/binterp.ml" 800 29741 29744
+  def synth "lib/binterp.ml" 539 18297 18298 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 538 18241 18254 "lib/binterp.ml" 538 18241 18260
 type(
@@ -13040,7 +13040,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def synth_can "lib/binterp.ml" 540 18361 18362 "lib/binterp.ml" 800 29741 29744
+  def synth_can "lib/binterp.ml" 540 18361 18362 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 539 18297 18314 "lib/binterp.ml" 539 18297 18320
 type(
@@ -13090,7 +13090,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def perm "lib/binterp.ml" 541 18403 18404 "lib/binterp.ml" 800 29741 29744
+  def perm "lib/binterp.ml" 541 18403 18404 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 540 18361 18373 "lib/binterp.ml" 540 18361 18379
 type(
@@ -13140,7 +13140,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def project "lib/binterp.ml" 542 18451 18452 "lib/binterp.ml" 800 29741 29744
+  def project "lib/binterp.ml" 542 18451 18452 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 541 18403 18418 "lib/binterp.ml" 541 18403 18424
 type(
@@ -13190,7 +13190,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def id "lib/binterp.ml" 543 18489 18490 "lib/binterp.ml" 800 29741 29744
+  def id "lib/binterp.ml" 543 18489 18490 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 542 18451 18461 "lib/binterp.ml" 542 18451 18467
 type(
@@ -13240,7 +13240,7 @@ type(
   Bident.Qid.t
 )
 ident(
-  def list "lib/binterp.ml" 545 18544 18545 "lib/binterp.ml" 800 29741 29744
+  def list "lib/binterp.ml" 545 18544 18545 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 543 18489 18501 "lib/binterp.ml" 543 18489 18507
 type(
@@ -13305,7 +13305,7 @@ type(
   L.regex -> Brx.t
 )
 ident(
-  def lrxToBrx "lib/binterp.ml" 545 18544 18545 "lib/binterp.ml" 800 29741 29744
+  def lrxToBrx "lib/binterp.ml" 545 18544 18545 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 545 18544 18563 "lib/binterp.ml" 545 18544 18564
 type(
@@ -13596,7 +13596,7 @@ type(
   L.lens -> BL.MLens.t
 )
 ident(
-  def sLensTobLens "lib/binterp.ml" 571 19735 19736 "lib/binterp.ml" 800 29741 29744
+  def sLensTobLens "lib/binterp.ml" 571 19735 19736 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 554 18912 18931 "lib/binterp.ml" 554 18912 18932
 type(
@@ -14323,7 +14323,7 @@ type(
   V.t -> V.t list -> V.t list
 )
 ident(
-  def toList "lib/binterp.ml" 571 19735 19736 "lib/binterp.ml" 800 29741 29744
+  def toList "lib/binterp.ml" 571 19735 19736 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 571 19735 19752 "lib/binterp.ml" 571 19735 19753
 type(
@@ -14502,7 +14502,7 @@ type(
   Brx.t -> L.regex
 )
 ident(
-  def brxToLrx "lib/binterp.ml" 577 19961 19962 "lib/binterp.ml" 800 29741 29744
+  def brxToLrx "lib/binterp.ml" 577 19961 19962 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 577 19961 19980 "lib/binterp.ml" 577 19961 19981
 type(
@@ -14978,7 +14978,7 @@ type(
   V.t list -> (string * string) list
 )
 ident(
-  def getStrings "lib/binterp.ml" 597 20824 20825 "lib/binterp.ml" 800 29741 29744
+  def getStrings "lib/binterp.ml" 597 20824 20825 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 590 20536 20553 "lib/binterp.ml" 590 20536 20554
 type(
@@ -15156,7 +15156,7 @@ type(
   G.rs * V.t
 )
 ident(
-  def get_synth "lib/binterp.ml" 625 22047 22048 "lib/binterp.ml" 800 29741 29744
+  def get_synth "lib/binterp.ml" 625 22047 22048 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 598 20854 20860 "lib/binterp.ml" 598 20854 20862
 type(
@@ -15870,7 +15870,7 @@ type(
   Bident.Qid.t -> V.t -> string
 )
 ident(
-  def vtoString "lib/binterp.ml" 625 22047 22048 "lib/binterp.ml" 800 29741 29744
+  def vtoString "lib/binterp.ml" 625 22047 22048 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 625 22047 22067 "lib/binterp.ml" 625 22047 22069
 type(
@@ -17702,7 +17702,7 @@ type(
   'a0 list -> 'a0 list list
 )
 ident(
-  def permutations "lib/binterp.ml" 649 23418 23419 "lib/binterp.ml" 800 29741 29744
+  def permutations "lib/binterp.ml" 649 23418 23419 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 649 23418 23441 "lib/binterp.ml" 649 23418 23442
 type(
@@ -17807,7 +17807,7 @@ type(
   Brx.t list -> Brx.t
 )
 ident(
-  def concatList "lib/binterp.ml" 661 23802 23803 "lib/binterp.ml" 800 29741 29744
+  def concatList "lib/binterp.ml" 661 23802 23803 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 652 23555 23572 "lib/binterp.ml" 652 23555 23573
 type(
@@ -18009,7 +18009,7 @@ type(
   Brx.t list -> Brx.t
 )
 ident(
-  def altList "lib/binterp.ml" 670 24046 24047 "lib/binterp.ml" 800 29741 29744
+  def altList "lib/binterp.ml" 670 24046 24047 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 661 23802 23816 "lib/binterp.ml" 661 23802 23817
 type(
@@ -18211,7 +18211,7 @@ type(
   'a1 list -> 'a1 list -> 'a1 list -> int -> 'a1 list * 'a1 list
 )
 ident(
-  def evenOdd "lib/binterp.ml" 670 24046 24047 "lib/binterp.ml" 800 29741 29744
+  def evenOdd "lib/binterp.ml" 670 24046 24047 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 671 24063 24067 "lib/binterp.ml" 671 24063 24068
 type(
@@ -18520,7 +18520,7 @@ type(
   'a2 list -> 'a2 list -> 'a2 list -> int -> 'a2 list
 )
 ident(
-  def evenOddInv "lib/binterp.ml" 677 24328 24329 "lib/binterp.ml" 800 29741 29744
+  def evenOddInv "lib/binterp.ml" 677 24328 24329 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 677 24328 24349 "lib/binterp.ml" 677 24328 24353
 type(
@@ -18903,7 +18903,7 @@ type(
   'a3 -> 'a3 list -> 'a3 list
 )
 ident(
-  def intersperse "lib/binterp.ml" 692 24935 24936 "lib/binterp.ml" 800 29741 29744
+  def intersperse "lib/binterp.ml" 692 24935 24936 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 684 24677 24695 "lib/binterp.ml" 684 24677 24696
 type(
@@ -19127,7 +19127,7 @@ type(
   'a4 list -> ('a4 -> string) -> string
 )
 ident(
-  def printList "lib/binterp.ml" 692 24935 24936 "lib/binterp.ml" 800 29741 29744
+  def printList "lib/binterp.ml" 692 24935 24936 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 692 24935 24955 "lib/binterp.ml" 692 24935 24956
 type(
@@ -19355,7 +19355,7 @@ type(
   Brx.t list -> BS.t -> BS.t list -> BS.t list
 )
 ident(
-  def getMatches "lib/binterp.ml" 697 25110 25111 "lib/binterp.ml" 800 29741 29744
+  def getMatches "lib/binterp.ml" 697 25110 25111 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 697 25110 25131 "lib/binterp.ml" 697 25110 25132
 type(
@@ -19600,7 +19600,7 @@ type(
   Brx.t list -> Brx.t -> Brx.t
 )
 ident(
-  def langWhole "lib/binterp.ml" 707 25491 25492 "lib/binterp.ml" 800 29741 29744
+  def langWhole "lib/binterp.ml" 707 25491 25492 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 704 25353 25369 "lib/binterp.ml" 704 25353 25370
 type(
@@ -19726,7 +19726,7 @@ type(
   int list list -> Brx.t list -> Brx.t -> BS.t -> int list * Brx.t list
 )
 ident(
-  def whichPerm "lib/binterp.ml" 707 25491 25492 "lib/binterp.ml" 800 29741 29744
+  def whichPerm "lib/binterp.ml" 707 25491 25492 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 708 25510 25514 "lib/binterp.ml" 708 25510 25519
 type(
@@ -20010,7 +20010,7 @@ type(
   BL.Canonizer.t list -> BL.Canonizer.t -> BL.Canonizer.t
 )
 ident(
-  def permCanonizer "lib/binterp.ml" 738 26947 26948 "lib/binterp.ml" 800 29741 29744
+  def permCanonizer "lib/binterp.ml" 738 26947 26948 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 717 25879 25899 "lib/binterp.ml" 717 25879 25901
 type(
@@ -21019,7 +21019,7 @@ type(
   G.rs * V.t
 )
 ident(
-  def get_id "lib/binterp.ml" 745 27243 27244 "lib/binterp.ml" 800 29741 29744
+  def get_id "lib/binterp.ml" 745 27243 27244 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 739 26974 26980 "lib/binterp.ml" 739 26974 26981
 type(
@@ -21204,14 +21204,14 @@ type(
   G.rs * V.t
 )
 ident(
-  def get_project "lib/binterp.ml" 754 27656 27657 "lib/binterp.ml" 800 29741 29744
+  def get_project "lib/binterp.ml" 756 27779 27780 "lib/binterp.ml" 802 29864 29867
 )
 "lib/binterp.ml" 746 27275 27281 "lib/binterp.ml" 746 27275 27282
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  def g "lib/binterp.ml" 751 27532 27534 "lib/binterp.ml" 752 27573 27653
+  def g "lib/binterp.ml" 753 27655 27657 "lib/binterp.ml" 754 27696 27776
 )
 "lib/binterp.ml" 746 27275 27285 "lib/binterp.ml" 746 27275 27286
 type(
@@ -21222,7 +21222,7 @@ type(
   V.t
 )
 ident(
-  def v "lib/binterp.ml" 746 27275 27331 "lib/binterp.ml" 750 27480 27528
+  def v "lib/binterp.ml" 746 27275 27331 "lib/binterp.ml" 752 27603 27651
 )
 "lib/binterp.ml" 747 27339 27348 "lib/binterp.ml" 747 27339 27349
 type(
@@ -21244,7 +21244,7 @@ type(
   Brx.t
 )
 ident(
-  def r "lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 749 27400 27479
+  def r "lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 751 27522 27602
 )
 "lib/binterp.ml" 748 27355 27369 "lib/binterp.ml" 748 27355 27380
 type(
@@ -21259,7 +21259,7 @@ type(
   string
 )
 ident(
-  def s "lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 749 27400 27479
+  def s "lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 751 27522 27602
 )
 "lib/binterp.ml" 748 27355 27383 "lib/binterp.ml" 748 27355 27395
 type(
@@ -21269,318 +21269,449 @@ type(
 type(
   V.t
 )
-"lib/binterp.ml" 749 27400 27412 "lib/binterp.ml" 749 27400 27416
+"lib/binterp.ml" 749 27400 27408 "lib/binterp.ml" 749 27400 27411
 type(
-  Info.t
+  bool -> bool
 )
 ident(
-  int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
+  ext_ref Pervasives.not
 )
-"lib/binterp.ml" 749 27400 27418 "lib/binterp.ml" 749 27400 27440
+"lib/binterp.ml" 749 27400 27413 "lib/binterp.ml" 749 27400 27424
 type(
-  Info.t -> Brx.t -> Brx.t -> (string -> string) -> BL.Canonizer.t
+  Brx.t -> BS.t -> bool
 )
 ident(
-  ext_ref BL.Canonizer.normalize
+  ext_ref BS.match_rx
 )
-"lib/binterp.ml" 749 27400 27441 "lib/binterp.ml" 749 27400 27445
-type(
-  Info.t
-)
-ident(
-  int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
-)
-"lib/binterp.ml" 749 27400 27446 "lib/binterp.ml" 749 27400 27447
+"lib/binterp.ml" 749 27400 27425 "lib/binterp.ml" 749 27400 27426
 type(
   Brx.t
 )
 ident(
   int_ref r "lib/binterp.ml" 748 27355 27378 "lib/binterp.ml" 748 27355 27379
 )
-"lib/binterp.ml" 749 27400 27449 "lib/binterp.ml" 749 27400 27462
+"lib/binterp.ml" 749 27400 27428 "lib/binterp.ml" 749 27400 27440
 type(
-  string -> Brx.t
+  string -> BS.t
 )
 ident(
-  ext_ref Brx.mk_string
+  ext_ref BS.of_string
 )
-"lib/binterp.ml" 749 27400 27463 "lib/binterp.ml" 749 27400 27464
+"lib/binterp.ml" 749 27400 27441 "lib/binterp.ml" 749 27400 27442
 type(
   string
 )
 ident(
   int_ref s "lib/binterp.ml" 748 27355 27393 "lib/binterp.ml" 748 27355 27394
 )
-"lib/binterp.ml" 749 27400 27448 "lib/binterp.ml" 749 27400 27465
+"lib/binterp.ml" 749 27400 27427 "lib/binterp.ml" 749 27400 27443
 call(
   stack
 )
 type(
-  Brx.t
+  BS.t
 )
-"lib/binterp.ml" 749 27400 27471 "lib/binterp.ml" 749 27400 27472
-type(
-  string
-)
-"lib/binterp.ml" 749 27400 27476 "lib/binterp.ml" 749 27400 27477
-type(
-  string
-)
-ident(
-  int_ref s "lib/binterp.ml" 748 27355 27393 "lib/binterp.ml" 748 27355 27394
-)
-"lib/binterp.ml" 749 27400 27466 "lib/binterp.ml" 749 27400 27478
-type(
-  string -> string
-)
-"lib/binterp.ml" 749 27400 27418 "lib/binterp.ml" 749 27400 27478
+"lib/binterp.ml" 749 27400 27412 "lib/binterp.ml" 749 27400 27444
 call(
   stack
 )
 type(
-  BL.Canonizer.t
+  bool
 )
-"lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 749 27400 27479
+"lib/binterp.ml" 749 27400 27408 "lib/binterp.ml" 749 27400 27444
 type(
-  V.t
+  bool
 )
-"lib/binterp.ml" 750 27480 27485 "lib/binterp.ml" 750 27480 27486
-type(
-  V.t
-)
-"lib/binterp.ml" 750 27480 27490 "lib/binterp.ml" 750 27480 27498
+"lib/binterp.ml" 750 27450 27456 "lib/binterp.ml" 750 27450 27464
 type(
   string -> V.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 750 27480 27499 "lib/binterp.ml" 750 27480 27528
+"lib/binterp.ml" 750 27450 27466 "lib/binterp.ml" 750 27450 27467
 type(
   string
 )
-"lib/binterp.ml" 750 27480 27490 "lib/binterp.ml" 750 27480 27528
+ident(
+  int_ref s "lib/binterp.ml" 748 27355 27393 "lib/binterp.ml" 748 27355 27394
+)
+"lib/binterp.ml" 750 27450 27468 "lib/binterp.ml" 750 27450 27469
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/binterp.ml" 750 27450 27470 "lib/binterp.ml" 750 27450 27493
+type(
+  string
+)
+"lib/binterp.ml" 750 27450 27494 "lib/binterp.ml" 750 27450 27495
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/binterp.ml" 750 27450 27497 "lib/binterp.ml" 750 27450 27512
+type(
+  Brx.t -> string
+)
+ident(
+  ext_ref Brx.string_of_t
+)
+"lib/binterp.ml" 750 27450 27513 "lib/binterp.ml" 750 27450 27514
+type(
+  Brx.t
+)
+ident(
+  int_ref r "lib/binterp.ml" 748 27355 27378 "lib/binterp.ml" 748 27355 27379
+)
+"lib/binterp.ml" 750 27450 27496 "lib/binterp.ml" 750 27450 27515
+call(
+  stack
+)
+type(
+  string
+)
+"lib/binterp.ml" 750 27450 27470 "lib/binterp.ml" 750 27450 27515
+call(
+  stack
+)
+type(
+  string
+)
+"lib/binterp.ml" 750 27450 27465 "lib/binterp.ml" 750 27450 27516
+call(
+  stack
+)
+type(
+  string
+)
+"lib/binterp.ml" 750 27450 27456 "lib/binterp.ml" 750 27450 27516
 call(
   tail
 )
 type(
   V.t
 )
-"lib/binterp.ml" 747 27339 27342 "lib/binterp.ml" 750 27480 27528
+"lib/binterp.ml" 751 27522 27535 "lib/binterp.ml" 751 27522 27539
+type(
+  Info.t
+)
+ident(
+  int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
+)
+"lib/binterp.ml" 751 27522 27541 "lib/binterp.ml" 751 27522 27563
+type(
+  Info.t -> Brx.t -> Brx.t -> (string -> string) -> BL.Canonizer.t
+)
+ident(
+  ext_ref BL.Canonizer.normalize
+)
+"lib/binterp.ml" 751 27522 27564 "lib/binterp.ml" 751 27522 27568
+type(
+  Info.t
+)
+ident(
+  int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
+)
+"lib/binterp.ml" 751 27522 27569 "lib/binterp.ml" 751 27522 27570
+type(
+  Brx.t
+)
+ident(
+  int_ref r "lib/binterp.ml" 748 27355 27378 "lib/binterp.ml" 748 27355 27379
+)
+"lib/binterp.ml" 751 27522 27572 "lib/binterp.ml" 751 27522 27585
+type(
+  string -> Brx.t
+)
+ident(
+  ext_ref Brx.mk_string
+)
+"lib/binterp.ml" 751 27522 27586 "lib/binterp.ml" 751 27522 27587
+type(
+  string
+)
+ident(
+  int_ref s "lib/binterp.ml" 748 27355 27393 "lib/binterp.ml" 748 27355 27394
+)
+"lib/binterp.ml" 751 27522 27571 "lib/binterp.ml" 751 27522 27588
+call(
+  stack
+)
+type(
+  Brx.t
+)
+"lib/binterp.ml" 751 27522 27594 "lib/binterp.ml" 751 27522 27595
+type(
+  string
+)
+"lib/binterp.ml" 751 27522 27599 "lib/binterp.ml" 751 27522 27600
+type(
+  string
+)
+ident(
+  int_ref s "lib/binterp.ml" 748 27355 27393 "lib/binterp.ml" 748 27355 27394
+)
+"lib/binterp.ml" 751 27522 27589 "lib/binterp.ml" 751 27522 27601
+type(
+  string -> string
+)
+"lib/binterp.ml" 751 27522 27541 "lib/binterp.ml" 751 27522 27601
+call(
+  stack
+)
+type(
+  BL.Canonizer.t
+)
+"lib/binterp.ml" 751 27522 27528 "lib/binterp.ml" 751 27522 27602
+type(
+  V.t
+)
+"lib/binterp.ml" 749 27400 27405 "lib/binterp.ml" 751 27522 27602
+type(
+  V.t
+)
+"lib/binterp.ml" 752 27603 27608 "lib/binterp.ml" 752 27603 27609
+type(
+  V.t
+)
+"lib/binterp.ml" 752 27603 27613 "lib/binterp.ml" 752 27603 27621
+type(
+  string -> V.t
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"lib/binterp.ml" 752 27603 27622 "lib/binterp.ml" 752 27603 27651
+type(
+  string
+)
+"lib/binterp.ml" 752 27603 27613 "lib/binterp.ml" 752 27603 27651
+call(
+  tail
+)
+type(
+  V.t
+)
+"lib/binterp.ml" 747 27339 27342 "lib/binterp.ml" 752 27603 27651
 type(
   V.t
 )
 type(
   V.t
 )
-"lib/binterp.ml" 751 27532 27538 "lib/binterp.ml" 751 27532 27540
+"lib/binterp.ml" 753 27655 27661 "lib/binterp.ml" 753 27655 27663
 type(
   Bsyntax.sort
 )
 ident(
-  def so "lib/binterp.ml" 752 27573 27575 "lib/binterp.ml" 752 27573 27653
+  def so "lib/binterp.ml" 754 27696 27698 "lib/binterp.ml" 754 27696 27776
 )
-"lib/binterp.ml" 751 27532 27552 "lib/binterp.ml" 751 27532 27559
+"lib/binterp.ml" 753 27655 27675 "lib/binterp.ml" 753 27655 27682
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 751 27532 27561 "lib/binterp.ml" 751 27532 27568
+"lib/binterp.ml" 753 27655 27684 "lib/binterp.ml" 753 27655 27691
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 751 27532 27543 "lib/binterp.ml" 751 27532 27569
+"lib/binterp.ml" 753 27655 27666 "lib/binterp.ml" 753 27655 27692
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 752 27573 27596 "lib/binterp.ml" 752 27573 27601
+"lib/binterp.ml" 754 27696 27719 "lib/binterp.ml" 754 27696 27724
 type(
   Info.t -> string -> Bident.Id.t
 )
 ident(
   ext_ref Bident.Id.mk
 )
-"lib/binterp.ml" 752 27573 27602 "lib/binterp.ml" 752 27573 27606
+"lib/binterp.ml" 754 27696 27725 "lib/binterp.ml" 754 27696 27729
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 752 27573 27607 "lib/binterp.ml" 752 27573 27616
+"lib/binterp.ml" 754 27696 27730 "lib/binterp.ml" 754 27696 27739
 type(
   string
 )
-"lib/binterp.ml" 752 27573 27595 "lib/binterp.ml" 752 27573 27617
+"lib/binterp.ml" 754 27696 27718 "lib/binterp.ml" 754 27696 27740
 call(
   stack
 )
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 752 27573 27619 "lib/binterp.ml" 752 27573 27621
+"lib/binterp.ml" 754 27696 27742 "lib/binterp.ml" 754 27696 27744
 type(
   Bsyntax.sort
 )
 ident(
-  int_ref so "lib/binterp.ml" 751 27532 27538 "lib/binterp.ml" 751 27532 27540
+  int_ref so "lib/binterp.ml" 753 27655 27661 "lib/binterp.ml" 753 27655 27663
 )
-"lib/binterp.ml" 752 27573 27623 "lib/binterp.ml" 752 27573 27633
+"lib/binterp.ml" 754 27696 27746 "lib/binterp.ml" 754 27696 27756
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 752 27573 27583 "lib/binterp.ml" 752 27573 27635
+"lib/binterp.ml" 754 27696 27706 "lib/binterp.ml" 754 27696 27758
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 752 27573 27576 "lib/binterp.ml" 752 27573 27635
+"lib/binterp.ml" 754 27696 27699 "lib/binterp.ml" 754 27696 27758
 type(
   G.rs
 )
-"lib/binterp.ml" 752 27573 27644 "lib/binterp.ml" 752 27573 27648
+"lib/binterp.ml" 754 27696 27767 "lib/binterp.ml" 754 27696 27771
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 752 27573 27650 "lib/binterp.ml" 752 27573 27651
+"lib/binterp.ml" 754 27696 27773 "lib/binterp.ml" 754 27696 27774
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
   int_ref g "lib/binterp.ml" 746 27275 27281 "lib/binterp.ml" 746 27275 27282
 )
-"lib/binterp.ml" 752 27573 27637 "lib/binterp.ml" 752 27573 27652
+"lib/binterp.ml" 754 27696 27760 "lib/binterp.ml" 754 27696 27775
 type(
   V.t
 )
-"lib/binterp.ml" 752 27573 27575 "lib/binterp.ml" 752 27573 27653
+"lib/binterp.ml" 754 27696 27698 "lib/binterp.ml" 754 27696 27776
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 751 27532 27534 "lib/binterp.ml" 752 27573 27653
+"lib/binterp.ml" 753 27655 27657 "lib/binterp.ml" 754 27696 27776
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 746 27275 27277 "lib/binterp.ml" 752 27573 27653
+"lib/binterp.ml" 746 27275 27277 "lib/binterp.ml" 754 27696 27776
 type(
   G.rs * V.t
 )
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 754 27656 27661 "lib/binterp.ml" 754 27656 27669
+"lib/binterp.ml" 756 27779 27784 "lib/binterp.ml" 756 27779 27792
 type(
   G.rs * V.t
 )
 ident(
-  def get_perm "lib/binterp.ml" 770 28324 28325 "lib/binterp.ml" 800 29741 29744
+  def get_perm "lib/binterp.ml" 772 28447 28448 "lib/binterp.ml" 802 29864 29867
 )
-"lib/binterp.ml" 755 27685 27691 "lib/binterp.ml" 755 27685 27699
+"lib/binterp.ml" 757 27808 27814 "lib/binterp.ml" 757 27808 27822
 type(
   V.t list -> BL.Canonizer.t list
 )
 ident(
-  def get_cans "lib/binterp.ml" 761 27928 27930 "lib/binterp.ml" 768 28244 28321
+  def get_cans "lib/binterp.ml" 763 28051 28053 "lib/binterp.ml" 770 28367 28444
 )
-"lib/binterp.ml" 755 27685 27701 "lib/binterp.ml" 755 27685 27702
+"lib/binterp.ml" 757 27808 27824 "lib/binterp.ml" 757 27808 27825
 type(
   V.t list
 )
 ident(
-  def l "lib/binterp.ml" 755 27685 27715 "lib/binterp.ml" 760 27897 27924
+  def l "lib/binterp.ml" 757 27808 27838 "lib/binterp.ml" 762 28020 28047
 )
-"lib/binterp.ml" 756 27739 27746 "lib/binterp.ml" 756 27739 27747
+"lib/binterp.ml" 758 27862 27869 "lib/binterp.ml" 758 27862 27870
 type(
   BL.Canonizer.t list -> V.t -> BL.Canonizer.t list
 )
 ident(
-  def f "lib/binterp.ml" 760 27897 27903 "lib/binterp.ml" 760 27897 27924
+  def f "lib/binterp.ml" 762 28020 28026 "lib/binterp.ml" 762 28020 28047
 )
-"lib/binterp.ml" 756 27739 27749 "lib/binterp.ml" 756 27739 27753
+"lib/binterp.ml" 758 27862 27872 "lib/binterp.ml" 758 27862 27876
 type(
   BL.Canonizer.t list
 )
 ident(
-  def temp "lib/binterp.ml" 756 27739 27777 "lib/binterp.ml" 759 27860 27896
+  def temp "lib/binterp.ml" 758 27862 27900 "lib/binterp.ml" 761 27983 28019
 )
-"lib/binterp.ml" 756 27739 27778 "lib/binterp.ml" 756 27739 27779
+"lib/binterp.ml" 758 27862 27901 "lib/binterp.ml" 758 27862 27902
 type(
   V.t
 )
 ident(
-  def v "lib/binterp.ml" 756 27739 27787 "lib/binterp.ml" 759 27860 27896
+  def v "lib/binterp.ml" 758 27862 27910 "lib/binterp.ml" 761 27983 28019
 )
-"lib/binterp.ml" 757 27811 27821 "lib/binterp.ml" 757 27811 27822
+"lib/binterp.ml" 759 27934 27944 "lib/binterp.ml" 759 27934 27945
 type(
   V.t
 )
 ident(
-  int_ref v "lib/binterp.ml" 756 27739 27778 "lib/binterp.ml" 756 27739 27779
+  int_ref v "lib/binterp.ml" 758 27862 27901 "lib/binterp.ml" 758 27862 27902
 )
-"lib/binterp.ml" 758 27828 27841 "lib/binterp.ml" 758 27828 27842
+"lib/binterp.ml" 760 27951 27964 "lib/binterp.ml" 760 27951 27965
 type(
   Info.t
 )
-"lib/binterp.ml" 758 27828 27844 "lib/binterp.ml" 758 27828 27845
+"lib/binterp.ml" 760 27951 27967 "lib/binterp.ml" 760 27951 27968
 type(
   Blenses.Canonizer.t
 )
 ident(
-  def c "lib/binterp.ml" 758 27828 27850 "lib/binterp.ml" 758 27828 27859
+  def c "lib/binterp.ml" 760 27951 27973 "lib/binterp.ml" 760 27951 27982
 )
-"lib/binterp.ml" 758 27828 27834 "lib/binterp.ml" 758 27828 27846
+"lib/binterp.ml" 760 27951 27957 "lib/binterp.ml" 760 27951 27969
 type(
   V.t
 )
-"lib/binterp.ml" 758 27828 27850 "lib/binterp.ml" 758 27828 27851
+"lib/binterp.ml" 760 27951 27973 "lib/binterp.ml" 760 27951 27974
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref c "lib/binterp.ml" 758 27828 27844 "lib/binterp.ml" 758 27828 27845
+  int_ref c "lib/binterp.ml" 760 27951 27967 "lib/binterp.ml" 760 27951 27968
 )
-"lib/binterp.ml" 758 27828 27855 "lib/binterp.ml" 758 27828 27859
+"lib/binterp.ml" 760 27951 27978 "lib/binterp.ml" 760 27951 27982
 type(
   BL.Canonizer.t list
 )
 ident(
-  int_ref temp "lib/binterp.ml" 756 27739 27749 "lib/binterp.ml" 756 27739 27753
+  int_ref temp "lib/binterp.ml" 758 27862 27872 "lib/binterp.ml" 758 27862 27876
 )
-"lib/binterp.ml" 758 27828 27850 "lib/binterp.ml" 758 27828 27859
+"lib/binterp.ml" 760 27951 27973 "lib/binterp.ml" 760 27951 27982
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 759 27860 27866 "lib/binterp.ml" 759 27860 27867
+"lib/binterp.ml" 761 27983 27989 "lib/binterp.ml" 761 27983 27990
 type(
   V.t
 )
-"lib/binterp.ml" 759 27860 27871 "lib/binterp.ml" 759 27860 27879
+"lib/binterp.ml" 761 27983 27994 "lib/binterp.ml" 761 27983 28002
 type(
   string -> BL.Canonizer.t list
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 759 27860 27880 "lib/binterp.ml" 759 27860 27896
+"lib/binterp.ml" 761 27983 28003 "lib/binterp.ml" 761 27983 28019
 type(
   string
 )
-"lib/binterp.ml" 759 27860 27871 "lib/binterp.ml" 759 27860 27896
+"lib/binterp.ml" 761 27983 27994 "lib/binterp.ml" 761 27983 28019
 call(
   tail
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 757 27811 27815 "lib/binterp.ml" 759 27860 27896
+"lib/binterp.ml" 759 27934 27938 "lib/binterp.ml" 761 27983 28019
 type(
   BL.Canonizer.t list
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 760 27897 27903 "lib/binterp.ml" 760 27897 27917
+"lib/binterp.ml" 762 28020 28026 "lib/binterp.ml" 762 28020 28040
 type(
   (BL.Canonizer.t list -> V.t -> BL.Canonizer.t list) ->
   BL.Canonizer.t list -> V.t list -> BL.Canonizer.t list
@@ -21588,618 +21719,618 @@ type(
 ident(
   ext_ref List.fold_left
 )
-"lib/binterp.ml" 760 27897 27918 "lib/binterp.ml" 760 27897 27919
+"lib/binterp.ml" 762 28020 28041 "lib/binterp.ml" 762 28020 28042
 type(
   BL.Canonizer.t list -> V.t -> BL.Canonizer.t list
 )
 ident(
-  int_ref f "lib/binterp.ml" 756 27739 27746 "lib/binterp.ml" 756 27739 27747
+  int_ref f "lib/binterp.ml" 758 27862 27869 "lib/binterp.ml" 758 27862 27870
 )
-"lib/binterp.ml" 760 27897 27920 "lib/binterp.ml" 760 27897 27922
+"lib/binterp.ml" 762 28020 28043 "lib/binterp.ml" 762 28020 28045
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 760 27897 27923 "lib/binterp.ml" 760 27897 27924
+"lib/binterp.ml" 762 28020 28046 "lib/binterp.ml" 762 28020 28047
 type(
   V.t list
 )
 ident(
-  int_ref l "lib/binterp.ml" 755 27685 27701 "lib/binterp.ml" 755 27685 27702
+  int_ref l "lib/binterp.ml" 757 27808 27824 "lib/binterp.ml" 757 27808 27825
 )
-"lib/binterp.ml" 760 27897 27903 "lib/binterp.ml" 760 27897 27924
+"lib/binterp.ml" 762 28020 28026 "lib/binterp.ml" 762 28020 28047
 call(
   tail
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 756 27739 27742 "lib/binterp.ml" 760 27897 27924
+"lib/binterp.ml" 758 27862 27865 "lib/binterp.ml" 762 28020 28047
 type(
   BL.Canonizer.t list
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 761 27928 27934 "lib/binterp.ml" 761 27928 27935
+"lib/binterp.ml" 763 28051 28057 "lib/binterp.ml" 763 28051 28058
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  def g "lib/binterp.ml" 767 28182 28184 "lib/binterp.ml" 768 28244 28321
+  def g "lib/binterp.ml" 769 28305 28307 "lib/binterp.ml" 770 28367 28444
 )
-"lib/binterp.ml" 761 27928 27938 "lib/binterp.ml" 761 27928 27939
+"lib/binterp.ml" 763 28051 28061 "lib/binterp.ml" 763 28051 28062
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 761 27928 27975 "lib/binterp.ml" 761 27928 27976
+"lib/binterp.ml" 763 28051 28098 "lib/binterp.ml" 763 28051 28099
 type(
   V.t
 )
 ident(
-  def v "lib/binterp.ml" 761 27928 27984 "lib/binterp.ml" 766 28133 28178
+  def v "lib/binterp.ml" 763 28051 28107 "lib/binterp.ml" 768 28256 28301
 )
-"lib/binterp.ml" 762 27992 28001 "lib/binterp.ml" 762 27992 28002
+"lib/binterp.ml" 764 28115 28124 "lib/binterp.ml" 764 28115 28125
 type(
   V.t
 )
 ident(
-  int_ref v "lib/binterp.ml" 761 27928 27975 "lib/binterp.ml" 761 27928 27976
+  int_ref v "lib/binterp.ml" 763 28051 28098 "lib/binterp.ml" 763 28051 28099
 )
-"lib/binterp.ml" 763 28008 28019 "lib/binterp.ml" 763 28008 28020
+"lib/binterp.ml" 765 28131 28142 "lib/binterp.ml" 765 28131 28143
 type(
   Info.t
 )
-"lib/binterp.ml" 763 28008 28022 "lib/binterp.ml" 763 28008 28023
+"lib/binterp.ml" 765 28131 28145 "lib/binterp.ml" 765 28131 28146
 type(
   V.t
 )
 ident(
-  def l "lib/binterp.ml" 764 28044 28049 "lib/binterp.ml" 765 28094 28132
+  def l "lib/binterp.ml" 766 28167 28172 "lib/binterp.ml" 767 28217 28255
 )
-"lib/binterp.ml" 763 28008 28032 "lib/binterp.ml" 763 28008 28033
+"lib/binterp.ml" 765 28131 28155 "lib/binterp.ml" 765 28131 28156
 type(
   Info.t
 )
-"lib/binterp.ml" 763 28008 28035 "lib/binterp.ml" 763 28008 28038
+"lib/binterp.ml" 765 28131 28158 "lib/binterp.ml" 765 28131 28161
 type(
   Blenses.Canonizer.t
 )
 ident(
-  def sep "lib/binterp.ml" 764 28044 28049 "lib/binterp.ml" 765 28094 28132
+  def sep "lib/binterp.ml" 766 28167 28172 "lib/binterp.ml" 767 28217 28255
 )
-"lib/binterp.ml" 763 28008 28025 "lib/binterp.ml" 763 28008 28039
+"lib/binterp.ml" 765 28131 28148 "lib/binterp.ml" 765 28131 28162
 type(
   V.t
 )
-"lib/binterp.ml" 763 28008 28013 "lib/binterp.ml" 763 28008 28040
+"lib/binterp.ml" 765 28131 28136 "lib/binterp.ml" 765 28131 28163
 type(
   V.t
 )
-"lib/binterp.ml" 764 28044 28053 "lib/binterp.ml" 764 28044 28054
+"lib/binterp.ml" 766 28167 28176 "lib/binterp.ml" 766 28167 28177
 type(
   BL.Canonizer.t list
 )
 ident(
-  def l "lib/binterp.ml" 765 28094 28099 "lib/binterp.ml" 765 28094 28132
+  def l "lib/binterp.ml" 767 28217 28222 "lib/binterp.ml" 767 28217 28255
 )
-"lib/binterp.ml" 764 28044 28057 "lib/binterp.ml" 764 28044 28065
+"lib/binterp.ml" 766 28167 28180 "lib/binterp.ml" 766 28167 28188
 type(
   BL.Canonizer.t list -> BL.Canonizer.t list
 )
 ident(
   ext_ref List.rev
 )
-"lib/binterp.ml" 764 28044 28067 "lib/binterp.ml" 764 28044 28075
+"lib/binterp.ml" 766 28167 28190 "lib/binterp.ml" 766 28167 28198
 type(
   V.t list -> BL.Canonizer.t list
 )
 ident(
-  int_ref get_cans "lib/binterp.ml" 755 27685 27691 "lib/binterp.ml" 755 27685 27699
+  int_ref get_cans "lib/binterp.ml" 757 27808 27814 "lib/binterp.ml" 757 27808 27822
 )
-"lib/binterp.ml" 764 28044 28077 "lib/binterp.ml" 764 28044 28083
+"lib/binterp.ml" 766 28167 28200 "lib/binterp.ml" 766 28167 28206
 type(
   V.t -> V.t list -> V.t list
 )
 ident(
   int_ref toList "lib/binterp.ml" 571 19735 19744 "lib/binterp.ml" 571 19735 19750
 )
-"lib/binterp.ml" 764 28044 28084 "lib/binterp.ml" 764 28044 28085
+"lib/binterp.ml" 766 28167 28207 "lib/binterp.ml" 766 28167 28208
 type(
   V.t
 )
 ident(
-  int_ref l "lib/binterp.ml" 763 28008 28022 "lib/binterp.ml" 763 28008 28023
+  int_ref l "lib/binterp.ml" 765 28131 28145 "lib/binterp.ml" 765 28131 28146
 )
-"lib/binterp.ml" 764 28044 28086 "lib/binterp.ml" 764 28044 28088
+"lib/binterp.ml" 766 28167 28209 "lib/binterp.ml" 766 28167 28211
 type(
   V.t list
 )
-"lib/binterp.ml" 764 28044 28076 "lib/binterp.ml" 764 28044 28089
+"lib/binterp.ml" 766 28167 28199 "lib/binterp.ml" 766 28167 28212
 call(
   stack
 )
 type(
   V.t list
 )
-"lib/binterp.ml" 764 28044 28066 "lib/binterp.ml" 764 28044 28090
+"lib/binterp.ml" 766 28167 28189 "lib/binterp.ml" 766 28167 28213
 call(
   stack
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 764 28044 28057 "lib/binterp.ml" 764 28044 28090
+"lib/binterp.ml" 766 28167 28180 "lib/binterp.ml" 766 28167 28213
 call(
   stack
 )
 type(
   BL.Canonizer.t list
 )
-"lib/binterp.ml" 765 28094 28106 "lib/binterp.ml" 765 28094 28110
+"lib/binterp.ml" 767 28217 28229 "lib/binterp.ml" 767 28217 28233
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 765 28094 28112 "lib/binterp.ml" 765 28094 28125
+"lib/binterp.ml" 767 28217 28235 "lib/binterp.ml" 767 28217 28248
 type(
   BL.Canonizer.t list -> BL.Canonizer.t -> BL.Canonizer.t
 )
 ident(
   int_ref permCanonizer "lib/binterp.ml" 717 25879 25884 "lib/binterp.ml" 717 25879 25897
 )
-"lib/binterp.ml" 765 28094 28126 "lib/binterp.ml" 765 28094 28127
+"lib/binterp.ml" 767 28217 28249 "lib/binterp.ml" 767 28217 28250
 type(
   BL.Canonizer.t list
 )
 ident(
-  int_ref l "lib/binterp.ml" 764 28044 28053 "lib/binterp.ml" 764 28044 28054
+  int_ref l "lib/binterp.ml" 766 28167 28176 "lib/binterp.ml" 766 28167 28177
 )
-"lib/binterp.ml" 765 28094 28128 "lib/binterp.ml" 765 28094 28131
+"lib/binterp.ml" 767 28217 28251 "lib/binterp.ml" 767 28217 28254
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref sep "lib/binterp.ml" 763 28008 28035 "lib/binterp.ml" 763 28008 28038
+  int_ref sep "lib/binterp.ml" 765 28131 28158 "lib/binterp.ml" 765 28131 28161
 )
-"lib/binterp.ml" 765 28094 28112 "lib/binterp.ml" 765 28094 28131
+"lib/binterp.ml" 767 28217 28235 "lib/binterp.ml" 767 28217 28254
 call(
   stack
 )
 type(
   BL.Canonizer.t
 )
-"lib/binterp.ml" 765 28094 28099 "lib/binterp.ml" 765 28094 28132
+"lib/binterp.ml" 767 28217 28222 "lib/binterp.ml" 767 28217 28255
 type(
   V.t
 )
-"lib/binterp.ml" 764 28044 28049 "lib/binterp.ml" 765 28094 28132
+"lib/binterp.ml" 766 28167 28172 "lib/binterp.ml" 767 28217 28255
 type(
   V.t
 )
-"lib/binterp.ml" 766 28133 28138 "lib/binterp.ml" 766 28133 28139
+"lib/binterp.ml" 768 28256 28261 "lib/binterp.ml" 768 28256 28262
 type(
   V.t
 )
-"lib/binterp.ml" 766 28133 28143 "lib/binterp.ml" 766 28133 28151
+"lib/binterp.ml" 768 28256 28266 "lib/binterp.ml" 768 28256 28274
 type(
   string -> V.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 766 28133 28152 "lib/binterp.ml" 766 28133 28178
+"lib/binterp.ml" 768 28256 28275 "lib/binterp.ml" 768 28256 28301
 type(
   string
 )
-"lib/binterp.ml" 766 28133 28143 "lib/binterp.ml" 766 28133 28178
+"lib/binterp.ml" 768 28256 28266 "lib/binterp.ml" 768 28256 28301
 call(
   tail
 )
 type(
   V.t
 )
-"lib/binterp.ml" 762 27992 27995 "lib/binterp.ml" 766 28133 28178
+"lib/binterp.ml" 764 28115 28118 "lib/binterp.ml" 768 28256 28301
 type(
   V.t
 )
 type(
   V.t
 )
-"lib/binterp.ml" 767 28182 28188 "lib/binterp.ml" 767 28182 28190
+"lib/binterp.ml" 769 28305 28311 "lib/binterp.ml" 769 28305 28313
 type(
   Bsyntax.sort
 )
 ident(
-  def so "lib/binterp.ml" 768 28244 28246 "lib/binterp.ml" 768 28244 28321
+  def so "lib/binterp.ml" 770 28367 28369 "lib/binterp.ml" 770 28367 28444
 )
-"lib/binterp.ml" 767 28182 28209 "lib/binterp.ml" 767 28182 28219
+"lib/binterp.ml" 769 28305 28332 "lib/binterp.ml" 769 28305 28342
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 767 28182 28208 "lib/binterp.ml" 767 28182 28220
+"lib/binterp.ml" 769 28305 28331 "lib/binterp.ml" 769 28305 28343
 type(
   Bsyntax.sort list
 )
-"lib/binterp.ml" 767 28182 28222 "lib/binterp.ml" 767 28182 28226
+"lib/binterp.ml" 769 28305 28345 "lib/binterp.ml" 769 28305 28349
 type(
   Bident.Qid.t
 )
 ident(
   int_ref list "lib/binterp.ml" 543 18489 18494 "lib/binterp.ml" 543 18489 18498
 )
-"lib/binterp.ml" 767 28182 28202 "lib/binterp.ml" 767 28182 28227
+"lib/binterp.ml" 769 28305 28325 "lib/binterp.ml" 769 28305 28350
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 767 28182 28229 "lib/binterp.ml" 767 28182 28239
+"lib/binterp.ml" 769 28305 28352 "lib/binterp.ml" 769 28305 28362
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 767 28182 28193 "lib/binterp.ml" 767 28182 28240
+"lib/binterp.ml" 769 28305 28316 "lib/binterp.ml" 769 28305 28363
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 768 28244 28267 "lib/binterp.ml" 768 28244 28272
+"lib/binterp.ml" 770 28367 28390 "lib/binterp.ml" 770 28367 28395
 type(
   Info.t -> string -> Bident.Id.t
 )
 ident(
   ext_ref Bident.Id.mk
 )
-"lib/binterp.ml" 768 28244 28273 "lib/binterp.ml" 768 28244 28277
+"lib/binterp.ml" 770 28367 28396 "lib/binterp.ml" 770 28367 28400
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 768 28244 28278 "lib/binterp.ml" 768 28244 28284
+"lib/binterp.ml" 770 28367 28401 "lib/binterp.ml" 770 28367 28407
 type(
   string
 )
-"lib/binterp.ml" 768 28244 28266 "lib/binterp.ml" 768 28244 28285
+"lib/binterp.ml" 770 28367 28389 "lib/binterp.ml" 770 28367 28408
 call(
   stack
 )
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 768 28244 28287 "lib/binterp.ml" 768 28244 28289
+"lib/binterp.ml" 770 28367 28410 "lib/binterp.ml" 770 28367 28412
 type(
   Bsyntax.sort
 )
 ident(
-  int_ref so "lib/binterp.ml" 767 28182 28188 "lib/binterp.ml" 767 28182 28190
+  int_ref so "lib/binterp.ml" 769 28305 28311 "lib/binterp.ml" 769 28305 28313
 )
-"lib/binterp.ml" 768 28244 28291 "lib/binterp.ml" 768 28244 28301
+"lib/binterp.ml" 770 28367 28414 "lib/binterp.ml" 770 28367 28424
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 768 28244 28254 "lib/binterp.ml" 768 28244 28303
+"lib/binterp.ml" 770 28367 28377 "lib/binterp.ml" 770 28367 28426
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 768 28244 28247 "lib/binterp.ml" 768 28244 28303
+"lib/binterp.ml" 770 28367 28370 "lib/binterp.ml" 770 28367 28426
 type(
   G.rs
 )
-"lib/binterp.ml" 768 28244 28312 "lib/binterp.ml" 768 28244 28316
+"lib/binterp.ml" 770 28367 28435 "lib/binterp.ml" 770 28367 28439
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 768 28244 28318 "lib/binterp.ml" 768 28244 28319
+"lib/binterp.ml" 770 28367 28441 "lib/binterp.ml" 770 28367 28442
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  int_ref g "lib/binterp.ml" 761 27928 27934 "lib/binterp.ml" 761 27928 27935
+  int_ref g "lib/binterp.ml" 763 28051 28057 "lib/binterp.ml" 763 28051 28058
 )
-"lib/binterp.ml" 768 28244 28305 "lib/binterp.ml" 768 28244 28320
+"lib/binterp.ml" 770 28367 28428 "lib/binterp.ml" 770 28367 28443
 type(
   V.t
 )
-"lib/binterp.ml" 768 28244 28246 "lib/binterp.ml" 768 28244 28321
+"lib/binterp.ml" 770 28367 28369 "lib/binterp.ml" 770 28367 28444
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 767 28182 28184 "lib/binterp.ml" 768 28244 28321
+"lib/binterp.ml" 769 28305 28307 "lib/binterp.ml" 770 28367 28444
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 761 27928 27930 "lib/binterp.ml" 768 28244 28321
+"lib/binterp.ml" 763 28051 28053 "lib/binterp.ml" 770 28367 28444
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 755 27685 27687 "lib/binterp.ml" 768 28244 28321
+"lib/binterp.ml" 757 27808 27810 "lib/binterp.ml" 770 28367 28444
 type(
   G.rs * V.t
 )
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 770 28324 28329 "lib/binterp.ml" 770 28324 28342
+"lib/binterp.ml" 772 28447 28452 "lib/binterp.ml" 772 28447 28465
 type(
   G.rs * V.t
 )
 ident(
-  def get_synth_can "lib/binterp.ml" 798 29685 29738 "lib/binterp.ml" 800 29741 29744
+  def get_synth_can "lib/binterp.ml" 800 29808 29861 "lib/binterp.ml" 802 29864 29867
 )
-"lib/binterp.ml" 771 28358 28364 "lib/binterp.ml" 771 28358 28366
+"lib/binterp.ml" 773 28481 28487 "lib/binterp.ml" 773 28481 28489
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  def f1 "lib/binterp.ml" 794 29506 29508 "lib/binterp.ml" 798 29685 29738
+  def f1 "lib/binterp.ml" 796 29629 29631 "lib/binterp.ml" 800 29808 29861
 )
-"lib/binterp.ml" 771 28358 28369 "lib/binterp.ml" 771 28358 28370
+"lib/binterp.ml" 773 28481 28492 "lib/binterp.ml" 773 28481 28493
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 771 28358 28406 "lib/binterp.ml" 771 28358 28407
+"lib/binterp.ml" 773 28481 28529 "lib/binterp.ml" 773 28481 28530
 type(
   V.t
 )
 ident(
-  def v "lib/binterp.ml" 771 28358 28415 "lib/binterp.ml" 793 29440 29502
+  def v "lib/binterp.ml" 773 28481 28538 "lib/binterp.ml" 795 29563 29625
 )
-"lib/binterp.ml" 772 28423 28432 "lib/binterp.ml" 772 28423 28433
+"lib/binterp.ml" 774 28546 28555 "lib/binterp.ml" 774 28546 28556
 type(
   V.t
 )
 ident(
-  int_ref v "lib/binterp.ml" 771 28358 28406 "lib/binterp.ml" 771 28358 28407
+  int_ref v "lib/binterp.ml" 773 28481 28529 "lib/binterp.ml" 773 28481 28530
 )
-"lib/binterp.ml" 773 28439 28451 "lib/binterp.ml" 773 28439 28452
+"lib/binterp.ml" 775 28562 28574 "lib/binterp.ml" 775 28562 28575
 type(
   Info.t
 )
-"lib/binterp.ml" 773 28439 28454 "lib/binterp.ml" 773 28439 28456
+"lib/binterp.ml" 775 28562 28577 "lib/binterp.ml" 775 28562 28579
 type(
   Blenses.Canonizer.t
 )
 ident(
-  def c1 "lib/binterp.ml" 774 28461 28466 "lib/binterp.ml" 792 29416 29439
+  def c1 "lib/binterp.ml" 776 28584 28589 "lib/binterp.ml" 794 29539 29562
 )
-"lib/binterp.ml" 773 28439 28444 "lib/binterp.ml" 773 28439 28457
+"lib/binterp.ml" 775 28562 28567 "lib/binterp.ml" 775 28562 28580
 type(
   V.t
 )
-"lib/binterp.ml" 774 28461 28471 "lib/binterp.ml" 774 28461 28473
+"lib/binterp.ml" 776 28584 28594 "lib/binterp.ml" 776 28584 28596
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  def f2 "lib/binterp.ml" 792 29416 29422 "lib/binterp.ml" 792 29416 29438
+  def f2 "lib/binterp.ml" 794 29539 29545 "lib/binterp.ml" 794 29539 29561
 )
-"lib/binterp.ml" 774 28461 28476 "lib/binterp.ml" 774 28461 28477
+"lib/binterp.ml" 776 28584 28599 "lib/binterp.ml" 776 28584 28600
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 774 28461 28513 "lib/binterp.ml" 774 28461 28514
+"lib/binterp.ml" 776 28584 28636 "lib/binterp.ml" 776 28584 28637
 type(
   V.t
 )
 ident(
-  def v "lib/binterp.ml" 774 28461 28522 "lib/binterp.ml" 791 29346 29412
+  def v "lib/binterp.ml" 776 28584 28645 "lib/binterp.ml" 793 29469 29535
 )
-"lib/binterp.ml" 775 28530 28543 "lib/binterp.ml" 775 28530 28544
+"lib/binterp.ml" 777 28653 28666 "lib/binterp.ml" 777 28653 28667
 type(
   V.t
 )
 ident(
-  int_ref v "lib/binterp.ml" 774 28461 28513 "lib/binterp.ml" 774 28461 28514
+  int_ref v "lib/binterp.ml" 776 28584 28636 "lib/binterp.ml" 776 28584 28637
 )
-"lib/binterp.ml" 776 28550 28566 "lib/binterp.ml" 776 28550 28567
+"lib/binterp.ml" 778 28673 28689 "lib/binterp.ml" 778 28673 28690
 type(
   Info.t
 )
-"lib/binterp.ml" 776 28550 28569 "lib/binterp.ml" 776 28550 28571
+"lib/binterp.ml" 778 28673 28692 "lib/binterp.ml" 778 28673 28694
 type(
   Blenses.Canonizer.t
 )
 ident(
-  def c2 "lib/binterp.ml" 777 28576 28585 "lib/binterp.ml" 790 29318 29345
+  def c2 "lib/binterp.ml" 779 28699 28708 "lib/binterp.ml" 792 29441 29468
 )
-"lib/binterp.ml" 776 28550 28559 "lib/binterp.ml" 776 28550 28572
+"lib/binterp.ml" 778 28673 28682 "lib/binterp.ml" 778 28673 28695
 type(
   V.t
 )
-"lib/binterp.ml" 777 28576 28590 "lib/binterp.ml" 777 28576 28592
+"lib/binterp.ml" 779 28699 28713 "lib/binterp.ml" 779 28699 28715
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  def f3 "lib/binterp.ml" 790 29318 29328 "lib/binterp.ml" 790 29318 29344
+  def f3 "lib/binterp.ml" 792 29441 29451 "lib/binterp.ml" 792 29441 29467
 )
-"lib/binterp.ml" 777 28576 28595 "lib/binterp.ml" 777 28576 28596
+"lib/binterp.ml" 779 28699 28718 "lib/binterp.ml" 779 28699 28719
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 777 28576 28632 "lib/binterp.ml" 777 28576 28633
+"lib/binterp.ml" 779 28699 28755 "lib/binterp.ml" 779 28699 28756
 type(
   V.t
 )
 ident(
-  def l "lib/binterp.ml" 777 28576 28641 "lib/binterp.ml" 789 29244 29314
+  def l "lib/binterp.ml" 779 28699 28764 "lib/binterp.ml" 791 29367 29437
 )
-"lib/binterp.ml" 778 28649 28666 "lib/binterp.ml" 778 28649 28667
+"lib/binterp.ml" 780 28772 28789 "lib/binterp.ml" 780 28772 28790
 type(
   V.t
 )
 ident(
-  int_ref l "lib/binterp.ml" 777 28576 28632 "lib/binterp.ml" 777 28576 28633
+  int_ref l "lib/binterp.ml" 779 28699 28755 "lib/binterp.ml" 779 28699 28756
 )
-"lib/binterp.ml" 779 28673 28693 "lib/binterp.ml" 779 28673 28694
+"lib/binterp.ml" 781 28796 28816 "lib/binterp.ml" 781 28796 28817
 type(
   Info.t
 )
-"lib/binterp.ml" 779 28673 28696 "lib/binterp.ml" 779 28673 28697
+"lib/binterp.ml" 781 28796 28819 "lib/binterp.ml" 781 28796 28820
 type(
   Bident.Qid.t
 )
-"lib/binterp.ml" 779 28673 28699 "lib/binterp.ml" 779 28673 28700
+"lib/binterp.ml" 781 28796 28822 "lib/binterp.ml" 781 28796 28823
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 779 28673 28702 "lib/binterp.ml" 779 28673 28703
+"lib/binterp.ml" 781 28796 28825 "lib/binterp.ml" 781 28796 28826
 type(
   V.t option
 )
-"lib/binterp.ml" 779 28673 28686 "lib/binterp.ml" 779 28673 28704
+"lib/binterp.ml" 781 28796 28809 "lib/binterp.ml" 781 28796 28827
 type(
   V.t
 )
-"lib/binterp.ml" 780 28708 28725 "lib/binterp.ml" 780 28708 28727
+"lib/binterp.ml" 782 28831 28848 "lib/binterp.ml" 782 28831 28850
 type(
   L.regex
 )
 ident(
-  def s1 "lib/binterp.ml" 782 28836 28849 "lib/binterp.ml" 788 29185 29243
+  def s1 "lib/binterp.ml" 784 28959 28972 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 780 28708 28729 "lib/binterp.ml" 780 28708 28731
+"lib/binterp.ml" 782 28831 28852 "lib/binterp.ml" 782 28831 28854
 type(
   L.regex
 )
 ident(
-  def s2 "lib/binterp.ml" 782 28836 28849 "lib/binterp.ml" 788 29185 29243
+  def s2 "lib/binterp.ml" 784 28959 28972 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 780 28708 28725 "lib/binterp.ml" 780 28708 28731
+"lib/binterp.ml" 782 28831 28848 "lib/binterp.ml" 782 28831 28854
 type(
   L.regex * L.regex
 )
-"lib/binterp.ml" 780 28708 28734 "lib/binterp.ml" 780 28708 28742
+"lib/binterp.ml" 782 28831 28857 "lib/binterp.ml" 782 28831 28865
 type(
   Brx.t -> L.regex
 )
 ident(
   int_ref brxToLrx "lib/binterp.ml" 577 19961 19970 "lib/binterp.ml" 577 19961 19978
 )
-"lib/binterp.ml" 780 28708 28744 "lib/binterp.ml" 780 28708 28771
+"lib/binterp.ml" 782 28831 28867 "lib/binterp.ml" 782 28831 28894
 type(
   BL.Canonizer.t -> Brx.t
 )
 ident(
   ext_ref BL.Canonizer.canonized_type
 )
-"lib/binterp.ml" 780 28708 28772 "lib/binterp.ml" 780 28708 28774
+"lib/binterp.ml" 782 28831 28895 "lib/binterp.ml" 782 28831 28897
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref c1 "lib/binterp.ml" 773 28439 28454 "lib/binterp.ml" 773 28439 28456
+  int_ref c1 "lib/binterp.ml" 775 28562 28577 "lib/binterp.ml" 775 28562 28579
 )
-"lib/binterp.ml" 780 28708 28743 "lib/binterp.ml" 780 28708 28775
+"lib/binterp.ml" 782 28831 28866 "lib/binterp.ml" 782 28831 28898
 call(
   stack
 )
 type(
   Brx.t
 )
-"lib/binterp.ml" 780 28708 28734 "lib/binterp.ml" 780 28708 28775
+"lib/binterp.ml" 782 28831 28857 "lib/binterp.ml" 782 28831 28898
 call(
   stack
 )
 type(
   L.regex
 )
-"lib/binterp.ml" 781 28777 28791 "lib/binterp.ml" 781 28777 28799
+"lib/binterp.ml" 783 28900 28914 "lib/binterp.ml" 783 28900 28922
 type(
   Brx.t -> L.regex
 )
 ident(
   int_ref brxToLrx "lib/binterp.ml" 577 19961 19970 "lib/binterp.ml" 577 19961 19978
 )
-"lib/binterp.ml" 781 28777 28801 "lib/binterp.ml" 781 28777 28828
+"lib/binterp.ml" 783 28900 28924 "lib/binterp.ml" 783 28900 28951
 type(
   BL.Canonizer.t -> Brx.t
 )
 ident(
   ext_ref BL.Canonizer.canonized_type
 )
-"lib/binterp.ml" 781 28777 28829 "lib/binterp.ml" 781 28777 28831
+"lib/binterp.ml" 783 28900 28952 "lib/binterp.ml" 783 28900 28954
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref c2 "lib/binterp.ml" 776 28550 28569 "lib/binterp.ml" 776 28550 28571
+  int_ref c2 "lib/binterp.ml" 778 28673 28692 "lib/binterp.ml" 778 28673 28694
 )
-"lib/binterp.ml" 781 28777 28800 "lib/binterp.ml" 781 28777 28832
+"lib/binterp.ml" 783 28900 28923 "lib/binterp.ml" 783 28900 28955
 call(
   stack
 )
 type(
   Brx.t
 )
-"lib/binterp.ml" 781 28777 28791 "lib/binterp.ml" 781 28777 28832
+"lib/binterp.ml" 783 28900 28914 "lib/binterp.ml" 783 28900 28955
 call(
   stack
 )
 type(
   L.regex
 )
-"lib/binterp.ml" 780 28708 28734 "lib/binterp.ml" 781 28777 28832
+"lib/binterp.ml" 782 28831 28857 "lib/binterp.ml" 783 28900 28955
 type(
   L.regex * L.regex
 )
-"lib/binterp.ml" 782 28836 28853 "lib/binterp.ml" 782 28836 28854
+"lib/binterp.ml" 784 28959 28976 "lib/binterp.ml" 784 28959 28977
 type(
   (string * string) list
 )
 ident(
-  def l "lib/binterp.ml" 783 28885 28898 "lib/binterp.ml" 788 29185 29243
+  def l "lib/binterp.ml" 785 29008 29021 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 782 28836 28857 "lib/binterp.ml" 782 28836 28867
+"lib/binterp.ml" 784 28959 28980 "lib/binterp.ml" 784 28959 28990
 type(
   V.t list -> (string * string) list
 )
 ident(
   int_ref getStrings "lib/binterp.ml" 590 20536 20541 "lib/binterp.ml" 590 20536 20551
 )
-"lib/binterp.ml" 782 28836 28869 "lib/binterp.ml" 782 28836 28875
+"lib/binterp.ml" 784 28959 28992 "lib/binterp.ml" 784 28959 28998
 type(
   V.t -> V.t list -> V.t list
 )
 ident(
   int_ref toList "lib/binterp.ml" 571 19735 19744 "lib/binterp.ml" 571 19735 19750
 )
-"lib/binterp.ml" 782 28836 28876 "lib/binterp.ml" 782 28836 28877
+"lib/binterp.ml" 784 28959 28999 "lib/binterp.ml" 784 28959 29000
 type(
   V.t
 )
 ident(
-  int_ref l "lib/binterp.ml" 777 28576 28632 "lib/binterp.ml" 777 28576 28633
+  int_ref l "lib/binterp.ml" 779 28699 28755 "lib/binterp.ml" 779 28699 28756
 )
-"lib/binterp.ml" 782 28836 28878 "lib/binterp.ml" 782 28836 28880
+"lib/binterp.ml" 784 28959 29001 "lib/binterp.ml" 784 28959 29003
 type(
   V.t list
 )
-"lib/binterp.ml" 782 28836 28868 "lib/binterp.ml" 782 28836 28881
+"lib/binterp.ml" 784 28959 28991 "lib/binterp.ml" 784 28959 29004
 call(
   stack
 )
 type(
   V.t list
 )
-"lib/binterp.ml" 782 28836 28857 "lib/binterp.ml" 782 28836 28881
+"lib/binterp.ml" 784 28959 28980 "lib/binterp.ml" 784 28959 29004
 call(
   stack
 )
 type(
   (string * string) list
 )
-"lib/binterp.ml" 783 28885 28902 "lib/binterp.ml" 783 28885 28906
+"lib/binterp.ml" 785 29008 29025 "lib/binterp.ml" 785 29008 29029
 type(
   Lang.lens option
 )
 ident(
-  def lens "lib/binterp.ml" 784 28966 28979 "lib/binterp.ml" 788 29185 29243
+  def lens "lib/binterp.ml" 786 29089 29102 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 783 28885 28909 "lib/binterp.ml" 783 28885 28917
+"lib/binterp.ml" 785 29008 29032 "lib/binterp.ml" 785 29008 29040
 type(
   Regexcontext.RegexContext.t ->
   Lenscontext.LensContext.t ->
@@ -22208,1205 +22339,1128 @@ type(
 ident(
   ext_ref Gen.gen_lens
 )
-"lib/binterp.ml" 783 28885 28918 "lib/binterp.ml" 783 28885 28936
+"lib/binterp.ml" 785 29008 29041 "lib/binterp.ml" 785 29008 29059
 type(
   Regexcontext.RegexContext.t
 )
 ident(
   ext_ref Regexcontext.RegexContext.empty
 )
-"lib/binterp.ml" 783 28885 28937 "lib/binterp.ml" 783 28885 28954
+"lib/binterp.ml" 785 29008 29060 "lib/binterp.ml" 785 29008 29077
 type(
   Lenscontext.LensContext.t
 )
 ident(
   ext_ref Lenscontext.LensContext.empty
 )
-"lib/binterp.ml" 783 28885 28955 "lib/binterp.ml" 783 28885 28957
+"lib/binterp.ml" 785 29008 29078 "lib/binterp.ml" 785 29008 29080
 type(
   L.regex
 )
 ident(
-  int_ref s1 "lib/binterp.ml" 780 28708 28725 "lib/binterp.ml" 780 28708 28727
+  int_ref s1 "lib/binterp.ml" 782 28831 28848 "lib/binterp.ml" 782 28831 28850
 )
-"lib/binterp.ml" 783 28885 28958 "lib/binterp.ml" 783 28885 28960
+"lib/binterp.ml" 785 29008 29081 "lib/binterp.ml" 785 29008 29083
 type(
   L.regex
 )
 ident(
-  int_ref s2 "lib/binterp.ml" 780 28708 28729 "lib/binterp.ml" 780 28708 28731
+  int_ref s2 "lib/binterp.ml" 782 28831 28852 "lib/binterp.ml" 782 28831 28854
 )
-"lib/binterp.ml" 783 28885 28961 "lib/binterp.ml" 783 28885 28962
+"lib/binterp.ml" 785 29008 29084 "lib/binterp.ml" 785 29008 29085
 type(
   Lang.examples
 )
 ident(
-  int_ref l "lib/binterp.ml" 782 28836 28853 "lib/binterp.ml" 782 28836 28854
+  int_ref l "lib/binterp.ml" 784 28959 28976 "lib/binterp.ml" 784 28959 28977
 )
-"lib/binterp.ml" 783 28885 28909 "lib/binterp.ml" 783 28885 28962
+"lib/binterp.ml" 785 29008 29032 "lib/binterp.ml" 785 29008 29085
 call(
   stack
 )
 type(
   Lang.lens option
 )
-"lib/binterp.ml" 784 28966 28983 "lib/binterp.ml" 784 28966 28987
+"lib/binterp.ml" 786 29089 29106 "lib/binterp.ml" 786 29089 29110
 type(
   BL.MLens.t
 )
 ident(
-  def lens "lib/binterp.ml" 787 29124 29137 "lib/binterp.ml" 788 29185 29243
+  def lens "lib/binterp.ml" 789 29247 29260 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 784 28966 28996 "lib/binterp.ml" 784 28966 29000
+"lib/binterp.ml" 786 29089 29119 "lib/binterp.ml" 786 29089 29123
 type(
   Lang.lens option
 )
 ident(
-  int_ref lens "lib/binterp.ml" 783 28885 28902 "lib/binterp.ml" 783 28885 28906
+  int_ref lens "lib/binterp.ml" 785 29008 29025 "lib/binterp.ml" 785 29008 29029
 )
-"lib/binterp.ml" 785 29006 29022 "lib/binterp.ml" 785 29006 29026
+"lib/binterp.ml" 787 29129 29145 "lib/binterp.ml" 787 29129 29149
 type(
   Lang.lens option
 )
-"lib/binterp.ml" 785 29006 29030 "lib/binterp.ml" 785 29006 29038
+"lib/binterp.ml" 787 29129 29153 "lib/binterp.ml" 787 29129 29161
 type(
   string -> BL.MLens.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 785 29006 29039 "lib/binterp.ml" 785 29006 29073
+"lib/binterp.ml" 787 29129 29162 "lib/binterp.ml" 787 29129 29196
 type(
   string
 )
-"lib/binterp.ml" 785 29006 29030 "lib/binterp.ml" 785 29006 29073
+"lib/binterp.ml" 787 29129 29153 "lib/binterp.ml" 787 29129 29196
 call(
   stack
 )
 type(
   BL.MLens.t
 )
-"lib/binterp.ml" 786 29074 29095 "lib/binterp.ml" 786 29074 29099
+"lib/binterp.ml" 788 29197 29218 "lib/binterp.ml" 788 29197 29222
 type(
   Lang.lens
 )
 ident(
-  def lens "lib/binterp.ml" 786 29074 29103 "lib/binterp.ml" 786 29074 29120
+  def lens "lib/binterp.ml" 788 29197 29226 "lib/binterp.ml" 788 29197 29243
 )
-"lib/binterp.ml" 786 29074 29090 "lib/binterp.ml" 786 29074 29099
+"lib/binterp.ml" 788 29197 29213 "lib/binterp.ml" 788 29197 29222
 type(
   Lang.lens option
 )
-"lib/binterp.ml" 786 29074 29103 "lib/binterp.ml" 786 29074 29115
+"lib/binterp.ml" 788 29197 29226 "lib/binterp.ml" 788 29197 29238
 type(
   L.lens -> BL.MLens.t
 )
 ident(
   int_ref sLensTobLens "lib/binterp.ml" 554 18912 18917 "lib/binterp.ml" 554 18912 18929
 )
-"lib/binterp.ml" 786 29074 29116 "lib/binterp.ml" 786 29074 29120
+"lib/binterp.ml" 788 29197 29239 "lib/binterp.ml" 788 29197 29243
 type(
   L.lens
 )
 ident(
-  int_ref lens "lib/binterp.ml" 786 29074 29095 "lib/binterp.ml" 786 29074 29099
+  int_ref lens "lib/binterp.ml" 788 29197 29218 "lib/binterp.ml" 788 29197 29222
 )
-"lib/binterp.ml" 786 29074 29103 "lib/binterp.ml" 786 29074 29120
+"lib/binterp.ml" 788 29197 29226 "lib/binterp.ml" 788 29197 29243
 call(
   stack
 )
 type(
   BL.MLens.t
 )
-"lib/binterp.ml" 784 28966 28990 "lib/binterp.ml" 786 29074 29120
+"lib/binterp.ml" 786 29089 29113 "lib/binterp.ml" 788 29197 29243
 type(
   BL.MLens.t
 )
-"lib/binterp.ml" 787 29124 29141 "lib/binterp.ml" 787 29124 29145
+"lib/binterp.ml" 789 29247 29264 "lib/binterp.ml" 789 29247 29268
 type(
   BL.MLens.t
 )
 ident(
-  def lens "lib/binterp.ml" 788 29185 29198 "lib/binterp.ml" 788 29185 29243
+  def lens "lib/binterp.ml" 790 29308 29321 "lib/binterp.ml" 790 29308 29366
 )
-"lib/binterp.ml" 787 29124 29149 "lib/binterp.ml" 787 29124 29167
+"lib/binterp.ml" 789 29247 29272 "lib/binterp.ml" 789 29247 29290
 type(
   Info.t -> BL.Canonizer.t -> BL.MLens.t -> BL.MLens.t
 )
 ident(
   ext_ref BL.MLens.left_quot
 )
-"lib/binterp.ml" 787 29124 29168 "lib/binterp.ml" 787 29124 29172
+"lib/binterp.ml" 789 29247 29291 "lib/binterp.ml" 789 29247 29295
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 787 29124 29173 "lib/binterp.ml" 787 29124 29175
+"lib/binterp.ml" 789 29247 29296 "lib/binterp.ml" 789 29247 29298
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref c1 "lib/binterp.ml" 773 28439 28454 "lib/binterp.ml" 773 28439 28456
+  int_ref c1 "lib/binterp.ml" 775 28562 28577 "lib/binterp.ml" 775 28562 28579
 )
-"lib/binterp.ml" 787 29124 29176 "lib/binterp.ml" 787 29124 29180
+"lib/binterp.ml" 789 29247 29299 "lib/binterp.ml" 789 29247 29303
 type(
   BL.MLens.t
 )
 ident(
-  int_ref lens "lib/binterp.ml" 784 28966 28983 "lib/binterp.ml" 784 28966 28987
+  int_ref lens "lib/binterp.ml" 786 29089 29106 "lib/binterp.ml" 786 29089 29110
 )
-"lib/binterp.ml" 787 29124 29148 "lib/binterp.ml" 787 29124 29181
+"lib/binterp.ml" 789 29247 29271 "lib/binterp.ml" 789 29247 29304
 call(
   stack
 )
 type(
   BL.MLens.t
 )
-"lib/binterp.ml" 788 29185 29204 "lib/binterp.ml" 788 29185 29208
+"lib/binterp.ml" 790 29308 29327 "lib/binterp.ml" 790 29308 29331
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 788 29185 29210 "lib/binterp.ml" 788 29185 29229
+"lib/binterp.ml" 790 29308 29333 "lib/binterp.ml" 790 29308 29352
 type(
   Info.t -> BL.MLens.t -> BL.Canonizer.t -> BL.MLens.t
 )
 ident(
   ext_ref BL.MLens.right_quot
 )
-"lib/binterp.ml" 788 29185 29230 "lib/binterp.ml" 788 29185 29234
+"lib/binterp.ml" 790 29308 29353 "lib/binterp.ml" 790 29308 29357
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 788 29185 29235 "lib/binterp.ml" 788 29185 29239
+"lib/binterp.ml" 790 29308 29358 "lib/binterp.ml" 790 29308 29362
 type(
   BL.MLens.t
 )
 ident(
-  int_ref lens "lib/binterp.ml" 787 29124 29141 "lib/binterp.ml" 787 29124 29145
+  int_ref lens "lib/binterp.ml" 789 29247 29264 "lib/binterp.ml" 789 29247 29268
 )
-"lib/binterp.ml" 788 29185 29240 "lib/binterp.ml" 788 29185 29242
+"lib/binterp.ml" 790 29308 29363 "lib/binterp.ml" 790 29308 29365
 type(
   BL.Canonizer.t
 )
 ident(
-  int_ref c2 "lib/binterp.ml" 776 28550 28569 "lib/binterp.ml" 776 28550 28571
+  int_ref c2 "lib/binterp.ml" 778 28673 28692 "lib/binterp.ml" 778 28673 28694
 )
-"lib/binterp.ml" 788 29185 29210 "lib/binterp.ml" 788 29185 29242
+"lib/binterp.ml" 790 29308 29333 "lib/binterp.ml" 790 29308 29365
 call(
   stack
 )
 type(
   BL.MLens.t
 )
-"lib/binterp.ml" 788 29185 29198 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 790 29308 29321 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 787 29124 29137 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 789 29247 29260 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 784 28966 28979 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 786 29089 29102 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 783 28885 28898 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 785 29008 29021 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 782 28836 28849 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 784 28959 28972 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 780 28708 28721 "lib/binterp.ml" 788 29185 29243
+"lib/binterp.ml" 782 28831 28844 "lib/binterp.ml" 790 29308 29366
 type(
   V.t
 )
-"lib/binterp.ml" 789 29244 29257 "lib/binterp.ml" 789 29244 29258
+"lib/binterp.ml" 791 29367 29380 "lib/binterp.ml" 791 29367 29381
 type(
   V.t
 )
-"lib/binterp.ml" 789 29244 29262 "lib/binterp.ml" 789 29244 29270
+"lib/binterp.ml" 791 29367 29385 "lib/binterp.ml" 791 29367 29393
 type(
   string -> V.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 789 29244 29271 "lib/binterp.ml" 789 29244 29314
+"lib/binterp.ml" 791 29367 29394 "lib/binterp.ml" 791 29367 29437
 type(
   string
 )
-"lib/binterp.ml" 789 29244 29262 "lib/binterp.ml" 789 29244 29314
+"lib/binterp.ml" 791 29367 29385 "lib/binterp.ml" 791 29367 29437
 call(
   tail
 )
 type(
   V.t
 )
-"lib/binterp.ml" 778 28649 28660 "lib/binterp.ml" 789 29244 29314
+"lib/binterp.ml" 780 28772 28783 "lib/binterp.ml" 791 29367 29437
 type(
   V.t
 )
 type(
   V.t
 )
-"lib/binterp.ml" 790 29318 29335 "lib/binterp.ml" 790 29318 29339
+"lib/binterp.ml" 792 29441 29458 "lib/binterp.ml" 792 29441 29462
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 790 29318 29341 "lib/binterp.ml" 790 29318 29343
+"lib/binterp.ml" 792 29441 29464 "lib/binterp.ml" 792 29441 29466
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  int_ref f3 "lib/binterp.ml" 777 28576 28590 "lib/binterp.ml" 777 28576 28592
+  int_ref f3 "lib/binterp.ml" 779 28699 28713 "lib/binterp.ml" 779 28699 28715
 )
-"lib/binterp.ml" 790 29318 29328 "lib/binterp.ml" 790 29318 29344
+"lib/binterp.ml" 792 29441 29451 "lib/binterp.ml" 792 29441 29467
 type(
   V.t
 )
-"lib/binterp.ml" 777 28576 28585 "lib/binterp.ml" 790 29318 29345
+"lib/binterp.ml" 779 28699 28708 "lib/binterp.ml" 792 29441 29468
 type(
   V.t
 )
-"lib/binterp.ml" 791 29346 29355 "lib/binterp.ml" 791 29346 29356
+"lib/binterp.ml" 793 29469 29478 "lib/binterp.ml" 793 29469 29479
 type(
   V.t
 )
-"lib/binterp.ml" 791 29346 29360 "lib/binterp.ml" 791 29346 29368
+"lib/binterp.ml" 793 29469 29483 "lib/binterp.ml" 793 29469 29491
 type(
   string -> V.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 791 29346 29369 "lib/binterp.ml" 791 29346 29412
+"lib/binterp.ml" 793 29469 29492 "lib/binterp.ml" 793 29469 29535
 type(
   string
 )
-"lib/binterp.ml" 791 29346 29360 "lib/binterp.ml" 791 29346 29412
+"lib/binterp.ml" 793 29469 29483 "lib/binterp.ml" 793 29469 29535
 call(
   tail
 )
 type(
   V.t
 )
-"lib/binterp.ml" 775 28530 28537 "lib/binterp.ml" 791 29346 29412
+"lib/binterp.ml" 777 28653 28660 "lib/binterp.ml" 793 29469 29535
 type(
   V.t
 )
 type(
   V.t
 )
-"lib/binterp.ml" 792 29416 29429 "lib/binterp.ml" 792 29416 29433
+"lib/binterp.ml" 794 29539 29552 "lib/binterp.ml" 794 29539 29556
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 792 29416 29435 "lib/binterp.ml" 792 29416 29437
+"lib/binterp.ml" 794 29539 29558 "lib/binterp.ml" 794 29539 29560
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  int_ref f2 "lib/binterp.ml" 774 28461 28471 "lib/binterp.ml" 774 28461 28473
+  int_ref f2 "lib/binterp.ml" 776 28584 28594 "lib/binterp.ml" 776 28584 28596
 )
-"lib/binterp.ml" 792 29416 29422 "lib/binterp.ml" 792 29416 29438
+"lib/binterp.ml" 794 29539 29545 "lib/binterp.ml" 794 29539 29561
 type(
   V.t
 )
-"lib/binterp.ml" 774 28461 28466 "lib/binterp.ml" 792 29416 29439
+"lib/binterp.ml" 776 28584 28589 "lib/binterp.ml" 794 29539 29562
 type(
   V.t
 )
-"lib/binterp.ml" 793 29440 29445 "lib/binterp.ml" 793 29440 29446
+"lib/binterp.ml" 795 29563 29568 "lib/binterp.ml" 795 29563 29569
 type(
   V.t
 )
-"lib/binterp.ml" 793 29440 29450 "lib/binterp.ml" 793 29440 29458
+"lib/binterp.ml" 795 29563 29573 "lib/binterp.ml" 795 29563 29581
 type(
   string -> V.t
 )
 ident(
   ext_ref Pervasives.failwith
 )
-"lib/binterp.ml" 793 29440 29459 "lib/binterp.ml" 793 29440 29502
+"lib/binterp.ml" 795 29563 29582 "lib/binterp.ml" 795 29563 29625
 type(
   string
 )
-"lib/binterp.ml" 793 29440 29450 "lib/binterp.ml" 793 29440 29502
+"lib/binterp.ml" 795 29563 29573 "lib/binterp.ml" 795 29563 29625
 call(
   tail
 )
 type(
   V.t
 )
-"lib/binterp.ml" 772 28423 28426 "lib/binterp.ml" 793 29440 29502
+"lib/binterp.ml" 774 28546 28549 "lib/binterp.ml" 795 29563 29625
 type(
   V.t
 )
 type(
   V.t
 )
-"lib/binterp.ml" 794 29506 29512 "lib/binterp.ml" 794 29506 29516
+"lib/binterp.ml" 796 29629 29635 "lib/binterp.ml" 796 29629 29639
 type(
   Bsyntax.sort
 )
 ident(
-  def sort "lib/binterp.ml" 798 29685 29707 "lib/binterp.ml" 798 29685 29738
+  def sort "lib/binterp.ml" 800 29808 29830 "lib/binterp.ml" 800 29808 29861
 )
-"lib/binterp.ml" 795 29519 29534 "lib/binterp.ml" 795 29519 29539
+"lib/binterp.ml" 797 29642 29657 "lib/binterp.ml" 797 29642 29662
 type(
   Info.t -> string -> Bident.Id.t
 )
 ident(
   ext_ref Bident.Id.mk
 )
-"lib/binterp.ml" 795 29519 29540 "lib/binterp.ml" 795 29519 29544
+"lib/binterp.ml" 797 29642 29663 "lib/binterp.ml" 797 29642 29667
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 795 29519 29545 "lib/binterp.ml" 795 29519 29547
+"lib/binterp.ml" 797 29642 29668 "lib/binterp.ml" 797 29642 29670
 type(
   string
 )
-"lib/binterp.ml" 795 29519 29533 "lib/binterp.ml" 795 29519 29548
+"lib/binterp.ml" 797 29642 29656 "lib/binterp.ml" 797 29642 29671
 call(
   stack
 )
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 795 29519 29550 "lib/binterp.ml" 795 29519 29560
+"lib/binterp.ml" 797 29642 29673 "lib/binterp.ml" 797 29642 29683
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 796 29562 29579 "lib/binterp.ml" 796 29562 29584
+"lib/binterp.ml" 798 29685 29702 "lib/binterp.ml" 798 29685 29707
 type(
   Info.t -> string -> Bident.Id.t
 )
 ident(
   ext_ref Bident.Id.mk
 )
-"lib/binterp.ml" 796 29562 29585 "lib/binterp.ml" 796 29562 29589
+"lib/binterp.ml" 798 29685 29708 "lib/binterp.ml" 798 29685 29712
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 796 29562 29590 "lib/binterp.ml" 796 29562 29592
+"lib/binterp.ml" 798 29685 29713 "lib/binterp.ml" 798 29685 29715
 type(
   string
 )
-"lib/binterp.ml" 796 29562 29578 "lib/binterp.ml" 796 29562 29593
+"lib/binterp.ml" 798 29685 29701 "lib/binterp.ml" 798 29685 29716
 call(
   stack
 )
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 796 29562 29595 "lib/binterp.ml" 796 29562 29605
+"lib/binterp.ml" 798 29685 29718 "lib/binterp.ml" 798 29685 29728
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 797 29607 29626 "lib/binterp.ml" 797 29607 29631
+"lib/binterp.ml" 799 29730 29749 "lib/binterp.ml" 799 29730 29754
 type(
   Info.t -> string -> Bident.Id.t
 )
 ident(
   ext_ref Bident.Id.mk
 )
-"lib/binterp.ml" 797 29607 29632 "lib/binterp.ml" 797 29607 29636
+"lib/binterp.ml" 799 29730 29755 "lib/binterp.ml" 799 29730 29759
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 797 29607 29637 "lib/binterp.ml" 797 29607 29639
+"lib/binterp.ml" 799 29730 29760 "lib/binterp.ml" 799 29730 29762
 type(
   string
 )
-"lib/binterp.ml" 797 29607 29625 "lib/binterp.ml" 797 29607 29640
+"lib/binterp.ml" 799 29730 29748 "lib/binterp.ml" 799 29730 29763
 call(
   stack
 )
 type(
   Bident.Id.t
 )
-"lib/binterp.ml" 797 29607 29658 "lib/binterp.ml" 797 29607 29665
+"lib/binterp.ml" 799 29730 29781 "lib/binterp.ml" 799 29730 29788
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 797 29607 29667 "lib/binterp.ml" 797 29607 29674
+"lib/binterp.ml" 799 29730 29790 "lib/binterp.ml" 799 29730 29797
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 797 29607 29649 "lib/binterp.ml" 797 29607 29675
+"lib/binterp.ml" 799 29730 29772 "lib/binterp.ml" 799 29730 29798
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 797 29607 29648 "lib/binterp.ml" 797 29607 29676
+"lib/binterp.ml" 799 29730 29771 "lib/binterp.ml" 799 29730 29799
 type(
   Bsyntax.sort list
 )
-"lib/binterp.ml" 797 29607 29678 "lib/binterp.ml" 797 29607 29682
+"lib/binterp.ml" 799 29730 29801 "lib/binterp.ml" 799 29730 29805
 type(
   Bident.Qid.t
 )
 ident(
   int_ref list "lib/binterp.ml" 543 18489 18494 "lib/binterp.ml" 543 18489 18498
 )
-"lib/binterp.ml" 797 29607 29642 "lib/binterp.ml" 797 29607 29683
+"lib/binterp.ml" 799 29730 29765 "lib/binterp.ml" 799 29730 29806
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 798 29685 29693 "lib/binterp.ml" 798 29685 29698
+"lib/binterp.ml" 800 29808 29816 "lib/binterp.ml" 800 29808 29821
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 797 29607 29613 "lib/binterp.ml" 798 29685 29700
+"lib/binterp.ml" 799 29730 29736 "lib/binterp.ml" 800 29808 29823
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 796 29562 29566 "lib/binterp.ml" 798 29685 29702
+"lib/binterp.ml" 798 29685 29689 "lib/binterp.ml" 800 29808 29825
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 795 29519 29522 "lib/binterp.ml" 798 29685 29703
+"lib/binterp.ml" 797 29642 29645 "lib/binterp.ml" 800 29808 29826
 type(
   Bsyntax.sort
 )
-"lib/binterp.ml" 798 29685 29715 "lib/binterp.ml" 798 29685 29719
+"lib/binterp.ml" 800 29808 29838 "lib/binterp.ml" 800 29808 29842
 type(
   Bsyntax.sort
 )
 ident(
-  int_ref sort "lib/binterp.ml" 794 29506 29512 "lib/binterp.ml" 794 29506 29516
+  int_ref sort "lib/binterp.ml" 796 29629 29635 "lib/binterp.ml" 796 29629 29639
 )
-"lib/binterp.ml" 798 29685 29708 "lib/binterp.ml" 798 29685 29719
+"lib/binterp.ml" 800 29808 29831 "lib/binterp.ml" 800 29808 29842
 type(
   G.rs
 )
-"lib/binterp.ml" 798 29685 29728 "lib/binterp.ml" 798 29685 29732
+"lib/binterp.ml" 800 29808 29851 "lib/binterp.ml" 800 29808 29855
 type(
   Info.t
 )
 ident(
   int_ref info "lib/binterp.ml" 537 18201 18206 "lib/binterp.ml" 537 18201 18210
 )
-"lib/binterp.ml" 798 29685 29734 "lib/binterp.ml" 798 29685 29736
+"lib/binterp.ml" 800 29808 29857 "lib/binterp.ml" 800 29808 29859
 type(
   ((unit -> V.t) -> unit) option -> V.t -> V.t
 )
 ident(
-  int_ref f1 "lib/binterp.ml" 771 28358 28364 "lib/binterp.ml" 771 28358 28366
+  int_ref f1 "lib/binterp.ml" 773 28481 28487 "lib/binterp.ml" 773 28481 28489
 )
-"lib/binterp.ml" 798 29685 29721 "lib/binterp.ml" 798 29685 29737
+"lib/binterp.ml" 800 29808 29844 "lib/binterp.ml" 800 29808 29860
 type(
   V.t
 )
-"lib/binterp.ml" 798 29685 29707 "lib/binterp.ml" 798 29685 29738
+"lib/binterp.ml" 800 29808 29830 "lib/binterp.ml" 800 29808 29861
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 794 29506 29508 "lib/binterp.ml" 798 29685 29738
+"lib/binterp.ml" 796 29629 29631 "lib/binterp.ml" 800 29808 29861
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 771 28358 28360 "lib/binterp.ml" 798 29685 29738
+"lib/binterp.ml" 773 28481 28483 "lib/binterp.ml" 800 29808 29861
 type(
   G.rs * V.t
 )
 type(
   G.rs * V.t
 )
-"lib/binterp.ml" 802 29746 29750 "lib/binterp.ml" 802 29746 29763
+"lib/binterp.ml" 804 29869 29873 "lib/binterp.ml" 804 29869 29886
 type(
   Bsyntax.modl -> unit
 )
 ident(
-  def interp_module "lib/binterp.ml" 833 31117 31137 "lib/binterp.ml" 1 0 -1
+  def interp_module "lib/binterp.ml" 835 31281 31301 "lib/binterp.ml" 1 0 -1
 )
-"lib/binterp.ml" 802 29746 29764 "lib/binterp.ml" 802 29746 29766
+"lib/binterp.ml" 804 29869 29887 "lib/binterp.ml" 804 29869 29889
 type(
   Bsyntax.modl
 )
 ident(
-  def m0 "lib/binterp.ml" 802 29746 29769 "lib/binterp.ml" 833 31117 31137
+  def m0 "lib/binterp.ml" 804 29869 29892 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 802 29746 29775 "lib/binterp.ml" 802 29746 29777
+"lib/binterp.ml" 804 29869 29898 "lib/binterp.ml" 804 29869 29900
 type(
   Bsyntax.modl
 )
 ident(
-  int_ref m0 "lib/binterp.ml" 802 29746 29764 "lib/binterp.ml" 802 29746 29766
+  int_ref m0 "lib/binterp.ml" 804 29869 29887 "lib/binterp.ml" 804 29869 29889
 )
-"lib/binterp.ml" 803 29783 29790 "lib/binterp.ml" 803 29783 29791
+"lib/binterp.ml" 805 29906 29913 "lib/binterp.ml" 805 29906 29914
 type(
   Info.t
 )
 ident(
-  def i "lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 833 31117 31137
+  def i "lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 803 29783 29793 "lib/binterp.ml" 803 29783 29794
+"lib/binterp.ml" 805 29906 29916 "lib/binterp.ml" 805 29906 29917
 type(
   Bident.Id.t
 )
 ident(
-  def m "lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 833 31117 31137
+  def m "lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 803 29783 29796 "lib/binterp.ml" 803 29783 29800
+"lib/binterp.ml" 805 29906 29919 "lib/binterp.ml" 805 29906 29923
 type(
   Bident.Qid.t list
 )
 ident(
-  def nctx "lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 833 31117 31137
+  def nctx "lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 803 29783 29802 "lib/binterp.ml" 803 29783 29804
+"lib/binterp.ml" 805 29906 29925 "lib/binterp.ml" 805 29906 29927
 type(
   Bsyntax.decl list
 )
 ident(
-  def ds "lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 833 31117 31137
+  def ds "lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 803 29783 29786 "lib/binterp.ml" 803 29783 29805
+"lib/binterp.ml" 805 29906 29909 "lib/binterp.ml" 805 29906 29928
 type(
   Bsyntax.modl
 )
-"lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 804 29809 29814
+"lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 806 29932 29937
 type(
   int ref
 )
 ident(
   int_ref pc "lib/binterp.ml" 94 4167 4171 "lib/binterp.ml" 94 4167 4173
 )
-"lib/binterp.ml" 804 29809 29815 "lib/binterp.ml" 804 29809 29817
+"lib/binterp.ml" 806 29932 29938 "lib/binterp.ml" 806 29932 29940
 type(
   int ref -> int -> unit
 )
 ident(
   ext_ref Pervasives.( := )
 )
-"lib/binterp.ml" 804 29809 29818 "lib/binterp.ml" 804 29809 29819
+"lib/binterp.ml" 806 29932 29941 "lib/binterp.ml" 806 29932 29942
 type(
   int
 )
-"lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 804 29809 29819
+"lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 806 29932 29942
 type(
   unit
 )
-"lib/binterp.ml" 805 29821 29824 "lib/binterp.ml" 805 29821 29826
+"lib/binterp.ml" 807 29944 29947 "lib/binterp.ml" 807 29944 29949
 type(
   int ref
 )
 ident(
   int_ref ic "lib/binterp.ml" 95 4182 4186 "lib/binterp.ml" 95 4182 4188
 )
-"lib/binterp.ml" 805 29821 29827 "lib/binterp.ml" 805 29821 29829
+"lib/binterp.ml" 807 29944 29950 "lib/binterp.ml" 807 29944 29952
 type(
   int ref -> int -> unit
 )
 ident(
   ext_ref Pervasives.( := )
 )
-"lib/binterp.ml" 805 29821 29830 "lib/binterp.ml" 805 29821 29831
+"lib/binterp.ml" 807 29944 29953 "lib/binterp.ml" 807 29944 29954
 type(
   int
 )
-"lib/binterp.ml" 805 29821 29824 "lib/binterp.ml" 805 29821 29831
+"lib/binterp.ml" 807 29944 29947 "lib/binterp.ml" 807 29944 29954
 type(
   unit
 )
-"lib/binterp.ml" 806 29833 29836 "lib/binterp.ml" 806 29833 29838
+"lib/binterp.ml" 808 29956 29959 "lib/binterp.ml" 808 29956 29961
 type(
   int ref
 )
 ident(
   int_ref mc "lib/binterp.ml" 96 4197 4201 "lib/binterp.ml" 96 4197 4203
 )
-"lib/binterp.ml" 806 29833 29839 "lib/binterp.ml" 806 29833 29841
+"lib/binterp.ml" 808 29956 29962 "lib/binterp.ml" 808 29956 29964
 type(
   int ref -> int -> unit
 )
 ident(
   ext_ref Pervasives.( := )
 )
-"lib/binterp.ml" 806 29833 29842 "lib/binterp.ml" 806 29833 29843
+"lib/binterp.ml" 808 29956 29965 "lib/binterp.ml" 808 29956 29966
 type(
   int
 )
-"lib/binterp.ml" 806 29833 29836 "lib/binterp.ml" 806 29833 29843
+"lib/binterp.ml" 808 29956 29959 "lib/binterp.ml" 808 29956 29966
 type(
   unit
 )
-"lib/binterp.ml" 807 29845 29852 "lib/binterp.ml" 807 29845 29854
+"lib/binterp.ml" 809 29968 29975 "lib/binterp.ml" 809 29968 29977
 type(
   Bident.Qid.t
 )
 ident(
-  def qm "lib/binterp.ml" 808 29874 29877 "lib/binterp.ml" 833 31117 31137
+  def qm "lib/binterp.ml" 810 29997 30000 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 807 29845 29857 "lib/binterp.ml" 807 29845 29868
+"lib/binterp.ml" 809 29968 29980 "lib/binterp.ml" 809 29968 29991
 type(
   Bident.Id.t -> Bident.Qid.t
 )
 ident(
   ext_ref Bident.Qid.t_of_id
 )
-"lib/binterp.ml" 807 29845 29869 "lib/binterp.ml" 807 29845 29870
+"lib/binterp.ml" 809 29968 29992 "lib/binterp.ml" 809 29968 29993
 type(
   Bident.Id.t
 )
 ident(
-  int_ref m "lib/binterp.ml" 803 29783 29793 "lib/binterp.ml" 803 29783 29794
+  int_ref m "lib/binterp.ml" 805 29906 29916 "lib/binterp.ml" 805 29906 29917
 )
-"lib/binterp.ml" 807 29845 29857 "lib/binterp.ml" 807 29845 29870
+"lib/binterp.ml" 809 29968 29980 "lib/binterp.ml" 809 29968 29993
 call(
   stack
 )
 type(
   Bident.Qid.t
 )
-"lib/binterp.ml" 808 29874 29881 "lib/binterp.ml" 808 29874 29886
+"lib/binterp.ml" 810 29997 30004 "lib/binterp.ml" 810 29997 30009
 type(
   Bident.Qid.t list
 )
 ident(
-  def nctx' "lib/binterp.ml" 809 29897 29900 "lib/binterp.ml" 833 31117 31137
+  def nctx' "lib/binterp.ml" 811 30020 30023 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 808 29874 29889 "lib/binterp.ml" 808 29874 29893
+"lib/binterp.ml" 810 29997 30012 "lib/binterp.ml" 810 29997 30016
 type(
   Bident.Qid.t list
 )
 ident(
-  int_ref nctx "lib/binterp.ml" 803 29783 29796 "lib/binterp.ml" 803 29783 29800
+  int_ref nctx "lib/binterp.ml" 805 29906 29919 "lib/binterp.ml" 805 29906 29923
 )
-"lib/binterp.ml" 809 29897 29904 "lib/binterp.ml" 809 29897 29907
+"lib/binterp.ml" 811 30020 30027 "lib/binterp.ml" 811 30020 30030
 type(
   Benv.CEnv.t
 )
 ident(
-  def cev "lib/binterp.ml" 810 29955 29958 "lib/binterp.ml" 833 31117 31137
+  def cev "lib/binterp.ml" 812 30078 30081 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 809 29897 29910 "lib/binterp.ml" 809 29897 29922
+"lib/binterp.ml" 811 30020 30033 "lib/binterp.ml" 811 30020 30045
 type(
   Benv.CEnv.t -> Bident.Qid.t list -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.set_ctx
 )
-"lib/binterp.ml" 809 29897 29924 "lib/binterp.ml" 809 29897 29934
+"lib/binterp.ml" 811 30020 30047 "lib/binterp.ml" 811 30020 30057
 type(
   Bident.Qid.t -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.empty
 )
-"lib/binterp.ml" 809 29897 29935 "lib/binterp.ml" 809 29897 29937
+"lib/binterp.ml" 811 30020 30058 "lib/binterp.ml" 811 30020 30060
 type(
   Bident.Qid.t
 )
 ident(
-  int_ref qm "lib/binterp.ml" 807 29845 29852 "lib/binterp.ml" 807 29845 29854
+  int_ref qm "lib/binterp.ml" 809 29968 29975 "lib/binterp.ml" 809 29968 29977
 )
-"lib/binterp.ml" 809 29897 29923 "lib/binterp.ml" 809 29897 29938
+"lib/binterp.ml" 811 30020 30046 "lib/binterp.ml" 811 30020 30061
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 809 29897 29940 "lib/binterp.ml" 809 29897 29942
+"lib/binterp.ml" 811 30020 30063 "lib/binterp.ml" 811 30020 30065
 type(
   Bident.Qid.t
 )
 ident(
-  int_ref qm "lib/binterp.ml" 807 29845 29852 "lib/binterp.ml" 807 29845 29854
+  int_ref qm "lib/binterp.ml" 809 29968 29975 "lib/binterp.ml" 809 29968 29977
 )
-"lib/binterp.ml" 809 29897 29945 "lib/binterp.ml" 809 29897 29950
+"lib/binterp.ml" 811 30020 30068 "lib/binterp.ml" 811 30020 30073
 type(
   Bident.Qid.t list
 )
 ident(
-  int_ref nctx' "lib/binterp.ml" 808 29874 29881 "lib/binterp.ml" 808 29874 29886
+  int_ref nctx' "lib/binterp.ml" 810 29997 30004 "lib/binterp.ml" 810 29997 30009
 )
-"lib/binterp.ml" 809 29897 29939 "lib/binterp.ml" 809 29897 29951
+"lib/binterp.ml" 811 30020 30062 "lib/binterp.ml" 811 30020 30074
 type(
   Bident.Qid.t list
 )
-"lib/binterp.ml" 809 29897 29910 "lib/binterp.ml" 809 29897 29951
+"lib/binterp.ml" 811 30020 30033 "lib/binterp.ml" 811 30020 30074
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 810 29955 29962 "lib/binterp.ml" 810 29955 29965
+"lib/binterp.ml" 812 30078 30085 "lib/binterp.ml" 812 30078 30088
 type(
   ((unit -> V.t) -> unit) option
 )
 ident(
-  def wqo "lib/binterp.ml" 816 30156 30159 "lib/binterp.ml" 833 31117 31137
+  def wqo "lib/binterp.ml" 818 30279 30282 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 811 30001 30008 "lib/binterp.ml" 811 30001 30018
+"lib/binterp.ml" 813 30124 30131 "lib/binterp.ml" 813 30124 30141
 type(
   bool Prefs.t -> bool
 )
 ident(
   ext_ref Prefs.read
 )
-"lib/binterp.ml" 811 30001 30019 "lib/binterp.ml" 811 30001 30037
+"lib/binterp.ml" 813 30124 30142 "lib/binterp.ml" 813 30124 30160
 type(
   bool Prefs.t
 )
 ident(
   ext_ref Prefs.parallelPref
 )
-"lib/binterp.ml" 811 30001 30008 "lib/binterp.ml" 811 30001 30037
+"lib/binterp.ml" 813 30124 30131 "lib/binterp.ml" 813 30124 30160
 call(
   stack
 )
 type(
   bool
 )
-"lib/binterp.ml" 813 30047 30056 "lib/binterp.ml" 813 30047 30058
+"lib/binterp.ml" 815 30170 30179 "lib/binterp.ml" 815 30170 30181
 type(
   V.t Workqueue.t
 )
 ident(
-  def wq "lib/binterp.ml" 814 30084 30089 "lib/binterp.ml" 814 30084 30138
+  def wq "lib/binterp.ml" 816 30207 30212 "lib/binterp.ml" 816 30207 30261
 )
-"lib/binterp.ml" 813 30047 30061 "lib/binterp.ml" 813 30047 30077
+"lib/binterp.ml" 815 30170 30184 "lib/binterp.ml" 815 30170 30200
 type(
   unit -> V.t Workqueue.t
 )
 ident(
   ext_ref Workqueue.create
 )
-"lib/binterp.ml" 813 30047 30078 "lib/binterp.ml" 813 30047 30080
+"lib/binterp.ml" 815 30170 30201 "lib/binterp.ml" 815 30170 30203
 type(
   unit
 )
-"lib/binterp.ml" 813 30047 30061 "lib/binterp.ml" 813 30047 30080
+"lib/binterp.ml" 815 30170 30184 "lib/binterp.ml" 815 30170 30203
 call(
   stack
 )
 type(
   V.t Workqueue.t
 )
-"lib/binterp.ml" 814 30084 30100 "lib/binterp.ml" 814 30084 30101
+"lib/binterp.ml" 816 30207 30223 "lib/binterp.ml" 816 30207 30224
 type(
   unit -> V.t
 )
 ident(
-  def f "lib/binterp.ml" 814 30084 30119 "lib/binterp.ml" 814 30084 30137
+  def f "lib/binterp.ml" 816 30207 30242 "lib/binterp.ml" 816 30207 30260
 )
-"lib/binterp.ml" 814 30084 30119 "lib/binterp.ml" 814 30084 30132
+"lib/binterp.ml" 816 30207 30242 "lib/binterp.ml" 816 30207 30255
 type(
   (unit -> V.t) -> V.t Workqueue.t -> unit
 )
 ident(
   ext_ref Workqueue.enq
 )
-"lib/binterp.ml" 814 30084 30133 "lib/binterp.ml" 814 30084 30134
+"lib/binterp.ml" 816 30207 30256 "lib/binterp.ml" 816 30207 30257
 type(
   unit -> V.t
 )
 ident(
-  int_ref f "lib/binterp.ml" 814 30084 30100 "lib/binterp.ml" 814 30084 30101
+  int_ref f "lib/binterp.ml" 816 30207 30223 "lib/binterp.ml" 816 30207 30224
 )
-"lib/binterp.ml" 814 30084 30135 "lib/binterp.ml" 814 30084 30137
+"lib/binterp.ml" 816 30207 30258 "lib/binterp.ml" 816 30207 30260
 type(
   V.t Workqueue.t
 )
 ident(
-  int_ref wq "lib/binterp.ml" 813 30047 30056 "lib/binterp.ml" 813 30047 30058
+  int_ref wq "lib/binterp.ml" 815 30170 30179 "lib/binterp.ml" 815 30170 30181
 )
-"lib/binterp.ml" 814 30084 30119 "lib/binterp.ml" 814 30084 30137
+"lib/binterp.ml" 816 30207 30242 "lib/binterp.ml" 816 30207 30260
 call(
   tail
 )
 type(
   unit
 )
-"lib/binterp.ml" 814 30084 30094 "lib/binterp.ml" 814 30084 30138
+"lib/binterp.ml" 816 30207 30217 "lib/binterp.ml" 816 30207 30261
 type(
   (unit -> V.t) -> unit
 )
-"lib/binterp.ml" 814 30084 30089 "lib/binterp.ml" 814 30084 30138
+"lib/binterp.ml" 816 30207 30212 "lib/binterp.ml" 816 30207 30261
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 813 30047 30052 "lib/binterp.ml" 814 30084 30138
+"lib/binterp.ml" 815 30170 30175 "lib/binterp.ml" 816 30207 30261
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 815 30139 30148 "lib/binterp.ml" 815 30139 30152
+"lib/binterp.ml" 817 30262 30271 "lib/binterp.ml" 817 30262 30275
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 811 30001 30005 "lib/binterp.ml" 815 30139 30152
+"lib/binterp.ml" 813 30124 30128 "lib/binterp.ml" 817 30262 30275
 type(
   ((unit -> V.t) -> unit) option
 )
 type(
   ((unit -> V.t) -> unit) option
 )
-"lib/binterp.ml" 816 30156 30163 "lib/binterp.ml" 816 30156 30170
+"lib/binterp.ml" 818 30279 30286 "lib/binterp.ml" 818 30279 30293
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 817 30207 30210 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 819 30330 30333 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 816 30156 30173 "lib/binterp.ml" 816 30156 30186
+"lib/binterp.ml" 818 30279 30296 "lib/binterp.ml" 818 30279 30309
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.push_ctx
 )
-"lib/binterp.ml" 816 30156 30187 "lib/binterp.ml" 816 30156 30190
+"lib/binterp.ml" 818 30279 30310 "lib/binterp.ml" 818 30279 30313
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref cev "lib/binterp.ml" 809 29897 29904 "lib/binterp.ml" 809 29897 29907
+  int_ref cev "lib/binterp.ml" 811 30020 30027 "lib/binterp.ml" 811 30020 30030
 )
-"lib/binterp.ml" 816 30156 30191 "lib/binterp.ml" 816 30156 30203
+"lib/binterp.ml" 818 30279 30314 "lib/binterp.ml" 818 30279 30326
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.synth "lib/binterp.ml" 538 18241 18246 "lib/binterp.ml" 538 18241 18251
 )
-"lib/binterp.ml" 816 30156 30173 "lib/binterp.ml" 816 30156 30203
+"lib/binterp.ml" 818 30279 30296 "lib/binterp.ml" 818 30279 30326
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 817 30207 30214 "lib/binterp.ml" 817 30207 30221
+"lib/binterp.ml" 819 30330 30337 "lib/binterp.ml" 819 30330 30344
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 818 30277 30280 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 820 30400 30403 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 817 30207 30224 "lib/binterp.ml" 817 30207 30235
+"lib/binterp.ml" 819 30330 30347 "lib/binterp.ml" 819 30330 30358
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.v -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.update
 )
-"lib/binterp.ml" 817 30207 30236 "lib/binterp.ml" 817 30207 30243
+"lib/binterp.ml" 819 30330 30359 "lib/binterp.ml" 819 30330 30366
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 816 30156 30163 "lib/binterp.ml" 816 30156 30170
+  int_ref new_cev "lib/binterp.ml" 818 30279 30286 "lib/binterp.ml" 818 30279 30293
 )
-"lib/binterp.ml" 817 30207 30244 "lib/binterp.ml" 817 30207 30256
+"lib/binterp.ml" 819 30330 30367 "lib/binterp.ml" 819 30330 30379
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.synth "lib/binterp.ml" 538 18241 18246 "lib/binterp.ml" 538 18241 18251
 )
-"lib/binterp.ml" 817 30207 30257 "lib/binterp.ml" 817 30207 30273
+"lib/binterp.ml" 819 30330 30380 "lib/binterp.ml" 819 30330 30396
 type(
   Benv.CEnv.v
 )
 ident(
   int_ref Bridge.get_synth "lib/binterp.ml" 597 20824 20829 "lib/binterp.ml" 597 20824 20838
 )
-"lib/binterp.ml" 817 30207 30224 "lib/binterp.ml" 817 30207 30273
+"lib/binterp.ml" 819 30330 30347 "lib/binterp.ml" 819 30330 30396
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 818 30277 30284 "lib/binterp.ml" 818 30277 30291
+"lib/binterp.ml" 820 30400 30407 "lib/binterp.ml" 820 30400 30414
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 819 30331 30334 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 821 30454 30457 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 818 30277 30294 "lib/binterp.ml" 818 30277 30307
+"lib/binterp.ml" 820 30400 30417 "lib/binterp.ml" 820 30400 30430
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.push_ctx
 )
-"lib/binterp.ml" 818 30277 30308 "lib/binterp.ml" 818 30277 30315
+"lib/binterp.ml" 820 30400 30431 "lib/binterp.ml" 820 30400 30438
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 817 30207 30214 "lib/binterp.ml" 817 30207 30221
+  int_ref new_cev "lib/binterp.ml" 819 30330 30337 "lib/binterp.ml" 819 30330 30344
 )
-"lib/binterp.ml" 818 30277 30316 "lib/binterp.ml" 818 30277 30327
+"lib/binterp.ml" 820 30400 30439 "lib/binterp.ml" 820 30400 30450
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.perm "lib/binterp.ml" 540 18361 18366 "lib/binterp.ml" 540 18361 18370
 )
-"lib/binterp.ml" 818 30277 30294 "lib/binterp.ml" 818 30277 30327
+"lib/binterp.ml" 820 30400 30417 "lib/binterp.ml" 820 30400 30450
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 819 30331 30338 "lib/binterp.ml" 819 30331 30345
+"lib/binterp.ml" 821 30454 30461 "lib/binterp.ml" 821 30454 30468
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 820 30399 30402 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 822 30522 30525 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 819 30331 30348 "lib/binterp.ml" 819 30331 30359
+"lib/binterp.ml" 821 30454 30471 "lib/binterp.ml" 821 30454 30482
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.v -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.update
 )
-"lib/binterp.ml" 819 30331 30360 "lib/binterp.ml" 819 30331 30367
+"lib/binterp.ml" 821 30454 30483 "lib/binterp.ml" 821 30454 30490
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 818 30277 30284 "lib/binterp.ml" 818 30277 30291
+  int_ref new_cev "lib/binterp.ml" 820 30400 30407 "lib/binterp.ml" 820 30400 30414
 )
-"lib/binterp.ml" 819 30331 30368 "lib/binterp.ml" 819 30331 30379
+"lib/binterp.ml" 821 30454 30491 "lib/binterp.ml" 821 30454 30502
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.perm "lib/binterp.ml" 540 18361 18366 "lib/binterp.ml" 540 18361 18370
 )
-"lib/binterp.ml" 819 30331 30380 "lib/binterp.ml" 819 30331 30395
+"lib/binterp.ml" 821 30454 30503 "lib/binterp.ml" 821 30454 30518
 type(
   Benv.CEnv.v
 )
 ident(
-  int_ref Bridge.get_perm "lib/binterp.ml" 754 27656 27661 "lib/binterp.ml" 754 27656 27669
+  int_ref Bridge.get_perm "lib/binterp.ml" 756 27779 27784 "lib/binterp.ml" 756 27779 27792
 )
-"lib/binterp.ml" 819 30331 30348 "lib/binterp.ml" 819 30331 30395
+"lib/binterp.ml" 821 30454 30471 "lib/binterp.ml" 821 30454 30518
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 820 30399 30406 "lib/binterp.ml" 820 30399 30413
+"lib/binterp.ml" 822 30522 30529 "lib/binterp.ml" 822 30522 30536
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 821 30456 30459 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 823 30579 30582 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 820 30399 30416 "lib/binterp.ml" 820 30399 30429
+"lib/binterp.ml" 822 30522 30539 "lib/binterp.ml" 822 30522 30552
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.push_ctx
 )
-"lib/binterp.ml" 820 30399 30430 "lib/binterp.ml" 820 30399 30437
+"lib/binterp.ml" 822 30522 30553 "lib/binterp.ml" 822 30522 30560
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 819 30331 30338 "lib/binterp.ml" 819 30331 30345
+  int_ref new_cev "lib/binterp.ml" 821 30454 30461 "lib/binterp.ml" 821 30454 30468
 )
-"lib/binterp.ml" 820 30399 30438 "lib/binterp.ml" 820 30399 30452
+"lib/binterp.ml" 822 30522 30561 "lib/binterp.ml" 822 30522 30575
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.project "lib/binterp.ml" 541 18403 18408 "lib/binterp.ml" 541 18403 18415
 )
-"lib/binterp.ml" 820 30399 30416 "lib/binterp.ml" 820 30399 30452
+"lib/binterp.ml" 822 30522 30539 "lib/binterp.ml" 822 30522 30575
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 821 30456 30463 "lib/binterp.ml" 821 30456 30470
+"lib/binterp.ml" 823 30579 30586 "lib/binterp.ml" 823 30579 30593
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 822 30530 30533 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 824 30653 30656 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 821 30456 30473 "lib/binterp.ml" 821 30456 30484
+"lib/binterp.ml" 823 30579 30596 "lib/binterp.ml" 823 30579 30607
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.v -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.update
 )
-"lib/binterp.ml" 821 30456 30485 "lib/binterp.ml" 821 30456 30492
+"lib/binterp.ml" 823 30579 30608 "lib/binterp.ml" 823 30579 30615
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 820 30399 30406 "lib/binterp.ml" 820 30399 30413
+  int_ref new_cev "lib/binterp.ml" 822 30522 30529 "lib/binterp.ml" 822 30522 30536
 )
-"lib/binterp.ml" 821 30456 30493 "lib/binterp.ml" 821 30456 30507
+"lib/binterp.ml" 823 30579 30616 "lib/binterp.ml" 823 30579 30630
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.project "lib/binterp.ml" 541 18403 18408 "lib/binterp.ml" 541 18403 18415
 )
-"lib/binterp.ml" 821 30456 30508 "lib/binterp.ml" 821 30456 30526
+"lib/binterp.ml" 823 30579 30631 "lib/binterp.ml" 823 30579 30649
 type(
   Benv.CEnv.v
 )
 ident(
   int_ref Bridge.get_project "lib/binterp.ml" 745 27243 27248 "lib/binterp.ml" 745 27243 27259
 )
-"lib/binterp.ml" 821 30456 30473 "lib/binterp.ml" 821 30456 30526
+"lib/binterp.ml" 823 30579 30596 "lib/binterp.ml" 823 30579 30649
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 822 30530 30537 "lib/binterp.ml" 822 30530 30544
+"lib/binterp.ml" 824 30653 30660 "lib/binterp.ml" 824 30653 30667
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 823 30582 30585 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 825 30705 30708 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 822 30530 30547 "lib/binterp.ml" 822 30530 30560
+"lib/binterp.ml" 824 30653 30670 "lib/binterp.ml" 824 30653 30683
 type(
   Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
 )
 ident(
   ext_ref Benv.CEnv.push_ctx
 )
-"lib/binterp.ml" 822 30530 30561 "lib/binterp.ml" 822 30530 30568
+"lib/binterp.ml" 824 30653 30684 "lib/binterp.ml" 824 30653 30691
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 821 30456 30463 "lib/binterp.ml" 821 30456 30470
+  int_ref new_cev "lib/binterp.ml" 823 30579 30586 "lib/binterp.ml" 823 30579 30593
 )
-"lib/binterp.ml" 822 30530 30569 "lib/binterp.ml" 822 30530 30578
+"lib/binterp.ml" 824 30653 30692 "lib/binterp.ml" 824 30653 30701
 type(
   Bident.Qid.t
 )
 ident(
   int_ref Bridge.id "lib/binterp.ml" 542 18451 18456 "lib/binterp.ml" 542 18451 18458
 )
-"lib/binterp.ml" 822 30530 30547 "lib/binterp.ml" 822 30530 30578
-call(
-  stack
-)
-type(
-  Benv.CEnv.t
-)
-"lib/binterp.ml" 823 30582 30589 "lib/binterp.ml" 823 30582 30596
-type(
-  Benv.CEnv.t
-)
-ident(
-  def new_cev "lib/binterp.ml" 824 30646 30649 "lib/binterp.ml" 833 31117 31137
-)
-"lib/binterp.ml" 823 30582 30599 "lib/binterp.ml" 823 30582 30610
-type(
-  Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.v -> Benv.CEnv.t
-)
-ident(
-  ext_ref Benv.CEnv.update
-)
-"lib/binterp.ml" 823 30582 30611 "lib/binterp.ml" 823 30582 30618
-type(
-  Benv.CEnv.t
-)
-ident(
-  int_ref new_cev "lib/binterp.ml" 822 30530 30537 "lib/binterp.ml" 822 30530 30544
-)
-"lib/binterp.ml" 823 30582 30619 "lib/binterp.ml" 823 30582 30628
-type(
-  Bident.Qid.t
-)
-ident(
-  int_ref Bridge.id "lib/binterp.ml" 542 18451 18456 "lib/binterp.ml" 542 18451 18458
-)
-"lib/binterp.ml" 823 30582 30629 "lib/binterp.ml" 823 30582 30642
-type(
-  Benv.CEnv.v
-)
-ident(
-  int_ref Bridge.get_id "lib/binterp.ml" 738 26947 26952 "lib/binterp.ml" 738 26947 26958
-)
-"lib/binterp.ml" 823 30582 30599 "lib/binterp.ml" 823 30582 30642
-call(
-  stack
-)
-type(
-  Benv.CEnv.t
-)
-"lib/binterp.ml" 824 30646 30653 "lib/binterp.ml" 824 30646 30660
-type(
-  Benv.CEnv.t
-)
-ident(
-  def new_cev "lib/binterp.ml" 825 30705 30708 "lib/binterp.ml" 833 31117 31137
-)
-"lib/binterp.ml" 824 30646 30663 "lib/binterp.ml" 824 30646 30676
-type(
-  Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
-)
-ident(
-  ext_ref Benv.CEnv.push_ctx
-)
-"lib/binterp.ml" 824 30646 30677 "lib/binterp.ml" 824 30646 30684
-type(
-  Benv.CEnv.t
-)
-ident(
-  int_ref new_cev "lib/binterp.ml" 823 30582 30589 "lib/binterp.ml" 823 30582 30596
-)
-"lib/binterp.ml" 824 30646 30685 "lib/binterp.ml" 824 30646 30701
-type(
-  Bident.Qid.t
-)
-ident(
-  int_ref Bridge.synth_can "lib/binterp.ml" 539 18297 18302 "lib/binterp.ml" 539 18297 18311
-)
-"lib/binterp.ml" 824 30646 30663 "lib/binterp.ml" 824 30646 30701
+"lib/binterp.ml" 824 30653 30670 "lib/binterp.ml" 824 30653 30701
 call(
   stack
 )
@@ -23418,7 +23472,7 @@ type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 826 30783 30786 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 826 30769 30772 "lib/binterp.ml" 835 31281 31301
 )
 "lib/binterp.ml" 825 30705 30722 "lib/binterp.ml" 825 30705 30733
 type(
@@ -23432,45 +23486,122 @@ type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 824 30646 30653 "lib/binterp.ml" 824 30646 30660
+  int_ref new_cev "lib/binterp.ml" 824 30653 30660 "lib/binterp.ml" 824 30653 30667
 )
-"lib/binterp.ml" 825 30705 30742 "lib/binterp.ml" 825 30705 30758
+"lib/binterp.ml" 825 30705 30742 "lib/binterp.ml" 825 30705 30751
 type(
   Bident.Qid.t
 )
 ident(
-  int_ref Bridge.synth_can "lib/binterp.ml" 539 18297 18302 "lib/binterp.ml" 539 18297 18311
+  int_ref Bridge.id "lib/binterp.ml" 542 18451 18456 "lib/binterp.ml" 542 18451 18458
 )
-"lib/binterp.ml" 825 30705 30759 "lib/binterp.ml" 825 30705 30779
+"lib/binterp.ml" 825 30705 30752 "lib/binterp.ml" 825 30705 30765
 type(
   Benv.CEnv.v
 )
 ident(
-  int_ref Bridge.get_synth_can "lib/binterp.ml" 770 28324 28329 "lib/binterp.ml" 770 28324 28342
+  int_ref Bridge.get_id "lib/binterp.ml" 738 26947 26952 "lib/binterp.ml" 738 26947 26958
 )
-"lib/binterp.ml" 825 30705 30722 "lib/binterp.ml" 825 30705 30779
+"lib/binterp.ml" 825 30705 30722 "lib/binterp.ml" 825 30705 30765
 call(
   stack
 )
 type(
   Benv.CEnv.t
 )
-"lib/binterp.ml" 826 30783 30790 "lib/binterp.ml" 826 30783 30797
+"lib/binterp.ml" 826 30769 30776 "lib/binterp.ml" 826 30769 30783
 type(
   Benv.CEnv.t
 )
 ident(
-  def new_cev "lib/binterp.ml" 829 30961 30964 "lib/binterp.ml" 833 31117 31137
+  def new_cev "lib/binterp.ml" 827 30828 30831 "lib/binterp.ml" 835 31281 31301
 )
-"lib/binterp.ml" 826 30783 30799 "lib/binterp.ml" 826 30783 30800
+"lib/binterp.ml" 826 30769 30786 "lib/binterp.ml" 826 30769 30799
+type(
+  Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.t
+)
+ident(
+  ext_ref Benv.CEnv.push_ctx
+)
+"lib/binterp.ml" 826 30769 30800 "lib/binterp.ml" 826 30769 30807
+type(
+  Benv.CEnv.t
+)
+ident(
+  int_ref new_cev "lib/binterp.ml" 825 30705 30712 "lib/binterp.ml" 825 30705 30719
+)
+"lib/binterp.ml" 826 30769 30808 "lib/binterp.ml" 826 30769 30824
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref Bridge.synth_can "lib/binterp.ml" 539 18297 18302 "lib/binterp.ml" 539 18297 18311
+)
+"lib/binterp.ml" 826 30769 30786 "lib/binterp.ml" 826 30769 30824
+call(
+  stack
+)
+type(
+  Benv.CEnv.t
+)
+"lib/binterp.ml" 827 30828 30835 "lib/binterp.ml" 827 30828 30842
+type(
+  Benv.CEnv.t
+)
+ident(
+  def new_cev "lib/binterp.ml" 828 30906 30909 "lib/binterp.ml" 835 31281 31301
+)
+"lib/binterp.ml" 827 30828 30845 "lib/binterp.ml" 827 30828 30856
+type(
+  Benv.CEnv.t -> Bident.Qid.t -> Benv.CEnv.v -> Benv.CEnv.t
+)
+ident(
+  ext_ref Benv.CEnv.update
+)
+"lib/binterp.ml" 827 30828 30857 "lib/binterp.ml" 827 30828 30864
+type(
+  Benv.CEnv.t
+)
+ident(
+  int_ref new_cev "lib/binterp.ml" 826 30769 30776 "lib/binterp.ml" 826 30769 30783
+)
+"lib/binterp.ml" 827 30828 30865 "lib/binterp.ml" 827 30828 30881
+type(
+  Bident.Qid.t
+)
+ident(
+  int_ref Bridge.synth_can "lib/binterp.ml" 539 18297 18302 "lib/binterp.ml" 539 18297 18311
+)
+"lib/binterp.ml" 827 30828 30882 "lib/binterp.ml" 827 30828 30902
+type(
+  Benv.CEnv.v
+)
+ident(
+  int_ref Bridge.get_synth_can "lib/binterp.ml" 772 28447 28452 "lib/binterp.ml" 772 28447 28465
+)
+"lib/binterp.ml" 827 30828 30845 "lib/binterp.ml" 827 30828 30902
+call(
+  stack
+)
+type(
+  Benv.CEnv.t
+)
+"lib/binterp.ml" 828 30906 30913 "lib/binterp.ml" 828 30906 30920
+type(
+  Benv.CEnv.t
+)
+ident(
+  def new_cev "lib/binterp.ml" 831 31125 31128 "lib/binterp.ml" 835 31281 31301
+)
+"lib/binterp.ml" 828 30906 30922 "lib/binterp.ml" 828 30906 30923
 type(
   Bident.Qid.t list
 )
-"lib/binterp.ml" 826 30783 30790 "lib/binterp.ml" 826 30783 30800
+"lib/binterp.ml" 828 30906 30913 "lib/binterp.ml" 828 30906 30923
 type(
   Benv.CEnv.t * Bident.Qid.t list
 )
-"lib/binterp.ml" 826 30783 30803 "lib/binterp.ml" 826 30783 30817
+"lib/binterp.ml" 828 30906 30926 "lib/binterp.ml" 828 30906 30940
 type(
   ((unit -> V.t) -> unit) option ->
   Benv.CEnv.t ->
@@ -23479,110 +23610,110 @@ type(
 ident(
   int_ref interp_mod_aux "lib/binterp.ml" 519 17852 17856 "lib/binterp.ml" 519 17852 17870
 )
-"lib/binterp.ml" 826 30783 30818 "lib/binterp.ml" 826 30783 30821
+"lib/binterp.ml" 828 30906 30941 "lib/binterp.ml" 828 30906 30944
 type(
   ((unit -> V.t) -> unit) option
 )
 ident(
-  int_ref wqo "lib/binterp.ml" 810 29955 29962 "lib/binterp.ml" 810 29955 29965
+  int_ref wqo "lib/binterp.ml" 812 30078 30085 "lib/binterp.ml" 812 30078 30088
 )
-"lib/binterp.ml" 826 30783 30822 "lib/binterp.ml" 826 30783 30829
+"lib/binterp.ml" 828 30906 30945 "lib/binterp.ml" 828 30906 30952
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 825 30705 30712 "lib/binterp.ml" 825 30705 30719
+  int_ref new_cev "lib/binterp.ml" 827 30828 30835 "lib/binterp.ml" 827 30828 30842
 )
-"lib/binterp.ml" 826 30783 30831 "lib/binterp.ml" 826 30783 30832
+"lib/binterp.ml" 828 30906 30954 "lib/binterp.ml" 828 30906 30955
 type(
   Bident.Id.t
 )
 ident(
-  int_ref m "lib/binterp.ml" 803 29783 29793 "lib/binterp.ml" 803 29783 29794
+  int_ref m "lib/binterp.ml" 805 29906 29916 "lib/binterp.ml" 805 29906 29917
 )
-"lib/binterp.ml" 826 30783 30830 "lib/binterp.ml" 826 30783 30833
+"lib/binterp.ml" 828 30906 30953 "lib/binterp.ml" 828 30906 30956
 type(
   Bident.Id.t list
 )
-"lib/binterp.ml" 826 30783 30834 "lib/binterp.ml" 826 30783 30836
+"lib/binterp.ml" 828 30906 30957 "lib/binterp.ml" 828 30906 30959
 type(
   Bsyntax.decl list
 )
 ident(
-  int_ref ds "lib/binterp.ml" 803 29783 29802 "lib/binterp.ml" 803 29783 29804
+  int_ref ds "lib/binterp.ml" 805 29906 29925 "lib/binterp.ml" 805 29906 29927
 )
-"lib/binterp.ml" 826 30783 30803 "lib/binterp.ml" 826 30783 30836
+"lib/binterp.ml" 828 30906 30926 "lib/binterp.ml" 828 30906 30959
 call(
   stack
 )
 type(
   Benv.CEnv.t * Bident.Qid.t list
 )
-"lib/binterp.ml" 829 30961 30964 "lib/binterp.ml" 829 30961 30978
+"lib/binterp.ml" 831 31125 31128 "lib/binterp.ml" 831 31125 31142
 type(
   G.REnv.t -> Bident.Qid.t list -> Bident.Id.t -> unit
 )
 ident(
   ext_ref G.register_env
 )
-"lib/binterp.ml" 829 30961 30980 "lib/binterp.ml" 829 30961 30991
+"lib/binterp.ml" 831 31125 31144 "lib/binterp.ml" 831 31125 31155
 type(
   Benv.CEnv.t -> G.REnv.t
 )
 ident(
   ext_ref Benv.CEnv.get_ev
 )
-"lib/binterp.ml" 829 30961 30992 "lib/binterp.ml" 829 30961 30999
+"lib/binterp.ml" 831 31125 31156 "lib/binterp.ml" 831 31125 31163
 type(
   Benv.CEnv.t
 )
 ident(
-  int_ref new_cev "lib/binterp.ml" 826 30783 30790 "lib/binterp.ml" 826 30783 30797
+  int_ref new_cev "lib/binterp.ml" 828 30906 30913 "lib/binterp.ml" 828 30906 30920
 )
-"lib/binterp.ml" 829 30961 30979 "lib/binterp.ml" 829 30961 31000
+"lib/binterp.ml" 831 31125 31143 "lib/binterp.ml" 831 31125 31164
 call(
   stack
 )
 type(
   G.REnv.t
 )
-"lib/binterp.ml" 829 30961 31001 "lib/binterp.ml" 829 30961 31006
+"lib/binterp.ml" 831 31125 31165 "lib/binterp.ml" 831 31125 31170
 type(
   Bident.Qid.t list
 )
 ident(
-  int_ref nctx' "lib/binterp.ml" 808 29874 29881 "lib/binterp.ml" 808 29874 29886
+  int_ref nctx' "lib/binterp.ml" 810 29997 30004 "lib/binterp.ml" 810 29997 30009
 )
-"lib/binterp.ml" 829 30961 31007 "lib/binterp.ml" 829 30961 31008
+"lib/binterp.ml" 831 31125 31171 "lib/binterp.ml" 831 31125 31172
 type(
   Bident.Id.t
 )
 ident(
-  int_ref m "lib/binterp.ml" 803 29783 29793 "lib/binterp.ml" 803 29783 29794
+  int_ref m "lib/binterp.ml" 805 29906 29916 "lib/binterp.ml" 805 29906 29917
 )
-"lib/binterp.ml" 829 30961 30964 "lib/binterp.ml" 829 30961 31008
+"lib/binterp.ml" 831 31125 31128 "lib/binterp.ml" 831 31125 31172
 call(
   stack
 )
 type(
   unit
 )
-"lib/binterp.ml" 830 31010 31013 "lib/binterp.ml" 830 31010 31024
+"lib/binterp.ml" 832 31174 31177 "lib/binterp.ml" 832 31174 31188
 type(
   string -> (unit -> unit) -> unit
 )
 ident(
   ext_ref Trace.debug
 )
-"lib/binterp.ml" 830 31010 31025 "lib/binterp.ml" 830 31010 31035
+"lib/binterp.ml" 832 31174 31189 "lib/binterp.ml" 832 31174 31199
 type(
   string
 )
-"lib/binterp.ml" 831 31036 31045 "lib/binterp.ml" 831 31036 31047
+"lib/binterp.ml" 833 31200 31209 "lib/binterp.ml" 833 31200 31211
 type(
   unit
 )
-"lib/binterp.ml" 832 31051 31058 "lib/binterp.ml" 832 31051 31061
+"lib/binterp.ml" 834 31215 31222 "lib/binterp.ml" 834 31215 31225
 type(
   (int -> int -> int -> unit, Format.formatter, unit) format ->
   int -> int -> int -> unit
@@ -23590,159 +23721,159 @@ type(
 ident(
   int_ref msg "lib/binterp.ml" 36 1962 1966 "lib/binterp.ml" 36 1962 1969
 )
-"lib/binterp.ml" 832 31051 31062 "lib/binterp.ml" 832 31051 31116
+"lib/binterp.ml" 834 31215 31226 "lib/binterp.ml" 834 31215 31280
 type(
   (int -> int -> int -> unit, Format.formatter, unit) format
 )
-"lib/binterp.ml" 833 31117 31125 "lib/binterp.ml" 833 31117 31126
+"lib/binterp.ml" 835 31281 31289 "lib/binterp.ml" 835 31281 31290
 type(
   int ref -> int
 )
 ident(
   ext_ref Pervasives.( ! )
 )
-"lib/binterp.ml" 833 31117 31126 "lib/binterp.ml" 833 31117 31128
+"lib/binterp.ml" 835 31281 31290 "lib/binterp.ml" 835 31281 31292
 type(
   int ref
 )
 ident(
   int_ref pc "lib/binterp.ml" 94 4167 4171 "lib/binterp.ml" 94 4167 4173
 )
-"lib/binterp.ml" 833 31117 31125 "lib/binterp.ml" 833 31117 31128
+"lib/binterp.ml" 835 31281 31289 "lib/binterp.ml" 835 31281 31292
 type(
   int
 )
-"lib/binterp.ml" 833 31117 31129 "lib/binterp.ml" 833 31117 31130
+"lib/binterp.ml" 835 31281 31293 "lib/binterp.ml" 835 31281 31294
 type(
   int ref -> int
 )
 ident(
   ext_ref Pervasives.( ! )
 )
-"lib/binterp.ml" 833 31117 31130 "lib/binterp.ml" 833 31117 31132
+"lib/binterp.ml" 835 31281 31294 "lib/binterp.ml" 835 31281 31296
 type(
   int ref
 )
 ident(
   int_ref ic "lib/binterp.ml" 95 4182 4186 "lib/binterp.ml" 95 4182 4188
 )
-"lib/binterp.ml" 833 31117 31129 "lib/binterp.ml" 833 31117 31132
+"lib/binterp.ml" 835 31281 31293 "lib/binterp.ml" 835 31281 31296
 type(
   int
 )
-"lib/binterp.ml" 833 31117 31133 "lib/binterp.ml" 833 31117 31134
+"lib/binterp.ml" 835 31281 31297 "lib/binterp.ml" 835 31281 31298
 type(
   int ref -> int
 )
 ident(
   ext_ref Pervasives.( ! )
 )
-"lib/binterp.ml" 833 31117 31134 "lib/binterp.ml" 833 31117 31136
+"lib/binterp.ml" 835 31281 31298 "lib/binterp.ml" 835 31281 31300
 type(
   int ref
 )
 ident(
   int_ref mc "lib/binterp.ml" 96 4197 4201 "lib/binterp.ml" 96 4197 4203
 )
-"lib/binterp.ml" 833 31117 31133 "lib/binterp.ml" 833 31117 31136
+"lib/binterp.ml" 835 31281 31297 "lib/binterp.ml" 835 31281 31300
 type(
   int
 )
-"lib/binterp.ml" 832 31051 31058 "lib/binterp.ml" 833 31117 31136
+"lib/binterp.ml" 834 31215 31222 "lib/binterp.ml" 835 31281 31300
 call(
   tail
 )
 type(
   unit
 )
-"lib/binterp.ml" 831 31036 31040 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 833 31200 31204 "lib/binterp.ml" 835 31281 31301
 type(
   unit -> unit
 )
-"lib/binterp.ml" 830 31010 31013 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 832 31174 31177 "lib/binterp.ml" 835 31281 31301
 call(
   tail
 )
 type(
   unit
 )
-"lib/binterp.ml" 829 30961 30964 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 831 31125 31128 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 826 30783 30786 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 828 30906 30909 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 825 30705 30708 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 827 30828 30831 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 824 30646 30649 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 826 30769 30772 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 823 30582 30585 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 825 30705 30708 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 822 30530 30533 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 824 30653 30656 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 821 30456 30459 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 823 30579 30582 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 820 30399 30402 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 822 30522 30525 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 819 30331 30334 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 821 30454 30457 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 818 30277 30280 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 820 30400 30403 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 817 30207 30210 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 819 30330 30333 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 816 30156 30159 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 818 30279 30282 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 810 29955 29958 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 812 30078 30081 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 809 29897 29900 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 811 30020 30023 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 808 29874 29877 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 810 29997 30000 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 807 29845 29848 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 809 29968 29971 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 806 29833 29836 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 808 29956 29959 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 805 29821 29824 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 807 29944 29947 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 804 29809 29812 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 806 29932 29935 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
-"lib/binterp.ml" 802 29746 29769 "lib/binterp.ml" 833 31117 31137
+"lib/binterp.ml" 804 29869 29892 "lib/binterp.ml" 835 31281 31301
 type(
   unit
 )
