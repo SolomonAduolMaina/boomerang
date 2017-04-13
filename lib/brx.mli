@@ -29,13 +29,14 @@ end
 
 module rec M : sig
 	type d =
-		| CSet of CharSet.t
-		| Seq of t * t
-		| Alt of t list
-		| Rep of t * int * int option
-		| Inter of t list
-		| Diff of t * t
-	and t = {
+	  | CSet of CharSet.t
+	  | Seq of t * t
+	  | Alt of t list
+	  | Rep of t * int * int option
+	  | Inter of t list
+	  | Diff of t * t
+    | Box of int * t
+  and t = {
 		desc : d;
 		uid : int;
 		hash : int;
@@ -70,6 +71,7 @@ val mk_complement: t -> t
 val mk_inter : t -> t -> t
 val mk_reverse : t -> t
 val mk_expand : t -> int -> t -> t
+val mk_box : t -> t
 
 (* pretty printing ranks *)
 type r =
@@ -78,7 +80,8 @@ type r =
 	| Irnk (* inter *)
 	| Crnk (* concat *)
 	| Srnk (* star *)
-	| Arnk (* atomic *)
+  | Arnk (* atomic *)
+  | Brnk (* boxed *)
 val rank : t -> r
 val lpar : r -> r -> bool
 val rpar : r -> r -> bool

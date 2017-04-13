@@ -535,12 +535,13 @@ module Bridge = struct
 	module Perms = BL.Permutations
 	
 	let info = Info.I ("", (0, 0), (0, 0))
-	let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
+  let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
+  let box = Qid.mk [] (Id.mk info "box")
 	let synth_can = Qid.mk [] (Id.mk info "synth_from_canonizers")
 	let perm = Qid.mk [] (Id.mk info "perm")
 	let project = Qid.mk [] (Id.mk info "project")
 	let id = Qid.mk [] (Id.mk info "id")
-	let list = Qid.mk [(info, "List")] (Id.mk info "t")
+  let list = Qid.mk [(info, "List")] (Id.mk info "t")
 	
 	let rec lrxToBrx (r : L.regex) : Brx.t =
 		match r with
@@ -574,18 +575,40 @@ module Bridge = struct
 		| V.Vnt(_, _, _, Some (V.Par(_, hd, tail))) -> toList tail (hd :: temp)
 		| _ -> failwith "Malformed List"
 	
-	let rec brxToLrx (r : Brx.t) : L.regex =
+ let rec brxToLrx
+     (r : Brx.t)
+     (rc:RegexContext.t)
+   : L.regex * RegexContext.t =
 		match r.Brx.M.desc with
-		| Brx.M.CSet l -> L.charSet l
-		| Brx.M.Seq (r1, r2) -> L.RegExConcat(brxToLrx r1, brxToLrx r2)
-		| Brx.M.Alt l ->
-				List.fold_left
-					(fun r x -> if r = L.RegExEmpty then x else L.RegExOr(r, x)) L.RegExEmpty
-					(List.map (fun r -> brxToLrx r) l)
-		| Brx.M.Rep (r, n, None) ->
-				let r = brxToLrx r in L.RegExConcat(L.iterateNTimes n r, L.RegExStar r)
-		| Brx.M.Rep (r, m, Some n) -> L.iterateMtoNTimes m n (brxToLrx r)
-		| _ -> failwith "No support for intersection or differences in lenssynth"
+		  | Brx.M.CSet l -> (L.charSet l,rc)
+	    | Brx.M.Seq (r1, r2) ->
+         let (r1,rc) = brxToLrx r1 rc in
+         let (r2,rc) = brxToLrx r2 rc in
+         (L.RegExConcat(r1, r2),rc)
+		  | Brx.M.Alt l ->
+		    (List.fold_left
+		      (fun (r1,rc) x ->
+            let (r2,rc) = brxToLrx x rc in
+            (if r1 = L.RegExEmpty then (r2,rc) else L.RegExOr(r1, r2),rc))
+          (L.RegExEmpty,rc)
+          l)
+		  | Brx.M.Rep (r, n, None) ->
+		    let (r,rc) = brxToLrx r rc in
+        (L.RegExConcat(L.iterateNTimes n r, L.RegExStar r),rc)
+	    | Brx.M.Rep (r, m, Some n) ->
+        let (r,rc) = brxToLrx r rc in
+        (L.iterateMtoNTimes m n r, rc)
+      | Brx.M.Box (i,r) ->
+        let (rx,rc) = brxToLrx r rc in
+        let rc =
+          RegexContext.insert_exn
+            rc
+            (string_of_int i)
+            rx
+            false
+        in
+        (rx,rc)
+		  | _ -> failwith "No support for intersection or differences in lenssynth"
 	
 	let getStrings (l : V.t list) : (string * string) list =
 		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
@@ -603,10 +626,11 @@ module Bridge = struct
 							| V.Rx (_, r2) ->
 									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
 											match l with
-											| V.Vnt (_, _, _, _) ->
-													let s1, s2 = brxToLrx r1, brxToLrx r2 in
+						            | V.Vnt (_, _, _, _) ->
+                          let (s1,rc) = brxToLrx r1 RegexContext.empty in
+													let (s2,rc) = brxToLrx r2 rc in
 													let l = getStrings (toList l []) in
-													let lens = gen_lens RegexContext.empty LensContext.empty s1 s2 l in
+													let lens = gen_lens rc LensContext.empty s1 s2 l in
 													let lens = match lens with
 														| None -> failwith "Could not synthesize lens"
 														| Some lens -> lens in
@@ -735,6 +759,13 @@ module Bridge = struct
 					(fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (intersperse c cs) ss in
 			String.concat "" ss in BL.Canonizer.normalize info whole kernel f
 	
+	let get_box : G.rs * V.t =
+		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
+			match v with
+			| V.Rx (i, r) -> V.Rx (i, Brx.mk_box r)
+			| _ -> failwith "Wrong Arguments for box" in
+		(G.Sort (SFunction ((Id.mk info "box"), SRegexp, SRegexp)), V.Fun (info, g))
+	
 	let get_id : G.rs * V.t =
 		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
 			match v with
@@ -778,11 +809,11 @@ module Bridge = struct
 							| V.Can (_, c2) ->
 									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
 											match l with
-											| V.Vnt (_, _, _, _) ->
-													let s1, s2 = brxToLrx (BL.Canonizer.canonized_type c1),
-														brxToLrx (BL.Canonizer.canonized_type c2) in
+						 | V.Vnt (_, _, _, _) ->
+                          let (s1,rc) = brxToLrx (BL.Canonizer.canonized_type c1) RegexContext.empty in
+													let (s2,rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc in
 													let l = getStrings (toList l []) in
-													let lens = gen_lens RegexContext.empty LensContext.empty s1 s2 l in
+													let lens = gen_lens rc LensContext.empty s1 s2 l in
 													let lens = match lens with
 														| None -> failwith "Could not synth_from_regexp lens"
 														| Some lens -> sLensTobLens lens in
@@ -824,7 +855,8 @@ let interp_module m0 = match m0 with
 			let new_cev = CEnv.push_ctx new_cev Bridge.id in
 			let new_cev = CEnv.update new_cev Bridge.id Bridge.get_id in
 			let new_cev = CEnv.push_ctx new_cev Bridge.synth_can in
-			let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
+	 let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
+   let new_cev = CEnv.update new_cev Bridge.box Bridge.get_box in
 			let new_cev, _ = interp_mod_aux wqo new_cev [m] ds in
 			(* let trying id (_, v) _ : unit = print_string (Bridge.vtoString id v) in *)
 			(* let _ = CEnv.fold trying new_cev () in                                  *)

@@ -505,6 +505,8 @@ and check_exp ?(in_let=false) sev e0 =
 	      SAregexp, "aregexp_concat";
 	      SLens, "lens_concat";
 	      SCanonizer, "canonizer_concat" ]
+    ; OBox,
+      [SRegexp, "box"]
 	  ; OTilde,
 	    [ SLens, "lens_swap";
 	      SCanonizer, "canonizer_swap" ] 
@@ -632,10 +634,18 @@ and check_exp ?(in_let=false) sev e0 =
                 let rules = try Safelist.assoc op bin_rules with _ -> err () in 
                   match find_rule rules rs with 
                     | Some op_id ->
-			let r_op = check_exp sev (mk_core_var i op_id) in
-                        check_exp_app i sev (check_exp_app i sev r_op r1) r2
-		    | None -> err ()
-	      end
+			                let r_op = check_exp sev (mk_core_var i op_id) in
+                     check_exp_app i sev (check_exp_app i sev r_op r1) r2
+		                | None -> err ()
+	            end
+            | op,[r1] -> begin
+                let rules = try Safelist.assoc op bin_rules with _ -> err () in 
+                  match find_rule rules rs with 
+                    | Some op_id ->
+			                let r_op = check_exp sev (mk_core_var i op_id) in
+                     (check_exp_app i sev r_op r1)
+		                | None -> err ()
+	            end
             | _ -> err () in 
 	  (op_s,op_e)
       end

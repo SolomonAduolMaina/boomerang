@@ -299,6 +299,7 @@ and format_op = function
   | OGeq    -> msg ">="
   | OMatch -> msg "< : >"
   | OWeight -> msg "{: : }"
+  | OBox -> msg "{}"
 
 and format_prod (Prod(_,x,rs)) =
   msg "@[%s@ ::= @[" (Id.string_of_t x);
