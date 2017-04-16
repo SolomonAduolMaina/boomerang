@@ -110,6 +110,12 @@ and exp =
     (* grammar *)
     | EGrammar of Info.t * prod list
 
+		(* canonizer primitives *)
+    | EPerm of Info.t * exp * exp
+    | EProject of Info.t * exp * exp
+    | EId of Info.t * exp
+
+
 (* overloaded operators *)
 and op = 
   | OIter of int * int
@@ -178,6 +184,9 @@ let exp_of_binding b0 = match b0 with
   | Bind(_,_,_,e) -> e
 
 let rec info_of_exp e = match e with 
+	| EPerm		 (i,_,_)		 -> i
+	| EProject (i,_,_)		 -> i
+	| EId 		 (i,_)		 -> i 
   | EApp     (i,_,_)     -> i
   | EVar     (i,_)       -> i
   | EOver    (i,_,_)     -> i

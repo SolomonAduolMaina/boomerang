@@ -99,6 +99,12 @@ and exp =
 
     (* grammar *)
     | EGrammar of Info.t * prod list
+
+		(* canonizer primitives *)
+    | EPerm of Info.t * exp * exp
+		| EProject of Info.t * exp * exp
+		| EId of Info.t * exp
+		
 (** Expression abstract syntax. *)
 
 and op = 

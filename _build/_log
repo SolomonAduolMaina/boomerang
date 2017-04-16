@@ -1,8 +1,8 @@
 ### Starting build.
 # Target: lenssynth/lenssynth.cma, tags: { annot, bin_annot, byte, debug, extension:cma, file:lenssynth/lenssynth.cma, library, link, ocaml, quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -a -thread -o lenssynth/lenssynth.cma
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -a -thread -o lenssynth/lenssynth.cma # cached
 # Target: lenssynth/lenssynth.cmxa, tags: { annot, bin_annot, debug, extension:cmxa, file:lenssynth/lenssynth.cmxa, library, link, native, ocaml, quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -a -thread -o lenssynth/lenssynth.cmxa
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -a -thread -o lenssynth/lenssynth.cmxa # cached
 # Target: lenssynth/lenssynth.cmxs, tags: { annot, bin_annot, debug, extension:cmxs, file:lenssynth/lenssynth.cmxs, library, link, native, ocaml, quiet, shared, thread, traverse, use_lenssynth }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -shared -thread lenssynth/lenssynth.cmxa -o lenssynth/lenssynth.cmxs
 # Target: ubase/myMap.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:ubase/myMap.mli, ocaml, ocamldep, quiet, thread, traverse }
@@ -298,19 +298,17 @@
 # Target: lib/blexer.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:lib/blexer.mli, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/blexer.mli > lib/blexer.mli.depends # cached
 # Target: lib/bparser.mly, tags: { annot, bin_annot, debug, extension:mly, file:lib/bparser.mly, infer, ocaml, ocamlyacc, package(core), package(str), package(threads), package(unix), parser, quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/usr/bin/ocamlyacc lib/bparser.mly # cached
+/usr/bin/ocamlyacc lib/bparser.mly
 # Target: lib/bparser.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:lib/bparser.mli, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bparser.mli > lib/bparser.mli.depends # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bparser.mli > lib/bparser.mli.depends
 # Target: lib/bparser.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/bparser.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmi lib/bparser.mli # cached
-# Target: lib/blexer.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/blexer.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmi lib/blexer.mli # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmi lib/bparser.mli
 # Target: hbase/src2fcl.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:hbase/src2fcl.mli, ocaml, ocamldep, package(unix), quiet, thread, traverse, use_hbase, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -modules hbase/src2fcl.mli > hbase/src2fcl.mli.depends # cached
 # Target: hbase/src2fcl.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:hbase/src2fcl.mli, interf, ocaml, package(unix), quiet, thread, traverse, use_hbase, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I ubase -I hbase -package unix -I hbase -I ubase -o hbase/src2fcl.cmi hbase/src2fcl.mli # cached
-# Target: lib/bdriver.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bdriver.cmo, file:lib/bdriver.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bdriver.cmo lib/bdriver.ml # cached
+# Target: lib/blexer.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/blexer.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmi lib/blexer.mli
 # Target: lib/benv.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/benv.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/benv.ml > lib/benv.ml.depends # cached
 # Target: lib/benv.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/benv.cmo, file:lib/benv.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
@@ -324,121 +322,119 @@
 # Target: lib/bident.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bident.cmo, file:lib/bident.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bident.cmo lib/bident.ml # cached
 # Target: lib/binterp.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/binterp.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/binterp.ml > lib/binterp.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/binterp.ml > lib/binterp.ml.depends # cached
 # Target: lenssynth/gen.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/gen.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/gen.ml > lenssynth/gen.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/gen.ml > lenssynth/gen.ml.depends # cached
 # Target: lenssynth/consts.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/consts.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/consts.ml > lenssynth/consts.ml.depends
-# Target: lenssynth/converter.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/converter.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/converter.ml > lenssynth/converter.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/consts.ml > lenssynth/consts.ml.depends # cached
 # Target: lenssynth/consts.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/consts.cmo, file:lenssynth/consts.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/consts.cmo lenssynth/consts.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/consts.cmo lenssynth/consts.ml # cached
+# Target: lenssynth/converter.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/converter.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/converter.ml > lenssynth/converter.ml.depends # cached
 # Target: lenssynth/eval.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/eval.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/eval.ml > lenssynth/eval.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/eval.ml > lenssynth/eval.ml.depends # cached
 # Target: lenssynth/lang.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lang.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lang.ml > lenssynth/lang.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lang.ml > lenssynth/lang.ml.depends # cached
 # Target: lenssynth/permutation.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/permutation.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/permutation.ml > lenssynth/permutation.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/permutation.ml > lenssynth/permutation.ml.depends # cached
 # Target: lenssynth/util1.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/util1.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/util1.ml > lenssynth/util1.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/util1.ml > lenssynth/util1.ml.depends # cached
 # Target: lenssynth/util1.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/util1.cmo, file:lenssynth/util1.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/util1.cmo lenssynth/util1.ml
-# Target: lenssynth/string_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/string_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/string_utilities.ml > lenssynth/string_utilities.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/util1.cmo lenssynth/util1.ml # cached
 # Target: lenssynth/permutation.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/permutation.cmo, file:lenssynth/permutation.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/permutation.cmo lenssynth/permutation.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/permutation.cmo lenssynth/permutation.ml # cached
+# Target: lenssynth/string_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/string_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/string_utilities.ml > lenssynth/string_utilities.ml.depends # cached
 # Target: lenssynth/string_utilities.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/string_utilities.cmo, file:lenssynth/string_utilities.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/string_utilities.cmo lenssynth/string_utilities.ml
-# Target: lenssynth/normalized_lang.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/normalized_lang.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/normalized_lang.ml > lenssynth/normalized_lang.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/string_utilities.cmo lenssynth/string_utilities.ml # cached
 # Target: lenssynth/lang.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/lang.cmo, file:lenssynth/lang.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lang.cmo lenssynth/lang.ml
-# Target: lenssynth/regexcontext.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/regexcontext.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/regexcontext.ml > lenssynth/regexcontext.ml.depends
-# Target: lenssynth/dict.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/dict.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/dict.ml > lenssynth/dict.ml.depends
-# Target: lenssynth/dict.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/dict.cmo, file:lenssynth/dict.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/dict.cmo lenssynth/dict.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lang.cmo lenssynth/lang.ml # cached
+# Target: lenssynth/normalized_lang.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/normalized_lang.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/normalized_lang.ml > lenssynth/normalized_lang.ml.depends # cached
 # Target: lenssynth/normalized_lang.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/normalized_lang.cmo, file:lenssynth/normalized_lang.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/normalized_lang.cmo lenssynth/normalized_lang.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/normalized_lang.cmo lenssynth/normalized_lang.ml # cached
+# Target: lenssynth/regexcontext.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/regexcontext.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/regexcontext.ml > lenssynth/regexcontext.ml.depends # cached
+# Target: lenssynth/dict.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/dict.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/dict.ml > lenssynth/dict.ml.depends # cached
+# Target: lenssynth/dict.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/dict.cmo, file:lenssynth/dict.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/dict.cmo lenssynth/dict.ml # cached
 # Target: lenssynth/regexcontext.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/regexcontext.cmo, file:lenssynth/regexcontext.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regexcontext.cmo lenssynth/regexcontext.ml
-# Target: lenssynth/lens_put.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lens_put.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lens_put.ml > lenssynth/lens_put.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regexcontext.cmo lenssynth/regexcontext.ml # cached
 # Target: lenssynth/eval.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/eval.cmo, file:lenssynth/eval.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/eval.cmo lenssynth/eval.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/eval.cmo lenssynth/eval.ml # cached
+# Target: lenssynth/lens_put.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lens_put.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lens_put.ml > lenssynth/lens_put.ml.depends # cached
 # Target: lenssynth/lenscontext.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lenscontext.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lenscontext.ml > lenssynth/lenscontext.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lenscontext.ml > lenssynth/lenscontext.ml.depends # cached
 # Target: lenssynth/disjointset.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/disjointset.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/disjointset.ml > lenssynth/disjointset.ml.depends
-# Target: lenssynth/lens_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lens_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lens_utilities.ml > lenssynth/lens_utilities.ml.depends
-# Target: lenssynth/regex_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/regex_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/regex_utilities.ml > lenssynth/regex_utilities.ml.depends
-# Target: lenssynth/regex_utilities.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/regex_utilities.cmo, file:lenssynth/regex_utilities.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regex_utilities.cmo lenssynth/regex_utilities.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/disjointset.ml > lenssynth/disjointset.ml.depends # cached
 # Target: lenssynth/disjointset.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/disjointset.cmo, file:lenssynth/disjointset.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/disjointset.cmo lenssynth/disjointset.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/disjointset.cmo lenssynth/disjointset.ml # cached
+# Target: lenssynth/lens_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/lens_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/lens_utilities.ml > lenssynth/lens_utilities.ml.depends # cached
+# Target: lenssynth/regex_utilities.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/regex_utilities.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/regex_utilities.ml > lenssynth/regex_utilities.ml.depends # cached
+# Target: lenssynth/regex_utilities.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/regex_utilities.cmo, file:lenssynth/regex_utilities.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regex_utilities.cmo lenssynth/regex_utilities.ml # cached
 # Target: lenssynth/lens_utilities.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/lens_utilities.cmo, file:lenssynth/lens_utilities.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_utilities.cmo lenssynth/lens_utilities.ml
-# Target: lenssynth/typing.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/typing.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/typing.ml > lenssynth/typing.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_utilities.cmo lenssynth/lens_utilities.ml # cached
 # Target: lenssynth/lenscontext.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/lenscontext.cmo, file:lenssynth/lenscontext.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lenscontext.cmo lenssynth/lenscontext.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lenscontext.cmo lenssynth/lenscontext.ml # cached
+# Target: lenssynth/typing.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/typing.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/typing.ml > lenssynth/typing.ml.depends # cached
 # Target: lenssynth/typing.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/typing.cmo, file:lenssynth/typing.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/typing.cmo lenssynth/typing.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/typing.cmo lenssynth/typing.ml # cached
 # Target: lenssynth/lens_put.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/lens_put.cmo, file:lenssynth/lens_put.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_put.cmo lenssynth/lens_put.ml
-# Target: lenssynth/naive_gen.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/naive_gen.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/naive_gen.ml > lenssynth/naive_gen.ml.depends
-# Target: lenssynth/priority_queue_two.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/priority_queue_two.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/priority_queue_two.ml > lenssynth/priority_queue_two.ml.depends
-# Target: lenssynth/comparison_heap.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/comparison_heap.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/comparison_heap.ml > lenssynth/comparison_heap.ml.depends
-# Target: lenssynth/comparison_set.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/comparison_set.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/comparison_set.ml > lenssynth/comparison_set.ml.depends
-# Target: lenssynth/comparison_heap.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/comparison_heap.cmo, file:lenssynth/comparison_heap.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_heap.cmo lenssynth/comparison_heap.ml
-# Target: lenssynth/comparison_set.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/comparison_set.cmo, file:lenssynth/comparison_set.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_set.cmo lenssynth/comparison_set.ml
-# Target: lenssynth/transform.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/transform.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/transform.ml > lenssynth/transform.ml.depends
-# Target: lenssynth/counters.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/counters.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/counters.ml > lenssynth/counters.ml.depends
-# Target: lenssynth/language_equivalences.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/language_equivalences.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/language_equivalences.ml > lenssynth/language_equivalences.ml.depends
-# Target: lenssynth/priority_queue_two.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/priority_queue_two.cmo, file:lenssynth/priority_queue_two.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/priority_queue_two.cmo lenssynth/priority_queue_two.ml
-# Target: lenssynth/counters.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/counters.cmo, file:lenssynth/counters.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/counters.cmo lenssynth/counters.ml
-# Target: lenssynth/language_equivalences.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/language_equivalences.cmo, file:lenssynth/language_equivalences.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/language_equivalences.cmo lenssynth/language_equivalences.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_put.cmo lenssynth/lens_put.ml # cached
 # Target: lenssynth/converter.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/converter.cmo, file:lenssynth/converter.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/converter.cmo lenssynth/converter.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/converter.cmo lenssynth/converter.ml # cached
+# Target: lenssynth/naive_gen.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/naive_gen.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/naive_gen.ml > lenssynth/naive_gen.ml.depends # cached
 # Target: lenssynth/naive_gen.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/naive_gen.cmo, file:lenssynth/naive_gen.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/naive_gen.cmo lenssynth/naive_gen.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/naive_gen.cmo lenssynth/naive_gen.ml # cached
+# Target: lenssynth/priority_queue_two.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/priority_queue_two.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/priority_queue_two.ml > lenssynth/priority_queue_two.ml.depends # cached
+# Target: lenssynth/comparison_heap.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/comparison_heap.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/comparison_heap.ml > lenssynth/comparison_heap.ml.depends # cached
+# Target: lenssynth/comparison_heap.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/comparison_heap.cmo, file:lenssynth/comparison_heap.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_heap.cmo lenssynth/comparison_heap.ml # cached
+# Target: lenssynth/comparison_set.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/comparison_set.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/comparison_set.ml > lenssynth/comparison_set.ml.depends # cached
+# Target: lenssynth/comparison_set.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/comparison_set.cmo, file:lenssynth/comparison_set.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_set.cmo lenssynth/comparison_set.ml # cached
+# Target: lenssynth/priority_queue_two.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/priority_queue_two.cmo, file:lenssynth/priority_queue_two.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/priority_queue_two.cmo lenssynth/priority_queue_two.ml # cached
+# Target: lenssynth/transform.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/transform.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/transform.ml > lenssynth/transform.ml.depends # cached
+# Target: lenssynth/counters.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/counters.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/counters.ml > lenssynth/counters.ml.depends # cached
+# Target: lenssynth/counters.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/counters.cmo, file:lenssynth/counters.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/counters.cmo lenssynth/counters.ml # cached
+# Target: lenssynth/language_equivalences.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lenssynth/language_equivalences.ml, ocaml, ocamldep, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package core -modules lenssynth/language_equivalences.ml > lenssynth/language_equivalences.ml.depends # cached
+# Target: lenssynth/language_equivalences.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/language_equivalences.cmo, file:lenssynth/language_equivalences.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/language_equivalences.cmo lenssynth/language_equivalences.ml # cached
 # Target: lenssynth/transform.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/transform.cmo, file:lenssynth/transform.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/transform.cmo lenssynth/transform.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/transform.cmo lenssynth/transform.ml # cached
+# Target: lenssynth/gen.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/gen.cmo, file:lenssynth/gen.ml, implem, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/gen.cmo lenssynth/gen.ml # cached
 # Target: lib/workqueue.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:lib/workqueue.mli, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/workqueue.mli > lib/workqueue.mli.depends # cached
 # Target: lib/workqueue.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/workqueue.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/workqueue.cmi lib/workqueue.mli # cached
-# Target: lenssynth/gen.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lenssynth/gen.cmo, file:lenssynth/gen.ml, implem, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/gen.cmo lenssynth/gen.ml
+# Target: lib/binterp.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/binterp.cmo, file:lib/binterp.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/binterp.cmo lib/binterp.ml # cached
 # Target: lib/blenses.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/blenses.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/blenses.ml > lib/blenses.ml.depends # cached
 # Target: lib/blenses.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/blenses.cmo, file:lib/blenses.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blenses.cmo lib/blenses.ml # cached
 # Target: lib/blexer.mll, tags: { annot, bin_annot, debug, extension:mll, file:lib/blexer.mll, lexer, ocaml, ocamllex, quiet, thread, traverse }
-/usr/bin/ocamllex -q lib/blexer.mll # cached
+/usr/bin/ocamllex -q lib/blexer.mll
 # Target: lib/blexer.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/blexer.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/blexer.ml > lib/blexer.ml.depends # cached
-# Target: lib/blexer.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/blexer.cmo, file:lib/blexer.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmo lib/blexer.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/blexer.ml > lib/blexer.ml.depends
 # Target: lib/bparser.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/bparser.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bparser.ml > lib/bparser.ml.depends # cached
-# Target: lib/bparser.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bparser.cmo, file:lib/bparser.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmo lib/bparser.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bparser.ml > lib/bparser.ml.depends
 # Target: lib/bprint.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/bprint.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bprint.ml > lib/bprint.ml.depends # cached
 # Target: lib/bprint.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bprint.cmo, file:lib/bprint.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
@@ -449,8 +445,6 @@
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/bakery.mli > lib/bakery.mli.depends # cached
 # Target: lib/bakery.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/bakery.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bakery.cmi lib/bakery.mli # cached
-# Target: lib/bregistry.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bregistry.cmo, file:lib/bregistry.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bregistry.cmo lib/bregistry.ml # cached
 # Target: lib/brx.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/brx.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/brx.ml > lib/brx.ml.depends # cached
 # Target: lib/brx.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/brx.cmo, file:lib/brx.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
@@ -507,8 +501,14 @@
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/workqueue.ml > lib/workqueue.ml.depends # cached
 # Target: lib/workqueue.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/workqueue.cmo, file:lib/workqueue.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/workqueue.cmo lib/workqueue.ml # cached
-# Target: lib/binterp.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/binterp.cmo, file:lib/binterp.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/binterp.cmo lib/binterp.ml
+# Target: lib/bdriver.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bdriver.cmo, file:lib/bdriver.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bdriver.cmo lib/bdriver.ml
+# Target: lib/blexer.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/blexer.cmo, file:lib/blexer.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmo lib/blexer.ml
+# Target: lib/bparser.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bparser.cmo, file:lib/bparser.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmo lib/bparser.ml
+# Target: lib/bregistry.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bregistry.cmo, file:lib/bregistry.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bregistry.cmo lib/bregistry.ml
 # Target: lib/boomerang.cma, tags: { annot, bin_annot, byte, debug, extension:cma, file:lib/boomerang.cma, library, link, ocaml, quiet, thread, traverse }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -a -thread lib/amapblist.cmo lib/bannot.cmo lib/berror.cmo lib/bident.cmo lib/bsyntax.cmo lib/bprint.cmo lib/intmapa.cmo lib/brx.cmo lib/bcost.cmo lib/btag.cmo lib/bstring.cmo lib/barx.cmo lib/balign.cmo lib/blenses.cmo lib/bparser.cmo lib/blexer.cmo lib/bsubst.cmo lib/bvalue.cmo lib/bregistry.cmo lib/benv.cmo lib/bcheck.cmo lib/bdiff3.cmo lib/workqueue.cmo lib/binterp.cmo lib/bdriver.cmo lib/erx.cmo lib/bsync.cmo lib/toplevel.cmo -o lib/boomerang.cma
 # Target: lib/amapblist.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/amapblist.cmx, file:lib/amapblist.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
@@ -544,71 +544,71 @@
 # Target: lib/blenses.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/blenses.cmx, file:lib/blenses.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blenses.cmx lib/blenses.ml # cached
 # Target: lib/bparser.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bparser.cmx, file:lib/bparser.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmx lib/bparser.ml # cached
-# Target: lib/blexer.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/blexer.cmx, file:lib/blexer.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmx lib/blexer.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bparser.cmx lib/bparser.ml
 # Target: lib/bsubst.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bsubst.cmx, file:lib/bsubst.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bsubst.cmx lib/bsubst.ml # cached
 # Target: lib/bvalue.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bvalue.cmx, file:lib/bvalue.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bvalue.cmx lib/bvalue.ml # cached
+# Target: lib/blexer.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/blexer.cmx, file:lib/blexer.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/blexer.cmx lib/blexer.ml
 # Target: lib/bregistry.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bregistry.cmx, file:lib/bregistry.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bregistry.cmx lib/bregistry.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bregistry.cmx lib/bregistry.ml
 # Target: lib/benv.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/benv.cmx, file:lib/benv.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/benv.cmx lib/benv.ml # cached
-# Target: lib/bcheck.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bcheck.cmx, file:lib/bcheck.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bcheck.cmx lib/bcheck.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/benv.cmx lib/benv.ml
 # Target: lib/bdiff3.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bdiff3.cmx, file:lib/bdiff3.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bdiff3.cmx lib/bdiff3.ml # cached
+# Target: lib/bcheck.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/bcheck.cmx, file:lib/bcheck.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bcheck.cmx lib/bcheck.ml
 # Target: lenssynth/consts.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/consts.cmx, file:lenssynth/consts.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/consts.cmx lenssynth/consts.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/consts.cmx lenssynth/consts.ml # cached
 # Target: lenssynth/util1.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/util1.cmx, file:lenssynth/util1.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/util1.cmx lenssynth/util1.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/util1.cmx lenssynth/util1.ml # cached
 # Target: lenssynth/permutation.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/permutation.cmx, file:lenssynth/permutation.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/permutation.cmx lenssynth/permutation.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/permutation.cmx lenssynth/permutation.ml # cached
 # Target: lenssynth/string_utilities.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/string_utilities.cmx, file:lenssynth/string_utilities.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/string_utilities.cmx lenssynth/string_utilities.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/string_utilities.cmx lenssynth/string_utilities.ml # cached
 # Target: lenssynth/lang.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/lang.cmx, file:lenssynth/lang.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lang.cmx lenssynth/lang.ml
-# Target: lenssynth/dict.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/dict.cmx, file:lenssynth/dict.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/dict.cmx lenssynth/dict.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lang.cmx lenssynth/lang.ml # cached
 # Target: lenssynth/normalized_lang.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/normalized_lang.cmx, file:lenssynth/normalized_lang.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/normalized_lang.cmx lenssynth/normalized_lang.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/normalized_lang.cmx lenssynth/normalized_lang.ml # cached
+# Target: lenssynth/dict.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/dict.cmx, file:lenssynth/dict.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/dict.cmx lenssynth/dict.ml # cached
 # Target: lenssynth/regexcontext.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/regexcontext.cmx, file:lenssynth/regexcontext.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regexcontext.cmx lenssynth/regexcontext.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regexcontext.cmx lenssynth/regexcontext.ml # cached
 # Target: lenssynth/eval.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/eval.cmx, file:lenssynth/eval.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/eval.cmx lenssynth/eval.ml
-# Target: lenssynth/regex_utilities.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/regex_utilities.cmx, file:lenssynth/regex_utilities.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regex_utilities.cmx lenssynth/regex_utilities.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/eval.cmx lenssynth/eval.ml # cached
 # Target: lenssynth/disjointset.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/disjointset.cmx, file:lenssynth/disjointset.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/disjointset.cmx lenssynth/disjointset.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/disjointset.cmx lenssynth/disjointset.ml # cached
+# Target: lenssynth/regex_utilities.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/regex_utilities.cmx, file:lenssynth/regex_utilities.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/regex_utilities.cmx lenssynth/regex_utilities.ml # cached
 # Target: lenssynth/lens_utilities.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/lens_utilities.cmx, file:lenssynth/lens_utilities.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_utilities.cmx lenssynth/lens_utilities.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_utilities.cmx lenssynth/lens_utilities.ml # cached
 # Target: lenssynth/lenscontext.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/lenscontext.cmx, file:lenssynth/lenscontext.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lenscontext.cmx lenssynth/lenscontext.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lenscontext.cmx lenssynth/lenscontext.ml # cached
 # Target: lenssynth/typing.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/typing.cmx, file:lenssynth/typing.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/typing.cmx lenssynth/typing.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/typing.cmx lenssynth/typing.ml # cached
 # Target: lenssynth/lens_put.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/lens_put.cmx, file:lenssynth/lens_put.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_put.cmx lenssynth/lens_put.ml
-# Target: lenssynth/comparison_heap.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/comparison_heap.cmx, file:lenssynth/comparison_heap.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_heap.cmx lenssynth/comparison_heap.ml
-# Target: lenssynth/comparison_set.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/comparison_set.cmx, file:lenssynth/comparison_set.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_set.cmx lenssynth/comparison_set.ml
-# Target: lenssynth/priority_queue_two.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/priority_queue_two.cmx, file:lenssynth/priority_queue_two.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/priority_queue_two.cmx lenssynth/priority_queue_two.ml
-# Target: lenssynth/counters.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/counters.cmx, file:lenssynth/counters.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/counters.cmx lenssynth/counters.ml
-# Target: lenssynth/language_equivalences.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/language_equivalences.cmx, file:lenssynth/language_equivalences.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/language_equivalences.cmx lenssynth/language_equivalences.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/lens_put.cmx lenssynth/lens_put.ml # cached
 # Target: lenssynth/converter.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/converter.cmx, file:lenssynth/converter.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/converter.cmx lenssynth/converter.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/converter.cmx lenssynth/converter.ml # cached
 # Target: lenssynth/naive_gen.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/naive_gen.cmx, file:lenssynth/naive_gen.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/naive_gen.cmx lenssynth/naive_gen.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/naive_gen.cmx lenssynth/naive_gen.ml # cached
+# Target: lenssynth/comparison_heap.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/comparison_heap.cmx, file:lenssynth/comparison_heap.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_heap.cmx lenssynth/comparison_heap.ml # cached
+# Target: lenssynth/comparison_set.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/comparison_set.cmx, file:lenssynth/comparison_set.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/comparison_set.cmx lenssynth/comparison_set.ml # cached
+# Target: lenssynth/priority_queue_two.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/priority_queue_two.cmx, file:lenssynth/priority_queue_two.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/priority_queue_two.cmx lenssynth/priority_queue_two.ml # cached
+# Target: lenssynth/counters.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/counters.cmx, file:lenssynth/counters.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/counters.cmx lenssynth/counters.ml # cached
+# Target: lenssynth/language_equivalences.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/language_equivalences.cmx, file:lenssynth/language_equivalences.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/language_equivalences.cmx lenssynth/language_equivalences.ml # cached
 # Target: lenssynth/transform.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/transform.cmx, file:lenssynth/transform.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/transform.cmx lenssynth/transform.ml
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/transform.cmx lenssynth/transform.ml # cached
+# Target: lenssynth/gen.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/gen.cmx, file:lenssynth/gen.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/gen.cmx lenssynth/gen.ml # cached
 # Target: lib/workqueue.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lib/workqueue.cmx, file:lib/workqueue.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/workqueue.cmx lib/workqueue.ml # cached
-# Target: lenssynth/gen.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenssynth/gen.cmx, file:lenssynth/gen.ml, implem, native, ocaml, package(core), quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -package core -I lenssynth -o lenssynth/gen.cmx lenssynth/gen.ml
 # Target: hbase/src2fcl.mll, tags: { annot, bin_annot, debug, extension:mll, file:hbase/src2fcl.mll, lexer, ocaml, ocamllex, quiet, thread, traverse }
 /usr/bin/ocamllex -q hbase/src2fcl.mll # cached
 # Target: hbase/src2fcl.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:hbase/src2fcl.ml, ocaml, ocamldep, package(unix), quiet, thread, traverse, use_hbase, use_ubase }
@@ -636,9 +636,9 @@
 # Target: lenses/lenses.cma, tags: { annot, bin_annot, byte, debug, extension:cma, file:lenses/lenses.cma, library, link, ocaml, quiet, thread, traverse }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -a -thread lenses/prelude.cmo -o lenses/lenses.cma # cached
 # Target: lenses/prelude.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:lenses/prelude.cmx, file:lenses/prelude.ml, implem, native, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_boomerang, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -I lib -thread -package unix -package threads -package str -package core -I lenses -I hbase -I lib -o lenses/prelude.cmx lenses/prelude.ml # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -I lib -thread -package unix -package threads -package str -package core -I lenses -I hbase -I lib -o lenses/prelude.cmx lenses/prelude.ml
 # Target: lenses/lenses.cmxa, tags: { annot, bin_annot, debug, extension:cmxa, file:lenses/lenses.cmxa, library, link, native, ocaml, quiet, thread, traverse }
-/home/solomon/.opam/system/bin/ocamlfind ocamlopt -a -thread lenses/prelude.cmx -o lenses/lenses.cmxa # cached
+/home/solomon/.opam/system/bin/ocamlfind ocamlopt -a -thread lenses/prelude.cmx -o lenses/lenses.cmxa
 # Target: lenses/lenses.cmxs, tags: { annot, bin_annot, debug, extension:cmxs, file:lenses/lenses.cmxs, library, link, native, ocaml, quiet, shared, thread, traverse, use_lenses }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -shared -thread lenses/lenses.cmxa lenses/prelude.cmx -o lenses/lenses.cmxs
 # Target: boomerang/boomerang.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:boomerang/boomerang.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_boomerang, use_hbase, use_lenses, use_lenssynth, use_ubase }
@@ -657,5 +657,5 @@
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I ubase -I hbase -package unix -I hbase -I ubase -o hbase/baker.cmx hbase/baker.ml # cached
 # Target: hbase/baker.native, tags: { annot, bin_annot, debug, dont_link_with, extension:native, file:hbase/baker.native, link, native, ocaml, package(unix), program, quiet, thread, traverse, use_hbase, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -linkpkg -g -thread -linkpkg -package unix ubase/ubase.cmxa hbase/hbase.cmxa hbase/baker.cmx -o hbase/baker.native # cached
-# Parallel statistics: { count(total): 12(316), max: 3, min: 2, average(total): 2.167(1.044) }
+# Parallel statistics: { count(total): 1(327), max: 4, min: 4, average(total): 4.000(1.009) }
 # Compilation successful.

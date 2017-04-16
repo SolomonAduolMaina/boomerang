@@ -131,6 +131,10 @@ let _ =
     ; ("true", (fun i -> BOOLEAN(i,true)))
     ; ("false", (fun i -> BOOLEAN(i,false)))
     ; ("cex", (fun i -> CEX i))
+		; ("perm", (fun i -> PERM i))
+		; ("project", (fun i -> PROJECT i))
+		; ("with", (fun i -> WITH i))
+		; ("id", (fun i -> ID i))
     ]
 }
 
@@ -146,6 +150,9 @@ let string = '"' [^'"']* '"'
 rule main = parse
 | whitespace         { main lexbuf }
 | "*)"               { error lexbuf "this is not the end of a comment" }
+| "("                { LPAREN(info lexbuf) }
+| ")"                { RPAREN(info lexbuf) }
+| ";"                { SEMI(info lexbuf) }
 | "("                { LPAREN(info lexbuf) }
 | ")"                { RPAREN(info lexbuf) }
 | ";"                { SEMI(info lexbuf) }

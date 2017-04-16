@@ -133,7 +133,25 @@ and format_binding b0 = match b0 with
       format_exp e;
       msg "@]"
         
-and format_exp e0 = match e0 with 
+and format_exp e0 = match e0 with
+	| EProject (_,e1,e2) ->
+      msg "@[<2>(project";
+      format_exp e1;
+      msg "@ |->";
+      format_exp e2;
+      msg ")@]"
+			
+	| EPerm (_,e1,e2) ->
+      msg "@[<2>(perm";
+      format_exp e1;
+      msg "@ with";
+      format_exp e2;
+      msg ")@]"
+			
+	| EId (_,e1) ->
+      msg "@[<2>(id";
+      format_exp e1
+			
   | EApp (_,e1,e2) ->
       msg "@[<2>(";
       format_exp e1;

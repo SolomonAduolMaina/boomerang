@@ -67,6 +67,15 @@ and free_svars_sort acc = function
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ ->
       acc
 and free_svars_exp acc = function
+	| EPerm(_,e1,e2) -> 
+      let acc1 = free_svars_exp acc e1 in 
+      let acc2 = free_svars_exp acc1 e2 in 
+      acc2
+	| EProject(_,e1,e2) -> 
+      let acc1 = free_svars_exp acc e1 in 
+      let acc2 = free_svars_exp acc1 e2 in 
+      acc2
+	| EId(_,e1) -> free_svars_exp acc e1
   | EApp(_,e1,e2) -> 
       let acc1 = free_svars_exp acc e1 in 
       let acc2 = free_svars_exp acc1 e2 in 
@@ -191,7 +200,18 @@ and subst_svars_sort subst s0 = match s0 with
       SForall(fresh_a,new_s1)
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ -> 
       s0
-and subst_svars_exp subst e0 = match e0 with 
+and subst_svars_exp subst e0 = match e0 with
+	| EProject(i,e1,e2) -> 
+      let new_e1 = subst_svars_exp subst e1 in 
+      let new_e2 = subst_svars_exp subst e2 in 
+      EProject(i,new_e1,new_e2)
+	| EPerm(i,e1,e2) -> 
+      let new_e1 = subst_svars_exp subst e1 in 
+      let new_e2 = subst_svars_exp subst e2 in 
+      EPerm(i,new_e1,new_e2)
+	| EId(i,e1) -> 
+      let new_e1 = subst_svars_exp subst e1 in 
+      EId(i,new_e1) 
   | EApp(i,e1,e2) -> 
       let new_e1 = subst_svars_exp subst e1 in 
       let new_e2 = subst_svars_exp subst e2 in 
@@ -296,6 +316,15 @@ and free_evars_sort acc = function
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SVar _ | SPrefs _ -> 
       acc
 and free_evars_exp acc = function
+	| EProject(_,e1,e2) -> 
+      let acc1 = free_evars_exp acc e1 in 
+      let acc2 = free_evars_exp acc1 e2 in
+      acc2
+	| EPerm(_,e1,e2) -> 
+      let acc1 = free_evars_exp acc e1 in 
+      let acc2 = free_evars_exp acc1 e2 in
+      acc2
+	| EId(_,e1) -> free_evars_exp acc e1
   | EVar(_,q) -> 
       Qid.Set.add q acc
   | EApp(_,e1,e2) -> 
@@ -488,6 +517,17 @@ and subst_evars_exp subst e0 = match e0 with
       let new_e1 = subst_evars_exp subst e1 in 
       let new_e2 = subst_evars_exp subst e2 in 
       EApp(i,new_e1,new_e2) 
+	| EProject(i,e1,e2) -> 
+      let new_e1 = subst_evars_exp subst e1 in 
+      let new_e2 = subst_evars_exp subst e2 in 
+      EProject(i,new_e1,new_e2) 
+	| EPerm(i,e1,e2) -> 
+      let new_e1 = subst_evars_exp subst e1 in 
+      let new_e2 = subst_evars_exp subst e2 in 
+      EPerm(i,new_e1,new_e2)
+	| EId(i,e1) -> 
+      let new_e1 = subst_evars_exp subst e1 in 
+      EId(i,new_e1) 
   | EOver(i,o,el) -> 
       let new_el = Safelist.map (subst_evars_exp subst) el in 
       EOver(i,o,new_el)
@@ -816,7 +856,18 @@ and qualify_exp resolve bound e0 = match e0 with
   | EApp(i,e1,e2) -> 
       let new_e1 = qualify_exp resolve bound e1 in 
       let new_e2 = qualify_exp resolve bound e2 in 
-      EApp(i,new_e1,new_e2) 
+      EApp(i,new_e1,new_e2)
+	| EProject(i,e1,e2) -> 
+      let new_e1 = qualify_exp resolve bound e1 in 
+      let new_e2 = qualify_exp resolve bound e2 in 
+      EProject(i,new_e1,new_e2)
+	| EPerm(i,e1,e2) -> 
+      let new_e1 = qualify_exp resolve bound e1 in 
+      let new_e2 = qualify_exp resolve bound e2 in 
+      EPerm(i,new_e1,new_e2)
+	| EId(i,e1) -> 
+      let new_e1 = qualify_exp resolve bound e1 in
+      EId(i,new_e1) 
   | EOver(i,o,el) -> 
       let new_el = Safelist.map (qualify_exp resolve bound) el in 
       EOver(i,o,new_el)

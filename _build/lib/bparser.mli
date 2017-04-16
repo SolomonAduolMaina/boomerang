@@ -94,6 +94,9 @@ type token =
   | CHOOSE of (Info.t)
   | INTO of (Info.t)
   | ERROR of (Info.t)
+  | PERM of (Info.t)
+  | PROJECT of (Info.t)
+  | ID of (Info.t)
 
 val modl :
   (Lexing.lexbuf  -> token) -> Lexing.lexbuf -> Bsyntax.modl

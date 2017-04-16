@@ -14,7 +14,7 @@ test canonize s "solomon a, maina" = "solomon a, maina"
 
 (* Next we have the perm and project canonizers *)
 
-let c : canonizer = perm (#{canonizer}[id ([A-Z] . [a-z]* ); id ([A-Z] . [.]); id [A-Z]*], project ([ \t\r\n]*, " "))
+let c : canonizer = perm #{canonizer}[id ([A-Z] . [a-z]* ); id ([A-Z] . [.]); id ([A-Z]* )] with (project [ \t\r\n]* -> " ")
 
 test canonize c "MAINA\t\r \n Solomon\n\n\t\r\n   A." = "Solomon A. MAINA"
 

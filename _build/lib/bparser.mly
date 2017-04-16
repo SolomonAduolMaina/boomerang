@@ -209,6 +209,8 @@ let add_atom ai (i,xs,bs) = match ai with
 %token <Info.t> LT GT LEQ GEQ  
 %token <Info.t> STYPE VTYPE ASTYPE AVTYPE BIJ GET PUT CREATE CANONIZE CHOOSE INTO
 %token <Info.t> ERROR
+%token <Info.t> PERM PROJECT ID WITH 
+
 
 %start modl uid qid
 %type <Bsyntax.modl> modl
@@ -316,7 +318,7 @@ exp:
       { let i = me2 $1 $6 in 
         let b = Bind(i,fixup_pat i $2,None,$4) in 
         ELet(i,b,$6) }
-
+				
   | funexp
       { $1 }
 
@@ -502,7 +504,19 @@ geqexp:
 appexp:
   | appexp repexp                         
       { mk_app (me $1 $2) $1 $2 }
-
+			
+    | PERM appexp WITH repexp
+            { let i = me2 $1 $4 in 
+        EPerm(i,$2,$4) }
+                
+    | PROJECT appexp ARROW repexp
+      { let i = me2 $1 $4 in 
+        EProject(i,$2,$4) }
+                
+    | ID repexp
+       { let i = me2 $1 $2 in 
+        EId(i,$2) }
+				
   | repexp
       { $1 }
       
