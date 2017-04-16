@@ -57,6 +57,8 @@ module Bridge = struct
 	module Perms = BL.Permutations
 	
 	let info = Info.I ("", (0, 0), (0, 0))
+	let box = Qid.mk [] (Id.mk info "box")
+	
 	let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
 	let synth_can = Qid.mk [] (Id.mk info "synth_from_canonizers")
 	let perm = Qid.mk [] (Id.mk info "perm")
@@ -90,18 +92,47 @@ module Bridge = struct
 			| L.LensPermute _ -> failwith "TODO" in
 		helper l
 	
-	let rec brxToLrx (r : Brx.t) : L.regex =
+	let rec brxToLrx
+			(r : Brx.t)
+			(rc: RegexContext.t)
+	: L.regex * RegexContext.t =
 		match r.Brx.M.desc with
-		| Brx.M.CSet l -> L.charSet l
-		| Brx.M.Seq (r1, r2) -> L.RegExConcat(brxToLrx r1, brxToLrx r2)
+		| Brx.M.CSet l -> (L.charSet l, rc)
+		| Brx.M.Seq (r1, r2) ->
+				let (r1, rc) = brxToLrx r1 rc in
+				let (r2, rc) = brxToLrx r2 rc in
+				(L.RegExConcat(r1, r2), rc)
 		| Brx.M.Alt l ->
-				List.fold_left
-					(fun r x -> if r = L.RegExEmpty then x else L.RegExOr(r, x)) L.RegExEmpty
-					(List.map (fun r -> brxToLrx r) l)
+				(List.fold_left
+						(fun (r1, rc) x ->
+									let (r2, rc) = brxToLrx x rc in
+									(if r1 = L.RegExEmpty then (r2, rc) else L.RegExOr(r1, r2), rc))
+						(L.RegExEmpty, rc)
+						l)
 		| Brx.M.Rep (r, n, None) ->
-				let r = brxToLrx r in L.RegExConcat(L.iterateNTimes n r, L.RegExStar r)
-		| Brx.M.Rep (r, m, Some n) -> L.iterateMtoNTimes m n (brxToLrx r)
+				let (r, rc) = brxToLrx r rc in
+				(L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc)
+		| Brx.M.Rep (r, m, Some n) ->
+				let (r, rc) = brxToLrx r rc in
+				(L.iterateMtoNTimes m n r, rc)
+		| Brx.M.Box (i, r) ->
+				let (rx, rc) = brxToLrx r rc in
+				let rc =
+					RegexContext.insert_exn
+						rc
+						(string_of_int i)
+						rx
+						false
+				in
+				(rx, rc)
 		| _ -> failwith "No support for intersection or differences in lenssynth"
+	
+	let get_box : G.rs * V.t =
+		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
+			match v with
+			| V.Rx (i, r) -> V.Rx (i, Brx.mk_box r)
+			| _ -> failwith "Wrong Arguments for box" in
+		(G.Sort (SFunction ((Id.mk info "box"), SRegexp, SRegexp)), V.Fun (info, g))
 	
 	let getStrings (l : V.t list) : (string * string) list =
 		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
@@ -127,9 +158,10 @@ module Bridge = struct
 									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
 											match l with
 											| V.Vnt (_, _, _, _) ->
-													let s1, s2 = brxToLrx r1, brxToLrx r2 in
+													let (s1, rc) = brxToLrx r1 RegexContext.empty in
+													let (s2, rc) = brxToLrx r2 rc in
 													let l = getStrings (toList l []) in
-													let lens = gen_lens RegexContext.empty LensContext.empty s1 s2 l in
+													let lens = gen_lens rc LensContext.empty s1 s2 l in
 													let lens = match lens with
 														| None -> failwith "Could not synthesize lens"
 														| Some lens -> lens in
@@ -263,10 +295,10 @@ module Bridge = struct
 									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
 											match l with
 											| V.Vnt (_, _, _, _) ->
-													let s1, s2 = brxToLrx (BL.Canonizer.canonized_type c1),
-														brxToLrx (BL.Canonizer.canonized_type c2) in
+													let (s1, rc) = brxToLrx (BL.Canonizer.canonized_type c1) RegexContext.empty in
+													let (s2, rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc in
 													let l = getStrings (toList l []) in
-													let lens = gen_lens RegexContext.empty LensContext.empty s1 s2 l in
+													let lens = gen_lens rc LensContext.empty s1 s2 l in
 													let lens = match lens with
 														| None -> failwith "Could not synth_from_regexp lens"
 														| Some lens -> sLensTobLens lens in
@@ -815,317 +847,6 @@ and interp_mod_aux wq cev ms ds =
 		(cev,[])
 		ds
 
-<<<<<<< HEAD
-=======
-module Bridge = struct
-	
-	open Gen
-	open Regexcontext
-	open Lenscontext
-	module L = Lang
-	module BL = Blenses
-	module BS = Bstring
-	module Perms = BL.Permutations
-	
-	let info = Info.I ("", (0, 0), (0, 0))
-  let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
-  let box = Qid.mk [] (Id.mk info "box")
-	let synth_can = Qid.mk [] (Id.mk info "synth_from_canonizers")
-	let perm = Qid.mk [] (Id.mk info "perm")
-	let project = Qid.mk [] (Id.mk info "project")
-	let id = Qid.mk [] (Id.mk info "id")
-  let list = Qid.mk [(info, "List")] (Id.mk info "t")
-	
-	let rec lrxToBrx (r : L.regex) : Brx.t =
-		match r with
-		| L.RegExEmpty -> Brx.empty
-		| L.RegExBase s -> Brx.mk_string s
-		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1) (lrxToBrx r2)
-		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1) (lrxToBrx r2)
-		| L.RegExStar r -> Brx.mk_star (lrxToBrx r)
-		| L.RegExVariable _ -> failwith "How did I get a variable?"
-	
-	let sLensTobLens (l : L.lens) : BL.MLens.t =
-		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
-			let source = Brx.mk_string s1 in
-			let mapTo = fun _ -> s1 in BL.MLens.clobber info source s2 mapTo in
-		let rec helper (l : L.lens) : BL.MLens.t =
-			match l with
-			| L.LensConst (s1, s2) -> constLens s1 s2
-			| L.LensConcat (l1, l2) -> BL.MLens.concat info (helper l1) (helper l2)
-			| L.LensSwap (l1, l2) -> BL.MLens.concat info (helper l2) (helper l1)
-			| L.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
-			| L.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
-			| L.LensIterate l -> BL.MLens.star info (helper l)
-			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r)
-			| L.LensInverse _ | L.LensVariable _
-			| L.LensPermute _ -> failwith "TODO" in
-		helper l
-	
-	let rec toList (v : V.t) (temp : V.t list) : V.t list =
-		match v with
-		| V.Vnt (_, _, _, None) -> List.rev temp
-		| V.Vnt(_, _, _, Some (V.Par(_, hd, tail))) -> toList tail (hd :: temp)
-		| _ -> failwith "Malformed List"
-	
- let rec brxToLrx
-     (r : Brx.t)
-     (rc:RegexContext.t)
-   : L.regex * RegexContext.t =
-		match r.Brx.M.desc with
-		  | Brx.M.CSet l -> (L.charSet l,rc)
-	    | Brx.M.Seq (r1, r2) ->
-         let (r1,rc) = brxToLrx r1 rc in
-         let (r2,rc) = brxToLrx r2 rc in
-         (L.RegExConcat(r1, r2),rc)
-		  | Brx.M.Alt l ->
-		    (List.fold_left
-		      (fun (r1,rc) x ->
-            let (r2,rc) = brxToLrx x rc in
-            (if r1 = L.RegExEmpty then (r2,rc) else L.RegExOr(r1, r2),rc))
-          (L.RegExEmpty,rc)
-          l)
-		  | Brx.M.Rep (r, n, None) ->
-		    let (r,rc) = brxToLrx r rc in
-        (L.RegExConcat(L.iterateNTimes n r, L.RegExStar r),rc)
-	    | Brx.M.Rep (r, m, Some n) ->
-        let (r,rc) = brxToLrx r rc in
-        (L.iterateMtoNTimes m n r, rc)
-      | Brx.M.Box (i,r) ->
-        let (rx,rc) = brxToLrx r rc in
-        let rc =
-          RegexContext.insert_exn
-            rc
-            (string_of_int i)
-            rx
-            false
-        in
-        (rx,rc)
-		  | _ -> failwith "No support for intersection or differences in lenssynth"
-	
-	let getStrings (l : V.t list) : (string * string) list =
-		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
-			match v with
-			| V.Par(_, V.Str(_, s1), V.Str(_, s2)) -> (s1, s2) :: temp
-			| _ -> failwith "Malformed List"
-		in List.fold_left helper [] l
-	
-	let get_synth : G.rs * V.t =
-		let f1 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Rx (_, r1) ->
-					(let f2 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-							match v with
-							| V.Rx (_, r2) ->
-									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
-											match l with
-						            | V.Vnt (_, _, _, _) ->
-                          let (s1,rc) = brxToLrx r1 RegexContext.empty in
-													let (s2,rc) = brxToLrx r2 rc in
-													let l = getStrings (toList l []) in
-													let lens = gen_lens rc LensContext.empty s1 s2 l in
-													let lens = match lens with
-														| None -> failwith "Could not synthesize lens"
-														| Some lens -> lens in
-													V.Lns(info, sLensTobLens lens)
-											| _ -> failwith "Wrong arguments for synth_from_regexp" in
-										V.Fun (info, f3))
-							| _ -> failwith "Wrong arguments for synth_from_regexp" in
-						V.Fun (info, f2))
-			| _ -> failwith "Wrong arguments for synth_from_regexp" in
-		let sort =
-			SFunction ((Id.mk info ""), SRegexp,
-				(SFunction ((Id.mk info ""), SRegexp,
-						(SFunction ((Id.mk info ""), SData([SProduct(SString, SString)], list),
-								SLens))))) in (G.Sort sort, V.Fun (info, f1))
-	
-	let rec vtoString (id : Qid.t) (v : V.t) =
-		match v with
-		| V.Rx (_, r) -> "Rx " ^ (Qid.string_of_t id) ^ " = " ^ (Brx.string_of_t r) ^ "\n"
-		| V.Unt _ -> "Unt " ^ (Qid.string_of_t id) ^ " = ()" ^ "\n"
-		| V.Bol (_, s) -> let s = match s with | None -> "true" | Some s -> s in
-				"Bol " ^ (Qid.string_of_t id) ^ " = " ^ s ^ "\n"
-		| V.Int (_, i) -> "Int " ^ (Qid.string_of_t id) ^ " = " ^ (string_of_int i) ^ "\n"
-		| V.Chr (_, c) -> "Chr " ^ (Qid.string_of_t id) ^ " = " ^ (Char.escaped c) ^ "\n"
-		| V.Str (_, s) -> "Str named " ^ (Qid.string_of_t id) ^ " = " ^ s ^ "\n"
-		| V.Arx (_, r) -> "Arx " ^ (Qid.string_of_t id) ^ " = " ^ (Barx.string_of_t r) ^ "\n"
-		| V.Kty _ -> "Kty " ^ (Qid.string_of_t id) ^ "\n"
-		| V.Mty _ -> "Mty " ^ (Qid.string_of_t id) ^ "\n"
-		| V.Lns (_, r) -> "Lns " ^ (Qid.string_of_t id) ^ " = " ^ (BL.MLens.string_of_t r) ^ "\n"
-		| V.Can (_, r) -> "Lns " ^ (Qid.string_of_t id) ^ " = " ^ (BL.Canonizer.string_of_t r) ^ "\n"
-		| V.Prf _ -> "Prf " ^ (Qid.string_of_t id) ^ "\n"
-		| V.Fun _ -> "Fun " ^ (Qid.string_of_t id) ^ "\n"
-		| V.Par (_, t1, t2) ->
-				"Par " ^ (Qid.string_of_t id) ^ " = (" ^ (vtoString id t1) ^ " * " ^
-				(vtoString id t2) ^ ")\n"
-		| V.Vnt (_, id, _, opt) ->
-				match opt with
-				| None -> "Vnt " ^ (Qid.string_of_t id) ^ "\n"
-				| Some v -> "Vnt " ^ (Qid.string_of_t id) ^ " = (" ^ (vtoString id v) ^ ")"
-	
-	let rec permutations (l : 'a list) : 'a list list =
-		List.map (fun m -> Perms.permute_list m l) (Perms.permutations (List.length l))
-	
-	let concatList (l : Brx.t list) : Brx.t =
-		let rec helper (l : Brx.t list) (temp : Brx.t) : Brx.t =
-			match l with
-			| [] -> temp
-			| x :: xs -> helper xs (Brx.mk_seq temp x) in
-		match l with
-		| [] -> Brx.empty
-		| x :: xs -> helper xs x
-	
-	let altList (l : Brx.t list) : Brx.t =
-		let rec helper (l : Brx.t list) (temp : Brx.t) : Brx.t =
-			match l with
-			| [] -> temp
-			| x :: xs -> helper xs (Brx.mk_alt temp x) in
-		match l with
-		| [] -> Brx.empty
-		| x :: xs -> helper xs x
-	
-	let rec evenOdd
-			(l : 'a list) (even : 'a list) (odd : 'a list) (p : int) : ('a list) * ('a list) =
-		match l with
-		| [] -> List.rev even, List.rev odd
-		| x :: xs -> if p = 0 then evenOdd xs (x :: even) odd ((p + 1) mod 2)
-				else evenOdd xs even (x :: odd) ((p + 1) mod 2)
-	
-	let rec evenOddInv (even : 'a list) (odd : 'a list) (temp : 'a list) (p : int) : 'a list =
-		match even, odd with
-		| [], [] -> List.rev temp
-		| x :: xs, odd when p = 0 -> evenOddInv xs odd (x :: temp) ((p + 1) mod 2)
-		| even, y :: ys when p = 1 -> evenOddInv even ys (y :: temp) ((p + 1) mod 2)
-		| _ -> failwith "Lists cannot be alternated!"
-	
-	let intersperse (a : 'a) (l : 'a list) : 'a list =
-		let rec helper (first : 'a list) (rest : 'a list) : 'a list =
-			match first with
-			| [] -> List.rev rest
-			| [x] -> List.rev (x :: rest)
-			| x :: xs -> helper xs (a :: (x :: rest))
-		in helper l []
-	
-	let rec printList (l : 'a list) (f : 'a -> string) : string =
-		let s = List.fold_left
-				(fun s a -> if s = "[" then "[" ^ (f a) else s ^ ";" ^ (f a)) "[" l in
-		s ^ "]"
-	
-	let rec getMatches (l : Brx.t list) (s : BS.t) (t : BS.t list) : BS.t list =
-		match l with
-		| [] -> List.rev t
-		| [x] -> List.rev (s :: t)
-		| x :: xs -> let s1, s2 = BS.concat_split x (concatList xs) s in
-				getMatches xs s2 (s1 :: t)
-	
-	let langWhole (l : Brx.t list) (sep : Brx.t) : Brx.t =
-		altList (List.map (fun l -> concatList (intersperse sep l)) (permutations l))
-	
-	let rec whichPerm
-			(perms : int list list) (l : Brx.t list) (sep : Brx.t) (s : BS.t) :
-	((int list) * (Brx.t list)) =
-		match perms with
-		| [] -> failwith "I have to match at least one!"
-		| perm :: perms ->
-				let lperm = Perms.permute_list perm l in
-				let rgx = concatList (intersperse sep lperm) in
-				if not (BS.match_rx rgx s) then whichPerm perms l sep s else perm, lperm
-	
-	let permCanonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonizer.t =
-		let l = List.fold_left (fun l c -> (BL.Canonizer.uncanonized_type c) :: l) [] cs in
-		let l = List.rev l in
-		let sep = BL.Canonizer.uncanonized_type c in
-		let whole = langWhole l sep in
-		let l' = List.fold_left (fun l c -> (BL.Canonizer.canonized_type c) :: l) [] cs in
-		let l' = List.rev l' in
-		let sep' = BL.Canonizer.canonized_type c in
-		let kernel = concatList (intersperse sep' l') in
-		let f (s : string) : string =
-			let s = BS.of_string s in
-			let perms = Perms.permutations (List.length l) in
-			let perm, lperm = whichPerm perms l sep s in
-			let matches = getMatches (intersperse sep lperm) s [] in
-			let real, seps = evenOdd matches [] [] 0 in
-			let real = Perms.permute_list (Perms.invert_permutation perm) real in
-			let ss = List.map BS.to_string (evenOddInv real seps [] 0) in
-			let ss = List.map2
-					(fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (intersperse c cs) ss in
-			String.concat "" ss in BL.Canonizer.normalize info whole kernel f
-	
-	let get_box : G.rs * V.t =
-		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Rx (i, r) -> V.Rx (i, Brx.mk_box r)
-			| _ -> failwith "Wrong Arguments for box" in
-		(G.Sort (SFunction ((Id.mk info "box"), SRegexp, SRegexp)), V.Fun (info, g))
-	
-	let get_id : G.rs * V.t =
-		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Rx (_, r) -> V.Can (info, BL.Canonizer.copy info r)
-			| _ -> failwith "Wrong Arguments for id" in
-		(G.Sort (SFunction ((Id.mk info "id"), SRegexp, SCanonizer)), V.Fun (info, g))
-	
-	let get_project : G.rs * V.t =
-		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Par(_, V.Rx (_, r) , V.Str (_, s)) ->
-					if not (BS.match_rx r (BS.of_string s)) then
-						failwith (s ^ " must be a member of " ^ (Brx.string_of_t r)) else
-						V.Can (info, BL.Canonizer.normalize info r (Brx.mk_string s) (fun _ -> s))
-			| _ -> failwith "Wrong Arguments for project" in
-		let so = SProduct(SRegexp, SString) in
-		(G.Sort (SFunction ((Id.mk info "project"), so, SCanonizer)), V.Fun (info, g))
-	
-	let get_perm : G.rs * V.t =
-		let get_cans (l : V.t list) : BL.Canonizer.t list =
-			let f (temp : BL.Canonizer.t list) (v : V.t) : BL.Canonizer.t list =
-				match v with
-				| V.Can (_, c) -> c :: temp
-				| _ -> failwith "Malformed List"
-			in List.fold_left f [] l in
-		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Par(_, l, V.Can (_, sep)) ->
-					let l = List.rev (get_cans (toList l [])) in
-					V.Can (info, permCanonizer l sep)
-			| _ -> failwith "Wrong Arguments for perm" in
-		let so = SProduct(SData([SCanonizer], list), SCanonizer) in
-		(G.Sort (SFunction ((Id.mk info "perm"), so, SCanonizer)), V.Fun (info, g))
-	
-	let get_synth_can : G.rs * V.t =
-		let f1 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Can (_, c1) ->
-					(let f2 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-							match v with
-							| V.Can (_, c2) ->
-									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
-											match l with
-						 | V.Vnt (_, _, _, _) ->
-                          let (s1,rc) = brxToLrx (BL.Canonizer.canonized_type c1) RegexContext.empty in
-													let (s2,rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc in
-													let l = getStrings (toList l []) in
-													let lens = gen_lens rc LensContext.empty s1 s2 l in
-													let lens = match lens with
-														| None -> failwith "Could not synth_from_regexp lens"
-														| Some lens -> sLensTobLens lens in
-													let lens = (BL.MLens.left_quot info c1 lens) in
-													V.Lns(info, BL.MLens.right_quot info lens c2)
-											| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-										V.Fun (info, f3))
-							| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-						V.Fun (info, f2))
-			| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-		let sort =
-			SFunction ((Id.mk info ""), SCanonizer,
-				(SFunction ((Id.mk info ""), SCanonizer,
-						(SFunction ((Id.mk info ""), SData([SProduct(SString, SString)], list),
-								SLens))))) in (G.Sort sort, V.Fun (info, f1))
-	
-end
-
->>>>>>> 20509b3a257e395f2182e516e1d155fd14e8723c
 let interp_module m0 = match m0 with
 	| Mod(i, m, nctx, ds) ->
 			pc := 0;
@@ -1143,8 +864,8 @@ let interp_module m0 = match m0 with
 			let new_cev = CEnv.push_ctx cev Bridge.synth in
 			let new_cev = CEnv.update new_cev Bridge.synth Bridge.get_synth in
 			let new_cev = CEnv.push_ctx new_cev Bridge.synth_can in
-	 let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
-   let new_cev = CEnv.update new_cev Bridge.box Bridge.get_box in
+			let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
+			let new_cev = CEnv.update new_cev Bridge.box Bridge.get_box in
 			let new_cev, _ = interp_mod_aux wqo new_cev [m] ds in
 			(* let trying id (_, v) _ : unit = print_string (Bridge.vtoString id *)
 			(* v) in let _ = CEnv.fold trying new_cev () in                      *)

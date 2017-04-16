@@ -257,6 +257,7 @@ let rank t0 = match t0.desc with
   | Alt _    -> Urnk 
   | Inter _  -> Irnk
   | Diff _   -> Drnk 
+	| Box _ -> failwith "Implement rank in brx for Box"
 
 (* printing helpers *)
 let string_of_char_code n = 
@@ -316,6 +317,7 @@ let rec format_t t0 =
         format_list sep rnk rest in
     msg "@[";
     begin match t0.desc with
+			| Box _ -> failwith "Implement format_t in brx for Box" 
       | CSet [p1] ->
           let n1,n2 = p1 in
           if n1=min_code && n2>=max_ascii_code then msg "[^]"
@@ -472,6 +474,7 @@ let chars_of_charmap (m:charmap) : int list =
 
 let rec desc_charmap (t:t) =
   match t.desc with
+	| Box _ -> failwith "Implement desc_charmap in brx for Box"
     | CSet cs -> charmap_of_cset cs
     | Rep(t1,_,_) -> get_charmap t1
     | Seq(t1,t2) ->
@@ -747,6 +750,7 @@ and get_maps2 t1 t2 : int list =
   chars_of_charmap (combine_charmaps (get_charmap t1) (get_charmap t2))
 
 and calc_reverse t = match t.desc with 
+| Box _ -> failwith "Implement calc_reverse in brx for Box"
   | CSet _        -> t
   | Seq(t1,t2)    -> mk_seq (get_reverse t2) (get_reverse t1)
   | Alt tl        -> mk_alts (Safelist.map get_reverse tl)
@@ -1079,6 +1083,7 @@ let representative t0 =
   Misc.map_option string_of_char_codes (get_representative t0)
 
 let rec mk_expand t0 c t = match t0.desc with
+| Box _ -> failwith "Implement mk_expand in Brx for Box"
   | CSet cs       -> 
       if CharSet.mem c cs then mk_alt t t0 else t0
   | Seq(t1,t2) -> 
