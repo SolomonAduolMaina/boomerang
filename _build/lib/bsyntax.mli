@@ -108,7 +108,8 @@ and exp =
 (** Expression abstract syntax. *)
 
 and op = 
-  | OIter of int * int 
+  | OIter of int * int
+  | OBox
   | ODot
   | OTilde
   | OMinus

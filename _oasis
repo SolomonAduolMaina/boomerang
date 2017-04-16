@@ -15,7 +15,9 @@ Library lenssynth
   Path: lenssynth
   BuildDepends:
     core
-    
+  Modules:
+    Gen
+
 Library ubase
   Path: ubase
   Modules:

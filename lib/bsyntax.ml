@@ -24,6 +24,12 @@ let (@) = Safelist.append
 let sprintf = Printf.sprintf
 let msg = Util.format
 
+let unique_identifier = ref 0
+let get_unique_identifier () =
+  let uid = !unique_identifier in
+  unique_identifier := uid+1;
+  uid
+
 open Bident
 
 type prefs =
@@ -119,6 +125,7 @@ and exp =
 (* overloaded operators *)
 and op = 
   | OIter of int * int
+  | OBox
   | ODot
   | OTilde
   | OMinus
@@ -323,6 +330,9 @@ let mk_cat i e1 e2 =
 
 let mk_iter i min max e1 = 
   mk_over i (OIter(min,max)) [e1]
+
+let mk_box i e1 =
+  mk_over i OBox [e1]
 
 let mk_acond i e1 e2 = 
   mk_over i OBar [e1;e2]

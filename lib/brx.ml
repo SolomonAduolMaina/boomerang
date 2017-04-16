@@ -34,6 +34,12 @@ let langle_code = 256
 let rangle_code = 257
 let colon_code  = 258
 
+let unique_identifier = ref 0
+let get_unique_identifier () =
+  let uid = !unique_identifier in
+  unique_identifier := uid+1;
+  uid
+
 (* --------------------- PRETTY PRINTING --------------------- *)
 (* ranks: used in formatting to decide when parentheses are needed. *)
 type r = 
@@ -43,6 +49,7 @@ type r =
   | Crnk (* concat *)
   | Srnk (* star *)
   | Arnk (* atomic *)
+  | Brnk
 
 (* lpar: true if an expression with rank on the left needs parentheses *)
 let lpar r1 r2 = match r1,r2 with
@@ -59,6 +66,8 @@ let lpar r1 r2 = match r1,r2 with
   | Drnk, Urnk -> true
   | Drnk, Drnk -> false
   | Urnk, Urnk -> false
+  | Brnk, _ -> false
+  | _, Brnk -> false
       
 (* rpar: true if an expression with rank on the right needs parentheses *)
 let rpar r1 r2 = match r1,r2 with
@@ -75,6 +84,8 @@ let rpar r1 r2 = match r1,r2 with
   | Drnk, Urnk -> true
   | Drnk, Drnk -> true
   | Urnk, Urnk -> true
+  | Brnk, _    -> false
+  | _   , Brnk -> false
 
 (* --------------------- CHARACTER SETS --------------------- *)
 module CharSet : 
@@ -157,6 +168,7 @@ module rec M : sig
     | Rep of t * int * int option
     | Inter of t list
     | Diff of t * t
+    | Box of int * t
   and t = 
       { desc                       : d;
 				uid                        : int;
@@ -178,6 +190,7 @@ end = struct
     | Rep of t * int * int option
     | Inter of t list
     | Diff of t * t
+    | Box of int * t
   and t = 
       { desc                       : d;
 				uid                        : int;
@@ -523,7 +536,7 @@ module TTCache = H.Make
      type t = this_t * this_t 
      let hash (t1,t2) = 883 * t1.hash + 859 * t2.hash 
      let equal (t11,t12) (t21,t22) = equal_t t11 t21 && equal_t t12 t22
-   end)
+  end)
 
 module TTLTCache = H.Make
   (struct
@@ -564,7 +577,9 @@ let desc_hash d =
       71 * Safelist.fold_left (fun h ti -> h + 883 * ti.hash) 0 tl
   | Diff(t1,t2)      -> 379 * t1.hash + 563 * t2.hash
   | Rep(t1,i,Some j) -> 197 * t1.hash + 137 * i + j
-  | Rep(t1,i,None)   -> 197 * t1.hash + 137 * i + 552556457 in 
+  | Rep(t1,i,None)   -> 197 * t1.hash + 137 * i + 552556457
+  | Box(i,_)       -> Hashtbl.hash i
+  in
   abs pre_h
 
 let desc_final = function
@@ -575,6 +590,7 @@ let desc_final = function
   | Alt tl      -> Safelist.exists (fun ti -> ti.final) tl
   | Inter tl    -> Safelist.for_all (fun ti -> ti.final) tl
   | Diff(t1,t2) -> t1.final && not t2.final
+  | Box (_,t)   -> t.final
 
 (* let desc_size = function *)
 (*   | CSet _      -> 1 *)
@@ -591,6 +607,7 @@ let desc_ascii = function
   | Alt tl      -> Safelist.for_all (fun t -> t.ascii) tl
   | Inter tl    -> Safelist.exists (fun t -> t.ascii) tl
   | Diff(t1,t2) -> t1.ascii
+  | Box(_,t)    -> t.ascii
 
 (* --------------------- CONSTRUCTORS --------------------- *)
 (* gensym for uids *)
@@ -682,7 +699,7 @@ let rec mk_t d0 =
              let r = !fr c in
              ICache.add der_cache c r;
              r) in
-    let res = match d0 with 
+    let rec get_res d0 =match d0 with 
       | CSet []  -> 
           (fun c -> empty) (* why do we have this case if CSet s works for this? *)
       | CSet [c1,c2]  -> 
@@ -713,7 +730,9 @@ let rec mk_t d0 =
             (fun c -> mk_inters (Safelist.map (fun ti -> ti.derivative c) tl))
       | Diff(t1,t2) -> 
           mk_table 
-            (fun c -> mk_diff (t1.derivative c) (t2.derivative c)) in 
+            (fun c -> mk_diff (t1.derivative c) (t2.derivative c))
+      | Box(i,t) -> get_res t.desc in
+    let res = get_res d0 in
     res in
 
   (* backpatch t0 with implementation of derivative *)  
@@ -916,6 +935,10 @@ and mk_alt t1 t2 =
     res
                   
 and mk_alts tl = Safelist.fold_right mk_alt tl empty
+
+and mk_box r =
+  let uid = get_unique_identifier () in
+  mk_t(Box (uid,r))
 
 and mk_rep t0 i jo =
   let go t i jo =

@@ -541,6 +541,8 @@ tyexp:
 
 /* atomic expressions */
 aexp:
+  | LBRACE exp RBRACE
+      { mk_over (me2 $1 $2) OBox [$2] }
   | LPAREN exp RPAREN
       { $2 }
 
