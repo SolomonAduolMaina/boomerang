@@ -58,7 +58,6 @@ module Bridge = struct
 	
 	let info = Info.I ("", (0, 0), (0, 0))
 	let box = Qid.mk [] (Id.mk info "box")
-	
 	let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
 	let synth_can = Qid.mk [] (Id.mk info "synth_from_canonizers")
 	let perm = Qid.mk [] (Id.mk info "perm")
@@ -66,16 +65,19 @@ module Bridge = struct
 	let id = Qid.mk [] (Id.mk info "id")
 	let list = Qid.mk [(info, "List")] (Id.mk info "t")
 	
-	let rec lrxToBrx (r : L.regex) : Brx.t =
+	let rec lrxToBrx (r : L.regex) (rc: RegexContext.t) : Brx.t =
 		match r with
 		| L.RegExEmpty -> Brx.empty
 		| L.RegExBase s -> Brx.mk_string s
-		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1) (lrxToBrx r2)
-		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1) (lrxToBrx r2)
-		| L.RegExStar r -> Brx.mk_star (lrxToBrx r)
-		| L.RegExVariable _ -> failwith "How did I get a variable?"
+		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc) (lrxToBrx r2 rc)
+		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc) (lrxToBrx r2 rc)
+		| L.RegExStar r -> Brx.mk_star (lrxToBrx r rc)
+		| L.RegExVariable s ->
+				match RegexContext.lookup rc s with
+				| None -> failwith (s ^ " is not in the regex context")
+				| Some r -> lrxToBrx r rc
 	
-	let sLensTobLens (l : L.lens) : BL.MLens.t =
+	let sLensTobLens (l : L.lens) (rc: RegexContext.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
 			let source = Brx.mk_string s1 in
 			let mapTo = fun _ -> s1 in BL.MLens.clobber info source s2 mapTo in
@@ -87,15 +89,12 @@ module Bridge = struct
 			| L.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
 			| L.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
 			| L.LensIterate l -> BL.MLens.star info (helper l)
-			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r)
+			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc)
 			| L.LensInverse _ | L.LensVariable _
 			| L.LensPermute _ -> failwith "TODO" in
 		helper l
 	
-	let rec brxToLrx
-			(r : Brx.t)
-			(rc: RegexContext.t)
-	: L.regex * RegexContext.t =
+	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) : L.regex * RegexContext.t =
 		match r.Brx.M.desc with
 		| Brx.M.CSet l -> (L.charSet l, rc)
 		| Brx.M.Seq (r1, r2) ->
@@ -113,18 +112,17 @@ module Bridge = struct
 				let (r, rc) = brxToLrx r rc in
 				(L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc)
 		| Brx.M.Rep (r, m, Some n) ->
-				let (r, rc) = brxToLrx r rc in
-				(L.iterateMtoNTimes m n r, rc)
+				let (r, rc) = brxToLrx r rc in (L.iterateMtoNTimes m n r, rc)
 		| Brx.M.Box (i, r) ->
-				let (rx, rc) = brxToLrx r rc in
-				let rc =
-					RegexContext.insert_exn
-						rc
-						(string_of_int i)
-						rx
-						false
-				in
-				(rx, rc)
+				let s = string_of_int i in
+				begin
+					match RegexContext.lookup rc s with
+					| None ->
+							let (rx, rc) = brxToLrx r rc in
+							let rc = RegexContext.insert_exn rc s rx false in
+							(L.RegExVariable s, rc)
+					| Some _ -> L.RegExVariable s, rc
+				end
 		| _ -> failwith "No support for intersection or differences in lenssynth"
 	
 	let get_box : G.rs * V.t =
@@ -165,7 +163,7 @@ module Bridge = struct
 													let lens = match lens with
 														| None -> failwith "Could not synthesize lens"
 														| Some lens -> lens in
-													V.Lns(info, sLensTobLens lens)
+													V.Lns(info, sLensTobLens lens rc)
 											| _ -> failwith "Wrong arguments for synth_from_regexp" in
 										V.Fun (info, f3))
 							| _ -> failwith "Wrong arguments for synth_from_regexp" in
@@ -301,7 +299,7 @@ module Bridge = struct
 													let lens = gen_lens rc LensContext.empty s1 s2 l in
 													let lens = match lens with
 														| None -> failwith "Could not synth_from_regexp lens"
-														| Some lens -> sLensTobLens lens in
+														| Some lens -> sLensTobLens lens rc in
 													let lens = (BL.MLens.left_quot info c1 lens) in
 													V.Lns(info, BL.MLens.right_quot info lens c2)
 											| _ -> failwith "Wrong arguments for synth_from_canonizers" in

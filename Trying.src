@@ -1,12 +1,7 @@
 module Trying = 
-let r : lens = synth_from_regexp ([a-z] | [0-9])* ([A-J] | [a-z])* #{string * string}[("y", "z"); ("0", "J")]
-test get r "aus0lp0yey"  = "ausJlpJzez"
-let s : canonizer = id ([a-z] . [a-z]* . " " . [a-z] . [,]  . " " . [a-z]* )
-test canonize s "solomon a, maina" = "solomon a, maina"
-let c : canonizer = perm #{canonizer}[(id ([A-Z] . [a-z]* )); (id ([A-Z] . [.])); (id ([A-Z]* ))] with (project [ \t\r\n]* |-> " ")
-test canonize c "MAINA\t\r \n Solomon\n\n\t\r\n   A." = "Solomon A. MAINA"
-let l : lens = synth_from_canonizers c s #{string * string}[]
-test get l "MAINA\t\r Solomon\n\n\t\r\n   A." = "solomon a, maina"
 
+let r : regexp = box ([a-z] .  [a-z]* . " " . [a-z] . [,]  . " " . [a-z]* )
 
+let l : lens = synth_from_regexp (r | r . r* ) (r* . r | r) #{string * string}[]
 
+test get l "solomon a, maina"  = "solomon a, maina"

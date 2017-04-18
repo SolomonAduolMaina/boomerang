@@ -8,13 +8,13 @@ test get r "aus0lp0yey"  = "ausJlpJzez"
 
 (* We implement QREe's with canonizers. First we have the identity canonizer on a regular expression *)
 
-let s : canonizer = id ([a-z] . [a-z]* . " " . [a-z] . [,]  . " " . [a-z]* )
+let s : canonizer = id ([a-z] . (box [a-z]* ) . " " . [a-z] . [,]  . " " . [a-z]* )
 
 test canonize s "solomon a, maina" = "solomon a, maina"
 
 (* Next we have the perm and project canonizers *)
 
-let c : canonizer = perm #{canonizer}[id ([A-Z] . [a-z]* ); id ([A-Z] . [.]); id ([A-Z]* )] with (project [ \t\r\n]* -> " ")
+let c : canonizer = perm #{canonizer}[id ([A-Z] . (box [a-z]* )); id ([A-Z] . [.]); id ([A-Z]* )] with (project [ \t\r\n]* -> " ")
 
 test canonize c "MAINA\t\r \n Solomon\n\n\t\r\n   A." = "Solomon A. MAINA"
 
