@@ -121,11 +121,12 @@ and exp =
     | EProject of Info.t * exp * exp
     | EId of Info.t * exp
 
+		(* synth primitive *)
+		| ESynth of Info.t * exp * exp * exp
 
 (* overloaded operators *)
 and op = 
   | OIter of int * int
-  | OBox
   | ODot
   | OTilde
   | OMinus
@@ -191,9 +192,10 @@ let exp_of_binding b0 = match b0 with
   | Bind(_,_,_,e) -> e
 
 let rec info_of_exp e = match e with 
+	| ESynth	 (i,_,_,_)	 -> i 
 	| EPerm		 (i,_,_)		 -> i
 	| EProject (i,_,_)		 -> i
-	| EId 		 (i,_)		 -> i 
+	| EId 		 (i,_)		 	 -> i 
   | EApp     (i,_,_)     -> i
   | EVar     (i,_)       -> i
   | EOver    (i,_,_)     -> i
@@ -331,8 +333,8 @@ let mk_cat i e1 e2 =
 let mk_iter i min max e1 = 
   mk_over i (OIter(min,max)) [e1]
 
-let mk_box i e1 =
-  mk_over i OBox [e1]
+(*let mk_box i e1 =
+  mk_over i OBox [e1]*)
 
 let mk_acond i e1 e2 = 
   mk_over i OBar [e1;e2]

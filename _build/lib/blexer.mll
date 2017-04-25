@@ -135,6 +135,7 @@ let _ =
 		; ("project", (fun i -> PROJECT i))
 		; ("with", (fun i -> WITH i))
 		; ("id", (fun i -> ID i))
+		; ("synth", (fun i -> SYNTH i))
     ]
 }
 

@@ -97,6 +97,7 @@ type token =
   | PERM of (Info.t)
   | PROJECT of (Info.t)
   | ID of (Info.t)
+  | SYNTH of (Info.t)
 
 val modl :
   (Lexing.lexbuf  -> token) -> Lexing.lexbuf -> Bsyntax.modl

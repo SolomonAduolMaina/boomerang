@@ -209,7 +209,7 @@ let add_atom ai (i,xs,bs) = match ai with
 %token <Info.t> LT GT LEQ GEQ  
 %token <Info.t> STYPE VTYPE ASTYPE AVTYPE BIJ GET PUT CREATE CANONIZE CHOOSE INTO
 %token <Info.t> ERROR
-%token <Info.t> PERM PROJECT ID WITH 
+%token <Info.t> PERM PROJECT ID WITH SYNTH
 
 
 %start modl uid qid
@@ -512,7 +512,11 @@ appexp:
     | PROJECT appexp ARROW repexp
       { let i = me2 $1 $4 in 
         EProject(i,$2,$4) }
-                
+				
+    | SYNTH appexp DEQARROW repexp WITH repexp
+		 { let i = me2 $1 $4 in 
+        ESynth (i,$2,$4,$6) }
+				
     | ID repexp
        { let i = me2 $1 $2 in 
         EId(i,$2) }
@@ -541,8 +545,7 @@ tyexp:
 
 /* atomic expressions */
 aexp:
-  | LBRACE exp RBRACE
-      { mk_over (me2 $1 $2) OBox [$2] }
+
   | LPAREN exp RPAREN
       { $2 }
 

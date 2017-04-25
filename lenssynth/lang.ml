@@ -61,7 +61,7 @@ let rec regex_to_string (r: regex) : string =
 	begin match r with
 		| RegExEmpty -> "{}"
 		| RegExBase s -> "\"" ^ s ^ "\""
-		| RegExConcat (r1, r2) -> paren ((regex_to_string r1) ^ "" ^ (regex_to_string r2))
+		| RegExConcat (r1, r2) -> paren ((regex_to_string r1) ^ " " ^ (regex_to_string r2))
 		| RegExOr (r1, r2) -> paren ((regex_to_string r1) ^ "|" ^ (regex_to_string r2))
 		| RegExStar (r') -> paren (regex_to_string r') ^ "*"
 		| RegExVariable s -> s
@@ -208,14 +208,14 @@ let charSet (l : (int * int) list) : regex =
 		| Some c -> c
 	in let helper ((m, n) : int * int) : regex =
 		let rec innerHelper (i : int) (r : regex) : regex =
-			if i > n then r else
-				innerHelper (i + 1) (RegExOr(r, RegExBase (Char.escaped (charOf i))))
+			if i < m then r else
+				innerHelper (i - 1) (RegExOr(RegExBase (Scanf.unescaped (Char.escaped (charOf i))), r))
 		in if n < m then failwith "Malformed Character Set" else
-		if n = m then RegExBase (Char.escaped (charOf m)) else
-			innerHelper (m + 1) (RegExBase (Char.escaped (charOf m)))
+		if n = m then RegExBase (Scanf.unescaped (Char.escaped (charOf m))) else
+			innerHelper (n-1) (RegExBase (Scanf.unescaped (Char.escaped (charOf n))))
 	in
 	List.fold_left l ~init: RegExEmpty
-		~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (r, (helper x)))
+		~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (helper x, r))
 
 let iterateNTimes (n : int) (r : regex) : regex =
 	let rec helper (index : int) (temp : regex) : regex =

@@ -462,11 +462,57 @@ and lookup_var sev i q =
 
 and check_exp ?(in_let = false) sev e0 =
 	match e0 with
+	| ESynth(i, e1, e2, e3) ->
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let e2_sort, new_e2 = check_exp sev e2 in
+			let e3_sort, new_e3 = check_exp sev e3 in
+			begin
+				match e1_sort with
+				| SRegexp | SString | SChar ->
+						begin
+							match e2_sort with
+							| SRegexp | SString | SChar ->
+									begin
+										match e3_sort with
+										| SData([SProduct(SString, SString)], _) ->
+												SLens, ESynth(i, new_e1, new_e2, new_e3)
+										| _ ->
+												static_error i
+													(fun () -> msg "The third argument of synth should be a list")
+									end
+							| _ -> static_error i
+										(fun () -> msg
+														"The second argument here should be a regular expression" )
+						end
+				| SCanonizer ->
+						begin
+							match e2_sort with
+							| SCanonizer ->
+									begin
+										match e3_sort with
+										| SData([SProduct(SString, SString)], _) ->
+												SLens, ESynth(i, new_e1, new_e2, new_e3)
+										| _ ->
+												static_error i
+													(fun () -> msg "The third argument of synth should be a list")
+									end
+							| _ -> static_error i
+										(fun () -> msg
+														"The second argument here should be a canonizer" )
+						end
+				| _ -> static_error i
+							(fun () -> msg "The first argument of synth should be a regular expression
+								or a canonizer" )
+			end
+	
 	| EId(i, e) ->
 			let e1_sort, new_e1 = check_exp sev e in
-			if e1_sort = SRegexp then (SCanonizer, EId(i, new_e1)) else
-				static_error i (fun () ->
-								msg "The id construct expects a regular expression" )
+			begin
+				match e1_sort with
+				| SRegexp | SString | SChar -> SCanonizer, EId(i, new_e1)
+				| _ -> static_error i (fun () ->
+										msg "The id construct expects a regular expression" )
+			end
 	| EProject(i, e1, e2) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
 			let e2_sort, new_e2 = check_exp sev e2 in
@@ -501,726 +547,726 @@ and check_exp ?(in_let = false) sev e0 =
 							(fun () -> msg "The first part of the perm construct
 								should be a canonizer" )
 			end
-	| EVar(i,q) ->
-        (* lookup the sort in the context *)
-        let full_q, e0_sort = lookup_var sev i q in
-        let e0_sort_base = erase_sort e0_sort in
-        (e0_sort_base, (EVar(i,full_q)))
+	| EVar(i, q) ->
+	(* lookup the sort in the context *)
+			let full_q, e0_sort = lookup_var sev i q in
+			let e0_sort_base = erase_sort e0_sort in
+			(e0_sort_base, (EVar(i, full_q)))
+	
+	| EOver(i, op, es) -> begin
+				(* type check and instrument es *)
+				let rs =
+					Safelist.fold_right
+						(fun ei rs ->
+									let ri = check_exp sev ei in
+									ri:: rs)
+						es [] in
+				let err () =
+					static_error i (
+							fun () -> msg "@[could@ not@ resolve@ %s@ for@ %a@]"
+										(string_of_op op)
+										(fun _ -> Misc.format_list "@ and@ " format_sort) (Safelist.map fst rs))
+				in
+				(* rules for overloaded symbols *)
+				let bin_rules =
+					[ ODot,
+					[ SString, "string_concat";
+					SRegexp, "regexp_concat";
+					SAregexp, "aregexp_concat";
+					SLens, "lens_concat";
+					SCanonizer, "canonizer_concat" ]
+					; OTilde,
+					[ SLens, "lens_swap";
+					SCanonizer, "canonizer_swap" ]
+					; OMinus,
+					[ SRegexp, "diff";
+					SInteger, "minus" ]
+					; OBar,
+					[ SRegexp, "regexp_union";
+					SAregexp, "aregexp_union";
+					SLens, "lens_disjoint_union";
+					SCanonizer, "canonizer_union" ]
+					; OAmp, [ SRegexp, "inter" ]
+					; OBarBar, [ SLens, "lens_union";
+					SBool, "lor";
+					]
+					; OAmpAmp, [ SBool, "land";
+					]
+					; ODarrow, [ SLens, "set" ]
+					; ODeqarrow, [ SLens, "rewrite" ]
+					; OLt, [ SInteger, "blt" ]
+					; OLeq, [ SInteger, "bleq" ]
+					; OGt, [ SInteger, "bgt" ]
+					; OGeq, [ SInteger, "bgeq" ] ] in
+				(* helper to find rule *)
+				let rec find_rule r rs = match r with
+					| [] -> None
+					| (s, op_name):: t ->
+							if Safelist.for_all (fun (si, _) -> compatible si s) rs then
+								Some op_name
+							else
+								find_rule t rs in
+				(* rewrite the overloaded symbol using the rules above; the    *)
+				(* treatment of [OIter] is special                             *)
+				let (op_s, op_e) = match op, rs with
+					| OIter(min, max),[r1] ->
+							let (e1_sort, _) = r1 in
+							let mk_iter iter_id min max =
+								let r_min = check_exp sev (mk_int i min) in
+								let r_max = check_exp sev (mk_int i max) in
+								let r_iter = check_exp sev (mk_core_var i iter_id) in
+								check_exp_app i sev
+									(check_exp_app i sev
+											(check_exp_app i sev r_iter r1) r_min) r_max in
+							if compatible e1_sort SRegexp
+							then mk_iter "regexp_iter" min max
+							else if compatible e1_sort SAregexp
+							then mk_iter "aregexp_iter" min max
+							else if compatible e1_sort SLens
+							then
+								let checked_app f_name =
+									let r_f = check_exp sev (mk_core_var i f_name) in
+									check_exp_app i sev r_f r1 in
+								match min, max with
+								| (0,0) ->
+										check_exp_app i sev
+											(check_exp sev (mk_core_var i "copy"))
+											(check_exp sev (mk_core_var i "EPSILON"))
+								| (1,1) -> r1
+								| (0,1) -> checked_app "lens_option"
+								| (0,-1) -> checked_app "lens_star"
+								| (0, max) ->
+										check_exp_app i sev
+											(check_exp sev (mk_core_var i "lens_option"))
+											(mk_iter "lens_iter" 1 max)
+								| (1,-1) -> checked_app "lens_plus"
+								| (min,-1) ->
+										check_exp_app i sev
+											(check_exp_app i sev
+													(check_exp sev (mk_core_var i "lens_concat"))
+													(mk_iter "lens_iter" min min))
+											(checked_app "lens_star")
+								| _ -> mk_iter "lens_iter" min max
+							else if compatible e1_sort SCanonizer
+							then mk_iter "canonizer_iter" min max
+							else err ()
+					| OEqual,[e1_sort, e1; _, e2] ->
+							(SBool,
+								mk_app3 i
+									(mk_tyapp i (mk_qid_var (Qid.mk_core_t i "equals")) e1_sort)
+									e1 e2)
+					(* !!! why is this logic duplicated? can these not fit in    *)
+					(* the table above? --MMG                                    *)
+					| OMatch, [tag; exp] ->
+							let tag_sort = SData ([], V.tag_qid) in
+							if not (compatible (fst tag) tag_sort) then err ();
+							let rules = [ SLens, "lens_match";
+								SAregexp, "aregexp_match" ]
+							in
+							let rec find_rule r =
+								match r with
+								| [] -> None
+								| (s, op_name):: r ->
+										if compatible (fst exp) s
+										then Some op_name
+										else find_rule r
+							in
+							(match find_rule rules with
+								| Some op_id ->
+										let app = check_exp_app i sev in
+										let r_op = check_exp sev (mk_core_var i op_id) in
+										app (app r_op tag) exp
+								| None -> err ()
+							)
+					| OWeight, [force; weight; se] ->
+							if not (compatible (fst force) SBool) then err ();
+							if not (compatible (fst weight) SInteger) then err ();
+							let rules = [ SLens, "lens_weight";
+								SAregexp, "aregexp_weight" ]
+							in
+							let rec find_rule r =
+								match r with
+								| [] -> None
+								| (s, op_name):: r ->
+										if compatible (fst se) s
+										then Some op_name
+										else find_rule r
+							in
+							(match find_rule rules with
+								| Some op_id ->
+										let r_op = check_exp sev (mk_core_var i op_id) in
+										let app = check_exp_app i sev in
+										app (app (app r_op force) weight) se
+								| None -> err ()
+							)
+					| op,[r1; r2] -> begin
+								let rules = try Safelist.assoc op bin_rules with _ -> err () in
+								match find_rule rules rs with
+								| Some op_id ->
+										let r_op = check_exp sev (mk_core_var i op_id) in
+										check_exp_app i sev (check_exp_app i sev r_op r1) r2
+								| None -> err ()
+							end
+					| op,[r1] -> begin
+								let rules = try Safelist.assoc op bin_rules with _ -> err () in
+								match find_rule rules rs with
+								| Some op_id ->
+										let r_op = check_exp sev (mk_core_var i op_id) in
+										(check_exp_app i sev r_op r1)
+								| None -> err ()
+							end
+					| _ -> err () in
+				(op_s, op_e)
+			end
+	
+	| EFun(i, Param(p_i, p_x, p_s), ret_sorto, body) ->
+	(* resolve the parameter sort *)
+			let new_p_s = check_sort p_i sev p_s in
+			(* create the environment for the body *)
+			let body_sev = SCEnv.update sev (Qid.t_of_id p_x) (G.Sort new_p_s) in
+			let new_ret_sorto, (body_sort, new_body) =
+				match ret_sorto with
+				| None ->
+				(* if no return sort declared, just check the body to handle   *)
+				(* nested function definitions, we pass on the value of in_let *)
+						None, (check_exp ~in_let: in_let body_sev body)
+				| Some ret_sort ->
+				(* otherwise, resolve the declared return sort *)
+						let new_ret_sort = check_sort i body_sev ret_sort in
+						(* then check the body -- if we were in a let, then so is  *)
+						(* the body (needed for nested functions)                  *)
+						let body_sort, new_body = check_exp ~in_let: in_let body_sev body in
+						(* and check that the declared return sort is a subsort of *)
+						(* the actual body sort                                    *)
+						if not (compatible body_sort new_ret_sort) then
+							static_error i
+								(fun () ->
+											msg "@[in@ function:@ %s@ expected@ but@ %s@ found@]"
+												(string_of_sort new_ret_sort)
+												(string_of_sort body_sort));
+						let cast_body =
+							mk_cast "function body"
+								(info_of_exp body) body_sort new_ret_sort new_body in
+						(Some new_ret_sort, (new_ret_sort, cast_body)) in
+			(* make the function type dependent if needed *)
+			let dep_x =
+				if Qid.Set.mem (Qid.t_of_id p_x) (free_exp_vars_in_sort body_sort)
+				then p_x
+				else
+					(Trace.debug "dep"
+							(fun () ->
+										msg "@[free vars in@ ";
+										format_sort body_sort;
+										msg "@ {@ ";
+										Qid.Set.iter (fun q -> msg "%s@ " (Qid.string_of_t q)) (free_exp_vars_in_sort body_sort);
+										msg "}@]\n");
+						Id.wild) in
+			let e0_sort =
+				SFunction(dep_x, new_p_s, body_sort) in
+			let new_p = Param(p_i, p_x, new_p_s) in
+			let new_e0 = EFun(i, new_p, new_ret_sorto, new_body) in
+			(* apply positive and negative casts (if we're not immediately   *)
+			(* in a let)                                                     *)
+			if not in_let
+			then mk_bulletproof_cast "fun" i e0_sort new_e0
+			else (e0_sort, new_e0)
+	
+	| ELet(i, b, e) ->
+	(* for let-expressions, check the bindings *)
+			let bevs, xs, Bind(new_bi, new_bp, new_bso, new_be) = check_binding ~in_let: true sev b in
+			(* use the resulting environment to check the exp *)
+			let e_sort, new_e = check_exp bevs e in
+			(* put a positive cast on the bound term *)
+			let be_sort = match new_bso with
+				| Some new_bs -> new_bs
+				| None -> run_error i
+							(fun () ->
+										msg "@[couldn't@ unpack@ sort@ in@ let-binding@]") in
+			let (be_sort, cast_be) = mk_pos_cast "let" new_bi be_sort new_be in
+			(* put in the bound-term and inner term *)
+			let new_e0 = ELet(i, Bind(new_bi, new_bp, Some be_sort, cast_be), new_e) in
+			(* DEP substitution would go here *)
+			if not (Qid.Set.equal (free_exp_vars_in_sort e_sort) Qid.Set.empty)
+			then run_error i
+					(fun () ->
+								msg "@[in@ let:@ found a binding pattern %s@]"
+									(string_of_sort e_sort));
+			(e_sort, new_e0)
+	
+	| EPair(i, e1, e2) ->
+	(* for pairs, recursively check e1 and e2 *)
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let e2_sort, new_e2 = check_exp sev e2 in
+			let e0_sort = SProduct(e1_sort, e2_sort) in
+			let new_e0 = EPair(i, new_e1, new_e2) in
+			(e0_sort, new_e0)
+	
+	| EUnit(_) ->
+	(* units have sort SUnit *)
+			(SUnit, e0)
+	
+	| EBoolean(i, Some e1) ->
+			let e1_sort, new_e1 = check_exp sev e1 in
+			if not (compatible e1_sort SString) then
+				static_error i
+					(fun () -> msg "@[in@ counterexample: expected@ %s@ but@ found@ %s@]"
+									(string_of_sort SString)
+									(string_of_sort e1_sort));
+			(SBool, EBoolean(i, Some new_e1))
+	
+	| EBoolean(_, None) ->
+	(* boolean constants have sort SBool *)
+			(SBool, e0)
+	
+	| EInteger(_) ->
+	(* integer constants have sort SInteger *)
+			(SInteger, e0)
+	
+	| EChar(_) ->
+	(* character constants have sort SChar *)
+			(SChar, e0)
+	
+	| EString(_) ->
+	(* string constants have sort SString *)
+			(SString, e0)
+	
+	| ECSet(_) ->
+	(* character sets have sort SRegexp *)
+			(SRegexp, e0)
+	
+	| EApp(i, e1, e2) ->
+			let (e1_sort, new_e1) as r1 = check_exp sev e1 in
+			let (e2_sort, new_e2) as r2 = check_exp sev e2 in
+			check_exp_app i sev r1 r2
+	
+	| ECase(i, e1, pl, ps) ->
+			assert (pl != []);
+			(* helper function for printing error messages *)
+			let err2 i p s1 s2 = static_error i (fun () -> msg p s1 s2) in
+			(* check the expression being matched *)
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let new_pl_rev = Safelist.fold_left
+					(fun new_pl_rev (pi, ei) ->
+								match static_match i sev pi e1_sort with
+								| None ->
+								(* if the branch is useless, raise an exception *)
+										err2 i "@[pattern@ %s@ does@ not@ match@ sort@ %s@]"
+											(string_of_pat pi)
+											(string_of_sort e1_sort)
+								| Some (new_pi, binds) ->
+								(* otherwise, extend the environment with bindings for *)
+								(* pattern vars                                        *)
+										let ei_sev = Safelist.fold_left
+												(fun ei_sev (qj, sj) -> SCEnv.update ei_sev (Qid.t_of_id qj) (G.Sort sj))
+												sev binds in
+										(* sort check the expression *)
+										let ei_sort, new_ei = check_exp ei_sev ei in
+										(ei, ei_sort, new_ei, new_pi):: new_pl_rev)
+					[] pl
+			in
+			let new_ps, refinement_check =
+				begin match ps with
+					| Some ps -> (* resolve the sort *)
+							check_sort i sev ps, false
+					| None -> (* use the first expression for the type *)
+							let _, e0_sort, _, _ = Safelist.hd new_pl_rev in
+							e0_sort, true (* should check if all types are not refined *)
+				end
+			in
+			let new_pl = Safelist.fold_left
+					(fun new_pl (ei, ei_sort, new_ei, new_pi) ->
+								let ii = info_of_exp ei in
+								(* check that the type is not refined when omitting    *)
+								(* the type of the match                               *)
+								if refinement_check && is_refined ei_sort then
+									static_error ii
+										(fun () -> msg "@[refined@ type@ %s@ used@ in@ match@ without@ explicit@ type@ declaration@]"
+														(string_of_sort ei_sort));
+								(* and check that it is compatible with the sorts of   *)
+								(* the other branches                                  *)
+								if not (compatible ei_sort new_ps) then
+									err2 ii
+										"@[in@ match:@ %s@ expected@ but@ %s@ found@]"
+										(string_of_sort new_ps)
+										(string_of_sort ei_sort);
+								let cast_ei = mk_cast "match branch" ii ei_sort new_ps new_ei in
+								(new_pi, cast_ei):: new_pl)
+					[] new_pl_rev
+			in
+			let new_e0 = ECase(i, new_e1, new_pl, Some new_ps) in
+			(new_ps, new_e0)
+	
+	| ETyFun(i, x, e1) ->
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let new_e0 = ETyFun(i, x, new_e1) in
+			let e0_sort = SForall(x, e1_sort) in
+			(e0_sort, new_e0)
+	
+	| ETyApp(i, e1, s2) ->
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let new_s2 = check_sort i sev s2 in
+			let e0_sort = match e1_sort with
+				| SForall(x, s11) -> subst_sort [x, new_s2] s11
+				| _ -> static_error i
+							(fun () -> msg "@[in@ type@ application:@ expected@ universal@ type@ but@ %s@ found.@]"
+											(string_of_sort e1_sort)) in
+			let new_e0 = ETyApp(i, new_e1, new_s2) in
+			(e0_sort, new_e0)
+	
+	| ECast(i, f, t, b, e) ->
+			static_error i (fun () -> msg "@[unexpected@ cast@ expression@ in@ source@ term@]")
+	
+	| EGrammar(i, ps) ->
+	(* helpers for constructing asts *)
+			let mk_concat e1 e2 =
+				mk_app3 i (mk_core_var i "lens_concat") e1 e2 in
+			let mk_rx_concats es = match es with
+				| [] -> mk_core_var i "EPSILON"
+				| [e1] -> e1
+				| e1:: rest ->
+						Safelist.fold_left
+							(fun acc ei -> mk_app3 i (mk_core_var i "regexp_concat") acc ei)
+							e1 rest in
+			let mk_union e1 e2 =
+				mk_app3 i (mk_core_var i "lens_disjoint_union") e1 e2 in
+			let mk_unions = function
+				| [] -> (mk_core_var i "EMPTY")
+				| e1:: rest -> Safelist.fold_left mk_union e1 rest in
+			let mk_star e1 =
+				mk_app i (mk_core_var i "lens_star") e1 in
+			let mk_list s es =
+				Safelist.fold_right
+					(fun ei acc ->
+								mk_app i
+									(ETyApp(i, mk_list_var i "Cons", s))
+									(EPair(i, ei, acc)))
+					es (ETyApp(i, mk_list_var i "Nil", s)) in
+			let mk_qset ds is = match ds, is with
+				| [],[] -> mk_core_var i "EPSILON"
+				| _ ->
+						mk_app3 i (mk_prelude_var i "qset")
+							(mk_rx_concats ds) (mk_rx_concats is) in
+			let mk_permute ps ls = match ps, ls with
+				| [],[] -> mk_core_var i "EMPTY"
+				| [0],[l1] -> l1
+				| _ ->
+						mk_app3 i
+							(mk_prelude_var i "lens_permute")
+							(mk_list SInteger (Safelist.map (fun x -> EInteger(i, x)) ps))
+							(mk_list SLens ls) in
+			
+			(* helper: assert that expression e has sort s *)
+			let assert_sort e s =
+				let e_sort, _ = check_exp sev e in
+				if not (compatible e_sort s) then
+					static_error (info_of_exp e)
+						(fun () -> msg "@[in@ grammar@ atom:@ expected@ %s@ but@ found@ %s@]"
+										(string_of_sort s) (string_of_sort e_sort)) in
+			
+			let assert_non_recursive e pxs =
+				let overlap = Qid.Set.inter pxs (free_exp_vars e) in
+				if not (Qid.Set.is_empty overlap) then
+					
+					static_error (info_of_exp e)
+						(fun () -> msg "@[in@ grammar@ rule:@ not@ right-recursive in {%s}@]"
+										(Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements overlap)))) in
+			
+			(* --- static checks --- collect up production names *)
+			let pxs = Safelist.fold_left
+					(fun acc (Prod(_, x, _)) -> Qid.Set.add (Qid.t_of_id x) acc)
+					Qid.Set.empty ps in
+			
+			(* check and tag_atoms as recursive or non-recursive *)
+			let rec tag_atoms bindings labels tagged_atoms = function
+				| [] ->
+						(None, labels, Safelist.rev tagged_atoms)
+				| EVar(_, qi):: rest when Qid.Map.mem qi bindings ->
+				(* labels *)
+						begin match Qid.Map.find qi bindings with
+							| EVar(_, qj) when rest = [] && Qid.Set.mem qj pxs ->
+							(* recursive *)
+									(Some qj, Qid.Set.add qi labels, Safelist.rev tagged_atoms)
+							| ej ->
+							(* non-recursive *)
+									assert_sort ej SLens;
+									assert_non_recursive ej pxs;
+									tag_atoms bindings (Qid.Set.add qi labels) (Labeled qi:: tagged_atoms) rest
+						end
+				| ei:: rest ->
+				(* non labels *)
+						assert_sort ei SRegexp;
+						assert_non_recursive ei pxs;
+						tag_atoms bindings labels (Bare ei:: tagged_atoms) rest in
+			
+			let lensify_rule (Rule(i, xs, ys, bs)) =
+				(* compute bindings *)
+				let bindings = Safelist.fold_left
+						(fun bs (li, ei) ->
+									let qli = Qid.t_of_id li in
+									if Qid.Map.mem qli bs then
+										static_error i (fun () -> msg "@[lin@ grammar@ rule:@ duplicate@ label@ %s@]" (Qid.string_of_t qli));
+									Qid.Map.add qli ei bs)
+						Qid.Map.empty bs in
+				
+				(* tag atoms *)
+				let qo1, ls1, txs = tag_atoms bindings Qid.Set.empty [] xs in
+				let qo2, ls2, tys = tag_atoms bindings Qid.Set.empty [] ys in
+				
+				(* check labels *)
+				if not (Qid.Set.equal ls1 ls2) then
+					static_error i
+						(fun () ->
+									msg "@[lin@ grammar@ rule:@ both@ sides@ must@ ";
+									msg "reference@ the@ same@ labels: {%s} <> {%s} @]"
+										(Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements ls1)))
+										(Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements ls2))));
+				
+				(* compute permutation *)
+				let perm_table = Hashtbl.create 8 in
+				let pos = ref 1 in
+				Safelist.iter
+					(fun tyi -> match tyi with
+								| Bare _ -> ()
+								| Labeled qi ->
+										Hashtbl.add perm_table (Qid.string_of_t qi) !pos;
+										pos := !pos + 2)
+					tys;
+				
+				let lensified_rule =
+					let rec aux j ds is ps ls tas1 tas2 = match tas1, tas2 with
+						| (Bare ei):: rest1, _ ->
+								aux j (ei:: ds) is ps ls rest1 tas2
+						| _, (Bare ei):: rest2 ->
+								aux j ds (ei:: is) ps ls tas1 rest2
+						| (Labeled qi):: rest1, (Labeled _):: rest2 ->
+								let ei = Qid.Map.find qi bindings in
+								let pi = Hashtbl.find perm_table (Qid.string_of_t qi) in
+								let ps' = pi:: j:: ps in
+								let ls' = ei:: mk_qset (Safelist.rev ds) (Safelist.rev is):: ls in
+								aux (j +2) [] [] ps' ls' rest1 rest2
+						| [],[] ->
+								let ps' = Safelist.rev (j:: ps) in
+								let ls' = Safelist.rev (mk_qset (Safelist.rev ds) (Safelist.rev is):: ls) in
+								mk_permute ps' ls'
+						| _ ->
+								run_error i
+									(fun () -> msg "@[in@ rule:@ found@ different@ sets@ of@ labels@]") in
+					aux 0 [] [] [] [] txs tys in
+				begin match qo1, qo2 with
+					| None, None -> NonRecRule(i, lensified_rule)
+					| Some q1, Some q2 ->
+							if not (Qid.equal q1 q2) then
+								static_error i
+									(fun () ->
+												msg "@[lin@ grammar@ rule:@ both@ sides@ must@ ";
+												msg "be@ recursive@ in@ same@ labels:@ %s@ <>@ %s@]"
+													(Qid.string_of_t q1) (Qid.string_of_t q2));
+							RecRule(i, lensified_rule, q1)
+					| _ ->
+							static_error i (fun () -> msg "@[lin@ grammar@ rule:@ both@ sides@ must@ be@ recursive@]")
+				end in
+			
+			let ps_map =
+				Safelist.fold_left
+					(fun acc (Prod(i, x, rs)) ->
+								let qx = Qid.t_of_id x in
+								let nrs = Safelist.map lensify_rule rs in
+								Qid.Map.add qx nrs acc)
+					Qid.Map.empty ps in
+			
+			(* substitution helpers *)
+			let smash_rule i l = function
+				| RecRule(_, e1, q1) -> RecRule(i, mk_concat l e1, q1)
+				| NonRecRule(_, e1) -> NonRecRule(i, mk_concat l e1) in
+			let subst_rules qy rs l = function
+				| RecRule(i, e, q) when Qid.equal q qy ->
+						NonRecRule(i, mk_concat e l):: (Safelist.map (smash_rule i e) rs)
+				| r -> [r] in
+			
+			let rec elaborate_full qs qx (non_rec, rec_x, rec_other) = function
+				| [] ->
+						(rec_other, mk_concat (mk_star (mk_unions rec_x)) (mk_unions non_rec))
+				| NonRecRule(_, e):: rest ->
+						elaborate_full qs qx (e:: non_rec, rec_x, rec_other) rest
+				| RecRule(i, e, q):: rest when Qid.equal q qx ->
+						elaborate_full qs qx (non_rec, e:: rec_x, rec_other) rest
+				| (RecRule(i, e, q) as r):: rest when Qid.Set.mem q qs ->
+						elaborate_full qs qx (non_rec, rec_x, r:: rec_other) rest
+				| RecRule(i, e, q):: rest ->
+						let rs, l = elaborate_full (Qid.Set.add q qs) q ([],[],[]) (Qid.Map.find q ps_map) in
+						let rs' = Safelist.map (smash_rule i e) rs in
+						let rest' = Safelist.fold_left (fun acc ri -> subst_rules q rs' l ri@acc) [] rest in
+						elaborate_full qs qx (mk_concat e l:: non_rec, rec_x, rec_other) (rs'@rest') in
+			
+			let elaborate qx =
+				match elaborate_full Qid.Set.empty qx ([],[],[]) (Qid.Map.find qx ps_map) with
+				| ([], l) -> l
+				| _ -> run_error i (fun () -> msg "@[elaboration failed@]") in
+			
+			let pre_e0 =
+				Safelist.fold_left
+					(fun acc (Prod(_, x, _)) ->
+								let x_lens = elaborate (Qid.t_of_id x) in
+								match acc with
+								| EUnit _ -> x_lens
+								| _ -> EPair(i, x_lens, acc))
+					(EUnit i)
+					(Safelist.rev ps) in
+			
+			(* msg "@[ELABORATED @[%a@]@]" (fun _ -> Bprint.format_exp)      *)
+			(* pre_e0                                                        *)
+			
+			check_exp sev pre_e0
 
-    | EOver(i,op,es) -> begin 
-        (* type check and instrument es *)
-        let rs = 
-          Safelist.fold_right
-            (fun ei rs -> 
-           let ri = check_exp sev ei in 
-                 ri::rs)
-            es [] in
-        let err () =
-          static_error i (
-            fun () -> msg "@[could@ not@ resolve@ %s@ for@ %a@]"
-              (string_of_op op)
-              (fun _ -> Misc.format_list "@ and@ " format_sort) (Safelist.map fst rs))
-        in 
-        (* rules for overloaded symbols *)
-    let bin_rules =
-      [ ODot, 
-        [ SString, "string_concat";
-          SRegexp, "regexp_concat";
-          SAregexp, "aregexp_concat";
-          SLens, "lens_concat";
-          SCanonizer, "canonizer_concat" ]
-    ; OBox,
-      [SRegexp, "box"]
-      ; OTilde,
-        [ SLens, "lens_swap";
-          SCanonizer, "canonizer_swap" ] 
-      ; OMinus,
-        [ SRegexp, "diff";
-          SInteger, "minus" ]
-      ; OBar,
-        [ SRegexp, "regexp_union";
-              SAregexp, "aregexp_union";
-          SLens, "lens_disjoint_union";
-          SCanonizer, "canonizer_union" ]
-      ; OAmp,    [ SRegexp, "inter" ]
-      ; OBarBar, [ SLens, "lens_union";
-               SBool, "lor";
-             ]
-      ; OAmpAmp, [ SBool, "land";
-             ]
-      ; ODarrow, [ SLens, "set" ]
-      ; ODeqarrow, [ SLens, "rewrite" ]
-      ; OLt, [ SInteger, "blt" ] 
-      ; OLeq, [ SInteger, "bleq" ] 
-      ; OGt, [ SInteger, "bgt" ] 
-      ; OGeq, [ SInteger, "bgeq" ] ] in
-        (* helper to find rule *)
-        let rec find_rule r rs = match r with 
-          | [] -> None
-          | (s,op_name)::t -> 
-          if Safelist.for_all (fun (si,_) -> compatible si s) rs then 
-                Some op_name
-          else 
-                find_rule t rs in 
-        (* rewrite the overloaded symbol using the rules above; 
-           the treatment of [OIter] is special *)
-        let (op_s,op_e) = match op,rs with
-            | OIter(min,max),[r1] ->
-        let (e1_sort,_) = r1 in
-        let mk_iter iter_id min max =
-          let r_min  = check_exp sev (mk_int i min) in
-          let r_max  = check_exp sev (mk_int i max) in
-          let r_iter = check_exp sev (mk_core_var i iter_id) in
-            check_exp_app i sev 
-                      (check_exp_app i sev 
-                         (check_exp_app i sev r_iter r1) r_min) r_max in
-        if compatible e1_sort SRegexp
-        then mk_iter "regexp_iter" min max
-                else if compatible e1_sort SAregexp
-                then mk_iter "aregexp_iter" min max
-        else if compatible e1_sort SLens
-        then
-          let checked_app f_name =
-            let r_f = check_exp sev (mk_core_var i f_name) in
-            check_exp_app i sev r_f r1 in 
-          match min,max with
-            | (0,0) -> 
-                        check_exp_app i sev 
-                          (check_exp sev (mk_core_var i "copy"))
-                          (check_exp sev (mk_core_var i "EPSILON"))
-                    | (1,1) -> r1
-            | (0,1) -> checked_app "lens_option"
-            | (0,-1) -> checked_app "lens_star"
-            | (0,max) -> 
-                        check_exp_app i sev
-                          (check_exp sev (mk_core_var i "lens_option"))
-                          (mk_iter "lens_iter" 1 max)
-                    | (1,-1) -> checked_app "lens_plus"
-                    | (min,-1) -> 
-                        check_exp_app i sev
-                          (check_exp_app i sev
-                             (check_exp sev (mk_core_var i "lens_concat"))
-                             (mk_iter "lens_iter" min min))
-                          (checked_app "lens_star")
-            | _ -> mk_iter "lens_iter" min max
-        else if compatible e1_sort SCanonizer
-        then mk_iter "canonizer_iter" min max
-        else err ()
-            | OEqual,[e1_sort,e1; _,e2] ->
-                (SBool,
-                 mk_app3 i 
-                   (mk_tyapp i (mk_qid_var (Qid.mk_core_t i "equals")) e1_sort) 
-                   e1 e2)
-            (* !!! why is this logic duplicated?  can these not fit in the table above? --MMG *)
-            | OMatch, [tag; exp] ->
-                let tag_sort = SData ([], V.tag_qid) in
-                if not (compatible (fst tag) tag_sort) then err ();
-                let rules = [ SLens, "lens_match";
-                              SAregexp, "aregexp_match" ]
-                in
-                let rec find_rule r =
-                  match r with
-                  | [] -> None
-                  | (s, op_name)::r ->
-                      if compatible (fst exp) s
-                      then Some op_name
-                      else find_rule r
-                in
-                (match find_rule rules with
-                 | Some op_id ->
-                     let app = check_exp_app i sev in
-                     let r_op = check_exp sev (mk_core_var i op_id) in
-                     app (app r_op tag) exp
-                 | None -> err ()
-                )
-            | OWeight, [force;weight;se] ->
-                if not (compatible (fst force) SBool) then err ();
-                if not (compatible (fst weight) SInteger) then err ();
-                let rules = [ SLens, "lens_weight";
-                              SAregexp, "aregexp_weight" ]
-                in
-                let rec find_rule r =
-                  match r with
-                  | [] -> None
-                  | (s, op_name)::r ->
-                      if compatible (fst se) s
-                      then Some op_name
-                      else find_rule r
-                in
-                (match find_rule rules with
-                 | Some op_id ->
-                     let r_op = check_exp sev (mk_core_var i op_id) in
-                     let app = check_exp_app i sev in
-                     app (app (app r_op force) weight) se
-                 | None -> err ()
-                )
-            | op,[r1; r2] -> begin
-                let rules = try Safelist.assoc op bin_rules with _ -> err () in 
-                  match find_rule rules rs with 
-                    | Some op_id ->
-                            let r_op = check_exp sev (mk_core_var i op_id) in
-                     check_exp_app i sev (check_exp_app i sev r_op r1) r2
-                        | None -> err ()
-                end
-            | op,[r1] -> begin
-                let rules = try Safelist.assoc op bin_rules with _ -> err () in 
-                  match find_rule rules rs with 
-                    | Some op_id ->
-                            let r_op = check_exp sev (mk_core_var i op_id) in
-                     (check_exp_app i sev r_op r1)
-                        | None -> err ()
-                end
-            | _ -> err () in 
-      (op_s,op_e)
-      end
-
-    | EFun(i,Param(p_i,p_x,p_s),ret_sorto,body) ->
-        (* resolve the parameter sort *)
-        let new_p_s = check_sort p_i sev p_s in 
-        (* create the environment for the body *)
-        let body_sev = SCEnv.update sev (Qid.t_of_id p_x) (G.Sort new_p_s) in
-        let new_ret_sorto,(body_sort,new_body) = 
-          match ret_sorto with 
-            | None -> 
-                (* if no return sort declared, just check the body 
-           to handle nested function definitions, we pass on
-           the value of in_let *)
-                None,(check_exp ~in_let:in_let body_sev body)
-            | Some ret_sort ->
-                (* otherwise, resolve the declared return sort *)
-                let new_ret_sort = check_sort i body_sev ret_sort in 
-                (* then check the body -- if we were in a let, then so
-                   is the body (needed for nested functions) *)
-                let body_sort,new_body = check_exp ~in_let:in_let body_sev body in
-                (* and check that the declared return sort is a subsort 
-                   of the actual body sort *)
-                  if not (compatible body_sort new_ret_sort) then
-                    static_error i
-              (fun () ->
-                         msg "@[in@ function:@ %s@ expected@ but@ %s@ found@]"
-                           (string_of_sort new_ret_sort)
-                           (string_of_sort body_sort));
-                  let cast_body = 
-                    mk_cast "function body" 
-                      (info_of_exp body) body_sort new_ret_sort new_body in
-                  (Some new_ret_sort,(new_ret_sort,cast_body)) in 
-    (* make the function type dependent if needed *)
-        let dep_x = 
-          if Qid.Set.mem (Qid.t_of_id p_x) (free_exp_vars_in_sort body_sort) 
-      then p_x
-          else 
-        (Trace.debug "dep"
-          (fun () -> 
-         msg "@[free vars in@ ";
-         format_sort body_sort;
-         msg "@ {@ ";
-         Qid.Set.iter (fun q -> msg "%s@ " (Qid.string_of_t q)) (free_exp_vars_in_sort body_sort);
-         msg "}@]\n");
-        Id.wild) in
-        let e0_sort = 
-          SFunction(dep_x,new_p_s,body_sort) in
-        let new_p = Param(p_i,p_x,new_p_s) in
-        let new_e0 = EFun(i,new_p,new_ret_sorto,new_body) in
-    (* apply positive and negative casts (if we're not immediately in a let) *)
-    if not in_let 
-    then mk_bulletproof_cast "fun" i e0_sort new_e0
-    else (e0_sort,new_e0)
-
-    | ELet(i,b,e) ->
-        (* for let-expressions, check the bindings *)
-        let bevs,xs,Bind(new_bi,new_bp,new_bso,new_be) = check_binding ~in_let:true sev b in
-        (* use the resulting environment to check the exp *)
-        let e_sort,new_e = check_exp bevs e in
-    (* put a positive cast on the bound term *)
-    let be_sort = match new_bso with 
-      | Some new_bs -> new_bs
-      | None -> run_error i 
-          (fun () -> 
-         msg "@[couldn't@ unpack@ sort@ in@ let-binding@]") in
-    let (be_sort,cast_be) = mk_pos_cast "let" new_bi be_sort new_be in 
-        (* put in the bound-term and inner term *)
-        let new_e0 = ELet(i,Bind(new_bi,new_bp,Some be_sort,cast_be),new_e) in 
-    (* DEP substitution would go here *)
-    if not (Qid.Set.equal (free_exp_vars_in_sort e_sort) Qid.Set.empty)
-    then run_error i
-        (fun () ->
-           msg "@[in@ let:@ found a binding pattern %s@]"
-         (string_of_sort e_sort));
-        (e_sort,new_e0)
-
-    | EPair(i,e1,e2) -> 
-        (* for pairs, recursively check e1 and e2 *)
-        let e1_sort,new_e1 = check_exp sev e1 in 
-        let e2_sort,new_e2 = check_exp sev e2 in 
-        let e0_sort = SProduct(e1_sort,e2_sort) in 
-        let new_e0 = EPair(i,new_e1,new_e2) in 
-          (e0_sort,new_e0)
-
-    | EUnit(_) -> 
-        (* units have sort SUnit *)
-        (SUnit,e0)
-
-    | EBoolean(i,Some e1) ->
-    let e1_sort,new_e1 = check_exp sev e1 in
-    if not (compatible e1_sort SString) then
-          static_error i
-        (fun () -> msg "@[in@ counterexample: expected@ %s@ but@ found@ %s@]"
-               (string_of_sort SString)
-               (string_of_sort e1_sort));
-    (SBool,EBoolean(i,Some new_e1))
-
-    | EBoolean(_,None) -> 
-        (* boolean constants have sort SBool *)
-        (SBool,e0)
-
-    | EInteger(_) -> 
-        (* integer constants have sort SInteger *)
-        (SInteger,e0)
-
-    | EChar(_) -> 
-        (* character constants have sort SChar *)
-        (SChar,e0)
-
-    | EString(_) -> 
-        (* string constants have sort SString *)
-        (SString,e0)
-
-    | ECSet(_) -> 
-        (* character sets have sort SRegexp *)
-        (SRegexp,e0)
-
-    | EApp(i,e1,e2) ->       
-        let (e1_sort,new_e1) as r1 = check_exp sev e1 in 
-        let (e2_sort,new_e2) as r2 = check_exp sev e2 in 
-    check_exp_app i sev r1 r2
-
-    | ECase(i,e1,pl,ps) ->
-        assert (pl != []);
-        (* helper function for printing error messages *)
-        let err2 i p s1 s2 = static_error i (fun () -> msg p s1 s2) in 
-        (* check the expression being matched *)
-        let e1_sort,new_e1 = check_exp sev e1 in
-        let new_pl_rev = Safelist.fold_left
-          (fun new_pl_rev (pi,ei) ->
-             match static_match i sev pi e1_sort with 
-           | None -> 
-                   (* if the branch is useless, raise an exception *)
-                   err2 i "@[pattern@ %s@ does@ not@ match@ sort@ %s@]" 
-                     (string_of_pat pi) 
-                     (string_of_sort e1_sort)
-           | Some (new_pi,binds) ->                
-                   (* otherwise, extend the environment with bindings for pattern vars *)
-                   let ei_sev = Safelist.fold_left 
-                     (fun ei_sev (qj,sj) -> SCEnv.update ei_sev (Qid.t_of_id qj) (G.Sort sj))
-                     sev binds in 
-                   (* sort check the expression *) 
-                   let ei_sort,new_ei = check_exp ei_sev ei in
-                   (ei,ei_sort,new_ei,new_pi)::new_pl_rev)
-          [] pl
-        in
-        let new_ps, refinement_check =
-          begin match ps with
-            | Some ps -> (* resolve the sort *)
-                check_sort i sev ps, false
-            | None -> (* use the first expression for the type *)
-                let _,e0_sort,_,_ = Safelist.hd new_pl_rev in
-                e0_sort, true (* should check if all types are not refined *)
-          end
-        in
-        let new_pl = Safelist.fold_left
-          (fun new_pl (ei,ei_sort,new_ei,new_pi) ->
-             let ii = info_of_exp ei in
-               (* check that the type is not refined when omitting the type of the match *)
-               if refinement_check && is_refined ei_sort then
-                 static_error ii
-                   (fun () -> msg "@[refined@ type@ %s@ used@ in@ match@ without@ explicit@ type@ declaration@]"
-                      (string_of_sort ei_sort));
-               (* and check that it is compatible with the sorts of the other branches *)
-               if not (compatible ei_sort new_ps) then 
-         err2 ii
-                   "@[in@ match:@ %s@ expected@ but@ %s@ found@]"
-                   (string_of_sort new_ps)
-                   (string_of_sort ei_sort);
-               let cast_ei = mk_cast "match branch" ii ei_sort new_ps new_ei in
-               (new_pi,cast_ei)::new_pl)
-          [] new_pl_rev
-        in
-        let new_e0 = ECase(i, new_e1, new_pl, Some new_ps) in
-        (new_ps, new_e0)
-
-    | ETyFun(i,x,e1) -> 
-        let e1_sort,new_e1 = check_exp sev e1 in 
-        let new_e0 = ETyFun(i,x,new_e1) in 
-        let e0_sort = SForall(x,e1_sort) in 
-        (e0_sort,new_e0)
-
-    | ETyApp(i,e1,s2) -> 
-        let e1_sort,new_e1 = check_exp sev e1 in 
-        let new_s2 = check_sort i sev s2 in 
-        let e0_sort = match e1_sort with 
-          | SForall(x,s11) -> subst_sort [x,new_s2] s11
-          | _ -> static_error i
-          (fun () -> msg "@[in@ type@ application:@ expected@ universal@ type@ but@ %s@ found.@]"
-                 (string_of_sort e1_sort)) in 
-        let new_e0 = ETyApp(i,new_e1,new_s2) in 
-        (e0_sort,new_e0)
-
-    | ECast(i,f,t,b,e) -> 
-        static_error i (fun () -> msg "@[unexpected@ cast@ expression@ in@ source@ term@]")
-
-    | EGrammar(i,ps) ->
-        (* helpers for constructing asts *)
-        let mk_concat e1 e2 =
-          mk_app3 i (mk_core_var i "lens_concat") e1 e2 in
-        let mk_rx_concats es = match es with
-          | [] -> mk_core_var i "EPSILON"
-          | [e1] -> e1
-          | e1::rest ->
-              Safelist.fold_left
-                (fun acc ei -> mk_app3 i (mk_core_var i "regexp_concat") acc ei)
-                e1 rest in
-        let mk_union e1 e2 =
-          mk_app3 i (mk_core_var i "lens_disjoint_union") e1 e2 in
-        let mk_unions = function
-          | [] -> (mk_core_var i "EMPTY")
-          | e1::rest -> Safelist.fold_left mk_union e1 rest in
-        let mk_star e1 =
-          mk_app i (mk_core_var i "lens_star") e1 in
-        let mk_list s es =
-          Safelist.fold_right
-            (fun ei acc ->
-               mk_app i
-                 (ETyApp(i,mk_list_var i "Cons",s))
-                 (EPair(i,ei,acc)))
-            es (ETyApp(i,mk_list_var i "Nil",s)) in
-        let mk_qset ds is = match ds,is with
-          | [],[] -> mk_core_var i "EPSILON"
-          | _ ->
-              mk_app3 i (mk_prelude_var i "qset")
-                (mk_rx_concats ds) (mk_rx_concats is) in
-        let mk_permute ps ls = match ps,ls with
-          | [],[] -> mk_core_var i "EMPTY"
-          | [0],[l1] -> l1
-          | _ ->
-              mk_app3 i
-                (mk_prelude_var i "lens_permute")
-                (mk_list SInteger (Safelist.map (fun x -> EInteger(i,x)) ps))
-                (mk_list SLens ls) in
-
-        (* helper: assert that expression e has sort s *)
-        let assert_sort e s =
-          let e_sort,_ = check_exp sev e in
-          if not (compatible e_sort s) then
-            static_error (info_of_exp e)
-       (fun () -> msg "@[in@ grammar@ atom:@ expected@ %s@ but@ found@ %s@]"
-                 (string_of_sort s) (string_of_sort e_sort)) in
-
-        let assert_non_recursive e pxs =
-          let overlap = Qid.Set.inter pxs (free_exp_vars e) in
-          if not (Qid.Set.is_empty overlap) then
-
-            static_error (info_of_exp e)
-       (fun () -> msg "@[in@ grammar@ rule:@ not@ right-recursive in {%s}@]"
-                 (Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements overlap)))) in
-
-        (* --- static checks --- *)
-        (* collect up production names *)
-        let pxs = Safelist.fold_left
-          (fun acc (Prod(_,x,_)) -> Qid.Set.add (Qid.t_of_id x) acc)
-          Qid.Set.empty ps in
-
-        (* check and tag_atoms as recursive or non-recursive *)
-        let rec tag_atoms bindings labels tagged_atoms = function
-          | [] ->
-              (None,labels,Safelist.rev tagged_atoms)
-          | EVar(_,qi)::rest when Qid.Map.mem qi bindings ->
-              (* labels *)
-              begin match Qid.Map.find qi bindings with
-                | EVar(_,qj) when rest = [] && Qid.Set.mem qj pxs ->
-                    (* recursive *)
-                    (Some qj,Qid.Set.add qi labels,Safelist.rev tagged_atoms)
-                | ej ->
-                    (* non-recursive *)
-                    assert_sort ej SLens;
-                    assert_non_recursive ej pxs;
-                    tag_atoms bindings (Qid.Set.add qi labels) (Labeled qi::tagged_atoms) rest
-              end
-          | ei::rest ->
-              (* non labels *)
-              assert_sort ei SRegexp;
-              assert_non_recursive ei pxs;
-              tag_atoms bindings labels (Bare ei::tagged_atoms) rest in
-
-        let lensify_rule (Rule(i,xs,ys,bs)) =
-          (* compute bindings *)
-          let bindings = Safelist.fold_left
-            (fun bs (li,ei) ->
-               let qli = Qid.t_of_id li in
-               if Qid.Map.mem qli bs then
-                 static_error i (fun () -> msg "@[lin@ grammar@ rule:@ duplicate@ label@ %s@]" (Qid.string_of_t qli));
-               Qid.Map.add qli ei bs)
-            Qid.Map.empty bs in
-
-          (* tag atoms *)
-          let qo1,ls1,txs = tag_atoms bindings Qid.Set.empty [] xs in
-          let qo2,ls2,tys = tag_atoms bindings Qid.Set.empty [] ys in
-
-          (* check labels *)
-          if not (Qid.Set.equal ls1 ls2) then
-            static_error i
-              (fun () ->
-                 msg "@[lin@ grammar@ rule:@ both@ sides@ must@ ";
-                 msg "reference@ the@ same@ labels: {%s} <> {%s} @]"
-                   (Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements ls1)))
-                   (Misc.concat_list "," (Safelist.map Qid.string_of_t (Qid.Set.elements ls2))));
-
-          (* compute permutation *)
-          let perm_table = Hashtbl.create 8 in
-          let pos = ref 1 in
-          Safelist.iter
-            (fun tyi -> match tyi with
-               | Bare _ -> ()
-               | Labeled qi ->
-                   Hashtbl.add perm_table (Qid.string_of_t qi) !pos;
-                   pos := !pos + 2)
-            tys;
-
-          let lensified_rule =
-            let rec aux j ds is ps ls tas1 tas2 = match tas1,tas2 with
-              | (Bare ei)::rest1,_ ->
-                  aux j (ei::ds) is ps ls rest1 tas2
-              | _,(Bare ei)::rest2 ->
-                  aux j ds (ei::is) ps ls tas1 rest2
-              | (Labeled qi)::rest1,(Labeled _)::rest2 ->
-                  let ei = Qid.Map.find qi bindings in
-                  let pi = Hashtbl.find perm_table (Qid.string_of_t qi) in
-                  let ps' = pi::j::ps in
-                  let ls' = ei::mk_qset (Safelist.rev ds) (Safelist.rev is)::ls in
-                  aux (j+2) [] [] ps' ls' rest1 rest2
-              | [],[] ->
-                  let ps' = Safelist.rev (j::ps) in
-                  let ls' = Safelist.rev (mk_qset (Safelist.rev ds) (Safelist.rev is)::ls) in
-                  mk_permute ps' ls'
-              | _ ->
-                  run_error i
-             (fun () -> msg "@[in@ rule:@ found@ different@ sets@ of@ labels@]") in
-            aux 0 [] [] [] [] txs tys in
-          begin match qo1,qo2 with
-            | None,None -> NonRecRule(i,lensified_rule)
-            | Some q1,Some q2 ->
-                if not (Qid.equal q1 q2) then
-                  static_error i
-                    (fun () ->
-                       msg "@[lin@ grammar@ rule:@ both@ sides@ must@ ";
-                       msg "be@ recursive@ in@ same@ labels:@ %s@ <>@ %s@]"
-                         (Qid.string_of_t q1) (Qid.string_of_t q2));
-                RecRule(i,lensified_rule,q1)
-            | _ ->
-                static_error i (fun () -> msg "@[lin@ grammar@ rule:@ both@ sides@ must@ be@ recursive@]")
-          end in
-
-        let ps_map =
-          Safelist.fold_left
-            (fun acc (Prod(i,x,rs)) ->
-               let qx = Qid.t_of_id x in
-               let nrs = Safelist.map lensify_rule rs in
-               Qid.Map.add qx nrs acc)
-            Qid.Map.empty ps in
-
-        (* substitution helpers *)
-        let smash_rule i l = function
-          | RecRule(_,e1,q1) -> RecRule(i,mk_concat l e1,q1)
-          | NonRecRule(_,e1) -> NonRecRule(i,mk_concat l e1) in
-        let subst_rules qy rs l = function
-          | RecRule(i,e,q) when Qid.equal q qy ->
-              NonRecRule(i,mk_concat e l)::(Safelist.map (smash_rule i e) rs)
-          | r -> [r] in
-
-        let rec elaborate_full qs qx (non_rec,rec_x,rec_other) = function
-          | [] ->
-              (rec_other,mk_concat (mk_star (mk_unions rec_x)) (mk_unions non_rec))
-          | NonRecRule(_,e)::rest ->
-              elaborate_full qs qx (e::non_rec,rec_x,rec_other) rest
-          | RecRule(i,e,q)::rest when Qid.equal q qx ->
-              elaborate_full qs qx (non_rec,e::rec_x,rec_other) rest
-          | (RecRule(i,e,q) as r)::rest when Qid.Set.mem q qs ->
-              elaborate_full qs qx (non_rec,rec_x,r::rec_other) rest
-          | RecRule(i,e,q)::rest ->
-              let rs,l = elaborate_full (Qid.Set.add q qs) q ([],[],[]) (Qid.Map.find q ps_map) in
-              let rs' = Safelist.map (smash_rule i e) rs in
-              let rest' = Safelist.fold_left (fun acc ri -> subst_rules q rs' l ri@acc) [] rest in
-              elaborate_full qs qx (mk_concat e l::non_rec,rec_x,rec_other) (rs'@rest') in
-
-        let elaborate qx =
-          match elaborate_full Qid.Set.empty qx ([],[],[]) (Qid.Map.find qx ps_map) with
-            | ([],l) -> l
-            | _ -> run_error i (fun () -> msg "@[elaboration failed@]") in
-
-        let pre_e0 =
-          Safelist.fold_left
-            (fun acc (Prod(_,x,_)) ->
-               let x_lens = elaborate (Qid.t_of_id x) in
-               match acc with
-                 | EUnit _ -> x_lens
-                 | _ -> EPair(i,x_lens,acc))
-            (EUnit i)
-            (Safelist.rev ps) in
-
-(*         msg "@[ELABORATED @[%a@]@]" (fun _ -> Bprint.format_exp) pre_e0 *)
-
-        check_exp sev pre_e0
-
-and check_binding ?(in_let=false) sev b0 = match b0 with
-  | Bind(i,p,so,e) ->
-      let e_sort,new_e = check_exp ~in_let:in_let sev e in        
-      let new_s,cast_e = match so with 
-        | None -> (e_sort,new_e)
-        | Some s -> 
-            let new_s = check_sort i sev s in
-          if not (compatible e_sort new_s) then 
-                static_error i
-                  (fun () ->
-                     msg "@[in@ let-binding:@ %s@ expected@ but@ %s@ found@]"
-               (string_of_sort new_s)
-               (string_of_sort e_sort));
-          let cast_e = mk_cast "let binding" (info_of_exp e) e_sort new_s new_e in 
-                (new_s,cast_e) in 
-      let new_p,xs,bsev = match static_match i sev p new_s with 
-        | None -> 
-            static_error i 
-          (fun () -> 
-                 msg "@[in@ let-binding:@ %s@ does not match@ %s@]"
-                   (string_of_pat p)
-                   (string_of_sort new_s))
-        | Some(new_p,binds) ->             
-            let xs_rev,bsev = Safelist.fold_left 
-          (fun (xsi,sevi) (xj,sj) -> 
-                 let qj = Qid.t_of_id xj in 
-                   (qj::xsi,SCEnv.update sevi qj (G.Sort sj)))
-          ([],sev) binds in
-            (new_p,Safelist.rev xs_rev,bsev) in 
-      let new_b = Bind(i,new_p,Some new_s,cast_e) in 
-        (bsev,xs,new_b)
+and check_binding ?(in_let = false) sev b0 = match b0 with
+	| Bind(i, p, so, e) ->
+			let e_sort, new_e = check_exp ~in_let: in_let sev e in
+			let new_s, cast_e = match so with
+				| None -> (e_sort, new_e)
+				| Some s ->
+						let new_s = check_sort i sev s in
+						if not (compatible e_sort new_s) then
+							static_error i
+								(fun () ->
+											msg "@[in@ let-binding:@ %s@ expected@ but@ %s@ found@]"
+												(string_of_sort new_s)
+												(string_of_sort e_sort));
+						let cast_e = mk_cast "let binding" (info_of_exp e) e_sort new_s new_e in
+						(new_s, cast_e) in
+			let new_p, xs, bsev = match static_match i sev p new_s with
+				| None ->
+						static_error i
+							(fun () ->
+										msg "@[in@ let-binding:@ %s@ does not match@ %s@]"
+											(string_of_pat p)
+											(string_of_sort new_s))
+				| Some(new_p, binds) ->
+						let xs_rev, bsev = Safelist.fold_left
+								(fun (xsi, sevi) (xj, sj) ->
+											let qj = Qid.t_of_id xj in
+											(qj:: xsi, SCEnv.update sevi qj (G.Sort sj)))
+								([], sev) binds in
+						(new_p, Safelist.rev xs_rev, bsev) in
+			let new_b = Bind(i, new_p, Some new_s, cast_e) in
+			(bsev, xs, new_b)
 
 (* type check a single declaration *)
 let rec check_decl sev ms d0 =
-    let res = match d0 with
-        | DLet(i, b) ->
-                let bsev, xs, Bind(b_i, b_p, b_so, b_e) = check_binding ~in_let: true sev b in
-                (* put a positive cast on the bound term *)
-                let b_s = match b_so with
-                    | Some b_s -> b_s
-                    | None -> run_error i
-                                (fun () ->
-                                            msg "@[couldn't@ unpack@ sort@ in@ let-binding@]") in
-                let (b_s, cast_be) = mk_pos_cast "dlet" b_i b_s b_e in
-                let cast_b = Bind(b_i, b_p, Some b_s, cast_be) in
-                let new_d = DLet(i, cast_b) in
-                (bsev, xs, new_d)
-        | DMod(i, n, ds) ->
-                let qmn = Qid.t_dot_id (SCEnv.get_mod sev) n in
-                let msev = SCEnv.set_mod (SCEnv.push_ctx sev qmn) qmn in
-                let ms = ms @ [n] in
-                (* check the module *)
-                let msev, names, new_ds = check_module_aux msev ms ds in
-                let nsev, names_rev = Safelist.fold_left
-                        (fun (nsev, names) q ->
-                                    match SCEnv.lookup msev q with
-                                        None -> run_error i
-                                                (fun () -> msg "@[declaration@ for@ %s@ missing@]"
-                                                                (Qid.string_of_t q))
-                                    | Some s ->
-                                    (* prefix the qualifiers in each name with n *)
-                                            let nq = Qid.id_dot n q in
-                                            (SCEnv.update nsev nq s, nq:: names))
-                        (msev,[]) names in
-                let new_d = DMod(i, n, new_ds) in
-                let nsev = SCEnv.set_mod (SCEnv.pop_ctx nsev) (Qid.parent_t qmn) in
-                (nsev, Safelist.rev names_rev, new_d)
-        
-        | DType(i, svl, qx, cl) ->
-        (* get module prefix *)
-                let qm = SCEnv.get_mod sev in
-                let new_qx = Qid.t_dot_t qm qx in
-                (* install a dummy for qx in environment *)
-                let sev2 = SCEnv.update_type sev svl new_qx [] in
-                (* then resolve sorts in cl *)
-                let new_cl_rev =
-                    Safelist.fold_left
-                        (fun acc (x, so) ->
-                                    let x_so' = match so with
-                                        | None -> (x, so)
-                                        | Some s -> (x, Some (check_sort i sev2 s)) in
-                                    x_so':: acc)
-                        [] cl in
-                let new_cl = Safelist.rev new_cl_rev in
-                let new_qcl = Safelist.map (fun (x, so) -> (Qid.t_of_id x, so)) new_cl in
-                (* put the real qx in environment -- note! must discard dummy sev2 *)
-                let sev3 = SCEnv.update_type sev svl new_qx new_qcl in
-                (* build the datatype *)
-                let sx = SData(sl_of_svl svl, new_qx) in
-                let mk_univ s = Safelist.fold_right (fun svi acc -> SForall(svi, acc)) svl s in
-                (* add constructors to sev *)
-                let sev4, xs_rev = Safelist.fold_left
-                        (fun (sevi, acc) (li, sio) ->
-                                    let li_sort = match sio with
-                                        | None -> mk_univ sx
-                                        | Some si -> mk_univ (SFunction(Id.wild, si, sx)) in
-                                    let qli = Qid.t_of_id li in
-                                    (SCEnv.update sevi qli (G.Sort li_sort), qli:: acc))
-                        (sev3,[]) new_cl_rev in
-                let new_d = DType(i, svl, new_qx, Safelist.rev new_cl_rev) in
-                (sev4, Safelist.rev xs_rev, new_d)
-        
-        | DTest(i, e1, tr) ->
-        (* check the expression *)
-                let e1_sort, new_e1 = check_exp sev e1 in
-                let new_tr = match tr with
-                    | TestError | TestPrint -> tr
-                    | TestEqual e2 ->
-                    (* for values, check that the exps have compatible types *)
-                            let e2_sort, new_e2 = check_exp sev e2 in
-                            let e2_i = info_of_exp e2 in
-                            if not (compatible e2_sort e1_sort) then
-                                static_error e2_i
-                                    (fun () ->
-                                                msg "@[in@ type test:@ %s@ expected@ but@ %s@ found@]"
-                                                    (string_of_sort e1_sort)
-                                                    (string_of_sort e2_sort));
-                            TestEqual new_e2
-                    | TestSortPrint _ -> TestSortPrint (Some e1_sort)
-                    | TestSortEqual(_, s2) ->
-                            let s2' = check_sort i sev s2 in
-                            TestSortEqual(Some e1_sort, s2') in
-                let new_d = DTest(i, new_e1, new_tr) in
-                (sev,[], new_d) in
-    let _, _, new_d0 = res in
-    Trace.debug "check"
-        (fun () ->
-                    msg "@[";
-                    format_decl d0;
-                    msg "@\n~~>@\n";
-                    format_decl new_d0;
-                    msg "@]@\n");
-    res
+	let res = match d0 with
+		| DLet(i, b) ->
+				let bsev, xs, Bind(b_i, b_p, b_so, b_e) = check_binding ~in_let: true sev b in
+				(* put a positive cast on the bound term *)
+				let b_s = match b_so with
+					| Some b_s -> b_s
+					| None -> run_error i
+								(fun () ->
+											msg "@[couldn't@ unpack@ sort@ in@ let-binding@]") in
+				let (b_s, cast_be) = mk_pos_cast "dlet" b_i b_s b_e in
+				let cast_b = Bind(b_i, b_p, Some b_s, cast_be) in
+				let new_d = DLet(i, cast_b) in
+				(bsev, xs, new_d)
+		| DMod(i, n, ds) ->
+				let qmn = Qid.t_dot_id (SCEnv.get_mod sev) n in
+				let msev = SCEnv.set_mod (SCEnv.push_ctx sev qmn) qmn in
+				let ms = ms @ [n] in
+				(* check the module *)
+				let msev, names, new_ds = check_module_aux msev ms ds in
+				let nsev, names_rev = Safelist.fold_left
+						(fun (nsev, names) q ->
+									match SCEnv.lookup msev q with
+										None -> run_error i
+												(fun () -> msg "@[declaration@ for@ %s@ missing@]"
+																(Qid.string_of_t q))
+									| Some s ->
+									(* prefix the qualifiers in each name with n *)
+											let nq = Qid.id_dot n q in
+											(SCEnv.update nsev nq s, nq:: names))
+						(msev,[]) names in
+				let new_d = DMod(i, n, new_ds) in
+				let nsev = SCEnv.set_mod (SCEnv.pop_ctx nsev) (Qid.parent_t qmn) in
+				(nsev, Safelist.rev names_rev, new_d)
+		
+		| DType(i, svl, qx, cl) ->
+		(* get module prefix *)
+				let qm = SCEnv.get_mod sev in
+				let new_qx = Qid.t_dot_t qm qx in
+				(* install a dummy for qx in environment *)
+				let sev2 = SCEnv.update_type sev svl new_qx [] in
+				(* then resolve sorts in cl *)
+				let new_cl_rev =
+					Safelist.fold_left
+						(fun acc (x, so) ->
+									let x_so' = match so with
+										| None -> (x, so)
+										| Some s -> (x, Some (check_sort i sev2 s)) in
+									x_so':: acc)
+						[] cl in
+				let new_cl = Safelist.rev new_cl_rev in
+				let new_qcl = Safelist.map (fun (x, so) -> (Qid.t_of_id x, so)) new_cl in
+				(* put the real qx in environment -- note! must discard dummy sev2 *)
+				let sev3 = SCEnv.update_type sev svl new_qx new_qcl in
+				(* build the datatype *)
+				let sx = SData(sl_of_svl svl, new_qx) in
+				let mk_univ s = Safelist.fold_right (fun svi acc -> SForall(svi, acc)) svl s in
+				(* add constructors to sev *)
+				let sev4, xs_rev = Safelist.fold_left
+						(fun (sevi, acc) (li, sio) ->
+									let li_sort = match sio with
+										| None -> mk_univ sx
+										| Some si -> mk_univ (SFunction(Id.wild, si, sx)) in
+									let qli = Qid.t_of_id li in
+									(SCEnv.update sevi qli (G.Sort li_sort), qli:: acc))
+						(sev3,[]) new_cl_rev in
+				let new_d = DType(i, svl, new_qx, Safelist.rev new_cl_rev) in
+				(sev4, Safelist.rev xs_rev, new_d)
+		
+		| DTest(i, e1, tr) ->
+		(* check the expression *)
+				let e1_sort, new_e1 = check_exp sev e1 in
+				let new_tr = match tr with
+					| TestError | TestPrint -> tr
+					| TestEqual e2 ->
+					(* for values, check that the exps have compatible types *)
+							let e2_sort, new_e2 = check_exp sev e2 in
+							let e2_i = info_of_exp e2 in
+							if not (compatible e2_sort e1_sort) then
+								static_error e2_i
+									(fun () ->
+												msg "@[in@ type test:@ %s@ expected@ but@ %s@ found@]"
+													(string_of_sort e1_sort)
+													(string_of_sort e2_sort));
+							TestEqual new_e2
+					| TestSortPrint _ -> TestSortPrint (Some e1_sort)
+					| TestSortEqual(_, s2) ->
+							let s2' = check_sort i sev s2 in
+							TestSortEqual(Some e1_sort, s2') in
+				let new_d = DTest(i, new_e1, new_tr) in
+				(sev,[], new_d) in
+	let _, _, new_d0 = res in
+	Trace.debug "check"
+		(fun () ->
+					msg "@[";
+					format_decl d0;
+					msg "@\n~~>@\n";
+					format_decl new_d0;
+					msg "@]@\n");
+	res
 
 and check_module_aux sev m ds =
-    let msev, names, new_ds_rev =
-        Safelist.fold_left
-            (fun (sevi, names, new_ds_rev) di ->
-                        let dsev, new_names, new_di = check_decl sevi m di in
-                        dsev, names@new_names, new_di:: new_ds_rev)
-            (sev,[],[]) ds in
-    (msev, names, Safelist.rev new_ds_rev)
+	let msev, names, new_ds_rev =
+		Safelist.fold_left
+			(fun (sevi, names, new_ds_rev) di ->
+						let dsev, new_names, new_di = check_decl sevi m di in
+						dsev, names@new_names, new_di:: new_ds_rev)
+			(sev,[],[]) ds in
+	(msev, names, Safelist.rev new_ds_rev)
 
 (* entry point to static analysis / instrumentation *)
 let check_module m0 = match m0 with
-    | Mod(i, m, nctx, ds) ->
-            let qm = Qid.t_of_id m in
-            let sev = SCEnv.set_ctx (SCEnv.empty qm) (qm:: nctx@G.pre_ctx) in
-            let checked_sev, _, checked_ds = check_module_aux sev [m] ds in
-            let res = Mod(i, m, nctx, checked_ds) in
-            Trace.debug "instr+" (fun () -> format_module res; msg "@\n");
-            res
-
-  
+	| Mod(i, m, nctx, ds) ->
+			let qm = Qid.t_of_id m in
+			let sev = SCEnv.set_ctx (SCEnv.empty qm) (qm:: nctx@G.pre_ctx) in
+			let checked_sev, _, checked_ds = check_module_aux sev [m] ds in
+			let res = Mod(i, m, nctx, checked_ds) in
+			Trace.debug "instr+" (fun () -> format_module res; msg "@\n");
+			res

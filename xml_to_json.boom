@@ -1,0 +1,88 @@
+module Xml_to_json = 
+
+let lowercase = [a-z]
+let uppercase = [A-Z]
+let digit = [0-9]
+let wsp = [ \t\n\r]
+let capfirst = uppercase . lowercase* 
+let capfsentence = (capfirst . " ")* . capfirst
+
+let name = capfirst . " " . uppercase . ". " . capfirst
+let date = digit{2} . "-" . digit{2} . "-" . digit{4}
+let address = (lowercase | uppercase | digit | wsp) * . ", " . uppercase* . wsp .
+                uppercase{2} . wsp . digit{5}
+
+let xmlname = "<name>" . name ."</name>"
+let xmldate = "<birthdate>" . date . "</birthdate>"
+let xmlgenre = "<genre>" . capfsentence . "</genre>"
+let xmlgenres = "<genres>" . ([] | ("\n" . (xmlgenre . "\n")* ) . (xmlgenre . "\n")) . "</genres>"
+let xmladdress = "<address>" . address . "</address>"
+
+let genrestest = 
+"<genres>
+<genre>Self Help</genre>
+<genre>Theatre</genre>
+<genre>Crime</genre>
+</genres>"
+
+let caplist = "[" . ([] | (capfsentence . ", ")* . capfsentence) . "]"
+
+let sanitycheck = synth xmlgenres <=> caplist with #{string * string}[genrestest
+, "[Self Help, Theatre, Crime]" ]
+
+(* test sanitycheck.get genrestest = ? *)
+      
+let permauth = perm #{canonizer}[id xmlname; id xmldate; id xmlgenres; id xmladdress] with
+                (project wsp* -> "\n")
+let author = id "<author>\n" . permauth . id "\n</author>"
+
+let authortest = 
+"<author>
+<address>BobLobLaw, PHILADELPHIA PA 19104</address>
+<genres>
+<genre>Self Help</genre>
+<genre>Theatre</genre>
+<genre>Crime</genre>
+</genres>
+<name>Tobias O. Funke</name>
+<birthdate>04-04-1964</birthdate>
+</author>"
+
+let xxmlname = "<<name>>" . name ."<</name>"
+let xxmldate = "<<birthdate>>" . date . "<</birthdate>>"
+let xxmlgenre = "<<genre>>" . capfsentence . "<</genre>>"
+let xxmlgenres = "<<genres>>" . ([] | ("\n" . (xxmlgenre . "\n")* ) . (xxmlgenre . "\n")) . 
+"<</genres>>"
+let xxmladdress = "<<address>>" . address . "<</address>>"
+
+let ppermauth = perm #{canonizer}[id xxmlname; id xxmldate; id xxmlgenres; id xxmladdress] with
+                (project wsp* -> "\n")
+let aauthor = id "<<author>>\n" . ppermauth . id "\n<</author>>"
+
+(*let latexauthor = 
+"{name = " . name . ", birthdate = " . date . ", address = " . 
+address . ", genres = " . caplist . "}"
+
+let latexstring = 
+"{name = Tobias O. Funke, birthdate = 04-04-1964, address = BobLobLaw, PHILADELPHIA PA 19104, genres = [Self Help, Theatre, Crime]}" *)
+
+let synthauth = synth author <=> aauthor with #{string * string}[]
+test synthauth.get authortest = ?
+
+let title = "<title>" . capfsentence . "</title>"
+let bookgenre = "<genre>" . capfsentence . "</genre>"
+let price = "<price>$" . digit+ . "." . digit{2} . "</price>"
+
+let permbook = perm #{canonizer}[id title; author; id bookgenre; id price] with
+                (project wsp -> "\n")
+let book = id "<book>\n" . permbook . id "\n</book>"
+
+let booktest = 
+"<book>\n". authortest . 
+"\n<price>$2.99</price>
+<title>The Man Inside Me</title>
+<genre>Self Help</genre>
+</book>"
+
+let synthbook = synth book <=> book with #{string * string}[]
+(* test synthbook.get booktest = ? *)

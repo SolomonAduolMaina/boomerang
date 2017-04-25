@@ -48,7 +48,7 @@ type r =
 	| Crnk (* concat *)
 	| Srnk (* star *)
 	| Arnk (* atomic *)
-	| Brnk
+	| Vrnk
 
 (* lpar: true if an expression with rank on the left needs parentheses *)
 let lpar r1 r2 = match r1, r2 with
@@ -65,8 +65,8 @@ let lpar r1 r2 = match r1, r2 with
 	| Drnk, Urnk -> true
 	| Drnk, Drnk -> false
 	| Urnk, Urnk -> false
-	| Brnk, _ -> false
-	| _, Brnk -> false
+	| Vrnk, _ -> false
+	| _, Vrnk -> false
 
 (* rpar: true if an expression with rank on the right needs parentheses *)
 let rpar r1 r2 = match r1, r2 with
@@ -83,8 +83,8 @@ let rpar r1 r2 = match r1, r2 with
 	| Drnk, Urnk -> true
 	| Drnk, Drnk -> true
 	| Urnk, Urnk -> true
-	| Brnk, _ -> false
-	| _ , Brnk -> false
+	| Vrnk, _ -> false
+	| _ , Vrnk -> false
 
 (* --------------------- CHARACTER SETS --------------------- *)
 module CharSet :
@@ -167,7 +167,7 @@ module rec M : sig
 		| Rep of t * int * int option
 		| Inter of t list
 		| Diff of t * t
-		| Box of int * t
+		| Var of string * t
 	and t =
 		{ desc : d;
 			uid : int;
@@ -189,7 +189,7 @@ end = struct
 		| Rep of t * int * int option
 		| Inter of t list
 		| Diff of t * t
-		| Box of int * t
+		| Var of string * t
 	and t =
 		{ desc : d;
 			uid : int;
@@ -256,7 +256,7 @@ let rank t0 = match t0.desc with
 	| Alt _ -> Urnk
 	| Inter _ -> Irnk
 	| Diff _ -> Drnk
-	| Box _ -> failwith "Implement rank in brx for Box"
+	| Var _ -> Vrnk
 
 (* printing helpers *)
 let string_of_char_code n =
@@ -316,7 +316,7 @@ let rec format_t t0 =
 				format_list sep rnk rest in
 	msg "@[";
 	begin match t0.desc with
-		| Box _ -> failwith "Implement format_t in brx for Box"
+		| Var (_, t) -> format_t t
 		| CSet [p1] ->
 				let n1, n2 = p1 in
 				if n1 = min_code && n2 >= max_ascii_code then msg "[^]"
@@ -458,26 +458,6 @@ let chars_of_charmap (m: charmap) : int list =
 	in
 	chars
 
-let rec desc_charmap (t: t) =
-	match t.desc with
-	| Box _ -> failwith "Implement desc_charmap in brx for Box"
-	| CSet cs -> charmap_of_cset cs
-	| Rep(t1, _, _) -> get_charmap t1
-	| Seq(t1, t2) ->
-			if t1.final then combine_charmaps (get_charmap t1) (get_charmap t2)
-			else get_charmap t1
-	| Alt tl
-	| Inter tl ->
-			let ml = Safelist.fold_left (fun ml ti -> get_charmap ti:: ml) [] tl in
-			combine_charmap_list ml
-	| Diff(t1, t2) ->
-			combine_charmaps (get_charmap t1) (get_charmap t2)
-
-and get_charmap t =
-	force t.maps
-		(fun v -> t.maps <- Some v)
-		desc_charmap t
-
 (* --------------------- STRING MATCHING --------------------- *)
 let match_sub_string t s i j =
 	let rec loop i ti =
@@ -550,8 +530,9 @@ let diff_cache : t TTCache.t = TTCache.create 1031
 let over_cache : t TTCache.t = TTCache.create 1031
 
 (* --------------------- DESC OPERATIONS --------------------- *)
-let desc_hash d =
+let rec desc_hash d =
 	let pre_h = match d with
+		| Var(_, t) -> desc_hash t.desc
 		| CSet(cs) ->
 				let rec aux = function
 					| [] -> 0
@@ -566,34 +547,14 @@ let desc_hash d =
 		| Diff(t1, t2) -> 379 * t1.hash + 563 * t2.hash
 		| Rep(t1, i, Some j) -> 197 * t1.hash + 137 * i + j
 		| Rep(t1, i, None) -> 197 * t1.hash + 137 * i + 552556457
-		| Box(i, _) -> Hashtbl.hash i
 	in
 	abs pre_h
-
-let desc_final = function
-	| CSet _ -> false
-	| Rep(t1,0, _) -> true
-	| Rep(t1, _, _) -> t1.final
-	| Seq(t1, t2) -> t1.final && t2.final
-	| Alt tl -> Safelist.exists (fun ti -> ti.final) tl
-	| Inter tl -> Safelist.for_all (fun ti -> ti.final) tl
-	| Diff(t1, t2) -> t1.final && not t2.final
-	| Box (_, t) -> t.final
 
 (* let desc_size = function | CSet _ -> 1 | Rep(t1,_,_) -> 1 + t1.size |   *)
 (* Seq(t1,t2) -> 1 + t1.size + t2.size | Alt tl -> 1 + Safelist.fold_left  *)
 (* (fun acc ti -> acc + ti.size) 0 tl | Inter tl -> 1 + Safelist.fold_left *)
 (* (fun acc ti -> acc + ti.size) 0 tl | Diff(t1,t2) -> 1 + t1.size +       *)
 (* t2.size                                                                 *)
-
-let desc_ascii = function
-	| CSet cs -> CharSet.ascii cs
-	| Rep(t1, _, _) -> t1.ascii
-	| Seq(t1, t2) -> t1.ascii && t2.ascii
-	| Alt tl -> Safelist.for_all (fun t -> t.ascii) tl
-	| Inter tl -> Safelist.exists (fun t -> t.ascii) tl
-	| Diff(t1, t2) -> t1.ascii
-	| Box(_, t) -> t.ascii
 
 (* --------------------- CONSTRUCTORS --------------------- gensym for     *)
 (* uids                                                                    *)
@@ -607,6 +568,17 @@ let dummy_impl _ = assert false
 (* helper for constructing some constants (anything, empty, epsilon, etc.) *)
 (* that are used in the big, mutually-recursive definition of mk_t that    *)
 (* follows.                                                                *)
+
+let rec desc_final = function
+	| Var (_, t) -> desc_final t.desc
+	| CSet _ -> false
+	| Rep(t1,0, _) -> true
+	| Rep(t1, _, _) -> t1.final
+	| Seq(t1, t2) -> t1.final && t2.final
+	| Alt tl -> Safelist.exists (fun ti -> ti.final) tl
+	| Inter tl -> Safelist.for_all (fun ti -> ti.final) tl
+	| Diff(t1, t2) -> t1.final && not t2.final
+
 let mk_constant d t_nexto repo ascii =
 	let t =
 		{ uid = next_uid ();
@@ -660,14 +632,41 @@ let is_epsilon t = t.uid = epsilon.uid
 let is_anything t = t.uid = anything.uid
 let is_anyascii t = t.uid = anyascii.uid
 
-(* main constructor *)
+let rec desc_charmap (t: t) =
+	match t.desc with
+	| Var (_, t) -> desc_charmap t
+	| CSet cs -> charmap_of_cset cs
+	| Rep(t1, _, _) -> get_charmap t1
+	| Seq(t1, t2) ->
+			if t1.final then combine_charmaps (get_charmap t1) (get_charmap t2)
+			else get_charmap t1
+	| Alt tl
+	| Inter tl ->
+			let ml = Safelist.fold_left (fun ml ti -> get_charmap ti:: ml) [] tl in
+			combine_charmap_list ml
+	| Diff(t1, t2) ->
+			combine_charmaps (get_charmap t1) (get_charmap t2)
+
+and get_charmap t =
+	force t.maps
+		(fun v -> t.maps <- Some v)
+		desc_charmap t
+
+let rec desc_ascii = function
+	| Var (_, t) -> desc_ascii t.desc
+	| CSet cs -> CharSet.ascii cs
+	| Rep(t1, _, _) -> t1.ascii
+	| Seq(t1, t2) -> t1.ascii && t2.ascii
+	| Alt tl -> Safelist.for_all (fun t -> t.ascii) tl
+	| Inter tl -> Safelist.exists (fun t -> t.ascii) tl
+	| Diff(t1, t2) -> t1.ascii
+
 let rec mk_t d0 =
 	let t0 =
 		{ uid = next_uid ();
 			desc = d0;
 			hash = desc_hash d0;
 			final = desc_final d0;
-			(* size = desc_size d0; *)
 			ascii = desc_ascii d0;
 			known_singleton = false;
 			maps = None;
@@ -686,6 +685,7 @@ let rec mk_t d0 =
 								ICache.add der_cache c r;
 								r) in
 		let rec get_res d0 = match d0 with
+			| Var (_, t) -> get_res t.desc
 			| CSet [] ->
 					(fun c -> empty) (* why do we have this case if CSet s works for this? *)
 			| CSet [c1, c2] ->
@@ -716,10 +716,8 @@ let rec mk_t d0 =
 						(fun c -> mk_inters (Safelist.map (fun ti -> ti.derivative c) tl))
 			| Diff(t1, t2) ->
 					mk_table
-						(fun c -> mk_diff (t1.derivative c) (t2.derivative c))
-			| Box(i, t) -> get_res t.desc in
-		let res = get_res d0 in
-		res in
+						(fun c -> mk_diff (t1.derivative c) (t2.derivative c)) in
+		get_res d0 in
 	
 	(* backpatch t0 with implementation of derivative *)
 	t0.derivative <- derivative_impl;
@@ -733,7 +731,7 @@ and get_maps2 t1 t2 : int list =
 	chars_of_charmap (combine_charmaps (get_charmap t1) (get_charmap t2))
 
 and calc_reverse t = match t.desc with
-	| Box (_, t) -> calc_reverse t 
+	| Var(_, t) -> calc_reverse t
 	| CSet _ -> t
 	| Seq(t1, t2) -> mk_seq (get_reverse t2) (get_reverse t1)
 	| Alt tl -> mk_alts (Safelist.map get_reverse tl)
@@ -914,10 +912,6 @@ and mk_alt t1 t2 =
 
 and mk_alts tl = Safelist.fold_right mk_alt tl empty
 
-and mk_box r =
-	let uid = get_unique_identifier () in
-	mk_t(Box (uid, r))
-
 and mk_rep t0 i jo =
 	let go t i jo =
 		if easy_empty t then if i =0 then epsilon else empty
@@ -1034,8 +1028,18 @@ and mk_diff t1 t2 =
 				else go t1 t2 in
 	res
 
+let mk_string s =
+	let n = String.length s in
+	let rec loop i acc =
+		if i >= n then acc
+		else
+			let m = Char.code s.[pred n - i] in
+			let ti = mk_cset [(m, m)] in
+			loop (succ i) (ti:: acc) in
+	mk_seqs (loop 0 [])
 (* -------------------- OPERATIONS -------------------- *)
 
+let mk_var s t = mk_t (Var (s, t))
 let mk_reverse t0 = get_reverse t0
 
 let reverse_string w =
@@ -1058,7 +1062,7 @@ let representative t0 =
 	Misc.map_option string_of_char_codes (get_representative t0)
 
 let rec mk_expand t0 c t = match t0.desc with
-	| Box _ -> failwith "Implement mk_expand in Brx for Box"
+	| Var (_, t0) -> mk_expand t0 c t
 	| CSet cs ->
 			if CharSet.mem c cs then mk_alt t t0 else t0
 	| Seq(t1, t2) ->
@@ -1192,16 +1196,6 @@ let match_string_reverse_positions t0 w =
 	loop Int.Set.empty (pred n) t0
 
 let mk_iter s1 i j = mk_rep s1 i (if j > 0 then Some j else None)
-
-let mk_string s =
-	let n = String.length s in
-	let rec loop i acc =
-		if i >= n then acc
-		else
-			let m = Char.code s.[pred n - i] in
-			let ti = mk_cset [(m, m)] in
-			loop (succ i) (ti:: acc) in
-	mk_seqs (loop 0 [])
 
 let disjoint_cex s1 s2 =
 	match

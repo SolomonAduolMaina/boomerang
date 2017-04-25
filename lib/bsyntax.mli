@@ -104,12 +104,14 @@ and exp =
     | EPerm of Info.t * exp * exp
 		| EProject of Info.t * exp * exp
 		| EId of Info.t * exp
+
+		(* synth primitive *)
+    | ESynth of Info.t * exp * exp * exp
 		
 (** Expression abstract syntax. *)
 
 and op = 
   | OIter of int * int
-  | OBox
   | ODot
   | OTilde
   | OMinus

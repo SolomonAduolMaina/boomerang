@@ -27,6 +27,12 @@ open Bident
 open Benv
 open Bprint
 open Bsubst
+open Bregistry
+open Gen
+open Regexcontext
+open Lenscontext
+
+module L = Lang
 module V = Bvalue
 module G = Bregistry
 module BL = Blenses
@@ -48,14 +54,6 @@ let test_error i msg_thk =
 
 module Bridge = struct
 	
-	open Gen
-	open Regexcontext
-	open Lenscontext
-	module L = Lang
-	module BL = Blenses
-	module BS = Bstring
-	module Perms = BL.Permutations
-	
 	let info = Info.I ("", (0, 0), (0, 0))
 	let box = Qid.mk [] (Id.mk info "box")
 	let synth = Qid.mk [] (Id.mk info "synth_from_regexp")
@@ -65,19 +63,19 @@ module Bridge = struct
 	let id = Qid.mk [] (Id.mk info "id")
 	let list = Qid.mk [(info, "List")] (Id.mk info "t")
 	
-	let rec lrxToBrx (r : L.regex) (rc: RegexContext.t) : Brx.t =
+	let rec lrxToBrx (r : L.regex) (rc: RegexContext.t) (i : Info.t) : Brx.t =
 		match r with
 		| L.RegExEmpty -> Brx.empty
 		| L.RegExBase s -> Brx.mk_string s
-		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc) (lrxToBrx r2 rc)
-		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc) (lrxToBrx r2 rc)
-		| L.RegExStar r -> Brx.mk_star (lrxToBrx r rc)
+		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
+		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
+		| L.RegExStar r -> Brx.mk_star (lrxToBrx r rc i)
 		| L.RegExVariable s ->
 				match RegexContext.lookup rc s with
-				| None -> failwith (s ^ " is not in the regex context")
-				| Some r -> lrxToBrx r rc
+				| Some r -> lrxToBrx r rc i
+				| None -> Berror.run_error i (fun () -> msg "@[%s is unbound" s )
 	
-	let sLensTobLens (l : L.lens) (rc: RegexContext.t) : BL.MLens.t =
+	let sLensTobLens (l : L.lens) (rc: RegexContext.t) (i : Info.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
 			let source = Brx.mk_string s1 in
 			let mapTo = fun _ -> s1 in BL.MLens.clobber info source s2 mapTo in
@@ -89,54 +87,63 @@ module Bridge = struct
 			| L.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
 			| L.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
 			| L.LensIterate l -> BL.MLens.star info (helper l)
-			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc)
+			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc i)
 			| L.LensInverse _ | L.LensVariable _
-			| L.LensPermute _ -> failwith "TODO" in
+			| L.LensPermute _ -> Berror.run_error i
+						(fun () -> msg "Some weird lenses were synthesized" ) in
 		helper l
 	
-	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) : L.regex * RegexContext.t =
+	let rec seqToString (r : L.regex) : L.regex =
+		match r with
+		| L.RegExConcat(L.RegExBase "", r) -> seqToString r
+		| L.RegExConcat(r, L.RegExBase "") -> seqToString r
+		| L.RegExConcat(L.RegExBase s1, L.RegExBase s2) -> L.RegExBase (s1 ^ s2)
+		| L.RegExConcat(L.RegExBase s1, L.RegExConcat(L.RegExBase s2, r)) ->
+				seqToString (L.RegExConcat(L.RegExBase (s1 ^ s2), seqToString r))
+		| L.RegExEmpty | L.RegExBase _ | L.RegExVariable _ as r -> r
+		| L.RegExStar r -> L.RegExStar (seqToString r)
+		| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
+		| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
+	
+	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) (i : Info.t) : L.regex * RegexContext.t =
 		match r.Brx.M.desc with
-		| Brx.M.CSet l -> (L.charSet l, rc)
+		| Brx.M.CSet l -> L.charSet l, rc
 		| Brx.M.Seq (r1, r2) ->
-				let (r1, rc) = brxToLrx r1 rc in
-				let (r2, rc) = brxToLrx r2 rc in
-				(L.RegExConcat(r1, r2), rc)
+				let (r1, rc) = brxToLrx r1 rc i in
+				let (r2, rc) = brxToLrx r2 rc i in
+				seqToString (L.RegExConcat(r1, r2)), rc
 		| Brx.M.Alt l ->
-				(List.fold_left
-						(fun (r1, rc) x ->
-									let (r2, rc) = brxToLrx x rc in
-									(if r1 = L.RegExEmpty then (r2, rc) else L.RegExOr(r1, r2), rc))
-						(L.RegExEmpty, rc)
-						l)
+				let f =
+					(fun (r1, rc) x ->
+								let (r2, rc) = brxToLrx x rc i in
+								(if r1 = L.RegExEmpty then (r2, rc) else L.RegExOr(r1, r2), rc)) in
+				List.fold_left f (L.RegExEmpty, rc) l
 		| Brx.M.Rep (r, n, None) ->
-				let (r, rc) = brxToLrx r rc in
+				let (r, rc) = brxToLrx r rc i in
 				(L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc)
 		| Brx.M.Rep (r, m, Some n) ->
-				let (r, rc) = brxToLrx r rc in (L.iterateMtoNTimes m n r, rc)
-		| Brx.M.Box (i, r) ->
-				let s = string_of_int i in
-				begin
+				let (r, rc) = brxToLrx r rc i in (L.iterateMtoNTimes m n r, rc)
+		| Brx.M.Var (s, r) ->
+				let rc =
 					match RegexContext.lookup rc s with
-					| None ->
-							let (rx, rc) = brxToLrx r rc in
-							let rc = RegexContext.insert_exn rc s rx false in
-							(L.RegExVariable s, rc)
-					| Some _ -> L.RegExVariable s, rc
-				end
-		| _ -> failwith "No support for intersection or differences in lenssynth"
+					| None -> let (r, rc) = brxToLrx r rc i in RegexContext.insert_exn rc s r false
+					| Some _ -> rc in
+				L.RegExVariable s, rc
+		| _ -> Berror.run_error i
+					(fun () -> msg "No synthesis support for differences and intersections" )
 	
-	let get_box : G.rs * V.t =
-		let g ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Rx (i, r) -> V.Rx (i, Brx.mk_box r)
-			| _ -> failwith "Wrong Arguments for box" in
-		(G.Sort (SFunction ((Id.mk info "box"), SRegexp, SRegexp)), V.Fun (info, g))
+	let getRegexp (v : V.t) (rc : RegexContext.t) : (L.regex * RegexContext.t) =
+		match v with
+		| V.Rx (i, r) -> brxToLrx r rc i
+		| V.Str (i, s) -> brxToLrx (Brx.mk_string s) rc i
+		| V.Chr (i, c) -> brxToLrx (Brx.mk_string (Scanf.unescaped (Char.escaped c))) rc i
+		| _ -> failwith "No regular expression here!"
 	
 	let getStrings (l : V.t list) : (string * string) list =
 		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
 			match v with
 			| V.Par(_, V.Str(_, s1), V.Str(_, s2)) -> (s1, s2) :: temp
-			| _ -> failwith "Malformed List"
+			| _ -> Berror.run_error (V.info_of_t v) (fun () -> msg "Expected a list here")
 		in List.fold_left helper [] l
 	
 	let rec toList (v : V.t) (temp : V.t list) : V.t list =
@@ -144,36 +151,7 @@ module Bridge = struct
 		| V.Vnt (_, _, _, None) -> List.rev temp
 		| V.Vnt(_, _, _, Some (V.Par(_, hd, tail))) -> toList tail (hd :: temp)
 		| _ -> Berror.run_error (V.info_of_t v)
-					(fun () -> msg "Expected a list here but found something else" )
-	
-	let get_synth : G.rs * V.t =
-		let f1 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Rx (_, r1) ->
-					(let f2 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-							match v with
-							| V.Rx (_, r2) ->
-									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
-											match l with
-											| V.Vnt (_, _, _, _) ->
-													let (s1, rc) = brxToLrx r1 RegexContext.empty in
-													let (s2, rc) = brxToLrx r2 rc in
-													let l = getStrings (toList l []) in
-													let lens = gen_lens rc LensContext.empty s1 s2 l in
-													let lens = match lens with
-														| None -> failwith "Could not synthesize lens"
-														| Some lens -> lens in
-													V.Lns(info, sLensTobLens lens rc)
-											| _ -> failwith "Wrong arguments for synth_from_regexp" in
-										V.Fun (info, f3))
-							| _ -> failwith "Wrong arguments for synth_from_regexp" in
-						V.Fun (info, f2))
-			| _ -> failwith "Wrong arguments for synth_from_regexp" in
-		let sort =
-			SFunction ((Id.mk info ""), SRegexp,
-				(SFunction ((Id.mk info ""), SRegexp,
-						(SFunction ((Id.mk info ""), SData([SProduct(SString, SString)], list),
-								SLens))))) in (G.Sort sort, V.Fun (info, f1))
+					(fun () -> msg "Expected a list here" )
 	
 	let rec vtoString (id : Qid.t) (v : V.t) =
 		match v with
@@ -283,35 +261,57 @@ module Bridge = struct
 					(fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (intersperse c cs) ss in
 			String.concat "" ss in BL.Canonizer.normalize info whole kernel f
 	
-	let get_synth_can : G.rs * V.t =
-		let f1 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-			match v with
-			| V.Can (_, c1) ->
-					(let f2 ( _ : ((unit -> V.t) -> unit) option) (v : V.t) : V.t =
-							match v with
-							| V.Can (_, c2) ->
-									(let f3 ( _ : ((unit -> V.t) -> unit) option) (l : V.t) : V.t =
-											match l with
-											| V.Vnt (_, _, _, _) ->
-													let (s1, rc) = brxToLrx (BL.Canonizer.canonized_type c1) RegexContext.empty in
-													let (s2, rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc in
-													let l = getStrings (toList l []) in
-													let lens = gen_lens rc LensContext.empty s1 s2 l in
-													let lens = match lens with
-														| None -> failwith "Could not synth_from_regexp lens"
-														| Some lens -> sLensTobLens lens rc in
-													let lens = (BL.MLens.left_quot info c1 lens) in
-													V.Lns(info, BL.MLens.right_quot info lens c2)
-											| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-										V.Fun (info, f3))
-							| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-						V.Fun (info, f2))
-			| _ -> failwith "Wrong arguments for synth_from_canonizers" in
-		let sort =
-			SFunction ((Id.mk info ""), SCanonizer,
-				(SFunction ((Id.mk info ""), SCanonizer,
-						(SFunction ((Id.mk info ""), SData([SProduct(SString, SString)], list),
-								SLens))))) in (G.Sort sort, V.Fun (info, f1))
+	let new_synth (v1 : V.t) (v2 : V.t) (l : V.t) (rc : RegexContext.t) : V.t =
+		match v1 with
+		| V.Rx (i1, r1) ->
+				begin
+					match v2 with
+					| V.Rx (i2, r2) ->
+							begin
+								match l with
+								| V.Vnt (i3, _, _, _) ->
+										let (s1, rc) = brxToLrx r1 rc i1 in
+										let (s2, rc) = brxToLrx r2 rc i2 in
+										let l = getStrings (toList l []) in
+										let lens = gen_lens rc LensContext.empty s1 s2 l in
+										let lens = match lens with
+											| None -> Berror.run_error (Info.merge_inc i1 i2)
+														(fun () -> msg "Could not synthesize lens" )
+											| Some lens -> lens in
+										let info = Info.merge_inc i1 i3 in
+										V.Lns(info, sLensTobLens lens rc info)
+								| _ -> Berror.run_error (V.info_of_t l)
+											(fun () -> msg "Synth_from_regexp expects a list here" )
+							end
+					| _ -> Berror.run_error (V.info_of_t v2)
+								(fun () -> msg "Synth_from_regexp expects a regular expression here" )
+				end
+		| V.Can (i1, c1) ->
+				begin
+					match v2 with
+					| V.Can (i2, c2) ->
+							begin
+								match l with
+								| V.Vnt (i3, _, _, _) ->
+										let (s1, rc) = brxToLrx (BL.Canonizer.canonized_type c1) rc i1 in
+										let (s2, rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc i2 in
+										let l = getStrings (toList l []) in
+										let lens = gen_lens rc LensContext.empty s1 s2 l in
+										let info = Info.merge_inc i1 i3 in
+										let lens = match lens with
+											| None -> Berror.run_error info
+														(fun () -> msg "Could not synthesize lens" )
+											| Some lens -> sLensTobLens lens rc info in
+										let lens = (BL.MLens.left_quot info c1 lens) in
+										V.Lns(Info.merge_inc i1 i3, BL.MLens.right_quot info lens c2)
+								| _ -> Berror.run_error (V.info_of_t l)
+											(fun () -> msg "synth expects a list here" )
+							end
+					| _ -> Berror.run_error (V.info_of_t v2)
+								(fun () -> msg "synth expects a canonizer here" )
+				end
+		| _ -> Berror.run_error (V.info_of_t v1)
+					(fun () -> msg "synth expects a regular expression or canonizer" )
 	
 end
 
@@ -543,10 +543,35 @@ let rec interp_cast (wq: ((unit -> V.t) -> unit) option) cev b f t =
 
 and interp_exp wq cev e0 =
 	match e0 with
+	| ESynth(i, e1, e2, e3) ->
+			let v1 = interp_exp wq cev e1 in
+			let v2 = interp_exp wq cev e2 in
+			let v3 = interp_exp wq cev e3 in
+			let f id (so, v) rc =
+				match so with
+				| Sort SRegexp | Sort SString | Sort SChar ->
+						let (r, rc) = Bridge.getRegexp v rc in
+						let s = Qid.string_of_t id in
+						begin
+							match RegexContext.lookup rc s with
+							| None -> RegexContext.insert_exn rc s r false
+							| Some _ -> rc
+						end
+				| _ -> rc in
+			let rc = CEnv.fold f cev RegexContext.empty in
+			(* let f id (r, _) () =
+				print_endline (id ^ " = " ^ L.regex_to_string r) in
+			let () = RegexContext.fold f () rc in *)
+			Bridge.new_synth v1 v2 v3 rc
+	
 	| EId(i, e1) ->
 			let v1 = interp_exp wq cev e1 in
 			begin
 				match v1 with
+				| V.Str (j, s) -> V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
+				| V.Chr (j, c) -> 
+					let s = Scanf.unescaped (Char.escaped c) in
+					V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
 				| V.Rx (j, r) -> V.Can (i, BL.Canonizer.copy j r)
 				| _ -> Berror.run_error i (fun () -> msg
 											"The id construct expects a regular expression" )
@@ -596,11 +621,18 @@ and interp_exp wq cev e0 =
 				| Some((G.Unknown, v), _) -> v
 				| Some((G.Sort s, v), s_env) ->
 						let s_base = Bsubst.erase_sort s in
-						(interp_cast wq s_env i s s_base) v
-				| None ->
-						Berror.run_error i
-							(fun () -> msg "@[%s unbound@]"
-											(Qid.string_of_t q))
+						let v = (interp_cast wq s_env i s s_base) v in
+						begin
+							match v with
+							| V.Rx (i, t) ->
+									begin
+										match t.Brx.M.desc with
+										| Brx.M.Var _ -> v
+										| _ -> V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t) )
+									end
+							| _ -> v
+						end
+				| None -> Berror.run_error i (fun () -> msg "@[%s unbound@]" (Qid.string_of_t q))
 			end
 	
 	| EOver(i, op, _) ->
@@ -859,12 +891,10 @@ let interp_module m0 = match m0 with
 					let wq = Workqueue.create () in
 					Some (fun (f: unit -> V.t) -> Workqueue.enq f wq)
 				else None in
-			let new_cev = CEnv.push_ctx cev Bridge.synth in
-			let new_cev = CEnv.update new_cev Bridge.synth Bridge.get_synth in
-			let new_cev = CEnv.push_ctx new_cev Bridge.synth_can in
-			let new_cev = CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in
-			let new_cev = CEnv.update new_cev Bridge.box Bridge.get_box in
-			let new_cev, _ = interp_mod_aux wqo new_cev [m] ds in
+			(* let new_cev = CEnv.push_ctx cev Bridge.synth_can in let new_cev = *)
+			(* CEnv.update new_cev Bridge.synth_can Bridge.get_synth_can in let  *)
+			(* new_cev = CEnv.update new_cev Bridge.box Bridge.get_box in        *)
+			let new_cev, _ = interp_mod_aux wqo cev [m] ds in
 			(* let trying id (_, v) _ : unit = print_string (Bridge.vtoString id *)
 			(* v) in let _ = CEnv.fold trying new_cev () in                      *)
 			G.register_env (CEnv.get_ev new_cev) nctx' m;

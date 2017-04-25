@@ -134,6 +134,14 @@ and format_binding b0 = match b0 with
       msg "@]"
         
 and format_exp e0 = match e0 with
+	| ESynth (_, e1, e2, e3) ->
+		 msg "@[<2>(synth";
+      format_exp e1;
+      msg "@<=>";
+      format_exp e2;
+			msg " ";
+			format_exp e3;
+      msg ")@]"
 	| EProject (_,e1,e2) ->
       msg "@[<2>(project";
       format_exp e1;
@@ -317,7 +325,6 @@ and format_op = function
   | OGeq    -> msg ">="
   | OMatch -> msg "< : >"
   | OWeight -> msg "{: : }"
-  | OBox -> msg "{}"
 
 and format_prod (Prod(_,x,rs)) =
   msg "@[%s@ ::= @[" (Id.string_of_t x);

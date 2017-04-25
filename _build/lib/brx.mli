@@ -35,7 +35,7 @@ module rec M : sig
 	  | Rep of t * int * int option
 	  | Inter of t list
 	  | Diff of t * t
-    | Box of int * t
+		| Var of string * t
   and t = {
 		desc : d;
 		uid : int;
@@ -71,7 +71,7 @@ val mk_complement: t -> t
 val mk_inter : t -> t -> t
 val mk_reverse : t -> t
 val mk_expand : t -> int -> t -> t
-val mk_box : t -> t
+val mk_var : string -> t -> t
 
 (* pretty printing ranks *)
 type r =
@@ -81,7 +81,7 @@ type r =
 	| Crnk (* concat *)
 	| Srnk (* star *)
   | Arnk (* atomic *)
-  | Brnk (* boxed *)
+  | Vrnk (* var *)
 val rank : t -> r
 val lpar : r -> r -> bool
 val rpar : r -> r -> bool

@@ -67,6 +67,11 @@ and free_svars_sort acc = function
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ ->
       acc
 and free_svars_exp acc = function
+	| ESynth(_,e1,e2, e3) -> 
+      let acc1 = free_svars_exp acc e1 in 
+      let acc2 = free_svars_exp acc1 e2 in 
+			let acc3 = free_svars_exp acc2 e3 in
+      acc3
 	| EPerm(_,e1,e2) -> 
       let acc1 = free_svars_exp acc e1 in 
       let acc2 = free_svars_exp acc1 e2 in 
@@ -201,6 +206,11 @@ and subst_svars_sort subst s0 = match s0 with
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ -> 
       s0
 and subst_svars_exp subst e0 = match e0 with
+	| ESynth(i,e1,e2, e3) -> 
+      let new_e1 = subst_svars_exp subst e1 in 
+      let new_e2 = subst_svars_exp subst e2 in
+			let new_e3 = subst_svars_exp subst e3 in 
+      ESynth(i,new_e1,new_e2, new_e3) 
 	| EProject(i,e1,e2) -> 
       let new_e1 = subst_svars_exp subst e1 in 
       let new_e2 = subst_svars_exp subst e2 in 
@@ -316,6 +326,11 @@ and free_evars_sort acc = function
   | SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SVar _ | SPrefs _ -> 
       acc
 and free_evars_exp acc = function
+	| ESynth(_,e1,e2, e3) -> 
+      let acc1 = free_evars_exp acc e1 in 
+      let acc2 = free_evars_exp acc1 e2 in
+			let acc3 = free_evars_exp acc2 e3 in
+      acc3
 	| EProject(_,e1,e2) -> 
       let acc1 = free_evars_exp acc e1 in 
       let acc2 = free_evars_exp acc1 e2 in
@@ -516,7 +531,12 @@ and subst_evars_exp subst e0 = match e0 with
   | EApp(i,e1,e2) -> 
       let new_e1 = subst_evars_exp subst e1 in 
       let new_e2 = subst_evars_exp subst e2 in 
-      EApp(i,new_e1,new_e2) 
+      EApp(i,new_e1,new_e2)
+	| ESynth(i,e1,e2, e3) -> 
+      let new_e1 = subst_evars_exp subst e1 in 
+      let new_e2 = subst_evars_exp subst e2 in
+			let new_e3 = subst_evars_exp subst e3 in
+      ESynth(i,new_e1,new_e2, new_e3) 
 	| EProject(i,e1,e2) -> 
       let new_e1 = subst_evars_exp subst e1 in 
       let new_e2 = subst_evars_exp subst e2 in 
@@ -853,6 +873,11 @@ and qualify_pat resolve bound p0 = match p0 with
  
 and qualify_exp resolve bound e0 = match e0 with
   | EVar(i,x) -> EVar(i,qualify_id resolve bound x)
+	| ESynth(i,e1,e2, e3) -> 
+      let new_e1 = qualify_exp resolve bound e1 in 
+      let new_e2 = qualify_exp resolve bound e2 in 
+			let new_e3 = qualify_exp resolve bound e3 in 
+      ESynth(i,new_e1,new_e2, new_e3)
   | EApp(i,e1,e2) -> 
       let new_e1 = qualify_exp resolve bound e1 in 
       let new_e2 = qualify_exp resolve bound e2 in 

@@ -21,6 +21,7 @@ module type RegexContext_Sig = sig
     val compare                  : t -> t -> comparison
     val to_string                : t -> string
     val hash                     : t -> int
+		val fold 										 : (id -> (regex * bool) -> 'a -> 'a) -> 'a -> t -> 'a
 end
 
 module RegexContext : RegexContext_Sig = struct
@@ -37,6 +38,8 @@ module RegexContext : RegexContext_Sig = struct
 
     let empty = D.empty
 
+		let fold = D.fold
+		
     let lookup_everything (rc:t) (name:id) : (regex*bool) option =
       D.lookup rc name
 
