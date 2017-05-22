@@ -8,6 +8,7 @@ open Lang
 module type RegexContext_Sig = sig
     type t
 
+		
     val empty                    : t
     val lookup                   : t -> id -> regex option
     val lookup_exn               : t -> id -> regex
@@ -21,6 +22,7 @@ module type RegexContext_Sig = sig
     val compare                  : t -> t -> comparison
     val to_string                : t -> string
     val hash                     : t -> int
+		val update_exn               : t -> id -> (regex * bool) -> t
 		val fold 										 : (id -> (regex * bool) -> 'a -> 'a) -> 'a -> t -> 'a
 end
 
@@ -39,6 +41,8 @@ module RegexContext : RegexContext_Sig = struct
     let empty = D.empty
 
 		let fold = D.fold
+		
+		let update_exn = D.insert
 		
     let lookup_everything (rc:t) (name:id) : (regex*bool) option =
       D.lookup rc name

@@ -95,6 +95,7 @@ module MLens : sig
   val rput : t -> Bstring.t -> Bstring.t -> string
   val rcreate : t -> Bstring.t -> string
   val canonizer_of_t : Info.t -> t -> Canonizer.t
+	val mk_var : Info.t -> string -> t -> t
   val invert : Info.t -> t -> t
   val copy : Info.t -> Brx.t -> t
   val weight : Info.t -> bool -> Bannot.Weight.t -> t -> t
@@ -115,4 +116,8 @@ module MLens : sig
   val right_quot : Info.t -> t -> Canonizer.t -> t
   val dup1 : Info.t -> t -> (string -> string) -> Brx.t -> t
   val dup2 : Info.t -> (string -> string) -> Brx.t -> t -> t
+	val bLensTosLens : Info.t -> t -> Regexcontext.RegexContext.t -> 
+		Lenscontext.LensContext.t -> 
+		(Lang.lens * Lang.regex * Lang.regex) option * Lenscontext.LensContext.t
+	val isVar : t -> bool
 end

@@ -20,37 +20,10 @@
 (* $Id: brx.mli 4643 2009-09-03 18:34:32Z cretin $ *)
 (******************************************************************************)
 
-type charmap
+open Regexcontext
+open Lang
 
-module CharSet :
-sig
-	type t = (int * int) list
-end
-
-module rec M : sig
-	type d =
-	  | CSet of CharSet.t
-	  | Seq of t * t
-	  | Alt of t list
-	  | Rep of t * int * int option
-	  | Inter of t list
-	  | Diff of t * t
-		| Var of string * t
-  and t = {
-		desc : d;
-		uid : int;
-		hash : int;
-		final : bool;
-		ascii : bool;
-		mutable maps : charmap option;
-		mutable known_singleton : bool;
-		mutable derivative : int -> t;
-		mutable reverse : t option;
-		mutable representative : (int list option) option;
-		mutable splittable : Q.t }
-end and Q : Set.S with type elt = M.t
-
-type t = M.t
+type t
 
 (* constants *)
 val epsilon : t
@@ -72,7 +45,12 @@ val mk_inter : t -> t -> t
 val mk_reverse : t -> t
 val mk_expand : t -> int -> t -> t
 val mk_var : string -> t -> t
+val mk_perm : t list -> t -> t
 
+val concatList : t list -> t
+val altList : t list -> t
+val langWhole : t list -> t -> t
+val intersperse : 'a -> 'a list -> 'a list
 (* pretty printing ranks *)
 type r =
 	| Urnk (* union *)
@@ -82,6 +60,8 @@ type r =
 	| Srnk (* star *)
   | Arnk (* atomic *)
   | Vrnk (* var *)
+	| Prnk (* perm *)
+
 val rank : t -> r
 val lpar : r -> r -> bool
 val rpar : r -> r -> bool
@@ -128,3 +108,7 @@ val langle_code : int
 val rangle_code : int
 val colon_code : int
 
+val brxToLrx : t -> Info.t -> Regexcontext.RegexContext.t -> 
+	Lang.regex * Regexcontext.RegexContext.t
+val isVar : t -> bool
+val whichPerm : t list -> t -> string -> (int list) option * int

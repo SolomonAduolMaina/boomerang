@@ -209,10 +209,17 @@ let charSet (l : (int * int) list) : regex =
 	in let helper ((m, n) : int * int) : regex =
 		let rec innerHelper (i : int) (r : regex) : regex =
 			if i < m then r else
+			if i = 34 then
+				innerHelper (i - 1) (RegExOr(RegExBase "\"", r))
+			else
 				innerHelper (i - 1) (RegExOr(RegExBase (Scanf.unescaped (Char.escaped (charOf i))), r))
 		in if n < m then failwith "Malformed Character Set" else
-		if n = m then RegExBase (Scanf.unescaped (Char.escaped (charOf m))) else
-			innerHelper (n-1) (RegExBase (Scanf.unescaped (Char.escaped (charOf n))))
+		if n = m then
+			if m = 34 then
+				RegExBase "\"" else
+				RegExBase (Scanf.unescaped (Char.escaped (charOf m)))
+		else
+			innerHelper (n -1) (RegExBase (Scanf.unescaped (Char.escaped (charOf n))))
 	in
 	List.fold_left l ~init: RegExEmpty
 		~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (helper x, r))

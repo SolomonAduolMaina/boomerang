@@ -15,13 +15,17 @@
 (* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU          *)
 (* Lesser General Public License for more details.                            *)
 (******************************************************************************)
-(* /src/brx.ml                                                                *)
+(* /src/ml                                                                *)
 (* Boomerang RegExp engine                                                    *)
 (* Uses code from Jerome Vouillon's Rx module in Unison.                      *)
-(* $Id: brx.ml 4643 2009-09-03 18:34:32Z cretin $ *)
+(* $Id: ml 4643 2009-09-03 18:34:32Z cretin $ *)
 (******************************************************************************)
 
 module H = Hashtbl
+module L = Lang
+
+open Regexcontext
+
 let msg = Util.format
 
 (* --------------------- CONSTANTS --------------------- ASCII alphabet *)
@@ -49,6 +53,7 @@ type r =
 	| Srnk (* star *)
 	| Arnk (* atomic *)
 	| Vrnk
+	| Prnk
 
 (* lpar: true if an expression with rank on the left needs parentheses *)
 let lpar r1 r2 = match r1, r2 with
@@ -67,6 +72,8 @@ let lpar r1 r2 = match r1, r2 with
 	| Urnk, Urnk -> false
 	| Vrnk, _ -> false
 	| _, Vrnk -> false
+	| Prnk, _ -> false
+	| _, Prnk -> false
 
 (* rpar: true if an expression with rank on the right needs parentheses *)
 let rpar r1 r2 = match r1, r2 with
@@ -85,6 +92,8 @@ let rpar r1 r2 = match r1, r2 with
 	| Urnk, Urnk -> true
 	| Vrnk, _ -> false
 	| _ , Vrnk -> false
+	| Prnk, _ -> false
+	| _, Prnk -> false
 
 (* --------------------- CHARACTER SETS --------------------- *)
 module CharSet :
@@ -168,6 +177,7 @@ module rec M : sig
 		| Inter of t list
 		| Diff of t * t
 		| Var of string * t
+		| Perm of (t list) * t
 	and t =
 		{ desc : d;
 			uid : int;
@@ -190,6 +200,7 @@ end = struct
 		| Inter of t list
 		| Diff of t * t
 		| Var of string * t
+		| Perm of (t list) * t
 	and t =
 		{ desc : d;
 			uid : int;
@@ -257,6 +268,7 @@ let rank t0 = match t0.desc with
 	| Inter _ -> Irnk
 	| Diff _ -> Drnk
 	| Var _ -> Vrnk
+	| Perm _ -> Prnk
 
 (* printing helpers *)
 let string_of_char_code n =
@@ -273,7 +285,7 @@ let printable_string_of_char_code n =
 		| 257 -> ">"
 		| 258 -> ":"
 		| _ ->
-				Berror.run_error (Info.M "Brx.string_of_char_code") (fun () -> print_endline (string_of_int n))
+				Berror.run_error (Info.M "string_of_char_code") (fun () -> print_endline (string_of_int n))
 
 let string_of_cset_code n = match n with
 	| 9 -> "\\t"
@@ -303,6 +315,14 @@ let wrap l r f =
 	f ();
 	Util.format "%s" r
 
+let print_list (f : 'a -> string) (l : 'a list) : string =
+	let rec helper result l =
+		match l with
+		| [] -> "[]"
+		| [x] -> result ^ (f x) ^ "]"
+		| x :: xs -> helper (result ^ (f x) ^ "; ") xs in
+	helper "[" l
+
 (* format a regexp *)
 let rec format_t t0 =
 	let maybe_wrap = Bprint.maybe_wrap format_t in
@@ -316,7 +336,9 @@ let rec format_t t0 =
 				format_list sep rnk rest in
 	msg "@[";
 	begin match t0.desc with
-		| Var (_, t) -> format_t t
+		| Perm (l, s) ->
+				msg "%s" ("perm(" ^ (print_list string_of_t l) ^ ", " ^ (string_of_t s) ^ ")")
+		| Var (s, t) -> msg "%s" ("var " ^ s ^ " = " ^ (string_of_t t))
 		| CSet [p1] ->
 				let n1, n2 = p1 in
 				if n1 = min_code && n2 >= max_ascii_code then msg "[^]"
@@ -367,7 +389,7 @@ let rec format_t t0 =
 	end;
 	msg "@]"
 
-let string_of_t t0 =
+and string_of_t t0 =
 	Util.format_to_string
 		(fun () ->
 					Util.format "@[";
@@ -390,18 +412,6 @@ module I2map =
 
 let charmap_empty =
 	[0, min_code]
-
-(* let charmap_print m = let rec f = function | [] -> () | (color,di)::l   *)
-(* -> prt " (%2d, %3d)\n" color di; f l in prt "Map (%d):\n"               *)
-(* (Safelist.length m); f m; prt "\n"                                      *)
-
-(* let charmap_check str m = let rec f last = function | [] -> true |      *)
-(* (color,di)::l -> (last < di) && (di <= max_code) && (color >= 0) &&     *)
-(* (color < max_code) && f di l in prt "%s" str; assert (f (-1) m &&       *)
-(* Safelist.length m >= 1); m                                              *)
-
-(* let prt_cset cs = let rec f = function | [] -> prt "]\n" | (c1,c2)::cs  *)
-(* -> prt " (%3d,%3d)" c1 c2; f cs in prt "prt_cset: ["; f cs              *)
 
 let charmap_of_cset cs =
 	let f cs =
@@ -458,25 +468,6 @@ let chars_of_charmap (m: charmap) : int list =
 	in
 	chars
 
-(* --------------------- STRING MATCHING --------------------- *)
-let match_sub_string t s i j =
-	let rec loop i ti =
-		if i = j then ti.final
-		else loop (succ i) (ti.derivative (Char.code s.[i]))
-	in
-	loop i t
-
-let match_string t0 w =
-	let n = String.length w in
-	let rec loop i ti =
-		if i = n then ti.final
-		else loop (succ i) (ti.derivative (Char.code w.[i])) in
-	loop 0 t0
-
-let match_code_list t0 l =
-	let t' = Safelist.fold_left (fun ti ci -> ti.derivative ci) t0 l in
-	t'.final
-
 (* --------------------- HASH CONS CACHES --------------------- *)
 module ICache = H.Make
 	(struct
@@ -532,6 +523,8 @@ let over_cache : t TTCache.t = TTCache.create 1031
 (* --------------------- DESC OPERATIONS --------------------- *)
 let rec desc_hash d =
 	let pre_h = match d with
+		| Perm (tl, t) ->
+				(671 * Safelist.fold_left (fun h ti -> h + 187 * ti.hash) 0 tl) + 79 * t.hash
 		| Var(_, t) -> desc_hash t.desc
 		| CSet(cs) ->
 				let rec aux = function
@@ -550,12 +543,6 @@ let rec desc_hash d =
 	in
 	abs pre_h
 
-(* let desc_size = function | CSet _ -> 1 | Rep(t1,_,_) -> 1 + t1.size |   *)
-(* Seq(t1,t2) -> 1 + t1.size + t2.size | Alt tl -> 1 + Safelist.fold_left  *)
-(* (fun acc ti -> acc + ti.size) 0 tl | Inter tl -> 1 + Safelist.fold_left *)
-(* (fun acc ti -> acc + ti.size) 0 tl | Diff(t1,t2) -> 1 + t1.size +       *)
-(* t2.size                                                                 *)
-
 (* --------------------- CONSTRUCTORS --------------------- gensym for     *)
 (* uids                                                                    *)
 let uid_counter = ref 0
@@ -565,11 +552,30 @@ let next_uid () =
 
 let dummy_impl _ = assert false
 
-(* helper for constructing some constants (anything, empty, epsilon, etc.) *)
-(* that are used in the big, mutually-recursive definition of mk_t that    *)
-(* follows.                                                                *)
+let distribute c l =
+	let rec insert acc1 acc2 = function
+		| [] -> acc2
+		| hd :: tl -> insert (hd:: acc1) ((List.rev_append acc1 (hd :: c:: tl)) :: acc2) tl
+	in insert [] [c:: l] l
+
+let rec permutations = function
+	| [] -> [[]]
+	| hd :: tl -> List.fold_left
+				(fun acc x -> List.rev_append (distribute hd x) acc) [] (permutations tl)
+
+let intersperse (a : 'a) (l : 'a list) : 'a list =
+	let rec helper (first : 'a list) (rest : 'a list) : 'a list =
+		match first with
+		| [] -> List.rev rest
+		| [x] -> List.rev (x :: rest)
+		| x :: xs -> helper xs (a :: (x :: rest))
+	in helper l []
 
 let rec desc_final = function
+	| Perm (tl, t) ->
+			if List.length tl = 0 then true else
+			if List.length tl = 1 then (List.hd tl).final else
+				Safelist.for_all (fun ti -> ti.final) tl && t.final
 	| Var (_, t) -> desc_final t.desc
 	| CSet _ -> false
 	| Rep(t1,0, _) -> true
@@ -585,7 +591,6 @@ let mk_constant d t_nexto repo ascii =
 			desc = d;
 			hash = desc_hash d;
 			final = desc_final d;
-			(* size = desc_size d; *)
 			ascii = ascii;
 			known_singleton = false;
 			maps = None;
@@ -596,7 +601,6 @@ let mk_constant d t_nexto repo ascii =
 	let t_next = match t_nexto with
 		| None -> t
 		| Some t' -> t' in
-	(* backpatch *)
 	t.derivative <- (fun c -> t_next);
 	t.reverse <- Some t;
 	t
@@ -632,8 +636,19 @@ let is_epsilon t = t.uid = epsilon.uid
 let is_anything t = t.uid = anything.uid
 let is_anyascii t = t.uid = anyascii.uid
 
-let rec desc_charmap (t: t) =
+let rec desc_ascii = function
+	| Perm (tl, l) -> desc_ascii (langWhole tl l).desc
+	| Var (_, t) -> desc_ascii t.desc
+	| CSet cs -> CharSet.ascii cs
+	| Rep(t1, _, _) -> t1.ascii
+	| Seq(t1, t2) -> t1.ascii && t2.ascii
+	| Alt tl -> Safelist.for_all (fun t -> t.ascii) tl
+	| Inter tl -> Safelist.exists (fun t -> t.ascii) tl
+	| Diff(t1, t2) -> t1.ascii
+
+and desc_charmap (t: t) =
 	match t.desc with
+	| Perm (tl, l) -> desc_charmap (langWhole tl l)
 	| Var (_, t) -> desc_charmap t
 	| CSet cs -> charmap_of_cset cs
 	| Rep(t1, _, _) -> get_charmap t1
@@ -652,16 +667,7 @@ and get_charmap t =
 		(fun v -> t.maps <- Some v)
 		desc_charmap t
 
-let rec desc_ascii = function
-	| Var (_, t) -> desc_ascii t.desc
-	| CSet cs -> CharSet.ascii cs
-	| Rep(t1, _, _) -> t1.ascii
-	| Seq(t1, t2) -> t1.ascii && t2.ascii
-	| Alt tl -> Safelist.for_all (fun t -> t.ascii) tl
-	| Inter tl -> Safelist.exists (fun t -> t.ascii) tl
-	| Diff(t1, t2) -> t1.ascii
-
-let rec mk_t d0 =
+and mk_t d0 =
 	let t0 =
 		{ uid = next_uid ();
 			desc = d0;
@@ -685,6 +691,7 @@ let rec mk_t d0 =
 								ICache.add der_cache c r;
 								r) in
 		let rec get_res d0 = match d0 with
+			| Perm (tl, l) -> get_res (langWhole tl l).desc
 			| Var (_, t) -> get_res t.desc
 			| CSet [] ->
 					(fun c -> empty) (* why do we have this case if CSet s works for this? *)
@@ -723,6 +730,13 @@ let rec mk_t d0 =
 	t0.derivative <- derivative_impl;
 	t0
 
+and langWhole (l : t list) (sep : t) : t =
+	altList (List.map (fun l -> concatList (intersperse sep l)) (permutations l))
+
+and altList (l : t list) : t = List.fold_left (fun a rx -> mk_alt a rx) empty l
+
+and concatList (l : t list) : t = List.fold_left (fun a rx -> mk_seq a rx) epsilon l
+
 (* regexp operations *)
 and get_maps t : int list =
 	chars_of_charmap (get_charmap t)
@@ -731,6 +745,7 @@ and get_maps2 t1 t2 : int list =
 	chars_of_charmap (combine_charmaps (get_charmap t1) (get_charmap t2))
 
 and calc_reverse t = match t.desc with
+	| Perm (tl, t) -> calc_reverse (langWhole tl t)
 	| Var(_, t) -> calc_reverse t
 	| CSet _ -> t
 	| Seq(t1, t2) -> mk_seq (get_reverse t2) (get_reverse t1)
@@ -743,18 +758,6 @@ and get_reverse t =
 	force t.reverse
 		(fun v -> t.reverse <- Some v)
 		calc_reverse t
-
-(* and calc_suffs t = let rec full_search (ts,f,p) = match p with | [] ->  *)
-(* ts | (w,t)::rest -> let rm,len = get_maps t in let rec loop             *)
-(* ((ts',f',p') as acc) i = if i < 0 then acc else let ti = t.derivative   *)
-(* rm.(i) in if easy_empty ti || is_epsilon ti || Q.mem ti f' then loop    *)
-(* acc (pred i) else loop ((if ti.final then Q.add (w::ci,ti) ts' else     *)
-(* ts'),Q.add ti f',ti::p') (pred i) in full_search (loop (ts,f,rest)      *)
-(* (pred len)) in let ts0 = if t.final then Q.singleton ([],t) else        *)
-(* Q.empty in let f0 = Q.singleton t in full_search (ts0,f0,[t])           *)
-
-(* and get_suffs t = force t.suffs (fun v -> t.suffs <- Some v) calc_suffs *)
-(* t                                                                       *)
 
 and calc_representative t =
 	let q = Queue.create () in
@@ -1028,6 +1031,73 @@ and mk_diff t1 t2 =
 				else go t1 t2 in
 	res
 
+(* --------------------- STRING MATCHING --------------------- *)
+
+and whichPerm (l : t list) (sep : t) (s : string) : (int list) option * int =
+	let remove ((i, _) : int * t) (l : (int * t) list) : 'a list =
+		List.fold_left (fun l ((j, _) as x) -> if i = j then l else (x :: l)) [] l in
+	let whichPermHelper (l : t list) : (int * t) list =
+		let f (l, i) rx = ((i, rx) :: l), i + 1 in fst (List.fold_left f ([], 0) l) in
+	let rec helper (l : (int * t) list) (sep : t) (s : string) : (int list) option * int =
+		match l with
+		| [] -> Some [], 0
+		| [(i, rx)] -> if match_string rx s then Some [i], 0 else None, 0
+		| _ ->
+				let pos, len, finished, result = ref 0, String.length s, ref false , ref (None, 0) in
+				let f (opt, j) (i, rx) : (int list option) * int =
+					match opt with
+					| Some _ -> opt, j
+					| None ->
+							let u = String.sub s 0 ((!pos) + 1) in
+							if (match_string (mk_seq rx sep) u) then
+								let v = String.sub s ((!pos) + 1) (len - (!pos + 1)) in
+								match helper (remove (i, rx) l) sep v with
+								| None, j -> None, max !pos j
+								| Some res, j -> Some (i :: res), j
+							else None, j in
+				let () =
+					while (!pos < len) && (not !finished) do
+						result := (List.fold_left f (None, 0) l);
+						begin match !result with
+							| None, _ -> ()
+							| Some _, _ -> finished := true
+						end;
+						pos := !pos + 1 done in
+				!result in
+	helper (whichPermHelper l) sep s
+
+and match_sub_string t s i j =
+	match t.desc with
+	| Perm(tl, sep) ->
+			begin
+				match whichPerm tl sep (String.sub s i (j - i)) with
+				| None, _ -> false
+				| Some _, _ -> true
+			end
+	| _ ->
+			let rec loop i ti =
+				if i = j then ti.final
+				else loop (succ i) (ti.derivative (Char.code s.[i]))
+			in
+			loop i t
+
+and match_string t0 w =
+	match t0.desc with
+	| Perm(tl, sep) ->
+			begin
+				match whichPerm tl sep w with
+				| None, _ -> false
+				| Some _, _ -> true
+			end
+	| _ -> match_sub_string t0 w 0 (String.length w)
+
+and mk_var s t = mk_t (Var (s, t))
+and mk_perm l sep = mk_t (Perm (l, sep))
+
+let match_code_list t0 l =
+	let t' = Safelist.fold_left (fun ti ci -> ti.derivative ci) t0 l in
+	t'.final
+
 let mk_string s =
 	let n = String.length s in
 	let rec loop i acc =
@@ -1039,7 +1109,6 @@ let mk_string s =
 	mk_seqs (loop 0 [])
 (* -------------------- OPERATIONS -------------------- *)
 
-let mk_var s t = mk_t (Var (s, t))
 let mk_reverse t0 = get_reverse t0
 
 let reverse_string w =
@@ -1062,6 +1131,7 @@ let representative t0 =
 	Misc.map_option string_of_char_codes (get_representative t0)
 
 let rec mk_expand t0 c t = match t0.desc with
+	| Perm (tl, t1) -> mk_expand (langWhole tl t1) c t
 	| Var (_, t0) -> mk_expand t0 c t
 	| CSet cs ->
 			if CharSet.mem c cs then mk_alt t t0 else t0
@@ -1177,23 +1247,58 @@ let iterable_cex t1 =
 
 let match_string_positions t0 w =
 	let n = String.length w in
-	let rec loop acc i ti =
-		let acc' =
-			if ti.final then Int.Set.add i acc
-			else acc in
-		if i = n then acc'
-		else loop acc' (succ i) (ti.derivative (Char.code w.[i])) in
-	loop Int.Set.empty 0 t0
+	match t0.desc with
+	| Perm(tl, sep) ->
+			let pos, acc = ref 0, ref Int.Set.empty in
+			let () =
+				while (!pos < n) do
+					begin
+						match whichPerm tl sep (String.sub w 0 !pos) with
+						| Some _, _ -> acc := Int.Set.add !pos !acc
+						| None, _ -> ()
+					end;
+					pos := !pos + 1 done in
+			!acc
+	| _ ->
+			let rec loop acc i ti =
+				let acc' =
+					if ti.final then Int.Set.add i acc
+					else acc in
+				if i = n then acc'
+				else loop acc' (succ i) (ti.derivative (Char.code w.[i])) in
+			loop Int.Set.empty 0 t0
 
 let match_string_reverse_positions t0 w =
 	let n = String.length w in
-	let rec loop acc i ti =
-		let acc' =
-			if ti.final then Int.Set.add (succ i) acc
-			else acc in
-		if i < 0 then acc'
-		else loop acc' (pred i) (ti.derivative (Char.code w.[i])) in
-	loop Int.Set.empty (pred n) t0
+	match t0.desc with
+	| Perm(tl, sep) ->
+			let rev_string str =
+				let len = String.length str in
+				let res = Bytes.create len in
+				let last = len - 1 in
+				for i = 0 to last do
+					let j = last - i in
+					Bytes.set res i str.[j];
+				done; res in
+			let w = rev_string w in
+			let pos, acc = ref 0, ref Int.Set.empty in
+			let () =
+				while (!pos < n) do
+					begin
+						match whichPerm tl sep (String.sub w 0 !pos) with
+						| Some _, _ -> acc := Int.Set.add (n - 1 - !pos) !acc
+						| None, _ -> ()
+					end;
+					pos := !pos + 1 done in
+			!acc
+	| _ ->
+			let rec loop acc i ti =
+				let acc' =
+					if ti.final then Int.Set.add (succ i) acc
+					else acc in
+				if i < 0 then acc'
+				else loop acc' (pred i) (ti.derivative (Char.code w.[i])) in
+			loop Int.Set.empty (pred n) t0
 
 let mk_iter s1 i j = mk_rep s1 i (if j > 0 then Some j else None)
 
@@ -1234,16 +1339,19 @@ let split_positions t1 t2 w =
 	Int.Set.inter ps1 ps2
 
 let bad_prefix_position t0 w =
-	let n = String.length w in
-	let rec loop i ti =
-		if is_empty ti
-		then i
-		else
-		if i = n
-		then succ n
-		else loop (succ i) (ti.derivative (Char.code w.[i]))
-	in
-	loop 0 t0
+	match t0.desc with
+	| Perm (tl, sep) -> snd (whichPerm tl sep w)
+	| _ ->
+			let n = String.length w in
+			let rec loop i ti =
+				if is_empty ti
+				then i
+				else
+				if i = n
+				then succ n
+				else loop (succ i) (ti.derivative (Char.code w.[i]))
+			in
+			loop 0 t0
 
 let split_bad_prefix t s =
 	let n = String.length s in
@@ -1285,31 +1393,52 @@ let print_stats () =
 					f "diff_cache" (TTCache.length diff_cache);
 					Util.format "@]")
 
-(* let unionable r c1 c2 = let q = Queue.create () in let                  *)
-(* try_derivate_char (u,u1,u2,r,c1,c2) a = let r', c1', c2' = r.derivative *)
-(* a, c1.derivative a, c2.derivative a in (print_endline ("try_derivative: *)
-(* '"^string_of_extended_char_code a^"'"); let a' =                        *)
-(* string_of_extended_char_code a in if not (easy_empty r') && not         *)
-(* (easy_empty c1') && not (easy_empty c2') then Queue.push                *)
-(* (u^a',u1^a',u2^a',r',c1',c2') q) in let try_derivate_brackets           *)
-(* (u,u1,u2,r,c1,c2) = let c1l, c1r = c1.derivative langle_code,           *)
-(* c1.derivative rangle_code in let c2l, c2r = c2.derivative langle_code,  *)
-(* c2.derivative rangle_code in if not (easy_empty c1l) then Queue.push    *)
-(* (u,u1^"<",u2,r,c1l,c2) q; if not (easy_empty c1r) then Queue.push       *)
-(* (u,u1^">",u2,r,c1r,c2) q; if not (easy_empty c2l) then Queue.push       *)
-(* (u,u1,u2^"<",r,c1,c2l) q; if not (easy_empty c2r) then Queue.push       *)
-(* (u,u1,u2^">",r,c1,c2r) q in let rec full_search x = if Queue.is_empty q *)
-(* then None else let (u,u1,u2,r,c1,c2) = Queue.pop q in if is_epsilon r   *)
-(* && is_epsilon c1 && is_epsilon c2 && u1 <> u2 then Some (u,u1,u2) else  *)
-(* let rm,len = desc_maps (Diff(c1,c2)) in let rec loop j = if j < len     *)
-(* then (try_derivate_char (u,u1,u2,r,c1,c2) rm.(j); loop (succ j)) in     *)
-(* (loop 0; try_derivate_brackets (u,u1,u2,r,c1,c2); full_search x) in     *)
-(* (Queue.push ("","","",r,c1,c2) q; full_search 1)                        *)
-
 let char_derivative r c =
 	let r' = r.derivative c in
 	if easy_empty r' then None
 	else Some r'
 
+let rec seqToString (r : L.regex) : L.regex =
+	match r with
+	| L.RegExConcat(L.RegExBase "", r) -> seqToString r
+	| L.RegExConcat(r, L.RegExBase "") -> seqToString r
+	| L.RegExConcat(L.RegExBase s1, L.RegExBase s2) -> L.RegExBase (s1 ^ s2)
+	| L.RegExConcat(L.RegExBase s1, L.RegExConcat(L.RegExBase s2, r)) ->
+			seqToString (L.RegExConcat(L.RegExBase (s1 ^ s2), seqToString r))
+	| L.RegExEmpty | L.RegExBase _ | L.RegExVariable _ as r -> r
+	| L.RegExStar r -> L.RegExStar (seqToString r)
+	| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
+	| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
 
+let rec brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexContext.t =
+	match r.M.desc with
+	| M.CSet l -> L.charSet l, rc
+	| M.Seq (r1, r2) ->
+			let r1, rc = brxToLrx r1 i rc in
+			let r2, rc = brxToLrx r2 i rc in
+			seqToString (L.RegExConcat(r1, r2)), rc
+	| M.Alt l ->
+			let f (r1, rc) x =
+				let r2, rc = brxToLrx x i rc in
+				if r1 = L.RegExEmpty then r2, rc else L.RegExOr(r1, r2), rc in
+			List.fold_left f (L.RegExEmpty, rc) l
+	| M.Rep (r, n, None) ->
+			let r, rc = brxToLrx r i rc in
+			L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc
+	| M.Rep (r, m, Some n) ->
+			let r, rc = brxToLrx r i rc in
+			L.iterateMtoNTimes m n r, rc
+	| M.Var (s, r) ->
+			let rc =
+				begin match RegexContext.lookup rc s with
+					| None ->
+							let r, rc = brxToLrx r i rc in RegexContext.update_exn rc s (r, false)
+					| Some r -> rc
+				end in L.RegExVariable s, rc
+	| _ -> Berror.run_error i
+				(fun () -> msg "No synthesis support for differences and intersections" )
 
+let isVar (v : t) : bool =
+	match v.M.desc with
+	| M.Var _ -> true
+	| _ -> false

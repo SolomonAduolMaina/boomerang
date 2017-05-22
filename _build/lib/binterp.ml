@@ -75,69 +75,34 @@ module Bridge = struct
 				| Some r -> lrxToBrx r rc i
 				| None -> Berror.run_error i (fun () -> msg "@[%s is unbound" s )
 	
-	let sLensTobLens (l : L.lens) (rc: RegexContext.t) (i : Info.t) : BL.MLens.t =
+	let sLensTobLens
+			(l : L.lens) (rc: RegexContext.t) (lc : LensContext.t) (i : Info.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
 			let source = Brx.mk_string s1 in
-			let mapTo = fun _ -> s1 in BL.MLens.clobber info source s2 mapTo in
+			let mapTo = fun _ -> s1 in BL.MLens.clobber i source s2 mapTo in
 		let rec helper (l : L.lens) : BL.MLens.t =
 			match l with
 			| L.LensConst (s1, s2) -> constLens s1 s2
-			| L.LensConcat (l1, l2) -> BL.MLens.concat info (helper l1) (helper l2)
-			| L.LensSwap (l1, l2) -> BL.MLens.concat info (helper l2) (helper l1)
-			| L.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
-			| L.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
-			| L.LensIterate l -> BL.MLens.star info (helper l)
-			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc i)
-			| L.LensInverse _ | L.LensVariable _
+			| L.LensConcat (l1, l2) -> BL.MLens.concat i (helper l1) (helper l2)
+			| L.LensSwap (l1, l2) -> BL.MLens.concat i (helper l2) (helper l1)
+			| L.LensUnion (l1, l2) -> BL.MLens.union i (helper l2) (helper l1)
+			| L.LensCompose (l1, l2) -> BL.MLens.compose i (helper l2) (helper l1)
+			| L.LensIterate l -> BL.MLens.star i (helper l)
+			| L.LensIdentity r -> BL.MLens.copy i (lrxToBrx r rc i)
+			| L.LensInverse l -> BL.MLens.invert i (helper l)
+			| L.LensVariable s ->
+					BL.MLens.mk_var i s (helper (LensContext.lookup_impl_exn lc s))
 			| L.LensPermute _ -> Berror.run_error i
 						(fun () -> msg "Some weird lenses were synthesized" ) in
 		helper l
 	
-	let rec seqToString (r : L.regex) : L.regex =
-		match r with
-		| L.RegExConcat(L.RegExBase "", r) -> seqToString r
-		| L.RegExConcat(r, L.RegExBase "") -> seqToString r
-		| L.RegExConcat(L.RegExBase s1, L.RegExBase s2) -> L.RegExBase (s1 ^ s2)
-		| L.RegExConcat(L.RegExBase s1, L.RegExConcat(L.RegExBase s2, r)) ->
-				seqToString (L.RegExConcat(L.RegExBase (s1 ^ s2), seqToString r))
-		| L.RegExEmpty | L.RegExBase _ | L.RegExVariable _ as r -> r
-		| L.RegExStar r -> L.RegExStar (seqToString r)
-		| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
-		| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
-	
-	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) (i : Info.t) : L.regex * RegexContext.t =
-		match r.Brx.M.desc with
-		| Brx.M.CSet l -> L.charSet l, rc
-		| Brx.M.Seq (r1, r2) ->
-				let (r1, rc) = brxToLrx r1 rc i in
-				let (r2, rc) = brxToLrx r2 rc i in
-				seqToString (L.RegExConcat(r1, r2)), rc
-		| Brx.M.Alt l ->
-				let f =
-					(fun (r1, rc) x ->
-								let (r2, rc) = brxToLrx x rc i in
-								(if r1 = L.RegExEmpty then (r2, rc) else L.RegExOr(r1, r2), rc)) in
-				List.fold_left f (L.RegExEmpty, rc) l
-		| Brx.M.Rep (r, n, None) ->
-				let (r, rc) = brxToLrx r rc i in
-				(L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc)
-		| Brx.M.Rep (r, m, Some n) ->
-				let (r, rc) = brxToLrx r rc i in (L.iterateMtoNTimes m n r, rc)
-		| Brx.M.Var (s, r) ->
-				let rc =
-					match RegexContext.lookup rc s with
-					| None -> let (r, rc) = brxToLrx r rc i in RegexContext.insert_exn rc s r false
-					| Some _ -> rc in
-				L.RegExVariable s, rc
-		| _ -> Berror.run_error i
-					(fun () -> msg "No synthesis support for differences and intersections" )
-	
-	let getRegexp (v : V.t) (rc : RegexContext.t) : (L.regex * RegexContext.t) =
+	let getRegexp (v : V.t) (rc : RegexContext.t) : L.regex * RegexContext.t =
 		match v with
-		| V.Rx (i, r) -> brxToLrx r rc i
-		| V.Str (i, s) -> brxToLrx (Brx.mk_string s) rc i
-		| V.Chr (i, c) -> brxToLrx (Brx.mk_string (Scanf.unescaped (Char.escaped c))) rc i
-		| _ -> failwith "No regular expression here!"
+		| V.Rx (i, r) -> Brx.brxToLrx r i rc
+		| V.Str (i, s) -> Brx.brxToLrx (Brx.mk_string s) i rc
+		| V.Chr (i, c) -> Brx.brxToLrx (Brx.mk_string (Scanf.unescaped (Char.escaped c))) i rc
+		| _ -> Berror.run_error (V.info_of_t v)
+					(fun () -> msg "Expected a regular expression or string or character here" )
 	
 	let getStrings (l : V.t list) : (string * string) list =
 		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
@@ -152,6 +117,106 @@ module Bridge = struct
 		| V.Vnt(_, _, _, Some (V.Par(_, hd, tail))) -> toList tail (hd :: temp)
 		| _ -> Berror.run_error (V.info_of_t v)
 					(fun () -> msg "Expected a list here" )
+	
+	let rec permutations (l : 'a list) : 'a list list =
+		List.map (fun m -> Perms.permute_list m l) (Perms.permutations (List.length l))
+	
+	let rec evenOdd
+			(l : 'a list) (even : 'a list) (odd : 'a list) (p : int) : ('a list) * ('a list) =
+		match l with
+		| [] -> List.rev even, List.rev odd
+		| x :: xs -> if p = 0 then evenOdd xs (x :: even) odd ((p + 1) mod 2)
+				else evenOdd xs even (x :: odd) ((p + 1) mod 2)
+	
+	let rec evenOddInv (even : 'a list) (odd : 'a list) (temp : 'a list) (p : int) : 'a list =
+		match even, odd with
+		| [], [] -> List.rev temp
+		| x :: xs, odd when p = 0 -> evenOddInv xs odd (x :: temp) ((p + 1) mod 2)
+		| even, y :: ys when p = 1 -> evenOddInv even ys (y :: temp) ((p + 1) mod 2)
+		| _ -> failwith "Lists cannot be alternated!"
+	
+	let rec getMatches (l : Brx.t list) (s : BS.t) (t : BS.t list) : BS.t list =
+		match l with
+		| [] -> List.rev t
+		| [x] -> List.rev (s :: t)
+		| x :: xs -> let s1, s2 = BS.concat_split x (Brx.concatList xs) s in
+				getMatches xs s2 (s1 :: t)
+	
+	let permCanonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonizer.t =
+		let l = List.fold_left (fun l c -> (BL.Canonizer.uncanonized_type c) :: l) [] cs in
+		let l = List.rev l in
+		let sep = BL.Canonizer.uncanonized_type c in
+		let whole = Brx.mk_perm l sep in
+		let l' = List.fold_left (fun l c -> (BL.Canonizer.canonized_type c) :: l) [] cs in
+		let l' = List.rev l' in
+		let sep' = BL.Canonizer.canonized_type c in
+		let kernel = Brx.concatList (Brx.intersperse sep' l') in
+		let f (s' : string) : string =
+			let s = BS.of_string s' in
+			let perm = match fst (Brx.whichPerm l sep s') with
+				| None -> []
+				| Some l -> Perms.invert_permutation l in
+			let lperm = Perms.permute_list perm l in
+			let matches = getMatches (Brx.intersperse sep lperm) s [] in
+			let real, seps = evenOdd matches [] [] 0 in
+			let real = Perms.permute_list (Perms.invert_permutation perm) real in
+			let ss = List.map BS.to_string (evenOddInv real seps [] 0) in
+			let ss = List.map2
+					(fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (Brx.intersperse c cs) ss in
+			String.concat "" ss in BL.Canonizer.normalize info whole kernel f
+	
+	let new_synth
+			(v1 : V.t) (v2 : V.t) (l : V.t) (rc : RegexContext.t) (lc : LensContext.t): V.t =
+		match v1 with
+		| V.Rx (i1, r1) ->
+				begin
+					match v2 with
+					| V.Rx (i2, r2) ->
+							begin
+								match l with
+								| V.Vnt (i3, _, _, _) ->
+										let s1, rc = Brx.brxToLrx r1 i1 rc in
+										let s2, rc = Brx.brxToLrx r2 i2 rc in
+										let l = getStrings (toList l []) in
+										let lens = gen_lens rc lc s1 s2 l in
+										let lens = match lens with
+											| None -> Berror.run_error (Info.merge_inc i1 i2)
+														(fun () -> msg "Could not synthesize lens" )
+											| Some lens ->  lens in
+										let info = Info.merge_inc i1 i3 in
+										V.Lns(info, sLensTobLens lens rc lc info)
+								| _ -> Berror.run_error (V.info_of_t l)
+											(fun () -> msg "Synth_from_regexp expects a list here" )
+							end
+					| _ -> Berror.run_error (V.info_of_t v2)
+								(fun () -> msg "Synth_from_regexp expects a regular expression here" )
+				end
+		| V.Can (i1, c1) ->
+				begin
+					match v2 with
+					| V.Can (i2, c2) ->
+							begin
+								match l with
+								| V.Vnt (i3, _, _, _) ->
+										let s1, rc = Brx.brxToLrx (BL.Canonizer.canonized_type c1) i1 rc in
+										let s2, rc = Brx.brxToLrx (BL.Canonizer.canonized_type c2) i2 rc in
+										let l = getStrings (toList l []) in
+										let lens = gen_lens rc lc s1 s2 l in
+										let info = Info.merge_inc i1 i3 in
+										let lens = match lens with
+											| None -> Berror.run_error info
+														(fun () -> msg "Could not synthesize lens" )
+											| Some lens -> sLensTobLens lens rc lc info in
+										let lens = (BL.MLens.left_quot info c1 lens) in
+										V.Lns(Info.merge_inc i1 i3, BL.MLens.right_quot info lens c2)
+								| _ -> Berror.run_error (V.info_of_t l)
+											(fun () -> msg "synth expects a list here" )
+							end
+					| _ -> Berror.run_error (V.info_of_t v2)
+								(fun () -> msg "synth expects a canonizer here" )
+				end
+		| _ -> Berror.run_error (V.info_of_t v1)
+					(fun () -> msg "synth expects a regular expression or canonizer" )
 	
 	let rec vtoString (id : Qid.t) (v : V.t) =
 		match v with
@@ -176,143 +241,6 @@ module Bridge = struct
 				match opt with
 				| None -> "Vnt " ^ (Qid.string_of_t id) ^ "\n"
 				| Some v -> "Vnt " ^ (Qid.string_of_t id) ^ " = (" ^ (vtoString id v) ^ ")"
-	
-	let rec permutations (l : 'a list) : 'a list list =
-		List.map (fun m -> Perms.permute_list m l) (Perms.permutations (List.length l))
-	
-	let concatList (l : Brx.t list) : Brx.t =
-		let rec helper (l : Brx.t list) (temp : Brx.t) : Brx.t =
-			match l with
-			| [] -> temp
-			| x :: xs -> helper xs (Brx.mk_seq temp x) in
-		match l with
-		| [] -> Brx.empty
-		| x :: xs -> helper xs x
-	
-	let altList (l : Brx.t list) : Brx.t =
-		let rec helper (l : Brx.t list) (temp : Brx.t) : Brx.t =
-			match l with
-			| [] -> temp
-			| x :: xs -> helper xs (Brx.mk_alt temp x) in
-		match l with
-		| [] -> Brx.empty
-		| x :: xs -> helper xs x
-	
-	let rec evenOdd
-			(l : 'a list) (even : 'a list) (odd : 'a list) (p : int) : ('a list) * ('a list) =
-		match l with
-		| [] -> List.rev even, List.rev odd
-		| x :: xs -> if p = 0 then evenOdd xs (x :: even) odd ((p + 1) mod 2)
-				else evenOdd xs even (x :: odd) ((p + 1) mod 2)
-	
-	let rec evenOddInv (even : 'a list) (odd : 'a list) (temp : 'a list) (p : int) : 'a list =
-		match even, odd with
-		| [], [] -> List.rev temp
-		| x :: xs, odd when p = 0 -> evenOddInv xs odd (x :: temp) ((p + 1) mod 2)
-		| even, y :: ys when p = 1 -> evenOddInv even ys (y :: temp) ((p + 1) mod 2)
-		| _ -> failwith "Lists cannot be alternated!"
-	
-	let intersperse (a : 'a) (l : 'a list) : 'a list =
-		let rec helper (first : 'a list) (rest : 'a list) : 'a list =
-			match first with
-			| [] -> List.rev rest
-			| [x] -> List.rev (x :: rest)
-			| x :: xs -> helper xs (a :: (x :: rest))
-		in helper l []
-	
-	let rec getMatches (l : Brx.t list) (s : BS.t) (t : BS.t list) : BS.t list =
-		match l with
-		| [] -> List.rev t
-		| [x] -> List.rev (s :: t)
-		| x :: xs -> let s1, s2 = BS.concat_split x (concatList xs) s in
-				getMatches xs s2 (s1 :: t)
-	
-	let langWhole (l : Brx.t list) (sep : Brx.t) : Brx.t =
-		altList (List.map (fun l -> concatList (intersperse sep l)) (permutations l))
-	
-	let rec whichPerm
-			(perms : int list list) (l : Brx.t list) (sep : Brx.t) (s : BS.t) :
-	((int list) * (Brx.t list)) =
-		match perms with
-		| [] -> failwith "I have to match at least one!"
-		| perm :: perms ->
-				let lperm = Perms.permute_list perm l in
-				let rgx = concatList (intersperse sep lperm) in
-				if not (BS.match_rx rgx s) then whichPerm perms l sep s else perm, lperm
-	
-	let permCanonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonizer.t =
-		let l = List.fold_left (fun l c -> (BL.Canonizer.uncanonized_type c) :: l) [] cs in
-		let l = List.rev l in
-		let sep = BL.Canonizer.uncanonized_type c in
-		let whole = langWhole l sep in
-		let l' = List.fold_left (fun l c -> (BL.Canonizer.canonized_type c) :: l) [] cs in
-		let l' = List.rev l' in
-		let sep' = BL.Canonizer.canonized_type c in
-		let kernel = concatList (intersperse sep' l') in
-		let f (s : string) : string =
-			let s = BS.of_string s in
-			let perms = Perms.permutations (List.length l) in
-			let perm, lperm = whichPerm perms l sep s in
-			let matches = getMatches (intersperse sep lperm) s [] in
-			let real, seps = evenOdd matches [] [] 0 in
-			let real = Perms.permute_list (Perms.invert_permutation perm) real in
-			let ss = List.map BS.to_string (evenOddInv real seps [] 0) in
-			let ss = List.map2
-					(fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (intersperse c cs) ss in
-			String.concat "" ss in BL.Canonizer.normalize info whole kernel f
-	
-	let new_synth (v1 : V.t) (v2 : V.t) (l : V.t) (rc : RegexContext.t) : V.t =
-		match v1 with
-		| V.Rx (i1, r1) ->
-				begin
-					match v2 with
-					| V.Rx (i2, r2) ->
-							begin
-								match l with
-								| V.Vnt (i3, _, _, _) ->
-										let (s1, rc) = brxToLrx r1 rc i1 in
-										let (s2, rc) = brxToLrx r2 rc i2 in
-										let l = getStrings (toList l []) in
-										let lens = gen_lens rc LensContext.empty s1 s2 l in
-										let lens = match lens with
-											| None -> Berror.run_error (Info.merge_inc i1 i2)
-														(fun () -> msg "Could not synthesize lens" )
-											| Some lens -> lens in
-										let info = Info.merge_inc i1 i3 in
-										V.Lns(info, sLensTobLens lens rc info)
-								| _ -> Berror.run_error (V.info_of_t l)
-											(fun () -> msg "Synth_from_regexp expects a list here" )
-							end
-					| _ -> Berror.run_error (V.info_of_t v2)
-								(fun () -> msg "Synth_from_regexp expects a regular expression here" )
-				end
-		| V.Can (i1, c1) ->
-				begin
-					match v2 with
-					| V.Can (i2, c2) ->
-							begin
-								match l with
-								| V.Vnt (i3, _, _, _) ->
-										let (s1, rc) = brxToLrx (BL.Canonizer.canonized_type c1) rc i1 in
-										let (s2, rc) = brxToLrx (BL.Canonizer.canonized_type c2) rc i2 in
-										let l = getStrings (toList l []) in
-										let lens = gen_lens rc LensContext.empty s1 s2 l in
-										let info = Info.merge_inc i1 i3 in
-										let lens = match lens with
-											| None -> Berror.run_error info
-														(fun () -> msg "Could not synthesize lens" )
-											| Some lens -> sLensTobLens lens rc info in
-										let lens = (BL.MLens.left_quot info c1 lens) in
-										V.Lns(Info.merge_inc i1 i3, BL.MLens.right_quot info lens c2)
-								| _ -> Berror.run_error (V.info_of_t l)
-											(fun () -> msg "synth expects a list here" )
-							end
-					| _ -> Berror.run_error (V.info_of_t v2)
-								(fun () -> msg "synth expects a canonizer here" )
-				end
-		| _ -> Berror.run_error (V.info_of_t v1)
-					(fun () -> msg "synth expects a regular expression or canonizer" )
-	
 end
 
 (* UNIT TESTS *)
@@ -547,31 +475,45 @@ and interp_exp wq cev e0 =
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
 			let v3 = interp_exp wq cev e3 in
-			let f id (so, v) rc =
-				match so with
-				| Sort SRegexp | Sort SString | Sort SChar ->
-						let (r, rc) = Bridge.getRegexp v rc in
-						let s = Qid.string_of_t id in
-						begin
-							match RegexContext.lookup rc s with
-							| None -> RegexContext.insert_exn rc s r false
-							| Some _ -> rc
-						end
+			let f id (_, v) rc =
+				match v with
+				| V.Chr _ | V.Str _ | V.Rx _ ->
+						let r, rc = Bridge.getRegexp v rc in
+						RegexContext.insert_exn rc (Qid.string_of_t id) r false
 				| _ -> rc in
 			let rc = CEnv.fold f cev RegexContext.empty in
-			(* let f id (r, _) () =
-				print_endline (id ^ " = " ^ L.regex_to_string r) in
-			let () = RegexContext.fold f () rc in *)
-			Bridge.new_synth v1 v2 v3 rc
+			let f id (_, v) lc =
+				match v with
+				| V.Lns (i, l) ->
+						begin
+							match BL.MLens.bLensTosLens i l rc lc with
+							| None, lc -> lc
+							| Some (l, r1, r2), lc ->
+									let s = Qid.string_of_t id in
+									begin
+										match Lenscontext.LensContext.lookup lc s with
+										| None -> LensContext.insert_exn lc s l r1 r2
+										| Some _ -> lc
+									end
+						end
+				| _ -> lc in
+			let lc = CEnv.fold f cev LensContext.empty in
+			(*let f id (r, _) () = print_endline (id ^ " = " ^ L.regex_to_string r) in
+			let () = RegexContext.fold f () rc in
+			let f id (l, r1, r2) () =
+				print_endline (id ^ " : lens in (" ^ (L.regex_to_string r1) ^ " <=> " ^
+						(L.regex_to_string r2) ^ ") = " ^ L.lens_to_string l) in
+			let () = LensContext.fold f () lc in*)
+			Bridge.new_synth v1 v2 v3 rc lc
 	
 	| EId(i, e1) ->
 			let v1 = interp_exp wq cev e1 in
 			begin
 				match v1 with
 				| V.Str (j, s) -> V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
-				| V.Chr (j, c) -> 
-					let s = Scanf.unescaped (Char.escaped c) in
-					V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
+				| V.Chr (j, c) ->
+						let s = Scanf.unescaped (Char.escaped c) in
+						V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
 				| V.Rx (j, r) -> V.Can (i, BL.Canonizer.copy j r)
 				| _ -> Berror.run_error i (fun () -> msg
 											"The id construct expects a regular expression" )
@@ -616,23 +558,24 @@ and interp_exp wq cev e0 =
 											"I was expecting a canonizer here")
 			end
 	
-	| EVar(i, q) -> begin
+	| EVar(i, q) ->
+			let v =
 				match CEnv.lookup_both cev q with
 				| Some((G.Unknown, v), _) -> v
 				| Some((G.Sort s, v), s_env) ->
 						let s_base = Bsubst.erase_sort s in
-						let v = (interp_cast wq s_env i s s_base) v in
-						begin
-							match v with
-							| V.Rx (i, t) ->
-									begin
-										match t.Brx.M.desc with
-										| Brx.M.Var _ -> v
-										| _ -> V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t) )
-									end
-							| _ -> v
-						end
-				| None -> Berror.run_error i (fun () -> msg "@[%s unbound@]" (Qid.string_of_t q))
+						(interp_cast wq s_env i s s_base) v
+				| None ->
+						Berror.run_error i
+							(fun () -> msg "@[%s unbound@]"
+											(Qid.string_of_t q))
+			in begin
+				match v with
+				| V.Rx (i, t) ->
+						if Brx.isVar t then v else V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t))
+				| V.Lns (i, l) ->
+						if BL.MLens.isVar l then v else V.Lns (i, (BL.MLens.mk_var i (Qid.string_of_t q) l))
+				| _ -> v
 			end
 	
 	| EOver(i, op, _) ->

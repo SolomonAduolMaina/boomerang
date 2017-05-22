@@ -59,9 +59,6 @@ val cat_to_key : cat -> string
 val cat_fold_on_locs : (Btag.t -> int -> 'a -> 'a) -> cat -> 'a -> 'a
 val at_to_locs : at -> Btag.MapInt.t
 val match_rx : Brx.t -> t -> bool
-(* val at_to_weight_flat : at -> Bannot.Weight.t array * string *)
-(* val at_dist : at -> at -> int *)
-(* val cat_dist : cat -> cat -> int *)
 val concat_ambiguous_split : int -> Brx.t -> Brx.t -> t -> t * t
 val find_concat_split : Brx.t -> Brx.t -> int -> string -> int
 val concat_split : Brx.t -> Brx.t -> t -> t * t

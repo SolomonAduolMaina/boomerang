@@ -647,13 +647,6 @@ let star_split r s =
 let do_concat r1 r2 p1 p2 ((a, s):attmp) :attmp =
   (* post: only annotations are touched *)
   let p = Rx.split_positions r1 r2 (to_string s) in
-(*   if Int.Set.cardinal p <> 1 *)
-(*   then ( *)
-(*     Berror.run_error (Info.M "bstring.ml: do_concat") ( *)
-(*       let fmt _ = Rx.format_t in *)
-(*       fun () -> Util.format "@[%a@]\n@[%a@]\n@[\"%s\"@]" fmt r1 fmt r2 (to_string s) *)
-(*     ) *)
-(*   ); *)
   let s, i, j = s in
   let k = i + Int.Set.choose p in
   let a, _ = p1 (a, (s, i, k)) in
