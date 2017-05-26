@@ -120,4 +120,10 @@ module MLens : sig
 		Lenscontext.LensContext.t -> 
 		(Lang.lens * Lang.regex * Lang.regex) option * Lenscontext.LensContext.t
 	val isVar : t -> bool
+	val removeVars : t -> t
+	val setStype : t -> Brx.t -> t
+	val setVtype : t -> Brx.t -> t
+	val getStype : t -> Brx.t option
+  val getVtype : t -> Brx.t option
+	val freeVars : t -> string -> string list
 end

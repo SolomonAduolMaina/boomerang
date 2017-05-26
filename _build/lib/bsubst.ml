@@ -57,7 +57,7 @@ and free_svars_sort acc = function
       acc2
   | SData(sl,qx)       -> 
       Safelist.fold_left free_svars_sort acc sl
-  | SRefine(x,b0,s1,e2) -> 
+  | SRefine(x,b0,s1,e2,_) -> 
       let acc1 = free_svars_sort acc s1 in 
       let acc2 = free_svars_exp acc1 e2 in 
       acc2
@@ -194,10 +194,10 @@ and subst_svars_sort subst s0 = match s0 with
   | SData(sl,qx) -> 
       let new_sl = Safelist.map (subst_svars_sort subst) sl in 
       SData(new_sl,qx)
-  | SRefine(x,b0,s1,e2) -> 
+  | SRefine(x,b0,s1,e2,k) -> 
       let new_s1 = subst_svars_sort subst s1 in 
       let new_e2 = subst_svars_exp subst e2 in 
-      SRefine(x,b0,new_s1,new_e2)
+      SRefine(x,b0,new_s1,new_e2,k)
   | SForall(a,s1) -> 
       let fresh_a = fresh_svar subst a in 
       let safe_s1 = if fresh_a = a then s1 else subst_svars_sort [(a,SVar fresh_a)] s1 in 
@@ -317,7 +317,7 @@ and free_evars_sort acc = function
       acc2 
   | SData(sl,_) -> 
       Safelist.fold_left free_evars_sort acc sl
-  | SRefine(x,_,s1,e2) ->
+  | SRefine(x,_,s1,e2,_) ->
       let e2_vars = Qid.Set.remove (Qid.t_of_id x) (free_evars_exp Qid.Set.empty e2) in
       let acc1 = free_evars_sort acc s1 in 
       Qid.Set.union e2_vars acc1 
@@ -507,7 +507,7 @@ and subst_evars_sort subst s0 = match s0 with
   | SData(sl,qx) -> 
       let new_sl = Safelist.map (subst_evars_sort subst) sl in 
       SData(new_sl,qx)
-  | SRefine(x,b0,s1,e2) -> 
+  | SRefine(x,b0,s1,e2,k) -> 
       let new_s1 = subst_evars_sort subst s1 in
       let fresh_x = fresh_evar_id subst x in 
       let safe_e2 = 
@@ -519,7 +519,7 @@ and subst_evars_sort subst s0 = match s0 with
           let subst_x = [(qx,EVar(i,fresh_qx))] in 
           subst_evars_exp subst_x e2 in                       
       let new_e2 = subst_evars_exp subst safe_e2 in 
-      SRefine(fresh_x,b0,new_s1,new_e2)
+      SRefine(fresh_x,b0,new_s1,new_e2,k)
   | SForall(a,s1) -> 
       let new_s1 = subst_evars_sort subst s1 in 
       SForall(a,new_s1)
@@ -693,7 +693,7 @@ let rec erase_sort = function
       SProduct(erase_sort s1, erase_sort s2)
   | SData(sl,qx) ->
       SData(Safelist.map erase_sort sl,qx)
-  | SRefine(x,b0,s1,e1) -> 
+  | SRefine(x,b0,s1,e1,_) -> 
       erase_sort s1
   | SForall(x,s1) -> 
       SForall(x,erase_sort s1)
@@ -702,7 +702,7 @@ let rec erase_sort = function
       s0
 
 let rec expose_sort = function
-  | SRefine(x,b0,s1,e1) -> expose_sort s1
+  | SRefine(x,b0,s1,e1,_) -> expose_sort s1
   | s0 -> s0
 
 
@@ -722,7 +722,7 @@ let rec syneq_sort s1 s2 = match s1,s2 with
       syneq_sort s11 s21 && syneq_sort s21 s22
   | SData(sl1,qx), SData(sl2,qy) -> 
       rec_eq syneq_sort (Qid.equal qx qy) sl1 sl2 
-  | SRefine(x,b1,s1,e1),SRefine(y,b2,s2,e2) -> 
+  | SRefine(x,b1,s1,e1,_),SRefine(y,b2,s2,e2,_) -> 
       Id.equal x y && b1 = b2 && syneq_sort s1 s2 && syneq_exp e1 e2 
   | SForall(a,s1),SForall(b,s2) -> 
       Id.equal a b && syneq_sort s1 s2
@@ -841,10 +841,10 @@ let rec qualify_sort resolve bound s0 = match s0 with
   | SData(sl,qx) -> 
       let new_sl = Safelist.map (qualify_sort resolve bound) sl in 
       SData(new_sl,qx)
-  | SRefine(x,b0,s1,e2) -> 
+  | SRefine(x,b0,s1,e2,k) -> 
       let new_s1 = qualify_sort resolve bound s1 in
       let new_e2 = qualify_exp resolve ((Qid.t_of_id x)::bound) e2 in 
-      SRefine(x,b0,new_s1,new_e2)
+      SRefine(x,b0,new_s1,new_e2,k)
   | SForall(a,s1) -> 
       let new_s1 = qualify_sort resolve bound s1 in 
       SForall(a,new_s1)

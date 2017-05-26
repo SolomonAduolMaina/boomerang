@@ -219,7 +219,7 @@ let charSet (l : (int * int) list) : regex =
 				RegExBase "\"" else
 				RegExBase (Scanf.unescaped (Char.escaped (charOf m)))
 		else
-			innerHelper (n -1) (RegExBase (Scanf.unescaped (Char.escaped (charOf n))))
+			innerHelper (n - 1) (RegExBase (Scanf.unescaped (Char.escaped (charOf n))))
 	in
 	List.fold_left l ~init: RegExEmpty
 		~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (helper x, r))

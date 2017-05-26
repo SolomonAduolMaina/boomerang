@@ -3090,7 +3090,7 @@ let yyact = [|
         let p = mk_bin_op i (mk_core_var i "equiv") 
 	                    (mk_app i (mk_core_var i "vtype") (mk_var _2))
                             _8 in 
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3096 "lib/bparser.ml"
                : 'param))
@@ -3112,7 +3112,7 @@ let yyact = [|
 	                                 (mk_app i (mk_core_var i "vtype") (mk_var _2))
                                          _8)
 			    (mk_app i (mk_core_var i "bij") (mk_var _2)) in
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3118 "lib/bparser.ml"
                : 'param))
@@ -3132,7 +3132,7 @@ let yyact = [|
         let p = mk_bin_op i (mk_core_var i "equiv") 
 	                    (mk_app i (mk_core_var i "stype") (mk_var _2))
                             _6 in 
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3138 "lib/bparser.ml"
                : 'param))
@@ -3154,7 +3154,7 @@ let yyact = [|
 	                                 (mk_app i (mk_core_var i "stype") (mk_var _2))
                                          _6)
 			    (mk_app i (mk_core_var i "bij") (mk_var _2)) in
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3160 "lib/bparser.ml"
                : 'param))
@@ -3172,7 +3172,7 @@ let yyact = [|
 # 821 "lib/bparser.mly"
       ( let i = m _1 _9 in 
         let p = mk_tern_op i (mk_core_var i "in_lens_type") (mk_var _2) _6 _8 in 
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3178 "lib/bparser.ml"
                : 'param))
@@ -3190,7 +3190,7 @@ let yyact = [|
 # 827 "lib/bparser.mly"
       ( let i = m _1 _9 in 
         let p = mk_tern_op i (mk_core_var i "in_bij_lens_type") (mk_var _2) _6 _8 in 
-        let s = SRefine(_2,false,SLens,p) in 
+        let s = SRefine(_2,false,SLens,p,Some(_6, _8)) in 
         Misc.Left (Param(i,_2,s)) )
 # 3196 "lib/bparser.ml"
                : 'param))
@@ -3206,7 +3206,7 @@ let yyact = [|
 # 833 "lib/bparser.mly"
       ( let i = m _1 _7 in 
         let p = mk_bin_op i (mk_core_var i "matches") _6 (mk_var _2) in 
-        let s = SRefine(_2,false,SString,p) in
+        let s = SRefine(_2,false,SString,p,None) in
         Misc.Left (Param(i,_2,s)) )
 # 3212 "lib/bparser.ml"
                : 'param))
@@ -3222,7 +3222,7 @@ let yyact = [|
     Obj.repr(
 # 839 "lib/bparser.mly"
       ( let i,_ = _2 in 
-        let s = SRefine(_2,true,_4,_7) in 
+        let s = SRefine(_2,true,_4,_7,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3228 "lib/bparser.ml"
                : 'param))
@@ -3237,7 +3237,7 @@ let yyact = [|
     Obj.repr(
 # 844 "lib/bparser.mly"
       ( let i,_ = _2 in 
-        let s = SRefine(_2,false,_4,_6) in 
+        let s = SRefine(_2,false,_4,_6,None) in 
         Misc.Left (Param(i,_2,s)) )
 # 3243 "lib/bparser.ml"
                : 'param))
@@ -3373,7 +3373,7 @@ let yyact = [|
     let _6 = (Parsing.peek_val __caml_parser_env 0 : Info.t) in
     Obj.repr(
 # 902 "lib/bparser.mly"
-      ( SRefine(Id.wild,false,_2,_5) )
+      ( SRefine(Id.wild,false,_2,_5,None) )
 # 3378 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3384,7 +3384,7 @@ let yyact = [|
     let _5 = (Parsing.peek_val __caml_parser_env 0 : Info.t) in
     Obj.repr(
 # 905 "lib/bparser.mly"
-      ( SRefine(Id.wild,true,_2,_4) )
+      ( SRefine(Id.wild,true,_2,_4,None) )
 # 3389 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3398,7 +3398,7 @@ let yyact = [|
     let _8 = (Parsing.peek_val __caml_parser_env 0 : Info.t) in
     Obj.repr(
 # 908 "lib/bparser.mly"
-      ( SRefine(_2,true,_4,_7) )
+      ( SRefine(_2,true,_4,_7,None) )
 # 3403 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3411,7 +3411,7 @@ let yyact = [|
     let _7 = (Parsing.peek_val __caml_parser_env 0 : Info.t) in
     Obj.repr(
 # 911 "lib/bparser.mly"
-      ( SRefine(_2,false,_4,_6) )
+      ( SRefine(_2,false,_4,_6,None) )
 # 3416 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3429,7 +3429,7 @@ let yyact = [|
         let p = mk_bin_op i (mk_core_var i "equiv") 
 	                    (mk_app i (mk_core_var i "vtype") (mk_var l))
                             _6 in 
-        SRefine(l,false,SLens,p) )
+        SRefine(l,false,SLens,p,None) )
 # 3434 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3449,7 +3449,7 @@ let yyact = [|
 	                                 (mk_app i (mk_core_var i "vtype") (mk_var l))
                                          _6)
 			    (mk_app i (mk_core_var i "bij") (mk_var l)) in
-        SRefine(l,false,SLens,p) )
+        SRefine(l,false,SLens,p,None) )
 # 3454 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3467,7 +3467,7 @@ let yyact = [|
         let p = mk_bin_op i (mk_core_var i "equiv") 
 	                    (mk_app i (mk_core_var i "stype") (mk_var l))
                             _4 in 
-        SRefine(l,false,SLens,p) )
+        SRefine(l,false,SLens,p,None) )
 # 3472 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3487,7 +3487,7 @@ let yyact = [|
 	                                 (mk_app i (mk_core_var i "stype") (mk_var l))
                                          _4)
 			    (mk_app i (mk_core_var i "bij") (mk_var l)) in
-        SRefine(l,false,SLens,p) )
+        SRefine(l,false,SLens,p,None) )
 # 3492 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3503,7 +3503,7 @@ let yyact = [|
       ( let i = m _1 _7 in 
         let l = Id.mk i "_l" in 
         let chk c a = mk_tern_op i (mk_core_var i "in_lens_type") (mk_var l) c a in 
-        SRefine(l,false,SLens,chk _4 _6) )
+        SRefine(l,false,SLens,chk _4 _6,None) )
 # 3508 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3519,7 +3519,7 @@ let yyact = [|
       ( let i = m _1 _7 in 
         let l = Id.mk i "_l" in 
         let chk c a = mk_tern_op i (mk_core_var i "in_bij_lens_type") (mk_var l) c a in 
-        SRefine(l,false,SLens,chk _4 _6) )
+        SRefine(l,false,SLens,chk _4 _6,Some(_4,_6)) )
 # 3524 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->
@@ -3533,7 +3533,7 @@ let yyact = [|
       ( let i = m _1 _5 in 
         let s = Id.mk i "_s" in 
         let p = mk_bin_op i (mk_core_var i "matches") _4 (mk_var s) in 
-        SRefine(s,false,SString,p) )
+        SRefine(s,false,SString,p,None) )
 # 3538 "lib/bparser.ml"
                : 'bsort))
 ; (fun __caml_parser_env ->

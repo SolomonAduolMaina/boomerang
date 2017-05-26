@@ -1408,35 +1408,39 @@ let rec seqToString (r : L.regex) : L.regex =
 	| L.RegExEmpty | L.RegExBase _ | L.RegExVariable _ as r -> r
 	| L.RegExStar r -> L.RegExStar (seqToString r)
 	| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
+	| L.RegExOr(L.RegExOr(r1, r2), r3) ->
+		 seqToString (L.RegExOr(r1, L.RegExOr(r2, r3)))
 	| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
 
-let rec brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexContext.t =
-	match r.M.desc with
-	| M.CSet l -> L.charSet l, rc
-	| M.Seq (r1, r2) ->
-			let r1, rc = brxToLrx r1 i rc in
-			let r2, rc = brxToLrx r2 i rc in
-			seqToString (L.RegExConcat(r1, r2)), rc
-	| M.Alt l ->
-			let f (r1, rc) x =
-				let r2, rc = brxToLrx x i rc in
-				if r1 = L.RegExEmpty then r2, rc else L.RegExOr(r1, r2), rc in
-			List.fold_left f (L.RegExEmpty, rc) l
-	| M.Rep (r, n, None) ->
-			let r, rc = brxToLrx r i rc in
-			L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc
-	| M.Rep (r, m, Some n) ->
-			let r, rc = brxToLrx r i rc in
-			L.iterateMtoNTimes m n r, rc
-	| M.Var (s, r) ->
+let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexContext.t =
+	let rec helper r i rc =
+		match r.M.desc with
+		| M.CSet l -> L.charSet l, rc
+		| M.Seq (r1, r2) ->
+				let r1, rc = helper r1 i rc in
+				let r2, rc = helper r2 i rc in
+				L.RegExConcat(r1, r2), rc
+		| M.Alt l ->
+				let f (r1, rc) x =
+					let r2, rc = helper x i rc in
+					if r1 = L.RegExEmpty then r2, rc else L.RegExOr(r1, r2), rc in
+				List.fold_left f (L.RegExEmpty, rc) l
+		| M.Rep (r, n, None) ->
+				let r, rc = helper r i rc in
+				L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc
+		| M.Rep (r, m, Some n) ->
+				let r, rc = helper r i rc in
+				L.iterateMtoNTimes m n r, rc
+		| M.Var (s, r) -> 
 			let rc =
-				begin match RegexContext.lookup rc s with
-					| None ->
-							let r, rc = brxToLrx r i rc in RegexContext.update_exn rc s (r, false)
-					| Some r -> rc
-				end in L.RegExVariable s, rc
-	| _ -> Berror.run_error i
-				(fun () -> msg "No synthesis support for differences and intersections" )
+					begin match RegexContext.lookup rc s with
+						| None -> let r, rc = helper r i rc in RegexContext.update_exn rc s (r, true)
+						| Some r -> rc
+					end in
+				L.RegExVariable s, rc
+		| _ -> Berror.run_error i
+					(fun () -> msg "No synthesis support for differences and intersections" )
+	in let r, rc = helper r i rc in seqToString r, rc
 
 let isVar (v : t) : bool =
 	match v.M.desc with

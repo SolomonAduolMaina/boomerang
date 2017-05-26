@@ -8,7 +8,6 @@ open Lang
 module type RegexContext_Sig = sig
     type t
 
-		
     val empty                    : t
     val lookup                   : t -> id -> regex option
     val lookup_exn               : t -> id -> regex
