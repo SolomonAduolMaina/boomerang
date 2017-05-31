@@ -1,231 +1,459 @@
-open Core.Std
-open Util1
+open Stdlib
 open Printf
-open String_utilities
-open Permutation
+
 
 (**** General {{{ *****)
-
 exception Internal_error of string
 let internal_error f s = raise @@ Internal_error (sprintf "(%s) %s" f s)
-
-type id = string
-
 (***** }}} *****)
+
+
+(**** Regex {{{ *****)
+module Id =
+struct
+  type t = Id of string
+  [@@deriving ord, show, hash]
+
+  let string_of_id
+      (Id v:t)
+    : string =
+    v
+
+  let make
+      (s:string)
+    : t =
+    Id s
+end
+(***** }}} *****)
+
+
 
 (**** Regex {{{ *****)
 
-type regex =
-	| RegExEmpty
-	| RegExBase of string
-	| RegExConcat of regex * regex
-	| RegExOr of regex * regex
-	| RegExStar of regex
-	| RegExVariable of string
+module Regex =
+struct
+  type t =
+    | RegExEmpty
+    | RegExBase of string
+    | RegExConcat of t * t
+    | RegExOr of t * t 
+    | RegExStar of t
+    | RegExVariable of Id.t
+  [@@deriving ord, show, hash]
 
-let multiplicative_identity_regex = RegExBase ""
+  let one = RegExBase ""
 
-let separate_plus_regex (r: regex) : (regex * regex) option =
-	begin match r with
-		| RegExOr (r1, r2) -> Some (r1, r2)
-		| _ -> None
-	end
+  let zero = RegExEmpty
 
-let separate_times_regex (r: regex) : (regex * regex) option =
-	begin match r with
-		| RegExConcat (r1, r2) -> Some (r1, r2)
-		| _ -> None
-	end
+  let separate_plus
+      (r:t)
+    : (t * t) option =
+    begin match r with
+      | RegExOr (r1,r2) -> Some (r1,r2)
+      | _ -> None
+    end
 
-let create_plus_regex (r1: regex) (r2: regex) : regex =
-	RegExOr (r1, r2)
+  let separate_times
+      (r:t)
+    : (t * t) option =
+    begin match r with
+      | RegExConcat (r1,r2) -> Some (r1,r2)
+      | _ -> None
+    end
 
-let create_times_regex (r1: regex) (r2: regex) : regex =
-	RegExConcat (r1, r2)
+  let separate_star
+      (r:t)
+    : t option =
+    begin match r with
+      | RegExStar r' -> Some r'
+      | _ -> None
+    end
 
-let rec apply_at_every_level_regex (f: regex -> regex) (r: regex) : regex =
-	let r =
-		begin match r with
-			| RegExConcat (r1, r2) ->
-					RegExConcat (apply_at_every_level_regex f r1, apply_at_every_level_regex f r2)
-			| RegExOr (r1, r2) ->
-					RegExOr (apply_at_every_level_regex f r1, apply_at_every_level_regex f r2)
-			| RegExStar r' ->
-					RegExStar (apply_at_every_level_regex f r')
-			| _ -> r
-		end
-	in
-	f r
+  let separate_var
+      (r:t)
+    : Id.t option =
+    begin match r with
+      | RegExVariable v -> Some v
+      | _ -> None
+    end
 
-let rec regex_to_string (r: regex) : string =
-	begin match r with
-		| RegExEmpty -> "{}"
-		| RegExBase s -> "\"" ^ s ^ "\""
-		| RegExConcat (r1, r2) -> paren ((regex_to_string r1) ^ "" ^ (regex_to_string r2))
-		| RegExOr (r1, r2) -> paren ((regex_to_string r1) ^ "|" ^ (regex_to_string r2))
-		| RegExStar (r') -> paren (regex_to_string r') ^ "*"
-		| RegExVariable s -> s
-	end
+  let make_empty : t = RegExEmpty
 
-let regex_compare : regex -> regex -> comparison =
-	comparison_compare
+  let make_concat
+      (r1:t)
+      (r2:t)
+    : t =
+    RegExConcat (r1,r2)
 
-let rec regex_hash (r: regex) : int =
-	begin match r with
-		| RegExEmpty -> 234789
-		| RegExBase s -> 2390384 lxor (String.hash s)
-		| RegExConcat (r1, r2) -> 345890 lxor (regex_hash r1) lxor (regex_hash r2)
-		| RegExOr (r1, r2) -> 527039 lxor (regex_hash r1) lxor (regex_hash r2)
-		| RegExStar r' -> -128947 lxor (regex_hash r')
-		| RegExVariable s -> 14967827 lxor (String.hash s)
-	end
+  let make_or
+      (r1:t)
+      (r2:t)
+    : t =
+    RegExOr (r1,r2)
+
+  let make_star
+      (r:t)
+    : t =
+    RegExStar r
+
+  let make_var
+      (v:Id.t)
+    : t =
+    RegExVariable v
+
+  let make_var
+      (v:Id.t)
+    : t =
+    RegExVariable v
+
+  let make_plus = make_or
+
+  let make_times = make_concat
+
+  let make_base
+      (s:string)
+    : t =
+    RegExBase s
+
+  let fold_downward_upward
+      ~init:(init:'b)
+      ~upward_empty:(upward_empty:'b -> 'a)
+      ~upward_base:(upward_base:'b -> string -> 'a)
+      ~upward_concat:(upward_concat:'b -> 'a -> 'a -> 'a)
+      ~upward_or:(upward_or:'b -> 'a -> 'a -> 'a)
+      ~upward_star:(upward_star:'b -> 'a -> 'a)
+      ~upward_var:(upward_var:'b -> Id.t -> 'a)
+      ?downward_concat:(downward_concat:'b -> 'b = ident)
+      ?downward_or:(downward_or:'b -> 'b = ident)
+      ?downward_star:(downward_star:'b -> 'b = ident)
+    : t -> 'a =
+    let rec fold_downward_upward_internal
+        (downward_acc:'b)
+        (r:t)
+      : 'a =
+      begin match r with
+        | RegExEmpty -> upward_empty downward_acc
+        | RegExBase s -> upward_base downward_acc s
+        | RegExConcat (r1,r2) ->
+          let downward_acc' = downward_concat downward_acc in
+          upward_concat
+            downward_acc
+            (fold_downward_upward_internal downward_acc' r1)
+            (fold_downward_upward_internal downward_acc' r2)
+        | RegExOr (r1,r2) ->
+          let downward_acc' = downward_or downward_acc in
+          upward_or
+            downward_acc
+            (fold_downward_upward_internal downward_acc' r1)
+            (fold_downward_upward_internal downward_acc' r2)
+        | RegExStar r' ->
+          let downward_acc' = downward_star downward_acc in
+          upward_star
+            downward_acc
+            (fold_downward_upward_internal downward_acc' r')
+        | RegExVariable v ->
+          upward_var downward_acc v
+      end
+    in
+    fold_downward_upward_internal init
+
+  let fold
+      ~empty_f:(empty_f:'a)
+      ~base_f:(base_f:string -> 'a)
+      ~concat_f:(concat_f:'a -> 'a -> 'a)
+      ~or_f:(or_f:'a -> 'a -> 'a)
+      ~star_f:(star_f:'a -> 'a)
+      ~var_f:(var_f:Id.t -> 'a)
+      (r:t)
+    : 'a =
+    fold_downward_upward
+      ~init:()
+      ~upward_empty:(thunk_of empty_f)
+      ~upward_base:(thunk_of base_f)
+      ~upward_concat:(thunk_of concat_f)
+      ~upward_or:(thunk_of or_f)
+      ~upward_star:(thunk_of star_f)
+      ~upward_var:(thunk_of var_f)
+      r
+
+  let rec apply_at_every_level
+      (f:t -> t)
+      (r:t)
+    : t =
+    fold
+      ~empty_f:(f RegExEmpty)
+      ~base_f:(fun s -> f (RegExBase s))
+      ~concat_f:(fun r1 r2 -> f (RegExConcat (r1,r2)))
+      ~or_f:(fun r1 r2 -> f (RegExOr (r1,r2)))
+      ~star_f:(fun r' -> f (RegExStar r'))
+      ~var_f:(fun v -> f (RegExVariable v))
+      r
+
+  let rec applies_for_every_applicable_level
+      (f:t -> t option)
+    : t -> t list =
+    snd
+    %
+    fold
+      ~empty_f:(
+        let empty_r = RegExEmpty in
+        let level_contribution = option_to_empty_or_singleton (f empty_r) in
+        (empty_r, level_contribution))
+      ~base_f:(fun s ->
+          let base_r = RegExBase s in
+          let level_contribution = option_to_empty_or_singleton (f base_r) in
+          (base_r, level_contribution))
+      ~concat_f:(fun (r1,r1s) (r2,r2s) ->
+          let concat_r = RegExConcat (r1,r2) in
+          let level_contribution = option_to_empty_or_singleton (f concat_r) in
+          let recursed_lefts =
+            List.map
+              ~f:(fun r1' -> RegExConcat (r1',r2))
+              r1s
+          in
+          let recursed_rights =
+            List.map
+              ~f:(fun r2' -> RegExConcat (r1,r2'))
+              r2s
+          in
+          (concat_r, level_contribution@recursed_lefts@recursed_rights))
+      ~or_f:(fun (r1,r1s) (r2,r2s) ->
+          let or_r = RegExOr (r1,r2) in
+          let level_contribution = option_to_empty_or_singleton (f or_r) in
+          let recursed_lefts =
+            List.map
+              ~f:(fun r1' -> RegExOr (r1',r2))
+              r1s
+          in
+          let recursed_rights =
+            List.map
+              ~f:(fun r2' -> RegExOr (r1,r2'))
+              r2s
+          in
+          (or_r, level_contribution@recursed_lefts@recursed_rights))
+      ~star_f:(fun (r',r's) ->
+          let star_r = RegExStar r' in
+          let level_contribution = option_to_empty_or_singleton (f star_r) in
+          let recursed_inner =
+            List.map
+              ~f:(fun r'' -> RegExStar r'')
+              r's
+          in
+          (star_r, level_contribution@recursed_inner))
+      ~var_f:(fun v ->
+          let var_r = RegExVariable v in
+          let level_contribution = option_to_empty_or_singleton (f var_r) in
+          (var_r, level_contribution))
+
+  let rec size
+    : t -> int =
+    fold
+      ~empty_f:1
+      ~base_f:(fun _ -> 1)
+      ~concat_f:(fun n1 n2 -> 1+n1+n2)
+      ~or_f:(fun n1 n2 -> 1+n1+n2)
+      ~star_f:(fun n -> 1+n)
+      ~var_f:(fun _ -> 1)
+
+
+
+  let from_char_set (l : (int * int) list) : t =
+	  let charOf (index : int) : char =
+		  match Char.of_int index with
+		  | None -> failwith "Bad Index Bro"
+		  | Some c -> c
+	  in let helper ((m, n) : int * int) : t =
+		     let rec innerHelper (i : int) (r : t) : t =
+			     if i > n then r else
+				     innerHelper (i + 1) (RegExOr(r, RegExBase (Char.escaped (charOf i))))
+		     in if n < m then failwith "Malformed Character Set" else
+		     if n = m then RegExBase (Char.escaped (charOf m)) else
+			     innerHelper (m + 1) (RegExBase (Char.escaped (charOf m)))
+	  in
+	  List.fold_left l ~init: RegExEmpty
+		  ~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (r, (helper x)))
+
+  let iterate_n_times (n : int) (r : t) : t =
+	  let rec helper (index : int) (temp : t) : t =
+		  if index > n then temp else helper (index + 1) (RegExConcat(r, temp)) in
+	  if n < 0 then RegExEmpty else if n = 0 then RegExBase "" else helper 2 r
+
+  let iterate_m_to_n_times (m : int) (n : int) (r : t) : t =
+	  let rec helper (index : int) (temp : t) : t =
+		  if index > n then temp else
+			  helper (index + 1) (RegExOr(temp, iterate_n_times index r)) in
+	  if n < m then RegExEmpty else helper (m + 1) (iterate_n_times m r)
+
+end
+
+let regex_semiring = (module Regex : Semiring.Sig with type t = Regex.t)
+let regex_star_semiring = (module Regex : StarSemiring.Sig with type t = Regex.t)
 (***** }}} *****)
+
+
+
 
 (**** Lens {{{ *****)
 
-type lens =
-	| LensConst of string * string
-	| LensConcat of lens * lens
-	| LensSwap of lens * lens
-	| LensUnion of lens * lens
-	| LensCompose of lens * lens
-	| LensIterate of lens
-	| LensIdentity of regex
-	| LensInverse of lens
-	| LensVariable of id
-	| LensPermute of Permutation.t * (lens list)
+module Lens =
+struct
+  type t =
+    | LensConst of string * string
+    | LensConcat of t * t
+    | LensSwap of t * t
+    | LensUnion of t * t
+    | LensCompose of t * t
+    | LensIterate of t
+    | LensIdentity of Regex.t
+    | LensInverse of t
+    | LensVariable of Id.t
+    | LensPermute of (int list) (*Permutation.t*) * (t list)
+  [@@deriving ord, show, hash]
 
-let multiplicative_identity_lens = LensIdentity (multiplicative_identity_regex)
 
-let separate_plus_lens (l: lens) : (lens * lens) option =
-	begin match l with
-		| LensUnion (l1, l2) -> Some (l1, l2)
-		| _ -> None
-	end
+  let one = LensIdentity (Regex.one)
 
-let separate_times_lens (l: lens) : (lens * lens) option =
-	begin match l with
-		| LensConcat (l1, l2) -> Some (l1, l2)
-		| _ -> None
-	end
+  let zero = LensIdentity (Regex.zero)
 
-let create_plus_lens (l1: lens) (l2: lens) : lens =
-	LensUnion (l1, l2)
+  let separate_plus (l:t) : (t * t) option =
+    begin match l with
+      | LensUnion (l1,l2) -> Some (l1,l2)
+      | _ -> None
+    end
 
-let create_times_lens (l1: lens) (l2: lens) : lens =
-	LensConcat (l1, l2)
+  let separate_times (l:t) : (t * t) option =
+    begin match l with
+      | LensConcat (l1,l2) -> Some (l1,l2)
+      | _ -> None
+    end
 
-let rec lens_to_string (l: lens) : string =
-	begin match l with
-		| LensConst (s1, s2) -> "const('" ^ s1 ^ "','" ^ s2 ^ "')"
-		| LensConcat (l1, l2) -> paren ((lens_to_string l1) ^ "." ^ (lens_to_string l2))
-		| LensCompose (l1, l2) -> paren ((lens_to_string l1) ^ ";" ^ (lens_to_string l2))
-		| LensSwap (l1, l2) -> "swap(" ^ (lens_to_string l1) ^ "," ^ (lens_to_string l2) ^ ")"
-		| LensUnion (l1, l2) -> paren ((lens_to_string l1) ^ "|" ^ (lens_to_string l2))
-		| LensIterate (l') -> paren (lens_to_string l') ^ "*"
-		| LensIdentity r -> "id(" ^ (regex_to_string r) ^")"
-		| LensInverse l' -> "inverse(" ^ (lens_to_string l') ^ ")"
-		| LensVariable n -> n
-		| LensPermute (p, ls) -> "permute" ^
-				((String_utilities.string_of_pair
-							Permutation.pp
-							(String_utilities.string_of_list lens_to_string))
-						(p, ls))
-	end
+  let separate_star (l:t) : t option =
+    begin match l with
+      | LensIterate l' -> Some l'
+      | _ -> None
+    end
 
-let rec lens_size (l: lens) : int =
-	begin match l with
-		| LensConst _ -> 1
-		| LensConcat (l1, l2) ->
-				1 + (lens_size l1) + (lens_size l2)
-		| LensCompose (l1, l2) ->
-				1 + (lens_size l1) + (lens_size l2)
-		| LensSwap (l1, l2) ->
-				1 + (lens_size l1) + (lens_size l2)
-		| LensUnion (l1, l2) ->
-				1 + (lens_size l1) + (lens_size l2)
-		| LensIterate (l') ->
-				1 + (lens_size l')
-		| LensIdentity _ -> 1
-		| LensInverse l' ->
-				1 + (lens_size l')
-		| LensVariable _ -> 1
-		| LensPermute (_, ls) ->
-				1 + (List.fold_left
-						~f: (fun acc l' -> acc + (lens_size l'))
-						~init:0
-						ls)
-	end
+  let make_plus (l1:t) (l2:t) : t =
+    LensUnion (l1,l2)
 
-let lens_compare : lens -> lens -> comparison = comparison_compare
+  let make_times (l1:t) (l2:t) : t =
+    LensConcat (l1,l2)
 
-let rec lens_hash (l: lens) : int =
-	begin match l with
-		| LensConst (s1, s2) -> 58129320 lxor (String.hash s1) lxor (String.hash s2)
-		| LensConcat (l1, l2) -> 912812382 lxor (lens_hash l1) lxor (lens_hash l2)
-		| LensSwap (l1, l2) -> -12899379 lxor (lens_hash l1) lxor (lens_hash l2)
-		| LensUnion (l1, l2) -> 18912899 lxor (lens_hash l1) lxor (lens_hash l2)
-		| LensCompose (l1, l2) -> -019092 lxor (lens_hash l1) lxor (lens_hash l2)
-		| LensIterate l' -> 212893489 lxor (lens_hash l')
-		| LensIdentity r -> 3828910 lxor (regex_hash r)
-		| LensInverse l -> 20920910 lxor (lens_hash l)
-		| LensVariable s -> 28945929 lxor (String.hash s)
-		| LensPermute (p, ls) ->
-				1390903
-				lxor (Permutation.hash p)
-				lxor (List.foldi
-						~f: (fun i acc l ->
-									(lens_hash l)
-									lxor (Int.hash i)
-									lxor acc)
-						~init:1237662)
-					ls
-	end
+  let make_star (l:t) : t =
+    LensIterate l
+
+  let rec size (l:t) : int =
+    begin match l with
+      | LensConst _ -> 1
+      | LensConcat (l1,l2) ->
+        1 + (size l1) + (size l2)
+      | LensCompose (l1,l2) ->
+        1 + (size l1) + (size l2)
+      | LensSwap (l1,l2) ->
+        1 + (size l1) + (size l2)
+      | LensUnion (l1,l2) ->
+        1 + (size l1) + (size l2)
+      | LensIterate (l') ->
+        1 + (size l')
+      | LensIdentity _ -> 1
+      | LensInverse l' ->
+        1 + (size l')
+      | LensVariable _ -> 1
+      | LensPermute (_,ls) ->
+        1 + (List.fold_left
+               ~f:(fun acc l' -> acc + (size l'))
+               ~init:0
+               ls)
+    end
+
+  let rec is_sublens (sublens:t) (suplens:t) : bool =
+    if sublens = suplens then
+      true
+    else
+      begin match suplens with
+        | LensConcat (l1,l2) ->
+          (is_sublens sublens l1) || (is_sublens sublens l2)
+        | LensSwap (l1,l2) ->
+          (is_sublens sublens l1) || (is_sublens sublens l2)
+        | LensUnion (l1,l2) ->
+          (is_sublens sublens l1) || (is_sublens sublens l2)
+        | LensCompose (l1,l2) ->
+          (is_sublens sublens l1) || (is_sublens sublens l2)
+        | LensIterate l' ->
+          is_sublens sublens l'
+        | LensInverse l' ->
+          is_sublens sublens l'
+        | _ -> false
+      end
+
+  let rec has_common_sublens (l1:t) (l2:t) : bool =
+    begin match l1 with
+      | LensConcat (l11,l12) ->
+        (has_common_sublens l11 l2) || (has_common_sublens l12 l2)
+      | LensSwap (l11,l12) ->
+        (has_common_sublens l11 l2) || (has_common_sublens l12 l2)
+      | LensUnion (l11,l12) ->
+        (has_common_sublens l11 l2) || (has_common_sublens l12 l2)
+      | LensCompose (l11,l12) ->
+        (has_common_sublens l11 l2) || (has_common_sublens l12 l2)
+      | LensIterate l1' ->
+        has_common_sublens l1' l2
+      | LensInverse l1' ->
+        has_common_sublens l1' l2
+      | _ -> is_sublens l1 l2
+    end
+
+  let rec apply_at_every_level (f:t -> t) (l:t) : t =
+    let l =
+      begin match l with
+        | LensConcat (l1,l2) ->
+          LensConcat (apply_at_every_level f l1, apply_at_every_level f l2)
+        | LensSwap (l1,l2) ->
+          LensSwap (apply_at_every_level f l1, apply_at_every_level f l2)
+        | LensUnion (l1,l2) ->
+          LensUnion (apply_at_every_level f l1, apply_at_every_level f l2)
+        | LensCompose (l1,l2) ->
+          LensCompose (apply_at_every_level f l1, apply_at_every_level f l2)
+        | LensIterate (l') ->
+          LensIterate (apply_at_every_level f l')
+        | LensInverse (l') ->
+          LensInverse (apply_at_every_level f l')
+        | _ -> l
+      end
+    in
+    f l
+
+  let rec applies_for_every_applicable_level
+      (_:t -> t option)
+      (_:t)
+    : t list =
+    failwith "TODO"
+end
+
+let lens_semiring = (module Lens : Semiring.Sig with type t = Lens.t)
+let lens_star_semiring = (module Lens : StarSemiring.Sig with type t = Lens.t)
 
 (***** }}} *****)
+
+
 
 (**** Language {{{ *****)
 
 type examples = (string * string) list
 
-type specification = (string * regex * regex * (string * string) list)
+type specification = (Id.t * Regex.t * Regex.t * (string * string) list)
 
 type declaration =
-	| DeclRegexCreation of (id * regex * bool)
-	| DeclTestString of (regex * string)
-	| DeclSynthesizeLens of specification
-	| DeclLensCreation of id * regex * regex * lens
-	| DeclTestLens of id * examples
+  | DeclRegexCreation of (Id.t * Regex.t * bool)
+  | DeclTestString of (Regex.t * string)
+  | DeclSynthesizeLens of specification
+  | DeclLensCreation of Id.t * Regex.t * Regex.t * Lens.t
+  | DeclTestLens of Id.t * examples
 
 type program = declaration list
 
-type synth_problems = (string * regex * bool) list * (specification list)
-
-let charSet (l : (int * int) list) : regex =
-	let charOf (index : int) : char =
-		match Char.of_int index with
-		| None -> failwith "Bad Index Bro"
-		| Some c -> c
-	in let helper ((m, n) : int * int) : regex =
-		let rec innerHelper (i : int) (r : regex) : regex =
-			if i > n then r else
-				innerHelper (i + 1) (RegExOr(r, RegExBase (Char.escaped (charOf i))))
-		in if n < m then failwith "Malformed Character Set" else
-		if n = m then RegExBase (Char.escaped (charOf m)) else
-			innerHelper (m + 1) (RegExBase (Char.escaped (charOf m)))
-	in
-	List.fold_left l ~init: RegExEmpty
-		~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (r, (helper x)))
-
-let iterateNTimes (n : int) (r : regex) : regex =
-	let rec helper (index : int) (temp : regex) : regex =
-		if index > n then temp else helper (index + 1) (RegExConcat(r, temp)) in
-	if n < 0 then RegExEmpty else if n = 0 then RegExBase "" else helper 2 r
-
-let iterateMtoNTimes (m : int) (n : int) (r : regex) : regex =
-	let rec helper (index : int) (temp : regex) : regex =
-		if index > n then temp else
-			helper (index + 1) (RegExOr(temp, iterateNTimes index r)) in
-	if n < m then RegExEmpty else helper (m + 1) (iterateNTimes m r)
+type synth_problems = (Id.t * Regex.t * bool) list * (specification list) 
 
 (***** }}} *****)
+
+

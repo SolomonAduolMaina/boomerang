@@ -14,7 +14,9 @@ BuildTools:
 Library lenssynth
   Path: lenssynth
   BuildDepends:
-    core
+    core,
+    ppx_deriving.std,
+    ppx_hash
   Modules:
     Gen
 

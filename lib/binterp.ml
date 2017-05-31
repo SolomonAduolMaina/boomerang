@@ -65,63 +65,63 @@ module Bridge = struct
 	let id = Qid.mk [] (Id.mk info "id")
 	let list = Qid.mk [(info, "List")] (Id.mk info "t")
 	
-	let rec lrxToBrx (r : L.regex) (rc: RegexContext.t) : Brx.t =
+	let rec lrxToBrx (r : L.Regex.t) (rc: RegexContext.t) : Brx.t =
 		match r with
-		| L.RegExEmpty -> Brx.empty
-		| L.RegExBase s -> Brx.mk_string s
-		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc) (lrxToBrx r2 rc)
-		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc) (lrxToBrx r2 rc)
-		| L.RegExStar r -> Brx.mk_star (lrxToBrx r rc)
-		| L.RegExVariable s ->
+		| L.Regex.RegExEmpty -> Brx.empty
+		| L.Regex.RegExBase s -> Brx.mk_string s
+		| L.Regex.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc) (lrxToBrx r2 rc)
+		| L.Regex.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc) (lrxToBrx r2 rc)
+		| L.Regex.RegExStar r -> Brx.mk_star (lrxToBrx r rc)
+		| L.Regex.RegExVariable s ->
 				match RegexContext.lookup rc s with
-				| None -> failwith (s ^ " is not in the regex context")
+				| None -> failwith ((L.Id.show s) ^ " is not in the regex context")
 				| Some r -> lrxToBrx r rc
 	
-	let sLensTobLens (l : L.lens) (rc: RegexContext.t) : BL.MLens.t =
+	let sLensTobLens (l : L.Lens.t) (rc: RegexContext.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
 			let source = Brx.mk_string s1 in
 			let mapTo = fun _ -> s1 in BL.MLens.clobber info source s2 mapTo in
-		let rec helper (l : L.lens) : BL.MLens.t =
+		let rec helper (l : L.Lens.t) : BL.MLens.t =
 			match l with
-			| L.LensConst (s1, s2) -> constLens s1 s2
-			| L.LensConcat (l1, l2) -> BL.MLens.concat info (helper l1) (helper l2)
-			| L.LensSwap (l1, l2) -> BL.MLens.concat info (helper l2) (helper l1)
-			| L.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
-			| L.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
-			| L.LensIterate l -> BL.MLens.star info (helper l)
-			| L.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc)
-			| L.LensInverse _ | L.LensVariable _
-			| L.LensPermute _ -> failwith "TODO" in
+			| L.Lens.LensConst (s1, s2) -> constLens s1 s2
+			| L.Lens.LensConcat (l1, l2) -> BL.MLens.concat info (helper l1) (helper l2)
+			| L.Lens.LensSwap (l1, l2) -> BL.MLens.concat info (helper l2) (helper l1)
+			| L.Lens.LensUnion (l1, l2) -> BL.MLens.union info (helper l2) (helper l1)
+			| L.Lens.LensCompose (l1, l2) -> BL.MLens.compose info (helper l2) (helper l1)
+			| L.Lens.LensIterate l -> BL.MLens.star info (helper l)
+			| L.Lens.LensIdentity r -> BL.MLens.copy info (lrxToBrx r rc)
+			| L.Lens.LensInverse _ | L.Lens.LensVariable _
+			| L.Lens.LensPermute _ -> failwith "TODO" in
 		helper l
 	
-	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) : L.regex * RegexContext.t =
+	let rec brxToLrx (r : Brx.t) (rc: RegexContext.t) : L.Regex.t * RegexContext.t =
 		match r.Brx.M.desc with
-		| Brx.M.CSet l -> (L.charSet l, rc)
+		| Brx.M.CSet l -> (L.Regex.from_char_set l, rc)
 		| Brx.M.Seq (r1, r2) ->
 				let (r1, rc) = brxToLrx r1 rc in
 				let (r2, rc) = brxToLrx r2 rc in
-				(L.RegExConcat(r1, r2), rc)
+				(L.Regex.RegExConcat(r1, r2), rc)
 		| Brx.M.Alt l ->
 				(List.fold_left
 						(fun (r1, rc) x ->
 									let (r2, rc) = brxToLrx x rc in
-									(if r1 = L.RegExEmpty then (r2, rc) else L.RegExOr(r1, r2), rc))
-						(L.RegExEmpty, rc)
+									(if r1 = L.Regex.RegExEmpty then (r2, rc) else L.Regex.RegExOr(r1, r2), rc))
+						(L.Regex.RegExEmpty, rc)
 						l)
 		| Brx.M.Rep (r, n, None) ->
 				let (r, rc) = brxToLrx r rc in
-				(L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc)
+				(L.Regex.RegExConcat(L.Regex.iterate_n_times n r, L.Regex.RegExStar r), rc)
 		| Brx.M.Rep (r, m, Some n) ->
-				let (r, rc) = brxToLrx r rc in (L.iterateMtoNTimes m n r, rc)
+				let (r, rc) = brxToLrx r rc in (L.Regex.iterate_m_to_n_times m n r, rc)
 		| Brx.M.Box (i, r) ->
-				let s = string_of_int i in
+				let s = L.Id.make (string_of_int i) in
 				begin
 					match RegexContext.lookup rc s with
 					| None ->
 							let (rx, rc) = brxToLrx r rc in
 							let rc = RegexContext.insert_exn rc s rx false in
-							(L.RegExVariable s, rc)
-					| Some _ -> L.RegExVariable s, rc
+							(L.Regex.RegExVariable s, rc)
+					| Some _ -> L.Regex.RegExVariable s, rc
 				end
 		| _ -> failwith "No support for intersection or differences in lenssynth"
 	

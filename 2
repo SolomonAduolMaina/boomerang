@@ -1,0 +1,30 @@
+module PermProjectExamples = 
+
+(* synth_from_regexp r1 r2 l synthesizes a lens from regular expressions r1 and r2 that satisfies the examples in l *)
+
+let r : (lens in ([a-z] | [0-9])* <=> ([A-J] | [a-z])* ) = synth_from_regexp ([a-z] | [0-9])* ([A-J] | [a-z])* #{string * string}[("y", "z"); ("0", "J")]
+
+test get r "aus0lp0yey"  = "ausJlpJzez"
+
+(* We implement QREe's with canonizers. First we have the identity canonizer on a regular expression *)
+
+let s : canonizer = id ([a-z] . [a-z]* . " " . [a-z] . [,]  . " " . [a-z]* )
+
+test canonize s "solomon a, maina" = "solomon a, maina"
+
+(* Next we have the perm and project canonizers *)
+
+let c : canonizer = perm (#{canonizer}[id ([A-Z] . [a-z]* ); id ([A-Z] . [.]); id [A-Z]*], project ([ \t\r\n]*, " "))
+
+test canonize c "MAINA\t\r \n Solomon\n\n\t\r\n   A." = "Solomon A. MAINA"
+
+(* Boomerang already supports regular operators on canonizers so we need not implement these operators *)
+
+(* We can now synthesize lenses between canonizers using synth_from_can *)
+
+let l : lens = synth_from_canonizers c s #{string * string}[]
+
+test get l "MAINA\t\r Solomon\n\n\t\r\n   A." = "solomon a, maina"
+
+
+

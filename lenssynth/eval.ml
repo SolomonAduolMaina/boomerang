@@ -1,21 +1,21 @@
-open Core.Std
+open Core
 open Lang
 open Normalized_lang
 open Regexcontext
 
-let rec to_empty_exampled_regex (r:regex) : exampled_regex =
+let rec to_empty_exampled_regex (r:Regex.t) : exampled_regex =
   begin match r with
-  | RegExEmpty -> ERegExEmpty
-  | RegExBase s -> ERegExBase (s,[])
-  | RegExConcat (r1,r2) ->
+  | Regex.RegExEmpty -> ERegExEmpty
+  | Regex.RegExBase s -> ERegExBase (s,[])
+  | Regex.RegExConcat (r1,r2) ->
       ERegExConcat (to_empty_exampled_regex r1,to_empty_exampled_regex r2,[])
-  | RegExOr (r1,r2) ->
+  | Regex.RegExOr (r1,r2) ->
       ERegExOr
         ((to_empty_exampled_regex r1),
          (to_empty_exampled_regex r2),
          [])
-  | RegExStar r' -> ERegExStar (to_empty_exampled_regex r',[])
-  | RegExVariable t -> ERegExVariable (t,[],[])
+  | Regex.RegExStar r' -> ERegExStar (to_empty_exampled_regex r',[])
+  | Regex.RegExVariable t -> ERegExVariable (t,[],[])
   end
 
 type data = string * exampled_regex *
@@ -28,18 +28,18 @@ type state =
 
 type dfa = (state ref) * (state ref)
 
-let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
+let rec regex_to_dfa (c:RegexContext.t) (r:Regex.t) (inside_var:bool) : dfa =
   begin match r with
-  | RegExEmpty ->
+  | Regex.RegExEmpty ->
       let final = ref QAccept in
       (ref (State (fun _ -> [])), final)
-  | RegExBase s ->
+  | Regex.RegExBase s ->
       let final = ref QAccept in
       (ref (State (fun (str,er,recombiners,is,so) ->
         begin match String.chop_prefix ~prefix:s str with
         | None -> []
         | Some str' ->
-            if not inside_userdef then
+            if not inside_var then
               begin match er with
               | ERegExBase (b,il) -> [(final,(str',ERegExBase (b,is::il),recombiners,is,so))]
               | _ -> failwith "bad";
@@ -47,11 +47,11 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
             else
               [(final,(str',er,recombiners,is,so))]
         end)), final)
-  | RegExConcat (r1,r2) ->
-      let (r1_start_ref,r1_end_ref) = regex_to_dfa c r1 inside_userdef in
-      let (r2_start_ref,r2_end_ref) = regex_to_dfa c r2 inside_userdef in
+  | Regex.RegExConcat (r1,r2) ->
+      let (r1_start_ref,r1_end_ref) = regex_to_dfa c r1 inside_var in
+      let (r2_start_ref,r2_end_ref) = regex_to_dfa c r2 inside_var in
       let new_start_fun = (fun (s,er,rc,is,so) ->
-        if not inside_userdef then
+        if not inside_var then
           begin match er with
           | ERegExConcat (er1,er2,_) ->
             let rc_swapsecond = (fun _ _ -> er2) in
@@ -62,7 +62,7 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
           [r1_start_ref, (s,er,rc,is,so)]) in
       let new_start = State new_start_fun in
       let new_middle_fun = (fun (s,er,rc,is,so) ->
-        if not inside_userdef then
+        if not inside_var then
           begin match rc with
           | h::t -> let rc_rememberfirst = (fun _ er' -> ERegExConcat (er,er',
           extract_example_list er')) in
@@ -76,7 +76,7 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       r1_end_ref := middle_state;
       let new_end_ref = ref QAccept in
       let new_r2_end =
-        if not inside_userdef then
+        if not inside_var then
           State
             (fun (s,er,rc,is,so) ->
               begin match rc with
@@ -88,11 +88,11 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       in
       r2_end_ref := new_r2_end;
       (ref new_start,new_end_ref)
-  | RegExOr (r1,r2) ->
-      let (r1_start_ref,r1_end_ref) = regex_to_dfa c r1 inside_userdef in
-      let (r2_start_ref,r2_end_ref) = regex_to_dfa c r2 inside_userdef in
+  | Regex.RegExOr (r1,r2) ->
+      let (r1_start_ref,r1_end_ref) = regex_to_dfa c r1 inside_var in
+      let (r2_start_ref,r2_end_ref) = regex_to_dfa c r2 inside_var in
       let new_start_fun = (fun (s,er,rc,is,so) ->
-        if not inside_userdef then
+        if not inside_var then
           begin match er with
           | ERegExOr (er1,er2,il) ->
               let rc_left = 
@@ -112,7 +112,7 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       let new_start = State (new_start_fun) in
       let new_end_ref = ref QAccept in
       let new_inner_end =
-        if not inside_userdef then
+        if not inside_var then
           State
             (fun (s,er,rc,is,so) ->
               begin match rc with
@@ -125,11 +125,11 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       r1_end_ref := new_inner_end;
       r2_end_ref := new_inner_end;
       (ref new_start,new_end_ref)
-  | RegExStar (inner_r) ->
-      let (inner_start_ref,inner_end_ref) = regex_to_dfa c inner_r inside_userdef in
+  | Regex.RegExStar (inner_r) ->
+      let (inner_start_ref,inner_end_ref) = regex_to_dfa c inner_r inside_var in
       let new_end_ref = ref QAccept in
       let new_inner_end_fun =
-        if not inside_userdef then
+        if not inside_var then
           (fun (s,er,rc,is,so) ->
             begin match (is,rc) with
             | (i::it,h::t) -> (inner_start_ref, (s,er,rc,(i+1)::it,so))::
@@ -141,7 +141,7 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       in
       inner_end_ref := State new_inner_end_fun;
       let new_start_fun = 
-        if not inside_userdef then
+        if not inside_var then
           (fun (s,er,rc,is,so) ->
             begin match er with
             | ERegExStar (er',il) ->
@@ -156,12 +156,12 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       in
       let new_start = State new_start_fun in
       (ref new_start, new_end_ref)
-  | RegExVariable t ->
+  | Regex.RegExVariable t ->
       let rex = RegexContext.lookup_exn c t in
       let (inner_start_ref,inner_end_ref) = regex_to_dfa c rex true in
       let new_end_ref = ref QAccept in
       let new_start_fun =
-        if not inside_userdef then
+        if not inside_var then
           (fun ((s,er,rc,is,_):data) ->
             [(inner_start_ref,(s,er,
               (fun s' er' ->
@@ -177,7 +177,7 @@ let rec regex_to_dfa (c:RegexContext.t) (r:regex) (inside_userdef:bool) : dfa =
       let new_start_state = State new_start_fun in
       let new_inner_end_fun =
         (fun (s,er,rc,is,so) ->
-          if not inside_userdef then
+          if not inside_var then
             begin match rc with
             | [] -> failwith "bad coding2"
             | h::t -> [(new_end_ref,(s,h s er,t,is,so))]
@@ -208,7 +208,7 @@ let rec eval_dfa (st:state) ((s,er,recombiners,is,so):data) :
         None
   end
 
-let fast_eval (c:RegexContext.t) (r:regex) (s:string) : bool =
+let fast_eval (c:RegexContext.t) (r:Regex.t) (s:string) : bool =
   let (dfa_start,_) = regex_to_dfa c r false in
   not
     (Option.is_empty
@@ -216,7 +216,7 @@ let fast_eval (c:RegexContext.t) (r:regex) (s:string) : bool =
           !dfa_start
           (s,(to_empty_exampled_regex r),[],[0],None)))
 
-let regex_to_exampled_regex (rc:RegexContext.t) (r:regex) (es:string list)
+let regex_to_exampled_regex (rc:RegexContext.t) (r:Regex.t) (es:string list)
                                  : exampled_regex option =
   let (dfa_start,_) = regex_to_dfa rc r false in
   let start_state = !dfa_start in

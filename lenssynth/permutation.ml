@@ -1,11 +1,11 @@
-open Core.Std
-open Util1
+open Stdlib
 
 type swap_concat_compose_tree =
   | SCCTSwap of swap_concat_compose_tree * swap_concat_compose_tree
   | SCCTConcat of swap_concat_compose_tree * swap_concat_compose_tree
   | SCCTCompose of swap_concat_compose_tree * swap_concat_compose_tree
   | SCCTLeaf
+[@@deriving ord, show, hash]
 
 let rec size_scct (scct:swap_concat_compose_tree) : int =
   begin match scct with
@@ -44,50 +44,16 @@ let rec pp_swap_concat_compose_tree (scct:swap_concat_compose_tree)
     | SCCTLeaf -> "."
     end
 
-
-
-module type Permutation_Sig = sig
-  type t
-
-  val create : int list -> t
-
-  val create_from_doubles : (int * int) list -> t
-
-  val create_from_doubles_unsafe : (int * int) list -> t
-
-  val create_from_constraints : int -> (int * int) list
-                                    -> (int * int) list -> (t * ((int * int) list)) option
-
-  val inverse : t -> t
-
-  val create_all : int -> t list
-
-  val apply : t -> int -> int
-
-  val apply_inverse : t -> int -> int
-  
-  val apply_to_list_exn : t -> 'a list -> 'a list
-
-  val apply_inverse_to_list_exn : t -> 'a list -> 'a list
-
-  val to_swap_concat_compose_tree : t -> swap_concat_compose_tree
-
-  val pp : t -> string
-
-  val to_int_list : t -> int list
-
-  val hash : t -> int
-end
-
-module Permutation : Permutation_Sig = struct
+module Permutation = struct
   type t = int list
+  [@@deriving show]
 
   let create (mapping:int list) =
     let len = List.length mapping in
     List.rev
       (List.fold_left
       ~f:(fun acc x ->
-        if ((List.mem acc x) || (x >= len) || (x < 0)) then
+        if ((List.mem ~equal:(=) acc x) || (x >= len) || (x < 0)) then
           failwith "Not Bijection"
         else
           x::acc)
@@ -139,7 +105,7 @@ module Permutation : Permutation_Sig = struct
       | [] -> Some (create_from_doubles required_parts, guessed_parts)
       | hl::tl ->
           let choice = split_by_first_satisfying
-            (fun x -> not (List.mem invalid_parts (hl,x)))
+            (fun x -> not (List.mem ~equal:(=) invalid_parts (hl,x)))
             unused_partsr in
           begin match choice with
           | None -> continuation None
@@ -170,7 +136,7 @@ module Permutation : Permutation_Sig = struct
           end
       end in
   if (List.exists
-        ~f:(fun invalid_part -> List.mem required_parts invalid_part)
+        ~f:(fun invalid_part -> List.mem ~equal:(=) required_parts invalid_part)
         invalid_parts) then
     None
   else
@@ -178,8 +144,8 @@ module Permutation : Permutation_Sig = struct
     let (used_partsl,used_partsr) = List.unzip required_parts in
     let (unused_partsl,unused_partsr) = List.fold_left
       ~f:(fun (l,r) x ->
-            let unused_in_left = not (List.mem used_partsl x) in
-            let unused_in_right = not (List.mem used_partsr x) in
+            let unused_in_left = not (List.mem ~equal:(=) used_partsl x) in
+            let unused_in_right = not (List.mem ~equal:(=) used_partsr x) in
             let l' = if unused_in_left then x::l else l in
             let r' = if unused_in_right then x::r else r in
             (l',r'))
@@ -326,4 +292,7 @@ module Permutation : Permutation_Sig = struct
           lxor acc)
       ~init:509223028
       l
+
+  let compare : t -> t -> comparison =
+    compare_list ~cmp:compare_int
 end
