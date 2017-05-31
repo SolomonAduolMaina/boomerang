@@ -187,15 +187,22 @@ module Bridge = struct
 										let g id (l, r1, r2) () =
 											print_endline (id ^ " : lens in (" ^ (L.regex_to_string r1) ^ " <=> " ^
 													(L.regex_to_string r2) ^ ") = " ^ L.lens_to_string l) in
+										let h id l () =
+											let f (lens, id) = "(" ^ (L.lens_to_string lens) ^ " * " ^ id in
+											print_endline (id ^ " |-> " ^ (printList f l)) in
 										let () = print_endline "regexcontext contents ..." in
 										let () = RegexContext.fold f () rc in
 										let () = print_newline () in
 										let () = print_endline "lenscontext contents ..." in
 										let () = LensContext.fold g () lc in
 										let () = print_newline () in
+										let () = print_endline "outgoingsD contents ..." in
+										let () = LensContext.fold1 h () lc in
+										let () = print_newline () in
 										let l = getStrings (toList l []) in
-										let lens = gen_lens rc lc s1 s2 l in
-										let lens = match lens with
+										let lens = gen_lens rc lc s1 s2 (List.rev l) in
+										let lens =
+											match lens with
 											| None -> Berror.run_error (Info.merge_inc i1 i2)
 														(fun () -> msg "Could not synthesize lens" )
 											| Some lens -> lens in
@@ -230,7 +237,7 @@ module Bridge = struct
 														(fun () -> msg "Could not synthesize lens" )
 											| Some lens -> sLensTobLens lens rc lc info in
 										let lens = (BL.MLens.left_quot info c1 lens) in
-										Info.merge_inc i1 i3, BL.MLens.right_quot info lens c2
+										info, BL.MLens.right_quot info lens c2
 								| _ -> Berror.run_error (V.info_of_t l)
 											(fun () -> msg "synth expects a list here" )
 							end
@@ -604,9 +611,7 @@ and interp_exp wq cev e0 =
 				match v with
 				| V.Rx (i, t) ->
 						if Brx.isVar t then v else V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t))
-				(*| V.Lns (i, l) ->
-				V.Lns (i, (BL.MLens.mk_var i (Qid.string_of_t q) (BL.MLens.removeVars l)))
-				*) | _ -> v
+				| _ -> v
 			end
 	
 	| EOver(i, op, _) ->

@@ -60,8 +60,8 @@ let rec apply_at_every_level_regex (f: regex -> regex) (r: regex) : regex =
 let rec regex_to_string (r: regex) : string =
 	begin match r with
 		| RegExEmpty -> "{}"
-		| RegExBase s -> "\"" ^ s ^ "\""
-		| RegExConcat (r1, r2) -> paren ((regex_to_string r1) ^ " " ^ (regex_to_string r2))
+		| RegExBase s -> "\"" ^ (String.escaped s) ^ "\""
+		| RegExConcat (r1, r2) -> paren ((regex_to_string r1) ^ "" ^ (regex_to_string r2))
 		| RegExOr (r1, r2) -> paren ((regex_to_string r1) ^ "|" ^ (regex_to_string r2))
 		| RegExStar (r') -> paren (regex_to_string r') ^ "*"
 		| RegExVariable s -> s

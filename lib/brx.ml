@@ -1434,7 +1434,7 @@ let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexCont
 		| M.Var (s, r) -> 
 			let rc =
 					begin match RegexContext.lookup rc s with
-						| None -> let r, rc = helper r i rc in RegexContext.update_exn rc s (r, true)
+						| None -> let r, rc = helper r i rc in RegexContext.update_exn rc s (r, false)
 						| Some r -> rc
 					end in
 				L.RegExVariable s, rc
