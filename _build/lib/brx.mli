@@ -110,5 +110,5 @@ val colon_code : int
 
 val brxToLrx : t -> Info.t -> Regexcontext.RegexContext.t -> 
 	Lang.regex * Regexcontext.RegexContext.t
-val isVar : t -> bool
+val freeVars : t -> string -> string list
 val whichPerm : t list -> t -> string -> (int list) option * int

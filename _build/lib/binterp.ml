@@ -77,8 +77,7 @@ module Bridge = struct
 	let sLensTobLens
 			(l : L.lens) (rc: RegexContext.t) (lc : LensContext.t) (i : Info.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
-			let source = Brx.mk_string s1 in
-			let mapTo = fun _ -> s1 in BL.MLens.clobber i source s2 mapTo in
+			BL.MLens.clobber i (Brx.mk_string s1) s2 (fun _ -> s1) in
 		let rec helper (l : L.lens) : BL.MLens.t =
 			match l with
 			| L.LensConst (s1, s2) -> constLens s1 s2
@@ -92,7 +91,7 @@ module Bridge = struct
 			| L.LensVariable s ->
 					BL.MLens.mk_var i s (helper (LensContext.lookup_impl_exn lc s))
 			| L.LensPermute _ -> Berror.run_error i
-						(fun () -> msg "Some weird lenses were synthesized" ) in
+						(fun () -> msg "A permutation lens was synthesized" ) in
 		helper l
 	
 	let getRegexp (v : V.t) (rc : RegexContext.t) : L.regex * RegexContext.t =
@@ -504,13 +503,26 @@ and interp_exp wq cev e0 =
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
 			let v3 = interp_exp wq cev e3 in
-			let f id (_, v) rc =
-				match v with
-				| V.Chr _ | V.Str _ | V.Rx _ ->
-						let r, rc = Bridge.getRegexp v rc in
-						RegexContext.update_exn rc (Qid.string_of_t id) (r, false)
-				| _ -> rc in
-			let rc = CEnv.fold f cev RegexContext.empty in
+			let rec populate_rc tbl rc s =
+				begin
+					match RegexContext.lookup rc s with
+					| Some _ -> rc
+					| None ->
+							begin
+								match Hashtbl.find tbl s with
+								| V.Rx (i, r) ->
+										let free = Brx.freeVars r s in
+										let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
+										let r, rc = Brx.brxToLrx r i rc in
+										RegexContext.insert_exn rc s r false
+								| _ -> rc
+							end
+				end in
+			let f id (_, v) (tbl, l) =
+				let s = Qid.string_of_t id in
+				let () = Hashtbl.add tbl s v in tbl, s :: l in
+			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
+			let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) RegexContext.empty ids in
 			let rec populate_lc tbl lc s =
 				begin
 					match LensContext.lookup lc s with
@@ -523,8 +535,8 @@ and interp_exp wq cev e0 =
 										let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) lc free in
 										begin match BL.MLens.bLensTosLens i l rc lc with
 											| None, lc -> lc
-											| Some (l, r1, r2), lc ->
-													Lenscontext.LensContext.insert_exn lc s l r1 r2
+											| Some (l, r1, r2), lc -> 
+												Lenscontext.LensContext.insert_exn lc s l r1 r2
 										end
 								| _ -> lc
 							end
@@ -597,7 +609,8 @@ and interp_exp wq cev e0 =
 			end
 	
 	| EVar(i, q) ->
-			let v =
+	(* let v = *)
+			begin
 				match CEnv.lookup_both cev q with
 				| Some((G.Unknown, v), _) -> v
 				| Some((G.Sort s, v), s_env) ->
@@ -607,13 +620,9 @@ and interp_exp wq cev e0 =
 						Berror.run_error i
 							(fun () -> msg "@[%s unbound@]"
 											(Qid.string_of_t q))
-			in begin
-				match v with
-				| V.Rx (i, t) ->
-						if Brx.isVar t then v else V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t))
-				| _ -> v
+				(* in begin match v with | V.Rx (i, t) -> if Brx.isVar t then v    *)
+				(* else V.Rx (i, (Brx.mk_var (Qid.string_of_t q) t)) | _ -> v end  *)
 			end
-	
 	| EOver(i, op, _) ->
 			Berror.run_error i
 				(fun () ->
@@ -691,6 +700,13 @@ and interp_exp wq cev e0 =
 and interp_binding wq cev b0 = match b0 with
 	| Bind(i, p, so, e) ->
 			let v = interp_exp wq cev e in
+			let v =
+				begin
+					match v, p with
+					| V.Rx(i, r), PVar (_, id, _) ->
+							V.Rx (i, (Brx.mk_var (Id.string_of_t id) r))
+					| _ -> v
+				end in
 			let v =
 				begin
 					match p, so with

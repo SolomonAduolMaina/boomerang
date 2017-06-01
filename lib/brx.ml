@@ -338,7 +338,7 @@ let rec format_t t0 =
 	begin match t0.desc with
 		| Perm (l, s) ->
 				msg "%s" ("perm(" ^ (print_list string_of_t l) ^ ", " ^ (string_of_t s) ^ ")")
-		| Var (s, t) -> msg "%s" ("var " ^ s ^ " = " ^ (string_of_t t))
+		| Var (s, t) -> format_t t
 		| CSet [p1] ->
 				let n1, n2 = p1 in
 				if n1 = min_code && n2 >= max_ascii_code then msg "[^]"
@@ -1409,7 +1409,7 @@ let rec seqToString (r : L.regex) : L.regex =
 	| L.RegExStar r -> L.RegExStar (seqToString r)
 	| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
 	| L.RegExOr(L.RegExOr(r1, r2), r3) ->
-		 seqToString (L.RegExOr(r1, L.RegExOr(r2, r3)))
+			seqToString (L.RegExOr(r1, L.RegExOr(r2, r3)))
 	| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
 
 let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexContext.t =
@@ -1431,16 +1431,26 @@ let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexCont
 		| M.Rep (r, m, Some n) ->
 				let r, rc = helper r i rc in
 				L.iterateMtoNTimes m n r, rc
-		| M.Var (s, r) -> 
-			let rc =
-					begin match RegexContext.lookup rc s with
-						| None -> let r, rc = helper r i rc in RegexContext.update_exn rc s (r, false)
-						| Some r -> rc
-					end in
-				L.RegExVariable s, rc
+		| M.Var (s, r) ->
+				begin match RegexContext.lookup rc s with
+					| None -> helper r i rc
+					| Some _ -> L.RegExVariable s, rc
+				end
 		| _ -> Berror.run_error i
 					(fun () -> msg "No synthesis support for differences and intersections" )
 	in let r, rc = helper r i rc in seqToString r, rc
+
+let rec freeVars r s =
+	match r.desc with
+	| Var (s', r) -> (if s = s' then [] else [s']) @ (freeVars r s)
+	| CSet _ -> []
+	| Seq (r1, r2) -> (freeVars r1 s) @ (freeVars r2 s)
+	| Alt l -> List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l
+	| Rep (r, _, _) -> freeVars r s
+	| Inter l -> List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l
+	| Diff (r1, r2) -> (freeVars r1 s) @ (freeVars r2 s)
+	| Perm (l, r) ->
+			(List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l) @ (freeVars r s)
 
 let isVar (v : t) : bool =
 	match v.M.desc with

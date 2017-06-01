@@ -162,7 +162,8 @@ struct
 		let () = print_newline () in
 		let (lexs, rexs) = List.unzip exs in
 		let rec gen_dnf_lens_zipper_queueing (queue: PQ.queue) : dnf_lens option =
-			let () = print_endline ("queue elements...\n" ^ (PQ.to_string queue)) in
+			(* let () = print_endline ("queue elements...\n" ^             *)
+			(* (PQ.to_string queue)) in                                    *)
 			begin match PQ.pop queue with
 				| None -> None
 				| Some ((r1, r2, distance, expansions_performed), _, q) ->
@@ -186,11 +187,13 @@ struct
 								begin
 									match (exampled_r1_opt, exampled_r2_opt) with
 									| (Some exampled_r1, Some exampled_r2) ->
+											let () = print_endline "Am I here?" in
 											let e_o_r1 = to_ordered_exampled_dnf_regex exampled_r1 in
 											let e_o_r2 = to_ordered_exampled_dnf_regex exampled_r2 in
 											begin
 												match compare_ordered_exampled_dnf_regexs e_o_r1 e_o_r2 with
 												| EQ ->
+														let () = print_endline "Done!" in
 														Some (gen_dnf_lens_zipper_internal lc e_o_r1 e_o_r2)
 												| _ ->
 														let rx_list = expand_once rc r1 r2 in
@@ -202,11 +205,9 @@ struct
 														gen_dnf_lens_zipper_queueing (PQ.push_all q queue_elements)
 											end
 									| Some _, None -> let () = print_endline "YAH" in None
-									| None, Some _ -> let () = print_endline "YAH YAH" in None
-									| None, None -> let () = print_endline "YAH YAH YAH" in None
+									| _ -> None
 								end
 							else
-								let () = print_endline "I AM HERE" in
 								let rx_list = expand_once rc r1 r2 in
 								let f =
 									(fun (r1, r2) ->
