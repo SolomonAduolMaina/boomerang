@@ -540,12 +540,12 @@ and check_exp ?(in_let = false) sev e0 =
 							match e2_sort with
 							| SCanonizer -> (SCanonizer, EPerm(i, new_e1, new_e2))
 							| _ -> static_error i
-										(fun () -> msg "The second part of the perm construct
-											should be a canonizer" )
+										(fun () -> msg 
+										"The second part of the perm construct should be a canonizer" )
 						end
 				| _ -> static_error i
-							(fun () -> msg "The first part of the perm construct
-								should be a canonizer" )
+							(fun () -> msg 
+							"The first part of the perm construct should be a list of canonizers" )
 			end
 	| EVar(i, q) ->
 	(* lookup the sort in the context *)

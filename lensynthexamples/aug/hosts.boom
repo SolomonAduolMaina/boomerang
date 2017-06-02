@@ -146,5 +146,5 @@ let hosts_lens = synth HOSTS <=> HOSTS_DICT with #{string * string}[]
 
 test hosts_lens.get
   "127.0.0.1 localhost alias # comment\n"
-  = "{\"ipaddrs\"={\"ipaddr\"=\"127.0.0.1\"},\"hosts\"={\"name\"=\"localhost\",\"ws\"=\" \"}{\"name\"=\"alias\",\"ws\"=\" \"}{\"comment\"=\"# comment\",\"ws\"=\" \"}}\n
-  "
+  = "{\"ipaddrs\"={\"ipaddr\"=\"127.0.0.1\"},\"hosts\"={\"name\"=\"localhost\",\"ws\"=\" \"}{\"name\"=\"alias\",\"ws\"=\" \"}{\"comment\"=\"# comment\",\"ws\"=\" \"}}\n"
+  

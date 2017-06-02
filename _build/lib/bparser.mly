@@ -499,6 +499,7 @@ gtexp:
 geqexp:
   | appexp GEQ appexp 
       { mk_over (me $1 $3) OGeq [$1; $3] }
+	
 
 /* application expressions */
 appexp:
@@ -512,8 +513,8 @@ appexp:
     | PROJECT appexp ARROW repexp
       { let i = me2 $1 $4 in 
         EProject(i,$2,$4) }
-				
-    | SYNTH appexp DEQARROW repexp WITH repexp
+		
+    | SYNTH appexp DEQARROW appexp WITH repexp
 		 { let i = me2 $1 $4 in 
         ESynth (i,$2,$4,$6) }
 				
@@ -523,7 +524,7 @@ appexp:
 				
   | repexp
       { $1 }
-      
+
 /* repeated expressions */    
 repexp:
   | tyexp rep                            

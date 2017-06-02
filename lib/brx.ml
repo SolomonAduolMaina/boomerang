@@ -1412,33 +1412,28 @@ let rec seqToString (r : L.regex) : L.regex =
 			seqToString (L.RegExOr(r1, L.RegExOr(r2, r3)))
 	| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
 
-let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex * RegexContext.t =
-	let rec helper r i rc =
+let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex =
+	let rec helper r i  =
 		match r.M.desc with
-		| M.CSet l -> L.charSet l, rc
-		| M.Seq (r1, r2) ->
-				let r1, rc = helper r1 i rc in
-				let r2, rc = helper r2 i rc in
-				L.RegExConcat(r1, r2), rc
+		| M.CSet l -> L.charSet l
+		| M.Seq (r1, r2) ->  L.RegExConcat(helper r1 i, helper r2 i)
 		| M.Alt l ->
-				let f (r1, rc) x =
-					let r2, rc = helper x i rc in
-					if r1 = L.RegExEmpty then r2, rc else L.RegExOr(r1, r2), rc in
-				List.fold_left f (L.RegExEmpty, rc) l
+				let f r1 x =
+					let r2 = helper x i in
+					if r1 = L.RegExEmpty then r2 else L.RegExOr(r1, r2) in
+				List.fold_left f L.RegExEmpty l
 		| M.Rep (r, n, None) ->
-				let r, rc = helper r i rc in
-				L.RegExConcat(L.iterateNTimes n r, L.RegExStar r), rc
-		| M.Rep (r, m, Some n) ->
-				let r, rc = helper r i rc in
-				L.iterateMtoNTimes m n r, rc
+				let r  = helper r i in
+				L.RegExConcat(L.iterateNTimes n r, L.RegExStar r)
+		| M.Rep (r, m, Some n) -> L.iterateMtoNTimes m n (helper r i)
 		| M.Var (s, r) ->
 				begin match RegexContext.lookup rc s with
-					| None -> helper r i rc
-					| Some _ -> L.RegExVariable s, rc
+					| None -> helper r i
+					| Some _ -> L.RegExVariable s
 				end
 		| _ -> Berror.run_error i
 					(fun () -> msg "No synthesis support for differences and intersections" )
-	in let r, rc = helper r i rc in seqToString r, rc
+	in seqToString (helper r i)
 
 let rec freeVars r s =
 	match r.desc with

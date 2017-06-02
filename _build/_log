@@ -468,11 +468,13 @@
 # Target: lib/bident.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/bident.cmo, file:lib/bident.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/bident.cmo lib/bident.ml # cached
 # Target: lib/binterp.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/binterp.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/binterp.ml > lib/binterp.ml.depends
+/home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/binterp.ml > lib/binterp.ml.depends # cached
 # Target: lib/workqueue.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:lib/workqueue.mli, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/workqueue.mli > lib/workqueue.mli.depends # cached
 # Target: lib/workqueue.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:lib/workqueue.mli, interf, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/workqueue.cmi lib/workqueue.mli # cached
+# Target: lib/binterp.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/binterp.cmo, file:lib/binterp.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
+/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/binterp.cmo lib/binterp.ml # cached
 # Target: lib/blenses.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:lib/blenses.ml, ocaml, ocamldep, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/blenses.ml > lib/blenses.ml.depends # cached
 # Target: lib/blenses.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/blenses.cmo, file:lib/blenses.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
@@ -553,8 +555,6 @@
 /home/solomon/.opam/system/bin/ocamlfind ocamldep -package unix -package threads -package str -package core -modules lib/workqueue.ml > lib/workqueue.ml.depends # cached
 # Target: lib/workqueue.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/workqueue.cmo, file:lib/workqueue.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/workqueue.cmo lib/workqueue.ml # cached
-# Target: lib/binterp.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/binterp.cmo, file:lib/binterp.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
-/home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/binterp.cmo lib/binterp.ml
 # Target: lib/brx.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:lib/brx.cmo, file:lib/brx.ml, implem, ocaml, package(core), package(str), package(threads), package(unix), quiet, thread, traverse, use_hbase, use_lenssynth, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlc -c -rectypes -g -annot -bin-annot -thread -I lenssynth -I ubase -I hbase -thread -package unix -package threads -package str -package core -I lib -I hbase -I lenssynth -I ubase -o lib/brx.cmo lib/brx.ml
 # Target: lib/boomerang.cma, tags: { annot, bin_annot, byte, debug, extension:cma, file:lib/boomerang.cma, library, link, ocaml, quiet, thread, traverse }
@@ -657,5 +657,5 @@
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -c -rectypes -g -annot -bin-annot -thread -I ubase -I hbase -package unix -I hbase -I ubase -o hbase/baker.cmx hbase/baker.ml # cached
 # Target: hbase/baker.native, tags: { annot, bin_annot, debug, dont_link_with, extension:native, file:hbase/baker.native, link, native, ocaml, package(unix), program, quiet, thread, traverse, use_hbase, use_ubase }
 /home/solomon/.opam/system/bin/ocamlfind ocamlopt -linkpkg -g -thread -linkpkg -package unix ubase/ubase.cmxa hbase/hbase.cmxa hbase/baker.cmx -o hbase/baker.native # cached
-# Parallel statistics: { count(total): 3(327), max: 2, min: 2, average(total): 2.000(1.009) }
+# Parallel statistics: { count(total): 2(328), max: 2, min: 2, average(total): 2.000(1.006) }
 # Compilation successful.

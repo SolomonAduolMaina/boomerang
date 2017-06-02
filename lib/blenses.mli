@@ -117,13 +117,8 @@ module MLens : sig
   val dup1 : Info.t -> t -> (string -> string) -> Brx.t -> t
   val dup2 : Info.t -> (string -> string) -> Brx.t -> t -> t
 	val bLensTosLens : Info.t -> t -> Regexcontext.RegexContext.t -> 
-		Lenscontext.LensContext.t -> 
-		(Lang.lens * Lang.regex * Lang.regex) option * Lenscontext.LensContext.t
-	val isVar : t -> bool
-	val removeVars : t -> t
+		Lenscontext.LensContext.t -> (Lang.lens * Lang.regex * Lang.regex) option 
 	val setStype : t -> Brx.t -> t
 	val setVtype : t -> Brx.t -> t
-	val getStype : t -> Brx.t option
-  val getVtype : t -> Brx.t option
 	val freeVars : t -> string -> string list
 end

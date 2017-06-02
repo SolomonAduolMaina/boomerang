@@ -157,9 +157,9 @@ struct
 			(r2: regex)
 			(exs: examples)
 	: dnf_lens option =
-		let f (a, b) = "(" ^ (String.escaped a) ^ ", " ^ (String.escaped b) ^ ")"in
+		(*let f (a, b) = "(" ^ (String.escaped a) ^ ", " ^ (String.escaped b) ^ ")"in
 		let () = print_endline ("examples = " ^ (printList f exs)) in
-		let () = print_newline () in
+		let () = print_newline () in*)
 		let (lexs, rexs) = List.unzip exs in
 		let rec gen_dnf_lens_zipper_queueing (queue: PQ.queue) : dnf_lens option =
 			(* let () = print_endline ("queue elements...\n" ^             *)
@@ -167,12 +167,12 @@ struct
 			begin match PQ.pop queue with
 				| None -> None
 				| Some ((r1, r2, distance, expansions_performed), _, q) ->
-						let () = print_endline ("popped (" ^ (regex_to_string r1) ^ ", " ^
+						(*let () = print_endline ("popped (" ^ (regex_to_string r1) ^ ", " ^
 									(regex_to_string r2) ^ "," ^ (string_of_float distance) ^ ", " ^
 									(string_of_int expansions_performed) ^ ")" ) in
-						let () = print_newline () in
+						let () = print_newline () in*)
 						if requires_expansions lc r1 r2 then
-							let () = print_endline "in here" in
+							(*let () = print_endline "in here" in*)
 							let required_expansions = expand_real_required_expansions rc lc r1 r2 in
 							let f = (fun (r1, r2, exp) ->
 											let distance = retrieve_distance lc r1 r2 in
@@ -180,20 +180,20 @@ struct
 							let queue_elements = List.map ~f: f required_expansions in
 							gen_dnf_lens_zipper_queueing (PQ.push_all q queue_elements)
 						else
-							let () = print_endline "Now here" in
+							(*let () = print_endline "Now here" in*)
 							let exampled_r1_opt = regex_to_exampled_dnf_regex rc lc r1 lexs in
 							let exampled_r2_opt = regex_to_exampled_dnf_regex rc lc r2 rexs in
 							if distance = 0.0 || (not !short_circuit) then
 								begin
 									match (exampled_r1_opt, exampled_r2_opt) with
 									| (Some exampled_r1, Some exampled_r2) ->
-											let () = print_endline "Am I here?" in
+											(*let () = print_endline "Am I here?" in*)
 											let e_o_r1 = to_ordered_exampled_dnf_regex exampled_r1 in
 											let e_o_r2 = to_ordered_exampled_dnf_regex exampled_r2 in
 											begin
 												match compare_ordered_exampled_dnf_regexs e_o_r1 e_o_r2 with
 												| EQ ->
-														let () = print_endline "Done!" in
+														(*let () = print_endline "Done!" in*)
 														Some (gen_dnf_lens_zipper_internal lc e_o_r1 e_o_r2)
 												| _ ->
 														let rx_list = expand_once rc r1 r2 in
@@ -204,7 +204,7 @@ struct
 														let queue_elements = List.map ~f: f rx_list in
 														gen_dnf_lens_zipper_queueing (PQ.push_all q queue_elements)
 											end
-									| Some _, None -> let () = print_endline "YAH" in None
+									(*| Some _, None -> let () = print_endline "YAH" in None*)
 									| _ -> None
 								end
 							else
@@ -217,11 +217,12 @@ struct
 								gen_dnf_lens_zipper_queueing (PQ.push_all q queue_elements)
 			end
 		in
-		let () = print_endline "running synthesis algorithm..." in
+		(*let () = print_endline "running synthesis algorithm..." in
 		let () = print_newline () in
 		let result = gen_dnf_lens_zipper_queueing (PQ.from_list [((r1, r2,0.0,0))]) in
 		let () = print_newline () in
-		result
+		result*)
+	gen_dnf_lens_zipper_queueing (PQ.from_list [((r1, r2,0.0,0))])
 	
 	let gen_dnf_lens
 			(rc: RegexContext.t)

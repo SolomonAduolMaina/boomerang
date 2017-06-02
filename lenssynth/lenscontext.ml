@@ -26,8 +26,8 @@ module type LensContext_Sig = sig
     val compare                  : t -> t -> comparison
     val to_string                : t -> string
     val hash                     : t -> int
-		val fold                     : (id -> (lens * regex * regex) -> 'a -> 'a) -> 'a -> t -> 'a
-		val fold1                    : (id -> ((lens * id) list) -> 'a -> 'a) -> 'a -> t -> 'a
+		(*val fold                     : (id -> (lens * regex * regex) -> 'a -> 'a) -> 'a -> t -> 'a
+		val fold1                    : (id -> ((lens * id) list) -> 'a -> 'a) -> 'a -> t -> 'a*)
 end
 
 (* add comments *)
@@ -88,9 +88,9 @@ module LensContext : LensContext_Sig = struct
                 outgoing = OutgoingD.empty ;
                 equivs   = DS.empty        ; }
 
-	let fold f a t = DefsD.fold f a t.defs
+	(*let fold f a t = DefsD.fold f a t.defs
 	
-	let fold1 f a t = OutgoingD.fold f a t.outgoing
+	let fold1 f a t = OutgoingD.fold f a t.outgoing*)
 	
 	let lookup (lc:t) (name:id) : (lens*regex*regex) option=
     DefsD.lookup lc.defs name

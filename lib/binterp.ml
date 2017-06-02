@@ -38,6 +38,7 @@ module G = Bregistry
 module BL = Blenses
 module BS = Bstring
 module Perms = BL.Permutations
+module Perm = Permutation.Permutation
 
 (* -------------------------------------------------------------------------- *)
 (* ERRORS / DEBUGGING                                                      *)
@@ -82,25 +83,25 @@ module Bridge = struct
 			match l with
 			| L.LensConst (s1, s2) -> constLens s1 s2
 			| L.LensConcat (l1, l2) -> BL.MLens.concat i (helper l1) (helper l2)
-			| L.LensSwap (l1, l2) -> BL.MLens.concat i (helper l2) (helper l1)
-			| L.LensUnion (l1, l2) -> BL.MLens.union i (helper l2) (helper l1)
+			| L.LensSwap (l1, l2) -> BL.MLens.permute i [1;0] [(helper l1); (helper l2)]
+			| L.LensUnion (l1, l2) -> BL.MLens.union i (helper l1) (helper l2)
 			| L.LensCompose (l1, l2) -> BL.MLens.compose i (helper l2) (helper l1)
 			| L.LensIterate l -> BL.MLens.star i (helper l)
 			| L.LensIdentity r -> BL.MLens.copy i (lrxToBrx r rc i)
 			| L.LensInverse l -> BL.MLens.invert i (helper l)
 			| L.LensVariable s ->
 					BL.MLens.mk_var i s (helper (LensContext.lookup_impl_exn lc s))
-			| L.LensPermute _ -> Berror.run_error i
-						(fun () -> msg "A permutation lens was synthesized" ) in
+			| L.LensPermute (s, l) ->
+				BL.MLens.permute i (Perm.to_int_list s) (List.map (fun l -> helper l) l) in
 		helper l
 	
-	let getRegexp (v : V.t) (rc : RegexContext.t) : L.regex * RegexContext.t =
+	(*let getRegexp (v : V.t) (rc : RegexContext.t) : L.regex  =
 		match v with
 		| V.Rx (i, r) -> Brx.brxToLrx r i rc
 		| V.Str (i, s) -> Brx.brxToLrx (Brx.mk_string s) i rc
 		| V.Chr (i, c) -> Brx.brxToLrx (Brx.mk_string (Scanf.unescaped (Char.escaped c))) i rc
 		| _ -> Berror.run_error (V.info_of_t v)
-					(fun () -> msg "Expected a regular expression or string or character here" )
+					(fun () -> msg "Expected a regular expression or string or character here" )*)
 	
 	let getStrings (l : V.t list) : (string * string) list =
 		let helper (temp : (string * string) list) (v : V.t) : (string * string) list =
@@ -131,7 +132,8 @@ module Bridge = struct
 		| [], [] -> List.rev temp
 		| x :: xs, odd when p = 0 -> evenOddInv xs odd (x :: temp) ((p + 1) mod 2)
 		| even, y :: ys when p = 1 -> evenOddInv even ys (y :: temp) ((p + 1) mod 2)
-		| _ -> failwith "Lists cannot be alternated!"
+		| _ -> Berror.run_error (Info.I ("", (0, 0), (0, 0)))
+						(fun () -> msg "Lists cannot be alternated!" )
 	
 	let rec getMatches (l : Brx.t list) (s : BS.t) (t : BS.t list) : BS.t list =
 		match l with
@@ -175,9 +177,9 @@ module Bridge = struct
 							begin
 								match l with
 								| V.Vnt (i3, _, _, _) ->
-										let s1, rc = Brx.brxToLrx r1 i1 rc in
-										let s2, rc = Brx.brxToLrx r2 i2 rc in
-										let () = print_endline
+										let s1 = Brx.brxToLrx r1 i1 rc in
+										let s2 = Brx.brxToLrx r2 i2 rc in
+										(*let () = print_endline
 												("synthing (" ^ (L.regex_to_string s1) ^
 													" <=> " ^ (L.regex_to_string s2) ^ ")") in
 										let () = print_newline () in
@@ -197,7 +199,7 @@ module Bridge = struct
 										let () = print_newline () in
 										let () = print_endline "outgoingsD contents ..." in
 										let () = LensContext.fold1 h () lc in
-										let () = print_newline () in
+										let () = print_newline () in*)
 										let l = getStrings (toList l []) in
 										let lens = gen_lens rc lc s1 s2 (List.rev l) in
 										let lens =
@@ -207,11 +209,11 @@ module Bridge = struct
 											| Some lens -> lens in
 										let info = Info.merge_inc i1 i3 in
 										let lens' = sLensTobLens lens rc lc info in
-										let toPrint =
+										(*let toPrint =
 											("synthesized lens in (" ^ (L.regex_to_string s1) ^ " <=> " ^
 												(L.regex_to_string s2) ^ ") = " ^ L.lens_to_string lens) in
 										let () = print_endline toPrint in
-										let () = print_newline () in
+										let () = print_newline () in*)
 										info, lens'
 								| _ -> Berror.run_error (V.info_of_t l)
 											(fun () -> msg "Synth_from_regexp expects a list here" )
@@ -226,8 +228,8 @@ module Bridge = struct
 							begin
 								match l with
 								| V.Vnt (i3, _, _, _) ->
-										let s1, rc = Brx.brxToLrx (BL.Canonizer.canonized_type c1) i1 rc in
-										let s2, rc = Brx.brxToLrx (BL.Canonizer.canonized_type c2) i2 rc in
+										let s1 = Brx.brxToLrx (BL.Canonizer.canonized_type c1) i1 rc in
+										let s2 = Brx.brxToLrx (BL.Canonizer.canonized_type c2) i2 rc in
 										let l = getStrings (toList l []) in
 										let lens = gen_lens rc lc s1 s2 l in
 										let info = Info.merge_inc i1 i3 in
@@ -513,7 +515,7 @@ and interp_exp wq cev e0 =
 								| V.Rx (i, r) ->
 										let free = Brx.freeVars r s in
 										let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
-										let r, rc = Brx.brxToLrx r i rc in
+										let r  = Brx.brxToLrx r i rc in
 										RegexContext.insert_exn rc s r false
 								| _ -> rc
 							end
@@ -534,9 +536,8 @@ and interp_exp wq cev e0 =
 										let free = BL.MLens.freeVars l s in
 										let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) lc free in
 										begin match BL.MLens.bLensTosLens i l rc lc with
-											| None, lc -> lc
-											| Some (l, r1, r2), lc ->
-													Lenscontext.LensContext.insert_exn lc s l r1 r2
+											| None -> lc
+											| Some (l, r1, r2) -> Lenscontext.LensContext.insert_exn lc s l r1 r2
 										end
 								| _ -> lc
 							end

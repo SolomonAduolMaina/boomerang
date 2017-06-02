@@ -1683,104 +1683,97 @@ module MLens = struct
 		| Union(ml1, ml2) -> bijective ml1 && bijective ml2 && Rx.disjoint (vtype ml1) (vtype ml2)
 		| Star(ml1) -> bijective ml1
 		| Clobber(r1, w1, f1) -> Rx.is_singleton r1
+		| Permute (_ , ts) ->
+				Array.fold_left (fun b lens -> b && (bijective lens)) true ts
 		| Weight _ | Match _ | Align _ | Default _
 		| LeftQuot _ | RightQuot _ | Dup1 _ | Dup2 _
-		| Partition _ | Merge _ | Fiat _ | Permute _ -> false
+		| Partition _ | Merge _ | Fiat _ -> false
 	
 	let rec bLensTosLens (i : Info.t) (l : t)
 			(rc : Regexcontext.RegexContext.t) (lc : Lenscontext.LensContext.t)
-	: (L.lens * L.regex * L.regex) option * Lenscontext.LensContext.t =
+	: (L.lens * L.regex * L.regex) option =
 		let dummy = L.LensIdentity L.RegExEmpty, L.RegExEmpty, L.RegExEmpty, false in
-		if not (bijective l) then None, lc else
-			let rec helper (i : Info.t) (l : t) (lc : Lenscontext.LensContext.t) :
-			(L.lens * L.regex * L.regex * bool) * Lenscontext.LensContext.t =
+		if not (bijective l) then None else
+			let rec helper (i : Info.t) (l : t) : (L.lens * L.regex * L.regex * bool) =
 				match l.desc with
 				| Var (s, ml) ->
 						begin match Lenscontext.LensContext.lookup lc s with
-							| None -> helper i ml lc
-							| Some (l, r1, r2) -> (L.LensVariable s, r1, r2, true), lc
+							| None -> helper i ml
+							| Some (l, r1, r2) -> (L.LensVariable s, r1, r2, true)
 						end
-				| Copy r -> let r, _ = Brx.brxToLrx r i rc in
-						(L.LensIdentity r, r, r, true), lc
+				| Copy r -> 
+					let r  = Brx.brxToLrx r i rc in (L.LensIdentity r, r, r, true)
 				| Invert ml ->
-						let (ml, s, v, b), lc = helper i ml lc in
-						(L.LensInverse ml, v, s, b), lc
+						let (ml, s, v, b) = helper i ml in (L.LensInverse ml, v, s, b)
 				| Compose (ml1, ml2) ->
-						let (ml1, s1, _, b1), lc = helper i ml1 lc in
-						let (ml2, _, v2, b2), lc = helper i ml2 lc in
-						(L.LensCompose (ml1, ml2), s1, v2, b1 && b2), lc
+						let (ml1, s1, _, b1) = helper i ml1 in
+						let (ml2, _, v2, b2) = helper i ml2 in
+						(L.LensCompose (ml1, ml2), s1, v2, b1 && b2)
 				| Concat (ml1, ml2) ->
-						let (ml1, s1, v1, b1), lc = helper i ml1 lc in
-						let (ml2, s2, v2, b2), lc = helper i ml2 lc in
-						(L.LensConcat (ml1, ml2), L.RegExConcat(s1, s2),
-							L.RegExConcat(v1, v2), b1 && b2), lc
+						let (ml1, s1, v1, b1) = helper i ml1 in
+						let (ml2, s2, v2, b2) = helper i ml2 in
+						(L.LensConcat (ml1, ml2), L.RegExConcat(s1, s2), L.RegExConcat(v1, v2), b1 && b2)
 				| Union (ml1, ml2) ->
-						let (ml1, s1, v1, b1), lc = helper i ml1 lc in
-						let (ml2, s2, v2, b2), lc = helper i ml2 lc in
-						(L.LensUnion (ml1, ml2), L.RegExOr(s1, s2),
-							L.RegExOr(v1, v2), b1 && b2), lc
+						let (ml1, s1, v1, b1) = helper i ml1 in
+						let (ml2, s2, v2, b2) = helper i ml2 in
+						(L.LensUnion (ml1, ml2), L.RegExOr(s1, s2), L.RegExOr(v1, v2), b1 && b2)
 				| Star ml1 ->
-						let (ml1, s1, v1, b1), lc = helper i ml1 lc in
-						(L.LensIterate ml1, L.RegExStar s1, L.RegExStar v1, b1), lc
+						let (ml1, s1, v1, b1) = helper i ml1 in
+						(L.LensIterate ml1, L.RegExStar s1, L.RegExStar v1, b1)
 				| Clobber(r1, w1, f1) ->
 						begin
 							match Brx.representative r1 with
-							| None -> dummy, lc
-							| Some s -> (L.LensConst (s, w1), L.RegExBase s, L.RegExBase w1, true), lc
+							| None -> dummy
+							| Some s -> (L.LensConst (s, w1), L.RegExBase s, L.RegExBase w1, true)
 						end
 				| Merge r ->
 						begin
 							match Brx.representative r with
-							| None -> dummy, lc
-							| Some s -> let ss = s ^ s in
-									(L.LensConst (ss, s), L.RegExBase ss, L.RegExBase s, true), lc
+							| None -> dummy
+							| Some s -> 
+								let ss = s ^ s in (L.LensConst (ss, s), L.RegExBase ss, L.RegExBase s, true)
 						end
+				| Permute ((k, sigma, sigma_inv, stypes, vtypes) , ts) -> dummy
+						(*let res = List.map (helper i) (Array.to_list ts) in
+						let f = (fun (b, temp) (l, _, _, b') -> b && b', l :: temp) in
+						let b, temp = List.fold_left f (true, []) res in
+						let perm = Permutation.Permutation.create (Array.to_list sigma) in
+						let stype = fst (Brx.brxToLrx (Brx.concatList (Array.to_list stypes)) i rc) in
+						let vtype = fst (Brx.brxToLrx (Brx.concatList (Array.to_list vtypes)) i rc) in
+						(L.LensPermute (perm, List.rev temp), stype, vtype, b)*) 
 				| Weight _ | Match _ | Align _ | Default _
 				| LeftQuot _ | RightQuot _ | Dup1 _ | Dup2 _
-				| Partition _ | Fiat _ | Permute _ -> dummy, lc in
+				| Partition _ | Fiat _ -> dummy in
 			let optHelper r1 r2 opt =
 				match opt with
-				| Some r1, Some r2 -> fst (Brx.brxToLrx r1 i rc), fst (Brx.brxToLrx r2 i rc)
+				| Some r1, Some r2 -> Brx.brxToLrx r1 i rc, Brx.brxToLrx r2 i rc
 				| _ -> r1, r2 in
 			let opt = l.stype, l.vtype in
-			let (l, r1, r2, b), lc = helper i l lc in
-			if not b then None, lc
-			else let r1, r2 = optHelper r1 r2 opt in Some (l, r1, r2) , lc
+			let (l, r1, r2, b) = helper i l in
+			if not b then None
+			else let r1, r2 = optHelper r1 r2 opt in Some (l, r1, r2)
 	
-	let isVar (l : t) : bool =
-		match l.desc with
-		| Var _ -> true
-		| _ -> false
-	
-	let rec removeVars (l : t) : t =
-		match l.desc with
-		| Var (_, ml) -> removeVars ml
-		| Copy(r1) -> l
-		| Clobber(r1, w1, f1) -> l
-		| Concat(ml1, ml2) -> { l with desc = Concat(removeVars ml1, removeVars ml2) }
-		| Union(ml1, ml2) -> { l with desc = Union(removeVars ml1, removeVars ml2) }
-		| Star(ml1) -> { l with desc = Star(removeVars ml1) }
-		| Weight (k, ml) -> { l with desc = Weight (k, removeVars ml) }
-		| Match (t, ml) -> { l with desc = Match (t, removeVars ml) }
-		| Compose (ml1, ml2) -> { l with desc = Compose (removeVars ml1, removeVars ml2) }
-		| Align ml -> { l with desc = Align (removeVars ml) }
-		| Invert (ml) -> { l with desc = Invert (removeVars ml) }
-		| Default (ml, w) -> { l with desc = Default (removeVars ml, w) }
-		| LeftQuot (cn, ml) -> { l with desc = LeftQuot (cn, removeVars ml) }
-		| RightQuot (ml, cn) -> { l with desc = RightQuot (removeVars ml, cn) }
-		| Dup1 (ml, f, r) -> { l with desc = Dup1 (removeVars ml, f, r) }
-		| Dup2 (f, r, ml) -> { l with desc = Dup2 (f, r, removeVars ml) }
-		| Partition(_, rs1) -> l
-		| Merge (r) -> l
-		| Fiat ml -> { l with desc = Fiat (removeVars ml) }
-		| Permute (k, mls) ->
-				let ts = List.rev (Array.fold_left (fun l b -> (removeVars b :: l)) [] mls) in
-				{ l with desc = Permute (k, Array.of_list ts) }
+	(* let rec removeVars (l : t) : t = match l.desc with | Var (_, ml) ->     *)
+	(* removeVars ml | Copy(r1) -> l | Clobber(r1, w1, f1) -> l | Concat(ml1,  *)
+	(* ml2) -> { l with desc = Concat(removeVars ml1, removeVars ml2) } |      *)
+	(* Union(ml1, ml2) -> { l with desc = Union(removeVars ml1, removeVars     *)
+	(* ml2) } | Star(ml1) -> { l with desc = Star(removeVars ml1) } | Weight   *)
+	(* (k, ml) -> { l with desc = Weight (k, removeVars ml) } | Match (t, ml)  *)
+	(* -> { l with desc = Match (t, removeVars ml) } | Compose (ml1, ml2) -> { *)
+	(* l with desc = Compose (removeVars ml1, removeVars ml2) } | Align ml ->  *)
+	(* { l with desc = Align (removeVars ml) } | Invert (ml) -> { l with desc  *)
+	(* = Invert (removeVars ml) } | Default (ml, w) -> { l with desc = Default *)
+	(* (removeVars ml, w) } | LeftQuot (cn, ml) -> { l with desc = LeftQuot    *)
+	(* (cn, removeVars ml) } | RightQuot (ml, cn) -> { l with desc = RightQuot *)
+	(* (removeVars ml, cn) } | Dup1 (ml, f, r) -> { l with desc = Dup1         *)
+	(* (removeVars ml, f, r) } | Dup2 (f, r, ml) -> { l with desc = Dup2 (f,   *)
+	(* r, removeVars ml) } | Partition(_, rs1) -> l | Merge (r) -> l | Fiat ml *)
+	(* -> { l with desc = Fiat (removeVars ml) } | Permute (k, mls) -> let ts  *)
+	(* = List.rev (Array.fold_left (fun l b -> (removeVars b :: l)) [] mls) in *)
+	(* { l with desc = Permute (k, Array.of_list ts) }                         *)
 	
 	let setVtype t r = { t with vtype = Some r }
 	let setStype t r = { t with stype = Some r }
-	let getVtype t = t.vtype
-	let getStype t = t.stype
 	
 	let rec freeVars l s =
 		match l.desc with
