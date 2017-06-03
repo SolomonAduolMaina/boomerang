@@ -1398,38 +1398,41 @@ let char_derivative r c =
 	if easy_empty r' then None
 	else Some r'
 
-let rec seqToString (r : L.regex) : L.regex =
+let rec seqToString (r : L.Regex.t) : L.Regex.t =
 	match r with
-	| L.RegExConcat(L.RegExBase "", r) -> seqToString r
-	| L.RegExConcat(r, L.RegExBase "") -> seqToString r
-	| L.RegExConcat(L.RegExBase s1, L.RegExBase s2) -> L.RegExBase (s1 ^ s2)
-	| L.RegExConcat(L.RegExBase s1, L.RegExConcat(L.RegExBase s2, r)) ->
-			seqToString (L.RegExConcat(L.RegExBase (s1 ^ s2), seqToString r))
-	| L.RegExEmpty | L.RegExBase _ | L.RegExVariable _ as r -> r
-	| L.RegExStar r -> L.RegExStar (seqToString r)
-	| L.RegExConcat (r1, r2) -> L.RegExConcat (seqToString r1, seqToString r2)
-	| L.RegExOr(L.RegExOr(r1, r2), r3) ->
-			seqToString (L.RegExOr(r1, L.RegExOr(r2, r3)))
-	| L.RegExOr (r1, r2) -> L.RegExOr (seqToString r1, seqToString r2)
+	| L.Regex.RegExConcat(L.Regex.RegExBase "", r) -> seqToString r
+	| L.Regex.RegExConcat(r, L.Regex.RegExBase "") -> seqToString r
+	| L.Regex.RegExConcat(L.Regex.RegExBase s1, L.Regex.RegExBase s2) -> 
+		L.Regex.RegExBase (s1 ^ s2)
+	| L.Regex.RegExConcat(L.Regex.RegExBase s1, L.Regex.RegExConcat
+	(L.Regex.RegExBase s2, r)) ->
+			seqToString (L.Regex.RegExConcat(L.Regex.RegExBase (s1 ^ s2), seqToString r))
+	| L.Regex.RegExEmpty | L.Regex.RegExBase _ | L.Regex.RegExVariable _ as r -> r
+	| L.Regex.RegExStar r -> L.Regex.RegExStar (seqToString r)
+	| L.Regex.RegExConcat (r1, r2) -> L.Regex.RegExConcat (seqToString r1, seqToString r2)
+	| L.Regex.RegExOr(L.Regex.RegExOr(r1, r2), r3) ->
+			seqToString (L.Regex.RegExOr(r1, L.Regex.RegExOr(r2, r3)))
+	| L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seqToString r1, seqToString r2)
 
-let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : Lang.regex =
+let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 	let rec helper r i  =
 		match r.M.desc with
-		| M.CSet l -> L.charSet l
-		| M.Seq (r1, r2) ->  L.RegExConcat(helper r1 i, helper r2 i)
+		| M.CSet l -> L.Regex.from_char_set l
+		| M.Seq (r1, r2) ->  L.Regex.RegExConcat(helper r1 i, helper r2 i)
 		| M.Alt l ->
 				let f r1 x =
 					let r2 = helper x i in
-					if r1 = L.RegExEmpty then r2 else L.RegExOr(r1, r2) in
-				List.fold_left f L.RegExEmpty l
+					if r1 = L.Regex.RegExEmpty then r2 else L.Regex.RegExOr(r1, r2) in
+				List.fold_left f L.Regex.RegExEmpty l
 		| M.Rep (r, n, None) ->
 				let r  = helper r i in
-				L.RegExConcat(L.iterateNTimes n r, L.RegExStar r)
-		| M.Rep (r, m, Some n) -> L.iterateMtoNTimes m n (helper r i)
+				L.Regex.RegExConcat(L.Regex.iterate_n_times n r, L.Regex.RegExStar r)
+		| M.Rep (r, m, Some n) -> L.Regex.iterate_m_to_n_times m n (helper r i)
 		| M.Var (s, r) ->
+			let s = L.Id.make s in
 				begin match RegexContext.lookup rc s with
 					| None -> helper r i
-					| Some _ -> L.RegExVariable s
+					| Some _ -> L.Regex.RegExVariable s
 				end
 		| _ -> Berror.run_error i
 					(fun () -> msg "No synthesis support for differences and intersections" )

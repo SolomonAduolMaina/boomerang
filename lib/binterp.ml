@@ -63,35 +63,37 @@ module Bridge = struct
 			| x :: xs -> helper xs (temp ^ (f x) ^ "; ")
 		in helper l "["
 	
-	let rec lrxToBrx (r : L.regex) (rc: RegexContext.t) (i : Info.t) : Brx.t =
+	let rec lrxToBrx (r : L.Regex.t) (rc: RegexContext.t) (i : Info.t) : Brx.t =
 		match r with
-		| L.RegExEmpty -> Brx.empty
-		| L.RegExBase s -> Brx.mk_string s
-		| L.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
-		| L.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
-		| L.RegExStar r -> Brx.mk_star (lrxToBrx r rc i)
-		| L.RegExVariable s ->
+		| L.Regex.RegExEmpty -> Brx.empty
+		| L.Regex.RegExBase s -> Brx.mk_string s
+		| L.Regex.RegExConcat (r1, r2) -> Brx.mk_seq (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
+		| L.Regex.RegExOr (r1, r2) -> Brx.mk_alt (lrxToBrx r1 rc i) (lrxToBrx r2 rc i)
+		| L.Regex.RegExStar r -> Brx.mk_star (lrxToBrx r rc i)
+		| L.Regex.RegExVariable s ->
 				match RegexContext.lookup rc s with
-				| Some r -> Brx.mk_var s (lrxToBrx r rc i)
-				| None -> Berror.run_error i (fun () -> msg "@[%s is unbound" s )
+				| Some r -> Brx.mk_var (Lang.Id.string_of_id s) (lrxToBrx r rc i)
+				| None -> Berror.run_error i 
+				(fun () -> msg "@[%s is unbound" (Lang.Id.string_of_id s) )
 	
 	let sLensTobLens
-			(l : L.lens) (rc: RegexContext.t) (lc : LensContext.t) (i : Info.t) : BL.MLens.t =
+			(l : L.Lens.t) (rc: RegexContext.t) (lc : LensContext.t) (i : Info.t) : BL.MLens.t =
 		let constLens (s1 : string) (s2 : string) : BL.MLens.t =
 			BL.MLens.clobber i (Brx.mk_string s1) s2 (fun _ -> s1) in
-		let rec helper (l : L.lens) : BL.MLens.t =
+		let rec helper (l : L.Lens.t) : BL.MLens.t =
 			match l with
-			| L.LensConst (s1, s2) -> constLens s1 s2
-			| L.LensConcat (l1, l2) -> BL.MLens.concat i (helper l1) (helper l2)
-			| L.LensSwap (l1, l2) -> BL.MLens.permute i [1;0] [(helper l1); (helper l2)]
-			| L.LensUnion (l1, l2) -> BL.MLens.union i (helper l1) (helper l2)
-			| L.LensCompose (l1, l2) -> BL.MLens.compose i (helper l2) (helper l1)
-			| L.LensIterate l -> BL.MLens.star i (helper l)
-			| L.LensIdentity r -> BL.MLens.copy i (lrxToBrx r rc i)
-			| L.LensInverse l -> BL.MLens.invert i (helper l)
-			| L.LensVariable s ->
-					BL.MLens.mk_var i s (helper (LensContext.lookup_impl_exn lc s))
-			| L.LensPermute (s, l) ->
+			| L.Lens.LensConst (s1, s2) -> constLens s1 s2
+			| L.Lens.LensConcat (l1, l2) -> BL.MLens.concat i (helper l1) (helper l2)
+			| L.Lens.LensSwap (l1, l2) -> BL.MLens.permute i [1;0] [(helper l1); (helper l2)]
+			| L.Lens.LensUnion (l1, l2) -> BL.MLens.union i (helper l1) (helper l2)
+			| L.Lens.LensCompose (l1, l2) -> BL.MLens.compose i (helper l2) (helper l1)
+			| L.Lens.LensIterate l -> BL.MLens.star i (helper l)
+			| L.Lens.LensIdentity r -> BL.MLens.copy i (lrxToBrx r rc i)
+			| L.Lens.LensInverse l -> BL.MLens.invert i (helper l)
+			| L.Lens.LensVariable s ->
+					BL.MLens.mk_var i (Lang.Id.string_of_id s)
+					 (helper (LensContext.lookup_impl_exn lc s))
+			| L.Lens.LensPermute (s, l) ->
 				BL.MLens.permute i (Perm.to_int_list s) (List.map (fun l -> helper l) l) in
 		helper l
 	
@@ -513,7 +515,8 @@ and interp_exp wq cev e0 =
 							begin
 								match Hashtbl.find tbl s with
 								| V.Rx (i, r) ->
-										let free = Brx.freeVars r s in
+										let free = Brx.freeVars r (Lang.Id.string_of_id s) in
+										let free = List.map Lang.Id.make free in 
 										let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
 										let r  = Brx.brxToLrx r i rc in
 										RegexContext.insert_exn rc s r false
@@ -521,7 +524,7 @@ and interp_exp wq cev e0 =
 							end
 				end in
 			let f id (_, v) (tbl, l) =
-				let s = Qid.string_of_t id in
+				let s = Lang.Id.make (Qid.string_of_t id) in
 				let () = Hashtbl.add tbl s v in tbl, s :: l in
 			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
 			let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) RegexContext.empty ids in
@@ -533,7 +536,8 @@ and interp_exp wq cev e0 =
 							begin
 								match Hashtbl.find tbl s with
 								| V.Lns (i, l) ->
-										let free = BL.MLens.freeVars l s in
+										let free = BL.MLens.freeVars l (Lang.Id.string_of_id s) in
+										let free = List.map Lang.Id.make free in
 										let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) lc free in
 										begin match BL.MLens.bLensTosLens i l rc lc with
 											| None -> lc
@@ -543,7 +547,7 @@ and interp_exp wq cev e0 =
 							end
 				end in
 			let f id (_, v) (tbl, l) =
-				let s = Qid.string_of_t id in
+				let s = Lang.Id.make (Qid.string_of_t id) in
 				let () = Hashtbl.add tbl s v in tbl, s :: l in
 			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
 			let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) LensContext.empty ids in

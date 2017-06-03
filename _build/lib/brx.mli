@@ -108,6 +108,6 @@ val langle_code : int
 val rangle_code : int
 val colon_code : int
 
-val brxToLrx : t -> Info.t -> Regexcontext.RegexContext.t -> Lang.regex 
+val brxToLrx : t -> Info.t -> Regexcontext.RegexContext.t -> Lang.Regex.t
 val freeVars : t -> string -> string list
 val whichPerm : t list -> t -> string -> (int list) option * int

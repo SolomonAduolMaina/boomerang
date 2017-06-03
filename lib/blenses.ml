@@ -1691,47 +1691,53 @@ module MLens = struct
 	
 	let rec bLensTosLens (i : Info.t) (l : t)
 			(rc : Regexcontext.RegexContext.t) (lc : Lenscontext.LensContext.t)
-	: (L.lens * L.regex * L.regex) option =
-		let dummy = L.LensIdentity L.RegExEmpty, L.RegExEmpty, L.RegExEmpty, false in
+	: (L.Lens.t * L.Regex.t * L.Regex.t) option =
+		let dummy = L.Lens.LensIdentity L.Regex.RegExEmpty, 
+		L.Regex.RegExEmpty, L.Regex.RegExEmpty, false in
 		if not (bijective l) then None else
-			let rec helper (i : Info.t) (l : t) : (L.lens * L.regex * L.regex * bool) =
+			let rec helper (i : Info.t) (l : t) : (L.Lens.t * L.Regex.t * L.Regex.t * bool) =
 				match l.desc with
 				| Var (s, ml) ->
+					let s = L.Id.make s in
 						begin match Lenscontext.LensContext.lookup lc s with
 							| None -> helper i ml
-							| Some (l, r1, r2) -> (L.LensVariable s, r1, r2, true)
+							| Some (l, r1, r2) -> (L.Lens.LensVariable s, r1, r2, true)
 						end
 				| Copy r -> 
-					let r  = Brx.brxToLrx r i rc in (L.LensIdentity r, r, r, true)
+					let r  = Brx.brxToLrx r i rc in (L.Lens.LensIdentity r, r, r, true)
 				| Invert ml ->
-						let (ml, s, v, b) = helper i ml in (L.LensInverse ml, v, s, b)
+						let (ml, s, v, b) = helper i ml in (L.Lens.LensInverse ml, v, s, b)
 				| Compose (ml1, ml2) ->
 						let (ml1, s1, _, b1) = helper i ml1 in
 						let (ml2, _, v2, b2) = helper i ml2 in
-						(L.LensCompose (ml1, ml2), s1, v2, b1 && b2)
+						(L.Lens.LensCompose (ml1, ml2), s1, v2, b1 && b2)
 				| Concat (ml1, ml2) ->
 						let (ml1, s1, v1, b1) = helper i ml1 in
 						let (ml2, s2, v2, b2) = helper i ml2 in
-						(L.LensConcat (ml1, ml2), L.RegExConcat(s1, s2), L.RegExConcat(v1, v2), b1 && b2)
+						(L.Lens.LensConcat (ml1, ml2), L.Regex.RegExConcat(s1, s2), 
+						L.Regex.RegExConcat(v1, v2), b1 && b2)
 				| Union (ml1, ml2) ->
 						let (ml1, s1, v1, b1) = helper i ml1 in
 						let (ml2, s2, v2, b2) = helper i ml2 in
-						(L.LensUnion (ml1, ml2), L.RegExOr(s1, s2), L.RegExOr(v1, v2), b1 && b2)
+						(L.Lens.LensUnion (ml1, ml2), L.Regex.RegExOr(s1, s2), 
+						L.Regex.RegExOr(v1, v2), b1 && b2)
 				| Star ml1 ->
 						let (ml1, s1, v1, b1) = helper i ml1 in
-						(L.LensIterate ml1, L.RegExStar s1, L.RegExStar v1, b1)
+						(L.Lens.LensIterate ml1, L.Regex.RegExStar s1, L.Regex.RegExStar v1, b1)
 				| Clobber(r1, w1, f1) ->
 						begin
 							match Brx.representative r1 with
 							| None -> dummy
-							| Some s -> (L.LensConst (s, w1), L.RegExBase s, L.RegExBase w1, true)
+							| Some s -> (L.Lens.LensConst (s, w1), L.Regex.RegExBase s, 
+							L.Regex.RegExBase w1, true)
 						end
 				| Merge r ->
 						begin
 							match Brx.representative r with
 							| None -> dummy
 							| Some s -> 
-								let ss = s ^ s in (L.LensConst (ss, s), L.RegExBase ss, L.RegExBase s, true)
+								let ss = s ^ s in (L.Lens.LensConst (ss, s), L.Regex.RegExBase ss, 
+								L.Regex.RegExBase s, true)
 						end
 				| Permute ((k, sigma, sigma_inv, stypes, vtypes) , ts) -> dummy
 						(*let res = List.map (helper i) (Array.to_list ts) in

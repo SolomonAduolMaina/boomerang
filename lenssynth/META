@@ -1,8 +1,8 @@
 # OASIS_START
-# DO NOT EDIT (digest: 8c910737555ec4630297985f8fced821)
+# DO NOT EDIT (digest: 6ce5456d3086417300d08909b20fb6fb)
 version = "1.0.0"
 description = "The Boomerang Language"
-requires = "core"
+requires = "core ppx_deriving.std ppx_hash"
 archive(byte) = "lenssynth.cma"
 archive(byte, plugin) = "lenssynth.cma"
 archive(native) = "lenssynth.cmxa"

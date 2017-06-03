@@ -1,5 +1,4 @@
-open Core.Std
-open Util1
+open Stdlib
 
 let paren (s:string) : string = "(" ^ s ^ ")"
 
@@ -17,6 +16,21 @@ let delimit_string : string -> string =
   % (Str.global_replace (Str.regexp "\n") "\\\\n")
   % (Str.global_replace (Str.regexp "\t") "\\\\t")
   % (Str.global_replace (Str.regexp "\\\\") "\\\\\\\\")
+
+let delimit_tabs : string -> string =
+  Str.global_replace (Str.regexp "\t") "\\t"
+
+let delimit_newlines : string -> string =
+  Str.global_replace (Str.regexp "\n") "\\n"
+
+let delimit_slashes : string -> string =
+  Str.global_replace (Str.regexp "\\") "\\\\"
+
+let delimit_commas : string -> string =
+  Str.global_replace (Str.regexp ",") "\\,"
+
+let undelimit_commas : string -> string =
+  Str.global_replace (Str.regexp "\\,") ","
 
 let string_of_option (inner_converter:'a -> string) (ao:'a option) : string =
   begin match ao with
@@ -84,6 +98,23 @@ let string_of_quintuple
      ^ "," ^ (trd_to_string c)
      ^ "," ^ (rth_to_string d)
      ^ "," ^ (fth_to_string e))
+
+let string_of_sextuple
+    (fst_to_string:'a -> string)
+    (snd_to_string:'b -> string)
+    (trd_to_string:'c -> string)
+    (rth_to_string:'d -> string)
+    (fth_to_string:'e -> string)
+    (sth_to_string:'e -> string)
+    ((a,b,c,d,e,f):('a * 'b * 'c * 'd * 'e * 'f))
+  : string =
+  paren
+    ((fst_to_string a)
+     ^ "," ^ (snd_to_string b)
+     ^ "," ^ (trd_to_string c)
+     ^ "," ^ (rth_to_string d)
+     ^ "," ^ (fth_to_string e)
+     ^ "," ^ (sth_to_string f))
     
 let string_of_int_list : int list -> string =
   string_of_list string_of_int
@@ -91,20 +122,13 @@ let string_of_int_list : int list -> string =
 let string_of_int_list_list : int list list -> string =
   string_of_list string_of_int_list
 
+let string_of_char : char -> string = Char.to_string
+
 let string_of_char_list : char list -> string =
   string_of_list Char.to_string
 
 let string_of_char_list_list : char list list -> string =
   string_of_list string_of_char_list
 
-let string_of_comparison (c:comparison) : string =
-  begin match c with
-  | EQ -> "EQ"
-  | LT -> "LT"
-  | GT -> "GT"
-  end
-
 let string_of_ref (location_to_string:'a -> string) (r:'a ref) : string =
   (location_to_string !r) ^ " ref"
-	
-let remove_ends s = let l = String.length s in String.sub s ~pos:1 ~len:(l-2)
