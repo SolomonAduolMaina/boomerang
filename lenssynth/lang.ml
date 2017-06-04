@@ -265,13 +265,14 @@ struct
 	  in let helper ((m, n) : int * int) : t =
 		     let rec innerHelper (i : int) (r : t) : t =
 			     if i > n then r else
-				     innerHelper (i + 1) (RegExOr(r, RegExBase (Char.escaped (charOf i))))
+				     innerHelper (i + 1) (RegExOr(r, RegExBase (Char.to_string (charOf i))))
 		     in if n < m then failwith "Malformed Character Set" else
-		     if n = m then RegExBase (Char.escaped (charOf m)) else
-			     innerHelper (m + 1) (RegExBase (Char.escaped (charOf m)))
+		     if n = m then RegExBase (Char.to_string (charOf m)) else
+			     innerHelper (m + 1) (RegExBase (Char.to_string (charOf m)))
 	  in
-	  List.fold_left l ~init: RegExEmpty
-		  ~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (r, (helper x)))
+	  let x = (List.fold_left l ~init: RegExEmpty
+		          ~f: (fun r x -> if r = RegExEmpty then helper x else RegExOr (r, (helper x)))) in
+   x
 
   let iterate_n_times (n : int) (r : t) : t =
 	  let rec helper (index : int) (temp : t) : t =

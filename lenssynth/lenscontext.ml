@@ -19,7 +19,7 @@ module LensContext = struct
                 equivs   = DS.empty        ; }
 
 	let lookup lc name = DefsD.lookup lc.defs name
-	
+		
   let lookup_exn (lc:t) (name:Id.t) : Lens.t*Regex.t*Regex.t =
     DefsD.lookup_exn lc.defs name
 
