@@ -5,6 +5,7 @@ open Regexcontext
 open Lang
 open Lens_utilities
 open Regex_utilities
+open String_utilities
 open Permutation
 open Normalized_lang
 open Consts
@@ -122,6 +123,8 @@ struct
       (count:int)
     : synthesis_info option =
     let (lexs,rexs) = List.unzip exs in
+    let r1 = (QueueElement.get_r1 qe) in
+    let r2 = (QueueElement.get_r2 qe) in
     let exampled_r1_opt = regex_to_exampled_dnf_regex rc lc (QueueElement.get_r1 qe) lexs in
     let exampled_r2_opt = regex_to_exampled_dnf_regex rc lc (QueueElement.get_r2 qe) rexs in
     begin match (exampled_r1_opt,exampled_r2_opt) with
@@ -140,7 +143,8 @@ struct
               })
           | _ -> None
         end
-      | _ -> failwith "bad examples"
+      | _ -> failwith ("bad examples: " ^ (string_of_list (string_of_pair ident ident) exs)
+                      ^ "\n" ^ (Regex.show r1) ^ "\n" ^ (Regex.show r2))
     end
 
   let gen_dnf_lens_and_info_zipper
@@ -183,6 +187,8 @@ struct
           begin match result_o with
             | Some _ -> result_o
             | None ->
+              if !verbose then
+                  print_endline "rigid_synth failed, expanding";
               let queue_elements = 
                 expand
                   rc
