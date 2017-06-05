@@ -176,7 +176,5 @@ let XML_THIRDLEVEL_ELEMENT
     | XML_CONTENTLESS_ELEMENT
     
 
-let map_inner = synth XML_INNER_ELEMENT <=> INNER_XML_DICT with #{string * string}[]
-let map_outer = synth XML_SECONDLEVEL_ELEMENT <=> SECONDLEVEL_XML_DICT with #{string * string}[]
 let map_third = synth XML_THIRDLEVEL_ELEMENT <=> THIRDLEVEL_XML_DICT with #{string * string}[]
 

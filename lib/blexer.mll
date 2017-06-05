@@ -223,7 +223,7 @@ rule main = parse
       try let kw = Hashtbl.find keywords ident in
           kw (info lexbuf)
       with Not_found -> 
-        if Char.uppercase ident.[0] = ident.[0] then 
+        if Char.uppercase_ascii ident.[0] = ident.[0] then 
           UIDENT (info lexbuf, ident)
         else 
           LIDENT (info lexbuf, ident) }

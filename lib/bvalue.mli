@@ -149,3 +149,5 @@ val tag_qid : Bident.Qid.t
 val get_tag : t -> Btag.t
 val mk_tag : Info.t -> Btag.t -> t
 val mk_tagfun : Info.t -> (Btag.t -> t) -> t
+
+val to_list : t -> t list

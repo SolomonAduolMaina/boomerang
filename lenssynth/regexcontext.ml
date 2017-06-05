@@ -9,7 +9,9 @@ module RegexContext = struct
   [@@deriving ord, show, hash]
 
     let empty = D.empty
-
+		
+		let fold f u d  = D.fold f u d
+		
     let lookup_everything (rc:t) (name:Id.t) : (Regex.t*bool) option =
       D.lookup rc name
 

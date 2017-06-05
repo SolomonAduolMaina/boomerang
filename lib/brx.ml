@@ -1033,10 +1033,10 @@ and mk_diff t1 t2 =
 
 (* --------------------- STRING MATCHING --------------------- *)
 
-and whichPerm (l : t list) (sep : t) (s : string) : (int list) option * int =
+and which_perm (l : t list) (sep : t) (s : string) : (int list) option * int =
 	let remove ((i, _) : int * t) (l : (int * t) list) : 'a list =
 		List.fold_left (fun l ((j, _) as x) -> if i = j then l else (x :: l)) [] l in
-	let whichPermHelper (l : t list) : (int * t) list =
+	let which_permHelper (l : t list) : (int * t) list =
 		let f (l, i) rx = ((i, rx) :: l), i + 1 in fst (List.fold_left f ([], 0) l) in
 	let rec helper (l : (int * t) list) (sep : t) (s : string) : (int list) option * int =
 		match l with
@@ -1064,13 +1064,13 @@ and whichPerm (l : t list) (sep : t) (s : string) : (int list) option * int =
 						end;
 						pos := !pos + 1 done in
 				!result in
-	helper (whichPermHelper l) sep s
+	helper (which_permHelper l) sep s
 
 and match_sub_string t s i j =
 	match t.desc with
 	| Perm(tl, sep) ->
 			begin
-				match whichPerm tl sep (String.sub s i (j - i)) with
+				match which_perm tl sep (String.sub s i (j - i)) with
 				| None, _ -> false
 				| Some _, _ -> true
 			end
@@ -1085,7 +1085,7 @@ and match_string t0 w =
 	match t0.desc with
 	| Perm(tl, sep) ->
 			begin
-				match whichPerm tl sep w with
+				match which_perm tl sep w with
 				| None, _ -> false
 				| Some _, _ -> true
 			end
@@ -1253,7 +1253,7 @@ let match_string_positions t0 w =
 			let () =
 				while (!pos < n) do
 					begin
-						match whichPerm tl sep (String.sub w 0 !pos) with
+						match which_perm tl sep (String.sub w 0 !pos) with
 						| Some _, _ -> acc := Int.Set.add !pos !acc
 						| None, _ -> ()
 					end;
@@ -1285,7 +1285,7 @@ let match_string_reverse_positions t0 w =
 			let () =
 				while (!pos < n) do
 					begin
-						match whichPerm tl sep (String.sub w 0 !pos) with
+						match which_perm tl sep (String.sub w 0 !pos) with
 						| Some _, _ -> acc := Int.Set.add (n - 1 - !pos) !acc
 						| None, _ -> ()
 					end;
@@ -1340,7 +1340,7 @@ let split_positions t1 t2 w =
 
 let bad_prefix_position t0 w =
 	match t0.desc with
-	| Perm (tl, sep) -> snd (whichPerm tl sep w)
+	| Perm (tl, sep) -> snd (which_perm tl sep w)
 	| _ ->
 			let n = String.length w in
 			let rec loop i ti =
@@ -1414,7 +1414,7 @@ let rec seqToString (r : L.Regex.t) : L.Regex.t =
 			seqToString (L.Regex.RegExOr(r1, L.Regex.RegExOr(r2, r3)))
 	| L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seqToString r1, seqToString r2)
 
-let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
+let brx_to_lrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 	let rec helper r i  =
 		match r.M.desc with
 		| M.CSet l -> L.Regex.from_char_set l
@@ -1438,17 +1438,17 @@ let brxToLrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 					(fun () -> msg "No synthesis support for differences and intersections" )
 	in seqToString (helper r i)
 
-let rec freeVars r s =
+let rec free_vars r s =
 	match r.desc with
-	| Var (s', r) -> (if s = s' then [] else [s']) @ (freeVars r s)
+	| Var (s', r) -> (if s = s' then [] else [s']) @ (free_vars r s)
 	| CSet _ -> []
-	| Seq (r1, r2) -> (freeVars r1 s) @ (freeVars r2 s)
-	| Alt l -> List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l
-	| Rep (r, _, _) -> freeVars r s
-	| Inter l -> List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l
-	| Diff (r1, r2) -> (freeVars r1 s) @ (freeVars r2 s)
+	| Seq (r1, r2) -> (free_vars r1 s) @ (free_vars r2 s)
+	| Alt l -> List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l
+	| Rep (r, _, _) -> free_vars r s
+	| Inter l -> List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l
+	| Diff (r1, r2) -> (free_vars r1 s) @ (free_vars r2 s)
 	| Perm (l, r) ->
-			(List.fold_left (fun l b -> ((freeVars b s) @ l)) [] l) @ (freeVars r s)
+			(List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l) @ (free_vars r s)
 
 let isVar (v : t) : bool =
 	match v.M.desc with

@@ -1704,7 +1704,7 @@ module MLens = struct
 							| Some (l, r1, r2) -> (L.Lens.LensVariable s, r1, r2, true)
 						end
 				| Copy r -> 
-					let r  = Brx.brxToLrx r i rc in (L.Lens.LensIdentity r, r, r, true)
+					let r  = Brx.brx_to_lrx r i rc in (L.Lens.LensIdentity r, r, r, true)
 				| Invert ml ->
 						let (ml, s, v, b) = helper i ml in (L.Lens.LensInverse ml, v, s, b)
 				| Compose (ml1, ml2) ->
@@ -1739,20 +1739,11 @@ module MLens = struct
 								let ss = s ^ s in (L.Lens.LensConst (ss, s), L.Regex.RegExBase ss, 
 								L.Regex.RegExBase s, true)
 						end
-				| Permute ((k, sigma, sigma_inv, stypes, vtypes) , ts) -> dummy
-						(*let res = List.map (helper i) (Array.to_list ts) in
-						let f = (fun (b, temp) (l, _, _, b') -> b && b', l :: temp) in
-						let b, temp = List.fold_left f (true, []) res in
-						let perm = Permutation.Permutation.create (Array.to_list sigma) in
-						let stype = fst (Brx.brxToLrx (Brx.concatList (Array.to_list stypes)) i rc) in
-						let vtype = fst (Brx.brxToLrx (Brx.concatList (Array.to_list vtypes)) i rc) in
-						(L.LensPermute (perm, List.rev temp), stype, vtype, b)*) 
-				| Weight _ | Match _ | Align _ | Default _
-				| LeftQuot _ | RightQuot _ | Dup1 _ | Dup2 _
-				| Partition _ | Fiat _ -> dummy in
+				| Permute _ | Weight _ | Match _ | Align _ | Default _ | LeftQuot _ 
+				| RightQuot _ | Dup1 _ | Dup2 _ | Partition _ | Fiat _ -> dummy in
 			let optHelper r1 r2 opt =
 				match opt with
-				| Some r1, Some r2 -> Brx.brxToLrx r1 i rc, Brx.brxToLrx r2 i rc
+				| Some r1, Some r2 -> Brx.brx_to_lrx r1 i rc, Brx.brx_to_lrx r2 i rc
 				| _ -> r1, r2 in
 			let opt = l.stype, l.vtype in
 			let (l, r1, r2, b) = helper i l in
@@ -1778,30 +1769,30 @@ module MLens = struct
 	(* = List.rev (Array.fold_left (fun l b -> (removeVars b :: l)) [] mls) in *)
 	(* { l with desc = Permute (k, Array.of_list ts) }                         *)
 	
-	let setVtype t r = { t with vtype = Some r }
-	let setStype t r = { t with stype = Some r }
+	let set_synth_vtype t r = { t with vtype = Some r }
+	let set_synth_stype t r = { t with stype = Some r }
 	
-	let rec freeVars l s =
+	let rec free_vars l s =
 		match l.desc with
-		| Var (s', ml) -> (if s = s' then [] else [s']) @ (freeVars ml s)
+		| Var (s', ml) -> (if s = s' then [] else [s']) @ (free_vars ml s)
 		| Copy(r1) -> []
 		| Clobber(r1, w1, f1) -> []
-		| Concat(ml1, ml2) -> (freeVars ml1 s) @ (freeVars ml2 s)
-		| Union(ml1, ml2) -> (freeVars ml1 s) @ (freeVars ml2 s)
-		| Star ml -> freeVars ml s
-		| Weight (k, ml) -> freeVars ml s
-		| Match (t, ml) -> freeVars ml s
-		| Compose (ml1, ml2) -> (freeVars ml1 s) @ (freeVars ml2 s)
-		| Align ml -> freeVars ml s
-		| Invert ml -> freeVars ml s
-		| Default (ml, w) -> freeVars ml s
-		| LeftQuot (cn, ml) -> freeVars ml s
-		| RightQuot (ml, cn) -> freeVars ml s
-		| Dup1 (ml, f, r) -> freeVars ml s
-		| Dup2 (f, r, ml) -> freeVars ml s
+		| Concat(ml1, ml2) -> (free_vars ml1 s) @ (free_vars ml2 s)
+		| Union(ml1, ml2) -> (free_vars ml1 s) @ (free_vars ml2 s)
+		| Star ml -> free_vars ml s
+		| Weight (k, ml) -> free_vars ml s
+		| Match (t, ml) -> free_vars ml s
+		| Compose (ml1, ml2) -> (free_vars ml1 s) @ (free_vars ml2 s)
+		| Align ml -> free_vars ml s
+		| Invert ml -> free_vars ml s
+		| Default (ml, w) -> free_vars ml s
+		| LeftQuot (cn, ml) -> free_vars ml s
+		| RightQuot (ml, cn) -> free_vars ml s
+		| Dup1 (ml, f, r) -> free_vars ml s
+		| Dup2 (f, r, ml) -> free_vars ml s
 		| Partition(_, rs1) -> []
 		| Merge r -> []
-		| Fiat ml -> freeVars ml s
-		| Permute (k, mls) -> Array.fold_left (fun l b -> ((freeVars b s) @ l)) [] mls
+		| Fiat ml -> free_vars ml s
+		| Permute (k, mls) -> Array.fold_left (fun l b -> ((free_vars b s) @ l)) [] mls
 end
 

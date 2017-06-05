@@ -74,6 +74,7 @@ Library boomerang
     Bprint,
     Bregistry,
     Brx,
+    Bsynth,
     Bstring,
     Bsubst,
     Bsync,
