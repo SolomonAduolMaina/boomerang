@@ -17,13 +17,9 @@ module LensContext = struct
   let empty = { defs     = DefsD.empty     ;
                 outgoing = OutgoingD.empty ;
                 equivs   = DS.empty        ; }
-	
-	let fold f u d  = DefsD.fold f u d.defs
-	
-	let fold1 f u d  = OutgoingD.fold f u d.outgoing
-	
+
 	let lookup lc name = DefsD.lookup lc.defs name
-	
+		
   let lookup_exn (lc:t) (name:Id.t) : Lens.t*Regex.t*Regex.t =
     DefsD.lookup_exn lc.defs name
 
