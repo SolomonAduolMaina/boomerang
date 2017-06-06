@@ -72,6 +72,7 @@ Library boomerang
     Blexer,
     Bparser,
     Bprint,
+    Bqre,
     Bregistry,
     Brx,
     Bsynth,

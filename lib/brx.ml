@@ -637,7 +637,7 @@ let is_anything t = t.uid = anything.uid
 let is_anyascii t = t.uid = anyascii.uid
 
 let rec desc_ascii = function
-	| Perm (tl, l) -> desc_ascii (langWhole tl l).desc
+	| Perm (tl, l) -> desc_ascii (whole tl l).desc
 	| Var (_, t) -> desc_ascii t.desc
 	| CSet cs -> CharSet.ascii cs
 	| Rep(t1, _, _) -> t1.ascii
@@ -648,7 +648,7 @@ let rec desc_ascii = function
 
 and desc_charmap (t: t) =
 	match t.desc with
-	| Perm (tl, l) -> desc_charmap (langWhole tl l)
+	| Perm (tl, l) -> desc_charmap (whole tl l)
 	| Var (_, t) -> desc_charmap t
 	| CSet cs -> charmap_of_cset cs
 	| Rep(t1, _, _) -> get_charmap t1
@@ -691,7 +691,7 @@ and mk_t d0 =
 								ICache.add der_cache c r;
 								r) in
 		let rec get_res d0 = match d0 with
-			| Perm (tl, l) -> get_res (langWhole tl l).desc
+			| Perm (tl, l) -> get_res (whole tl l).desc
 			| Var (_, t) -> get_res t.desc
 			| CSet [] ->
 					(fun c -> empty) (* why do we have this case if CSet s works for this? *)
@@ -730,12 +730,12 @@ and mk_t d0 =
 	t0.derivative <- derivative_impl;
 	t0
 
-and langWhole (l : t list) (sep : t) : t =
-	altList (List.map (fun l -> concatList (intersperse sep l)) (permutations l))
+and whole (l : t list) (sep : t) : t =
+	alt_list (List.map (fun l -> concat_list (intersperse sep l)) (permutations l))
 
-and altList (l : t list) : t = List.fold_left (fun a rx -> mk_alt a rx) empty l
+and alt_list (l : t list) : t = List.fold_left (fun a rx -> mk_alt a rx) empty l
 
-and concatList (l : t list) : t = List.fold_left (fun a rx -> mk_seq a rx) epsilon l
+and concat_list (l : t list) : t = List.fold_left (fun a rx -> mk_seq a rx) epsilon l
 
 (* regexp operations *)
 and get_maps t : int list =
@@ -745,7 +745,7 @@ and get_maps2 t1 t2 : int list =
 	chars_of_charmap (combine_charmaps (get_charmap t1) (get_charmap t2))
 
 and calc_reverse t = match t.desc with
-	| Perm (tl, t) -> calc_reverse (langWhole tl t)
+	| Perm (tl, t) -> calc_reverse (whole tl t)
 	| Var(_, t) -> calc_reverse t
 	| CSet _ -> t
 	| Seq(t1, t2) -> mk_seq (get_reverse t2) (get_reverse t1)
@@ -1131,7 +1131,7 @@ let representative t0 =
 	Misc.map_option string_of_char_codes (get_representative t0)
 
 let rec mk_expand t0 c t = match t0.desc with
-	| Perm (tl, t1) -> mk_expand (langWhole tl t1) c t
+	| Perm (tl, t1) -> mk_expand (whole tl t1) c t
 	| Var (_, t0) -> mk_expand t0 c t
 	| CSet cs ->
 			if CharSet.mem c cs then mk_alt t t0 else t0
@@ -1398,21 +1398,21 @@ let char_derivative r c =
 	if easy_empty r' then None
 	else Some r'
 
-let rec seqToString (r : L.Regex.t) : L.Regex.t =
+let rec seq_to_string (r : L.Regex.t) : L.Regex.t =
 	match r with
-	| L.Regex.RegExConcat(L.Regex.RegExBase "", r) -> seqToString r
-	| L.Regex.RegExConcat(r, L.Regex.RegExBase "") -> seqToString r
+	| L.Regex.RegExConcat(L.Regex.RegExBase "", r) -> seq_to_string r
+	| L.Regex.RegExConcat(r, L.Regex.RegExBase "") -> seq_to_string r
 	| L.Regex.RegExConcat(L.Regex.RegExBase s1, L.Regex.RegExBase s2) -> 
 		L.Regex.RegExBase (s1 ^ s2)
 	| L.Regex.RegExConcat(L.Regex.RegExBase s1, L.Regex.RegExConcat
 	(L.Regex.RegExBase s2, r)) ->
-			seqToString (L.Regex.RegExConcat(L.Regex.RegExBase (s1 ^ s2), seqToString r))
+			seq_to_string (L.Regex.RegExConcat(L.Regex.RegExBase (s1 ^ s2), seq_to_string r))
 	| L.Regex.RegExEmpty | L.Regex.RegExBase _ | L.Regex.RegExVariable _ as r -> r
-	| L.Regex.RegExStar r -> L.Regex.RegExStar (seqToString r)
-	| L.Regex.RegExConcat (r1, r2) -> L.Regex.RegExConcat (seqToString r1, seqToString r2)
+	| L.Regex.RegExStar r -> L.Regex.RegExStar (seq_to_string r)
+	| L.Regex.RegExConcat (r1, r2) -> L.Regex.RegExConcat (seq_to_string r1, seq_to_string r2)
 	| L.Regex.RegExOr(L.Regex.RegExOr(r1, r2), r3) ->
-			seqToString (L.Regex.RegExOr(r1, L.Regex.RegExOr(r2, r3)))
-	| L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seqToString r1, seqToString r2)
+			seq_to_string (L.Regex.RegExOr(r1, L.Regex.RegExOr(r2, r3)))
+	| L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seq_to_string r1, seq_to_string r2)
 
 let brx_to_lrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 	let rec helper r i  =
@@ -1436,7 +1436,7 @@ let brx_to_lrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 				end
 		| _ -> Berror.run_error i
 					(fun () -> msg "No synthesis support for differences and intersections" )
-	in seqToString (helper r i)
+	in seq_to_string (helper r i)
 
 let rec free_vars r s =
 	match r.desc with
@@ -1447,10 +1447,5 @@ let rec free_vars r s =
 	| Rep (r, _, _) -> free_vars r s
 	| Inter l -> List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l
 	| Diff (r1, r2) -> (free_vars r1 s) @ (free_vars r2 s)
-	| Perm (l, r) ->
-			(List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l) @ (free_vars r s)
-
-let isVar (v : t) : bool =
-	match v.M.desc with
-	| M.Var _ -> true
-	| _ -> false
+	| Perm (l, r) -> 
+		(List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l) @ (free_vars r s)

@@ -292,8 +292,8 @@ and interp_exp wq cev e0 =
 							begin
 								match Hashtbl.find tbl s with
 								| V.Rx (i, r) ->
-										let free = Brx.free_vars r (Lang.Id.string_of_id s) in
-										let free = List.map Lang.Id.make free in
+										let free = Brx.free_vars r (L.Id.string_of_id s) in
+										let free = List.map L.Id.make free in
 										let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
 										let r = Brx.brx_to_lrx r i rc in
 										RegexContext.insert_exn rc s r false
@@ -313,12 +313,12 @@ and interp_exp wq cev e0 =
 							begin
 								match Hashtbl.find tbl s with
 								| V.Lns (i, l) ->
-										let free = BL.MLens.free_vars l (Lang.Id.string_of_id s) in
-										let free = List.map Lang.Id.make free in
+										let free = BL.MLens.free_vars l (L.Id.string_of_id s) in
+										let free = List.map L.Id.make free in
 										let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) lc free in
 										begin match BL.MLens.bLensTosLens i l rc lc with
 											| None -> lc
-											| Some (l, r1, r2) -> Lenscontext.LensContext.insert_exn lc s l r1 r2
+											| Some (l, r1, r2) -> LensContext.insert_exn lc s l r1 r2
 										end
 								| _ -> lc
 							end
@@ -385,7 +385,7 @@ and interp_exp wq cev e0 =
 				match v2 with
 				| V.Can(_, sep) ->
 						let l = List.rev (get_cans (V.to_list v1)) in
-						V.Can (i, Bsynth.perm_canonizer l sep)
+						V.Can (i, Bqre.perm_canonizer l sep)
 				| _ -> Berror.run_error (V.info_of_t v2) (fun () -> msg
 											"I was expecting a canonizer here")
 			end

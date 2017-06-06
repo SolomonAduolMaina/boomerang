@@ -1743,12 +1743,12 @@ module MLens = struct
 						let temp = List.map (helper i) (Array.to_list ts) in
 						let f (b, temp) (l, _, _, b') = b && b', l :: temp in
 						let b, temp = List.fold_left f (true, []) temp in
-						let stype = Brx.brx_to_lrx (Brx.concatList (Array.to_list stypes)) i rc in
-						let vtype = Brx.brx_to_lrx (Brx.concatList (Array.to_list vtypes)) i rc in
+						let stype = Brx.brx_to_lrx (Brx.concat_list (Array.to_list stypes)) i rc in
+						let vtype = Brx.brx_to_lrx (Brx.concat_list (Array.to_list vtypes)) i rc in
 						begin
 							match Array.to_list sigma, List.rev temp with
 							| [1;0], [l1; l2] -> L.Lens.LensSwap (l1, l2), stype, vtype, b
-							| _ -> dummy
+							| sigma, ts -> L.Lens.LensPermute (sigma, ts), stype, vtype, b
 						end
 				| Weight _ | Match _ | Align _ | Default _ | LeftQuot _
 				| RightQuot _ | Dup1 _ | Dup2 _ | Partition _ | Fiat _ -> dummy in

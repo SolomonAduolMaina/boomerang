@@ -47,9 +47,9 @@ val mk_expand : t -> int -> t -> t
 val mk_var : string -> t -> t
 val mk_perm : t list -> t -> t
 
-val concatList : t list -> t
-val altList : t list -> t
-val langWhole : t list -> t -> t
+val concat_list : t list -> t
+val alt_list : t list -> t
+val whole : t list -> t -> t
 val intersperse : 'a -> 'a list -> 'a list
 (* pretty printing ranks *)
 type r =
