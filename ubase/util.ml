@@ -436,3 +436,17 @@ let fileInUnisonDir n =
    match !fileInUnisonDirFn with
      None -> assert false
    | Some(f) -> f n
+
+let print_list (f : 'a -> string) (l : 'a list) : string =
+    let rec helper result l =
+        match l with
+        | [] -> "[]"
+        | [x] -> result ^ (f x) ^ "]"
+        | x :: xs -> helper (result ^ (f x) ^ "; ") xs in
+    helper "[" l
+
+let get_option_list (opt : ('a list) option) : 'a list = 
+	match opt with
+	| None -> []
+	| Some l -> l
+		

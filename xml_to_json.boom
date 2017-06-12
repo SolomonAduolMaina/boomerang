@@ -28,14 +28,14 @@ let genrestest =
 let jsoncapfsentence = "\"" . capfsentence . "\""
 let caplist = "[" . ([] | (jsoncapfsentence . ", ")* . jsoncapfsentence) . "]"
 
-let sanitycheck = synth xmlgenres <=> caplist with #{string * string}[genrestest
-, "[\"Self Help\", \"Theatre\", \"Crime\"]" ]
+let sanitycheck = synth xmlgenres <=> caplist using {(genrestest
+, "[\"Self Help\", \"Theatre\", \"Crime\"]") }
 
 test sanitycheck.get genrestest = ?
       
-let xmlpermauth = perm #{canonizer}[id xmlname; id xmldate; id xmlgenres; id xmladdress] with
+let xmlpermauth = perm (xmlname, xmldate, xmlgenres, xmladdress) with
                 (project wsp* -> "\n")
-let author = id "<author>\n" . xmlpermauth . id "\n</author>"
+let author = "<author>\n" . xmlpermauth . "\n</author>"
 
 let authortest = 
 "<author>
@@ -54,27 +54,27 @@ let jsondate = "\"birthdate\" : " . date . "\""
 let jsongenres = "\"genres\" : " . caplist 
 let jsonaddress = "\"address\" : \"" . address . "\""
 
-let jsonpermauth = perm #{canonizer}[id jsonname; id jsondate; id jsongenres; id jsonaddress] with
-                (project (wsp* . ","* . wsp* ) -> ", ")
-let jsonauthor = id "\"author\" : {" . jsonpermauth . id "}"
+let jsonpermauth = perm (jsonname, jsondate, jsongenres, jsonaddress) with 
+                    (project (wsp* . ","* . wsp* ) -> ", ")
+let jsonauthor = "\"author\" : {" . jsonpermauth . "}"
 
-let synthauth = synth author <=> jsonauthor with #{string * string}[]
+let synthauth = synth author <=> jsonauthor
+
 test synthauth.get authortest = ?
 
 let xmltitle = "<title>" . capfsentence . "</title>"
 let xmlprice = "<price>$" . digit+ . "." . digit{2} . "</price>"
 
-let permbook = perm #{canonizer}[id xmltitle; author; id xmlgenre; id xmlprice] with
-                (project wsp -> "\n")
-let xmlbook = id "<book>\n" . permbook . id "\n</book>"
+let permbook = perm (xmltitle, author,  xmlgenre,  xmlprice) with (project wsp -> "\n")
+let xmlbook = "<book>\n" . permbook . "\n</book>"
 
 let jsontitle = "\"title\" : \"" . capfsentence . "\""
 let jsongenre = "\"genre\" : \"" . capfsentence . "\""
 let jsonprice = "\"price\" : \"$" . digit+ . "." . digit{2} . "\""
 
-let jsonpermbook = perm #{canonizer}[id jsontitle; jsonauthor; id jsongenre; id jsonprice] with
+let jsonpermbook = perm (jsontitle, jsonauthor, jsongenre, jsonprice) with
                 (project (wsp* . ","* . wsp* ) -> ", ")
-let jsonbook = id "\"book\" : {" . jsonpermbook . id "}"
+let jsonbook = "\"book\" : {" . jsonpermbook . "}"
 
 let booktest = 
 "<book>\n". authortest . 
@@ -83,29 +83,29 @@ let booktest =
 <genre>Self Help</genre>
 </book>"
 
-let synthbook = synth xmlbook <=> jsonbook with #{string * string}[]
+let synthbook = synth xmlbook <=> jsonbook
+
 test synthbook.get booktest = ?
 
 let xmldepartment = "<department>" . capfsentence . "</department>"
 let xmllibname = "<name>" . capfsentence . "</name>"
-let xmlbooks = id "<books>" . (id [] | (id "\n" . (xmlbook . id "\n")* ) . (xmlbook . 
-id "\n")) . id "</books>"
+let xmlbooks = "<books>" . ([] | ("\n" . (xmlbook . "\n")* ) . (xmlbook . "\n")) . "</books>"
 
-let permlibrary = perm #{canonizer}[id xmllibname; id xmldepartment; id xmladdress; xmlbooks] with
+let permlibrary = perm (xmllibname, xmldepartment, xmladdress, xmlbooks) with
                 (project wsp -> "\n")
-let xmllibrary = id "<library>\n" . permlibrary . id "\n</library>"
+let xmllibrary = "<library>\n" . permlibrary . "\n</library>"
 
 let jsondepartment = "\"department\" : " . capfsentence . "\""
 let jsonlibname = "\"name\" : " . capfsentence . "\""
-let jsonparenbook = id "{" . jsonpermbook . id "}"
-let booklist = id "[" . (id [] | (jsonparenbook . id ", ")* . jsonparenbook) . id "]"
-let jsonbooks = id "\"books\" : " . booklist
+let jsonparenbook =  "{" . jsonpermbook .  "}"
+let booklist = "[" . ([] | (jsonparenbook . ", ")* . jsonparenbook) . "]"
+let jsonbooks = "\"books\" : " . booklist
 
-let jsonpermlibrary = perm #{canonizer}[id jsonlibname; id jsondepartment; id jsonaddress; jsonbooks] with
+let jsonpermlibrary = perm (jsonlibname, jsondepartment, jsonaddress, jsonbooks) with
                 (project (wsp* . ","* . wsp* ) -> ", ")
-let jsonlibrary = id "{\"library\" : {" . jsonpermlibrary . id "}}"
+let jsonlibrary = "{\"library\" : {" . jsonpermlibrary . "}}"
 
-let synthlibrary = synth xmllibrary <=> jsonlibrary with #{string * string}[]
+let synthlibrary = synth xmllibrary <=> jsonlibrary
 
 let librarytest = 
 "<library>

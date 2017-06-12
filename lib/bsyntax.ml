@@ -117,12 +117,11 @@ and exp =
     | EGrammar of Info.t * prod list
 
 		(* canonizer primitives *)
-    | EPerm of Info.t * exp * exp
+    | EPerm of Info.t * (exp list) * exp
     | EProject of Info.t * exp * exp
-    | EId of Info.t * exp
 
 		(* synth primitive *)
-		| ESynth of Info.t * exp * exp * exp
+		| ESynth of Info.t * exp * exp * ((exp list) option)
 
 (* overloaded operators *)
 and op = 
@@ -195,7 +194,6 @@ let rec info_of_exp e = match e with
 	| ESynth	 (i,_,_,_)	 -> i 
 	| EPerm		 (i,_,_)		 -> i
 	| EProject (i,_,_)		 -> i
-	| EId 		 (i,_)		 	 -> i 
   | EApp     (i,_,_)     -> i
   | EVar     (i,_)       -> i
   | EOver    (i,_,_)     -> i

@@ -140,7 +140,12 @@ and format_exp e0 = match e0 with
       msg "@<=>";
       format_exp e2;
 			msg " ";
-			format_exp e3;
+			let () = 
+				begin
+					match e3 with 
+					| None -> ()
+					| Some l ->  msg "with %s" (Util.print_list string_of_exp l)
+				end in
       msg ")@]"
 	| EProject (_,e1,e2) ->
       msg "@[<2>(project";
@@ -149,16 +154,12 @@ and format_exp e0 = match e0 with
       format_exp e2;
       msg ")@]"
 			
-	| EPerm (_,e1,e2) ->
+	| EPerm (_,l,e2) ->
       msg "@[<2>(perm";
-      format_exp e1;
+      msg "with %s" (Util.print_list string_of_exp l);
       msg "@ with";
       format_exp e2;
       msg ")@]"
-			
-	| EId (_,e1) ->
-      msg "@[<2>(id";
-      format_exp e1
 			
   | EApp (_,e1,e2) ->
       msg "@[<2>(";
@@ -402,7 +403,7 @@ and format_module = function
       msg "@\n@]@\n@]"
 
 (* ----- conversions to string ----- *)  
-let string_of_exp e = to_string (fun () -> format_exp e)
+and string_of_exp e = to_string (fun () -> format_exp e)
 let string_of_binding b = to_string (fun () -> format_binding b)
 let string_of_decl d = to_string (fun () -> format_decl d)
 let string_of_test_result tr = to_string (fun () -> format_test_result tr)

@@ -283,7 +283,9 @@ and interp_exp wq cev e0 =
 	| ESynth(i, e1, e2, e3) ->
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
-			let v3 = interp_exp wq cev e3 in
+			let v3 = match e3 with
+				| None -> []
+				| Some l -> List.map (interp_exp wq cev) l in
 			let rec populate_rc tbl rc s =
 				begin
 					match RegexContext.lookup rc s with
@@ -338,19 +340,6 @@ and interp_exp wq cev e0 =
 				| _ -> V.Lns (info, lens)
 			end
 	
-	| EId(i, e1) ->
-			let v1 = interp_exp wq cev e1 in
-			begin
-				match v1 with
-				| V.Str (j, s) -> V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
-				| V.Chr (j, c) ->
-						let s = Scanf.unescaped (Char.escaped c) in
-						V.Can (i, BL.Canonizer.copy j (Brx.mk_string s))
-				| V.Rx (j, r) -> V.Can (i, BL.Canonizer.copy j r)
-				| _ -> Berror.run_error i (fun () -> msg
-											"The id construct expects a regular expression" )
-			end
-	
 	| EProject(i, e1, e2) ->
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
@@ -371,24 +360,11 @@ and interp_exp wq cev e0 =
 											"The first part of the project construct should be a regular expression")
 			end
 	
-	| EPerm(i, e1, e2) ->
-			let v1 = interp_exp wq cev e1 in
+	| EPerm(i, l, e2) ->
+			let l = List.map (interp_exp wq cev) l in
 			let v2 = interp_exp wq cev e2 in
-			let get_cans (l : V.t list) : BL.Canonizer.t list =
-				let f (temp : BL.Canonizer.t list) (v : V.t) : BL.Canonizer.t list =
-					match v with
-					| V.Can (_, c) -> c :: temp
-					| _ -> Berror.run_error (V.info_of_t v) (fun () -> msg
-												"I was expecting a canonizer here")
-				in List.fold_left f [] l in
-			begin
-				match v2 with
-				| V.Can(_, sep) ->
-						let l = List.rev (get_cans (V.to_list v1)) in
-						V.Can (i, Bqre.perm_canonizer l sep)
-				| _ -> Berror.run_error (V.info_of_t v2) (fun () -> msg
-											"I was expecting a canonizer here")
-			end
+			let get_cans = List.fold_left (fun l v -> (V.get_canonizer v) :: l) [] in
+			V.Can (i, Bqre.perm_canonizer (List.rev (get_cans l)) (V.get_canonizer v2))
 	
 	| EVar(i, q) ->
 			begin

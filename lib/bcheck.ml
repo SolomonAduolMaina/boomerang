@@ -157,11 +157,14 @@ let rec compatible f t = match f, t with
 	| SChar, SRegexp
 	| SChar, SAregexp
 	| SChar, SLens
+	| SChar, SCanonizer
 	| SString, SRegexp
 	| SString, SAregexp
 	| SString, SLens
+	| SString, SCanonizer
 	| SRegexp, SAregexp
 	| SRegexp, SLens
+	| SRegexp, SCanonizer
 	-> true
 	| SFunction(_, s11, s12), SFunction(_, s21, s22) ->
 	(* note: contravariant in argument! *)
@@ -465,37 +468,31 @@ and check_exp ?(in_let = false) sev e0 =
 	| ESynth(i, e1, e2, e3) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
 			let e2_sort, new_e2 = check_exp sev e2 in
-			let e3_sort, new_e3 = check_exp sev e3 in
+			let new_e3 =
+				begin
+					match e3 with
+					| None -> None
+					| Some l ->
+							let l = List.map (check_exp sev) l in
+							let f (b, l) (e_sort, new_e) =
+								(b && e_sort = SProduct(SString, SString)), (new_e :: l) in
+							let b, l = List.fold_left f (true, []) l in
+							if b then Some (List.rev l) else static_error i
+									(fun () -> msg "This should be a set of string pairs")
+				end in
 			begin
 				match e1_sort with
 				| SRegexp | SString | SChar ->
 						begin
 							match e2_sort with
-							| SRegexp | SString | SChar ->
-									begin
-										match e3_sort with
-										| SData([SProduct(SString, SString)], _) ->
-												SLens, ESynth(i, new_e1, new_e2, new_e3)
-										| _ ->
-												static_error i
-													(fun () -> msg "The third argument of synth should be a list")
-									end
+							| SRegexp | SString | SChar -> SLens, ESynth(i, new_e1, new_e2, new_e3)
 							| _ -> static_error i
-										(fun () -> msg
-														"The second argument here should be a regular expression" )
+										(fun () -> msg "The second argument here should be a regular expression")
 						end
 				| SCanonizer ->
 						begin
 							match e2_sort with
-							| SCanonizer ->
-									begin
-										match e3_sort with
-										| SData([SProduct(SString, SString)], _) ->
-												SLens, ESynth(i, new_e1, new_e2, new_e3)
-										| _ ->
-												static_error i
-													(fun () -> msg "The third argument of synth should be a list")
-									end
+							| SCanonizer -> SLens, ESynth(i, new_e1, new_e2, new_e3)
 							| _ -> static_error i
 										(fun () -> msg
 														"The second argument here should be a canonizer" )
@@ -505,14 +502,6 @@ and check_exp ?(in_let = false) sev e0 =
 								or a canonizer" )
 			end
 	
-	| EId(i, e) ->
-			let e1_sort, new_e1 = check_exp sev e in
-			begin
-				match e1_sort with
-				| SRegexp | SString | SChar -> SCanonizer, EId(i, new_e1)
-				| _ -> static_error i (fun () ->
-										msg "The id construct expects a regular expression" )
-			end
 	| EProject(i, e1, e2) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
 			let e2_sort, new_e2 = check_exp sev e2 in
@@ -530,23 +519,25 @@ and check_exp ?(in_let = false) sev e0 =
 							(fun () -> msg "The first part of the project construct
 								should be a regular expression" )
 			end
-	| EPerm(i, e1, e2) ->
-			let e1_sort, new_e1 = check_exp sev e1 in
+	| EPerm(i, l, e2) ->
+			let new_l =
+				let l = List.map (check_exp sev) l in
+				let f (b, l) (e_sort, new_e) =
+					(b && List.mem e_sort [SCanonizer; SChar; SString; SRegexp]), (new_e :: l) in
+				let b, l = List.fold_left f (true, []) l in
+				if b then List.rev l else static_error i
+						(fun () -> msg 
+						"The first part of the perm construct should be a list of canonizers")
+			in
 			let e2_sort, new_e2 = check_exp sev e2 in
 			begin
-				match e1_sort with
-				| SData ([SCanonizer], _) ->
-						begin
-							match e2_sort with
-							| SCanonizer -> (SCanonizer, EPerm(i, new_e1, new_e2))
-							| _ -> static_error i
-										(fun () -> msg 
-										"The second part of the perm construct should be a canonizer" )
-						end
+				match e2_sort with
+				| SCanonizer -> (SCanonizer, EPerm(i, new_l, new_e2))
 				| _ -> static_error i
-							(fun () -> msg 
-							"The first part of the perm construct should be a list of canonizers" )
+							(fun () -> msg
+											"The second part of the perm construct should be a canonizer" )
 			end
+	
 	| EVar(i, q) ->
 	(* lookup the sort in the context *)
 			let full_q, e0_sort = lookup_var sev i q in
@@ -606,8 +597,8 @@ and check_exp ?(in_let = false) sev e0 =
 								Some op_name
 							else
 								find_rule t rs in
-				(* rewrite the overloaded symbol using the rules above; the    *)
-				(* treatment of [OIter] is special                             *)
+				(* rewrite the overloaded symbol using the rules above; the        *)
+				(* treatment of [OIter] is special                                 *)
 				let (op_s, op_e) = match op, rs with
 					| OIter(min, max),[r1] ->
 							let (e1_sort, _) = r1 in
@@ -655,8 +646,8 @@ and check_exp ?(in_let = false) sev e0 =
 								mk_app3 i
 									(mk_tyapp i (mk_qid_var (Qid.mk_core_t i "equals")) e1_sort)
 									e1 e2)
-					(* !!! why is this logic duplicated? can these not fit in    *)
-					(* the table above? --MMG                                    *)
+					(* !!! why is this logic duplicated? can these not fit in the    *)
+					(* table above? --MMG                                            *)
 					| OMatch, [tag; exp] ->
 							let tag_sort = SData ([], V.tag_qid) in
 							if not (compatible (fst tag) tag_sort) then err ();
@@ -727,17 +718,17 @@ and check_exp ?(in_let = false) sev e0 =
 			let new_ret_sorto, (body_sort, new_body) =
 				match ret_sorto with
 				| None ->
-				(* if no return sort declared, just check the body to handle   *)
-				(* nested function definitions, we pass on the value of in_let *)
+				(* if no return sort declared, just check the body to handle       *)
+				(* nested function definitions, we pass on the value of in_let     *)
 						None, (check_exp ~in_let: in_let body_sev body)
 				| Some ret_sort ->
 				(* otherwise, resolve the declared return sort *)
 						let new_ret_sort = check_sort i body_sev ret_sort in
-						(* then check the body -- if we were in a let, then so is  *)
-						(* the body (needed for nested functions)                  *)
+						(* then check the body -- if we were in a let, then so is the  *)
+						(* body (needed for nested functions)                          *)
 						let body_sort, new_body = check_exp ~in_let: in_let body_sev body in
-						(* and check that the declared return sort is a subsort of *)
-						(* the actual body sort                                    *)
+						(* and check that the declared return sort is a subsort of the *)
+						(* actual body sort                                            *)
 						if not (compatible body_sort new_ret_sort) then
 							static_error i
 								(fun () ->
@@ -765,8 +756,8 @@ and check_exp ?(in_let = false) sev e0 =
 				SFunction(dep_x, new_p_s, body_sort) in
 			let new_p = Param(p_i, p_x, new_p_s) in
 			let new_e0 = EFun(i, new_p, new_ret_sorto, new_body) in
-			(* apply positive and negative casts (if we're not immediately   *)
-			(* in a let)                                                     *)
+			(* apply positive and negative casts (if we're not immediately in a  *)
+			(* let)                                                              *)
 			if not in_let
 			then mk_bulletproof_cast "fun" i e0_sort new_e0
 			else (e0_sort, new_e0)
@@ -854,8 +845,8 @@ and check_exp ?(in_let = false) sev e0 =
 											(string_of_pat pi)
 											(string_of_sort e1_sort)
 								| Some (new_pi, binds) ->
-								(* otherwise, extend the environment with bindings for *)
-								(* pattern vars                                        *)
+								(* otherwise, extend the environment with bindings for     *)
+								(* pattern vars                                            *)
 										let ei_sev = Safelist.fold_left
 												(fun ei_sev (qj, sj) -> SCEnv.update ei_sev (Qid.t_of_id qj) (G.Sort sj))
 												sev binds in
@@ -876,14 +867,14 @@ and check_exp ?(in_let = false) sev e0 =
 			let new_pl = Safelist.fold_left
 					(fun new_pl (ei, ei_sort, new_ei, new_pi) ->
 								let ii = info_of_exp ei in
-								(* check that the type is not refined when omitting    *)
-								(* the type of the match                               *)
+								(* check that the type is not refined when omitting the    *)
+								(* type of the match                                       *)
 								if refinement_check && is_refined ei_sort then
 									static_error ii
 										(fun () -> msg "@[refined@ type@ %s@ used@ in@ match@ without@ explicit@ type@ declaration@]"
 														(string_of_sort ei_sort));
-								(* and check that it is compatible with the sorts of   *)
-								(* the other branches                                  *)
+								(* and check that it is compatible with the sorts of the   *)
+								(* other branches                                          *)
 								if not (compatible ei_sort new_ps) then
 									err2 ii
 										"@[in@ match:@ %s@ expected@ but@ %s@ found@]"
@@ -1113,8 +1104,7 @@ and check_exp ?(in_let = false) sev e0 =
 					(EUnit i)
 					(Safelist.rev ps) in
 			
-			(* msg "@[ELABORATED @[%a@]@]" (fun _ -> Bprint.format_exp)      *)
-			(* pre_e0                                                        *)
+			(* msg "@[ELABORATED @[%a@]@]" (fun _ -> Bprint.format_exp) pre_e0 *)
 			
 			check_exp sev pre_e0
 

@@ -134,8 +134,8 @@ let _ =
 		; ("perm", (fun i -> PERM i))
 		; ("project", (fun i -> PROJECT i))
 		; ("with", (fun i -> WITH i))
-		; ("id", (fun i -> ID i))
 		; ("synth", (fun i -> SYNTH i))
+		; ("using", (fun i -> USING i))
     ]
 }
 

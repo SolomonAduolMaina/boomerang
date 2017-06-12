@@ -151,3 +151,4 @@ val mk_tag : Info.t -> Btag.t -> t
 val mk_tagfun : Info.t -> (Btag.t -> t) -> t
 
 val to_list : t -> t list
+val get_canonizer : t -> Blenses.Canonizer.t

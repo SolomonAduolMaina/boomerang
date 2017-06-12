@@ -209,7 +209,7 @@ let add_atom ai (i,xs,bs) = match ai with
 %token <Info.t> LT GT LEQ GEQ  
 %token <Info.t> STYPE VTYPE ASTYPE AVTYPE BIJ GET PUT CREATE CANONIZE CHOOSE INTO
 %token <Info.t> ERROR
-%token <Info.t> PERM PROJECT ID WITH SYNTH
+%token <Info.t> PERM PROJECT SYNTH USING
 
 
 %start modl uid qid
@@ -505,25 +505,46 @@ geqexp:
 appexp:
   | appexp repexp                         
       { mk_app (me $1 $2) $1 $2 }
-			
-    | PERM appexp WITH repexp
-            { let i = me2 $1 $4 in 
-        EPerm(i,$2,$4) }
+            
+    | PERM LPAREN listexp1 WITH repexp
+            { let i = me2 $1 $5 in 
+        EPerm(i,$3,$5) }
                 
     | PROJECT appexp ARROW repexp
       { let i = me2 $1 $4 in 
         EProject(i,$2,$4) }
-		
-    | SYNTH appexp DEQARROW appexp WITH repexp
-		 { let i = me2 $1 $4 in 
-        ESynth (i,$2,$4,$6) }
-				
-    | ID repexp
-       { let i = me2 $1 $2 in 
-        EId(i,$2) }
-				
+        
+    | SYNTH appexp DEQARROW repexp USING LBRACE listexp2
+         { let i = me2 $1 (List.hd (List.rev $7)) in 
+        ESynth (i,$2,$4,Some $7) }
+
+    | SYNTH appexp DEQARROW repexp
+         { let i = me2 $1 $4 in 
+        ESynth (i,$2,$4,None) }
+                
   | repexp
       { $1 }
+
+listexp1:
+  | RPAREN
+        {[]}
+    
+    | appexp RPAREN
+        {[$1]}
+        
+    | appexp COMMA listexp1
+        {$1 :: $3}
+				
+listexp2:
+  | RBRACE
+		{[]}
+	
+	| appexp RBRACE
+		{[$1]}
+		
+	| appexp SEMI listexp2
+		{$1 :: $3}
+
 
 /* repeated expressions */    
 repexp:

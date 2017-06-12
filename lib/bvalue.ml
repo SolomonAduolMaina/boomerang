@@ -474,3 +474,13 @@ let to_list (v : t) : t list =
 		| Vnt(_, _, _, Some (Par(_, hd, tail))) -> helper tail (hd :: temp)
 		| _ -> Berror.run_error (info_of_t v) (fun () -> msg "Expected a list here" ) in
 	helper v []
+
+let get_canonizer (v : t) : C.t =
+	match v with
+	| Can (_, c) -> c
+	| Str (i, s) -> C.copy i (Brx.mk_string s)
+	| Rx (i, r) -> C.copy i r
+	| Chr (i, c) -> C.copy i (Brx.mk_string (Core.Char.to_string c))
+	| _ -> Berror.run_error (info_of_t v) (fun () -> msg
+								"I was expecting a canonizer here")
+								

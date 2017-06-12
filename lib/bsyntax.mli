@@ -101,12 +101,11 @@ and exp =
     | EGrammar of Info.t * prod list
 
 		(* canonizer primitives *)
-    | EPerm of Info.t * exp * exp
+    | EPerm of Info.t * (exp list) * exp
 		| EProject of Info.t * exp * exp
-		| EId of Info.t * exp
 
 		(* synth primitive *)
-    | ESynth of Info.t * exp * exp * exp
+    | ESynth of Info.t * exp * exp * ((exp list) option)
 		
 (** Expression abstract syntax. *)
 

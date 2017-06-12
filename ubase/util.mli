@@ -118,3 +118,7 @@ val msg : ('a, out_channel, unit) format -> 'a
 
 (* Set the info line *)
 val set_infos : string -> unit
+
+val print_list : ('a -> string) -> 'a list -> string
+
+val get_option_list :('a list) option -> 'a list

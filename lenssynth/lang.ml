@@ -260,7 +260,7 @@ struct
   let from_char_set (l : (int * int) list) : t =
 	  let charOf (index : int) : char =
 		  match Char.of_int index with
-		  | None -> failwith "Bad Index Bro"
+		  | None -> failwith "Malformed Character Set"
 		  | Some c -> c
 	  in let helper ((m, n) : int * int) : t =
 		     let rec innerHelper (i : int) (r : t) : t =
