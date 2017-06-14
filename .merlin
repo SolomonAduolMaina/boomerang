@@ -1,0 +1,17 @@
+PKG core lwt oUnit W
+S lib/**
+S lenssynth/**
+S tools/**
+S ubase/**
+S hbase/**
+S lenses/**
+S boomerang/**
+S ./**
+B _build/**
+B _build/boomerang/**
+B _build/hbase/**
+B _build/lenses/**
+B _build/lenssynth/**
+B _build/lib/**
+B _build/ubase/**
+B ./**
