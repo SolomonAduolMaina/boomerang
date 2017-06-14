@@ -1,0 +1,43 @@
+module SynthPermProjectExamples = 
+
+(* Given regular expressions r1 and r2, [synth r1 <=> t2] evaluates to synthesized lens r1 and r2 *)
+
+let A : regexp = "x" | "y" 
+
+let B : regexp = "z" | "w" 
+
+let C : regexp = "m" | "n" 
+
+let D : regexp = "t" | "w" 
+
+let x : lens = synth (A | B) <=> (C | D)
+
+test x.get "x" = "m"
+
+test x.get "z" = "w"
+
+(* Given regular expressions r1 and r2 and strings s_1, s_1', ..., s_n, s_n', [synth r1 <=> r2 using {(s_1, s_1'), ..., (s_n, s_n')}] evaluates to synthesized lens between r1 and r2 using the examples (s_1, s_1'), ..., (s_n, s_n') *)
+
+let x : lens = synth (A | B) <=> (C | D) using {("x", "n"), ("z", "t")}
+
+test x.get "x" = "n"
+
+test x.get "z" = "t"
+
+(* Given regular expressions r, canonizers c_1, ..., c_n, sep and a string s, [project r -> s] and [perm (c_1, ..., c_n) with sep] evaluate to the expected QREs. *)
+
+let c : canonizer = perm (("A" | "A'"), ("B" | "B'"), ("C" | "C'")) with (project [ \t\r\n]+ -> "\n")
+
+let d : canonizer = perm (("X" | "X'"), ("Y" | "Y'"), ("Z" | "Z'")) with (project [ ,\t\r\n]+ -> ",")
+
+(* Given canonizers c and d, [synth c <=> d] evaluates to the quotient lens which has a synthesized bijective lens between the view type of c and the source type of d, with c and d on the edges *)
+
+let x : lens = synth c <=> d using {("A\n \t B'\n\r\r\r\nC'","X',,,,,, \t Y\r\n, , \r,Z'")}
+
+test x.get "A\n \t B'\n\r\r\r\nC'" = "X',Y,Z'"
+
+
+
+
+
+

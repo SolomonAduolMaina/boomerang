@@ -50,4 +50,4 @@ let LASTCOMMAFIRST : regexp = UPPERCASENAME . ", " . UPPERCASENAME
 
 let FIRSTTHENLAST : regexp = NAME . " " . NAME
 
-let capitalize = synth LASTCOMMAFIRST <=> FIRSTTHENLAST with #{string * string}[]
+let capitalize = synth LASTCOMMAFIRST <=> FIRSTTHENLAST

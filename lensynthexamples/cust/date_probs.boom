@@ -61,4 +61,4 @@ let WEEKDAYS
     . "thursday" . "thursday"*  . "friday" . "friday"*  . "saturday" 
 
 let english_to_british = synth (MONTH . "/" . DAY . "/"  . YEAR) <=> 
-(DAY  . "/" . MONTH . "/" . YEAR) with #{string * string}[]
+(DAY  . "/" . MONTH . "/" . YEAR)

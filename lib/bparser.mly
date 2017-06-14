@@ -542,7 +542,7 @@ listexp2:
 	| appexp RBRACE
 		{[$1]}
 		
-	| appexp SEMI listexp2
+	| appexp COMMA listexp2
 		{$1 :: $3}
 
 

@@ -18,15 +18,15 @@ let xmlgenre = "<genre>" . capfsentence . "</genre>"
 let xmlgenres = "<genres>" . ([] | ("\n" . (xmlgenre . "\n")* ) . (xmlgenre . "\n")) . "</genres>"
 let xmladdress = "<address>" . address . "</address>"
 
+let jsoncapfsentence = "\"" . capfsentence . "\""
+let caplist = "[" . ([] | (jsoncapfsentence . ", ")* . jsoncapfsentence) . "]"
+
 let genrestest = 
 "<genres>
 <genre>Self Help</genre>
 <genre>Theatre</genre>
 <genre>Crime</genre>
 </genres>"
-
-let jsoncapfsentence = "\"" . capfsentence . "\""
-let caplist = "[" . ([] | (jsoncapfsentence . ", ")* . jsoncapfsentence) . "]"
 
 let sanitycheck = synth xmlgenres <=> caplist using {(genrestest
 , "[\"Self Help\", \"Theatre\", \"Crime\"]") }

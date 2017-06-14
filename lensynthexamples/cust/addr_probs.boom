@@ -85,9 +85,9 @@ let LETTER_ADDRESS_LIST
   : regexp =
   "" | LETTER_ADDRESS . ("\n\n" . LETTER_ADDRESS)* 
 
-let csv_to_letter = synth CSV_ADDRESS_DATABASE <=> LETTER_ADDRESS_LIST with
-#{string * string}[
-"Miltner,Anders,NJ,08544,Princeton,88,College Road West
+let csv_to_letter = synth CSV_ADDRESS_DATABASE <=> LETTER_ADDRESS_LIST using
+{
+("Miltner,Anders,NJ,08544,Princeton,88,College Road West
 Miltner,Susan,CA,94904,Greenbrae,610,Via Casitas
 ",
 "Anders Miltner
@@ -96,7 +96,8 @@ Princeton, NJ  08544
 
 Susan Miltner
 610 Via Casitas
-Greenbrae, CA  94904"]
+Greenbrae, CA  94904")
+}
 
 test csv_to_letter.get
   "Miltner,Anders,NJ,08544,Princeton,88,College Road West\nMiltner,Susan,CA,94904,Greenbrae,610,Via Casitas\n"

@@ -86,33 +86,36 @@ let FULLTAGS
     | (TAGGEDAUTHORDEFNS | TAGGEDTITLE | TAGGEDJOURNAL)
         . ("\n" . (TAGGEDAUTHORDEFNS | TAGGEDTITLE | TAGGEDJOURNAL))*  
 
-let bibtex_to_readable_au = synth BIBTEXAUTHORINFO <=> TAGGEDAUTHORDEFNS with
-#{string * string}[
-"author={Foster, Nathan and Pierce, Benjamin and Bohannon, Aaron}",
+let bibtex_to_readable_au = synth BIBTEXAUTHORINFO <=> TAGGEDAUTHORDEFNS using
+{
+("author={Foster, Nathan and Pierce, Benjamin and Bohannon, Aaron}",
 "au - Nathan Foster
  au - Benjamin Pierce
- au - Aaron Bohannon"]
+ au - Aaron Bohannon")
+ }
 
-let bibtext_to_readable_title = synth BIBTEXTITLE <=> TAGGEDTITLE with
-#{string * string}[
-"title={Boomerang Resourceful Lenses For String Data}",
- "ti - Boomerang Resourceful Lenses For String Data"]
+let bibtext_to_readable_title = synth BIBTEXTITLE <=> TAGGEDTITLE using
+{
+("title={Boomerang Resourceful Lenses For String Data}",
+ "ti - Boomerang Resourceful Lenses For String Data")
+}
 
-let journal_to_readable_journal = synth BIBTEXJOURNAL <=> TAGGEDJOURNAL with
-#{string * string}[
-"journal={Principals Of Programming Languages}",
- "jo - Principals Of Programming Languages"]
+let journal_to_readable_journal = synth BIBTEXJOURNAL <=> TAGGEDJOURNAL using
+{
+("journal={Principals Of Programming Languages}",
+ "jo - Principals Of Programming Languages")
+}
 
-let bibtext_to_tagged_tester= synth FULLBIBTEX <=> FULLTAGS with
-#{string * string}[
-"{author={Foster, Nathan and Pierce, Benjamin and Bohannon, Aaron},title={Boomerang Resourceful Lenses For String Data},journal={Principals Of Programming Languages},}"
+let bibtext_to_tagged_tester= synth FULLBIBTEX <=> FULLTAGS using
+{
+("{author={Foster, Nathan and Pierce, Benjamin and Bohannon, Aaron},title={Boomerang Resourceful Lenses For String Data},journal={Principals Of Programming Languages},}"
 ,
 "au - Nathan Foster
  au - Benjamin Pierce
  au - Aaron Bohannon
 ti - Boomerang Resourceful Lenses For String Data
-jo - Principals Of Programming Languages"
-] 
+jo - Principals Of Programming Languages")
+}
 
 test bibtext_to_tagged_tester.get
   "{author={Foster, Nathan and Pierce, Benjamin and Bohannon, Aaron},}"

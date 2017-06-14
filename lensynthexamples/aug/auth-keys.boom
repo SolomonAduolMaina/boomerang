@@ -67,15 +67,14 @@ let DELIMITED_STRING
      | DIGIT | "\\\"" | " " | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+")*  
 
 let string_to_delimited : lens 
-= synth STRING <=> DELIMITED_STRING with 
- #{string * string}[("+","+");("=","=");(".",".");(" "," ");("'","'");
- (":",":");("/","/");("_","_");("-","-")] 
+= synth STRING <=> DELIMITED_STRING using {("+","+"),("=","="),(".","."),(" "," "),
+("'","'"),  (":",":"), ("/","/"), ("_","_"), ("-","-")}
 
 let COMMENT : regexp = "# " . STRING 
 
 let COMMENT_DICT : regexp = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
 
-let comment_map : lens = synth COMMENT <=> COMMENT_DICT with #{string * string}[] 
+let comment_map : lens = synth COMMENT <=> COMMENT_DICT 
 
 let EMPTYDICT : regexp = "{}" 
 
@@ -104,7 +103,7 @@ let MULTILINE_COMMENT_DICT
     . "}" 
 
 let multiline_comment_map : lens
-  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT with #{string * string}[]
+  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT
   
 let OPTION_KEY
   : regexp =
@@ -168,6 +167,9 @@ test matches_cex
   KEY_DICT
   "{\"key\"=\"12345\"{\"options\"{\"cert-authority\"}{\"command\"=\"t\"}}{\"type\"=\"ssh-dsa\"}{\"comment\"=\"my comment\"}}" = true
 
-let x = synth KEY_CONF <=> KEY_DICT with
-#{string * string}["cert-authority,command=\"t\" ssh-dsa 12345 my comment"
-, "{\"key\"=\"12345\"{\"options\"{\"cert-authority\"}{\"command\"=\"t\"}}{\"type\"=\"ssh-dsa\"}{\"comment\"=\"my comment\"}}"]
+let x = synth KEY_CONF <=> KEY_DICT using
+{
+("cert-authority,command=\"t\" ssh-dsa 12345 my comment",
+"{\"key\"=\"12345\"{\"options\"{\"cert-authority\"}{\"command\"=\"t\"}}{\"type\"=\"ssh-dsa\"}{\"comment\"=\"my comment\"}}")
+}
+

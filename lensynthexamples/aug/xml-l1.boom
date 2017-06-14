@@ -178,5 +178,5 @@ let THIRDLEVEL_XML_DICT
          | "")
     . "}" 
 
-let map_inner = synth XML_INNER_ELEMENT <=> INNER_XML_DICT with #{string * string}[]
+let map_inner = synth XML_INNER_ELEMENT <=> INNER_XML_DICT
 

@@ -1761,26 +1761,6 @@ module MLens = struct
 			if not b then None
 			else let r1, r2 = optHelper r1 r2 opt in Some (l, r1, r2)
 	
-	(* let rec removeVars (l : t) : t = match l.desc with | Var (_, ml) ->   *)
-	(* removeVars ml | Copy(r1) -> l | Clobber(r1, w1, f1) -> l |            *)
-	(* Concat(ml1, ml2) -> { l with desc = Concat(removeVars ml1, removeVars *)
-	(* ml2) } | Union(ml1, ml2) -> { l with desc = Union(removeVars ml1,     *)
-	(* removeVars ml2) } | Star(ml1) -> { l with desc = Star(removeVars ml1) *)
-	(* } | Weight (k, ml) -> { l with desc = Weight (k, removeVars ml) } |   *)
-	(* Match (t, ml) -> { l with desc = Match (t, removeVars ml) } | Compose *)
-	(* (ml1, ml2) -> { l with desc = Compose (removeVars ml1, removeVars     *)
-	(* ml2) } | Align ml -> { l with desc = Align (removeVars ml) } | Invert *)
-	(* (ml) -> { l with desc = Invert (removeVars ml) } | Default (ml, w) -> *)
-	(* { l with desc = Default (removeVars ml, w) } | LeftQuot (cn, ml) -> { *)
-	(* l with desc = LeftQuot (cn, removeVars ml) } | RightQuot (ml, cn) ->  *)
-	(* { l with desc = RightQuot (removeVars ml, cn) } | Dup1 (ml, f, r) ->  *)
-	(* { l with desc = Dup1 (removeVars ml, f, r) } | Dup2 (f, r, ml) -> { l *)
-	(* with desc = Dup2 (f, r, removeVars ml) } | Partition(_, rs1) -> l |   *)
-	(* Merge (r) -> l | Fiat ml -> { l with desc = Fiat (removeVars ml) } |  *)
-	(* Permute (k, mls) -> let ts = List.rev (Array.fold_left (fun l b ->    *)
-	(* (removeVars b :: l)) [] mls) in { l with desc = Permute (k,           *)
-	(* Array.of_list ts) }                                                   *)
-	
 	let set_synth_vtype t r = { t with vtype = Some r }
 	let set_synth_stype t r = { t with stype = Some r }
 	

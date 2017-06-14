@@ -67,15 +67,14 @@ let DELIMITED_STRING
      | DIGIT | "\\\"" | " " | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+")*  
 
 let string_to_delimited : lens 
-= synth STRING <=> DELIMITED_STRING with 
- #{string * string}[("+","+");("=","=");(".",".");(" "," ");("'","'");
- (":",":");("/","/");("_","_");("-","-")] 
+= synth STRING <=> DELIMITED_STRING using {("+","+"),("=","="),(".","."),(" "," "),
+("'","'"),  (":",":"), ("/","/"), ("_","_"), ("-","-")}
 
 let COMMENT : regexp = "# " . STRING 
 
 let COMMENT_DICT : regexp = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
 
-let comment_map : lens = synth COMMENT <=> COMMENT_DICT with #{string * string}[] 
+let comment_map : lens = synth COMMENT <=> COMMENT_DICT 
 
 let EMPTYDICT : regexp = "{}" 
 
@@ -104,7 +103,7 @@ let MULTILINE_COMMENT_DICT
     . "}" 
 
 let multiline_comment_map : lens
-  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT with #{string * string}[]
+  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT
 
 let WS : regexp = (" " | "\t") . (" " | "\t")*  
 
@@ -138,11 +137,11 @@ let HOSTS_DICT
   : regexp =
   ((HOSTLINE_DICT | EMPTYDICT | COMMENT_DICT) . "\n")*  
 
-let ipaddr_lens = synth IPADDR <=> IPADDR_DICT with #{string * string}[]
+let ipaddr_lens = synth IPADDR <=> IPADDR_DICT
 
-let hostline_lens = synth HOSTSLINE <=> HOSTLINE_DICT with #{string * string}[]
+let hostline_lens = synth HOSTSLINE <=> HOSTLINE_DICT
 
-let hosts_lens = synth HOSTS <=> HOSTS_DICT with #{string * string}[]
+let hosts_lens = synth HOSTS <=> HOSTS_DICT
 
 test hosts_lens.get
   "127.0.0.1 localhost alias # comment\n"

@@ -46,8 +46,7 @@ let NAME : regexp = UPPERCASE . LOWERCASE*
 
 let UPPERCASENAME : regexp = UPPERCASE . UPPERCASE*  
 
-let capitalize = synth UPPERCASENAME <=> NAME with 
-#{string * string}["MILTNER", "Miltner"]
+let capitalize = synth UPPERCASENAME <=> NAME using {("MILTNER", "Miltner")}
 
 test capitalize.get "ANDERS" = "Anders"
 

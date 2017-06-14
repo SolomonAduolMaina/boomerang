@@ -77,7 +77,8 @@ test matches_cex
   PHONENUMBEREXPLICIT
   "number: \"415-342-3622\"\nbeforetext: \"asdfscxv as df\"\naftertext: \" asdfasdf v a\"" = true
 
-let extract_number = synth PHONENUMBERHIDDEN <=> PHONENUMBEREXPLICIT with
-#{string * string}[
-"asdfscxv as df415-342-3622 asdfasdf v a",
-"number: \"415-342-3622\"\nbeforetext: \"asdfscxv as df\"\naftertext: \" asdfasdf v a\""]
+let extract_number = synth PHONENUMBERHIDDEN <=> PHONENUMBEREXPLICIT using
+{
+("asdfscxv as df415-342-3622 asdfasdf v a",
+"number: \"415-342-3622\"\nbeforetext: \"asdfscxv as df\"\naftertext: \" asdfasdf v a\"")
+}

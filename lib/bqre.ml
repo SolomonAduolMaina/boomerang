@@ -42,7 +42,7 @@ let perm_canonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonize
     let kernel = Brx.concat_list (Brx.intersperse sep' l') in
     let f (s' : string) : string =
         let s = BS.of_string s' in
-        let perm = match fst (Brx.which_perm l sep s') with
+        let perm = match Brx.matching_perm l sep s' with
             | None -> []
             | Some l -> Perms.invert_permutation l in
         let lperm = Perms.permute_list perm l in
@@ -50,8 +50,8 @@ let perm_canonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonize
         let real, seps = even_odd matches [] [] 0 in
         let real = Perms.permute_list (Perms.invert_permutation perm) real in
         let ss = List.map BS.to_string (even_odd_inv real seps [] 0) in
-        let ss = List.map2
-                (fun c s -> BL.Canonizer.canonize c (BS.of_string s)) (Brx.intersperse c cs) ss in
+				let f c s = BL.Canonizer.canonize c (BS.of_string s) in
+        let ss = List.map2 f (Brx.intersperse c cs) ss in
         String.concat "" ss in
     BL.Canonizer.normalize (Info.I ("", (0, 0), (0, 0))) whole kernel f
 		

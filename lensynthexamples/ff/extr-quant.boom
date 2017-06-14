@@ -58,7 +58,8 @@ let AMOUNT_EXTRACTED
   : regexp =
   "amount: " . DIGIT . NUMERICTEXT . "\nworthless text: " . TEXT 
   
-let extract_amount = synth THINGANDAMOUNT <=> AMOUNT_EXTRACTED with
-#{string * string}[
-"hey look we sure have a lot of corn we have 35 OZ",
-"amount: 35 OZ\nworthless text: hey look we sure have a lot of corn we have "]
+let extract_amount = synth THINGANDAMOUNT <=> AMOUNT_EXTRACTED using
+{
+("hey look we sure have a lot of corn we have 35 OZ",
+"amount: 35 OZ\nworthless text: hey look we sure have a lot of corn we have ")
+}

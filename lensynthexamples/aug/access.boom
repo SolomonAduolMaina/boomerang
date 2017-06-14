@@ -67,15 +67,14 @@ let DELIMITED_STRING
      | DIGIT | "\\\"" | " " | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+")*  
 
 let string_to_delimited : lens 
-= synth STRING <=> DELIMITED_STRING with 
- #{string * string}[("+","+");("=","=");(".",".");(" "," ");("'","'");
- (":",":");("/","/");("_","_");("-","-")] 
+= synth STRING <=> DELIMITED_STRING using {("+","+"),("=","="),(".","."),(" "," "),
+("'","'"),  (":",":"), ("/","/"), ("_","_"), ("-","-")}
 
 let COMMENT : regexp = "# " . STRING 
 
 let COMMENT_DICT : regexp = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
 
-let comment_map : lens = synth COMMENT <=> COMMENT_DICT with #{string * string}[] 
+let comment_map : lens = synth COMMENT <=> COMMENT_DICT
 
 let EMPTYDICT : regexp = "{}" 
 
@@ -104,7 +103,7 @@ let MULTILINE_COMMENT_DICT
     . "}" 
 
 let multiline_comment_map : lens
-  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT with #{string * string}[]
+  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT
   
 let ACCESSTYPE : regexp = "+" | "-" 
 
@@ -164,34 +163,37 @@ let FULL_ACCESS_DICT : regexp = ((CONFIGACCESSDICT | COMMENT_KVP) . "\n")*
 let CONFIG_STRING : regexp = (CONFIG_COMMENT . "\n")*  
     
 let extract_comment : lens
- = synth CONFIG_COMMENT <=> COMMENT_KVP with 
-#{string * string}["# here is a comment with \"quotes\"",
-"\"#comment\"=\"here is a comment with \\\"quotes\\\"\""]
+ = synth CONFIG_COMMENT <=> COMMENT_KVP using
+{("# here is a comment with \"quotes\"", 
+"\"#comment\"=\"here is a comment with \\\"quotes\\\"\"")}
  
 let extract_netgroup : lens
-= synth ("@" . IDENTIFIER) <=> NETGROUPINFO with
-#{string * string}["@princeton", "{ \"netgroup\" = \"princeton\" }"]
+= synth ("@" . IDENTIFIER) <=> NETGROUPINFO using
+{("@princeton", "{ \"netgroup\" = \"princeton\" }")}
 
 let extract_origin_list : lens
-= synth ORIGINLIST <=> ORIGIN_DICT with
-#{string * string}[" cron crond :0", 
-"\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" }"]
+= synth ORIGINLIST <=> ORIGIN_DICT using
+{(" cron crond :0", 
+"\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" }")}
 
-let extract_userdata : (lens in USERNAMEHOSTGROUPCONFIG <=> UNHGCFG_KVP)
- = synth USERNAMEHOSTGROUPCONFIG <=> UNHGCFG_KVP with
-#{string * string}["anders", "{ \"user\" = \"anders\" }";
-"anders@princeton", "{ \"user\" = \"anders\"\n\t{ \"host\" = \"princeton\" } }";
-"@princeton", "{ \"netgroup\" = \"princeton\" }"] 
+let extract_userdata : lens = synth USERNAMEHOSTGROUPCONFIG <=> UNHGCFG_KVP using
+{
+("anders", "{ \"user\" = \"anders\" }"),
+("anders@princeton", "{ \"user\" = \"anders\"\n\t{ \"host\" = \"princeton\" } }"),
+("@princeton", "{ \"netgroup\" = \"princeton\" }")
+} 
 
-let extract_access = synth FULLCONFIGACCESS <=> CONFIGACCESSDICT with
-#{string * string}["+ : anders anders@princeton @princeton : cron crond :0",
+let extract_access = synth FULLCONFIGACCESS <=> CONFIGACCESSDICT using
+{
+("+ : anders anders@princeton @princeton : cron crond :0",
 "{ \"access\" = \"+\"\n{ \"user\" = \"anders\" }\n{ \"user\" = \"anders\"
 \t{ \"host\" = \"princeton\" } }\n{ \"netgroup\" = \"princeton\" }
 { \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }
-{ \"origin\" = \":0\" } }"]
+{ \"origin\" = \":0\" } }")
+}
 
-let extract_config = synth FULL_ACCESS_CONFIG <=> FULL_ACCESS_DICT with
-#{string * string}["+ : anders anders@princeton @princeton : cron crond :0
+let extract_config = synth FULL_ACCESS_CONFIG <=> FULL_ACCESS_DICT using
+{("+ : anders anders@princeton @princeton : cron crond :0
 # here is a comment with \"quotes\"\n" ,
 "{ \"access\" = \"+\"
 { \"user\" = \"anders\" }
@@ -201,4 +203,4 @@ let extract_config = synth FULL_ACCESS_CONFIG <=> FULL_ACCESS_DICT with
 { \"origin\" = \"cron\" }
 { \"origin\" = \"crond\" }
 { \"origin\" = \":0\" } }
-\"#comment\"=\"here is a comment with \\\"quotes\\\"\"\n"]
+\"#comment\"=\"here is a comment with \\\"quotes\\\"\"\n")}

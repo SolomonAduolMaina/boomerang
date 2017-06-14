@@ -1449,3 +1449,5 @@ let rec free_vars r s =
 	| Diff (r1, r2) -> (free_vars r1 s) @ (free_vars r2 s)
 	| Perm (l, r) -> 
 		(List.fold_left (fun l b -> ((free_vars b s) @ l)) [] l) @ (free_vars r s)
+		
+let matching_perm l r s = fst (which_perm l r s)

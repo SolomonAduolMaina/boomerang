@@ -67,15 +67,14 @@ let DELIMITED_STRING
      | DIGIT | "\\\"" | " " | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+")*  
 
 let string_to_delimited : lens 
-= synth STRING <=> DELIMITED_STRING with 
- #{string * string}[("+","+");("=","=");(".",".");(" "," ");("'","'");
- (":",":");("/","/");("_","_");("-","-")] 
+= synth STRING <=> DELIMITED_STRING using {("+","+"),("=","="),(".","."),(" "," "),
+("'","'"),  (":",":"), ("/","/"), ("_","_"), ("-","-")}
 
 let COMMENT : regexp = "# " . STRING 
 
 let COMMENT_DICT : regexp = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
 
-let comment_map : lens = synth COMMENT <=> COMMENT_DICT with #{string * string}[] 
+let comment_map : lens = synth COMMENT <=> COMMENT_DICT 
 
 let EMPTYDICT : regexp = "{}" 
 
@@ -104,13 +103,11 @@ let MULTILINE_COMMENT_DICT
     . "}" 
 
 let multiline_comment_map : lens
-  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT with #{string * string}[]
+  = synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT
 
 let SLASH_COMMENT : regexp = "//" . STRING 
 
-let scomment_comment_map
-  : (lens in SLASH_COMMENT <=> COMMENT_DICT) =
-  del "//" . ins "{\"#comment\"=\"" . string_to_delimited . ins "\"}" 
+let scomment_comment_map = synth SLASH_COMMENT <=> COMMENT_DICT
 
 let INCLUDE_CONF : regexp = "#include " . FOLDER 
 
@@ -175,4 +172,5 @@ test matches_cex
   APT_L0_DICT
   "{\"APT\"{\"hello\"=\"testingh ielloo asdfwer s\"}{\"@elem\"=\"--force-confold\"}{\"#mcomment\"{\"string\"=\"test\"}{\"string\"=\"multiline\"}}{\"#comment\"=\"comment\"}{\"#clear\"{\"name\"=\"mydata:hello\"}{\"name\"=\"tester\"}}{\"include\"=\"myfolder/my_filE.txt\"}}" = true
 
-let apt_l0_dict = synth APT_L0_CONF <=> APT_L0_DICT with #{string * string}[]
+let apt_l0_dict = synth APT_L0_CONF <=> APT_L0_DICT
+
