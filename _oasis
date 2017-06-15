@@ -3,9 +3,18 @@ OCamlVersion: >= 4.02.0
 Name:        boomerang
 Version:     1.0.0
 Synopsis:    The Boomerang Language
-Authors:     https://github.com/boomerang-lang/boomerang/contributors
+Authors:     https://github.com/SolomonAduolMaina/boomerang/graphs/contributors
 License:     LGPL
 Plugins:     META (0.3)
+Homepage:    http://www.seas.upenn.edu/~harmony/
+Maintainers: Solomon Aduol Maina <smaina@seas.upenn.edu>
+Description: Boomerang is a programming language for writing lenses—well-behaved bidirectional transformations—that operate on ad-hoc, textual data formats.
+BugReports:  https://github.com/SolomonAduolMaina/boomerang
+SourceRepository master
+  Type: git
+  Location: https://github.com/SolomonAduolMaina/boomerang.git
+  Branch: master
+  Browser: https://github.com/SolomonAduolMaina/boomerang
 AlphaFeatures: ocamlbuild_more_args
 XOCamlbuildExtraArgs: -cflags -rectypes
 BuildTools:
@@ -112,5 +121,3 @@ Executable baker
   BuildDepends:
     ubase,
     hbase
-
-
