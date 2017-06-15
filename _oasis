@@ -52,7 +52,6 @@ Library boomerang
   BuildDepends:
     hbase,
     str,
-    threads,
     ubase,
     lenssynth
   Modules:
