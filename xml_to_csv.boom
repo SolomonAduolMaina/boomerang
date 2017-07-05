@@ -1,0 +1,53 @@
+module Xml_to_csv = 
+
+let digit = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
+let u_o_d = [A-Z0-9]
+
+let r1 = "_id=" . "\"" . digit+ . "\""
+let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12} . "\""
+let r3 = "_position=" . "\"" . digit+ . "\""
+let r4 = "_address=" . "\"" . "http://data.seattle.gov/resource/cf52-s8er/" . digit+ . "\""
+
+let f1 = "<jobtitle>" . text ."</jobtitle>"
+let f2 = "<female_avg_hrly_rate>" . digit . "</female_avg_hrly_rate>"
+let f3 = "<no_female_empl>" . digit . "</no_female_empl>"
+let f4 = 
+"<average_of_female_months_longevity_in_current_classification>" .digit. "</average_of_female_months_longevity_in_current_classification>"
+let f5 = "<male_avg_hrly_rate>" . digit . "</male_avg_hrly_rate>"
+let f6 = "<no_male_empl>" . digit ."</no_male_empl>"
+let f7 = 
+"<average_of_male_months_longevity_in_current_classification>" . digit . "</average_of_male_months_longevity_in_current_classification>"
+let f8 = "<total_avg_hrly_rate>" . digit . "</total_avg_hrly_rate>"
+let f9 = "<total_no_empl>" . digit. "</total_no_empl>"
+let f10 = 
+"<total_average_of_months_longevity_in_current_classification>" . digit . "</total_average_of_months_longevity_in_current_classification>"
+let f11 = 
+"<ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>" . digit . "</ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>"
+let f12 = "<notes>" . text . "</notes>"
+
+let header = r1 . " " . r2 . " " . r3 . " " . r4
+
+let row2 = f1 . "\n" . f2 . "\n" . f3. "\n" . f4. "\n" .
+f8 . "\n" . f9. "\n" . f10. "\n" . f12 . "\n"
+
+let row1 = f1 . "\n" . f5 . "\n" . f6. "\n" . f7. "\n" . 
+f8 . "\n" . f9. "\n" . f10. "\n" . f12 . "\n"
+
+let row = f1 . "\n" . f2 . "\n" . f3. "\n" . f4. "\n" . f5. "\n" . f6. "\n" . f7.
+"\n" . f8 . "\n" . f9. "\n" . f10. "\n" . f11 . "\n"
+
+let csv = "\"" . text . "\"," . (digit . ","){9} . digit
+
+let csv1 = "\"" . text . "\"," . (digit . ","){6} . text
+
+let csv2 = "\"" . text . "\"," . (digit . ","){6} . text
+
+let fullrow = "<row " . header . ">" . row . "</row>" 
+
+let innerlens = synth (row | row1 | row2) <=> (csv | csv1 | csv2)
+
+let fullens = (del ("<row " . header . ">\n")) . innerlens  . (del "</row>\n") . (ins "\n")
+
+let finallens = (del "<response>\n<row>\n") . fullens*. (del "</row>\n</response>\n")
