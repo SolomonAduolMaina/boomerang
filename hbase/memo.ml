@@ -6,6 +6,8 @@
 (***************************************************)
 (* $Id$ *)
 
+open Ubase
+
 let memo_off = Prefs.createBool "memo-off" false
   "no memoization"
   "no memoization"
