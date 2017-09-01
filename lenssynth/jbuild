@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+(library
+  ((name synth)
+   (preprocess (pps (ppx_deriving.std ppx_hash)))
+  (libraries (core))
+))
+ 

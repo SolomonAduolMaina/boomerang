@@ -1,0 +1,13 @@
+(jbuild_version 1)
+
+(ocamllex (src2fcl))
+
+(library
+  ((name hbase)
+   (libraries (ubase unix))
+))
+
+(executable
+  ((name baker)
+   (libraries (hbase))
+))    

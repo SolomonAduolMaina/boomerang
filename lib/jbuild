@@ -1,0 +1,28 @@
+(jbuild_version 1)
+
+(ocamlyacc (bparser))
+
+(ocamllex (blexer))
+
+(rule
+  ((targets (bparser.mly))
+   (deps (${ROOT}/tools/src2f.exe bparser.srcy))
+   (action (run ${<} bparser.srcy ${@}))
+))
+
+(rule
+  ((targets (blexer.mll))
+   (deps (${ROOT}/tools/src2f.exe blexer.srcl))
+   (action (run ${<} blexer.srcl ${@}))
+))
+
+(rule
+  ((targets (bakery.ml))
+   (deps (${ROOT}/hbase/baker.exe))    
+   (action (with-stdout-to ${@} (run ${<} .boom ../../../lenses ../../../examples)))
+))
+                   
+(library
+  ((name bbase)
+   (libraries (hbase ubase synth threads str))
+))

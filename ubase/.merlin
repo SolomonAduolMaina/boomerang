@@ -1,0 +1,2 @@
+B ../_build/default/ubase
+FLG -open Ubase -w -40
