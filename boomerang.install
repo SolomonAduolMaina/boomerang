@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/boomerang/META" {"META"}
+  "_build/install/default/lib/boomerang/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/boomerang" {"boomerang"}
+]
+doc: [
+  "_build/install/default/doc/boomerang/LICENSE"
+]

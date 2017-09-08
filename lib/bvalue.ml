@@ -20,6 +20,8 @@
 (******************************************************************************)
 
 (* module imports and abbreviations *)
+open Hbase
+open Ubase
 open Bident
 module L = Blenses.MLens
 module C = Blenses.Canonizer

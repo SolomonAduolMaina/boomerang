@@ -1,3 +1,6 @@
+open Hbase
+open Ubase
+open Synth
 open Gen
 open Regexcontext
 open Lenscontext

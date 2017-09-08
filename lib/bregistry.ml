@@ -18,6 +18,8 @@
 (* Boomerang run-time registry                                                *)
 (* $Id: bregistry.ml 5001 2015-12-05 03:05:11Z bcpierce $ *)
 (******************************************************************************)
+open Hbase
+open Ubase
 
 let sprintf = Printf.sprintf
 let debug = Trace.debug "registry"

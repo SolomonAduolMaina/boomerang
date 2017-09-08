@@ -20,9 +20,12 @@
 (* Uses code from Jerome Vouillon's Rx module in Unison.                      *)
 (* $Id: ml 4643 2009-09-03 18:34:32Z cretin $ *)
 (******************************************************************************)
-
+open Synth
+open Hbase
+open Ubase
 module H = Hashtbl
 module L = Lang
+
 
 open Regexcontext
 

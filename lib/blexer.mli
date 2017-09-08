@@ -18,6 +18,8 @@
 (* Boomerang lexer interface                                                  *)
 (* $Id: blexer.mli 4607 2009-08-03 16:53:28Z ddavi $ *)
 (******************************************************************************)
+open Hbase
+open Ubase
 
 val info : Lexing.lexbuf -> Info.t
 val main : Lexing.lexbuf -> Bparser.token 

@@ -22,6 +22,7 @@
 
 open Bsyntax
 open Bident
+open Hbase
 
 val subst_sort : (Id.t * sort) list -> sort -> sort
 

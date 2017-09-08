@@ -1,0 +1,7 @@
+B ../_build/default/hbase
+B ../_build/default/tools
+B ../_build/default/ubase
+FLG -w -40
+PKG unix
+S ../hbase
+S ../ubase

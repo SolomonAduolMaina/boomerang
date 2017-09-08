@@ -18,6 +18,8 @@
 (* Tags                                                                       *)
 (* $Id: btag.ml 4636 2009-08-26 19:28:59Z cretin $ *)
 (******************************************************************************)
+open Ubase
+open Hbase
 
 module ImA = Intmapa
 module W = Bannot.Weight

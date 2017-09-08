@@ -22,6 +22,8 @@
 
 (* ---------------------------------------------------------------------------*)
 (* IMPORTS AND ABBREVIATIONS *)
+open Hbase
+open Ubase
 
 open Bident
 module G = Bregistry

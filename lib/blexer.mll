@@ -20,6 +20,8 @@
 (* $Id: blexer.srcl 4631 2009-08-20 13:33:30Z ddavi $ *)
 (******************************************************************************)    
 {
+	open Hbase
+open Ubase
 open Bparser
 
 module LE = Lexing

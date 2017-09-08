@@ -1,3 +1,6 @@
+open Hbase
+open Ubase
+open Synth
 module L = Lang
 module BL = Blenses
 module BS = Bstring

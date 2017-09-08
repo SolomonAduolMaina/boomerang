@@ -21,7 +21,8 @@
 
 (* ---------------------------------------------------------------------------*)
 (* IMPORTS AND ABBREVIATIONS *)
-
+open Hbase
+open Ubase
 open Bsyntax
 open Bident
 open Bcheck

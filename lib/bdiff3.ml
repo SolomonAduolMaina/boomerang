@@ -18,6 +18,7 @@
 (* Boomerang Diff3 implementation                                             *)
 (* $Id: bdiff3.ml 4607 2009-08-03 16:53:28Z ddavi $ *)
 (******************************************************************************)
+open Ubase
 
 (* ----- functor argument ----- *)
 module type Diff3Arg = sig 

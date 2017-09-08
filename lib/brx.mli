@@ -22,6 +22,7 @@
 
 open Synth
 open Lang
+open Hbase
 
 type t
 

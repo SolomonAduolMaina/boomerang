@@ -21,7 +21,9 @@
 
 (* -------------------------------------------------------------------------- *)
 (* IMPORTS AND ABBREVIATIONS                                               *)
-
+open Hbase
+open Ubase
+open Synth
 open Bsyntax
 open Bident
 open Benv

@@ -19,7 +19,8 @@
 (* Boomerang substitutions                                                    *)
 (* $Id *)
 (******************************************************************************)
-
+open Hbase
+open Ubase
 open Bsyntax
 open Bident
 open Bprint

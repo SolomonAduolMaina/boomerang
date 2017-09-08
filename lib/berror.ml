@@ -18,6 +18,8 @@
 (* Boomerang errors                                                           *)
 (* $Id: berror.ml 4607 2009-08-03 16:53:28Z ddavi $ *)
 (******************************************************************************)
+open Ubase
+open Hbase
 
 let msg = Util.format
 

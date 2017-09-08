@@ -1,3 +1,5 @@
+open Hbase
+open Synth
 open Blenses
 open Regexcontext
 open Lenscontext

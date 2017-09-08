@@ -21,6 +21,7 @@
 
 open Bident
 open Bsyntax
+open Hbase
 
 val get_type : (Qid.t -> 'a option) -> Info.t -> Qid.t -> 'a 
 

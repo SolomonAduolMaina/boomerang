@@ -21,7 +21,9 @@
 
 (* --------------------------------------------------------------------------- *)
 (* IMPORTS AND ABBREVIATIONS                                               *)
-
+open Hbase
+open Ubase
+open Synth
 module Rx = Brx
 module Arx = Barx
 module Err = Berror

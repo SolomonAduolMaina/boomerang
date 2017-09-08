@@ -21,6 +21,8 @@
 (******************************************************************************)
 
 (* ------ module imports and abbreviations ----- *)
+open Hbase
+open Ubase
 open Bsyntax
 open Bident
 open Benv

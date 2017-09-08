@@ -18,7 +18,8 @@
 (* Annotated strings                                                          *)
 (* $Id: bstring.ml 4901 2010-05-13 21:14:49Z cretin $ *)
 (******************************************************************************)
-
+open Hbase
+open Ubase
 module Rx = Brx
 module C = Bcost
 module W = Bannot.Weight

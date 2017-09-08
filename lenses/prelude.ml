@@ -21,8 +21,12 @@
 (******************************************************************************)
 
 (* ----- imports and abbreviations ----- *)
+open Bbase
+open Ubase
+open Hbase
 open Bvalue 
 open Bident
+
 module S = Bsyntax
 module L = Blenses.MLens
 module C = Blenses.Canonizer

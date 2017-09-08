@@ -21,6 +21,8 @@
 (******************************************************************************)
 
 (* ----- imports and abbreviations ----- *)
+open Hbase
+open Ubase
 open Bsyntax
 open Bident
 let msg = Util.format

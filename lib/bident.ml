@@ -18,6 +18,9 @@
 (******************************************************************************)
 
 (* ------ imports and abbreviations ------ *)
+open Hbase
+open Ubase
+
 let sprintf = Printf.sprintf
 
 (* ------ identifiers ------ *)

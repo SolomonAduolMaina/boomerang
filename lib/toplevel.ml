@@ -20,6 +20,8 @@
 (******************************************************************************)
 
 (* imports *)
+open Hbase
+open Ubase
 module L = Blenses.MLens
 open Error 
 

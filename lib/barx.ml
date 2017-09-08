@@ -18,7 +18,8 @@
 (* Annotated regular expressions                                              *)
 (* $Id: barx.ml 4901 2010-05-13 21:14:49Z cretin $ *)
 (******************************************************************************)
-
+open Hbase
+open Ubase
 module Rx = Brx
 module W = Bannot.Weight
 module T = Btag
