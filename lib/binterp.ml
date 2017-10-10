@@ -301,7 +301,7 @@ and interp_exp wq cev e0 =
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
 			let v3 = match e3 with
-				| None -> []
+				| None | Some [] -> []
 				| Some l -> List.map (interp_exp wq cev) l in
 			let rec populate_rc tbl rc s =
 				begin
@@ -365,19 +365,16 @@ and interp_exp wq cev e0 =
 				| V.Rx (j, r) ->
 						begin
 							match v2 with
-							| V.Str (_, s) ->
-								
-  V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber j r s (fun x -> s)))
-
-
-									(*if not (BS.match_rx r (BS.of_string s)) then
-										Berror.run_error i (fun () -> msg
-															"@[%s@ must be a member of %s@]" s (Brx.string_of_t r)) else*)
-										(*V.Can (i, BL.Canonizer.normalize j r (Brx.mk_string s) (fun _ -> s))*)
-							| _ -> Berror.run_error i (fun () -> msg
+							| V.Str (is, s) ->
+									let rep = match Brx.representative r with
+										| None -> Berror.run_error j
+													(fun () -> msg "This regular expression is empty!")
+										| Some rep -> rep in
+									V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber j r s (fun _ -> rep)))
+							| _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
 														"The second part of the project construct should be a string")
 						end
-				| _ -> Berror.run_error i (fun () -> msg
+				| _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
 											"The first part of the project construct should be a regular expression")
 			end
 	

@@ -515,7 +515,9 @@ appexp:
         EProject(i,$2,$4) }
         
     | SYNTH appexp DEQARROW repexp USING LBRACE listexp2
-         { let i = me2 $1 (List.hd (List.rev $7)) in 
+         { let i = if List.length $7 = 0 then
+					me2 $1 $4 else
+					me2 $1 (List.hd (List.rev $7)) in 
         ESynth (i,$2,$4,Some $7) }
 
     | SYNTH appexp DEQARROW repexp

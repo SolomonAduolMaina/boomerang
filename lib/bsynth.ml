@@ -77,9 +77,7 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
 	let (c1, i1), (c2, i2) = get_canonizers v1 v2 in
 	
 	let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
-	print_endline (Brx.string_of_t (BL.Canonizer.canonized_type c1));
 	let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in
-	print_endline (Brx.string_of_t (BL.Canonizer.canonized_type c2));
 	let l = get_strings l in
 	let f (s1, s2) = BL.Canonizer.canonize c1 (Bstring.of_string s1),
 		BL.Canonizer.canonize c2 (Bstring.of_string s2) in
