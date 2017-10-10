@@ -1,0 +1,43 @@
+module Xml_to_rdf = 
+
+let number = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
+let u_o_d = [A-Z0-9]
+
+let f1 = "<year>" . number. "</year>"
+let f2 = "<crime_index_ranking>". number. "</crime_index_ranking>"
+let f3 = "<city>". text. "</city>"
+let f4 = "<rate>". number. "</rate>"
+
+let row = perm(f1, f2, f3, f4) with (project [ \n\t\r]* -> "\n")
+
+let rdff1 = "<ds:year>" . number. "</ds:year>"
+let rdff2 = "<ds:crime_index_ranking>". number. "</ds:crime_index_ranking>"
+let rdff3 = "<ds:city>". text. "</ds:city>"
+let rdff4 = "<ds:rate>". number. "</ds:rate>"
+
+let rdfrow = perm(rdff1, rdff2, rdff3, rdff4) with (project [ \n\t\r]* -> "\n")
+
+let r1 = "_id=" . "\"" . number . "\""
+let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12} . "\""
+let r3 = "_position=" . "\"" . number . "\""
+let r4 = "_address=" . "\"http://data.cityofnewyork.us/resource/_3h6b-pt5u/" . number . "\""
+
+let inoutxml = "<row " . (project (r1. " " . r2) -> "") . " " . r3 . " " . r4 . ">"
+
+let rdfr1 = 
+"<dsbase:_3h6b-pt5u rdf:about=\"http://data.cityofnewyork.us/resource/_3h6b-pt5u/" . number . "\">"
+let rdfr2 = "<socrata:rowID>" . number . "</socrata:rowID>"
+let rdfr3 = "<rdfs:member rdf:resource=\"https://data.cityofnewyork.us/resource/_3h6b-pt5u\"/>"
+
+let inoutrdf = rdfr1 . "\n" . rdfr2 . "\n" . rdfr3 . "\n"
+
+let innerlens = synth (inoutxml . row) <=> (inoutrdf . rdfrow)
+
+let fullens =  innerlens  . (del "</row>") . (ins "</rdf:Description>\n")
+
+let finallens =  (del "<response><row>") . (ins "<rdf:RDF>\n") . 
+fullens*. (del "</row></response>") . (ins "</rdf:RDF>")
+
+

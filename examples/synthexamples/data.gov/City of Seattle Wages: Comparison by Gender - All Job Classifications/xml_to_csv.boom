@@ -1,7 +1,7 @@
 module Xml_to_csv = 
 
 let digit = [0-9]+ . ("." . [0-9]+){0,1}
-let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
+let text = ([a-zA-Z0-9/()&*,;'. ] | "-")*
 let u_o_d = [A-Z0-9]
 
 let r1 = "_id=" . "\"" . digit+ . "\""
@@ -29,25 +29,26 @@ let f12 = "<notes>" . text . "</notes>"
 
 let header = r1 . " " . r2 . " " . r3 . " " . r4
 
-let row2 = f1 . "\n" . f2 . "\n" . f3. "\n" . f4. "\n" .
-f8 . "\n" . f9. "\n" . f10. "\n" . f12 . "\n"
+let row = f1 . f2 . f3.  f4.  f5.  f6.  f7. f8 .  f9.  f10. f11 
 
-let row1 = f1 . "\n" . f5 . "\n" . f6. "\n" . f7. "\n" . 
-f8 . "\n" . f9. "\n" . f10. "\n" . f12 . "\n"
+let row1 = f1 .  f5 .  f6.  f7. f8 .  f9.  f10. f12 
 
-let row = f1 . "\n" . f2 . "\n" . f3. "\n" . f4. "\n" . f5. "\n" . f6. "\n" . f7.
-"\n" . f8 . "\n" . f9. "\n" . f10. "\n" . f11 . "\n"
+let row2 = f1 .  f2 .  f3.  f4. f8 .  f9.  f10.  f12 
 
-let csv = "\"" . text . "\"," . (digit . ","){9} . digit
+let csv = "\"" . text . "\"," . (digit . ","){9} . digit . ","
 
-let csv1 = "\"" . text . "\"," . (digit . ","){6} . text
+let csv1 = "\"" . text . "\",,," . (digit . ","){6} . "," . "\"" . text . "\""
 
-let csv2 = "\"" . text . "\"," . (digit . ","){6} . text
+let csv2 = "\"" . text . "\"," . (digit . ","){3} . 
+",,," . (digit . ","){3} . "," . "\"" . text . "\""
 
 let fullrow = "<row " . header . ">" . row . "</row>" 
 
 let innerlens = synth (row | row1 | row2) <=> (csv | csv1 | csv2)
 
-let fullens = (del ("<row " . header . ">\n")) . innerlens  . (del "</row>\n") . (ins "\n")
+let fullens = (del ("<row " . header . ">")) . innerlens  . (del "</row>") . (ins "\n")
 
-let finallens = (del "<response>\n<row>\n") . fullens*. (del "</row>\n</response>\n")
+let preamble = "Jobtitle,Female Avg Hrly Rate,No. Female Empl,Average of Female MONTHS LONGEVITY IN CURRENT CLASSIFICATION ,Male Avg Hrly Rate,No. Male Empl,Average of Male MONTHS LONGEVITY IN CURRENT CLASSIFICATION ,Total Avg Hrly Rate,Total No. Empl,Total Average of MONTHS LONGEVITY IN CURRENT CLASSIFICATION ,Ratio of women's hourly rate to men's hourly rate - percentage,Notes"
+
+let finallens = (ins (preamble . "\n")) . 
+(del "<response><row>") . fullens*. (del "</row></response>")

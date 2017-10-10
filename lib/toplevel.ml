@@ -131,6 +131,21 @@ let create_str l v =
   check_str "create" (L.vtype l) v;
   L.rcreate l (Bstring.of_string v)
 
+let apply_str l s = 
+	if not (L.bijective l) then 
+		Berror.run_error (Info.M "apply") (fun () ->  msg "lens is not bijective") else
+	match Brx.match_string (L.stype l) s, Brx.match_string (L.vtype l) s with
+	| true, true -> Berror.run_error (Info.M "apply")
+      (fun () -> 
+		msg "@[string matches both %s and %s" (Brx.string_of_t (L.vtype l)) 
+             (Brx.string_of_t (L.stype l)))
+	| false, false -> Berror.run_error (Info.M "apply")
+      (fun () -> 
+        msg "@[string matches none of %s and %s" (Brx.string_of_t (L.vtype l)) 
+             (Brx.string_of_t (L.stype l)))
+	| true, false -> L.rget l (Bstring.of_string s)
+	| false, true -> L.rget (L.invert (L.info l) l) (Bstring.of_string s)
+	
 (************)
 (* RUN MAIN *)
 (************)
@@ -172,6 +187,13 @@ let create l_n a_fn o_fn =
   write_string o_fn (create_str (lookup_lens l_n) (read_string a_fn));
   0
 
+(**********)
+(* APPLY *)
+(**********)
+let apply l_n = 
+  write_string "stdout" (apply_str (lookup_lens l_n) (read_string "stdin"));
+  0
+	
 (********)
 (* SYNC *)
 (********)
@@ -413,13 +435,19 @@ let toplevel' progName () =
          | ["put"; v_fn; s_fn],[l],[],[],o 
          | ["put"; l],[],[s_fn],[v_fn],o
          | ["put"; l; v_fn; s_fn],[],[],[],o -> 
-             ["put"],[l],[s_fn],[v_fn],o
+             ["put"],[l],[s_fn],[v_fn],o 
+				 (* read from stdin, infer and output to stdout *)
+				 | [l],[],[],[],o 
+				 | [],[l],[],[],o 
+				 | [],[],[l],[],o
+				 | [],[],[],[l],o-> ["stdio"],[l],[],[],o
          | _ -> bad_cmdline () in 
        let o_fn = if o="" then "-" else o in 
        match rest_pref,ll,sl,vl with
          | ["get"],[l],[s_fn],[]        -> get l s_fn o_fn
          | ["create"],[l],[],[v_fn]     -> create l v_fn o_fn
          | ["put"],[l],[s_fn],[v_fn]    -> put l v_fn s_fn o_fn
+				 | ["stdio"],[l],[],[]				-> apply l
          | _ -> assert false
      end)
     (fun () -> Util.flush ())

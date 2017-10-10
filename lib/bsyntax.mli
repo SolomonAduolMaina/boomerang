@@ -103,6 +103,7 @@ and exp =
 		(* canonizer primitives *)
     | EPerm of Info.t * (exp list) * exp
 		| EProject of Info.t * exp * exp
+		| ESquash of Info.t * exp * exp * exp
 
 		(* synth primitive *)
     | ESynth of Info.t * exp * exp * ((exp list) option)
@@ -127,6 +128,7 @@ and op =
   | OGeq
   | OMatch
   | OWeight
+	| OCompose
 (** Overloaded operator abstract syntax. *)
 
 and pat = 

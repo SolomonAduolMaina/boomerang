@@ -194,6 +194,7 @@ let rec interp_cast (wq: ((unit -> V.t) -> unit) option) cev b f t =
 									(native_coercion "regexp_of_string" v))
 			| SRegexp, SAregexp ->
 					native_coercion "rxlift"
+			| SRegexp, SCanonizer -> native_coercion "canonizer_copy"
 			| SRegexp, SLens ->
 					native_coercion "copy"
 			| SFunction(x, f1, f2), SFunction(y, t1, t2) ->
@@ -280,6 +281,22 @@ let rec interp_cast (wq: ((unit -> V.t) -> unit) option) cev b f t =
 
 and interp_exp wq cev e0 =
 	match e0 with
+	| ESquash(i, e1, e2, e3) ->
+			let v1 = interp_exp wq cev e1 in
+			let v2 = interp_exp wq cev e2 in
+			let v3 = interp_exp wq cev e3 in
+			let r1, r2 =
+				match v1, v2 with
+				| V.Rx (_, r1), V.Rx (_, r2) -> r1, r2
+				| _ -> Berror.run_error i (fun () -> msg "Expected regular expressions here!") in
+			let f s = match v3 with
+				| V.Fun (_, f) ->
+						if Brx.match_string r2 s then s else
+							(match f None (V.Str (i, s)) with
+								| V.Str(_, s) -> s
+								| _ -> Berror.run_error i (fun () -> msg "Expected a string here!"))
+				| _ -> Berror.run_error i (fun () -> msg "Expected a function here!") in
+			V.Can(i, Blenses.Canonizer.normalize i (Brx.mk_alt r1 r2) r2 f)
 	| ESynth(i, e1, e2, e3) ->
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
@@ -349,10 +366,14 @@ and interp_exp wq cev e0 =
 						begin
 							match v2 with
 							| V.Str (_, s) ->
-									if not (BS.match_rx r (BS.of_string s)) then
+								
+  V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber j r s (fun x -> s)))
+
+
+									(*if not (BS.match_rx r (BS.of_string s)) then
 										Berror.run_error i (fun () -> msg
-															"@[%s@ must be a member of %s@]" s (Brx.string_of_t r)) else
-										V.Can (i, BL.Canonizer.normalize j r (Brx.mk_string s) (fun _ -> s))
+															"@[%s@ must be a member of %s@]" s (Brx.string_of_t r)) else*)
+										(*V.Can (i, BL.Canonizer.normalize j r (Brx.mk_string s) (fun _ -> s))*)
 							| _ -> Berror.run_error i (fun () -> msg
 														"The second part of the project construct should be a string")
 						end

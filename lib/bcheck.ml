@@ -465,6 +465,16 @@ and lookup_var sev i q =
 
 and check_exp ?(in_let = false) sev e0 =
 	match e0 with
+	| ESquash(i, e1, e2, e3) ->
+			let e1_sort, new_e1 = check_exp sev e1 in
+			let e2_sort, new_e2 = check_exp sev e2 in
+			let e3_sort, new_e3 = check_exp sev e3 in
+			(match e1_sort, e2_sort, e3_sort with
+				| SRegexp, SRegexp, SFunction (_, SString, SString) ->
+						SCanonizer, ESquash(i, new_e1, new_e2, new_e3)
+				| _ -> static_error i
+							(fun () -> msg "Squash expects two regular expressions and a
+								string to string function"))
 	| ESynth(i, e1, e2, e3) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
 			let e2_sort, new_e2 = check_exp sev e2 in
@@ -482,20 +492,14 @@ and check_exp ?(in_let = false) sev e0 =
 				end in
 			begin
 				match e1_sort with
-				| SRegexp | SString | SChar ->
+				| SRegexp | SString | SChar | SCanonizer ->
 						begin
 							match e2_sort with
-							| SRegexp | SString | SChar -> SLens, ESynth(i, new_e1, new_e2, new_e3)
+							| SRegexp | SString | SChar | SCanonizer-> SLens, ESynth(i, new_e1, new_e2, new_e3)
 							| _ -> static_error i
-										(fun () -> msg "The second argument here should be a regular expression")
-						end
-				| SCanonizer ->
-						begin
-							match e2_sort with
-							| SCanonizer -> SLens, ESynth(i, new_e1, new_e2, new_e3)
-							| _ -> static_error i
-										(fun () -> msg
-														"The second argument here should be a canonizer" )
+										(fun () -> 
+											msg "The second argument here should be a regular expression or canonizer")
+						
 						end
 				| _ -> static_error i
 							(fun () -> msg "The first argument of synth should be a regular expression
@@ -526,13 +530,13 @@ and check_exp ?(in_let = false) sev e0 =
 					(b && List.mem e_sort [SCanonizer; SChar; SString; SRegexp]), (new_e :: l) in
 				let b, l = List.fold_left f (true, []) l in
 				if b then List.rev l else static_error i
-						(fun () -> msg 
-						"The first part of the perm construct should be a list of canonizers")
+						(fun () -> msg
+										"The first part of the perm construct should be a list of canonizers")
 			in
 			let e2_sort, new_e2 = check_exp sev e2 in
 			begin
 				match e2_sort with
-				| SCanonizer -> (SCanonizer, EPerm(i, new_l, new_e2))
+				| SCanonizer | SChar | SString |SRegexp-> (SCanonizer, EPerm(i, new_l, new_e2))
 				| _ -> static_error i
 							(fun () -> msg
 											"The second part of the perm construct should be a canonizer" )
@@ -560,7 +564,10 @@ and check_exp ?(in_let = false) sev e0 =
 				in
 				(* rules for overloaded symbols *)
 				let bin_rules =
-					[ ODot,
+					[ OCompose,
+					[ SLens, "compose";
+					SCanonizer, "canonizer_compose"]
+					;	ODot,
 					[ SString, "string_concat";
 					SRegexp, "regexp_concat";
 					SAregexp, "aregexp_concat";

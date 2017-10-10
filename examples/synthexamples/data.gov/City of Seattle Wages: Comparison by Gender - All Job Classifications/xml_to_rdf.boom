@@ -1,0 +1,70 @@
+module Xml_to_rdf = 
+
+open Xml_to_rdf_lib 
+let digit = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,;'. ] | "-")*
+let u_o_d = [A-Z0-9]
+
+let schema1 = #{string * regexp}[
+("jobtitle", text);
+("female_avg_hrly_rate", digit);
+("no_female_empl", digit);
+("average_of_female_months_longevity_in_current_classification", digit);
+("male_avg_hrly_rate", digit);
+("no_male_empl", digit);
+("average_of_male_months_longevity_in_current_classification", digit);
+("total_avg_hrly_rate", digit);
+("total_no_empl", digit);
+("total_average_of_months_longevity_in_current_classification", digit);
+("ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage", digit);
+]
+
+let schema2 = #{string * regexp}[
+("jobtitle", text);
+("male_avg_hrly_rate", digit);
+("no_male_empl", digit);
+("average_of_male_months_longevity_in_current_classification", digit);
+("total_avg_hrly_rate", digit);
+("total_no_empl", digit);
+("total_average_of_months_longevity_in_current_classification", digit);
+("notes", text);
+]
+
+let schema3 = #{string * regexp}[
+("jobtitle", text);
+("female_avg_hrly_rate", digit);
+("no_female_empl", digit);
+("average_of_female_months_longevity_in_current_classification", digit);
+("total_avg_hrly_rate", digit);
+("total_no_empl", digit);
+("total_average_of_months_longevity_in_current_classification", digit);
+("notes", text);
+]
+
+
+let xml_schema = (xml_elements schema1 | xml_elements schema2 | xml_elements schema3)
+let rdf_schema = (rdf_elements schema1 | rdf_elements schema2 | rdf_elements schema3)
+
+
+let id = xml_attribute "id" digit+ 
+let uuid = xml_attribute "uuid" (u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12})
+let position = xml_attribute "position" digit+
+let address = xml_attribute "address" 
+("http://data.seattle.gov/resource/cf52-s8er/" . digit+ )
+
+let xml_header = "<row " . (project (id . " " . uuid) -> "") . " " . position . " " . address . ">"
+
+let description = 
+"<rdf:Description rdf:about=\"http://data.seattle.gov/resource/cf52-s8er/" . digit+ . "\">"
+let rowID = "<socrata:rowID>" . digit+ . "</socrata:rowID>"
+let member = "<rdfs:member rdf:resource=\"https://data.seattle.gov/resource/cf52-s8er\"/>"
+
+let rdf_header = description . "\n" . rowID . "\n" . member . "\n"
+
+let innerlens = synth (xml_header . xml_schema) <=> (rdf_header . rdf_schema)
+
+let fullens =  innerlens  . (del "</row>") . (ins "</rdf:Description>\n")
+
+let finallens =  (del "<response><row>") . (ins "<rdf:RDF>\n") . 
+fullens*. (del "</row></response>") . (ins "</rdf:RDF>")

@@ -119,6 +119,7 @@ and exp =
 		(* canonizer primitives *)
     | EPerm of Info.t * (exp list) * exp
     | EProject of Info.t * exp * exp
+		| ESquash of Info.t * exp * exp * exp
 
 		(* synth primitive *)
 		| ESynth of Info.t * exp * exp * ((exp list) option)
@@ -142,7 +143,8 @@ and op =
   | OGeq
   | OMatch
   | OWeight
-
+	| OCompose
+	
 (* patterns *)
 and pat = 
   | PWld of Info.t
@@ -191,6 +193,7 @@ let exp_of_binding b0 = match b0 with
   | Bind(_,_,_,e) -> e
 
 let rec info_of_exp e = match e with 
+  | ESquash  (i,_,_,_)   -> i 
 	| ESynth	 (i,_,_,_)	 -> i 
 	| EPerm		 (i,_,_)		 -> i
 	| EProject (i,_,_)		 -> i
@@ -350,7 +353,8 @@ let mk_inter i e1 e2 =
   mk_bin_op i (mk_core_var i "inter") e1 e2
 
 let mk_compose i e1 e2 = 
-  mk_bin_op i (mk_core_var i "compose") e1 e2
+	mk_over i OCompose [e1;e2]
+  (*mk_bin_op i (mk_core_var i "compose") e1 e2*)
 
 let mk_set i e1 e2 = 
   mk_bin_op i (mk_qid_var (Qid.mk_core_t i "set")) e1 e2

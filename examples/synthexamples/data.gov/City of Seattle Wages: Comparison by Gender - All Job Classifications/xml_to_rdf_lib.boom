@@ -1,0 +1,19 @@
+module Xml_to_rdf_lib = 
+
+let xml_element (s:string) (r:regexp) : regexp = "<" . s . ">" . r . "</" . s . ">"
+
+let rdf_element (s:string) (r:regexp) : regexp = "<ds:" . s . ">" . r . "</ds:" . s . ">"
+
+let xml_elements (l:(string * regexp) List.t) : regexp = 
+List.fold_left{string * regexp}{regexp}
+(fun (acc:regexp) (pair:string * regexp) : regexp -> 
+acc . "<" . (fst{string}{regexp} pair) . ">" .  (snd{string}{regexp} pair) . 
+"</" . (fst{string}{regexp} pair) . ">") "" l
+
+let rdf_elements (l:(string * regexp) List.t) : regexp = 
+List.fold_left{string * regexp}{regexp}
+(fun (acc:regexp) (pair:string * regexp) : regexp -> 
+acc . "\n<ds:" . (fst{string}{regexp} pair) . ">" .  (snd{string}{regexp} pair) . 
+"</ds:" . (fst{string}{regexp} pair) . ">") "" l
+
+let xml_attribute (s:string) (r:regexp) = "_" . s . "=\"" . r . "\""

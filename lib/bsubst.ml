@@ -67,6 +67,11 @@ and free_svars_sort acc = function
 	| SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ ->
 			acc
 and free_svars_exp acc = function
+	| ESquash(_, e1, e2, e3) ->
+			let acc1 = free_svars_exp acc e1 in
+			let acc2 = free_svars_exp acc1 e2 in
+			let acc3 = free_svars_exp acc2 e3 in
+			acc3
 	| ESynth(_, e1, e2, e3) ->
 			let acc1 = free_svars_exp acc e1 in
 			let acc2 = free_svars_exp acc1 e2 in
@@ -207,6 +212,12 @@ and subst_svars_sort subst s0 = match s0 with
 	| SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SPrefs _ ->
 			s0
 and subst_svars_exp subst e0 = match e0 with
+	| ESquash(i, e1, e2, e3) ->
+			let new_e1 = subst_svars_exp subst e1 in
+			let new_e2 = subst_svars_exp subst e2 in
+			let new_e3 = subst_svars_exp subst e3 in
+			
+			ESquash(i, new_e1, new_e2, new_e3)
 	| ESynth(i, e1, e2, l) ->
 			let new_e1 = subst_svars_exp subst e1 in
 			let new_e2 = subst_svars_exp subst e2 in
@@ -324,6 +335,11 @@ and free_evars_sort acc = function
 	| SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SVar _ | SPrefs _ ->
 			acc
 and free_evars_exp acc = function
+	| ESquash(_, e1, e2, e3) ->
+			let acc1 = free_evars_exp acc e1 in
+			let acc2 = free_evars_exp acc1 e2 in
+			let acc3 = free_evars_exp acc2 e3 in
+			acc3
 	| ESynth(_, e1, e2, l) ->
 			let acc1 = free_evars_exp acc e1 in
 			let acc2 = free_evars_exp acc1 e2 in
@@ -527,6 +543,11 @@ and subst_evars_sort subst s0 = match s0 with
 	| SUnit | SBool | SInteger | SChar | SString | SRegexp | SAregexp | SSkeletons | SResources | SLens | SCanonizer | SVar _ | SPrefs _ ->
 			s0
 and subst_evars_exp subst e0 = match e0 with
+	| ESquash(i, e1, e2, e3) ->
+			let new_e1 = subst_evars_exp subst e1 in
+			let new_e2 = subst_evars_exp subst e2 in
+			let new_e3 = subst_evars_exp subst e3 in
+			ESquash(i, new_e1, new_e2, new_e3)
 	| EVar(_, x) ->
 			(try gen_assoc Qid.equal x subst with Not_found -> e0)
 	| EApp(i, e1, e2) ->
@@ -870,6 +891,11 @@ and qualify_pat resolve bound p0 = match p0 with
 			p0
 
 and qualify_exp resolve bound e0 = match e0 with
+	| ESquash(i, e1, e2, e3) ->
+			let new_e1 = qualify_exp resolve bound e1 in
+			let new_e2 = qualify_exp resolve bound e2 in
+			let new_e3 = qualify_exp resolve bound e3 in
+			ESquash(i, new_e1, new_e2, new_e3)
 	| EVar(i, x) -> EVar(i, qualify_id resolve bound x)
 	| ESynth(i, e1, e2, l) ->
 			let new_e1 = qualify_exp resolve bound e1 in

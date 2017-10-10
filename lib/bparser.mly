@@ -209,7 +209,7 @@ let add_atom ai (i,xs,bs) = match ai with
 %token <Info.t> LT GT LEQ GEQ  
 %token <Info.t> STYPE VTYPE ASTYPE AVTYPE BIJ GET PUT CREATE CANONIZE CHOOSE INTO
 %token <Info.t> ERROR
-%token <Info.t> PERM PROJECT SYNTH USING
+%token <Info.t> PERM PROJECT SYNTH USING SQUASH
 
 
 %start modl uid qid
@@ -521,6 +521,10 @@ appexp:
     | SYNTH appexp DEQARROW repexp
          { let i = me2 $1 $4 in 
         ESynth (i,$2,$4,None) }
+				
+		| SQUASH appexp ARROW repexp USING repexp
+		  { let i = me2 $1 $6 in 
+        ESquash(i,$2,$4, $6) }
                 
   | repexp
       { $1 }

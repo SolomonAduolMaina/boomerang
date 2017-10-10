@@ -1,0 +1,71 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:socrata="http://www.socrata.com/rdf/terms#" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:ods="http://open-data-standards.github.com/2012/01/open-data-standards#" xmlns:dcterm="http://purl.org/dc/terms/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dsbase="http://data.cityofnewyork.us/resource/" xmlns:ds="https://data.cityofnewyork.us/resource/_3h6b-pt5u/">
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/1">
+    <socrata:rowID>1</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>1</ds:crime_index_ranking>
+    <ds:city>New York</ds:city>
+    <ds:rate>2242.10</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/2">
+    <socrata:rowID>2</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>2</ds:crime_index_ranking>
+    <ds:city>San Jose</ds:city>
+    <ds:rate>2745.70</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/3">
+    <socrata:rowID>3</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>3</ds:crime_index_ranking>
+    <ds:city>San Diego</ds:city>
+    <ds:rate>2903.70</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/4">
+    <socrata:rowID>4</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>4</ds:crime_index_ranking>
+    <ds:city>Los Angeles</ds:city>
+    <ds:rate>3074.00</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/5">
+    <socrata:rowID>5</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>5</ds:crime_index_ranking>
+    <ds:city>Las Vegas</ds:city>
+    <ds:rate>4407.70</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/6">
+    <socrata:rowID>6</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>6</ds:crime_index_ranking>
+    <ds:city>Phoenix</ds:city>
+    <ds:rate>4654.30</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/7">
+    <socrata:rowID>7</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>7</ds:crime_index_ranking>
+    <ds:city>Philadelphia</ds:city>
+    <ds:rate>4849.50</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/8">
+    <socrata:rowID>8</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>8</ds:crime_index_ranking>
+    <ds:city>Dallas</ds:city>
+    <ds:rate>4407.70</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/9">
+    <socrata:rowID>9</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>9</ds:crime_index_ranking>
+    <ds:city>Houston</ds:city>
+    <ds:rate>6444.20</ds:rate></dsbase:_3h6b-pt5u>
+<dsbase:_3h6b-pt5u rdf:about="http://data.cityofnewyork.us/resource/_3h6b-pt5u/10">
+    <socrata:rowID>10</socrata:rowID>
+    <rdfs:member rdf:resource="https://data.cityofnewyork.us/resource/_3h6b-pt5u"/>
+    <ds:year>2009</ds:year>
+    <ds:crime_index_ranking>10</ds:crime_index_ranking>
+    <ds:city>San Antonio</ds:city>
+    <ds:rate>7241.60</ds:rate></dsbase:_3h6b-pt5u></rdf:RDF>

@@ -55,6 +55,7 @@ module Canonizer : sig
   val copy : Info.t -> Brx.t -> t
   val concat : Info.t -> t -> t -> t
   val union : Info.t -> t -> t -> t
+	(* val compose : Info.t -> t -> t -> t*)
   val star : Info.t -> t -> t
   val normalize : Info.t -> Brx.t -> Brx.t -> (string -> string) ->  t
   val sort : Info.t -> Barx.t list -> t
@@ -121,4 +122,5 @@ module MLens : sig
 	val set_synth_stype : t -> Brx.t -> t
 	val set_synth_vtype : t -> Brx.t -> t
 	val free_vars : t -> string -> string list
+	val bijective : t -> bool
 end

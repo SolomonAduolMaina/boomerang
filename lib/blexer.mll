@@ -136,6 +136,7 @@ let _ =
 		; ("with", (fun i -> WITH i))
 		; ("synth", (fun i -> SYNTH i))
 		; ("using", (fun i -> USING i))
+		; ("squash", (fun i -> SQUASH i))
     ]
 }
 

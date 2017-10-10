@@ -614,6 +614,9 @@ module Canonizer = struct
 	let union i cn1 cn2 = mk i (Union(cn1, cn2))
 	let star i cn1 = mk i (Star(cn1))
 	let normalize i ct ct0 f = mk i (Normalize(ct, ct0, f))
+  (*let compose i c1 c2 = 
+		normalize i (uncanonized_type c1) (canonized_type c2)
+		(fun s -> canonize c2 (Bstring.of_string (canonize c1 (Bstring.of_string s))))*)
 	let sort i rl =
 		let k, irl = Safelist.fold_left (fun (i, acc) ari -> (succ i, (i, ari, Arx.rxtype ari):: acc)) (0,[]) rl in
 		mk i (Sort(k, irl))

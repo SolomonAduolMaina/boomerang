@@ -58,52 +58,40 @@ let get_strings (l : V.t list) : (string * string) list =
 		| _ -> Berror.run_error (V.info_of_t v) (fun () -> msg "Expected a list here")
 	in List.fold_left helper [] l
 
+let get_canonizers v1 v2 =
+	let v1, i1 =
+		match v1 with
+		| V.Rx (i1, r1) -> BL.Canonizer.copy i1 r1, i1
+		| V.Can (i1, c) -> c, i1
+		| _ as v -> Berror.run_error (V.info_of_t v)
+					(fun () -> msg "Expecting a canonizer or regular expression here") in
+	let v2, i2 =
+		match v2 with
+		| V.Rx (i1, r1) -> BL.Canonizer.copy i1 r1, i1
+		| V.Can (i1, c) -> c, i1
+		| _ as v -> Berror.run_error (V.info_of_t v)
+					(fun () -> msg "Expecting a canonizer or regular expression here") in
+	(v1, i1), (v2, i2)
+
 let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensContext.t) =
-	match v1 with
-	| V.Rx (i1, r1) ->
-			begin
-				match v2 with
-				| V.Rx (i2, r2) ->
-						let s1 = Brx.brx_to_lrx r1 i1 rc in
-						let s2 = Brx.brx_to_lrx r2 i2 rc in
-						let l = get_strings l in
-						let lens = gen_lens rc lc s1 s2 (List.rev l) in
-						let lens =
-							match lens with
-							| None -> Berror.run_error (Info.merge_inc i1 i2)
-										(fun () -> msg "Could not synthesize lens" )
-							| Some lens -> lens in
-						let info = Info.merge_inc i1 i2 in
-						let lens' = slens_to_blens lens rc lc info in
-						info, lens'
-				
-				| _ -> Berror.run_error (V.info_of_t v2)
-							(fun () -> msg "Synth_from_regexp expects a regular expression here" )
-			end
-	| V.Can (i1, c1) ->
-			begin
-				match v2 with
-				| V.Can (i2, c2) ->
-						let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
-						let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in
-						let l = get_strings l in
-						let f (s1, s2) = BL.Canonizer.canonize c1 (Bstring.of_string s1),
-						 BL.Canonizer.canonize c2 (Bstring.of_string s2) in
-						let l = List.map f l in
-						let lens = gen_lens rc lc s1 s2 l in
-						let info = Info.merge_inc i1 i2 in
-						let lens = match lens with
-							| None -> Berror.run_error info
-										(fun () -> msg "Could not synthesize lens" )
-							| Some lens -> slens_to_blens lens rc lc info in
-						let lens = (BL.MLens.left_quot info c1 lens) in
-						info, BL.MLens.right_quot info lens c2
-				| _ -> Berror.run_error (V.info_of_t v2)
-							(fun () -> msg "synth expects a regular expression or canonizer" )
-				
-			end
-	| _ -> Berror.run_error (V.info_of_t v1)
-				(fun () -> msg "synth expects a regular expression or canonizer" )
+	let (c1, i1), (c2, i2) = get_canonizers v1 v2 in
+	
+	let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
+	print_endline (Brx.string_of_t (BL.Canonizer.canonized_type c1));
+	let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in
+	print_endline (Brx.string_of_t (BL.Canonizer.canonized_type c2));
+	let l = get_strings l in
+	let f (s1, s2) = BL.Canonizer.canonize c1 (Bstring.of_string s1),
+		BL.Canonizer.canonize c2 (Bstring.of_string s2) in
+	let l = List.map f l in
+	let lens = gen_lens rc lc s1 s2 l in
+	let info = Info.merge_inc i1 i2 in
+	let lens = match lens with
+		| None -> Berror.run_error info
+					(fun () -> msg "Could not synthesize lens" )
+		| Some lens -> slens_to_blens lens rc lc info in
+	let lens = (BL.MLens.left_quot info c1 lens) in
+	info, BL.MLens.right_quot info lens c2
 
 (**let rec vtoString (id : Qid.t) (v : V.t) =
 match v with

@@ -727,6 +727,12 @@ operator @.@ desugars into @lens_concat@ when applied to lens values.
 #* test put (lens_concat (copy [A-Z]) (copy [0-9])) "B2" "A1" = "B2"
 #* test create (lens_concat (copy [A-Z]) (copy [0-9])) "B2" = "B2"
 
+\LENSSECTION{@canonizer_compose@} The @canonizer_compose@ operator puts two
+canonizers in sequence.
+
+#* let canonizer_compose (c1:canonizer) (c2:canonizer) : canonizer 
+## = Native.Prelude.canonizer_compose c1 c2
+
 
 \LENSSECTION{@compose@} The @compose@ operator puts two lenses
 in sequence. The abstract type of the lens on the left and the 

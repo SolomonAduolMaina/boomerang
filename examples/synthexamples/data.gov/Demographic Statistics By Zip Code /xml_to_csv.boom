@@ -1,0 +1,76 @@
+module Xml_to_csv = 
+
+let number = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
+let u_o_d = [A-Z0-9]
+
+let f1 = "<jurisdiction_name>" . number. "</jurisdiction_name>"
+let f2 = "<count_participants>". number. "</count_participants>"
+let f3 = "<count_female>". number. "</count_female>"
+let f4 = "<percent_female>". number. "</percent_female>"
+let f5 = "<count_male>". number. "</count_male>"
+let f6 = "<percent_male>". number. "</percent_male>"
+let f7 = "<count_gender_unknown>". number. "</count_gender_unknown>"
+let f8 = "<percent_gender_unknown>". number. "</percent_gender_unknown>"
+let f9 = "<count_gender_total>". number. "</count_gender_total>"
+let f10 = "<percent_gender_total>". number. "</percent_gender_total>"
+let f11 = "<count_pacific_islander>". number. "</count_pacific_islander>"
+let f12 = "<percent_pacific_islander>". number. "</percent_pacific_islander>"
+let f13 = "<count_hispanic_latino>". number. "</count_hispanic_latino>"
+let f14 = "<percent_hispanic_latino>". number. "</percent_hispanic_latino>"
+let f15 = "<count_american_indian>". number. "</count_american_indian>"
+let f16 = "<percent_american_indian>". number. "</percent_american_indian>"
+let f17 = "<count_asian_non_hispanic>". number. "</count_asian_non_hispanic>"
+let f18 = "<percent_asian_non_hispanic>". number. "</percent_asian_non_hispanic>"
+let f19 = "<count_white_non_hispanic>". number. "</count_white_non_hispanic>"
+let f20 = "<percent_white_non_hispanic>". number. "</percent_white_non_hispanic>"
+let f21 = "<count_black_non_hispanic>". number. "</count_black_non_hispanic>"
+let f22 = "<percent_black_non_hispanic>". number. "</percent_black_non_hispanic>"
+let f23 = "<count_other_ethnicity>". number. "</count_other_ethnicity>"
+let f23 = "<percent_other_ethnicity>". number. "</percent_other_ethnicity>"
+let f24 = "<count_ethnicity_unknown>". number. "</count_ethnicity_unknown>"
+let f25 = "<percent_ethnicity_unknown>". number. "</percent_ethnicity_unknown>"
+let f26 = "<count_ethnicity_total>". number. "</count_ethnicity_total>"
+let f27 = "<percent_ethnicity_total>". number. "</percent_ethnicity_total>"
+let f28 = "<count_permanent_resident_alien>". number. "</count_permanent_resident_alien>"
+let f29 = "<percent_permanent_resident_alien>". number. "</percent_permanent_resident_alien>"
+let f30 = "<count_us_citizen>". number. "</count_us_citizen>"
+let f31 = "<percent_us_citizen>". number. "</percent_us_citizen>"
+let f32 = "<count_other_citizen_status>". number. "</count_other_citizen_status>"
+let f33 = "<percent_other_citizen_status>". number. "</percent_other_citizen_status>"
+let f34 = "<count_citizen_status_unknown>". number. "</count_citizen_status_unknown>"
+let f35 = "<percent_citizen_status_unknown>". number. "</percent_citizen_status_unknown>"
+let f36 = "<count_citizen_status_total>". number. "</count_citizen_status_total>"
+let f37 = "<percent_citizen_status_total>". number. "</percent_citizen_status_total>"
+let f38 = "<count_receives_public_assistance>". number. "</count_receives_public_assistance>"
+let f39 = "<percent_receives_public_assistance>". number. "</percent_receives_public_assistance>"
+let f40 = "<count_nreceives_public_assistance>". number. "</count_nreceives_public_assistance>"
+let f41 = "<percent_nreceives_public_assistance>". number. "</percent_nreceives_public_assistance>"
+let f42 = "<count_public_assistance_unknown>". number. "</count_public_assistance_unknown>"
+let f43 = "<percent_public_assistance_unknown>". number. "</percent_public_assistance_unknown>"
+let f44 = "<count_public_assistance_total>". number. "</count_public_assistance_total>"
+let f45 = "<percent_public_assistance_total>". number. "</percent_public_assistance_total>"
+
+let row = f1 . f2 . f3 . f4. f5.  f6.  f7. f8 .  f9.  f10.  f11 . f12 . f13 . f14. 
+f15.  f16.  f17. f18 .  f19.  f20.  f21 . f22 . f23 . f24. f25.  f26.  f27. 
+f28 .  f29.  f30.  f31 . f32 . f33 . f34. f35.  f36.  f37. f38 . f39.
+f40.  f41 . f42 . f43 . f44 . f45
+
+let r1 = "_id=" . "\"" . number . "\""
+let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12} . "\""
+let r3 = "_position=" . "\"" . number . "\""
+let r4 = "_address=" . "\"http://data.cityofnewyork.us/resource/kku6-nxdu/" . number . "\""
+
+let header = r1 . " " . r2 . " " . r3 . " " . r4
+
+let csv = (number . ","){43} . number
+
+let innerlens = synth row <=> csv
+
+let fullens = (del ("<row " . header . ">")) . innerlens  . (del "</row>") . (ins "\n")
+
+let preamble = "JURISDICTION NAME,COUNT PARTICIPANTS,COUNT FEMALE,PERCENT FEMALE,COUNT MALE,PERCENT MALE,COUNT GENDER UNKNOWN,PERCENT GENDER UNKNOWN,COUNT GENDER TOTAL,PERCENT GENDER TOTAL,COUNT PACIFIC ISLANDER,PERCENT PACIFIC ISLANDER,COUNT HISPANIC LATINO,PERCENT HISPANIC LATINO,COUNT AMERICAN INDIAN,PERCENT AMERICAN INDIAN,COUNT ASIAN NON HISPANIC,PERCENT ASIAN NON HISPANIC,COUNT WHITE NON HISPANIC,PERCENT WHITE NON HISPANIC,COUNT BLACK NON HISPANIC,PERCENT BLACK NON HISPANIC,COUNT OTHER ETHNICITY,PERCENT OTHER ETHNICITY,COUNT ETHNICITY UNKNOWN,PERCENT ETHNICITY UNKNOWN,COUNT ETHNICITY TOTAL,PERCENT ETHNICITY TOTAL,COUNT PERMANENT RESIDENT ALIEN,PERCENT PERMANENT RESIDENT ALIEN,COUNT US CITIZEN,PERCENT US CITIZEN,COUNT OTHER CITIZEN STATUS,PERCENT OTHER CITIZEN STATUS,COUNT CITIZEN STATUS UNKNOWN,PERCENT CITIZEN STATUS UNKNOWN,COUNT CITIZEN STATUS TOTAL,PERCENT CITIZEN STATUS TOTAL,COUNT RECEIVES PUBLIC ASSISTANCE,PERCENT RECEIVES PUBLIC ASSISTANCE,COUNT NRECEIVES PUBLIC ASSISTANCE,PERCENT NRECEIVES PUBLIC ASSISTANCE,COUNT PUBLIC ASSISTANCE UNKNOWN,PERCENT PUBLIC ASSISTANCE UNKNOWN,COUNT PUBLIC ASSISTANCE TOTAL,PERCENT PUBLIC ASSISTANCE TOTAL"
+
+let finallens = (ins (preamble . "\n")) . 
+(del "<response><row>") . fullens*. (del "</row></response>")

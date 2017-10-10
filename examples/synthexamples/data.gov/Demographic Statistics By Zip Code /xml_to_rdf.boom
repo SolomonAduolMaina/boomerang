@@ -1,0 +1,135 @@
+module Xml_to_rdf = 
+
+let number = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
+let u_o_d = [A-Z0-9]
+
+let f1 = "<jurisdiction_name>" . number. "</jurisdiction_name>"
+let f2 = "<count_participants>". number. "</count_participants>"
+let f3 = "<count_female>". number. "</count_female>"
+let f4 = "<percent_female>". number. "</percent_female>"
+let f5 = "<count_male>". number. "</count_male>"
+let f6 = "<percent_male>". number. "</percent_male>"
+let f7 = "<count_gender_unknown>". number. "</count_gender_unknown>"
+let f8 = "<percent_gender_unknown>". number. "</percent_gender_unknown>"
+let f9 = "<count_gender_total>". number. "</count_gender_total>"
+let f10 = "<percent_gender_total>". number. "</percent_gender_total>"
+let f11 = "<count_pacific_islander>". number. "</count_pacific_islander>"
+let f12 = "<percent_pacific_islander>". number. "</percent_pacific_islander>"
+let f13 = "<count_hispanic_latino>". number. "</count_hispanic_latino>"
+let f14 = "<percent_hispanic_latino>". number. "</percent_hispanic_latino>"
+let f15 = "<count_american_indian>". number. "</count_american_indian>"
+let f16 = "<percent_american_indian>". number. "</percent_american_indian>"
+let f17 = "<count_asian_non_hispanic>". number. "</count_asian_non_hispanic>"
+let f18 = "<percent_asian_non_hispanic>". number. "</percent_asian_non_hispanic>"
+let f19 = "<count_white_non_hispanic>". number. "</count_white_non_hispanic>"
+let f20 = "<percent_white_non_hispanic>". number. "</percent_white_non_hispanic>"
+let f21 = "<count_black_non_hispanic>". number. "</count_black_non_hispanic>"
+let f22 = "<percent_black_non_hispanic>". number. "</percent_black_non_hispanic>"
+let f23 = "<count_other_ethnicity>". number. "</count_other_ethnicity>"
+let f23 = "<percent_other_ethnicity>". number. "</percent_other_ethnicity>"
+let f24 = "<count_ethnicity_unknown>". number. "</count_ethnicity_unknown>"
+let f25 = "<percent_ethnicity_unknown>". number. "</percent_ethnicity_unknown>"
+let f26 = "<count_ethnicity_total>". number. "</count_ethnicity_total>"
+let f27 = "<percent_ethnicity_total>". number. "</percent_ethnicity_total>"
+let f28 = "<count_permanent_resident_alien>". number. "</count_permanent_resident_alien>"
+let f29 = "<percent_permanent_resident_alien>". number. "</percent_permanent_resident_alien>"
+let f30 = "<count_us_citizen>". number. "</count_us_citizen>"
+let f31 = "<percent_us_citizen>". number. "</percent_us_citizen>"
+let f32 = "<count_other_citizen_status>". number. "</count_other_citizen_status>"
+let f33 = "<percent_other_citizen_status>". number. "</percent_other_citizen_status>"
+let f34 = "<count_citizen_status_unknown>". number. "</count_citizen_status_unknown>"
+let f35 = "<percent_citizen_status_unknown>". number. "</percent_citizen_status_unknown>"
+let f36 = "<count_citizen_status_total>". number. "</count_citizen_status_total>"
+let f37 = "<percent_citizen_status_total>". number. "</percent_citizen_status_total>"
+let f38 = "<count_receives_public_assistance>". number. "</count_receives_public_assistance>"
+let f39 = "<percent_receives_public_assistance>". number. "</percent_receives_public_assistance>"
+let f40 = "<count_nreceives_public_assistance>". number. "</count_nreceives_public_assistance>"
+let f41 = "<percent_nreceives_public_assistance>". number. "</percent_nreceives_public_assistance>"
+let f42 = "<count_public_assistance_unknown>". number. "</count_public_assistance_unknown>"
+let f43 = "<percent_public_assistance_unknown>". number. "</percent_public_assistance_unknown>"
+let f44 = "<count_public_assistance_total>". number. "</count_public_assistance_total>"
+let f45 = "<percent_public_assistance_total>". number. "</percent_public_assistance_total>"
+
+
+let row = f1 . f2 . f3 . f4. f5.  f6.  f7. f8 .  f9.  f10.  f11 . f12 . f13 . f14. 
+f15.  f16.  f17. f18 .  f19.  f20.  f21 . f22 . f23 . f24. f25.  f26.  f27. 
+f28 .  f29.  f30.  f31 . f32 . f33 . f34. f35.  f36.  f37. f38 . f39.
+f40.  f41 . f42 . f43 . f44 . f45
+
+let rdff1 = "<ds:jurisdiction_name>" . number. "</ds:jurisdiction_name>"
+let rdff2 = "<ds:count_participants>". number. "</ds:count_participants>"
+let rdff3 = "<ds:count_female>". number. "</ds:count_female>"
+let rdff4 = "<ds:percent_female>". number. "</ds:percent_female>"
+let rdff5 = "<ds:count_male>". number. "</ds:count_male>"
+let rdff6 = "<ds:percent_male>". number. "</ds:percent_male>"
+let rdff7 = "<ds:count_gender_unknown>". number. "</ds:count_gender_unknown>"
+let rdff8 = "<ds:percent_gender_unknown>". number. "</ds:percent_gender_unknown>"
+let rdff9 = "<ds:count_gender_total>". number. "</ds:count_gender_total>"
+let rdff10 = "<ds:percent_gender_total>". number. "</ds:percent_gender_total>"
+let rdff11 = "<ds:count_pacific_islander>". number. "</ds:count_pacific_islander>"
+let rdff12 = "<ds:percent_pacific_islander>". number. "</ds:percent_pacific_islander>"
+let rdff13 = "<ds:count_hispanic_latino>". number. "</ds:count_hispanic_latino>"
+let rdff14 = "<ds:percent_hispanic_latino>". number. "</ds:percent_hispanic_latino>"
+let rdff15 = "<ds:count_american_indian>". number. "</ds:count_american_indian>"
+let rdff16 = "<ds:percent_american_indian>". number. "</ds:percent_american_indian>"
+let rdff17 = "<ds:count_asian_non_hispanic>". number. "</ds:count_asian_non_hispanic>"
+let rdff18 = "<ds:percent_asian_non_hispanic>". number. "</ds:percent_asian_non_hispanic>"
+let rdff19 = "<ds:count_white_non_hispanic>". number. "</ds:count_white_non_hispanic>"
+let rdff20 = "<ds:percent_white_non_hispanic>". number. "</ds:percent_white_non_hispanic>"
+let rdff21 = "<ds:count_black_non_hispanic>". number. "</ds:count_black_non_hispanic>"
+let rdff22 = "<ds:percent_black_non_hispanic>". number. "</ds:percent_black_non_hispanic>"
+let rdff23 = "<ds:count_other_ethnicity>". number. "</ds:count_other_ethnicity>"
+let rdff23 = "<ds:percent_other_ethnicity>". number. "</ds:percent_other_ethnicity>"
+let rdff24 = "<ds:count_ethnicity_unknown>". number. "</ds:count_ethnicity_unknown>"
+let rdff25 = "<ds:percent_ethnicity_unknown>". number. "</ds:percent_ethnicity_unknown>"
+let rdff26 = "<ds:count_ethnicity_total>". number. "</ds:count_ethnicity_total>"
+let rdff27 = "<ds:percent_ethnicity_total>". number. "</ds:percent_ethnicity_total>"
+let rdff28 = "<ds:count_permanent_resident_alien>". number. "</ds:count_permanent_resident_alien>"
+let rdff29 = "<ds:percent_permanent_resident_alien>". number. "</ds:percent_permanent_resident_alien>"
+let rdff30 = "<ds:count_us_citizen>". number. "</ds:count_us_citizen>"
+let rdff31 = "<ds:percent_us_citizen>". number. "</ds:percent_us_citizen>"
+let rdff32 = "<ds:count_other_citizen_status>". number. "</ds:count_other_citizen_status>"
+let rdff33 = "<ds:percent_other_citizen_status>". number. "</ds:percent_other_citizen_status>"
+let rdff34 = "<ds:count_citizen_status_unknown>". number. "</ds:count_citizen_status_unknown>"
+let rdff35 = "<ds:percent_citizen_status_unknown>". number. "</ds:percent_citizen_status_unknown>"
+let rdff36 = "<ds:count_citizen_status_total>". number. "</ds:count_citizen_status_total>"
+let rdff37 = "<ds:percent_citizen_status_total>". number. "</ds:percent_citizen_status_total>"
+let rdff38 = "<ds:count_receives_public_assistance>". number. "</ds:count_receives_public_assistance>"
+let rdff39 = "<ds:percent_receives_public_assistance>". number. "</ds:percent_receives_public_assistance>"
+let rdff40 = "<ds:count_nreceives_public_assistance>". number. "</ds:count_nreceives_public_assistance>"
+let rdff41 = "<ds:percent_nreceives_public_assistance>". number. "</ds:percent_nreceives_public_assistance>"
+let rdff42 = "<ds:count_public_assistance_unknown>". number. "</ds:count_public_assistance_unknown>"
+let rdff43 = "<ds:percent_public_assistance_unknown>". number. "</ds:percent_public_assistance_unknown>"
+let rdff44 = "<ds:count_public_assistance_total>". number. "</ds:count_public_assistance_total>"
+let rdff45 = "<ds:percent_public_assistance_total>". number. "</ds:percent_public_assistance_total>"
+
+let rdfrow = rdff1 . rdff2 . rdff3 . rdff4. rdff5.  rdff6.  rdff7. rdff8 .  
+rdff9.  rdff10.  rdff11 . rdff12 . rdff13 . rdff14. rdff15.  rdff16.  rdff17. 
+rdff18 .  rdff19.  rdff20.  rdff21 . rdff22 . rdff23 . rdff24. rdff25 .  
+rdff26.  rdff27. rdff28 .  rdff29.  rdff30.  rdff31 . rdff32 . rdff33 . rdff34. 
+rdff35.  rdff36.  rdff37. rdff38 . rdff39. rdff40.  rdff41 .rdff42 . rdff43 . rdff44
+
+let r1 = "_id=" . "\"" . number . "\""
+let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12} . "\""
+let r3 = "_position=" . "\"" . number . "\""
+let r4 = "_address=" . "\"http://data.cityofnewyork.us/resource/kku6-nxdu/" . number . "\""
+
+let inoutxml = "<row " . (project (r1. " " . r2) -> "") . " " . r3 . " " . r4 . ">"
+
+let rdfr1 = 
+"<dsbase:kku6-nxdu rdf:about=\"http://data.cityofnewyork.us/resource/kku6-nxdu/" . number . "\">"
+let rdfr2 = "<socrata:rowID>" . number . "</socrata:rowID>"
+let rdfr3 = "<rdfs:member rdf:resource=\"https://data.cityofnewyork.us/resource/kku6-nxdu\"/>"
+
+let inoutrdf = rdfr1 . "\n" . rdfr2 . "\n" . rdfr3 . "\n"
+
+let innerlens = synth (inoutxml . row) <=> (inoutrdf . rdfrow)
+
+let fullens =  innerlens  . (del "</row>") . (ins "</rdf:Description>\n")
+
+let finallens =  (del "<response><row>") . (ins "<rdf:RDF>\n") . 
+fullens*. (del "</row></response>") . (ins "</rdf:RDF>")
+
+

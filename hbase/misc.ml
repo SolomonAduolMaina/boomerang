@@ -518,6 +518,8 @@ let read_chan chan =
 let read file =
   if file = "-" then
     read_chan stdin
+		else if file = "stdin" then
+			read_line ()
   else 
     let chan = open_in_bin file in
     try
@@ -531,6 +533,8 @@ let read file =
 let write file s =
   if file = "-" then
     output_string stdout s
+		else if file = "stdout" then
+            print_endline s
   else 
     let chan = open_out_bin file in
     try
