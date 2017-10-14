@@ -213,6 +213,9 @@ let get_s v = match v with
 
 let get_r v = match v with
 		Rx(_, r) -> r
+	| Str(i, s) -> Brx.mk_string s
+  | Chr(i, c) -> Brx.mk_string (Char.escaped c)
+	| Can(_, q) -> Blenses.Canonizer.uncanonized_type q
 	| _ -> conversion_error "regexp" v
 
 let get_a v = match v with

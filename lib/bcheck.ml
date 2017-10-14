@@ -165,6 +165,7 @@ let rec compatible f t = match f, t with
 	| SRegexp, SAregexp
 	| SRegexp, SLens
 	| SRegexp, SCanonizer
+	| SCanonizer, SRegexp
 	-> true
 	| SFunction(_, s11, s12), SFunction(_, s21, s22) ->
 	(* note: contravariant in argument! *)
