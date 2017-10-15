@@ -14,6 +14,7 @@ val viewPref : string list t
 val expressionPref : string list t
 val restPref : string list t
 val checkPref : string list t
+val findSavingsPref : bool t
 
 val includePref : string list t
 

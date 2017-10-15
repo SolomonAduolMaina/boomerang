@@ -107,7 +107,8 @@ sig
 	val diff : int -> int -> t -> t -> t
 	val mem : int -> t -> bool
 	val ascii : t -> bool
-	val equal : t -> t -> bool
+  val equal : t -> t -> bool
+  val size : t -> int
 end = struct
 	(* represented as lists of pairs of ints *)
 	type p = int * int
@@ -161,7 +162,12 @@ end = struct
 	let ascii l =
 		Safelist.for_all (fun (c1, c2) -> c2 <= max_ascii_code) l
 	
-	let rec equal l1 l2 = l1 = l2
+  let rec equal l1 l2 = l1 = l2
+
+  let rec size
+      (l:t)
+    : int =
+    (List.length l) * 2
 end
 
 type charmap = (int * int) list
@@ -1412,7 +1418,94 @@ let rec seq_to_string (r : L.Regex.t) : L.Regex.t =
 	| L.Regex.RegExConcat (r1, r2) -> L.Regex.RegExConcat (seq_to_string r1, seq_to_string r2)
 	| L.Regex.RegExOr(L.Regex.RegExOr(r1, r2), r3) ->
 			seq_to_string (L.Regex.RegExOr(r1, L.Regex.RegExOr(r2, r3)))
-	| L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seq_to_string r1, seq_to_string r2)
+  | L.Regex.RegExOr (r1, r2) -> L.Regex.RegExOr (seq_to_string r1, seq_to_string r2)
+
+let rec size_with_processed_elements
+    (processed_elements:string list)
+    (r : t)
+  : (int * string list) =
+  begin match r.M.desc with
+    | M.CSet l -> (CharSet.size l, processed_elements)
+    | M.Seq (r1,r2) ->
+      let (s1,processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r1
+      in
+      let (s2,processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r2
+      in
+      (s1 + s2 + 1, processed_elements)
+    | M.Alt l ->
+      List.fold_left
+        (fun (size_acc,processed_elements) r ->
+           let (sr,processed_elements) =
+             size_with_processed_elements
+               processed_elements
+               r
+           in
+           (size_acc+sr+1,processed_elements))
+        (-1,processed_elements)
+        l
+    | M.Rep (r,_,_) ->
+      let (size, processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r
+      in
+      (size+1,processed_elements)
+    | M.Var (s, r) ->
+      if List.mem s processed_elements then
+        (1,processed_elements)
+      else
+        let (size,processed_elements) =
+          size_with_processed_elements
+            processed_elements
+            r
+        in
+        (size+1,s::processed_elements)
+		| M.Inter tl ->
+      List.fold_left
+        (fun (size_acc,processed_elements) r ->
+           let (sr,processed_elements) =
+             size_with_processed_elements
+               processed_elements
+               r
+           in
+           (size_acc+sr+1,processed_elements))
+        (-1,processed_elements)
+        tl
+	  | Diff(r1,r2) ->
+      let (s1,processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r1
+      in
+      let (s2,processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r2
+      in
+      (s1 + s2 + 1, processed_elements)
+	  | Perm (rs,r') ->
+      let (size,processed_elements) =
+        size_with_processed_elements
+          processed_elements
+          r'
+      in
+      List.fold_left
+        (fun (size_acc,processed_elements) r ->
+           let (sr,processed_elements) =
+             size_with_processed_elements
+               processed_elements
+               r
+           in
+           (size_acc+sr,processed_elements))
+        (size+1,processed_elements)
+        rs
+  end
 
 let brx_to_lrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 	let rec helper r i  =

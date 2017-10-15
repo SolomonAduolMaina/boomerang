@@ -356,6 +356,7 @@ let toplevel' progName () =
   let e_pref = Prefs.expressionPref in
   let rest = Prefs.restPref in
   let check_pref = Prefs.checkPref in
+  let find_savings_pref = Prefs.findSavingsPref in
 
   Prefs.parseCmdLine usageMsg;
   
@@ -365,7 +366,11 @@ let toplevel' progName () =
   let vl = Safelist.rev (Prefs.read v_pref) in 
   let el = Safelist.rev (Prefs.read e_pref) in
   let o = Prefs.read o_pref in
-  let rest_pref = Safelist.rev (Prefs.read rest) in 
+  let rest_pref = Safelist.rev (Prefs.read rest) in
+
+  if Prefs.read find_savings_pref then
+    print_endline "YES"
+  ;
 
   (* run unit tests if needed *)
   if Prefs.read check_pref <> [] then

@@ -34,6 +34,7 @@ module TmA = T.MapA
 module TmI = T.MapInt
 module TmImA = T.MapIntMapA
 module L = Lang
+open Bident
 
 let sprintf = Printf.sprintf
 let msg = Util.format
@@ -299,9 +300,12 @@ module Canonizer = struct
 		| Sort of int * (int * Arx.t * Rx.t) list
 		| Columnize of int * Rx.t * char * string
 		| FromLens of Arx.t * Arx.t * equiv * mtype
-		* (Bstring.t -> (P.t * TmI.t) -> (P.t * TmI.t))
-		* (Bstring.t -> string) * (Bstring.t -> string)
-	
+		  * (Bstring.t -> (P.t * TmI.t) -> (P.t * TmI.t))
+	    * (Bstring.t -> string) * (Bstring.t -> string)
+    | FromVariable of Qid.t * t
+    | FromPermute of t list * t * t
+	  | FromProject of Rx.t * string * t
+
 	and t =
 		{ (* ----- meta data ----- *)
 			info : Info.t;
@@ -335,7 +339,11 @@ module Canonizer = struct
 					| Normalize (ct, ct0, f) -> Arx.mk_rx ct
 					| Sort (_, irl) ->
 							Arx.mk_star (Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_alt acc ari) Arx.empty irl)
-					| FromLens (ct, _, _, _, _, _, _) -> ct in
+		      | FromLens (ct, _, _, _, _, _, _) -> ct
+          | FromVariable (_,cn') -> uncanonized_atype cn'
+          | FromPermute (_,_,cn') -> uncanonized_atype cn'
+          | FromProject (_,_,cn') -> uncanonized_atype cn'
+        in
 				cn.uncanonized_atype <- Some ut;
 				ut
 	
@@ -353,7 +361,11 @@ module Canonizer = struct
 					| Normalize (ct, ct0, f) -> Arx.mk_rx ct0
 					| Sort (_, irl) ->
 							Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_seq ari acc) Arx.epsilon irl (* NB order! *)
-					| FromLens (_, at, _, _, _, _, _) -> at in
+		      | FromLens (_, at, _, _, _, _, _) -> at
+          | FromVariable (_,cn) -> canonized_atype cn
+          | FromPermute (_,_,cn) -> canonized_atype cn
+          | FromProject (_,_,cn) -> canonized_atype cn
+        in
 				cn.canonized_atype <- Some ct;
 				ct
 	
@@ -371,7 +383,11 @@ module Canonizer = struct
 							if Rx.is_empty (Rx.mk_diff (canonized_type cn2) (canonized_type cn1)) then (cnrel cn1)
 							else equiv_merge (cnrel cn1) (cnrel cn2)
 					| Star cn -> cnrel cn
-					| FromLens (_, _, eq, _, _, _, _) -> eq in
+		      | FromLens (_, _, eq, _, _, _, _) -> eq
+          | FromVariable (_,cn') -> cnrel cn'
+          | FromPermute (_,_,cn') -> cnrel cn'
+          | FromProject (_,_,cn') -> cnrel cn'
+        in
 				cn.cnrel <- Some cr;
 				cr
 	
@@ -440,7 +456,10 @@ module Canonizer = struct
 									) shift p,
 								TmI.plus i shift
 					) pi (Safelist.rev jzl)
-		| FromLens (_, _, _, _, p, _, _) -> p u pi
+	  | FromLens (_, _, _, _, p, _, _) -> p u pi
+    | FromVariable (_,cn') -> gperm cn' u pi
+    | FromPermute (_,_,cn') -> gperm cn' u pi
+    | FromProject (_,_,cn') -> gperm cn' u pi
 	
 	and canonize cn u =
 		let basic f = f (Bstring.to_string u) in
@@ -463,7 +482,10 @@ module Canonizer = struct
 					) us;
 				Buffer.contents buf
 		| Normalize (_, _, f) -> basic f
-		| FromLens (_, _, _, _, _, get, _) -> get u
+	  | FromLens (_, _, _, _, _, get, _) -> get u
+    | FromVariable (_,cn') -> canonize cn' u
+    | FromPermute (_,_,cn') -> canonize cn' u
+    | FromProject (_,_,cn') -> canonize cn' u
 		| Sort (k, irl) ->
 		(* INEFFICIENT! *)
 				let ul = Bstring.star_split (uncanonized_type cn) u in
@@ -540,7 +562,10 @@ module Canonizer = struct
 				Buffer.contents buf
 		| Normalize _ -> basic (fun c -> c)
 		| FromLens (_, _, _, _, _, _, create) -> create c
-		| Sort _ -> Bstring.to_string c
+	  | Sort _ -> Bstring.to_string c
+    | FromVariable (_,cn') -> choose cn' c
+    | FromPermute (_,_,cn') -> choose cn' c
+    | FromProject (_,_,cn') -> choose cn' c
 		| Columnize (k, r, ch, nl) -> basic (
 						fun b ->
 								let b_len = String.length b in
@@ -621,7 +646,10 @@ module Canonizer = struct
 	let from_lens i ct at eq mt perm get crt = mk i (FromLens(ct, at, eq, mt, perm, get, crt))
 	let iter i cn1 min maxo =
 		Arx.generic_iter (copy i Rx.epsilon) (union i) (concat i) (star i)
-			min maxo cn1
+		min maxo cn1
+  let from_variable i v c = mk i (FromVariable(v,c))
+  let from_permute i cl c' c = mk i (FromPermute(cl,c',c))
+  let from_project i r s c = mk i (FromProject(r,s,c))
 end
 
 (* --------------------------------------------------------------------------- *)

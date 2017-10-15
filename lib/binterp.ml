@@ -352,7 +352,11 @@ and interp_exp wq cev e0 =
 									if not (BS.match_rx r (BS.of_string s)) then
 										Berror.run_error i (fun () -> msg
 															"@[%s@ must be a member of %s@]" s (Brx.string_of_t r)) else
-										V.Can (i, BL.Canonizer.normalize j r (Brx.mk_string s) (fun _ -> s))
+					        V.Can (i,BL.Canonizer.from_project
+                      j
+                      r
+                      s
+                      (BL.Canonizer.normalize j r (Brx.mk_string s) (fun _ -> s)))
 							| _ -> Berror.run_error i (fun () -> msg
 														"The second part of the project construct should be a string")
 						end
@@ -369,7 +373,13 @@ and interp_exp wq cev e0 =
 	| EVar(i, q) ->
 			begin
 				match CEnv.lookup_both cev q with
-				| Some((G.Unknown, v), _) -> v
+			  | Some((G.Unknown, v), _) -> v
+        | Some ((G.Sort SCanonizer, v), s_env) ->
+          let s = SCanonizer in
+					let s_base = Bsubst.erase_sort s in
+          let cn_val = (interp_cast wq s_env i s s_base) v in
+          let cn_internal = V.get_canonizer cn_val in
+          V.mk_q i (BL.Canonizer.from_variable i q cn_internal)
 				| Some((G.Sort s, v), s_env) ->
 						let s_base = Bsubst.erase_sort s in
 						(interp_cast wq s_env i s s_base) v

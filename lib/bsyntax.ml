@@ -173,6 +173,80 @@ type decl =
 (* modules *)
 type modl = Mod of Info.t * Id.t * Qid.t list * decl list
 
+(*let rec exp_size
+    (e:exp)
+  : int =
+  begin match e with
+    | EApp (_,e1,e2) -> exp_size e1 + exp_size e2
+    | Var (_,q) -> 1
+    | EOver (_,o,es) ->
+      List.fold_left
+        (fun acc e -> acc + exp_size e)
+        (op_size o)
+        es
+    | EFun (_,p,so,e) ->
+      (param_size p)
+      + (match so with | None -> 0 | Some s -> sort_size s)
+      + exp_size e
+    | ELet (_,b,e) ->
+      (param_size p)
+      + 
+    | ELet  of Info.t * binding * exp 
+
+    (* or rather... System F *)
+    | ETyFun of Info.t * Id.t * exp 
+    | ETyApp of Info.t * exp * sort
+
+    (* with products, case *)
+    | EPair of Info.t * exp * exp 
+    | ECase of Info.t * exp * (pat * exp) list * sort option
+
+    (* casts, locations, and allocations *)
+    | ECast    of Info.t * sort * sort * Info.t * exp
+
+    (* unit, strings, ints, character sets *)
+    | EUnit    of Info.t  
+    | EInteger of Info.t * int    
+    | EChar    of Info.t * char
+    | EString  of Info.t * string
+    | ECSet    of Info.t * bool * (char * char) list 
+
+    (* booleans with counter examples *)
+    (* None ~ true; Some s ~ false with counterexample s *)
+    | EBoolean of Info.t * exp option 
+
+    (* grammar *)
+    | EGrammar of Info.t * prod list
+
+		(* canonizer primitives *)
+    | EPerm of Info.t * (exp list) * exp
+    | EProject of Info.t * exp * exp
+
+		(* synth primitive *)
+		| ESynth of Info.t * exp * exp * ((exp list) option)
+
+and op_size
+    (o:op)
+  : int =
+  begin match o with
+    | _ -> 1
+  end
+
+and param_size
+    (p:param)
+  : int =
+  failwith "todo"
+
+and sort_size
+    (s:sort)
+  : int =
+  failwith "todo"
+
+and binding_size
+    (b:binding)
+  : int =
+  failwith "todo"*)
+
 (* infix constructor for non-dependent functions and products*)
 let (^>) s1 s2 = SFunction(Id.wild,s1,s2)
 let (^*) s1 s2 = SProduct(s1,s2)

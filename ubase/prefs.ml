@@ -160,6 +160,7 @@ let viewPref = createStringList "view" "view file" ""
 let expressionPref = createStringList "expression" "on-time module contents" ""
 let restPref = createStringList "rest" "*no docs needed" ""
 let checkPref = createStringList "check" "run unit tests for given module(s)" ""
+let findSavingsPref = createBool "findSavings" false "find AST savings" ""
 
 let includePref = createStringList "include" "search path for .boom sources" "Boomerang modules are loaded, compiled, and registered on-demand. The search path specifies where the run-time system should search for module sources (the current directory and the paths specified in the BOOMPATH environment variable are also searched)."
 
@@ -175,8 +176,7 @@ let debugPref = createStringList "debug" "debug module xxx ('all' -> everything,
      ^ "error stream.  It can be used many times, each time with the name "
      ^ "of a module for which debugging information should be printed.  "
      ^ "Possible arguments for \\verb|debug| can be found "
-     ^ "by looking for calls to \\verb|Util.debug| in the "
-     ^ "sources (using, e.g., \\verb|grep|).  "
+     ^ "by looking for calls to \\verb|Util.debug| in the " ^ "sources (using, e.g., \\verb|grep|).  "
      ^ "Setting \\verb|-debug all| causes information from {\\em all} "
      ^ "modules to be printed (this mode of usage is the first one to try, "
      ^ "if you are trying to understand something that Unison seems to be "

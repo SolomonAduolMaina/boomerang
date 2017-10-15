@@ -31,7 +31,8 @@ let rec get_matches (l : Brx.t list) (s : BS.t) (t : BS.t list) : BS.t list =
     | x :: xs -> let s1, s2 = BS.concat_split x (Brx.concat_list xs) s in
             get_matches xs s2 (s1 :: t)
 
-let perm_canonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonizer.t =
+let perm_canonizer
+    (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonizer.t =
     let l = List.fold_left (fun l c -> (BL.Canonizer.uncanonized_type c) :: l) [] cs in
     let l = List.rev l in
     let sep = BL.Canonizer.uncanonized_type c in
@@ -53,5 +54,9 @@ let perm_canonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonize
 				let f c s = BL.Canonizer.canonize c (BS.of_string s) in
         let ss = List.map2 f (Brx.intersperse c cs) ss in
         String.concat "" ss in
-    BL.Canonizer.normalize (Info.I ("", (0, 0), (0, 0))) whole kernel f
+    BL.Canonizer.from_permute
+      (Info.I ("", (0, 0), (0, 0)))
+      cs
+      c
+      (BL.Canonizer.normalize (Info.I ("", (0, 0), (0, 0))) whole kernel f)
 		
