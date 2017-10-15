@@ -335,7 +335,7 @@ and interp_exp wq cev e0 =
 										let free = BL.MLens.free_vars l (L.Id.string_of_id s) in
 										let free = List.map L.Id.make free in
 										let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) lc free in
-										begin match BL.MLens.bLensTosLens i l rc lc with
+										begin match BL.MLens.bLensTosLens i (BL.MLens.remove_outer_canonizers l) rc lc with
 											| None -> lc
 											| Some (l, r1, r2) -> LensContext.insert_exn lc s l r1 r2
 										end

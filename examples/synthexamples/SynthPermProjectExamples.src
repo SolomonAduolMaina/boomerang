@@ -32,7 +32,7 @@ let d : canonizer = perm (("X" | "X'"), ("Y" | "Y'"), ("Z" | "Z'")) with (projec
 
 (* Given canonizers c and d, [synth c <=> d] evaluates to the quotient lens which has a synthesized bijective lens between the view type of c and the source type of d, with c and d on the edges *)
 
-let x : lens = synth c <=> d using {("A\n \t B'\n\r\r\r\nC'","X',,,,,, \t Y\r\n, , \r,Z'")}
+let x : (lens in c <=> d) = synth c <=> d using {("A\n \t B'\n\r\r\r\nC'","X',,,,,, \t Y\r\n, , \r,Z'")}
 
 test x.get "A\n \t B'\n\r\r\r\nC'" = "X',Y,Z'"
 

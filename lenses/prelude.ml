@@ -369,6 +369,7 @@ let prelude_spec =
   ; pmk_lll    "lens_swap"            (fun i l1 l2 -> L.permute i [1;0] [l1;l2])
   ; pmk_liil   "lens_iter"            L.iter
   ; pmk_ll     "lens_star"            (fun i l -> L.iter i l 0 (-1))
+  ; pmk_ll     "lens_remove_outer_canonizers" (fun i l -> L.remove_outer_canonizers l)
   ; pmk_ll     "lens_plus"            (fun i l -> L.iter i l 1 (-1))
   ; pmk_ll     "lens_option"          (fun i l -> L.iter i l 0 1)
   ; pmk_izlzl  "lens_permute"         (fun i is ls ->

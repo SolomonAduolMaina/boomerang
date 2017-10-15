@@ -88,7 +88,13 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
 		| None -> Berror.run_error info
 					(fun () -> msg "Could not synthesize lens" )
 		| Some lens -> slens_to_blens lens rc lc info in
-	let lens = (BL.MLens.left_quot info c1 lens) in
+ let lens = (BL.MLens.left_quot info c1 lens) in
+ let lens = BL.MLens.right_quot info lens c2 in
+ let stype = BL.Canonizer.canonized_type c1 in
+ let vtype = BL.Canonizer.canonized_type c2 in
+ let stype = Brx.mk_var 
+ let lens = BL.MLens.set_synth_stype 
+ BL.MLens.format_t lens;
 	info, BL.MLens.right_quot info lens c2
 
 (**let rec vtoString (id : Qid.t) (v : V.t) =

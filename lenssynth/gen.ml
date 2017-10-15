@@ -280,6 +280,11 @@ let gen_lens
     (r2:Regex.t)
     (exs:examples)
   : Lens.t option =
+  (*print_endline (RegexContext.show rc);*)
+  (*print_endline (Regex.show r1);
+  print_endline (Regex.show r2);
+    print_endline "\n\n\n";*)
+  print_endline (LensContext.show lc);
   if !verbose then
     print_endline "Synthesis Start";
   let rc_orig = rc in

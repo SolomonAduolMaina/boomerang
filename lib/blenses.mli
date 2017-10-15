@@ -120,7 +120,8 @@ module MLens : sig
 	val bLensTosLens : Info.t -> t -> Regexcontext.RegexContext.t -> 
 		Lenscontext.LensContext.t -> (Lang.Lens.t * Lang.Regex.t * Lang.Regex.t) option 
 	val set_synth_stype : t -> Brx.t -> t
-	val set_synth_vtype : t -> Brx.t -> t
+  val set_synth_vtype : t -> Brx.t -> t
+  val remove_outer_canonizers : t -> t
 	val free_vars : t -> string -> string list
 	val bijective : t -> bool
 end

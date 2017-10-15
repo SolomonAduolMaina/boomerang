@@ -1766,7 +1766,17 @@ module MLens = struct
 	
 	let set_synth_vtype t r = { t with vtype = Some r }
 	let set_synth_stype t r = { t with stype = Some r }
-	
+  let rec remove_outer_canonizers
+      (l:t)
+    : t =
+    begin match l.desc with
+      | LeftQuot(_,l') -> print_endline "removed\n\n"; remove_outer_canonizers l'
+      | RightQuot(l',_) -> print_endline "removed\n\n"; remove_outer_canonizers l'
+      | Var(_,l') -> remove_outer_canonizers l'
+      | _ -> print_endline "begin not removed"; format_t l; print_endline "end not removed\n\n\n\n"; l
+    end
+
+
 	let rec free_vars l s =
 		match l.desc with
 		| Var (s', ml) -> (if s = s' then [] else [s']) @ (free_vars ml s)
