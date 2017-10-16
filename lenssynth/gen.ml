@@ -164,9 +164,9 @@ struct
           incr(count);
           if !verbose then
             (print_endline "popped";
-             print_endline ("r1: " ^ Regex.show r1);
+             print_endline ("r1: " ^ Regex.show (QueueElement.get_r1 qe));
              print_endline "\n\n";
-             print_endline ("r2: " ^ Regex.show r2);
+             print_endline ("r2: " ^ Regex.show (QueueElement.get_r2 qe));
              print_endline "\n\n";
              print_endline ("count: " ^ (string_of_int !count));
              print_endline "\n\n";
@@ -280,11 +280,6 @@ let gen_lens
     (r2:Regex.t)
     (exs:examples)
   : Lens.t option =
-  (*print_endline (RegexContext.show rc);*)
-  (*print_endline (Regex.show r1);
-  print_endline (Regex.show r2);
-    print_endline "\n\n\n";*)
-  print_endline (LensContext.show lc);
   if !verbose then
     print_endline "Synthesis Start";
   let rc_orig = rc in

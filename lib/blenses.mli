@@ -61,6 +61,7 @@ module Canonizer : sig
   val sort : Info.t -> Barx.t list -> t
   val columnize : Info.t -> int -> Brx.t -> char -> string -> t
   val iter : Info.t -> t -> int -> int -> t
+  val from_variable : Info.t -> string -> t -> t
 end
 
 type ktype

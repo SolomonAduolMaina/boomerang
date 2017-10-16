@@ -307,23 +307,33 @@ and interp_exp wq cev e0 =
 				begin
 					match RegexContext.lookup rc s with
 					| Some _ -> rc
-					| None ->
+		      | None ->
+            if Hashtbl.mem tbl s then
 							begin
 								match Hashtbl.find tbl s with
-								| V.Rx (i, r) ->
-										let free = Brx.free_vars r (L.Id.string_of_id s) in
-										let free = List.map L.Id.make free in
-										let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
-										let r = Brx.brx_to_lrx r i rc in
-										RegexContext.insert_exn rc s r false
-								| _ -> rc
-							end
-				end in
+                | V.Can (i, c) ->
+                  let r = BL.Canonizer.canonized_type c in
+				          let free = Brx.free_vars r (L.Id.string_of_id s) in
+				          let free = List.map L.Id.make free in
+				          let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
+				          let r = Brx.brx_to_lrx r i rc in
+				          RegexContext.insert_exn rc s r false
+                | V.Rx (i, r) ->
+						      let free = Brx.free_vars r (L.Id.string_of_id s) in
+			            let free = List.map L.Id.make free in
+			            let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) rc free in
+			            let r = Brx.brx_to_lrx r i rc in
+						      RegexContext.insert_exn rc s r false
+					      | _ -> rc
+			        end
+            else
+              rc
+	 end in
 			let f id (_, v) (tbl, l) =
 				let s = Lang.Id.make (Qid.string_of_t id) in
 				let () = Hashtbl.add tbl s v in tbl, s :: l in
 			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
-			let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) RegexContext.empty ids in
+	 let rc = List.fold_left (fun rc id -> populate_rc tbl rc id) RegexContext.empty ids in
 			let rec populate_lc tbl lc s =
 				begin
 					match LensContext.lookup lc s with
@@ -347,36 +357,23 @@ and interp_exp wq cev e0 =
 				let () = Hashtbl.add tbl s v in tbl, s :: l in
 			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
 			let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) LensContext.empty ids in
-			let info, lens = Bsynth.synth v1 v2 v3 rc lc in
-			begin
-				match v1, v2 with
-				| V.Rx(_, r1), V.Rx(_, r2) ->
-						let lens = BL.MLens.set_synth_stype lens r1 in
-						let lens = BL.MLens.set_synth_vtype lens r2 in
-						V.Lns (info, lens)
-				| _ -> V.Lns (info, lens)
-			end
+	    let info, lens = Bsynth.synth v1 v2 v3 rc lc in
+      V.Lns (info, lens)
 	
 	| EProject(i, e1, e2) ->
 			let v1 = interp_exp wq cev e1 in
-			let v2 = interp_exp wq cev e2 in
-			begin
-				match v1 with
-				| V.Rx (j, r) ->
-						begin
-							match v2 with
-							| V.Str (is, s) ->
-									let rep = match Brx.representative r with
-										| None -> Berror.run_error j
-													(fun () -> msg "This regular expression is empty!")
-										| Some rep -> rep in
-									V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber j r s (fun _ -> rep)))
-							| _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
+	    let v2 = interp_exp wq cev e2 in
+      let r = V.get_r v1 in
+	    begin match v2 with
+			 | V.Str (is, s) ->
+			   let rep = match Brx.representative r with
+		       | None -> Berror.run_error i
+										 (fun () -> msg "This regular expression is empty!")
+				   | Some rep -> rep in
+			               V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber i r s (fun _ -> rep)))
+		    | _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
 														"The second part of the project construct should be a string")
-						end
-				| _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
-											"The first part of the project construct should be a regular expression")
-			end
+		 end
 	
 	| EPerm(i, l, e2) ->
 			let l = List.map (interp_exp wq cev) l in
@@ -387,7 +384,13 @@ and interp_exp wq cev e0 =
 	| EVar(i, q) ->
 			begin
 				match CEnv.lookup_both cev q with
-				| Some((G.Unknown, v), _) -> v
+			  | Some((G.Unknown, v), _) -> v
+        (*| Some ((G.Sort SCanonizer, v), s_env) ->
+          let s = SCanonizer in
+          let s_base = Bsubst.erase_sort s in
+          let cn_val = (interp_cast wq s_env i s s_base) v in
+          let cn_internal = V.get_canonizer cn_val in
+          V.mk_q i (BL.Canonizer.from_variable i (Qid.string_of_t q) cn_internal)*)
 				| Some((G.Sort s, v), s_env) ->
 						let s_base = Bsubst.erase_sort s in
 						(interp_cast wq s_env i s s_base) v
@@ -472,7 +475,7 @@ and interp_exp wq cev e0 =
 
 and interp_binding wq cev b0 = match b0 with
 	| Bind(i, p, so, e) ->
-			let v = interp_exp wq cev e in
+	 let v = interp_exp wq cev e in
 			let v =
 				begin
 					match v with
@@ -494,12 +497,17 @@ and interp_binding wq cev b0 = match b0 with
 										end
 								| _ -> v
 							end
-					| V.Rx(i, r) ->
+		      | V.Rx(i, r) ->
 							begin
 								match p with
 								| PVar (_, id, _) -> V.Rx (i, (Brx.mk_var (Id.string_of_t id) r))
 								| _ -> v
-							end
+			        end
+          | V.Can(i, c) ->
+            begin match p with
+								| PVar (_, id, _) -> V.Can (i, (BL.Canonizer.from_variable i (Id.string_of_t id) c))
+				        | _ -> v
+            end
 					| _ -> v
 				end in
 			let xs_rev, bcev = match dynamic_match i p v with

@@ -512,7 +512,7 @@ and check_exp ?(in_let = false) sev e0 =
 			let e2_sort, new_e2 = check_exp sev e2 in
 			begin
 				match e1_sort with
-				| SRegexp ->
+				| SRegexp | SCanonizer | SString ->
 						begin
 							match e2_sort with
 							| SString -> (SCanonizer, EProject(i, new_e1, new_e2))
@@ -570,10 +570,10 @@ and check_exp ?(in_let = false) sev e0 =
 					SCanonizer, "canonizer_compose"]
 					;	ODot,
 					[ SString, "string_concat";
-					SRegexp, "regexp_concat";
+					SCanonizer, "canonizer_concat";
 					SAregexp, "aregexp_concat";
 					SLens, "lens_concat";
-					SCanonizer, "canonizer_concat" ]
+					SRegexp, "regexp_concat"; ]
 					; OTilde,
 					[ SLens, "lens_swap";
 					SCanonizer, "canonizer_swap" ]

@@ -338,7 +338,8 @@ let rec format_t t0 =
 	begin match t0.desc with
 		| Perm (l, s) ->
 				msg "%s" ("perm(" ^ (print_list string_of_t l) ^ ", " ^ (string_of_t s) ^ ")")
-		| Var (s, t) -> format_t t
+	| Var (s, t) ->
+   msg ("var(%s,") s; format_t t; msg ")"
 		| CSet [p1] ->
 				let n1, n2 = p1 in
 				if n1 = min_code && n2 >= max_ascii_code then msg "[^]"
@@ -1431,7 +1432,7 @@ let brx_to_lrx (r : t) (i : Info.t) (rc : RegexContext.t) : L.Regex.t =
 		| M.Var (s, r) ->
 			let s = L.Id.make s in
 				begin match RegexContext.lookup rc s with
-					| None -> helper r i
+			    | None -> helper r i
 					| Some _ -> L.Regex.RegExVariable s
 				end
 		| _ -> Berror.run_error i

@@ -72,6 +72,7 @@ type t =
   | Seq of t * t
   | Alt of t * t
   | Star of t
+  | Var of string * t
 
 let rxtype t =
   let rec a t =
@@ -81,6 +82,7 @@ let rxtype t =
     | Seq (t1, t2) -> Rx.mk_seq (a t1) (a t2)
     | Alt (t1, t2) -> Rx.mk_alt (a t1) (a t2)
     | Star t -> Rx.mk_star (a t)
+    | Var (v,t) -> Rx.mk_var v (a t)
   in
   a t
 
@@ -99,6 +101,7 @@ let annot_weight nw t =
     | Seq (t1, t2) -> Seq (f t1, f t2)
     | Alt (t1, t2) -> Alt (f t1, f t2)
     | Star t -> Star (f t)
+    | Var (v,t) -> f t
   in
   f t
 
@@ -123,7 +126,11 @@ let mk_iter c i j =
   match is_rx c with
     | Some r -> mk_rx (Rx.mk_iter r i j)
     | _ ->
-        generic_iter (mk_rx Rx.epsilon) mk_alt mk_seq mk_star i j c
+      generic_iter (mk_rx Rx.epsilon) mk_alt mk_seq mk_star i j c
+let mk_var v c =
+  match is_rx c with
+  | Some r -> mk_rx (Rx.mk_var v r)
+  | _ -> Var (v,c)
 
 let empty = mk_rx Rx.empty
 let epsilon = mk_rx Rx.epsilon
@@ -153,6 +160,7 @@ let rec extended t = (* the regular expression w/ extended alphabet *)
   | Seq (t1, t2) -> Rx.mk_seq (extended t1) (extended t2)
   | Alt (t1, t2) -> Rx.mk_alt (extended t1) (extended t2)
   | Star t -> Rx.mk_star (extended t)
+  | Var (_,t) -> extended t
 
 (* * Barx.format_t : Barx.t -> unit *)
 let format_t t =
@@ -209,7 +217,9 @@ let rec parse t s =
         else t2
       ) wd s
     | Star t ->
-        Bstring.do_star (rxtype t) (p t wd) s
+      Bstring.do_star (rxtype t) (p t wd) s
+    | Var (_,t) ->
+      p t wd s
   in
   Bstring.at_of_attmp (p t W.zero (Bstring.to_attmp s))
 
@@ -223,6 +233,7 @@ let fold leaf chunk seq alt star =
     | Seq (t1, t2) -> seq (f t1) (f t2)
     | Alt (t1, t2) -> alt (f t1) (f t2)
     | Star t -> star (f t)
+    | Var (_,t) -> f t
   in
   f
 
@@ -232,6 +243,7 @@ let rec to_tags = function
   | Seq (t1, t2) -> Ts.union (to_tags t1) (to_tags t2)
   | Alt (t1, t2) -> Ts.union (to_tags t1) (to_tags t2)
   | Star t -> to_tags t
+  | Var (_,t) -> to_tags t
 
 let no_chunks t =
   Ts.is_empty (to_tags t)
