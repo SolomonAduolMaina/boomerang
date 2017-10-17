@@ -4,11 +4,11 @@ let digit = [0-9]+ . ("." . [0-9]+){0,1}
 let text = ([a-zA-Z0-9/()&*,;'. ] | "-")*
 let u_o_d = [A-Z0-9]
 
-let r1 = "_id=" . "\"" . digit+ . "\""
+let r1 = "_id=" . "\"" . digit . (" " . digit)* . "\""
 let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
 		. "-" . u_o_d{12} . "\""
-let r3 = "_position=" . "\"" . digit+ . "\""
-let r4 = "_address=" . "\"" . "http://data.seattle.gov/resource/cf52-s8er/" . digit+ . "\""
+let r3 = "_position=" . "\"" . digit . (" " . digit)* . "\""
+let r4 = "_address=" . "\"" . "http://data.seattle.gov/resource/cf52-s8er/" . digit . (" " . digit)* . "\""
 
 let f1 = "<jobtitle>" . text ."</jobtitle>"
 let f2 = "<female_avg_hrly_rate>" . digit . "</female_avg_hrly_rate>"

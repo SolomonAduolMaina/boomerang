@@ -1,68 +1,86 @@
-module Xml_to_rdf = 
+module Xml_to_rdf =
 
-open Xml_to_rdf_lib 
-let digit = [0-9]+ . ("." . [0-9]+){0,1}
-let text = ([a-zA-Z0-9/()&*,;'. ] | "-")*
+let digit = [0-9]
+
+let number = [0-9]+ . ("." . [0-9]+){0,1}
+let text = ([a-zA-Z0-9/()&*,'. ] | "-")*
 let u_o_d = [A-Z0-9]
 
-let schema1 = #{string * regexp}[
-("jobtitle", text);
-("female_avg_hrly_rate", digit);
-("no_female_empl", digit);
-("average_of_female_months_longevity_in_current_classification", digit);
-("male_avg_hrly_rate", digit);
-("no_male_empl", digit);
-("average_of_male_months_longevity_in_current_classification", digit);
-("total_avg_hrly_rate", digit);
-("total_no_empl", digit);
-("total_average_of_months_longevity_in_current_classification", digit);
-("ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage", digit);
-]
 
-let schema2 = #{string * regexp}[
-("jobtitle", text);
-("male_avg_hrly_rate", digit);
-("no_male_empl", digit);
-("average_of_male_months_longevity_in_current_classification", digit);
-("total_avg_hrly_rate", digit);
-("total_no_empl", digit);
-("total_average_of_months_longevity_in_current_classification", digit);
-("notes", text);
-]
+let f1 = "<jobtitle>" . text ."</jobtitle>"
+let f2 = "<female_avg_hrly_rate>" . digit . "</female_avg_hrly_rate>"
+let f3 = "<no_female_empl>" . digit . "</no_female_empl>"
+let f4 = 
+"<average_of_female_months_longevity_in_current_classification>" .digit. "</average_of_female_months_longevity_in_current_classification>"
+let f5 = "<male_avg_hrly_rate>" . digit . "</male_avg_hrly_rate>"
+let f6 = "<no_male_empl>" . digit ."</no_male_empl>"
+let f7 = 
+"<average_of_male_months_longevity_in_current_classification>" . digit . "</average_of_male_months_longevity_in_current_classification>"
+let f8 = "<total_avg_hrly_rate>" . digit . "</total_avg_hrly_rate>"
+let f9 = "<total_no_empl>" . digit. "</total_no_empl>"
+let f10 = 
+"<total_average_of_months_longevity_in_current_classification>" . digit . "</total_average_of_months_longevity_in_current_classification>"
+let f11 = 
+"<ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>" . digit . "</ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>"
+let f12 = "<notes>" . text . "</notes>"
 
-let schema3 = #{string * regexp}[
-("jobtitle", text);
-("female_avg_hrly_rate", digit);
-("no_female_empl", digit);
-("average_of_female_months_longevity_in_current_classification", digit);
-("total_avg_hrly_rate", digit);
-("total_no_empl", digit);
-("total_average_of_months_longevity_in_current_classification", digit);
-("notes", text);
-]
+let row = f1 . f2 . f3.  f4.  f5.  f6.  f7. f8 .  f9.  f10. f11 
 
+let row1 = f1 .  f5 .  f6.  f7. f8 .  f9.  f10. f12 
 
-let xml_schema = (xml_elements schema1 | xml_elements schema2 | xml_elements schema3)
-let rdf_schema = (rdf_elements schema1 | rdf_elements schema2 | rdf_elements schema3)
+let row2 = f1 .  f2 .  f3.  f4. f8 .  f9.  f10.  f12 
 
+let xml_schema = row | row1 | row2
 
-let id = xml_attribute "id" digit+ 
-let uuid = xml_attribute "uuid" (u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
-		. "-" . u_o_d{12})
-let position = xml_attribute "position" digit+
-let address = xml_attribute "address" 
-("http://data.seattle.gov/resource/cf52-s8er/" . digit+ )
+let r1 = "_id=" . "\"" . digit+ . "\""
+let r2 = "_uuid=" . "\"" . u_o_d{8} . "-" . u_o_d{4} . "-" . u_o_d{4} . "-" . u_o_d{4}
+		. "-" . u_o_d{12} . "\""
+let r3 = "_position=" . "\"" . number . "\""
+let r4 = "_address=" . "\"" . "http://data.seattle.gov/resource/cf52-s8er/" . number . "\""
 
-let xml_header = "<row " . (project (id . " " . uuid) -> "") . " " . position . " " . address . ">"
+let inoutxml = "<row " . (project (r1. " " . r2) -> "") . " " . r3 . " " . r4 . ">"
 
-let description = 
-"<rdf:Description rdf:about=\"http://data.seattle.gov/resource/cf52-s8er/" . digit+ . "\">"
-let rowID = "<socrata:rowID>" . digit+ . "</socrata:rowID>"
-let member = "<rdfs:member rdf:resource=\"https://data.seattle.gov/resource/cf52-s8er\"/>"
+let rdff1 = "<ds:jobtitle>" . text ."</ds:jobtitle>"
+let rdff2 = "<ds:female_avg_hrly_rate>" . digit . "</ds:female_avg_hrly_rate>"
+let rdff3 = "<ds:no_female_empl>" . digit . "</ds:no_female_empl>"
+let rdff4 = 
+"<ds:average_of_female_months_longevity_in_current_classification>" .digit. "</ds:average_of_female_months_longevity_in_current_classification>"
+let rdff5 = "<ds:male_avg_hrly_rate>" . digit . "</ds:male_avg_hrly_rate>"
+let rdff6 = "<ds:no_male_empl>" . digit ."</ds:no_male_empl>"
+let rdff7 = 
+"<ds:average_of_male_months_longevity_in_current_classification>" . digit . "</ds:average_of_male_months_longevity_in_current_classification>"
+let rdff8 = "<ds:total_avg_hrly_rate>" . digit . "</ds:total_avg_hrly_rate>"
+let rdff9 = "<ds:total_no_empl>" . digit. "</ds:total_no_empl>"
+let rdff10 = 
+"<ds:total_average_of_months_longevity_in_current_classification>" . digit . "</ds:total_average_of_months_longevity_in_current_classification>"
+let rdff11 = 
+"<ds:ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>" . digit . "</ds:ratio_of_women_s_hourly_rate_to_men_s_hourly_rate_percentage>"
+let rdff12 = "<ds:notes>" . text . "</ds:notes>"
 
-let rdf_header = description . "\n" . rowID . "\n" . member . "\n"
+let rdfrow = rdff1 . rdff2 . rdff3.  rdff4.  rdff5.  f6.  rdff7. rdff8 .  rdff9.  rdff10. rdff11 
 
-let innerlens = synth (xml_header . xml_schema) <=> (rdf_header . rdf_schema)
+let rdfrow1 = rdff1 .  rdff5 .  rdff6.  rdff7. rdff8 .  rdff9.  rdff10. rdff12 
+
+let rdfrow2 = rdff1 .  rdff2 .  rdff3.  rdff4. rdff8 .  rdff9.  rdff10.  rdff12 
+
+let rdf_schema = rdfrow | rdfrow1 | rdfrow2
+
+let rdfr1 = 
+"<dsbase:nxs9-385f rdf:about=\"http://data.seattle.gov/resource/cf52-s8er/" . number . "\">"
+let rdfr2 = "<socrata:rowID>" . number . "</socrata:rowID>"
+let rdfr3 = "<rdfs:member rdf:resource=\"http://data.seattle.gov/resource/cf52-s8er/\"/>"
+
+let inoutrdf = rdfr1 . "\n" . rdfr2 . "\n" . rdfr3 . "\n"
+
+let inout_rdf_xml_map = synth inoutxml <=> inoutrdf
+
+let row_converter = synth row <=> rdfrow
+let row1_converter = synth row1 <=> rdfrow1
+let row2_converter = synth row2 <=> rdfrow2
+
+let schema_map = synth xml_schema <=> rdf_schema
+
+let innerlens = synth (inoutxml . xml_schema) <=> (inoutrdf . rdf_schema)
 
 let fullens =  innerlens  . (del "</row>") . (ins "</rdf:Description>\n")
 

@@ -64,9 +64,9 @@ let r4 = "_address=" . "\"http://data.cityofnewyork.us/resource/kku6-nxdu/" . nu
 
 let header = r1 . " " . r2 . " " . r3 . " " . r4
 
-let csv = (number . ","){43} . number
+let csv = (number . ","){44} . number
 
-let innerlens = synth row <=> csv
+let innerlens = synth row <=> row
 
 let fullens = (del ("<row " . header . ">")) . innerlens  . (del "</row>") . (ins "\n")
 
