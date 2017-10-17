@@ -194,7 +194,8 @@ let rec interp_cast (wq: ((unit -> V.t) -> unit) option) cev b f t =
 									(native_coercion "regexp_of_string" v))
 			| SRegexp, SAregexp ->
 					native_coercion "rxlift"
-			| SRegexp, SCanonizer -> native_coercion "canonizer_copy"
+	    | SRegexp, SCanonizer -> native_coercion "canonizer_copy"
+      | SCanonizer, SRegexp -> native_coercion "uncanonized_type"
 			| SRegexp, SLens ->
 					native_coercion "copy"
 			| SFunction(x, f1, f2), SFunction(y, t1, t2) ->

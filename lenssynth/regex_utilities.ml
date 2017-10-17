@@ -20,39 +20,39 @@ let rec make_regex_safe_in_smaller_context
              | Some _ -> Regex.make_var v
            end))
 
+let rec clean_regex (r:Regex.t) : Regex.t =
+  begin match r with
+    | Regex.RegExConcat(x,y) ->
+      let x = clean_regex x in
+      let y = clean_regex y in
+      begin match (x,y) with
+        | (Regex.RegExBase "",_) -> y
+        | (_,Regex.RegExBase "") -> x
+        | (Regex.RegExEmpty,_) -> Regex.RegExEmpty
+        | (_,Regex.RegExEmpty) -> Regex.RegExEmpty
+        | _ -> Regex.RegExConcat(x,y)
+      end
+    | Regex.RegExOr(x,y) ->
+      let x = clean_regex x in
+      let y = clean_regex y in
+      begin match (x,y) with
+        | (Regex.RegExEmpty,_) -> y
+        | (_,Regex.RegExEmpty) -> x
+        | _ -> Regex.RegExOr(x,y)
+      end
+    | Regex.RegExStar(x) ->
+      let x = clean_regex x in
+      begin match x with
+        | Regex.RegExEmpty -> Regex.RegExBase ""
+        | _ -> Regex.RegExStar x
+      end
+    | _ -> r
+  end
+
 let simplify_regex : Regex.t -> Regex.t =
   let maximally_factor_regex : Regex.t -> Regex.t =
     Semiring.maximally_factor_element
       regex_semiring
-  in
-  let rec clean_regex (r:Regex.t) : Regex.t =
-    begin match r with
-      | Regex.RegExConcat(x,y) ->
-        let x = clean_regex x in
-        let y = clean_regex y in
-        begin match (x,y) with
-          | (Regex.RegExBase "",_) -> y
-          | (_,Regex.RegExBase "") -> x
-          | (Regex.RegExEmpty,_) -> Regex.RegExEmpty
-          | (_,Regex.RegExEmpty) -> Regex.RegExEmpty
-          | _ -> Regex.RegExConcat(x,y)
-        end
-      | Regex.RegExOr(x,y) ->
-        let x = clean_regex x in
-        let y = clean_regex y in
-        begin match (x,y) with
-          | (Regex.RegExEmpty,_) -> y
-          | (_,Regex.RegExEmpty) -> x
-          | _ -> Regex.RegExOr(x,y)
-        end
-      | Regex.RegExStar(x) ->
-        let x = clean_regex x in
-        begin match x with
-          | Regex.RegExEmpty -> Regex.RegExBase ""
-          | _ -> Regex.RegExStar x
-        end
-      | _ -> r
-    end
   in
 
   let merge_concated_bases : Regex.t -> Regex.t =

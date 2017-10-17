@@ -581,10 +581,10 @@ and check_exp ?(in_let = false) sev e0 =
 					[ SRegexp, "diff";
 					SInteger, "minus" ]
 					; OBar,
-					[ SRegexp, "regexp_union";
+					[ SCanonizer, "canonizer_union";
 					SAregexp, "aregexp_union";
 					SLens, "lens_disjoint_union";
-					SCanonizer, "canonizer_union" ]
+					SRegexp, "regexp_union"; ]
 					; OAmp, [ SRegexp, "inter" ]
 					; OBarBar, [ SLens, "lens_union";
 					SBool, "lor";
@@ -617,7 +617,9 @@ and check_exp ?(in_let = false) sev e0 =
 								check_exp_app i sev
 									(check_exp_app i sev
 											(check_exp_app i sev r_iter r1) r_min) r_max in
-							if compatible e1_sort SRegexp
+							if compatible e1_sort SCanonizer
+							then mk_iter "canonizer_iter" min max
+							else if compatible e1_sort SRegexp
 							then mk_iter "regexp_iter" min max
 							else if compatible e1_sort SAregexp
 							then mk_iter "aregexp_iter" min max
@@ -646,8 +648,6 @@ and check_exp ?(in_let = false) sev e0 =
 													(mk_iter "lens_iter" min min))
 											(checked_app "lens_star")
 								| _ -> mk_iter "lens_iter" min max
-							else if compatible e1_sort SCanonizer
-							then mk_iter "canonizer_iter" min max
 							else err ()
 					| OEqual,[e1_sort, e1; _, e2] ->
 							(SBool,

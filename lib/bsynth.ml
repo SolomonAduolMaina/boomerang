@@ -62,13 +62,15 @@ let get_canonizers v1 v2 =
 	let v1, i1 =
 		match v1 with
 		| V.Rx (i1, r1) -> BL.Canonizer.copy i1 r1, i1
-		| V.Can (i1, c) -> c, i1
+	  | V.Can (i1, c) -> c, i1
+    | V.Str (i1, s) -> BL.Canonizer.copy i1 (Brx.mk_string s), i1
 		| _ as v -> Berror.run_error (V.info_of_t v)
 					(fun () -> msg "Expecting a canonizer or regular expression here") in
 	let v2, i2 =
 		match v2 with
 		| V.Rx (i1, r1) -> BL.Canonizer.copy i1 r1, i1
 		| V.Can (i1, c) -> c, i1
+    | V.Str (i1, s) -> BL.Canonizer.copy i1 (Brx.mk_string s), i1
 		| _ as v -> Berror.run_error (V.info_of_t v)
 					(fun () -> msg "Expecting a canonizer or regular expression here") in
 	(v1, i1), (v2, i2)
@@ -94,7 +96,7 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
  let lens = BL.MLens.set_synth_vtype lens vtype in
  let lens = (BL.MLens.left_quot info c1 lens) in
  let lens = BL.MLens.right_quot info lens c2 in
-	info, BL.MLens.right_quot info lens c2
+	info, lens
 
 (**let rec vtoString (id : Qid.t) (v : V.t) =
 match v with

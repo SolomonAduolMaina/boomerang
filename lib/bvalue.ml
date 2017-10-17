@@ -101,7 +101,11 @@ let rec equal v1 v2 = match v1, v2 with
 	| Str(_, s1), Str(_, s2) ->
 			s1 = s2
 	| Str(_, s), Rx(_, r) | Rx(_, r), Str(_, s) ->
-			Brx.equiv (Brx.mk_string s) r
+	    Brx.equiv (Brx.mk_string s) r
+  | Str(_, s), Can(_, c) | Can(_, c), Str(_, s) ->
+      Brx.equiv (Brx.mk_string s) (C.uncanonized_type c)
+  | Rx(_, r), Can(_, c) | Can(_, c), Rx(_, r) ->
+      Brx.equiv r (C.uncanonized_type c)
 	| Rx(_, r1), Rx(_, r2) ->
 			Brx.equiv r1 r2
 	| Arx(_, r1), Arx(_, r2) ->
@@ -112,8 +116,12 @@ let rec equal v1 v2 = match v1, v2 with
 			Blenses.mtype_equiv m1 m2
 	| Lns _, Lns _ ->
 			Error.simple_error (sprintf "Cannot test equality of lenses.")
-	| Can _, Can _ ->
-			Error.simple_error (sprintf "Cannot test equality of canonizers.")
+  | Can (_, c1), Can (_, c2) ->
+      if (Brx.equiv (C.canonized_type c1) (C.uncanonized_type c1)) &&
+         (Brx.equiv (C.canonized_type c2) (C.uncanonized_type c2)) then
+        Brx.equiv (C.canonized_type c1) (C.canonized_type c2)
+      else
+			  Error.simple_error (sprintf "Cannot test equality of canonizers.")
 	| Fun _, Fun _ ->
 			Error.simple_error (sprintf "Cannot test equality of functions.")
 	| Par(_, v1, v2), Par(_, v1', v2') ->
