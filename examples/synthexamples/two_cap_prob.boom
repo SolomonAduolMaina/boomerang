@@ -1,4 +1,4 @@
-module 2_cap_prob =
+module Two_cap_prob =
 let LOWERCASE
   : regexp =
   "a"

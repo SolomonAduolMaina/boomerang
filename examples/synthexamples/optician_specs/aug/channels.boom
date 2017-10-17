@@ -157,7 +157,7 @@ let SIMPLE_WORD
 
 let FOLDER
   : regexp =
-  (WORD . "/")*  . WORD . ("" | "/") | "${" . ENV_VAR . "}" 
+  (("" | "/") . (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/")) | "${" . ENV_VAR . "}" 
 
 let MULTILINE_COMMENT
   : regexp =

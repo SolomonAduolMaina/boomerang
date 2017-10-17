@@ -1,4 +1,4 @@
-module Bib_to_end = 
+module Bib_to_end_with_synth = 
 
 let title_case : regexp = [A-Z] . [a-zA-Z]*
 
@@ -10,17 +10,17 @@ let name : regexp = full_name | initial
 
 let comma_name : regexp = full_name . ", " . (name | name . " " . name)
 
-let bib_comma_names : regexp = comma_name | (comma_name . " and ")* . comma_name
+let bib_comma_names : regexp = regexp_union comma_name ((comma_name . " and ")* . comma_name)
 
 let end_comma_names : regexp = 
-"%A " . comma_name |  ("%A " . comma_name . "\n")* . ("%A " . comma_name)
+regexp_union ("%A " . comma_name)  (("%A " . comma_name . "\n")* . ("%A " . comma_name))
 
 let space_name : regexp = full_name . " " . (name | name . " " . name)
 
-let bib_space_names : regexp = space_name | (space_name . " and ")* . space_name
+let bib_space_names : regexp = regexp_union space_name ((space_name . " and ")* . space_name)
 
 let end_space_names : regexp = 
-"%A " . space_name |  ("%A " . space_name . "\n")* . ("%A " . space_name)
+regexp_union ("%A " . space_name)  (("%A " . space_name . "\n")* . ("%A " . space_name))
 
 let bib_author : canonizer = "author = {" . squash bib_space_names -> bib_comma_names using 
 (get (synth bib_space_names <=> bib_comma_names)) . "}"

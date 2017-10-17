@@ -153,11 +153,11 @@ let WORD : regexp = NON_WSP_CHAR . NON_WSP_CHAR*
 
 let SIMPLE_WORD
   : regexp =
-  (LOWERCASE | UPPERCASE | DIGIT) . (LOWERCASE | UPPERCASE | DIGIT)*  
+  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".")*  
 
 let FOLDER
   : regexp =
-  (WORD . "/")*  . WORD . ("" | "/") | "${" . ENV_VAR . "}" 
+  (("" | "/") . (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/")) | "${" . ENV_VAR . "}" 
 
 let MULTILINE_COMMENT
   : regexp =
@@ -208,7 +208,6 @@ let SIMPLE_KEY
     | "minsources"
     | "ntpsigndsocket"
     | "pidfile"
-    | "port"
     | "reselectdist"
     | "rtcautotrim"
     | "rtcdevice"
@@ -219,8 +218,6 @@ let SIMPLE_KEY
     | "maxdelay"
     | "maxpoll"
     | "minpoll"
-    | "maxsamples"
-    | "minsamples"
     | "maxsources" | "offset" | "polltarget" | "port" | "presend" | "version" 
 
 let CMD_FLAG

@@ -57,7 +57,7 @@ let NONEMPTY_SAMELINE_WSP : regexp = SAMELINE_WSP_CHAR . SAMELINE_WSP_CHAR*
 
 let YEAR : regexp = DIGIT . DIGIT . DIGIT . DIGIT 
 
-let MONTH : regexp = DIGIT . DIGIT*  . "11" . "11"*  . "12" 
+let MONTH : regexp = regexp_concat (DIGIT . DIGIT* )  ( "11" . "11"*  . "12" )
 
 let DAY
   : regexp =
@@ -71,10 +71,14 @@ let WEEKDAYS
     . "monday" . "monday"* 
     . "tuesday" . "tuesday"* 
     . "wednesday" . "wednesday"* 
-    . "thursday" . "thursday"*  . "friday" . "friday"*  . "saturday" 
+    . "thursday" . "thursday"*  . "friday" . "friday"*  . "saturday"
+
+let ENGLISH = (MONTH . "/" . DAY . "/" . YEAR)
+
+let BRITISH = (DAY . "/" . MONTH . "/" . YEAR)
 
 let english_to_british
   : (lens in
-      (MONTH . "/" . DAY . "/" . YEAR)
-      <=> (DAY . "/" . MONTH . "/" . YEAR)) =
+      ENGLISH
+      <=> BRITISH) =
   synth (MONTH . "/" . DAY . "/" . YEAR) <=> (DAY . "/" . MONTH . "/" . YEAR) 

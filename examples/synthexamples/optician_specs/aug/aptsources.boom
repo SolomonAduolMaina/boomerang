@@ -153,11 +153,11 @@ let WORD : regexp = NON_WSP_CHAR . NON_WSP_CHAR*
 
 let SIMPLE_WORD
   : regexp =
-  (LOWERCASE | UPPERCASE | DIGIT) . (LOWERCASE | UPPERCASE | DIGIT)*  
+  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".")*  
 
 let FOLDER
   : regexp =
-  (WORD . "/")*  . WORD . ("" | "/") | "${" . ENV_VAR . "}" 
+  (("" | "/") . (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/")) | "${" . ENV_VAR . "}" 
 
 let MULTILINE_COMMENT
   : regexp =
@@ -178,7 +178,7 @@ let OPERATION : regexp = "+" | "-"
 
 let OPTION_KVP_OPERATION_CONF
   : regexp =
-  SIMPLE_WORD . (OPERATION | "") . "=" . SIMPLE_WORD 
+  regexp_concat SIMPLE_WORD ((OPERATION | "") . "=" . SIMPLE_WORD )
 
 test matches_cex OPTION_KVP_OPERATION_CONF "arch+=amd64" = true
 

@@ -52,10 +52,6 @@ let SAMELINE_WSP  = SAMELINE_WSP_CHAR*
 
 let NONEMPTY_SAMELINE_WSP = project (SAMELINE_WSP_CHAR . SAMELINE_WSP_CHAR* ) -> " "
 
-let A = "HI" . NONEMPTY_SAMELINE_WSP
-
-test A = ?
-
 let QUOTELESS_STRING
    =
   (UPPERCASE
@@ -154,11 +150,11 @@ let WORD  = NON_WSP_CHAR . NON_WSP_CHAR*
 
 let SIMPLE_WORD
    =
-  (LOWERCASE | UPPERCASE | DIGIT) . (LOWERCASE | UPPERCASE | DIGIT)*  
+  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".")*  
 
 let FOLDER
    =
-  (WORD . "/")*  . WORD . ("" | "/") | "${" . ENV_VAR . "}" 
+  (("" | "/") . (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/")) | "${" . ENV_VAR . "}" 
 
 let MULTILINE_COMMENT
    =
@@ -200,7 +196,7 @@ let IP_ADDRESS
 
 test matches_cex IP_ADDRESS "1.2.3.4" = true
 
-let URL   = ("http" | "https") . WORD 
+let URL   = regexp_concat (regexp_union "http" "https") WORD 
 
 test matches_cex URL "http://url.to/monitor" = true
 

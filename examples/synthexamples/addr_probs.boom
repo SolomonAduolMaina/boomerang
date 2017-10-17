@@ -65,9 +65,8 @@ let CARDINALDIRECTION : regexp = "North" | "South" | "East" | "West"
 
 let STREETNAME
   : regexp =
-  NAME
-    . (" " . NAME)* 
-    . (" " . STREETTYPE | "") . ("" | " " . CARDINALDIRECTION) 
+  regexp_concat (regexp_concat NAME (" " . NAME)* )
+    ((" " . STREETTYPE | "") . ("" | " " . CARDINALDIRECTION) )
 
 let ZIP : regexp = DIGIT . DIGIT . DIGIT . DIGIT . DIGIT 
 

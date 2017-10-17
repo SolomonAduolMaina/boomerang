@@ -153,7 +153,7 @@ let WORD = NON_WSP_CHAR . NON_WSP_CHAR*
 
 let SIMPLE_WORD
   =
-  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".")*  
+  (LOWERCASE | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "_" | UPPERCASE | DIGIT | ".")*  
 
 let FOLDER
   =
