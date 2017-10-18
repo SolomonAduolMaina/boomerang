@@ -83,6 +83,6 @@ let bib_template =
 author = \"Conway J. H. and Conway H. J.\",
 title = {Regular Algebra And Finite Machines},}"
 
-let bib_to_end = synth bibtex <=> endnote using {(bib_template, end_template)}
+let bib_to_end = synth bibtex <=> endnote 
 
 test get bib_to_end bib_record1 = get bib_to_end bib_record1
