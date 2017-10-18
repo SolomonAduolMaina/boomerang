@@ -125,6 +125,12 @@ let rdfr3 = "<rdfs:member rdf:resource=\"https://data.cityofnewyork.us/resource/
 
 let inoutrdf = rdfr1 . "\n" . rdfr2 . "\n" . rdfr3 . "\n"
 
+test "x" = ?
+let inout_map = synth inoutxml <=> inoutrdf
+test "x" = ?
+let row_map = synth row <=> rdfrow
+test row_map = ?
+
 let innerlens = synth (inoutxml . row) <=> (inoutrdf . rdfrow)
 
 let fullens =  innerlens  . (del "</row>") . (ins "</rdf:Description>\n")

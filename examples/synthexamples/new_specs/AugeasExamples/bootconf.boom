@@ -1,0 +1,266 @@
+module Bootconf =
+let LOWERCASE
+  =
+  "a"
+    | "b"
+    | "c"
+    | "d"
+    | "e"
+    | "f"
+    | "g"
+    | "h"
+    | "i"
+    | "j"
+    | "k"
+    | "l"
+    | "m"
+    | "n"
+    | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+
+let UPPERCASE
+  =
+  "A"
+    | "B"
+    | "C"
+    | "D"
+    | "E"
+    | "F"
+    | "G"
+    | "H"
+    | "I"
+    | "J"
+    | "K"
+    | "L"
+    | "M"
+    | "N"
+    | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" 
+
+let to_upper_or_lower
+  : (lens in LOWERCASE <=> UPPERCASE) =
+  synth LOWERCASE <=> UPPERCASE 
+
+let DIGIT
+  =
+  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
+
+let NUMBER = DIGIT . DIGIT*  
+
+let WSP = (" " | "\n" | "\t")*  
+
+let NONEMPTY_WSP = (" " | "\n" | "\t") . (" " | "\n" | "\t")*  
+
+let SAMELINE_WSP_CHAR = " " | "\t" | "\\\n" 
+
+let SAMELINE_WSP = SAMELINE_WSP_CHAR*  
+
+let NONEMPTY_SAMELINE_WSP = project (SAMELINE_WSP_CHAR . SAMELINE_WSP_CHAR*  ) -> " "
+
+let QUOTELESS_STRING
+  =
+  (UPPERCASE
+     | LOWERCASE
+     | DIGIT
+     | " "
+     | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")")*  
+
+let STRING_COMPONENT
+  =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/"
+    | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "*" | "," 
+
+let STRING = STRING_COMPONENT*  
+
+let NONEMPTY_STRING = STRING_COMPONENT . STRING_COMPONENT*  
+
+let DELIMITED_STRING
+  =
+  (UPPERCASE
+     | LOWERCASE
+     | DIGIT
+     | "\\\""
+     | " "
+     | "'"
+     | "_"
+     | ":"
+     | "/"
+     | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "*" | ",")*  
+
+let string_to_delimited
+  : (lens in STRING <=> DELIMITED_STRING) =
+  synth STRING <=> DELIMITED_STRING 
+
+let NO_STAR_STRING_COMPONENT
+  =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "," 
+
+let NO_STAR_DELIMITED_STRING_COMPONENT
+  =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\\\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "," 
+
+let STARLESS_STRING = NO_STAR_STRING_COMPONENT*  
+
+let STARLESS_DELIMITED_STRING
+  =
+  NO_STAR_DELIMITED_STRING_COMPONENT*  
+
+let starless_string_to_delimited
+  : (lens in STARLESS_STRING <=> STARLESS_DELIMITED_STRING) =
+  synth STARLESS_STRING <=> STARLESS_DELIMITED_STRING 
+
+let COMMENT = "# " . STRING 
+
+let COMMENT_DICT = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
+
+let comment_map
+  : (lens in COMMENT <=> COMMENT_DICT) =
+  synth COMMENT <=> COMMENT_DICT 
+
+let EMPTYDICT = "{}" 
+
+let NON_WSP_CHAR
+  =
+  LOWERCASE
+    | UPPERCASE
+    | "_" | "." | "-" | ":" | "/" | "+" | DIGIT | "," | "=" | "*" | "%" 
+
+let ENV_VAR = (UPPERCASE | "_") . (UPPERCASE | "_")*  
+
+let WORD = NON_WSP_CHAR . NON_WSP_CHAR*  
+
+let SIMPLE_WORD
+  =
+  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".") . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT | ".")*  
+
+let FOLDER
+  =
+  (("" | "/") . (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/")) | "${" . ENV_VAR . "}" 
+
+let MULTILINE_COMMENT
+  =
+  "/*" . STARLESS_STRING . ("\n" . STARLESS_STRING)*  . "*/" 
+
+let MULTILINE_COMMENT_DICT
+  =
+  "{\"#mcomment\""
+    . "{\"string\"=\"" . STARLESS_DELIMITED_STRING . "\"}"
+    . ("{\"string\"=\"" . STARLESS_DELIMITED_STRING . "\"}")* 
+    . "}" 
+
+let multiline_comment_map
+  : (lens in MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT) =
+  synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT 
+
+let BOOT_COMMAND
+  =
+  "boot" . NONEMPTY_SAMELINE_WSP . WORD . (NONEMPTY_SAMELINE_WSP . WORD)*  
+
+test matches_cex BOOT_COMMAND "boot /bsd -s" = true
+
+let BASIC_COMMAND = ("echo" | "ls") . NONEMPTY_SAMELINE_WSP . WORD 
+
+test matches_cex BASIC_COMMAND "echo 42" = true
+
+test matches_cex BASIC_COMMAND "ls /" = true
+
+let MACHINE_COMMAND
+  =
+  "machine"
+    . NONEMPTY_SAMELINE_WSP . WORD . ("" | NONEMPTY_SAMELINE_WSP . WORD) 
+
+test matches_cex MACHINE_COMMAND "machine diskinfo" = true
+
+test matches_cex MACHINE_COMMAND "machine comaddr 0xdeadbeef" = true
+
+let SET_COMMAND
+  =
+  "set" . NONEMPTY_SAMELINE_WSP . WORD . NONEMPTY_SAMELINE_WSP . WORD 
+
+test matches_cex SET_COMMAND "set tty com0" = true
+
+let SINGLE_COMMAND = WORD 
+
+test matches_cex SINGLE_COMMAND "help" = true
+
+let SSTY_COMMAND
+  =
+  "ssty"
+    . NONEMPTY_SAMELINE_WSP . WORD . ("" | NONEMPTY_SAMELINE_WSP . NUMBER) 
+
+test matches_cex SSTY_COMMAND "ssty /dev/cuaU0 115200" = true
+
+test matches_cex SSTY_COMMAND "ssty /dev/cuaU0" = true
+
+let COMMAND
+  =
+  (BOOT_COMMAND
+     | BASIC_COMMAND
+     | MACHINE_COMMAND | SET_COMMAND | SINGLE_COMMAND | SSTY_COMMAND)
+    . "\n" 
+
+let BOOT_DICT
+  =
+  "{\"boot\""
+    . "{\"image\"=\""
+    . WORD
+    . "\"}" . ("{\"arg\"=\"" . WORD . "\"}")*  . "}" 
+
+let ECHO_DICT
+  =
+  "{" . "\"echo\"=\"" . WORD . "\"}" 
+
+let LS_DICT
+  =
+  "{" . "\"ls\"=\"" . WORD . "\"}" 
+
+let MACHINE_DICT
+  =
+  "{" . "\"machine\"{\"" . WORD . "\"}}"
+    | "{\"machine\"{"
+        . "\"" . WORD . "\"=" . "\"" . WORD . "\"}}" 
+
+let SET_DICT
+  =
+  "{\"set\"{"
+    . "\"" . WORD . "\"=" . "\"" . WORD . "\"}}" 
+
+let SINGLE_DICT = "{\"" . WORD . "\"}" 
+
+let SSTY_DICT
+  =
+  "{\"ssty\"{"
+    . "\"device\"=\""
+    . WORD
+    . "\"}"
+    . ("" | "{" . "\"speed\"=\"" . NUMBER . "\"}")
+    . "}" 
+
+let DICT
+  =
+  BOOT_DICT
+    | ECHO_DICT | LS_DICT | MACHINE_DICT | SET_DICT | SINGLE_DICT | SSTY_DICT 
+
+let command_map : (lens in COMMAND <=> DICT) = synth COMMAND <=> DICT 
