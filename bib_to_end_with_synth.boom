@@ -8,15 +8,18 @@ let initial : regexp = [A-Z] . "."
 
 let name : regexp = full_name | initial
 
-let wsp_to_space  = project [ \n\t\r]+ -> " "
+let wsp  = project [ \n\t\r]+ -> " "
 
-let valid_name  = name | (name . wsp_to_space . (name . wsp_to_space)* . name)
+let valid_name  = name | (name . wsp . (name . wsp)* . name)
 
-let wsp_to_and = project ([ \n\t\r]+ . "and" . [ \n\t\r]+) -> " and "
+let wsp_surrounded_and = wsp . "and" . wsp
 
-let bib_names =  
-
-valid_name | (valid_name . wsp_to_and . (valid_name . wsp_to_and)* . valid_name)
+let bib_names = 
+    valid_name
+    | (valid_name
+       . wsp_surrounded_and
+       . (valid_name . wsp_surrounded_and)*
+       . valid_name)
 
 let bib_author  = "author = \"" . bib_names . "\""
 
@@ -24,17 +27,18 @@ let label = [a-zA-Z0-9]+
 
 let word = ([A-Z] | [0-9]) . [a-zA-Z0-9]* 
 
-let title = word | (word . wsp_to_space . (word . wsp_to_space)* . word)
+let title = word | (word . wsp . (word . wsp)* . word)
 
 test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ?
 
-let end_name = "%A" . wsp_to_space . valid_name
+let end_name = "%A" . wsp . valid_name
 
-let wsp_to_nl = project [ \n\t\r]+ -> "\n"
+let wsp_default_nl = project [ \n\t\r]+ -> "\n"
 
 let end_author = 
+    end_name | (end_name . wsp_default_nl . (end_name . wsp_default_nl)* . end_name)
 
-end_name | (end_name . wsp_to_nl . (end_name . wsp_to_nl)* . end_name)
+let author_map = synth bib_author <=> end_author
 
 test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ?
 
@@ -42,16 +46,15 @@ let bib_title  = "title = {" . title . "}"
 
 let end_title  = "%T " . title
 
-let wsp_to_comma : canonizer =  (project ("," . [ \n\t\r]* ) -> ",\n") 
+let ws_default_nl = project [ \n\t\r]* -> "\n"
+let bib_field_sep : canonizer =  "," . ws_default_nl
 
-let end_wsp_to_space : canonizer =  (project [ \n\t\r]* -> "\n") 
-
-let bib_perm : canonizer = perm ([a-z]+, bib_author, bib_title) with wsp_to_comma
+let bib_perm : canonizer = perm ([a-z]+, bib_author, bib_title) with bib_field_sep
 
 let end_perm : canonizer = 
-perm ("%0 Book", ("%F " . [a-z]+), end_author, end_title) with end_wsp_to_space
+perm ("%0 Book", ("%F " . [a-z]+), end_author, end_title) with ws_default_nl
 
-let bibtex : canonizer = "@book{" . bib_perm . wsp_to_comma . "}"
+let bibtex : canonizer = "@book{" . bib_perm . bib_field_sep . "}"
 
 let endnote : canonizer = end_perm 
 
