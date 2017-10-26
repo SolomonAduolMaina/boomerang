@@ -10,9 +10,21 @@ let name : regexp = full_name | initial
 
 let wsp_to_space  = project [ \n\t\r]+ -> " "
 
-let valid_name  = name | (name . wsp_to_space . (name . wsp_to_space)* . name)
+let wsp_to_space_epsilon = project [ \n\t\r]* -> ""
 
-let wsp_to_and = project ([ \n\t\r]+ . "and" . [ \n\t\r]+) -> " and "
+let space_name  = name | (name . wsp_to_space . (name . wsp_to_space)* . name)
+
+let wsp_to_comma = wsp_to_space_epsilon . "," . wsp_to_space
+
+let comma_name = name | (name . wsp_to_comma . (name . wsp_to_space)* . name)
+
+let space_to_comma = synth comma_name <=> space_name using {("Conway, J. H.", "J. H. Conway")}
+
+let valid_name = squash comma_name -> space_name using (get space_to_comma)
+
+test canonize valid_name "Conway\n\n, J. \r\rH." = ?
+
+let wsp_to_and = wsp_to_space . "and" . wsp_to_space
 
 let bib_names =  
 

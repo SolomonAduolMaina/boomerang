@@ -471,10 +471,10 @@ and check_exp ?(in_let = false) sev e0 =
 			let e2_sort, new_e2 = check_exp sev e2 in
 			let e3_sort, new_e3 = check_exp sev e3 in
 			(match e1_sort, e2_sort, e3_sort with
-				| SRegexp, SRegexp, SFunction (_, SString, SString) ->
+				| SCanonizer, SCanonizer, SFunction (_, SString, SString) ->
 						SCanonizer, ESquash(i, new_e1, new_e2, new_e3)
 				| _ -> static_error i
-							(fun () -> msg "Squash expects two regular expressions and a
+							(fun () -> msg "Squash expects two canonizers and a
 								string to string function"))
 	| ESynth(i, e1, e2, e3) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
