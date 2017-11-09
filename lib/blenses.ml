@@ -300,8 +300,8 @@ module Canonizer = struct
 		| Columnize of int * Rx.t * char * string
 		| FromLens of Arx.t * Arx.t * equiv * mtype
 		* (Bstring.t -> (P.t * TmI.t) -> (P.t * TmI.t))
-	  * (Bstring.t -> string) * (Bstring.t -> string)
-    | FromVariable of string * t
+		* (Bstring.t -> string) * (Bstring.t -> string)
+		| FromVariable of string * t
 	
 	and t =
 		{ (* ----- meta data ----- *)
@@ -336,9 +336,9 @@ module Canonizer = struct
 					| Normalize (ct, ct0, f) -> Arx.mk_rx ct
 					| Sort (_, irl) ->
 							Arx.mk_star (Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_alt acc ari) Arx.empty irl)
-		      | FromLens (ct, _, _, _, _, _, _) -> ct
-          | FromVariable (_,cn') -> uncanonized_atype cn'
-        in
+					| FromLens (ct, _, _, _, _, _, _) -> ct
+					| FromVariable (_, cn') -> uncanonized_atype cn'
+				in
 				cn.uncanonized_atype <- Some ut;
 				ut
 	
@@ -357,9 +357,9 @@ module Canonizer = struct
 					| Sort (_, irl) ->
 							Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_seq ari acc) Arx.epsilon irl (* NB order! *)
 					| FromLens (_, at, _, _, _, _, _) -> at
-          | FromVariable (v,cn') -> Arx.mk_var v (canonized_atype cn')
-        in
-        cn.canonized_atype <- Some ct;
+					| FromVariable (v, cn') -> Arx.mk_var v (canonized_atype cn')
+				in
+				cn.canonized_atype <- Some ct;
 				ct
 	
 	and cnrel cn = match cn.cnrel with
@@ -377,9 +377,9 @@ module Canonizer = struct
 							else equiv_merge (cnrel cn1) (cnrel cn2)
 					| Star cn -> cnrel cn
 					| FromLens (_, _, eq, _, _, _, _) -> eq
-          | FromVariable (_,cn') -> cnrel cn'
-        in
-        cn.cnrel <- Some cr;
+					| FromVariable (_, cn') -> cnrel cn'
+				in
+				cn.cnrel <- Some cr;
 				cr
 	
 	and gperm cn u pi = (* returns pi *)
@@ -448,8 +448,8 @@ module Canonizer = struct
 								TmI.plus i shift
 					) pi (Safelist.rev jzl)
 		| FromLens (_, _, _, _, p, _, _) -> p u pi
-    | FromVariable (_, cn') -> gperm cn' u pi
-
+		| FromVariable (_, cn') -> gperm cn' u pi
+	
 	and canonize cn u =
 		let basic f = f (Bstring.to_string u) in
 		match cn.desc with
@@ -525,8 +525,8 @@ module Canonizer = struct
 											loop (succ i)) in
 								loop 0;
 								Buffer.contents buf)
-		| FromVariable (_,cn') -> canonize cn' u
-
+		| FromVariable (_, cn') -> canonize cn' u
+	
 	and choose cn c =
 		let basic f = f (Bstring.to_string c) in
 		match cn.desc with
@@ -580,14 +580,14 @@ module Canonizer = struct
 										loop i' in
 								loop 0;
 								Buffer.contents buf)
-		|	FromVariable (_,cn') -> choose cn' c
-
-  let info cn = cn.info
+		|	FromVariable (_, cn') -> choose cn' c
+	
+	let info cn = cn.info
 	
 	let rec format_t cn =
 		msg "@[";
-	begin match cn.desc with
-      | FromVariable(v,cn) -> msg "var(%s," v; format_t cn; msg ")"
+		begin match cn.desc with
+			| FromVariable(v, cn) -> msg "var(%s," v; format_t cn; msg ")"
 			| Copy(r1) -> msg "(copy@ "; Rx.format_t r1; msg ")"
 			| Concat(cn1, cn2) -> msg "("; format_t cn1; msg "@ .@ "; format_t cn2; msg ")"
 			| Union(cn1, cn2) -> msg "("; format_t cn1; msg "@ |@ "; format_t cn2; msg ")"
@@ -625,9 +625,9 @@ module Canonizer = struct
 	let union i cn1 cn2 = mk i (Union(cn1, cn2))
 	let star i cn1 = mk i (Star(cn1))
 	let normalize i ct ct0 f = mk i (Normalize(ct, ct0, f))
-  (*let compose i c1 c2 = 
-		normalize i (uncanonized_type c1) (canonized_type c2)
-		(fun s -> canonize c2 (Bstring.of_string (canonize c1 (Bstring.of_string s))))*)
+	(* let compose i c1 c2 = normalize i (uncanonized_type c1)               *)
+	(* (canonized_type c2) (fun s -> canonize c2 (Bstring.of_string          *)
+	(* (canonize c1 (Bstring.of_string s))))                                 *)
 	let sort i rl =
 		let k, irl = Safelist.fold_left (fun (i, acc) ari -> (succ i, (i, ari, Arx.rxtype ari):: acc)) (0,[]) rl in
 		mk i (Sort(k, irl))
@@ -635,8 +635,8 @@ module Canonizer = struct
 	let from_lens i ct at eq mt perm get crt = mk i (FromLens(ct, at, eq, mt, perm, get, crt))
 	let iter i cn1 min maxo =
 		Arx.generic_iter (copy i Rx.epsilon) (union i) (concat i) (star i)
-		min maxo cn1
-  let from_variable i v c = mk i (FromVariable(v,c))
+			min maxo cn1
+	let from_variable i v c = mk i (FromVariable(v, c))
 end
 
 (* --------------------------------------------------------------------------- *)
@@ -1778,17 +1778,20 @@ module MLens = struct
 	
 	let set_synth_vtype t r = { t with vtype = Some r }
 	let set_synth_stype t r = { t with stype = Some r }
-  let rec remove_outer_canonizers
-      (l:t)
-    : t =
-    begin match l.desc with
-      | LeftQuot(_,l') -> remove_outer_canonizers l'
-      | RightQuot(l',_) -> remove_outer_canonizers l'
-      | Var(_,l') -> remove_outer_canonizers l'
-      | _ -> l
-    end
-
-
+	let rec remove_outer_canonizers
+			(l: t)
+	: t =
+		begin match l.desc with
+			| LeftQuot(_, l') -> remove_outer_canonizers l'
+			| RightQuot(l', _) -> remove_outer_canonizers l'
+			| Var(_, l') -> remove_outer_canonizers l'
+			| _ -> l
+		end
+	
+	let canonizer_compose i c1 c2 =
+		let l = copy i (Canonizer.canonized_type c1) in
+		canonizer_of_t i (left_quot i c2 (left_quot i c1 l))
+	
 	let rec free_vars l s =
 		match l.desc with
 		| Var (s', ml) -> (if s = s' then [] else [s']) @ (free_vars ml s)

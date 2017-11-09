@@ -22,7 +22,7 @@ let space_to_comma = synth comma_name <=> space_name using {("Conway, J. H.", "J
 
 let valid_name = squash comma_name -> space_name using (get space_to_comma)
 
-test canonize valid_name "Conway\n\n, J. \r\rH." = ?
+(* test canonize valid_name "Conway\n\n, J. \r\rH." = ? *)
 
 let wsp_to_and = wsp_to_space . "and" . wsp_to_space
 
@@ -38,7 +38,7 @@ let word = ([A-Z] | [0-9]) . [a-zA-Z0-9]*
 
 let title = word | (word . wsp_to_space . (word . wsp_to_space)* . word)
 
-test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ?
+(* test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ? *)
 
 let end_name = "%A" . wsp_to_space . valid_name
 
@@ -48,7 +48,7 @@ let end_author =
 
 end_name | (end_name . wsp_to_nl . (end_name . wsp_to_nl)* . end_name)
 
-test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ?
+(* test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ? *)
 
 let bib_title  = "title = {" . title . "}"
 
@@ -58,9 +58,9 @@ let wsp_to_comma : canonizer =  (project ("," . [ \n\t\r]* ) -> ",\n")
 
 let end_wsp_to_space : canonizer =  (project [ \n\t\r]* -> "\n") 
 
-let bib_perm : canonizer = perm ([a-z]+, bib_author, bib_title) with wsp_to_comma
+let bib_perm  = perm ([a-z]+, bib_author, bib_title) with wsp_to_comma
 
-let end_perm : canonizer = 
+let end_perm  = 
 perm ("%0 Book", ("%F " . [a-z]+), end_author, end_title) with end_wsp_to_space
 
 let bibtex : canonizer = "@book{" . bib_perm . wsp_to_comma . "}"
@@ -97,4 +97,4 @@ title = {Regular Algebra And Finite Machines},}"
 
 let bib_to_end = synth bibtex <=> endnote 
 
-test get bib_to_end bib_record1 = get bib_to_end bib_record1
+test get bib_to_end bib_record1 = ?
