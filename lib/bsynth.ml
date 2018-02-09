@@ -96,7 +96,18 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
         c2
         (processed_qre_variables)
     in
-    Bconsts.qre_sizes := !Bconsts.qre_sizes + c1_qre_size;
+    let (c1_regex_size,c1_canonizer_size,processed_qre_variables) =
+      BL.Canonizer.regex_canonizer_size
+        c1
+        (!Bconsts.processed_qre_variables)
+    in
+    let (c2_regex_size,c2_canonizer_size,processed_qre_variables) =
+      BL.Canonizer.regex_canonizer_size
+        c2
+        (processed_qre_variables)
+    in
+    Bconsts.regex_canonizer_size := !Bconsts.regex_canonizer_size + c1_regex_size + c2_regex_size + c1_canonizer_size + c2_canonizer_size;
+    Bconsts.qre_sizes := !Bconsts.qre_sizes + c1_qre_size + c2_qre_size;
     Bconsts.processed_qre_variables := processed_qre_variables);
 	let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
 	let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in
@@ -109,7 +120,10 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
 	let lens = match lens with
 		| None -> Berror.run_error info
 					(fun () -> msg "Could not synthesize lens" )
-		| Some lens -> slens_to_blens lens rc lc info in
+	| Some lens -> slens_to_blens lens rc lc info in
+ let (lens_size,processed_vars) = BL.MLens.lens_size lens !Bconsts.processed_qre_variables in
+ Bconsts.synthed_lens_size := !Bconsts.synthed_lens_size + lens_size;
+ Bconsts.processed_qre_variables := processed_vars;
  let stype = BL.Canonizer.canonized_type c1 in
  let vtype = BL.Canonizer.canonized_type c2 in
  let lens = BL.MLens.set_synth_stype lens stype in

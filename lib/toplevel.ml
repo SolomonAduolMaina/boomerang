@@ -457,7 +457,11 @@ let toplevel' progName () =
        
        x
      end)
-    (fun () -> Util.flush (); print_endline (string_of_int !Bconsts.qre_sizes);)
+  (fun () -> Util.flush ();
+    print_endline (string_of_int !Bconsts.qre_sizes);
+    print_endline (string_of_int !Bconsts.regex_canonizer_size);
+    print_endline (string_of_int (!Bconsts.synthed_lens_size + !Bconsts.regex_canonizer_size));
+  )
     
 let toplevel progName =
   try

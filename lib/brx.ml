@@ -1500,8 +1500,7 @@ let rec size
        if s = "_" || s = "cn" || s = "cn1" || s = "cn2" || s = "r" || s = "r1" || s = "r2" then
          size r' processed_variables
        else
-         (print_endline s;
-         if (List.mem s processed_variables) then
+         (if (List.mem s processed_variables) then
            (1,processed_variables)
          else
            let processed_variables = s::processed_variables in

@@ -320,8 +320,9 @@ module Canonizer = struct
    : int * int * string list =
    begin match c.desc with
      | Copy r ->
-       let (rsize,processed_variables) = Brx.size r processed_variables in
-       (rsize,rsize,processed_variables)
+       let (rsize1,processed_variables) = Brx.size r processed_variables in
+       let (rsize2,processed_variables) = Brx.size r processed_variables in
+       (rsize1,rsize2,processed_variables)
      | Concat (c1,c2) ->
        let (r1s,c1s,processed_variables) =
          regex_canonizer_size
@@ -412,13 +413,11 @@ module Canonizer = struct
 	   | FromLens _ ->
        failwith "should not be called"
     | FromVariable (s,r') ->
-      if s = "inoutxml" then print_endline "HELLO";
        if s = "_" || s = "cn" || s = "cn1" || s = "cn2" then
          qre_size r' processed_variables
        else
        if (List.mem s processed_variables) then
-         (print_endline s;
-           (1,processed_variables))
+           (1,processed_variables)
          else
            let processed_variables = s::processed_variables in
            let (s,processed_variables) = (qre_size r' processed_variables) in
@@ -1938,7 +1937,50 @@ module MLens = struct
 	
 	let canonizer_compose i c1 c2 =
 		let l = copy i (Canonizer.canonized_type c1) in
-		canonizer_of_t i (left_quot i c2 (left_quot i c1 l))
+	canonizer_of_t i (left_quot i c2 (left_quot i c1 l))
+
+  let rec lens_size l (processed_vars) : (int * string list) =
+    begin match l.desc with
+      | Var (s,ml) -> 
+         if (List.mem s processed_vars) then
+           (1,processed_vars)
+         else
+           let processed_vars = s::processed_vars in
+           let (ls,processed_vars) = lens_size ml processed_vars in
+           (1+ls,processed_vars)
+      | Copy r ->
+       let (rsize,processed_vars) = Brx.size r processed_vars in
+       (rsize,processed_vars)
+      | Clobber (r1,_,_) ->
+       let (rsize,processed_vars) = Brx.size r1 processed_vars in
+       (rsize+1,processed_vars)
+      | Concat(ml1,ml2) ->
+        let (ls1,processed_vars) = lens_size ml1 processed_vars in
+        let (ls2,processed_vars) = lens_size ml2 processed_vars in
+        (ls1+ls2+1,processed_vars)
+      | Union(ml1,ml2) ->
+        let (ls1,processed_vars) = lens_size ml1 processed_vars in
+        let (ls2,processed_vars) = lens_size ml2 processed_vars in
+        (ls1+ls2+1,processed_vars)
+      | Star ml1 ->
+        let (ls1,processed_vars) = lens_size ml1 processed_vars in
+        (ls1+1,processed_vars)
+      | Compose (ml1,ml2) ->
+        let (ls1,processed_vars) = lens_size ml1 processed_vars in
+        let (ls2,processed_vars) = lens_size ml2 processed_vars in
+        (ls1+ls2+1,processed_vars)
+      | Invert (ml1) ->
+        let (ls1,processed_vars) = lens_size ml1 processed_vars in
+        (ls1+1,processed_vars)
+      | Permute (_,mls) ->
+        Array.fold_left
+          (fun (size,processed_vars) ml1 ->
+              let (s,processed_vars) = lens_size ml1 processed_vars in
+              (s+size,processed_vars))
+          (1,processed_vars)
+          mls
+      | _ -> failwith "shouldnt be synthesized";
+    end
 	
 	let rec free_vars l s =
 		match l.desc with

@@ -67,6 +67,7 @@ module Canonizer : sig
   val from_squash : Info.t -> Brx.t -> Brx.t -> t -> t
 
   val qre_size : t -> string list -> (int * string list)
+  val regex_canonizer_size : t -> string list -> int * int * string list
 end
 
 type ktype
@@ -131,4 +132,5 @@ module MLens : sig
 	val free_vars : t -> string -> string list
 	val bijective : t -> bool
 	val canonizer_compose : Info.t -> Canonizer.t -> Canonizer.t -> Canonizer.t
+  val lens_size : t -> string list -> int * string list
 end
