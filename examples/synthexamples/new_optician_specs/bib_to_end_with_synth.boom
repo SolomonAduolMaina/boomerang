@@ -8,18 +8,27 @@ let initial : regexp = [A-Z] . "."
 
 let name : regexp = full_name | initial
 
-let wsp  = project [ \n\t\r]+ -> " "
+let wsp_to_space  = project [ \n\t\r]+ -> " "
 
-let valid_name  = name | (name . wsp . (name . wsp)* . name)
+let wsp_to_space_epsilon = project [ \n\t\r]* -> ""
 
-let wsp_surrounded_and = wsp . "and" . wsp
+let space_name  = name | (name . wsp_to_space . (name . wsp_to_space)* . name)
 
-let bib_names = 
-    valid_name
-    | (valid_name
-       . wsp_surrounded_and
-       . (valid_name . wsp_surrounded_and)*
-       . valid_name)
+let wsp_to_comma = wsp_to_space_epsilon . "," . wsp_to_space
+
+let comma_name = name | (name . wsp_to_comma . (name . wsp_to_space)* . name)
+
+let space_to_comma = synth comma_name <=> space_name using {("Conway, J. H.", "J. H. Conway")}
+
+let valid_name = squash comma_name -> space_name using (get space_to_comma)
+
+(* test canonize valid_name "Conway\n\n, J. \r\rH." = ? *)
+
+let wsp_to_and = wsp_to_space . "and" . wsp_to_space
+
+let bib_names =  
+
+valid_name | (valid_name . wsp_to_and . (valid_name . wsp_to_and)* . valid_name)
 
 let bib_author  = "author = \"" . bib_names . "\""
 
@@ -27,34 +36,34 @@ let label = [a-zA-Z0-9]+
 
 let word = ([A-Z] | [0-9]) . [a-zA-Z0-9]* 
 
-let title = word | (word . wsp . (word . wsp)* . word)
+let title = word | (word . wsp_to_space . (word . wsp_to_space)* . word)
 
-test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ?
+(* test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ? *)
 
-let end_name = "%A" . wsp . valid_name
+let end_name = "%A" . wsp_to_space . valid_name
 
-let wsp_default_nl = project [ \n\t\r]+ -> "\n"
+let wsp_to_nl = project [ \n\t\r]+ -> "\n"
 
 let end_author = 
-    end_name | (end_name . wsp_default_nl . (end_name . wsp_default_nl)* . end_name)
 
-let author_map = synth bib_author <=> end_author
+end_name | (end_name . wsp_to_nl . (end_name . wsp_to_nl)* . end_name)
 
-test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ?
+(* test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ? *)
 
 let bib_title  = "title = {" . title . "}"
 
 let end_title  = "%T " . title
 
-let ws_default_nl = project [ \n\t\r]* -> "\n"
-let bib_field_sep : canonizer =  "," . ws_default_nl
+let wsp_to_comma : canonizer =  (project ("," . [ \n\t\r]* ) -> ",\n") 
 
-let bib_perm : canonizer = perm ([a-z]+, bib_author, bib_title) with bib_field_sep
+let end_wsp_to_space : canonizer =  (project [ \n\t\r]* -> "\n") 
 
-let end_perm : canonizer = 
-perm ("%0 Book", ("%F " . [a-z]+), end_author, end_title) with ws_default_nl
+let bib_perm  = perm ([a-z]+, bib_author, bib_title) with wsp_to_comma
 
-let bibtex : canonizer = "@book{" . bib_perm . bib_field_sep . "}"
+let end_perm  = 
+perm ("%0 Book", ("%F " . [a-z]+), end_author, end_title) with end_wsp_to_space
+
+let bibtex : canonizer = "@book{" . bib_perm . wsp_to_comma . "}"
 
 let endnote : canonizer = end_perm 
 
@@ -86,6 +95,6 @@ let bib_template =
 author = \"Conway J. H. and Conway H. J.\",
 title = {Regular Algebra And Finite Machines},}"
 
-let bib_to_end = synth bibtex <=> endnote using {(bib_template, end_template)}
+let bib_to_end = synth bibtex <=> endnote 
 
-test get bib_to_end bib_record1 = get bib_to_end bib_record1
+test get bib_to_end bib_record1 = ?

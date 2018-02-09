@@ -396,7 +396,7 @@ let prelude_spec =
   ; pmk_rq     "canonizer_copy"       C.copy
   ; pmk_qqq    "canonizer_union"      C.union
   ; pmk_qqq    "canonizer_concat"     C.concat
-	(* ; pmk_qqq    "canonizer_compose"    C.compose*)
+	; pmk_qqq    "canonizer_compose"    L.canonizer_compose
   ; pmk_qiiq   "canonizer_iter"       C.iter
   ; pmk_qss    "canonize"             (fun _ cn u -> C.canonize cn (Bstring.of_string u))
   ; pmk_qss    "choose"               (fun _ cn c -> C.choose cn (Bstring.of_string c))

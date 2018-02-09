@@ -50,7 +50,7 @@ module Canonizer : sig
   (* components *)
   val canonize : t -> Bstring.t -> string
   val choose : t -> Bstring.t -> string
-
+	
   (* constructors *)
   val copy : Info.t -> Brx.t -> t
   val concat : Info.t -> t -> t -> t
@@ -130,4 +130,5 @@ module MLens : sig
   val remove_outer_canonizers : t -> t
 	val free_vars : t -> string -> string list
 	val bijective : t -> bool
+	val canonizer_compose : Info.t -> Canonizer.t -> Canonizer.t -> Canonizer.t
 end

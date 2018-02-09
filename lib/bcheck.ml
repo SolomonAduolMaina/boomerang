@@ -471,10 +471,10 @@ and check_exp ?(in_let = false) sev e0 =
 			let e2_sort, new_e2 = check_exp sev e2 in
 			let e3_sort, new_e3 = check_exp sev e3 in
 			(match e1_sort, e2_sort, e3_sort with
-				| SRegexp, SRegexp, SFunction (_, SString, SString) ->
+				| SCanonizer, SCanonizer, SFunction (_, SString, SString) ->
 						SCanonizer, ESquash(i, new_e1, new_e2, new_e3)
 				| _ -> static_error i
-							(fun () -> msg "Squash expects two regular expressions and a
+							(fun () -> msg "Squash expects two canonizers and a
 								string to string function"))
 	| ESynth(i, e1, e2, e3) ->
 			let e1_sort, new_e1 = check_exp sev e1 in
@@ -496,11 +496,11 @@ and check_exp ?(in_let = false) sev e0 =
 				| SRegexp | SString | SChar | SCanonizer ->
 						begin
 							match e2_sort with
-							| SRegexp | SString | SChar | SCanonizer-> SLens, ESynth(i, new_e1, new_e2, new_e3)
+							| SRegexp | SString | SChar | SCanonizer -> SLens, ESynth(i, new_e1, new_e2, new_e3)
 							| _ -> static_error i
-										(fun () -> 
-											msg "The second argument here should be a regular expression or canonizer")
-						
+										(fun () ->
+													msg "The second argument here should be a regular expression or canonizer")
+							
 						end
 				| _ -> static_error i
 							(fun () -> msg "The first argument of synth should be a regular expression
@@ -537,7 +537,7 @@ and check_exp ?(in_let = false) sev e0 =
 			let e2_sort, new_e2 = check_exp sev e2 in
 			begin
 				match e2_sort with
-				| SCanonizer | SChar | SString |SRegexp-> (SCanonizer, EPerm(i, new_l, new_e2))
+				| SCanonizer | SChar | SString | SRegexp -> (SCanonizer, EPerm(i, new_l, new_e2))
 				| _ -> static_error i
 							(fun () -> msg
 											"The second part of the perm construct should be a canonizer" )
@@ -698,13 +698,36 @@ and check_exp ?(in_let = false) sev e0 =
 										app (app (app r_op force) weight) se
 								| None -> err ()
 							)
-					| op,[r1; r2] -> begin
-								let rules = try Safelist.assoc op bin_rules with _ -> err () in
-								match find_rule rules rs with
-								| Some op_id ->
-										let r_op = check_exp sev (mk_core_var i op_id) in
-										check_exp_app i sev (check_exp_app i sev r_op r1) r2
-								| None -> err ()
+					| op,[(e1_sort, e1) as r1; (e2_sort, e2) as r2] ->
+							begin
+								match op with
+								| OCompose ->
+										if compatible e1_sort SCanonizer && compatible e2_sort SCanonizer then
+											begin
+												let rules = try Safelist.assoc op bin_rules with _ -> err () in
+												match find_rule rules rs with
+												| Some op_id ->
+														let r_op = check_exp sev (mk_native_prelude_var i op_id) in
+														check_exp_app i sev (check_exp_app i sev r_op r1) r2
+												| None -> err ()
+											end else
+											begin
+												let rules = try Safelist.assoc op bin_rules with _ -> err () in
+												match find_rule rules rs with
+												| Some op_id ->
+														let r_op = check_exp sev (mk_core_var i op_id) in
+														check_exp_app i sev (check_exp_app i sev r_op r1) r2
+												| None -> err ()
+											end
+								| _ ->
+										begin
+											let rules = try Safelist.assoc op bin_rules with _ -> err () in
+											match find_rule rules rs with
+											| Some op_id ->
+													let r_op = check_exp sev (mk_core_var i op_id) in
+													check_exp_app i sev (check_exp_app i sev r_op r1) r2
+											| None -> err ()
+										end
 							end
 					| op,[r1] -> begin
 								let rules = try Safelist.assoc op bin_rules with _ -> err () in

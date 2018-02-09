@@ -731,8 +731,8 @@ module Canonizer = struct
 	
 	let rec format_t cn =
 		msg "@[";
-	begin match cn.desc with
-      | FromVariable(v,cn) -> msg "var(%s," v; format_t cn; msg ")"
+		begin match cn.desc with
+			| FromVariable(v, cn) -> msg "var(%s," v; format_t cn; msg ")"
 			| Copy(r1) -> msg "(copy@ "; Rx.format_t r1; msg ")"
 			| Concat(cn1, cn2) -> msg "("; format_t cn1; msg "@ .@ "; format_t cn2; msg ")"
 			| Union(cn1, cn2) -> msg "("; format_t cn1; msg "@ |@ "; format_t cn2; msg ")"
@@ -770,9 +770,9 @@ module Canonizer = struct
 	let union i cn1 cn2 = mk i (Union(cn1, cn2))
 	let star i cn1 = mk i (Star(cn1))
 	let normalize i ct ct0 f = mk i (Normalize(ct, ct0, f))
-  (*let compose i c1 c2 = 
-		normalize i (uncanonized_type c1) (canonized_type c2)
-		(fun s -> canonize c2 (Bstring.of_string (canonize c1 (Bstring.of_string s))))*)
+	(* let compose i c1 c2 = normalize i (uncanonized_type c1)               *)
+	(* (canonized_type c2) (fun s -> canonize c2 (Bstring.of_string          *)
+	(* (canonize c1 (Bstring.of_string s))))                                 *)
 	let sort i rl =
 		let k, irl = Safelist.fold_left (fun (i, acc) ari -> (succ i, (i, ari, Arx.rxtype ari):: acc)) (0,[]) rl in
 		mk i (Sort(k, irl))
@@ -1926,17 +1926,20 @@ module MLens = struct
 	
 	let set_synth_vtype t r = { t with vtype = Some r }
 	let set_synth_stype t r = { t with stype = Some r }
-  let rec remove_outer_canonizers
-      (l:t)
-    : t =
-    begin match l.desc with
-      | LeftQuot(_,l') -> remove_outer_canonizers l'
-      | RightQuot(l',_) -> remove_outer_canonizers l'
-      | Var(_,l') -> remove_outer_canonizers l'
-      | _ -> l
-    end
-
-
+	let rec remove_outer_canonizers
+			(l: t)
+	: t =
+		begin match l.desc with
+			| LeftQuot(_, l') -> remove_outer_canonizers l'
+			| RightQuot(l', _) -> remove_outer_canonizers l'
+			| Var(_, l') -> remove_outer_canonizers l'
+			| _ -> l
+		end
+	
+	let canonizer_compose i c1 c2 =
+		let l = copy i (Canonizer.canonized_type c1) in
+		canonizer_of_t i (left_quot i c2 (left_quot i c1 l))
+	
 	let rec free_vars l s =
 		match l.desc with
 		| Var (s', ml) -> (if s = s' then [] else [s']) @ (free_vars ml s)
