@@ -33,3 +33,7 @@ distclean:
 
 doc:
 	ocaml setup.ml -doc
+
+generate-data: setup.data setup.ml
+	ocaml setup.ml -build -j $(J)
+	python generate-data.py ./boomerang.native examples/synthexamples/new_specs/

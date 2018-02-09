@@ -29,7 +29,7 @@ let word = ([A-Z] | [0-9]) . [a-zA-Z0-9]*
 
 let title = word | (word . wsp . (word . wsp)* . word)
 
-test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = ?
+test canonize bib_names "Conway\n\nJ. \r\rH. \n and\t\r Conway H. J." = "Conway J. H. and Conway H. J."
 
 let end_name = "%A" . wsp . valid_name
 
@@ -40,7 +40,7 @@ let end_author =
 
 let author_map = synth bib_author <=> end_author
 
-test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = ?
+test canonize end_author "%A Conway\n\nJ. \r\rH. \n\n\t\r %A Conway H. J." = "%A Conway J. H.\n%A Conway H. J."
 
 let bib_title  = "title = {" . title . "}"
 
