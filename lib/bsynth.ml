@@ -77,7 +77,27 @@ let get_canonizers v1 v2 =
 
 let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensContext.t) =
 	let (c1, i1), (c2, i2) = get_canonizers v1 v2 in
-	
+  let c1_nontrivial_quot =
+    not
+      (Brx.equiv (BL.Canonizer.canonized_type c1) (BL.Canonizer.uncanonized_type c1))
+  in
+  let c2_nontrivial_quot =
+    not
+      (Brx.equiv (BL.Canonizer.canonized_type c2) (BL.Canonizer.uncanonized_type c2))
+  in
+  if c1_nontrivial_quot || c2_nontrivial_quot then
+    (let (c1_qre_size,processed_qre_variables) =
+      BL.Canonizer.qre_size
+        c1
+        (!Bconsts.processed_qre_variables)
+    in
+    let (c2_qre_size,processed_qre_variables) =
+      BL.Canonizer.qre_size
+        c2
+        (processed_qre_variables)
+    in
+    Bconsts.qre_sizes := !Bconsts.qre_sizes + c1_qre_size;
+    Bconsts.processed_qre_variables := processed_qre_variables);
 	let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
 	let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in
 	let l = get_strings l in

@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 8e227b46fa67557aa2bd2a84b14f868d)
+# DO NOT EDIT (digest: c429926392c2b11f965c75a08fc9ba82)
 Amapblist
 Balign
 Bannot
@@ -12,6 +12,7 @@ Benv
 Berror
 Bident
 Binterp
+Bconsts
 Blenses
 Blexer
 Bparser

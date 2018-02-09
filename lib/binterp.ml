@@ -296,8 +296,10 @@ and interp_exp wq cev e0 =
 							(match f None (V.Str (i, s)) with
 								| V.Str(_, s) -> s
 								| _ -> Berror.run_error i (fun () -> msg "Expected a string here!"))
-				| _ -> Berror.run_error i (fun () -> msg "Expected a function here!") in
-			V.Can(i, Blenses.Canonizer.normalize i (Brx.mk_alt r1 r2) r2 f)
+		    | _ -> Berror.run_error i (fun () -> msg "Expected a function here!") in
+      let squash_can = Blenses.Canonizer.normalize i (Brx.mk_alt r1 r2) r2 f in
+      let can = Blenses.Canonizer.from_squash i r1 r2 squash_can in
+			V.Can(i, can)
 	| ESynth(i, e1, e2, e3) ->
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
@@ -371,7 +373,9 @@ and interp_exp wq cev e0 =
 		       | None -> Berror.run_error i
 										 (fun () -> msg "This regular expression is empty!")
 				   | Some rep -> rep in
-			               V.Can (i, BL.MLens.canonizer_of_t i (BL.MLens.clobber i r s (fun _ -> rep)))
+         let proj = BL.MLens.canonizer_of_t i (BL.MLens.clobber i r s (fun _ -> rep)) in
+         let can = BL.Canonizer.from_project i r s proj in
+			   V.Can (i, can)
 		    | _ as v -> Berror.run_error (V.info_of_t v) (fun () -> msg
 														"The second part of the project construct should be a string")
 		 end

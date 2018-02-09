@@ -301,7 +301,10 @@ module Canonizer = struct
 		| FromLens of Arx.t * Arx.t * equiv * mtype
 		* (Bstring.t -> (P.t * TmI.t) -> (P.t * TmI.t))
 	  * (Bstring.t -> string) * (Bstring.t -> string)
-    | FromVariable of string * t
+   | FromVariable of string * t
+   | FromPermute of t list * t * t
+   | FromProject of Rx.t * string * t
+   | FromSquash of Rx.t * Rx.t * t
 	
 	and t =
 		{ (* ----- meta data ----- *)
@@ -311,7 +314,131 @@ module Canonizer = struct
 			mutable uncanonized_atype : Arx.t option;
 			mutable canonized_atype : Arx.t option;
 			mutable cnrel : equiv option;
-		}
+ }
+
+ let rec regex_canonizer_size (c:t) (processed_variables:string list)
+   : int * int * string list =
+   begin match c.desc with
+     | Copy r ->
+       let (rsize,processed_variables) = Brx.size r processed_variables in
+       (rsize,rsize,processed_variables)
+     | Concat (c1,c2) ->
+       let (r1s,c1s,processed_variables) =
+         regex_canonizer_size
+           c1
+           processed_variables
+       in
+       let (r2s,c2s,processed_variables) =
+         regex_canonizer_size
+           c2
+           processed_variables
+       in
+       (r1s+r2s+1,c1s+c2s+1,processed_variables)
+     | Union (c1,c2) ->
+       let (r1s,c1s,processed_variables) =
+         regex_canonizer_size
+           c1
+           processed_variables
+       in
+       let (r2s,c2s,processed_variables) =
+         regex_canonizer_size
+           c2
+           processed_variables
+       in
+       (r1s+r2s+1,c1s+c2s+1,processed_variables)
+     | Star c' ->
+       let (rs',cs',processed_variables) = regex_canonizer_size c' processed_variables in
+       (rs'+1,cs'+1,processed_variables)
+     | Normalize (c1,c2,f) ->
+       failwith "should not be called"
+     | Sort _ -> failwith "should not be called"
+     | Columnize _ ->
+       failwith "should not be called"
+     | FromLens _ -> failwith "should not be called"
+     | FromVariable (s,r') ->
+       if s = "_" || s = "cn" || s = "cn1" || s = "cn2" then
+         regex_canonizer_size r' processed_variables
+       else
+         if (List.mem s processed_variables) then
+           (1,1,processed_variables)
+         else
+           let processed_variables = s::processed_variables in
+           let (rs,cs,processed_variables) = regex_canonizer_size r' processed_variables in
+           (1+rs,1+cs,processed_variables)
+     | FromPermute (cns,cn,_) ->
+       let (rs,cs,processed_variables) = regex_canonizer_size cn processed_variables in
+       List.fold_left
+         (fun (r_size_acc,c_size_acc,processed_variables) cn ->
+            let (rs,cs,processed_variables) = regex_canonizer_size cn processed_variables in
+            (r_size_acc+rs,c_size_acc+cs,processed_variables))
+         (rs+1,cs+1,processed_variables)
+         cns
+     | FromProject (r,_,_) ->
+       let (rs,processed_variables) = Brx.size r processed_variables in
+       (rs,rs+2,processed_variables)
+     | FromSquash (r1,r2,_) ->
+       let (s1,processed_variables) = Brx.size r1 processed_variables in
+       let (s2,processed_variables) = Brx.size r2 processed_variables in
+       (s1+s2+1,s1+s2+2,processed_variables)
+   end
+
+
+ let rec qre_size (c:t) (processed_variables:string list)
+   : int * string list =
+   begin match c.desc with
+		 | Copy r ->
+       let (rsize,processed_variables) = Brx.size r processed_variables in
+       (rsize,processed_variables)
+	   | Concat (r1,r2) ->
+       let (s1,processed_variables) = qre_size r1 processed_variables in
+       let (s2,processed_variables) = qre_size r2 processed_variables in
+       (s1+s2+1,processed_variables)
+		 | Union (r1,r2) ->
+       let (s1,processed_variables) = qre_size r1 processed_variables in
+       let (s2,processed_variables) = qre_size r2 processed_variables in
+       (s1+s2+1,processed_variables)
+	   | Star r' ->
+       let (s',processed_variables) = qre_size r' processed_variables in
+       (s'+1,processed_variables)
+		 | Normalize (r1,r2,f) ->
+       (*let (s1,processed_variables) = Brx.size r1 in
+       let (s2,processed_variables) = Brx.size r2 in
+         (s1+s2+2,processed_variables)*)
+       failwith "should not be called"
+	   | Sort (i1,iarl) ->
+       failwith "should not be called"
+		 | Columnize (i,r,c,s) ->
+       failwith "should not be called"
+	   | FromLens _ ->
+       failwith "should not be called"
+    | FromVariable (s,r') ->
+      if s = "inoutxml" then print_endline "HELLO";
+       if s = "_" || s = "cn" || s = "cn1" || s = "cn2" then
+         qre_size r' processed_variables
+       else
+       if (List.mem s processed_variables) then
+         (print_endline s;
+           (1,processed_variables))
+         else
+           let processed_variables = s::processed_variables in
+           let (s,processed_variables) = (qre_size r' processed_variables) in
+           (1+s,processed_variables)
+     | FromPermute (cns,cn,_) ->
+       let (s,processed_variables) = qre_size cn processed_variables in
+       List.fold_left
+         (fun (size_acc,processed_variables) r ->
+            let (scn,processed_variables) = qre_size r processed_variables in
+            (size_acc+scn,processed_variables))
+         (s+1,processed_variables)
+         cns
+     | FromProject (r,_,_) ->
+       let (s,processed_variables) = Brx.size r processed_variables in
+       (s+2,processed_variables)
+     | FromSquash (r1,r2,_) ->
+       let (s1,processed_variables) = Brx.size r1 processed_variables in
+       let (s2,processed_variables) = Brx.size r2 processed_variables in
+       (s1+s2+2,processed_variables)
+   end
 	
 	let mk i d =
 		{ info = i;
@@ -337,7 +464,10 @@ module Canonizer = struct
 					| Sort (_, irl) ->
 							Arx.mk_star (Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_alt acc ari) Arx.empty irl)
 		      | FromLens (ct, _, _, _, _, _, _) -> ct
-          | FromVariable (_,cn') -> uncanonized_atype cn'
+          | FromVariable (v,cn') -> Arx.mk_var v (uncanonized_atype cn')
+          | FromPermute (_,_,cn') -> uncanonized_atype cn'
+          | FromProject (_,_,cn') -> uncanonized_atype cn'
+          | FromSquash (_,_,cn') -> uncanonized_atype cn'
         in
 				cn.uncanonized_atype <- Some ut;
 				ut
@@ -358,6 +488,9 @@ module Canonizer = struct
 							Safelist.fold_left (fun acc (_, ari, _) -> Arx.mk_seq ari acc) Arx.epsilon irl (* NB order! *)
 					| FromLens (_, at, _, _, _, _, _) -> at
           | FromVariable (v,cn') -> Arx.mk_var v (canonized_atype cn')
+          | FromPermute (_,_,cn') -> canonized_atype cn'
+          | FromProject (_,_,cn') -> canonized_atype cn'
+          | FromSquash (_,_,cn') -> canonized_atype cn'
         in
         cn.canonized_atype <- Some ct;
 				ct
@@ -378,6 +511,9 @@ module Canonizer = struct
 					| Star cn -> cnrel cn
 					| FromLens (_, _, eq, _, _, _, _) -> eq
           | FromVariable (_,cn') -> cnrel cn'
+          | FromPermute (_,_,cn') -> cnrel cn'
+          | FromProject (_,_,cn') -> cnrel cn'
+          | FromSquash (_,_,cn') -> cnrel cn'
         in
         cn.cnrel <- Some cr;
 				cr
@@ -449,6 +585,9 @@ module Canonizer = struct
 					) pi (Safelist.rev jzl)
 		| FromLens (_, _, _, _, p, _, _) -> p u pi
     | FromVariable (_, cn') -> gperm cn' u pi
+    | FromPermute (_,_,cn') -> gperm cn' u pi
+    | FromProject (_,_,cn') -> gperm cn' u pi
+    | FromSquash (_,_,cn') -> gperm cn' u pi
 
 	and canonize cn u =
 		let basic f = f (Bstring.to_string u) in
@@ -526,6 +665,9 @@ module Canonizer = struct
 								loop 0;
 								Buffer.contents buf)
 		| FromVariable (_,cn') -> canonize cn' u
+    | FromPermute (_,_,cn') -> canonize cn' u
+    | FromProject (_,_,cn') -> canonize cn' u
+    | FromSquash (_,_,cn') -> canonize cn' u
 
 	and choose cn c =
 		let basic f = f (Bstring.to_string c) in
@@ -581,6 +723,9 @@ module Canonizer = struct
 								loop 0;
 								Buffer.contents buf)
 		|	FromVariable (_,cn') -> choose cn' c
+    | FromPermute (_,_,cn') -> choose cn' c
+    | FromProject (_,_,cn') -> choose cn' c
+    | FromSquash (_,_,cn') -> choose cn' c
 
   let info cn = cn.info
 	
@@ -637,6 +782,9 @@ module Canonizer = struct
 		Arx.generic_iter (copy i Rx.epsilon) (union i) (concat i) (star i)
 		min maxo cn1
   let from_variable i v c = mk i (FromVariable(v,c))
+  let from_permute i cl c' c = mk i (FromPermute(cl,c',c))
+  let from_project i r s c = mk i (FromProject(r,s,c))
+  let from_squash i r1 r2 c = mk i (FromSquash(r1,r2,c))
 end
 
 (* --------------------------------------------------------------------------- *)

@@ -378,6 +378,7 @@ let toplevel' progName () =
   let e_pref = Prefs.expressionPref in
   let rest = Prefs.restPref in
   let check_pref = Prefs.checkPref in
+  let find_savings_pref = Prefs.findSavingsPref in
 
   Prefs.parseCmdLine usageMsg;
   
@@ -387,7 +388,10 @@ let toplevel' progName () =
   let vl = Safelist.rev (Prefs.read v_pref) in 
   let el = Safelist.rev (Prefs.read e_pref) in
   let o = Prefs.read o_pref in
-  let rest_pref = Safelist.rev (Prefs.read rest) in 
+  
+  let rest_pref = Safelist.rev (Prefs.read rest) in
+
+  let find_savings = Prefs.read find_savings_pref in
 
   (* run unit tests if needed *)
   if Prefs.read check_pref <> [] then
@@ -443,14 +447,17 @@ let toplevel' progName () =
 				 | [],[],[],[l],o-> ["stdio"],[l],[],[],o
          | _ -> bad_cmdline () in 
        let o_fn = if o="" then "-" else o in 
-       match rest_pref,ll,sl,vl with
+       let x = match rest_pref,ll,sl,vl with
          | ["get"],[l],[s_fn],[]        -> get l s_fn o_fn
          | ["create"],[l],[],[v_fn]     -> create l v_fn o_fn
          | ["put"],[l],[s_fn],[v_fn]    -> put l v_fn s_fn o_fn
 				 | ["stdio"],[l],[],[]				-> apply l
          | _ -> assert false
+       in
+       
+       x
      end)
-    (fun () -> Util.flush ())
+    (fun () -> Util.flush (); print_endline (string_of_int !Bconsts.qre_sizes);)
     
 let toplevel progName =
   try

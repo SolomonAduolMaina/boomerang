@@ -1497,22 +1497,21 @@ let rec size
       let (s2,processed_variables) = size r2 processed_variables in
       (s1+s2+1,processed_variables)
 	  | Var (s,r') ->
-       if s = "_" || s = "cn" || s = "cn1" || s = "cn2" || s = "r" || s = "r1" || s = "r2" then
+       if s = "_" || s = "cn" || s = "cn1" || s = "cn2" then
          size r' processed_variables
        else
-         (print_endline s;
          if (List.mem s processed_variables) then
            (1,processed_variables)
          else
            let processed_variables = s::processed_variables in
            let (s,processed_variables) = (size r' processed_variables) in
-           (1+s,processed_variables))
+           (1+s,processed_variables)
 	  | Perm (rs,r') ->
       let (s,processed_variables) = size r' processed_variables in
       List.fold_left
         (fun (size_acc,processed_variables) r ->
            let (sr,processed_variables) = size r processed_variables in
-           (size_acc+sr,processed_variables))
-        (s+1,processed_variables)
+           (s_acc+sr,processed_variables))
+        (size+1,processed_variables)
         rs
   end

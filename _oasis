@@ -76,6 +76,7 @@ Library boomerang
     Berror,
     Bident,
     Binterp,
+    Bconsts,
     Blenses,
     Blexer,
     Bparser,

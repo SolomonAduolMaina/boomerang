@@ -8,6 +8,9 @@ generate-data:
 	$(GENERATE_DATA) ../../boomerang.native new_optician_specs/
 	mv generated_data/data.csv generated_data/new_optician_comparison_data.csv
 
+generate-graphs:
+	python transform-data.py generated_data/new_comparison_data.csv generated_data/optician_comparison_data.csv generated_data/oo_data.csv generated_data/new_optician_comparison_data.csv
+
 generate-io-specs: cmdline.native
 	$(GENERATE_IO_SPECS) ./cmdline.native example-inputs/ 10100
 

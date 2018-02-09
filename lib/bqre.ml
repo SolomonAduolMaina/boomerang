@@ -53,5 +53,10 @@ let perm_canonizer (cs : BL.Canonizer.t list) (c : BL.Canonizer.t) : BL.Canonize
 				let f c s = BL.Canonizer.canonize c (BS.of_string s) in
         let ss = List.map2 f (Brx.intersperse c cs) ss in
         String.concat "" ss in
-    BL.Canonizer.normalize (Info.I ("", (0, 0), (0, 0))) whole kernel f
+    let norm = BL.Canonizer.normalize (Info.I ("", (0, 0), (0, 0))) whole kernel f in
+    BL.Canonizer.from_permute
+      (Info.I ("", (0,0), (0,0)))
+      cs
+      c
+      norm
 		

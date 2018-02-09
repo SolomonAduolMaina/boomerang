@@ -347,14 +347,14 @@ def generate_time_vs_tasks_graph_new(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
-    ax.set_title("Time vs\nBenchmarks Completed")
+    ax.set_title("Time vs Optometrist\nBenchmarks Completed")
 
     l = ax.legend(bbox_to_anchor=(.90,.6),borderaxespad=0)
     plt.setp(l.texts, weight='bold')
 
     fig = plt.figure(2,tight_layout=True)
     fig.set_figheight(1.5)
-    fig.set_figwidth(2.5)
+    fig.set_figwidth(2)
        
     fig.savefig(generated_graphs_base + "times_new.eps", bbox_inches='tight')
 
@@ -384,19 +384,19 @@ def generate_time_vs_tasks_graph_opt(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
     normal_size = 2
     full_size = 3
 
-    create_step_plot(prog_on_opt_csv,"RunTime","PO",':',normal_size)
     create_step_plot(opt_on_opt_csv,"RunTime","OO",'-',normal_size)
+    create_step_plot(prog_on_opt_csv,"RunTime","PO",':',normal_size)
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
-    ax.set_title("Time vs\nBenchmarks Completed")
+    ax.set_title("Time vs Optician\nBenchmarks Completed")
 
     l = ax.legend(bbox_to_anchor=(.9,.6),borderaxespad=0)
     plt.setp(l.texts, weight='bold')
 
     fig = plt.figure(1,tight_layout=True)
     fig.set_figheight(1.5)
-    fig.set_figwidth(2.5)
+    fig.set_figwidth(2)
        
     fig.savefig(generated_graphs_base + "times_opt.eps", bbox_inches='tight')
 

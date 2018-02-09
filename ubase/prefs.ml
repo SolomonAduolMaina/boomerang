@@ -160,6 +160,7 @@ let viewPref = createStringList "view" "view file" ""
 let expressionPref = createStringList "expression" "on-time module contents" ""
 let restPref = createStringList "rest" "*no docs needed" ""
 let checkPref = createStringList "check" "run unit tests for given module(s)" ""
+let findSavingsPref = createBool "findSavings" false "find AST savings" ""
 
 let includePref = createStringList "include" "search path for .boom sources" "Boomerang modules are loaded, compiled, and registered on-demand. The search path specifies where the run-time system should search for module sources (the current directory and the paths specified in the BOOMPATH environment variable are also searched)."
 

@@ -62,6 +62,11 @@ module Canonizer : sig
   val columnize : Info.t -> int -> Brx.t -> char -> string -> t
   val iter : Info.t -> t -> int -> int -> t
   val from_variable : Info.t -> string -> t -> t
+  val from_permute : Info.t -> t list -> t -> t -> t
+  val from_project : Info.t -> Brx.t -> string -> t -> t
+  val from_squash : Info.t -> Brx.t -> Brx.t -> t -> t
+
+  val qre_size : t -> string list -> (int * string list)
 end
 
 type ktype

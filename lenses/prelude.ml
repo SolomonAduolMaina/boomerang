@@ -602,6 +602,7 @@ let prelude_spec =
   ; pmk_uszP   "prefs_extern_expression" (fun i () -> Prefs.expressionPref)
   ; pmk_uszP   "prefs_extern_rest"       (fun i () -> Prefs.restPref)
   ; pmk_uszP   "prefs_extern_check"      (fun i () -> Prefs.checkPref)
+  ; pmk_ubP    "prefs_extern_findsavings" (fun i () -> Prefs.findSavingsPref)
   ; pmk_uszP   "prefs_extern_include"    (fun i () -> Prefs.includePref)
   ; pmk_uszP   "prefs_extern_test"       (fun i () -> Prefs.testPref)
   ; pmk_ubP    "prefs_extern_testall"    (fun i () -> Prefs.testallPref)
