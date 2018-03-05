@@ -343,7 +343,7 @@ def generate_time_vs_tasks_graph_new(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
     normal_size = 2
     full_size = 3
 
-    create_step_plot(prog_csv,"RunTime","PP",'-',full_size)
+    create_step_plot(prog_csv,"RunTime","QQ",'-',full_size)
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
@@ -385,7 +385,7 @@ def generate_time_vs_tasks_graph_opt(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
     full_size = 3
 
     create_step_plot(opt_on_opt_csv,"RunTime","OO",'-',normal_size)
-    create_step_plot(prog_on_opt_csv,"RunTime","PO",':',normal_size)
+    create_step_plot(prog_on_opt_csv,"RunTime","QO",':',normal_size)
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
