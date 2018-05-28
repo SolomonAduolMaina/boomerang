@@ -13,10 +13,10 @@ import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
 
-matplotlib.rcParams['mathtext.fontset'] = 'stix'
-matplotlib.rcParams['font.family'] = 'STIXGeneral'
 plt.rc('font', size=10)
 plt.rc('legend', fontsize=10)
+plt.rcParams['text.usetex'] = True
+plt.rcParams['text.latex.preamble'] = '\usepackage{libertine},\usepackage[libertine]{newtxmath},\usepackage[T1]{fontenc}'
 
 generated_graphs_base = "generated-graphs/"
 transformed_data_base = "transformed-data/"
@@ -91,7 +91,7 @@ def generate_examples_required_graph(input_csv):
     determinizing_vals = project_column_from_csv(input_csv, "MaxExampleCount")
     for example_num in determinizing_vals:
         add_to_correct_group(determinizing_values, float(example_num))
-    
+
 
     ind = np.arange(6)
     width = 0.35
@@ -324,7 +324,7 @@ def generate_time_vs_tasks_graph_new(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
 
     def create_step_plot(input_csv,colname, outputname,style,width):
         col_vals = [float(x)/1000.0 for x in project_column_from_csv(input_csv, colname) if x != "-1"]
-        col_vals_and_endpoints = col_vals + [0,20]
+        col_vals_and_endpoints = col_vals + [0,8]
         x_vals = sorted([x for x in set(col_vals_and_endpoints)])
         x_count_dict = {key: 0 for key in x_vals}
         for val in col_vals:
@@ -343,7 +343,10 @@ def generate_time_vs_tasks_graph_new(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
     normal_size = 2
     full_size = 3
 
-    create_step_plot(prog_csv,"RunTime","QQ",'-',full_size)
+    create_step_plot(prog_csv,"RunTime","\\textbf{Optician\\textsubscript{Q}}",'-',normal_size)
+
+    plt.xticks(np.arange(0, 8.1, 2.0))
+    plt.yticks(np.arange(0.0, 11, 2.0))
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
@@ -363,9 +366,9 @@ def generate_time_vs_tasks_graph_new(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
 def generate_time_vs_tasks_graph_opt(prog_csv,prog_on_opt_csv,opt_on_opt_csv,prog_on_altered_opt_csv):
     fig, ax = plt.subplots()
 
-    def create_step_plot(input_csv,colname, outputname,style,width):
+    def create_step_plot(input_csv,colname, outputname,style,width,color):
         col_vals = [float(x)/1000.0 for x in project_column_from_csv(input_csv, colname) if x != "-1"]
-        col_vals_and_endpoints = col_vals + [0,20]
+        col_vals_and_endpoints = col_vals + [0,8]
         x_vals = sorted([x for x in set(col_vals_and_endpoints)])
         x_count_dict = {key: 0 for key in x_vals}
         for val in col_vals:
@@ -377,27 +380,29 @@ def generate_time_vs_tasks_graph_opt(prog_csv,prog_on_opt_csv,opt_on_opt_csv,pro
             x_completed_counts.append(acc)
         x_completed_counts = [0] + x_completed_counts[:len(x_completed_counts)-1]
         if (style != '-'):
-            ax.step(x_vals,x_completed_counts,label=outputname,linestyle=style,linewidth=width, dashes=(5,1))
+            ax.step(x_vals,x_completed_counts,label=outputname,linestyle=style,linewidth=width, dashes=(5,1),color=color)
         else:
-            ax.step(x_vals,x_completed_counts,label=outputname,linestyle=style,linewidth=width)
+            ax.step(x_vals,x_completed_counts,label=outputname,linestyle=style,linewidth=width,color=color)
 
     normal_size = 2
     full_size = 3
 
-    create_step_plot(opt_on_opt_csv,"RunTime","OO",'-',normal_size)
-    create_step_plot(prog_on_opt_csv,"RunTime","QO",':',normal_size)
+    create_step_plot(opt_on_opt_csv,"RunTime","\\textbf{Optician}",':',normal_size,'g')
+    create_step_plot(prog_on_opt_csv,"RunTime","\\textbf{Optician\\textsubscript{Q}}",'-',normal_size,'b')
 
     ax.set_ylabel('Benchmarks Completed')
     ax.set_xlabel('Time (s)')
     ax.set_title("Time vs Optician\nBenchmarks Completed")
 
+    plt.xticks(np.arange(0, 8.1, 2.0))
+    plt.yticks(np.arange(0, 40.1, 10.0))
     l = ax.legend(bbox_to_anchor=(.9,.6),borderaxespad=0)
     plt.setp(l.texts, weight='bold')
 
     fig = plt.figure(1,tight_layout=True)
     fig.set_figheight(1.5)
     fig.set_figwidth(2)
-       
+
     fig.savefig(generated_graphs_base + "times_opt.eps", bbox_inches='tight')
 
 def generate_benchmark_count(input_csv):

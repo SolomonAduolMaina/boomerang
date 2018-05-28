@@ -9,7 +9,6 @@ open String_utilities
 open Permutation
 open Normalized_lang
 open Consts
-open Naive_gen
 open Synth_structs
 open Expand
 open Language_equivalences
@@ -299,9 +298,6 @@ let gen_lens
       (r1,r2,rc)
   in
   let lens_option =
-    if !naive_strategy then
-      Some (gen_lens_naive rc lc r1 r2 exs)
-    else
       DNFSynth.gen_lens rc lc r1 r2 exs
   in
   if !verbose then

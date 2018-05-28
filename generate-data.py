@@ -49,6 +49,7 @@ def gather_data(rootlength, prog, path, base):
     else:
         data = datum.split("\n")
         if data[0] == "0":
+            print("REMOVE")
             return 0
         current_data["OO"] = data[0]
         current_data["SO"] = data[1]

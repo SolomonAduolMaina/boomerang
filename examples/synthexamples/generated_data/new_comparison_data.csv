@@ -1,49 +1,11 @@
 Test,RunTime
-addr-probs,127
-two-cap-prob,75
-workitem-probs,5418
-date-probs,74
-cap-prob,61
-bib-to-end-with-synth,455
-data.gov/Demographic Statistics By Zip Code /xml-to-csv,2398
-data.gov/Demographic Statistics By Zip Code /xml-to-rdf,14630
-data.gov/2010 Census Populations by Zip Code/xml-to-csv,180
-data.gov/2010 Census Populations by Zip Code/xml-to-rdf,335
-data.gov/Total Crime Index For The Nation’s Largest Cities/xml-to-csv,128
-data.gov/Total Crime Index For The Nation’s Largest Cities/xml-to-rdf,242
-data.gov/City of Seattle Wages: Comparison by Gender - All Job Classifications/xml-to-csv,3495
-data.gov/City of Seattle Wages: Comparison by Gender - All Job Classifications/xml-to-rdf,1635
-data.gov/City of Seattle Wages: Comparison by Gender - All Job Classifications/xml-to-rdf-lib,95
-AugeasExamples/aptcrngsec,139
-AugeasExamples/bootconf,180
-AugeasExamples/xml,2674
-AugeasExamples/cron,351
-AugeasExamples/aptsources,203
-AugeasExamples/avahi,139
-AugeasExamples/carbon,302
-AugeasExamples/cachefilesd,135
-AugeasExamples/activemq,136
-AugeasExamples/cgconfig,240
-AugeasExamples/automounter,486
-AugeasExamples/channels,417
-AugeasExamples/bbhosts,1244
-AugeasExamples/cgrules,185
-AugeasExamples/aptconf-l1,407
-AugeasExamples/access,191
-AugeasExamples/apt-upd-mgr,138
-AugeasExamples/automaster,347
-AugeasExamples/aptprefs,166
-AugeasExamples/afs-cellalias,134
-AugeasExamples/anacron,191
-AugeasExamples/aptconf,187
-AugeasExamples/xml-l1,2589
-AugeasExamples/approx,133
-AugeasExamples/hosts,168
-AugeasExamples/backuppchosts,178
-AugeasExamples/chrony,189
-AugeasExamples/alias,136
-AugeasExamples/auth-keys,361
-FlashFillExamples/extr-num,76
-FlashFillExamples/extr-fname,134
-FlashFillExamples/extr-quant,63
-FlashFillExamples/extr-fname-err,83
+bootconf,282
+cron,551
+cachefilesd,182
+automounter,859
+bbhosts,1837
+cgrules,286
+automaster,469
+bibtex-endnote,497
+hosts,239
+backuppchosts,255

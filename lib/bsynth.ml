@@ -106,8 +106,28 @@ let synth (v1 : V.t) (v2 : V.t) (l : V.t list) (rc : RegexContext.t) (lc : LensC
         c2
         (processed_qre_variables)
     in
-    Bconsts.regex_canonizer_size := !Bconsts.regex_canonizer_size + c1_regex_size + c2_regex_size + c1_canonizer_size + c2_canonizer_size;
+    (if c1_nontrivial_quot then
+       Bconsts.regex_canonizer_size :=
+         !Bconsts.regex_canonizer_size +
+         c1_regex_size +
+         c1_canonizer_size
+     else
+       Bconsts.regex_canonizer_size :=
+         !Bconsts.regex_canonizer_size +
+         c1_qre_size
+    );
+    (if c2_nontrivial_quot then
+       Bconsts.regex_canonizer_size :=
+         !Bconsts.regex_canonizer_size +
+         c2_regex_size +
+         c2_canonizer_size
+     else
+       Bconsts.regex_canonizer_size :=
+         !Bconsts.regex_canonizer_size +
+         c2_qre_size
+    );
     Bconsts.qre_sizes := !Bconsts.qre_sizes + c1_qre_size + c2_qre_size;
+    Bconsts.example_sizes := !Bconsts.example_sizes + (2 * (List.length l));
     Bconsts.processed_qre_variables := processed_qre_variables);
 	let s1 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c1) i1 rc in
 	let s2 = Brx.brx_to_lrx (BL.Canonizer.canonized_type c2) i2 rc in

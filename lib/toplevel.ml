@@ -458,8 +458,8 @@ let toplevel' progName () =
        x
      end)
   (fun () -> Util.flush ();
-    print_endline (string_of_int !Bconsts.qre_sizes);
-    print_endline (string_of_int !Bconsts.regex_canonizer_size);
+    print_endline (string_of_int (!Bconsts.qre_sizes + !Bconsts.example_sizes));
+    print_endline (string_of_int (!Bconsts.regex_canonizer_size + !Bconsts.example_sizes));
     print_endline (string_of_int (!Bconsts.synthed_lens_size + !Bconsts.regex_canonizer_size));
   )
     

@@ -1,4 +1,4 @@
-module Bib_to_end_with_synth = 
+module Bibtex_endnote = 
 
 let title_case : regexp = [A-Z] . [a-zA-Z]*
 
