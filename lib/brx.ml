@@ -1290,7 +1290,7 @@ let match_string_reverse_positions t0 w =
 			let () =
 				while (!pos < n) do
 					begin
-						match which_perm tl sep (String.sub w 0 !pos) with
+						match which_perm tl sep (String.sub (Bytes.to_string w) 0 !pos) with
 						| Some _, _ -> acc := Int.Set.add (n - 1 - !pos) !acc
 						| None, _ -> ()
 					end;
