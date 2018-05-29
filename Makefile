@@ -37,3 +37,6 @@ doc:
 generate-data: setup.data setup.ml
 	ocaml setup.ml -build -j $(J)
 	python generate-data.py ./boomerang.native examples/synthexamples/new_specs/
+
+regenerate-graphs:
+	python transform-data.py generated_data/size_data.csv
