@@ -751,6 +751,7 @@ module Canonizer = struct
 					msg "@]])"
 			| Columnize(k, r, ch, nl) ->
 					msg "(columnize@ %d@ " k; Rx.format_t r; msg "@ '%c'@ \"%s\")" ch nl
+		    | _ -> msg "(canonizer_of_lens@ <lens>)" (* ??? *)
 		end;
 		msg "@]"
 	
