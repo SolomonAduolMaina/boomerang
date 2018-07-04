@@ -358,6 +358,15 @@ and interp_exp wq cev e0 =
 			let tbl, ids = CEnv.fold f cev (Hashtbl.create 17, []) in
 			let lc = List.fold_left (fun lc id -> populate_lc tbl lc id) LensContext.empty ids in
 	    let info, lens = Bsynth.synth v1 v2 v3 rc lc in
+			let test = false in
+			let () = 
+				if test then
+					for i = 1 to 1000 do
+				let source = Bstring.of_string (Brx.random (Blenses.MLens.stype lens)) in
+				let view = Bstring.of_string (Blenses.MLens.rget lens source) in
+				let _ = Blenses.MLens.rput lens view source in ()
+				done else ()
+				in
       V.Lns (info, lens)
 	
 	| EProject(i, e1, e2) ->

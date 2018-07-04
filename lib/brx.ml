@@ -1457,6 +1457,42 @@ let rec free_vars r s =
 		
 let matching_perm l r s = fst (which_perm l r s)
 
+let iterate_n_times (n : int) (r : t) : t =
+      let rec helper (index : int) (temp : t) : t =
+          if index > n then temp else helper (index + 1) (mk_seq r temp) in
+      if n < 0 then empty else if n = 0 then mk_string "" else helper 2 r
+
+  let iterate_m_to_n_times (m : int) (n : int) (r : t) : t =
+      let rec helper (index : int) (temp : t) : t =
+          if index > n then temp else
+              helper (index + 1) (mk_alt temp (iterate_n_times index r)) in
+      if n < m then empty else helper (m + 1) (iterate_n_times m r)
+			
+let rec concat_strings l temp = 
+	match l with
+	| [] -> temp
+	| x :: xs -> concat_strings xs (x ^ temp)
+
+let rec random (r:t) : string =
+	match r.desc with
+	| CSet(cs) -> 
+		let index = Random.int (List.length cs) in
+		let (a, b) = List.nth cs index in
+		let result = Random.int (b-a+1) in 
+		string_of_char_codes [result + a]
+	| Seq (r1,r2) -> (random r1) ^ (random r2)
+	| Alt l -> let index = Random.int (List.length l) in random (List.nth l index)
+	| Rep (r, m, Some n) ->  
+		let rec helper k temp =
+			if k = 0 then temp else helper (k - 1) (random r :: temp) in
+			(concat_strings (helper m []) "") ^ (concat_strings (helper (Random.int (n - m)) []) "")
+	| Rep (r, m, None) -> random (mk_t (Rep (r, m, Some (2 * (m+1)))))
+	| Var (_, t) -> random t
+	| Perm (ts, t) -> random (concat_list (intersperse t ts))
+	| _ -> (match easy_representative r with
+	| Some result -> result
+	| None -> failwith "regular expression has no representative" )
+
 let rec size
     (r:t)
     (processed_variables:string list)
