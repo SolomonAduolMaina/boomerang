@@ -1,0 +1,286 @@
+module Access =
+let LOWERCASE =
+  "a"
+    | "b"
+    | "c"
+    | "d"
+    | "e"
+    | "f"
+    | "g"
+    | "h"
+    | "i"
+    | "j"
+    | "k"
+    | "l"
+    | "m"
+    | "n"
+    | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+
+let UPPERCASE
+   =
+  "A"
+    | "B"
+    | "C"
+    | "D"
+    | "E"
+    | "F"
+    | "G"
+    | "H"
+    | "I"
+    | "J"
+    | "K"
+    | "L"
+    | "M"
+    | "N"
+    | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" 
+
+let to_upper_or_lower
+  : (lens in LOWERCASE <=> UPPERCASE) =
+  synth LOWERCASE <=> UPPERCASE 
+
+let DIGIT
+   =
+  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" 
+
+let NUMBER  = DIGIT . DIGIT*  
+
+let WSP  = (" " | "\n" | "\t")*  
+
+let NONEMPTY_WSP  = (" " | "\n" | "\t") . (" " | "\n" | "\t")*  
+
+let SAMELINE_WSP_CHAR  = " " | "\t" | "\\\n" 
+
+let SAMELINE_WSP  = SAMELINE_WSP_CHAR*  
+
+let NONEMPTY_SAMELINE_WSP  = SAMELINE_WSP_CHAR . SAMELINE_WSP_CHAR*  
+
+let QUOTELESS_STRING
+   =
+  (UPPERCASE
+     | LOWERCASE
+     | DIGIT
+     | " "
+     | "'" | "_" | ":" | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")")*  
+
+let STRING_COMPONENT
+   =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/"
+    | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "*" | "," 
+
+let STRING  = STRING_COMPONENT*  
+
+let NONEMPTY_STRING  = STRING_COMPONENT . STRING_COMPONENT*  
+
+let DELIMITED_STRING
+   =
+  (UPPERCASE
+     | LOWERCASE
+     | DIGIT
+     | "\\\""
+     | " "
+     | "'"
+     | "_"
+     | ":"
+     | "/"
+     | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "*" | ",")*  
+
+let string_to_delimited
+  : (lens in STRING <=> DELIMITED_STRING) =
+  synth STRING <=> DELIMITED_STRING 
+
+let NO_STAR_STRING_COMPONENT
+   =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "," 
+
+let NO_STAR_DELIMITED_STRING_COMPONENT
+   =
+  UPPERCASE
+    | LOWERCASE
+    | DIGIT
+    | "\\\""
+    | " "
+    | "'"
+    | "_"
+    | ":"
+    | "/" | "-" | "." | "=" | "+" | "[" | "]" | "(" | ")" | ";" | "!" | "," 
+
+let STARLESS_STRING  = NO_STAR_STRING_COMPONENT*  
+
+let STARLESS_DELIMITED_STRING
+   =
+  NO_STAR_DELIMITED_STRING_COMPONENT*  
+
+let starless_string_to_delimited
+  : (lens in STARLESS_STRING <=> STARLESS_DELIMITED_STRING) =
+  synth STARLESS_STRING <=> STARLESS_DELIMITED_STRING 
+
+let COMMENT  = "# " . STRING 
+
+let COMMENT_DICT  = "{\"#comment\"=\"" . DELIMITED_STRING . "\"}" 
+
+let comment_map
+  : (lens in COMMENT <=> COMMENT_DICT) =
+  synth COMMENT <=> COMMENT_DICT 
+
+let EMPTYDICT  = "{}" 
+
+let NON_WSP_CHAR
+   =
+  LOWERCASE
+    | UPPERCASE
+    | "_" | "." | "-" | ":" | "/" | "+" | DIGIT | "," | "=" | "*" | "%" 
+
+let ENV_VAR  = (UPPERCASE | "_") . (UPPERCASE | "_")*  
+
+let WORD  = NON_WSP_CHAR . NON_WSP_CHAR*  
+
+let SIMPLE_WORD
+   =
+  (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT) . (LOWERCASE | "-" | "_" | UPPERCASE | DIGIT)*  
+
+let FOLDER
+   =
+  (SIMPLE_WORD . "/")*  . SIMPLE_WORD . ("" | "/") | "${" . ENV_VAR . "}" 
+
+let MULTILINE_COMMENT
+   =
+  "/*" . STARLESS_STRING . ("\n" . STARLESS_STRING)*  . "*/" 
+
+let MULTILINE_COMMENT_DICT
+   =
+  "{\"#mcomment\""
+    . "{\"string\"=\"" . STARLESS_DELIMITED_STRING . "\"}"
+    . ("{\"string\"=\"" . STARLESS_DELIMITED_STRING . "\"}")* 
+    . "}" 
+
+let multiline_comment_map
+  : (lens in MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT) =
+  synth MULTILINE_COMMENT <=> MULTILINE_COMMENT_DICT 
+
+let ACCESSTYPE  = "+" | "-" 
+
+let COMMENT_KVP  = "\"#comment\"=\"" . DELIMITED_STRING . "\"" 
+
+let ORIGIN
+   =
+  (UPPERCASE | LOWERCASE | DIGIT | ":")
+    . (UPPERCASE | LOWERCASE | DIGIT | ":")*  
+
+let ORIGIN_KV  = "{ \"origin\" = \"" . ORIGIN . "\" }" 
+
+let ORIGIN_DICT  = ("\n" . ORIGIN_KV)*  
+
+let ORIGINLIST  = (" " . ORIGIN)*  
+
+let IDENTIFIER
+   =
+  (UPPERCASE | LOWERCASE | DIGIT) . (UPPERCASE | LOWERCASE | DIGIT)*  
+
+let USERNAMEHOSTGROUPCONFIG
+   =
+  IDENTIFIER | IDENTIFIER . "@" . IDENTIFIER | "@" . IDENTIFIER 
+
+let USERNAMEHOSTGROUPCONFIGLIST  = (USERNAMEHOSTGROUPCONFIG . " ")*  
+
+let USERINFO  = "{ \"user\" = \"" . IDENTIFIER . "\" }" 
+
+let USERHOSTINFO
+   =
+  "{ \"user\" = \""
+    . IDENTIFIER . "\"\n\t{ \"host\" = \"" . IDENTIFIER . "\" } }" 
+
+let NETGROUPINFO  = "{ \"netgroup\" = \"" . IDENTIFIER . "\" }" 
+
+let UNHGCFG_KVP  = USERINFO | USERHOSTINFO | NETGROUPINFO 
+
+let UNHGCFG_KVPLIST  = ("\n" . UNHGCFG_KVP)*  
+
+let CONFIG_COMMENT  = "# " . STRING 
+
+let FULLCONFIGACCESS
+   =
+  ACCESSTYPE . " : " . USERNAMEHOSTGROUPCONFIGLIST . ":" . ORIGINLIST 
+
+let FULL_ACCESS_CONFIG
+   =
+  ((FULLCONFIGACCESS | CONFIG_COMMENT) . "\n")*  
+
+let CONFIGACCESSDICT
+   =
+  "{ \"access\" = \""
+    . ACCESSTYPE . "\"" . UNHGCFG_KVPLIST . ORIGIN_DICT . " }" 
+
+let FULL_ACCESS_DICT  = ((CONFIGACCESSDICT | COMMENT_KVP) . "\n")*  
+
+let CONFIG_STRING  = (CONFIG_COMMENT . "\n")*  
+
+let extract_origin_list
+  : (lens in ORIGINLIST <=> ORIGIN_DICT) =
+  synth ORIGINLIST <=> ORIGIN_DICT using {(" cron crond :0","\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" }")} 
+
+let extract_userdata
+  : (lens in USERNAMEHOSTGROUPCONFIG <=> UNHGCFG_KVP) =
+  synth USERNAMEHOSTGROUPCONFIG <=> UNHGCFG_KVP using {("john","{ \"user\" = \"john\" }"),
+    ("john@domain","{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }"),
+    ("@domain","{ \"netgroup\" = \"domain\" }")} 
+
+let extract_access
+  : (lens in FULLCONFIGACCESS <=> CONFIGACCESSDICT) =
+  synth FULLCONFIGACCESS <=> CONFIGACCESSDICT using {("+ : john john@domain @domain : cron crond :0","{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }")} 
+
+let extract_config
+  : (lens in FULL_ACCESS_CONFIG <=> FULL_ACCESS_DICT) =
+  synth FULL_ACCESS_CONFIG <=> FULL_ACCESS_DICT using {("+ : john john@domain @domain : cron crond :0\n# here is a comment with \"quotes\"\n","{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }\n\"#comment\"=\"here is a comment with \\\"quotes\\\"\"\n")}
+
+
+test extract_origin_list.get " cron crond :0" = 
+"\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" }"
+
+test extract_userdata.get "john" = "{ \"user\" = \"john\" }"
+
+test extract_userdata.get "john@domain" = 
+"{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }"
+
+test extract_userdata.get "@domain" = 
+"{ \"netgroup\" = \"domain\" }"
+
+test extract_access.get "+ : john john@domain @domain : cron crond :0" = 
+"{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }"
+
+test extract_config.get "+ : john john@domain @domain : cron crond :0\n# here is a comment with \"quotes\"\n" = 
+"{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }\n\"#comment\"=\"here is a comment with \\\"quotes\\\"\"\n"
+
+test extract_origin_list.put "\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" }" into 
+" cron crond :0" = " cron crond :0"
+
+test extract_userdata.put "{ \"user\" = \"john\" }" into "john" = "john"
+
+test extract_userdata.put "{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }" into "john@domain" = "john@domain"
+
+test extract_userdata.put "{ \"netgroup\" = \"domain\" }" into "@domain" = "@domain"
+
+test extract_access.put "{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }"
+into "+ : john john@domain @domain : cron crond :0" = "+ : john john@domain @domain : cron crond :0"
+
+test extract_config.put 
+"{ \"access\" = \"+\"\n{ \"user\" = \"john\" }\n{ \"user\" = \"john\"\n\t{ \"host\" = \"domain\" } }\n{ \"netgroup\" = \"domain\" }\n{ \"origin\" = \"cron\" }\n{ \"origin\" = \"crond\" }\n{ \"origin\" = \":0\" } }\n\"#comment\"=\"here is a comment with \\\"quotes\\\"\"\n"
+into "+ : john john@domain @domain : cron crond :0\n# here is a comment with \"quotes\"\n" = "+ : john john@domain @domain : cron crond :0\n# here is a comment with \"quotes\"\n"
+
+
+

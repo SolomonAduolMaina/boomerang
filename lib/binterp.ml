@@ -286,10 +286,7 @@ and interp_exp wq cev e0 =
 			let v1 = interp_exp wq cev e1 in
 			let v2 = interp_exp wq cev e2 in
 			let v3 = interp_exp wq cev e3 in
-			let r1, r2 =
-				match v1, v2 with
-				| V.Rx (_, r1), V.Rx (_, r2) -> r1, r2
-				| _ -> Berror.run_error i (fun () -> msg "Expected regular expressions here!") in
+			let r1, r2 = V.get_r v1, V.get_r v2 in
 			let f s = match v3 with
 				| V.Fun (_, f) ->
 						if Brx.match_string r2 s then s else

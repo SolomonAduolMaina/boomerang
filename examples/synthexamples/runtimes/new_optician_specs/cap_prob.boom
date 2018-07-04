@@ -62,3 +62,12 @@ let UPPERCASENAME : regexp = UPPERCASE . UPPERCASE*
 let capitalize
   : (lens in UPPERCASENAME <=> NAME) =
   synth UPPERCASENAME <=> NAME using {("DOE","Doe")} 
+
+test capitalize.get "JOHN" = "John"
+
+test capitalize.get "DOE" = "Doe"
+
+test capitalize.put "John" into "JOHN" = "JOHN"
+
+test capitalize.put "Doe" into "DOE" = "DOE"
+

@@ -88,3 +88,19 @@ let extract_file
   : (lens in NONEMPTYDIRECTORY <=> FILEANDFOLDER) =
   synth NONEMPTYDIRECTORY <=> FILEANDFOLDER using {("/Users/amiltner/lens/tests/flashfill/extract-filename.txt","file: extract-filename.txt\nfolder: /Users/amiltner/lens/tests/flashfill/"),
     ("tests/flashfill/extract-filename.txt","file: extract-filename.txt\nfolder: tests/flashfill/")}
+
+test extract_file.get "/Users/amiltner/lens/tests/flashfill/extract-filename.txt" = 
+"file: extract-filename.txt\nfolder: /Users/amiltner/lens/tests/flashfill/"
+
+test extract_file.get "tests/flashfill/extract-filename.txt" = 
+"file: extract-filename.txt\nfolder: tests/flashfill/"
+
+test extract_file.put "file: extract-filename.txt\nfolder: /Users/amiltner/lens/tests/flashfill/"
+into
+"/Users/amiltner/lens/tests/flashfill/extract-filename.txt" = 
+"/Users/amiltner/lens/tests/flashfill/extract-filename.txt"
+
+test extract_file.put "file: extract-filename.txt\nfolder: tests/flashfill/" into
+"tests/flashfill/extract-filename.txt" = 
+"tests/flashfill/extract-filename.txt"
+

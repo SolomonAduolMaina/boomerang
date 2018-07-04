@@ -1,4 +1,4 @@
-module Extr-fname =
+module Extr-fname-err =
 let LOWERCASE
   : regexp =
   "a"
@@ -64,10 +64,6 @@ test matches_cex LOCALFOLDER "extract-filename.txt" = true
 
 let DIRECTORY : regexp = ("/" | "") . (LOCALFOLDER . "/")*  
 
-let NONEMPTYDIRECTORY
-  : regexp =
-  ("/" | "") . LOCALFOLDER . ("/" . LOCALFOLDER)*  
-
 let GLOBALFOLDER : regexp = DIRECTORY . LOCALFOLDER 
 
 let FOLDER : regexp = (LOCALFOLDER . "/")*  . LOCALFOLDER . ("" | "/") 
@@ -78,13 +74,27 @@ test matches_cex
 
 let FILEANDFOLDER
   : regexp =
-  "file: " . LOCALFOLDER . "\nfolder: " . DIRECTORY 
+  "file: " . LOCALFOLDER . "\nfolder: " . DIRECTORY
+    | "empty directory given" | "root directory given" 
 
 test matches_cex
   FILEANDFOLDER
   "file: extract-filename.txt\nfolder: Users/amiltner/lens/tests/flashfill/" = true
 
 let extract_file
-  : (lens in NONEMPTYDIRECTORY <=> FILEANDFOLDER) =
-  synth NONEMPTYDIRECTORY <=> FILEANDFOLDER using {("/Users/amiltner/lens/tests/flashfill/extract-filename.txt","file: extract-filename.txt\nfolder: /Users/amiltner/lens/tests/flashfill/"),
-    ("tests/flashfill/extract-filename.txt","file: extract-filename.txt\nfolder: tests/flashfill/")}
+  : (lens in DIRECTORY <=> FILEANDFOLDER) =
+  synth DIRECTORY <=> FILEANDFOLDER using {("Users/amiltner/lens/tests/flashfill/extract-filename.txt/","file: extract-filename.txt\nfolder: Users/amiltner/lens/tests/flashfill/"),
+    ("/","root directory given")} 
+
+test extract_file.get "Users/amiltner/lens/tests/flashfill/extract-filename.txt/" = 
+"file: extract-filename.txt\nfolder: Users/amiltner/lens/tests/flashfill/"
+
+test extract_file.get "/" = "root directory given"
+
+test extract_file.put "file: extract-filename.txt\nfolder: Users/amiltner/lens/tests/flashfill/" into
+"Users/amiltner/lens/tests/flashfill/extract-filename.txt/" = 
+"Users/amiltner/lens/tests/flashfill/extract-filename.txt/"
+
+test extract_file.put "root directory given" into "/" = "/"
+
+

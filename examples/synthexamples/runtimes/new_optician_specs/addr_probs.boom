@@ -100,3 +100,27 @@ let LETTER_ADDRESS_LIST
 let csv_to_letter
   : (lens in CSV_ADDRESS_DATABASE <=> LETTER_ADDRESS_LIST) =
   synth CSV_ADDRESS_DATABASE <=> LETTER_ADDRESS_LIST using {("Doe,John,NP,12345,Porttown,88,Town Road West\nDoe,Jane,CJ,54321,Greentown,610,Direction House\n","John Doe\n88 Town Road West\nPorttown, NP  12345\n\nJane Doe\n610 Direction House\nGreentown, CJ  54321")} 
+
+test csv_to_letter.get
+  "Doe,John,NP,12345,Porttown,88,Town Road West\nDoe,Jane,CJ,54321,Greentown,610,Direction House\n"
+  = "John Doe\n88 Town Road West\nPorttown, NP  12345\n\nJane Doe\n610 Direction House\nGreentown, CJ  54321"
+
+test csv_to_letter.get "" = ""
+
+test csv_to_letter.get
+  "Doe,John,MI,98765,Cityyy,1620,Rosey Avenue\n"
+  = "John Doe\n1620 Rosey Avenue\nCityyy, MI  98765"
+
+test csv_to_letter.put "John Doe\n88 Town Road West\nPorttown, NP  12345\n\nJane Doe\n610 Direction House\nGreentown, CJ  54321"
+into 
+"Doe,John,NP,12345,Porttown,88,Town Road West\nDoe,Jane,CJ,54321,Greentown,610,Direction House\n" = 
+"Doe,John,NP,12345,Porttown,88,Town Road West\nDoe,Jane,CJ,54321,Greentown,610,Direction House\n"
+
+test csv_to_letter.put "" into "" = ""
+
+test csv_to_letter.put "John Doe\n1620 Rosey Avenue\nCityyy, MI  98765"
+into
+"Doe,John,MI,98765,Cityyy,1620,Rosey Avenue\n" = 
+"Doe,John,MI,98765,Cityyy,1620,Rosey Avenue\n"
+
+

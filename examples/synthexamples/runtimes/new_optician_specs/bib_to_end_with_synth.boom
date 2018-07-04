@@ -95,4 +95,8 @@ let bib_template =
 author = \"Conway J. H. and Conway H. J.\",
 title = {Regular Algebra And Finite Machines},}"
 
-let bib_to_end = synth bibtex <=> endnote
+let bib_to_end = synth bibtex <=> endnote 
+
+test bib_to_end.get bib_template = end_template
+
+test bib_to_end.put end_template into bib_template = bib_template
